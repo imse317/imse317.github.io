@@ -13,6 +13,10 @@ body {
 	padding-bottom: 20px;
 }
 
+h1 {
+	color: #00274C;  /* Michigan blue */
+}
+
 .description {
 	color: blue;
 	font-size: 16pt;

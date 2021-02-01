@@ -19,13 +19,17 @@ header {
 	display: flex;
 }
 main {
-	padding: 25px 10px 0px;
+	padding: 25px 10px 50px;
 	clear: both;
 }
 
 h2 {
 	text-align: center;
-	color: #00274C;
+	color: #00274C;  /* Michigan blue */
+}
+
+h3 {
+	color: #00274C;  /* Michigan blue */
 }
 
 li {
@@ -49,3 +53,23 @@ a.button:hover {
 	text-align: left;
 	padding-left: 50px;
 }
+
+footer {
+	font-size: 11pt;
+	width: 800px;
+	margin: 0px auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	
+}
+footer p {
+	
+	padding-left: 40px;
+	line-height: 100%;
+}
+
+#site-footer {
+	background: #F5F5F5;
+	/* padding-top: 5px; */
+}
+
