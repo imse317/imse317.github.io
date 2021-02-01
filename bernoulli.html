@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+ 
+<head>
+    <title>Bernoulli distribution</title>
+    <link type="text/css" rel="stylesheet" media="screen" href="./css/page.css">
+    <link type="text/css" rel="stylesheet" media="screen" href="./css/chart.css">
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script src="./mathjax_config.js"></script>
+</head>
+ 
+<body>
+
+<div class="container">
+
+<h1>Bernoulli distribution</h1>
+
+<p class="description">
+    Toss a coin once, what is the chance to get a heads (1) or tails (0)?
+</p>
+
+<h2>$$\small{
+    p(k) = 
+    \begin{cases}
+        p, & \text{if } k = 1, \\
+        1-p, & \text{if } k = 0, \\
+        0,              & \text{otherwise.}
+    \end{cases}
+} 
+    $$
+</h2>
+
+<div id="chart"></div>
+
+<div class="slider-label">
+    <p>$p=$ <span id="p-value"></span></p>
+</div>
+
+<div class="slider-container">
+    <input type="range" id="p-slider" class="slider" min="0" max="1" step="0.01"><br>
+</div>
+
+<script src="bernoulli.js"></script>
+
+</div>
+
+</body>
+</html>

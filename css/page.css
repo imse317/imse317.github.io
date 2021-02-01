@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+	font-family: 'Roboto', serif;
+	text-align: center;
+	padding-bottom: 100px;
+}
+
+.container {
+	width: 750px;
+	margin: 0px auto;
+	padding-top: 0px;
+	padding-bottom: 20px;
+}
+
+.description {
+	color: blue;
+	font-size: 16pt;
+	font-weight: bold;
+}
+
+.slider-label {
+	font-size: 16pt;
+  }
