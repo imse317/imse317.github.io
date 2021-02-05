@@ -25,7 +25,7 @@ var y = d3.scaleLinear()
     svg.append("g")
       .attr("class", "y-axis")    
       .call(d3.axisLeft(y));
- 
+
 var mu_glob = 25, sigma_glob = 6;  // initial parameters
 
 update(mu_glob, sigma_glob)  // initial chart
@@ -57,6 +57,20 @@ function chart(data){
         );
 }
 
+function plot_mean(mu, sigma){
+
+    var mean = mu;
+
+    var height_mean = jStat.normal.pdf(mean, mu, sigma)
+
+    svg.append("line")
+    .attr("class", "mean")
+    .attr("x1", x(mean))
+    .attr("y1", y(height_mean))
+    .attr("x2", x(mean))
+    .attr("y2", height)
+}
+
 d3.select("#mu-slider").on("input", function() {
     update(this.value, sigma_glob);
 });
@@ -76,9 +90,15 @@ function update(mu, sigma) {
     mu_glob = mu
     sigma_glob = sigma
 
-    d3.selectAll(".line").remove();  // clear chart
+    d3.selectAll(".line, .mean").remove();  // clear chart
     
     data = generate_data(+mu, +sigma);
+
+    plot_mean(mu, sigma)
+
     display = chart(data);
 
+    
+
+    
 }

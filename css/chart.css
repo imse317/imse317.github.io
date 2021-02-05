@@ -40,6 +40,12 @@ path {
 }
 
 
+.mean{
+  stroke-dasharray: 5,5; 
+  stroke-width: 2;
+  stroke: lightgray;
+}
+
 div.tooltip {	
   position: absolute;			
   text-align: center;			
