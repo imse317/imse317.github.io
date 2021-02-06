@@ -46,19 +46,6 @@ path {
   stroke: lightgray;
 }
 
-div.tooltip {	
-  position: absolute;			
-  text-align: center;			
-  width: 60px;					
-  height: 28px;					
-  padding: 2px;				
-  font: 12px sans-serif;		
-  background: lightsteelblue;	
-  border: 0px;		
-  border-radius: 8px;			
-  pointer-events: none;			
-}
-
 
 /* styling the slider */
 
@@ -67,20 +54,20 @@ input[type=range]{
 }
 
 input[type=range]::-webkit-slider-runnable-track {
-  height: 6px;
+  height: 8px;
   background: #ddd;
   border: none;
-  border-radius: 3px;
+  border-radius: 8px;
 }
 
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: none;
-  height: 20px;
-  width: 20px;
+  height: 30px;
+  width: 30px;
   border-radius: 50%;
   background: #00274C;  /* Michigan Blue */
-  margin-top: -6px;
+  margin-top: -11px;
 }
 
 input[type=range]:focus {

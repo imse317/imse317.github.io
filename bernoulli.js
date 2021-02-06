@@ -1,6 +1,6 @@
 var margin = {top: 40, right: 40, bottom: 30, left: 70},
     width = 750 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+    height = 350 - margin.top - margin.bottom;
 
 var svg = d3.select("#chart")
     .append("svg")
@@ -12,7 +12,7 @@ var svg = d3.select("#chart")
 var x = d3.scaleBand()
         .domain([-1, 0, 1, 2])
         .rangeRound([0, width], .1)
-        .paddingInner(0.8);
+        .paddingInner(0.85);
  
 var y = d3.scaleLinear()
         .domain([0, 1])
@@ -27,9 +27,9 @@ var y = d3.scaleLinear()
       .attr("class", "y-axis")    
       .call(d3.axisLeft(y));
 
-var p_glob = 0.3;  // initial parameters
+var p_glob = 0.5;  // initial parameters
 
-update(p_glob)  // initial chart
+chart_init(update(p_glob));   // initial chart
 
 function generate_data(p){
 
@@ -46,9 +46,61 @@ function generate_data(p){
     return data;
 }
 
+var darkred = "#cc0000";
+
+function chart_init(data){  
+
+    bars = svg.selectAll("bar")
+      .data(data)
+    .enter().append("rect")
+      .attr("class", "bar")
+      .attr("x", function(d) { return x(d[0]) })
+      .attr("width", x.bandwidth());
+
+      bars.attr("y",  function(d) { return height; })
+      .attr("height", 0)
+          .transition()
+          .duration(700)
+          .delay(function (d, i) {
+              return i * 200;
+          })
+      .attr("y", function(d) { return y(d[1]) })
+      .attr("height", function(d) { return height - y(d[1]) })
+      .on("end", showValues);
+
+      mouseOver();
+
+}
+
+function showValues(){
+
+    svg.selectAll("text.bar")
+      .data(data)
+    .enter().append("text")
+        .attr("class", "bar-value")
+        .attr("text-anchor", "middle")
+        .attr("x", function(d) { return x(d[0]) + x.bandwidth()/2; })
+        .attr("y", function(d) { return y(d[1])-8; })
+        .text(function(d) { var d_display = +d[1]; return d_display.toFixed(2); });
+}
+
+function mouseOver(){
+
+    bars.on("mouseover", function() {
+        d3.select(this)
+            .style("fill", darkred);
+        })
+      .on("mouseout", function() {
+        d3.select(this)
+            .style("fill", "red");
+        }); 
+}
+
+var tooltip = d3.select("body").append("p").attr("class", "toolTip");
+
 function chart(data){  
 
-    svg.selectAll("bar")
+    bars = svg.selectAll("bar")
       .data(data)
     .enter().append("rect")
       .attr("class", "bar")
@@ -56,31 +108,33 @@ function chart(data){
       .attr("width", x.bandwidth())
       .attr("y", function(d) { return y(d[1]) })
       .attr("height", function(d) { return height - y(d[1]) });
-   
+
+    showValues()
+    mouseOver(); 
 }
 
 d3.select("#p-slider").on("input", function() {
-    update(this.value);
+    chart(update(this.value));
 });
 
 function update(p) {
     
-    d3.select("#p-value").text(p);
+    var p_display = +p
+    d3.select("#p-value").text(p_display.toFixed(2));   // set it to always display 2 decimal places
     d3.select("#p-slider").property("value", p);
-
     
     p_glob = p
 
-
     d3.selectAll(".bar").remove();  // clear chart
+    d3.selectAll(".bar-value").remove();  // clear chart
     
     data = generate_data(p);
-    display = chart(data);
 
+    return data;
 }
 
 function bernoulli_pmf(x, p){
     var pmf;
-    if(x == 1) { pmf = p } else if( x == 0) { pmf = 1-p } else { pmf = 0 }
+    if(x == 1) { pmf = p } else if(x == 0) { pmf = 1-p } else { pmf = 0 }
     return pmf;
-  }
+}
