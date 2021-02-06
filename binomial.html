@@ -6,11 +6,10 @@
     <title>Binomial distribution</title>
     <link type="text/css" rel="stylesheet" media="screen" href="./css/page.css">
     <link type="text/css" rel="stylesheet" media="screen" href="./css/chart.css">
-
     <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
-    <script src="./mathjax_config.js"></script>
+    <script src="./js/mathjax_config.js"></script>
 
 </head>
  
@@ -21,18 +20,8 @@
 <h1>Binomial distribution</h1>
 
 <p class="description">
-    Tossing a coin for $n$ times, what is the chance to get $k$ heads?
+    Tossing a coin $n$ times, how likely to get exact $k$ heads?
 </p>
-
-<h2>$$\small{
-    p(k) = 
-    \begin{cases}
-        {n \choose k}p^k(1-p)^{n-k}, & \text{if } k = 0, 1, \cdots, n, \\
-        0,              & \text{otherwise.}
-    \end{cases} 
-}
-    $$
-</h2>
 
 <div id="chart"></div>
 
@@ -52,8 +41,19 @@
     <input type="range" id="p-slider" class="slider" min="0.01" max="0.99" step="0.01"><br>
 </div>
 
+<div class="formula">
+$$
+  p(k) = 
+  \begin{cases}
+        {n \choose k}p^k(1-p)^{n-k}, & \text{if $k = 0, 1, \cdots, n$,} \\
+        0,                           & \text{otherwise.}
+  \end{cases}
+  \\[16pt]
+  \text{where $p$ is the probability the coin lands on heads.}
+$$
+</div>
 
-<script src="binomial.js"></script>
+<script src="./js/dist/binomial.js"></script>
 
 </div>
 

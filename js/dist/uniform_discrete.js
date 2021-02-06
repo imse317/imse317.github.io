@@ -29,7 +29,7 @@ var y = d3.scaleLinear()
 
 var a_glob = 1, b_glob = 6;  // initial parameters
 
-update(a_glob, b_glob)  // initial chart
+chart_init(update(a_glob, b_glob))  // initial chart
 
 function generate_data(a, b){
 
@@ -46,9 +46,49 @@ function generate_data(a, b){
     return data;
 }
 
+var darkred = "#cc0000";
+
+function chart_init(data){  
+
+    bars = svg.selectAll("bar")
+    .data(data)
+  .enter().append("rect")
+    .attr("class", "bar")
+    .attr("x", function(d) { return x(d[0]) })
+    .attr("width", x.bandwidth())
+    .attr("y", function(d) { return y(d[1]) })
+    .attr("height", function(d) { return height - y(d[1]) });
+
+    bars.attr("y",  function(d) { return height; })
+    .attr("height", 0)
+      .transition()
+      .duration(700)
+      .delay(function (d, i) {
+          return i * 100;
+      })
+    .attr("y", function(d) { return y(d[1]) })
+    .attr("height", function(d) { return height - y(d[1]) });
+
+    mouseOver();
+
+}
+
+function mouseOver(){
+
+    bars.on("mouseover", function() {
+        d3.select(this)
+            .style("fill", darkred);
+        })
+      .on("mouseout", function() {
+        d3.select(this)
+            .style("fill", "red");
+        }); 
+
+}
+
 function chart(data){  
 
-    svg.selectAll("bar")
+    bars = svg.selectAll("bar")
       .data(data)
     .enter().append("rect")
       .attr("class", "bar")
@@ -56,15 +96,17 @@ function chart(data){
       .attr("width", x.bandwidth())
       .attr("y", function(d) { return y(d[1]) })
       .attr("height", function(d) { return height - y(d[1]) });
+
+      mouseOver();
    
 }
 
 d3.select("#a-slider").on("input", function() {
-    update(this.value, b_glob);
+    chart(update(this.value, b_glob));
 });
 
 d3.select("#b-slider").on("input", function() {
-    update(a_glob, this.value);
+    chart(update(a_glob, this.value));
 });
 
 function update(a, b) {
@@ -75,13 +117,14 @@ function update(a, b) {
     d3.select("#b-value").text(b);
     d3.select("#b-slider").property("value", b);
     
-    a_glob = a
-    b_glob = b
+    a_glob = a;
+    b_glob = b;
 
     d3.selectAll(".bar").remove();  // clear chart
     
     data = generate_data(+a, +b);
-    display = chart(data);
+    
+    return data;
 
 }
 

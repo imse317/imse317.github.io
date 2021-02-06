@@ -12,7 +12,7 @@ var svg = d3.select("#chart")
 var x = d3.scaleBand()
         .domain(d3.range(101))
         .rangeRound([0, width], .1)
-        .paddingInner(0.5);
+        .paddingInner(0.4);
  
 var y = d3.scaleLinear()
         .domain([0, 0.25])
@@ -28,12 +28,12 @@ var y = d3.scaleLinear()
     svg.append("g")
       .attr("class", "y-axis")    
       .call(d3.axisLeft(y)
-      .tickValues(d3.range(0, 1, 0.05))
+      .tickValues(d3.range(0, 0.26, 0.05))
       );
 
-var n_glob = 40, p_glob = 0.5;  // initial parameters
+var n_glob = 20, p_glob = 0.5;  // initial parameters
 
-update(n_glob, p_glob)  // initial chart
+chart_init(update(n_glob, p_glob))  // initial chart
 
 function generate_data(n, p){
 
@@ -51,9 +51,47 @@ function generate_data(n, p){
     return data;
 }
 
+var darkred = "#cc0000";
+
+function chart_init(data){  
+
+    bars = svg.selectAll("bar")
+                .data(data)
+            .enter().append("rect")
+                .attr("class", "bar")
+                .attr("x", function(d) { return x(d[0]) })
+                .attr("width", x.bandwidth())
+                .attr("y", function(d) { return y(d[1]) })
+                .attr("height", function(d) { return height - y(d[1]) });
+
+    bars.attr("y",  function(d) { return height; })
+        .attr("height", 0)
+          .transition()
+          .duration(700)
+          .delay(function (d, i) {
+              return i * 50;
+          })
+        .attr("y", function(d) { return y(d[1]) })
+        .attr("height", function(d) { return height - y(d[1]) });
+
+    mouseOver();
+}
+
+function mouseOver(){
+
+    bars.on("mouseover", function() {
+        d3.select(this)
+            .style("fill", darkred);
+        })
+      .on("mouseout", function() {
+        d3.select(this)
+            .style("fill", "red");
+        }); 
+}
+
 function chart(data){  
 
-    svg.selectAll("bar")
+   bars = svg.selectAll("bar")
       .data(data)
     .enter().append("rect")
       .attr("class", "bar")
@@ -61,15 +99,17 @@ function chart(data){
       .attr("width", x.bandwidth())
       .attr("y", function(d) { return y(d[1]) })
       .attr("height", function(d) { return height - y(d[1]) });
+
+      mouseOver(); 
    
 }
 
 d3.select("#n-slider").on("input", function() {
-    update(this.value, p_glob);
+    chart(update(this.value, p_glob));
 });
 
 d3.select("#p-slider").on("input", function() {
-    update(n_glob, this.value);
+    chart(update(n_glob, this.value));
 });
 
 function update(n, p) {
@@ -77,15 +117,17 @@ function update(n, p) {
     d3.select("#n-value").text(n);
     d3.select("#n-slider").property("value", n);
 
-    d3.select("#p-value").text(p);
+    var p_display = +p;
+    d3.select("#p-value").text(p_display.toFixed(2));
     d3.select("#p-slider").property("value", p);
     
-    n_glob = n
-    p_glob = p
+    n_glob = n;
+    p_glob = p;
 
     d3.selectAll(".bar").remove();  // clear chart
     
     data = generate_data(+n, +p); // use the plus sign to make sure they are converted to numbers
-    display = chart(data);
+
+    return data;
 
 }

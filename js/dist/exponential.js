@@ -16,19 +16,25 @@ var x = d3.scaleLinear()
 var y = d3.scaleLinear()
         .domain([0, 5])
         .range([height, 0]);
-  
-    svg.append("g")
-      .attr("class", "x-axis")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x));
+
+var xAxis = d3.axisBottom()
+              .scale(x);
+
+var yAxis = d3.axisLeft()
+              .scale(y);
+
+svg.append("g")
+    .attr("class", "x-axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis);
  
-    svg.append("g")
-      .attr("class", "y-axis")    
-      .call(d3.axisLeft(y));
+svg.append("g")
+    .attr("class", "y-axis")    
+    .call(yAxis);
  
 var lambda_glob = 3;  // initial parameters
 
-update(lambda_glob)  // initial chart
+chart_init(update(lambda_glob))  // initial chart
 
 function generate_data(lambda){
 
@@ -51,15 +57,39 @@ function generate_data(lambda){
 //     .y0(height)
 //     .y1(function(d) { return y(d[1]) });
 
+function chart_init(data){
+
+var line = d3.line()
+        .x(function(d) { return x(d[0] * 0.01) })  // 0.01 is the delta corresponding to the for loop
+        .y(function(d) { return y(d[1]) });
+
+    path = svg.append('path')
+        .attr("class", "line")
+        .datum(data)
+        .attr("d", line);
+
+    var totalLength = path.node().getTotalLength();
+
+    path
+      .attr("stroke-dasharray", totalLength + " " + totalLength)
+      .attr("stroke-dashoffset", totalLength)
+     .transition()
+      .duration(1000)
+      .ease(d3.easeLinear)
+      .attr("stroke-dashoffset", 0); // Set final value of dash-offset for transition
+
+ }
+
 function chart(data){  
+
+var line = d3.line()
+    .x(function(d) { return x(d[0] * 0.01) })  // 0.01 is the delta corresponding to the for loop
+    .y(function(d) { return y(d[1]) });
 
     svg.append('path')
         .attr("class", "line")
         .datum(data)
-        .attr("d", d3.line()
-            .x(function(d) { return x(d[0] * 0.01) })  // 0.1 is the delta corresponding to the for loop
-            .y(function(d) { return y(d[1]) })
-        );
+        .attr("d", line);
 
     //   // add the area
     // svg.append("path")
@@ -69,20 +99,25 @@ function chart(data){
 }
 
 d3.select("#lambda-slider").on("input", function() {
-    update(this.value);
+    chart(update(this.value));
 });
 
 function update(lambda) {
     
-    d3.select("#lambda-value").text(lambda);
+    var lambda_display = +lambda;
+    d3.select("#lambda-value").text(lambda_display.toFixed(1));
     d3.select("#lambda-slider").property("value", lambda);
 
-    lambda_glob = lambda
+    lambda_glob = lambda;
 
     d3.selectAll(".line").remove();  // clear chart
     // d3.selectAll(".area").remove();  // clear chart
     
-    data = generate_data(lambda);
-    display = chart(data);
+    data = generate_data(+lambda);
+    display = chart_init(data);
+    // display = chart(data);
+
+    return data;
+    
 
 }

@@ -33,7 +33,7 @@ var y = d3.scaleLinear()
 
 var lambda_glob = 4;  // initial parameters
 
-update(lambda_glob)  // initial chart
+chart_init(update(lambda_glob))  // initial chart
 
 function generate_data(lambda){
 
@@ -51,9 +51,11 @@ function generate_data(lambda){
     return data;
 }
 
-function chart(data){  
+var darkred = "#cc0000";
 
-    svg.selectAll("bar")
+function chart_init(data){  
+    
+    bars = svg.selectAll("bar")
       .data(data)
     .enter().append("rect")
       .attr("class", "bar")
@@ -61,25 +63,66 @@ function chart(data){
       .attr("width", x.bandwidth())
       .attr("y", function(d) { return y(d[1]) })
       .attr("height", function(d) { return height - y(d[1]) });
+
+    bars.attr("y",  function(d) { return height; })
+    .attr("height", 0)
+      .transition()
+      .duration(700)
+      .delay(function (d, i) {
+          return i * 100;
+      })
+    .attr("y", function(d) { return y(d[1]) })
+    .attr("height", function(d) { return height - y(d[1]) });
+
+    mouseOver();
+
+}
+
+function mouseOver(){
+
+    bars.on("mouseover", function() {
+        d3.select(this)
+            .style("fill", darkred);
+        })
+      .on("mouseout", function() {
+        d3.select(this)
+            .style("fill", "red");
+        }); 
+}
+
+function chart(data){  
+
+    bars = svg.selectAll("bar")
+      .data(data)
+    .enter().append("rect")
+      .attr("class", "bar")
+      .attr("x", function(d) { return x(d[0]) })
+      .attr("width", x.bandwidth())
+      .attr("y", function(d) { return y(d[1]) })
+      .attr("height", function(d) { return height - y(d[1]) });
+
+      mouseOver();
    
 }
 
 
 d3.select("#lambda-slider").on("input", function() {
-    update(this.value);
+    chart(update(this.value));
 });
 
 function update(lambda) {
 
-    d3.select("#lambda-value").text(lambda);
+    var lambda_display = +lambda;
+    d3.select("#lambda-value").text(lambda_display.toFixed(1));
     d3.select("#lambda-slider").property("value", lambda);
     
-    lambda_glob = lambda
+    lambda_glob = lambda;
 
     d3.selectAll(".bar").remove();  // clear chart
     
     data = generate_data(+lambda); // use the plus sign to make sure they are converted to numbers
-    display = chart(data);
+
+    return data;
 
 }
 

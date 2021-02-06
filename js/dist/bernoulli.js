@@ -96,8 +96,6 @@ function mouseOver(){
         }); 
 }
 
-var tooltip = d3.select("body").append("p").attr("class", "toolTip");
-
 function chart(data){  
 
     bars = svg.selectAll("bar")
@@ -109,7 +107,7 @@ function chart(data){
       .attr("y", function(d) { return y(d[1]) })
       .attr("height", function(d) { return height - y(d[1]) });
 
-    showValues()
+    showValues(); 
     mouseOver(); 
 }
 
@@ -119,11 +117,11 @@ d3.select("#p-slider").on("input", function() {
 
 function update(p) {
     
-    var p_display = +p
+    var p_display = +p;
     d3.select("#p-value").text(p_display.toFixed(2));   // set it to always display 2 decimal places
     d3.select("#p-slider").property("value", p);
     
-    p_glob = p
+    p_glob = p;
 
     d3.selectAll(".bar").remove();  // clear chart
     d3.selectAll(".bar-value").remove();  // clear chart

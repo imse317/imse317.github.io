@@ -7,9 +7,9 @@
     <link type="text/css" rel="stylesheet" media="screen" href="./css/page.css">
     <link type="text/css" rel="stylesheet" media="screen" href="./css/chart.css">
     <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
-    <script src="./mathjax_config.js"></script>
+    <script src="./js/mathjax_config.js"></script>
 </head>
  
 <body>
@@ -21,17 +21,6 @@
 <p class="description">
     Roll a fair $n$-sided die, what is the chance it lands on any given number?
 </p>
-
-<h2>$$\small{
-    p(k) = 
-    \begin{cases}
-        1/n, & \text{if } k = a, a+1, \cdots, b-1, b, \\
-        0,              & \text{otherwise.}
-    \end{cases} 
-    \\[14pt]
-    \color{gray}{\text{where }\; n=b-a+1.}\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;
-    }$$
-</h2>
 
 <div id="chart"></div>
 
@@ -52,7 +41,19 @@
     <input type="range" id="b-slider" class="slider" min="1" max="10" step="1"><br>
 </div>
 
-<script src="./uniform_discrete.js"></script>
+<div class="formula">
+$$
+    p(k) = 
+    \begin{cases}
+        1/n, & \text{if $k = a, a+1, \cdots, b-1, b$,} \\
+        0,   & \text{otherwise.}
+    \end{cases} 
+        \\[16pt]
+        \text{where $n=b-a+1$.}
+$$
+</div>
+
+<script src="./js/dist/uniform_discrete.js"></script>
 
 </div>
 
