@@ -11,13 +11,8 @@ body {
 .container {
 	width: 800px;
 	margin: 0px auto;
-	padding-top: 0px;
-	padding-bottom: 20px;
 }
-header {
-	padding-left: 10px;
-	display: flex;
-}
+
 main {
 	padding: 25px 10px 50px;
 	clear: both;
@@ -25,16 +20,13 @@ main {
 
 h2 {
 	text-align: center;
-	color: #00274C;  /* Michigan blue */
-}
-
-h3 {
-	color: #00274C;  /* Michigan blue */
+	padding-bottom: 30px;
 }
 
 li {
-	padding: 2px;
+	padding-bottom: 20px;
 }
+
 a:link, a:visited, a:active, a:hover {
 	color: #0645AD;
 }
@@ -44,14 +36,26 @@ a:link {
 a:hover {
 	text-decoration: underline;
 }
-a.button:hover {
-	color: white;
-	background-color: #0645AD;
+
+.dist-category {
+	font-size: 20pt;
+	margin-bottom: 20px;
 }
 
-.dist-list {
-	text-align: left;
-	padding-left: 50px;
+#distributions {
+	width: 100%;
+	margin-left: auto; 
+	margin-right: auto;
+	vertical-align: top;
+}
+
+table, th, td {
+	vertical-align: top;
+	padding-left:30px;
+}
+
+th {
+	padding-bottom: 0px;
 }
 
 footer {
@@ -59,17 +63,13 @@ footer {
 	width: 800px;
 	margin: 0px auto;
 	padding-top: 5px;
-	padding-bottom: 5px;
-	
+	padding-bottom: 5px;	
 }
 footer p {
-	
 	padding-left: 40px;
 	line-height: 100%;
 }
 
 #site-footer {
 	background: #F5F5F5;
-	/* padding-top: 5px; */
 }
-
