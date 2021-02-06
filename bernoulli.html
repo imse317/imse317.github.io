@@ -6,11 +6,10 @@
     <title>Bernoulli distribution</title>
     <link type="text/css" rel="stylesheet" media="screen" href="./css/page.css">
     <link type="text/css" rel="stylesheet" media="screen" href="./css/chart.css">
-
     <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
-    <script src="./mathjax_config.js"></script>
+    <script src="./js/mathjax_config.js"></script>
 </head>
  
 <body>
@@ -35,21 +34,19 @@
 </div>
 
 <div class="formula">
-<h2>$$\small{\;\;\;\;\;\;\;\;\;\;\;
-    p(k)=
+$$
+p(k)=
     \begin{cases}
-        p, & \text{if } k=1, \\
-        1-p, & \text{if } k=0, \\
-        0,              & \text{otherwise.}
+        p,   & \text{if $k=1$,} \\
+        1-p, & \text{if $k=0$,} \\
+        0,   & \text{otherwise.}
     \end{cases}
-    \\[18pt]
+    \\[20pt]
     \text{where $p$ is the probability the coin lands on heads.}
-    }
-    $$
-</h2>
+$$
 </div>
 
-<script src="bernoulli.js"></script>
+<script src="./js/dist/bernoulli.js"></script>
 
 </div>
 
