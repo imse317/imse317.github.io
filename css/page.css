@@ -13,12 +13,22 @@ body {
 	padding-bottom: 20px;
 }
 
+h2 {
+	padding-top: 20px;
+}
+
 .description {
 	color: blue;
 	font-size: 16pt;
 	font-weight: bold;
+	margin-bottom: 0px;
+}
+
+.formula {
+	padding-top: 20px;
 }
 
 .slider-label {
 	font-size: 16pt;
+	padding-bottom: 20px;
   }
