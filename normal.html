@@ -8,7 +8,7 @@
     <link type="text/css" rel="stylesheet" media="screen" href="./css/chart.css">
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured"></script>
     <script src="./js/mathjax_config.js"></script>
 </head>
  
@@ -28,7 +28,6 @@
     <input type="range" id="mu-slider" class="slider" min="0" max="50" step="0.1"><br>
 </div>
 
-<br>
 <div class="slider-label">
     <p>$\sigma=$ <span id="sigma-value"></span></p>
 </div>
@@ -45,9 +44,10 @@ f(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}
 $$
 </div>
 
-<script src="./js/dist/normal.js"></script>
-
 </div>
 
 </body>
+
+<script src="./js/dist/normal.js"></script>
+
 </html>

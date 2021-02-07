@@ -32,90 +32,89 @@ svg.append("g")
     .attr("class", "y-axis")    
     .call(yAxis);
  
-var dof_glob = 1;  // initial parameters
+var dof_init = 1;  // initial params for t dist
 
-chart_init(update(dof_glob));  // initial chart
+var params = [dof_init]
 
-data_z = generate_data_z();
-chart_z(data_z);
+initial_chart(params);
+
+chart_z();
 
 function generate_data_z(){
 
-    var n = [];
+    // standard normal dist
+    var mu = 0;
+    var sigma = 1;
 
-    for (var i = -5; i < 5; i += 0.01) {
-        n.push(jStat.normal.pdf(i, 0, 1));        
+    var data = [];
+
+    for (var x = -5; x < 5 + 0.1; x += 0.01) {    // make the line extend slightly beyond the x-axis
+        var pdf = jStat.normal.pdf(x, mu, sigma);
+        data.push([x, pdf]);       
     }
- 
-    data = n.map(function(d, i) {
-            return[i, d];
-        });
 
-    return data;   
-    
+    return data;
 }
 
-function chart_z(data){  
-
+function chart_z(){  
 
     var line = d3.line()
-            .x(function(d) { return x(d[0] * 0.01 - 5) })  // 0.1 is the delta corresponding to the for loop
-            .y(function(d) { return y(d[1]) });
+    .x(function(d) { return x(d[0]) })
+    .y(function(d) { return y(d[1]) });
 
-        path = svg.append('path')
-        .attr("class", "line_1")
-        .datum(data)
-        .attr("d", line);
+    data = generate_data_z();
 
-        // var totalLength = path.node().getTotalLength();
+    path = svg.append('path')
+            .attr("class", "line_z")
+            .datum(data)
+            .attr("d", line);
 
-        // path.attr("stroke-dasharray", totalLength + " " + totalLength)
-        //     .attr("stroke-dashoffset", totalLength)
-        //     .transition()
-        //     .duration(1000)
-        //     .ease(d3.easeLinear)
-        //     .attr("stroke-dashoffset", 0); // Set final value of dash-offset for transition;
-
-
-        path.on("mouseover", function() {
-            d3.select(".line_1")
-                .style("stroke", darkgreen)
-                .style("stroke-width", 7);
-            })
-          .on("mouseout", function() {
-            d3.select(".line_1")
-                .style("stroke", "darkgreen")
-                .style("stroke-width", 5);
-            }); 
+    path.on("mouseover", function() {
+        d3.select(".line_z")
+            .style("stroke", darkgreen)
+            .style("stroke-width", 6);
+        })
+        .on("mouseout", function() {
+        d3.select(".line_z")
+            .style("stroke", "darkgreen")
+            .style("stroke-width", 5);
+        }); 
 }
 
-function generate_data(dof){
+function generate_data(params){
 
-    var n = [];
+    var dof = params[0];
 
-    for (var i = -5; i < 5; i += 0.01) {
-        n.push(jStat.studentt.pdf(i, +dof));        
+    var data = [];
+
+    for (var x = -5; x < 5 + 0.1; x += 0.01) {
+        var pdf = jStat.studentt.pdf(x, dof);
+        data.push([x, pdf]);         
     }
  
-    data = n.map(function(d, i) {
-            return[i, d];
-        });
-
-    return data;   
-    
+    return data;
 }
 
-function chart_init(data){
+function add_dist_line(params) {
 
     var line = d3.line()
-            .x(function(d) { return x(d[0] * 0.01 - 5) })  // 0.1 is the delta corresponding to the for loop
-            .y(function(d) { return y(d[1]) });
+    .x(function(d) { return x(d[0]) })
+    .y(function(d) { return y(d[1]) });
 
-        path = svg.append('path')
-        .attr("class", "line")
-        .datum(data)
-        .attr("d", line);
+    data = generate_data(params);
 
+    path = svg.append('path')
+            .attr("class", "line")
+            .datum(data)
+            .attr("d", line);
+}
+
+function initial_chart(params){
+
+    update_controls(params);
+    add_dist_line(params);
+
+    // add transition
     var totalLength = path.node().getTotalLength();
 
     path.attr("stroke-dasharray", totalLength + " " + totalLength)
@@ -167,20 +166,23 @@ function chart(data){
 }
 
 d3.select("#dof-slider").on("input", function() {
-    chart(update(this.value));
+    params[0] = +this.value;
+    update(params);
 });
 
-function update(dof) {
+function update_controls(params) {
+
+    var dof = params[0];
     
     d3.select("#dof-value").text(dof);
     d3.select("#dof-slider").property("value", dof);
 
-    dof_glob = dof;
+}
+
+function update(dof) {
 
     d3.selectAll(".line").remove();  // clear chart
     
-    data = generate_data(dof);
-
-    return data;
-
+    update_controls(params);
+    add_dist_line(params);
 }

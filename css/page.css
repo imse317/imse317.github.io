@@ -27,9 +27,42 @@ body {
 
 .slider-label {
 	font-size: 16pt;
+	padding-top: 20px;
 	padding-bottom: 10px;
   }
 
 .slider-container {
-	padding-bottom: 20px;
+	margin-bottom:10px;
   }
+
+
+  /* styling the slider */
+
+input[type=range]{
+  -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 8px;
+  background: #ddd;
+  border: none;
+  border-radius: 8px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #00274C;
+  margin-top: -11px;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #ccc;
+}

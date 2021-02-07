@@ -17,54 +17,70 @@ var x = d3.scaleBand()
 var y = d3.scaleLinear()
         .domain([0, 0.6])
         .range([height, 0]);
+
+var xAxis = d3.axisBottom()
+        .scale(x);
+
+var yAxis = d3.axisLeft()
+        .scale(y);
   
-    svg.append("g")
-      .attr("class", "x-axis")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x)
-          .tickValues(d3.range(0, 41, 5))
-        );
- 
-    svg.append("g")
-      .attr("class", "y-axis")    
-      .call(d3.axisLeft(y)
-      .tickValues(d3.range(0, 1, 0.1))
-      .tickFormat(d3.format('.1f'))
-      );
+svg.append("g")
+    .attr("class", "x-axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis
+        .tickValues(d3.range(0, 41, 5))
+    );
 
-var p_glob = 0.5;  // initial parameters
+svg.append("g")
+    .attr("class", "y-axis")    
+    .call(yAxis
+        .tickValues(d3.range(0, 1, 0.1))
+        .tickFormat(d3.format('.1f'))
+    );
 
-chart_init(update(p_glob))  // initial chart
+var p_init = 0.5;  // initial params for geometric
 
-function generate_data(p){
+var params = [p_init];
 
-    var n = [];
+initial_chart(params);
 
-    for (var i = 0; i < 41; i += 1) { 
-        n.push(geo_pmf( i, p ));  
-        
+function generate_data(params){
+
+    var p = params[0];
+
+    var data = [];
+
+    for (var x = 0; x < 41; x += 1) {
+        var pmf = geo_pmf(x, p);
+        data.push([x, pmf]);
     }
- 
-    data = n.map(function(d, i) {
-            return[i, d];
-        });
 
     return data;
 }
 
-var darkred = "#cc0000";
+var darkred = "#b30000";
 
-function chart_init(data){  
+function add_dist_bar(params){  
+
+    var data = generate_data(params);
 
     bars = svg.selectAll("bar")
-    .data(data)
-  .enter().append("rect")
-    .attr("class", "bar")
-    .attr("x", function(d) { return x(d[0]) })
-    .attr("width", x.bandwidth())
-    .attr("y", function(d) { return y(d[1]) })
-    .attr("height", function(d) { return height - y(d[1]) });
+      .data(data)
+    .enter().append("rect")
+      .attr("class", "bar")
+      .attr("x", function(d) { return x(d[0]) })
+      .attr("width", x.bandwidth())
+      .attr("y", function(d) { return y(d[1]) })
+      .attr("height", function(d) { return height - y(d[1]) });
 
+    mouseOver(); 
+}
+
+function initial_chart(params){
+
+    add_dist_bar(params);
+
+    // add transition
     bars.attr("y",  function(d) { return height; })
     .attr("height", 0)
       .transition()
@@ -76,6 +92,8 @@ function chart_init(data){
     .attr("height", function(d) { return height - y(d[1]) });
 
     mouseOver();
+
+    update_controls(params);
 
 }
 
@@ -91,38 +109,26 @@ function mouseOver(){
         }); 
 }
 
-function chart(data){  
-
-    bars = svg.selectAll("bar")
-      .data(data)
-    .enter().append("rect")
-      .attr("class", "bar")
-      .attr("x", function(d) { return x(d[0]) })
-      .attr("width", x.bandwidth())
-      .attr("y", function(d) { return y(d[1]) })
-      .attr("height", function(d) { return height - y(d[1]) });
-
-      mouseOver();
-   
-}
-
 d3.select("#p-slider").on("input", function() {
-    chart(update(this.value));
+    params[0] = +this.value;
+    update(params);
 });
 
-function update(p) {
+function update_controls(params) {
 
-    var p_display = +p;
-    d3.select("#p-value").text(p_display.toFixed(2));
-    d3.select("#p-slider").property("value", p);
+    var p = params[0];
     
-    p_glob = p;
+    d3.select("#p-value").text(p.toFixed(2));
+    d3.select("#p-slider").property("value", p);
+
+}
+
+function update(params) {
 
     d3.selectAll(".bar").remove();  // clear chart
     
-    data = generate_data(+p); // use the plus sign to make sure they are converted to numbers
-
-    return data;
+    update_controls(params);
+    add_dist_bar(params);
 
 }
 
