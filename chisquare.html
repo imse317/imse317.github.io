@@ -3,7 +3,7 @@
 <meta charset="utf-8">
  
 <head>
-    <title>Geometric uniform</title>
+    <title>Chi-square distribution</title>
     <link type="text/css" rel="stylesheet" media="screen" href="./css/page.css">
     <link type="text/css" rel="stylesheet" media="screen" href="./css/chart.css">
     <script src="https://d3js.org/d3.v6.min.js"></script>
@@ -16,38 +16,47 @@
 <body>
 
 <div class="container">
-    
-<h1>Geometric distribution</h1>
+
+<h1>Chi-square distribution</h1>
 
 <p class="description">
-    Toss a coin until we see the first heads, how likely we stop at the $k$-th toss?
+    A sum of the squares of $k$ independent standard normal random variables
 </p>
+
+<div class="formula">
+    $$\color{blue}{
+    Z_1^2 + Z_2^2 + \cdots + Z_k^2 \;\sim\; \chi^2(k) 
+    }
+    $$
+</div>
 
 <div id="chart"></div>
 
 <div class="controls">
     <div class="slider-label">
-        <p>$p=$ <span id="p-value"></span></p>
+        <p>$k=$ <span id="dof-value"></span></p>
     </div>
 
     <div class="slider-container">
-        <input type="range" id="p-slider" class="slider" min="0.01" max="0.6" step="0.01"><br>
+        <input type="range" id="dof-slider" class="slider" min="1" max="12" step="1"><br>
     </div>
 </div>
 
 <div class="formula">
 $$
-    p(k) = 
+    f(x) = 
     \begin{cases}
-        (1-p)^{k-1}p, & \text{if $k = 1, 2, \cdots$,} \\\
-        0,            & \text{otherwise.}
-    \end{cases} 
-    \\[16pt]
-    \text{where $p$ is the probability the coin lands on heads.}
+        \frac{x^{\frac{k}{2}-1}e^{-\frac{x}{2}}}{2^{\frac{k}{2}}\Gamma\big(\frac{k}{2}\big)}, & \text{if $x > 0$,} \\
+        0,                      & \text{otherwise.}
+    \end{cases}
+    \\[24pt]
+    \text{where $k$ is the degree of freedom (the number of the squares)} \\
+    \\
+    \text{and $\Gamma\bigg(\frac{k}{2}\bigg)$ is the gamma function.}
 $$
 </div>
 
-<script src="./js/dist/geometric.js"></script>
+<script src="./js/dist/chisquare.js"></script>
 
 </div>
 

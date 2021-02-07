@@ -22,7 +22,12 @@ body {
 
 .formula {
 	font-size: 16pt;
-	padding-top: 50px;
+	padding-bottom: 0px;
+  margin-bottom: -20px;
+}
+
+.controls {
+  margin-bottom: 80px;
 }
 
 .slider-label {
@@ -34,7 +39,6 @@ body {
 .slider-container {
 	margin-bottom:10px;
   }
-
 
   /* styling the slider */
 
