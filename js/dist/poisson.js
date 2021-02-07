@@ -17,44 +17,50 @@ var x = d3.scaleBand()
 var y = d3.scaleLinear()
         .domain([0, 0.5])
         .range([height, 0]);
+
+var xAxis = d3.axisBottom()
+        .scale(x);
+
+var yAxis = d3.axisLeft()
+        .scale(y);
   
-    svg.append("g")
-      .attr("class", "x-axis")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x)
-        //   .tickValues(d3.range(0, 21, 5))
-        );
- 
-    svg.append("g")
-      .attr("class", "y-axis")    
-      .call(d3.axisLeft(y)
-      .tickValues(d3.range(0, 1, 0.1))
-      );
+svg.append("g")
+    .attr("class", "x-axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis);
 
-var lambda_glob = 4;  // initial parameters
+svg.append("g")
+    .attr("class", "y-axis")    
+    .call(yAxis
+        .tickValues(d3.range(0, 1, 0.1))
+    );
 
-chart_init(update(lambda_glob))  // initial chart
+var lambda_init = 4;  // initial params for poisson
 
-function generate_data(lambda){
+var params = [lambda_init];
 
-    var n = [];
+initial_chart(params);
 
-    for (var i = 0; i < 21; i += 1) { 
-        n.push(jStat.poisson.pdf( i, lambda ));  
-        
+function generate_data(params){
+
+    var lambda = params[0];
+
+    var data = [];
+
+    for (var x = 0; x < 21; x += 1) { 
+        var pmf = jStat.poisson.pdf(x, lambda);
+        data.push([x, pmf]);
     }
- 
-    data = n.map(function(d, i) {
-            return[i, d];
-        });
 
     return data;
 }
 
-var darkred = "#cc0000";
+var darkred = "#b30000";
 
-function chart_init(data){  
-    
+function add_dist_bar(params){  
+
+    var data = generate_data(params);
+
     bars = svg.selectAll("bar")
       .data(data)
     .enter().append("rect")
@@ -64,6 +70,14 @@ function chart_init(data){
       .attr("y", function(d) { return y(d[1]) })
       .attr("height", function(d) { return height - y(d[1]) });
 
+    mouseOver(); 
+}
+
+function initial_chart(params){
+
+    add_dist_bar(params);
+    
+    // add transition
     bars.attr("y",  function(d) { return height; })
     .attr("height", 0)
       .transition()
@@ -75,6 +89,8 @@ function chart_init(data){
     .attr("height", function(d) { return height - y(d[1]) });
 
     mouseOver();
+
+    update_controls(params);
 
 }
 
@@ -90,39 +106,41 @@ function mouseOver(){
         }); 
 }
 
-function chart(data){  
+// function chart(data){  
 
-    bars = svg.selectAll("bar")
-      .data(data)
-    .enter().append("rect")
-      .attr("class", "bar")
-      .attr("x", function(d) { return x(d[0]) })
-      .attr("width", x.bandwidth())
-      .attr("y", function(d) { return y(d[1]) })
-      .attr("height", function(d) { return height - y(d[1]) });
+//     bars = svg.selectAll("bar")
+//       .data(data)
+//     .enter().append("rect")
+//       .attr("class", "bar")
+//       .attr("x", function(d) { return x(d[0]) })
+//       .attr("width", x.bandwidth())
+//       .attr("y", function(d) { return y(d[1]) })
+//       .attr("height", function(d) { return height - y(d[1]) });
 
-      mouseOver();
+//       mouseOver();
    
-}
+// }
 
 
 d3.select("#lambda-slider").on("input", function() {
-    chart(update(this.value));
+    params[0] = +this.value;
+    update(params);
 });
 
-function update(lambda) {
+function update_controls(params) {
 
-    var lambda_display = +lambda;
-    d3.select("#lambda-value").text(lambda_display.toFixed(1));
+    var lambda = params[0];
+    
+    d3.select("#lambda-value").text(lambda.toFixed(1));
     d3.select("#lambda-slider").property("value", lambda);
-    
-    lambda_glob = lambda;
-
-    d3.selectAll(".bar").remove();  // clear chart
-    
-    data = generate_data(+lambda); // use the plus sign to make sure they are converted to numbers
-
-    return data;
 
 }
 
+function update(params) {
+
+    d3.selectAll(".bar").remove();  // clear chart
+    
+    update_controls(params);
+    add_dist_bar(params);
+
+}

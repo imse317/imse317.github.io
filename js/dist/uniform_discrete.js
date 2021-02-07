@@ -17,48 +17,66 @@ var x = d3.scaleBand()
 var y = d3.scaleLinear()
         .domain([0, 0.5])
         .range([height, 0]);
+
+var xAxis = d3.axisBottom()
+        .scale(x);
+
+var yAxis = d3.axisLeft()
+        .scale(y);
   
-    svg.append("g")
-      .attr("class", "x-axis")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x));
- 
-    svg.append("g")
-      .attr("class", "y-axis")    
-      .call(d3.axisLeft(y));
+svg.append("g")
+    .attr("class", "x-axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis);
 
-var a_glob = 1, b_glob = 6;  // initial parameters
+svg.append("g")
+    .attr("class", "y-axis")    
+    .call(yAxis);
 
-chart_init(update(a_glob, b_glob))  // initial chart
+var a_init = 1, b_init = 6;  // initial params for discrete uniform
 
-function generate_data(a, b){
+var params = [a_init, b_init];
 
-    var n = [];
+initial_chart(params);
 
-    for (var i = 1; i < 11; i += 1) { 
-        n.push(uniform_pmf(i, a, b));  
+function generate_data(params){
+
+    var a = params[0];
+    var b = params[1];
+
+    var data = [];
+
+    for (var x = 1; x < 11; x += 1) { 
+        var pmf = uniform_pmf(x, a, b);
+        data.push([x, pmf]);
     }
- 
-    data = n.map(function(d, i) {
-            return[i+1, d];
-        });
 
     return data;
 }
 
-var darkred = "#cc0000";
+var darkred = "#b30000";
 
-function chart_init(data){  
+function add_dist_bar(params){  
+
+    var data = generate_data(params);
 
     bars = svg.selectAll("bar")
-    .data(data)
-  .enter().append("rect")
-    .attr("class", "bar")
-    .attr("x", function(d) { return x(d[0]) })
-    .attr("width", x.bandwidth())
-    .attr("y", function(d) { return y(d[1]) })
-    .attr("height", function(d) { return height - y(d[1]) });
+      .data(data)
+    .enter().append("rect")
+      .attr("class", "bar")
+      .attr("x", function(d) { return x(d[0]) })
+      .attr("width", x.bandwidth())
+      .attr("y", function(d) { return y(d[1]) })
+      .attr("height", function(d) { return height - y(d[1]) });
 
+    mouseOver(); 
+}
+
+function initial_chart(params){ 
+
+    add_dist_bar(params);
+
+    // add transition
     bars.attr("y",  function(d) { return height; })
     .attr("height", 0)
       .transition()
@@ -71,6 +89,7 @@ function chart_init(data){
 
     mouseOver();
 
+    update_controls(params);
 }
 
 function mouseOver(){
@@ -86,46 +105,35 @@ function mouseOver(){
 
 }
 
-function chart(data){  
-
-    bars = svg.selectAll("bar")
-      .data(data)
-    .enter().append("rect")
-      .attr("class", "bar")
-      .attr("x", function(d) { return x(d[0]) })
-      .attr("width", x.bandwidth())
-      .attr("y", function(d) { return y(d[1]) })
-      .attr("height", function(d) { return height - y(d[1]) });
-
-      mouseOver();
-   
-}
-
 d3.select("#a-slider").on("input", function() {
-    chart(update(this.value, b_glob));
+    params[0] = +this.value;
+    update(params);
 });
 
 d3.select("#b-slider").on("input", function() {
-    chart(update(a_glob, this.value));
+    params[1] = +this.value;
+    update(params);
 });
 
-function update(a, b) {
+function update_controls(params) {
+
+    var a = params[0];
+    var b = params[1];
     
     d3.select("#a-value").text(a);
     d3.select("#a-slider").property("value", a);
 
     d3.select("#b-value").text(b);
     d3.select("#b-slider").property("value", b);
-    
-    a_glob = a;
-    b_glob = b;
 
+}
+
+function update(params) {
+    
     d3.selectAll(".bar").remove();  // clear chart
     
-    data = generate_data(+a, +b);
-    
-    return data;
-
+    update_controls(params);
+    add_dist_bar(params);
 }
 
 function uniform_pmf(x, a, b){

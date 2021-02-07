@@ -18,7 +18,7 @@ path {
   opacity: 0.6;
 }
 
-.line_1 {
+.line_z {
   stroke: green;
   stroke-width: 5;
   opacity: 0.6;
@@ -44,36 +44,4 @@ path {
   stroke-dasharray: 5,5; 
   stroke-width: 2;
   stroke: lightgray;
-}
-
-
-/* styling the slider */
-
-input[type=range]{
-  -webkit-appearance: none;
-}
-
-input[type=range]::-webkit-slider-runnable-track {
-  height: 8px;
-  background: #ddd;
-  border: none;
-  border-radius: 8px;
-}
-
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  border: none;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background: #00274C;  /* Michigan Blue */
-  margin-top: -11px;
-}
-
-input[type=range]:focus {
-  outline: none;
-}
-
-input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #ccc;
 }

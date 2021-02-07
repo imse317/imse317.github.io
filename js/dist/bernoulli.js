@@ -1,6 +1,6 @@
 var margin = {top: 40, right: 40, bottom: 30, left: 70},
     width = 750 - margin.left - margin.right,
-    height = 350 - margin.top - margin.bottom;
+    height = 400 - margin.top - margin.bottom;
 
 var svg = d3.select("#chart")
     .append("svg")
@@ -17,62 +17,84 @@ var x = d3.scaleBand()
 var y = d3.scaleLinear()
         .domain([0, 1])
         .range([height, 0]);
+
+var xAxis = d3.axisBottom()
+        .scale(x);
+
+var yAxis = d3.axisLeft()
+        .scale(y);
   
-    svg.append("g")
-      .attr("class", "x-axis")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x));
- 
-    svg.append("g")
-      .attr("class", "y-axis")    
-      .call(d3.axisLeft(y));
+svg.append("g")
+    .attr("class", "x-axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis);
 
-var p_glob = 0.5;  // initial parameters
+svg.append("g")
+    .attr("class", "y-axis")    
+    .call(yAxis);
 
-chart_init(update(p_glob));   // initial chart
+var p_init = 0.5;  // initial params for bernoulli
 
-function generate_data(p){
+var params = [p_init]
 
-    var n = [];
+initial_chart(params);
 
-    for (var i = 0; i < 2; i += 1) { 
-        n.push(bernoulli_pmf(i, p));  
+function generate_data(params){
+
+    var p = params[0];
+
+    var data = [];
+
+    for (var x = 0; x < 2; x += 1) { 
+        var pmf = bernoulli_pmf(x, p);
+        data.push([x, pmf]);
     }
- 
-    data = n.map(function(d, i) {
-            return[i, d];
-        });
 
     return data;
 }
 
-var darkred = "#cc0000";
+var darkred = "#b30000";
 
-function chart_init(data){  
+function add_dist_bar(params){  
+
+    var data = generate_data(params);
 
     bars = svg.selectAll("bar")
       .data(data)
     .enter().append("rect")
       .attr("class", "bar")
       .attr("x", function(d) { return x(d[0]) })
-      .attr("width", x.bandwidth());
-
-      bars.attr("y",  function(d) { return height; })
-      .attr("height", 0)
-          .transition()
-          .duration(700)
-          .delay(function (d, i) {
-              return i * 200;
-          })
+      .attr("width", x.bandwidth())
       .attr("y", function(d) { return y(d[1]) })
-      .attr("height", function(d) { return height - y(d[1]) })
-      .on("end", showValues);
+      .attr("height", function(d) { return height - y(d[1]) });
 
-      mouseOver();
-
+    mouseOver(); 
 }
 
-function showValues(){
+function initial_chart(params){
+
+    add_dist_bar(params);
+
+    // add transition
+    bars.attr("y",  function(d) { return height; })
+    .attr("height", 0)
+        .transition()
+        .duration(700)
+        .delay(function (d, i) {
+            return i * 200;
+        })
+    .attr("y", function(d) { return y(d[1]) })
+    .attr("height", function(d) { return height - y(d[1]) })
+    .on("end", function() {add_data_label(params)});
+
+    mouseOver();
+
+    update_controls(params);
+}
+
+function add_data_label(params){
+
+    var data = generate_data(params);
 
     svg.selectAll("text.bar")
       .data(data)
@@ -96,39 +118,27 @@ function mouseOver(){
         }); 
 }
 
-function chart(data){  
-
-    bars = svg.selectAll("bar")
-      .data(data)
-    .enter().append("rect")
-      .attr("class", "bar")
-      .attr("x", function(d) { return x(d[0]) })
-      .attr("width", x.bandwidth())
-      .attr("y", function(d) { return y(d[1]) })
-      .attr("height", function(d) { return height - y(d[1]) });
-
-    showValues(); 
-    mouseOver(); 
-}
-
 d3.select("#p-slider").on("input", function() {
-    chart(update(this.value));
+    params[0] = +this.value;
+    update(params);
 });
 
-function update(p) {
+function update_controls(params) {
+
+    var p = params[0];
     
-    var p_display = +p;
-    d3.select("#p-value").text(p_display.toFixed(2));   // set it to always display 2 decimal places
+    d3.select("#p-value").text(p.toFixed(2));   // set it to always display 2 decimal places
     d3.select("#p-slider").property("value", p);
-    
-    p_glob = p;
 
-    d3.selectAll(".bar").remove();  // clear chart
-    d3.selectAll(".bar-value").remove();  // clear chart
-    
-    data = generate_data(p);
+}
 
-    return data;
+function update(params) {
+
+    d3.selectAll(".bar, .bar-value").remove();  // clear chart
+    
+    update_controls(params);
+    add_dist_bar(params);
+    add_data_label(params); 
 }
 
 function bernoulli_pmf(x, p){

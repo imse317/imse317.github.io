@@ -32,37 +32,47 @@ svg.append("g")
     .attr("class", "y-axis")    
     .call(yAxis);
 
+var a_init = 4, b_init = 6;  // initial params for normal
 
-var a_glob = 4, b_glob = 6;  // initial parameters
+var params = [a_init, b_init]
 
-chart_init(update(a_glob, b_glob));  // initial chart
+initial_chart(params);
 
-function generate_data(a, b){
+function generate_data(params){
 
-    var n = [];
+    var a = params[0];
+    var b = params[1];
 
-    for (var i = 0; i < 10; i += 0.01) { 
-        n.push(jStat.uniform.pdf(i, a, b));     
+    var data = [];
+
+    for (var x = 0; x < 10 + 0.1; x += 0.01) {   // make the line extend slightly beyond the x-axis
+        var pdf = jStat.uniform.pdf(x, a, b);
+        data.push([x, pdf]);  
     }
- 
-    data = n.map(function(d, i) {
-            return[i, d];
-        });
 
     return data;
 }
 
-function chart_init(data){
+function add_dist_line(params) {
 
     var line = d3.line()
-            .x(function(d) { return x(d[0] * 0.01) })  // 0.01 is the delta corresponding to the for loop
-            .y(function(d) { return y(d[1]) });
+    .x(function(d) { return x(d[0]) })
+    .y(function(d) { return y(d[1]) });
 
-        path = svg.append('path')
-        .attr("class", "line")
-        .datum(data)
-        .attr("d", line);
+    data = generate_data(params);
 
+    path = svg.append('path')
+            .attr("class", "line")
+            .datum(data)
+            .attr("d", line);
+}
+
+function initial_chart(params){
+
+    update_controls(params);
+    add_dist_line(params);
+
+    // add transition
     var totalLength = path.node().getTotalLength();
 
     path.attr("stroke-dasharray", totalLength + " " + totalLength)
@@ -85,32 +95,32 @@ function chart(data){
 }
 
 d3.select("#a-slider").on("input", function() {
-    chart(update(this.value, b_glob));
+    params[0] = +this.value;
+    update(params);
 });
 
 d3.select("#b-slider").on("input", function() {
-    chart(update(a_glob, this.value));
+    params[1] = +this.value;
+    update(params);
 });
+
+function update_controls(params) {
+
+    var a = params[0];
+    var b = params[1];
+    
+    d3.select("#a-value").text(a.toFixed(2));
+    d3.select("#a-slider").property("value", a);
+
+    d3.select("#b-value").text(b.toFixed(2));
+    d3.select("#b-slider").property("value", b);
+
+}
 
 function update(a, b) {
     
-    var a_display = +a;
-    var b_display = +b;
-
-    d3.select("#a-value").text(a_display.toFixed(2));
-    d3.select("#a-slider").property("value", a);
-
-    d3.select("#b-value").text(b_display.toFixed(2));
-    d3.select("#b-slider").property("value", b);
-    
-    a_glob = a;
-    b_glob = b;
-
     d3.selectAll(".line").remove();  // clear chart
     
-    data = generate_data(+a, +b);
-    // display = chart(data);
-
-    return data;
-
+    update_controls(params);
+    add_dist_line(params);
 }

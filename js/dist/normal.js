@@ -32,37 +32,47 @@ svg.append("g")
    .attr("class", "y-axis")    
    .call(yAxis);
 
-var mu_glob = 25, sigma_glob = 6;  // initial parameters
+var mu_init = 25, sigma_init = 6;  // initial params for normal
 
-chart_init(update(mu_glob, sigma_glob))  // initial chart
+var params = [mu_init, sigma_init]
 
-function generate_data(mu, sigma){
+initial_chart(params);
 
-    var n = [];
+function generate_data(params){
 
-    for (var i = 0; i < 50; i += 0.1) {
-        n.push(jStat.normal.pdf(i, mu, sigma));     
+    var mu = params[0];
+    var sigma = params[1];
+
+    var data = [];
+
+    for (var x = 0; x < 50 + 0.5; x += 0.1) {      // make the line extend slightly beyond the x-axis
+        var pdf = jStat.normal.pdf(x, mu, sigma);
+        data.push([x, pdf]);
     }
- 
-    data = n.map(function(d, i) {
-            return[i, d];
-        });
 
     return data;
-    
 }
 
-function chart_init(data){
+function add_dist_line(params) {
 
     var line = d3.line()
-            .x(function(d) { return x(d[0] * 0.1) })  // 0.1 is the delta corresponding to the for loop
-            .y(function(d) { return y(d[1]) });
+    .x(function(d) { return x(d[0]) })
+    .y(function(d) { return y(d[1]) });
 
-        path = svg.append('path')
-        .attr("class", "line")
-        .datum(data)
-        .attr("d", line);
+    data = generate_data(params);
 
+    path = svg.append('path')
+            .attr("class", "line")
+            .datum(data)
+            .attr("d", line);
+}
+
+function initial_chart(params){
+
+    update_controls(params);
+    add_dist_line(params);
+
+    // add transition
     var totalLength = path.node().getTotalLength();
 
     path.attr("stroke-dasharray", totalLength + " " + totalLength)
@@ -71,63 +81,53 @@ function chart_init(data){
         .duration(1000)
         .ease(d3.easeLinear)
         .attr("stroke-dashoffset", 0) // Set final value of dash-offset for transition
-        .on("end", function() {plot_mean(mu_glob, sigma_glob)});
+        .on("end", function() {add_mean_line(params)});  // plot the mean after transition
 }
 
+function add_mean_line(params){
 
-function chart(data){  
-
-    var line = d3.line()
-            .x(function(d) { return x(d[0] * 0.1) })  // 0.1 is the delta corresponding to the for loop
-            .y(function(d) { return y(d[1]) });
-
-    svg.append('path')
-        .attr("class", "line")
-        .datum(data)
-        .attr("d", line);
-
-    plot_mean(mu_glob, sigma_glob);
-}
-
-function plot_mean(mu, sigma){
+    var mu = params[0];
+    var sigma = params[1];
 
     var mean = mu;
-
-    var height_mean = jStat.normal.pdf(mean, mu, sigma)
+    var height_mean = jStat.normal.pdf(mean, mu, sigma);
 
     svg.append("line")
-    .attr("class", "mean")
-    .attr("x1", x(mean))
-    .attr("y1", y(height_mean))
-    .attr("x2", x(mean))
-    .attr("y2", height)
+        .attr("class", "mean")
+        .attr("x1", x(mean))
+        .attr("y1", y(height_mean)+3)  // add a few pixels to avoid overlapping
+        .attr("x2", x(mean))
+        .attr("y2", height);
 }
 
 d3.select("#mu-slider").on("input", function() {
-    chart(update(this.value, sigma_glob));
+    params[0] = +this.value;
+    update(params);
 });
 
 d3.select("#sigma-slider").on("input", function() {
-    chart(update(mu_glob, this.value));
+    params[1] = +this.value;
+    update(params);
 });
 
-function update(mu, sigma) {
+function update_controls(params) {
 
-    var mu_display = +mu;
-    var sigma_display = +sigma;
+    var mu = params[0];
+    var sigma = params[1];
     
-    d3.select("#mu-value").text(mu_display.toFixed(1));
+    d3.select("#mu-value").text(mu.toFixed(1));
     d3.select("#mu-slider").property("value", mu);
 
-    d3.select("#sigma-value").text(sigma_display.toFixed(1));
+    d3.select("#sigma-value").text(sigma.toFixed(1));
     d3.select("#sigma-slider").property("value", sigma);
-    
-    mu_glob = mu;
-    sigma_glob = sigma;
+
+}
+
+function update(params) {
 
     d3.selectAll(".line, .mean").remove();  // clear chart
-    
-    data = generate_data(+mu, +sigma);
 
-    return data;
+    update_controls(params);
+    add_dist_line(params);
+    add_mean_line(params);
 }

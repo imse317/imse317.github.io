@@ -32,42 +32,46 @@ svg.append("g")
     .attr("class", "y-axis")    
     .call(yAxis);
  
-var lambda_glob = 3;  // initial parameters
+var lambda_init = 3;        // initial params for exponential
 
-chart_init(update(lambda_glob))  // initial chart
+var params = [lambda_init]
 
-function generate_data(lambda){
+initial_chart(params);
 
-    var n = [];
+function generate_data(params){
 
-    for (var i = 0; i < 5; i += 0.01) {
-        n.push(jStat.exponential.pdf(i, lambda)); 
+    var lambda = params[0];
+
+    var data = [];
+
+    for (var x = 0; x < 5 + 0.05; x += 0.01) {     // make the line extend slightly beyond the x-axis
+        var pdf = jStat.exponential.pdf(x, lambda);
+        data.push([x, pdf]);
     }
  
-    data = n.map(function(d, i) {
-            return[i, d];
-        });
-
     return data;    
 }
 
-// // define the area
-// var area = d3.area()
-//     .x(function(d) { return x(d[0] * 0.1) })
-//     .y0(height)
-//     .y1(function(d) { return y(d[1]) });
+function add_dist_line(params) {
 
-function chart_init(data){
+    var line = d3.line()
+    .x(function(d) { return x(d[0]) })
+    .y(function(d) { return y(d[1]) });
 
-var line = d3.line()
-        .x(function(d) { return x(d[0] * 0.01) })  // 0.01 is the delta corresponding to the for loop
-        .y(function(d) { return y(d[1]) });
+    data = generate_data(params);
 
     path = svg.append('path')
-        .attr("class", "line")
-        .datum(data)
-        .attr("d", line);
+            .attr("class", "line")
+            .datum(data)
+            .attr("d", line);
+}
 
+function initial_chart(params){
+
+    update_controls(params);
+    add_dist_line(params);
+
+    // add transition
     var totalLength = path.node().getTotalLength();
 
     path
@@ -77,7 +81,6 @@ var line = d3.line()
       .duration(1000)
       .ease(d3.easeLinear)
       .attr("stroke-dashoffset", 0); // Set final value of dash-offset for transition
-
  }
 
 function chart(data){  
@@ -91,33 +94,26 @@ var line = d3.line()
         .datum(data)
         .attr("d", line);
 
-    //   // add the area
-    // svg.append("path")
-    //    .attr("class", "area")
-    //    .datum(data)   
-    //    .attr("d", area);
 }
 
 d3.select("#lambda-slider").on("input", function() {
-    chart(update(this.value));
+    params[0] = +this.value;
+    update(params);
 });
 
-function update(lambda) {
+function update_controls(params) {
+
+    var lambda = params[0];
     
-    var lambda_display = +lambda;
-    d3.select("#lambda-value").text(lambda_display.toFixed(1));
+    d3.select("#lambda-value").text(lambda.toFixed(1));
     d3.select("#lambda-slider").property("value", lambda);
 
-    lambda_glob = lambda;
+}
 
+function update(params) {
+    
     d3.selectAll(".line").remove();  // clear chart
-    // d3.selectAll(".area").remove();  // clear chart
     
-    data = generate_data(+lambda);
-    display = chart_init(data);
-    // display = chart(data);
-
-    return data;
-    
-
+    update_controls(params);
+    add_dist_line(params);
 }
