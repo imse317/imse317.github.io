@@ -32,95 +32,12 @@ svg.append("g")
     .attr("class", "y-axis")    
     .call(yAxis);
 
-var a_init = 4, b_init = 6;  // initial params for normal
+var dist_name = "uniform";
 
-var params = [a_init, b_init]
+var a_init = 4, b_init = 6;     // initial params
 
-initial_chart(params);
+var params = [a_init, b_init]   // save params in a list
 
-function generate_data(params){
+initial_chart(dist_name, params);
 
-    var a = params[0];
-    var b = params[1];
-
-    var data = [];
-
-    for (var x = 0; x < 10 + 0.1; x += 0.01) {   // make the line extend slightly beyond the x-axis
-        var pdf = jStat.uniform.pdf(x, a, b);
-        data.push([x, pdf]);  
-    }
-
-    return data;
-}
-
-function add_dist_line(params) {
-
-    var line = d3.line()
-    .x(function(d) { return x(d[0]) })
-    .y(function(d) { return y(d[1]) });
-
-    data = generate_data(params);
-
-    path = svg.append('path')
-            .attr("class", "line")
-            .datum(data)
-            .attr("d", line);
-}
-
-function initial_chart(params){
-
-    update_controls(params);
-    add_dist_line(params);
-
-    // add transition
-    var totalLength = path.node().getTotalLength();
-
-    path.attr("stroke-dasharray", totalLength + " " + totalLength)
-        .attr("stroke-dashoffset", totalLength)
-        .transition()
-        .duration(1000)
-        .ease(d3.easeLinear)
-        .attr("stroke-dashoffset", 0); // Set final value of dash-offset for transition
-}
-
-function chart(data){  
-
-    svg.append('path')
-        .attr("class", "line")
-        .datum(data)
-        .attr("d", d3.line()
-            .x(function(d) { return x(d[0] * 0.01) })  // 0.01 is the delta corresponding to the for loop
-            .y(function(d) { return y(d[1]) })
-        );
-}
-
-d3.select("#a-slider").on("input", function() {
-    params[0] = +this.value;
-    update(params);
-});
-
-d3.select("#b-slider").on("input", function() {
-    params[1] = +this.value;
-    update(params);
-});
-
-function update_controls(params) {
-
-    var a = params[0];
-    var b = params[1];
-    
-    d3.select("#a-value").text(a.toFixed(2));
-    d3.select("#a-slider").property("value", a);
-
-    d3.select("#b-value").text(b.toFixed(2));
-    d3.select("#b-slider").property("value", b);
-
-}
-
-function update(a, b) {
-    
-    d3.selectAll(".line").remove();  // clear chart
-    
-    update_controls(params);
-    add_dist_line(params);
-}
+update_chart(dist_name, params);

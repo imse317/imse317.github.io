@@ -16,31 +16,25 @@ var x = d3.scaleLinear()
 var y = d3.scaleLinear()
         .domain([0, 0.4])
         .range([height, 0]);
-  
+
 var xAxis = d3.axisBottom()
-        .scale(x);
+              .scale(x);
 
 var yAxis = d3.axisLeft()
-        .scale(y);
+              .scale(y);
 
 svg.append("g")
-    .attr("class", "x-axis")
-    .attr("transform", "translate(0," + height + ")")
-    .call(xAxis);
+   .attr("class", "x-axis")
+   .attr("transform", "translate(0," + height + ")")
+   .call(xAxis);
 
 svg.append("g")
-    .attr("class", "y-axis")    
-    .call(yAxis);
- 
+   .attr("class", "y-axis")    
+   .call(yAxis);
 
-var dist_name = "studentt";
+var dist_name = "standard_normal";
 
-var dof_init = 1;  // initial params
+initial_chart(dist_name);
 
-var params = [dof_init]
-
-initial_chart(dist_name, params);
-
-add_dist_line("standard_normal");  // add standard normal dist as a reference
-
-update_chart(dist_name, params);
+// add_mean_line(dist_name);
+// add_mean_line("normal", [0, 1]);

@@ -31,89 +31,14 @@ svg.append("g")
 svg.append("g")
     .attr("class", "y-axis")    
     .call(yAxis);
- 
-var lambda_init = 3;        // initial params for exponential
 
-var params = [lambda_init]
 
-initial_chart(params);
+var dist_name = "exponential";
 
-function generate_data(params){
+var lambda_init = 3;        // set initial params
 
-    var lambda = params[0];
+var params = [lambda_init]  // save params in a list
 
-    var data = [];
+initial_chart(dist_name, params);
 
-    for (var x = 0; x < 5 + 0.05; x += 0.01) {     // make the line extend slightly beyond the x-axis
-        var pdf = jStat.exponential.pdf(x, lambda);
-        data.push([x, pdf]);
-    }
- 
-    return data;    
-}
-
-function add_dist_line(params) {
-
-    var line = d3.line()
-    .x(function(d) { return x(d[0]) })
-    .y(function(d) { return y(d[1]) });
-
-    data = generate_data(params);
-
-    path = svg.append('path')
-            .attr("class", "line")
-            .datum(data)
-            .attr("d", line);
-}
-
-function initial_chart(params){
-
-    update_controls(params);
-    add_dist_line(params);
-
-    // add transition
-    var totalLength = path.node().getTotalLength();
-
-    path
-      .attr("stroke-dasharray", totalLength + " " + totalLength)
-      .attr("stroke-dashoffset", totalLength)
-     .transition()
-      .duration(1000)
-      .ease(d3.easeLinear)
-      .attr("stroke-dashoffset", 0); // Set final value of dash-offset for transition
- }
-
-function chart(data){  
-
-var line = d3.line()
-    .x(function(d) { return x(d[0] * 0.01) })  // 0.01 is the delta corresponding to the for loop
-    .y(function(d) { return y(d[1]) });
-
-    svg.append('path')
-        .attr("class", "line")
-        .datum(data)
-        .attr("d", line);
-
-}
-
-d3.select("#lambda-slider").on("input", function() {
-    params[0] = +this.value;
-    update(params);
-});
-
-function update_controls(params) {
-
-    var lambda = params[0];
-    
-    d3.select("#lambda-value").text(lambda.toFixed(1));
-    d3.select("#lambda-slider").property("value", lambda);
-
-}
-
-function update(params) {
-    
-    d3.selectAll(".line").remove();  // clear chart
-    
-    update_controls(params);
-    add_dist_line(params);
-}
+update_chart(dist_name, params);

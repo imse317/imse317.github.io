@@ -33,6 +33,7 @@ svg.append("g")
     .attr("class", "y-axis")    
     .call(yAxis
         .tickValues(d3.range(0, 1, 0.1))
+        .tickFormat(d3.format('.1f'))
     );
 
 var lambda_init = 4;  // initial params for poisson
