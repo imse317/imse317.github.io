@@ -35,12 +35,10 @@ svg.append("g")
 
 var dist_name = "studentt";
 
-var dof_init = 1;  // initial params
+var params = [dof=1];   // set initial params
 
-var params = [dof_init]
+initial_chart_line(dist_name, params);
 
-initial_chart(dist_name, params);
+update_chart_line(dist_name, params);
 
 add_dist_line("standard_normal");  // add standard normal dist as a reference
-
-update_chart(dist_name, params);

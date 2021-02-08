@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+ 
+<head>
+    <title>Hypergeometric distribution</title>
+    <link type="text/css" rel="stylesheet" media="screen" href="./css/page.css">
+    <link type="text/css" rel="stylesheet" media="screen" href="./css/chart.css">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script src="./js/mathjax_config.js"></script>
+
+</head>
+ 
+<body>
+
+<div class="container">
+    
+<h1>Hypergeometric distribution</h1>
+
+<p class="description">
+    A jar has $N$ marbles. $K$ of them are blue.
+</p>
+
+<p class="description">
+    We draw $n$ marbles without replacement, how likely $k$ of them are blue?
+</p>
+
+<div id="chart"></div>
+
+<div class="controls">
+    <div class="slider-label">
+        <p>$N=$ <span id="slider_value_0"></span></p>
+    </div>
+
+    <div class="slider-container">
+        <input type="range" id="slider_0" class="slider" min="100" max="500" step="1"><br>
+    </div>
+
+    <div class="slider-label">
+        <p>$K=$ <span id="slider_value_1"></span></p>
+    </div>
+
+    <div class="slider-container">
+        <input type="range" id="slider_1" class="slider" min="1" max="100" step="1"><br>
+    </div>
+
+    <div class="slider-label">
+        <p>$n=$ <span id="slider_value_2"></span></p>
+    </div>
+
+    <div class="slider-container">
+        <input type="range" id="slider_2" class="slider" min="40" max="400" step="1"><br>
+    </div>
+</div>
+
+<div class="formula">
+$$
+    p(k) = \frac{{K \choose k}{N-K \choose n-k}}{{N \choose n}}
+    \\[16pt]
+    \text{where $N$ is the population size,}\\
+    \text{$K$ is the number of success states in the population, }\\
+    \text{and $n$ is the number of draws.}
+$$
+</div>
+
+<script src="./js/chart_functions.js"></script>
+<script src="./js/dist/hypgeom.js"></script>
+
+</div>
+
+</body>
+</html>

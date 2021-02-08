@@ -33,109 +33,11 @@ svg.append("g")
     .attr("class", "y-axis")    
     .call(yAxis);
 
-var a_init = 1, b_init = 6;  // initial params for discrete uniform
 
-var params = [a_init, b_init];
+var dist_name = "uniform_discrete";
 
-initial_chart(params);
+var params = [a=1, b=6];   // set initial params
 
-function generate_data(params){
+initial_chart_bars(dist_name, params);
 
-    var a = params[0];
-    var b = params[1];
-
-    var data = [];
-
-    for (var x = 1; x < 11; x += 1) { 
-        var pmf = uniform_pmf(x, a, b);
-        data.push([x, pmf]);
-    }
-
-    return data;
-}
-
-var darkred = "#b30000";
-
-function add_dist_bar(params){  
-
-    var data = generate_data(params);
-
-    bars = svg.selectAll("bar")
-      .data(data)
-    .enter().append("rect")
-      .attr("class", "bar")
-      .attr("x", function(d) { return x(d[0]) })
-      .attr("width", x.bandwidth())
-      .attr("y", function(d) { return y(d[1]) })
-      .attr("height", function(d) { return height - y(d[1]) });
-
-    mouseOver(); 
-}
-
-function initial_chart(params){ 
-
-    add_dist_bar(params);
-
-    // add transition
-    bars.attr("y",  function(d) { return height; })
-    .attr("height", 0)
-      .transition()
-      .duration(700)
-      .delay(function (d, i) {
-          return i * 100;
-      })
-    .attr("y", function(d) { return y(d[1]) })
-    .attr("height", function(d) { return height - y(d[1]) });
-
-    mouseOver();
-
-    update_controls(params);
-}
-
-function mouseOver(){
-
-    bars.on("mouseover", function() {
-        d3.select(this)
-            .style("fill", darkred);
-        })
-      .on("mouseout", function() {
-        d3.select(this)
-            .style("fill", "red");
-        }); 
-
-}
-
-d3.select("#a-slider").on("input", function() {
-    params[0] = +this.value;
-    update(params);
-});
-
-d3.select("#b-slider").on("input", function() {
-    params[1] = +this.value;
-    update(params);
-});
-
-function update_controls(params) {
-
-    var a = params[0];
-    var b = params[1];
-    
-    d3.select("#a-value").text(a);
-    d3.select("#a-slider").property("value", a);
-
-    d3.select("#b-value").text(b);
-    d3.select("#b-slider").property("value", b);
-
-}
-
-function update(params) {
-    
-    d3.selectAll(".bar").remove();  // clear chart
-    
-    update_controls(params);
-    add_dist_bar(params);
-}
-
-function uniform_pmf(x, a, b){
-    return (x < a || x > b) ? 0 : 1/(b-a+1);
-  }
+update_chart_bars(dist_name, params);

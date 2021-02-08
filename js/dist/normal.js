@@ -34,10 +34,8 @@ svg.append("g")
 
 var dist_name = "normal";
 
-var mu_init = 25, sigma_init = 6;  // initial params
+var params = [mu=25, sigma=6];  // set initial params
 
-var params = [mu_init, sigma_init]  // save params in a list
+initial_chart_line(dist_name, params);
 
-initial_chart(dist_name, params);
-
-update_chart(dist_name, params);
+update_chart_line(dist_name, params);

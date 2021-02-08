@@ -8,34 +8,41 @@ var svg = d3.select("#chart")
         .attr("height", height + margin.top + margin.bottom)
     .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-var x = d3.scaleLinear()
-        .domain([0, 10])
-        .range([0, width]);
+ 
+var x = d3.scaleBand()
+        .domain(d3.range(61))
+        .rangeRound([0, width], .1)
+        .paddingInner(0.4);
  
 var y = d3.scaleLinear()
-        .domain([0, 1])
+        .domain([0, 0.2])
         .range([height, 0]);
-  
+
 var xAxis = d3.axisBottom()
         .scale(x);
 
 var yAxis = d3.axisLeft()
         .scale(y);
-
+  
 svg.append("g")
     .attr("class", "x-axis")
     .attr("transform", "translate(0," + height + ")")
-    .call(xAxis);
+    .call(xAxis
+        .tickValues(d3.range(0, 61, 5))
+    );
 
 svg.append("g")
     .attr("class", "y-axis")    
-    .call(yAxis);
+    .call(yAxis
+        .tickValues(d3.range(0, 1, 0.05))
+        .tickFormat(d3.format('.2f'))
+    );
 
-var dist_name = "uniform";
 
-var params = [a=4, b=6];   // set initial params
+var dist_name = "hypgeom";
 
-initial_chart_line(dist_name, params);
+var params = [N=400, K=60, n=200];   // set initial params
 
-update_chart_line(dist_name, params);
+initial_chart_bars(dist_name, params);
+
+update_chart_bars(dist_name, params);

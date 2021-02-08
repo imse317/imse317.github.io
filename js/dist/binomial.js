@@ -37,104 +37,10 @@ svg.append("g")
         .tickValues(d3.range(0, 0.26, 0.05))
     );
 
-var n_init = 20, p_init = 0.5;  // initial params for binomial
+var dist_name = "binomial";
 
-var params = [n_init, p_init]
+var params = [n=20, p=0.5];    // set initial params
 
-initial_chart(params);
+initial_chart_bars(dist_name, params);
 
-function generate_data(params){
-
-    var n = params[0];
-    var p = params[1];
-
-    var data = [];
-
-    for (var x = 0; x < 101; x += 1) { 
-        var pmf = (x > n) ? 0 : jStat.binomial.pdf( x, n, p )
-        data.push([x, pmf]);
-    }
-
-    return data;
-}
-
-var darkred = "#b30000";
-
-function add_dist_bar(params){  
-
-    var data = generate_data(params);
-
-    bars = svg.selectAll("bar")
-      .data(data)
-    .enter().append("rect")
-      .attr("class", "bar")
-      .attr("x", function(d) { return x(d[0]) })
-      .attr("width", x.bandwidth())
-      .attr("y", function(d) { return y(d[1]) })
-      .attr("height", function(d) { return height - y(d[1]) });
-
-    mouseOver(); 
-}
-
-function initial_chart(params){
-
-    add_dist_bar(params);
-
-    // add transition
-    bars.attr("y",  function(d) { return height; })
-        .attr("height", 0)
-          .transition()
-          .duration(700)
-          .delay(function (d, i) {
-              return i * 50;
-          })
-        .attr("y", function(d) { return y(d[1]) })
-        .attr("height", function(d) { return height - y(d[1]) });
-
-    mouseOver();
-
-    update_controls(params);
-}
-
-function mouseOver(){
-
-    bars.on("mouseover", function() {
-        d3.select(this)
-            .style("fill", darkred);
-        })
-      .on("mouseout", function() {
-        d3.select(this)
-            .style("fill", "red");
-        }); 
-}
-
-d3.select("#n-slider").on("input", function() {
-    params[0] = +this.value;
-    update(params);
-});
-
-d3.select("#p-slider").on("input", function() {
-    params[1] = +this.value;
-    update(params);
-});
-
-function update_controls(params) {
-
-    var n = params[0];
-    var p = params[1];
-    
-    d3.select("#n-value").text(n);
-    d3.select("#n-slider").property("value", n);
-
-    d3.select("#p-value").text(p.toFixed(2));
-    d3.select("#p-slider").property("value", p);
-
-}
-
-function update(params) {
-
-    d3.selectAll(".bar").remove();  // clear chart
-    
-    update_controls(params);
-    add_dist_bar(params);
-}
+update_chart_bars(dist_name, params);

@@ -38,100 +38,11 @@ svg.append("g")
         .tickFormat(d3.format('.1f'))
     );
 
-var p_init = 0.5;  // initial params for geometric
 
-var params = [p_init];
+var dist_name = "geometric";
 
-initial_chart(params);
+var params = [p=0.5];   // set initial params
 
-function generate_data(params){
+initial_chart_bars(dist_name, params);
 
-    var p = params[0];
-
-    var data = [];
-
-    for (var x = 0; x < 41; x += 1) {
-        var pmf = geo_pmf(x, p);
-        data.push([x, pmf]);
-    }
-
-    return data;
-}
-
-var darkred = "#b30000";
-
-function add_dist_bar(params){  
-
-    var data = generate_data(params);
-
-    bars = svg.selectAll("bar")
-      .data(data)
-    .enter().append("rect")
-      .attr("class", "bar")
-      .attr("x", function(d) { return x(d[0]) })
-      .attr("width", x.bandwidth())
-      .attr("y", function(d) { return y(d[1]) })
-      .attr("height", function(d) { return height - y(d[1]) });
-
-    mouseOver(); 
-}
-
-function initial_chart(params){
-
-    add_dist_bar(params);
-
-    // add transition
-    bars.attr("y",  function(d) { return height; })
-    .attr("height", 0)
-      .transition()
-      .duration(700)
-      .delay(function (d, i) {
-          return i * 100;
-      })
-    .attr("y", function(d) { return y(d[1]) })
-    .attr("height", function(d) { return height - y(d[1]) });
-
-    mouseOver();
-
-    update_controls(params);
-
-}
-
-function mouseOver(){
-
-    bars.on("mouseover", function() {
-        d3.select(this)
-            .style("fill", darkred);
-        })
-      .on("mouseout", function() {
-        d3.select(this)
-            .style("fill", "red");
-        }); 
-}
-
-d3.select("#p-slider").on("input", function() {
-    params[0] = +this.value;
-    update(params);
-});
-
-function update_controls(params) {
-
-    var p = params[0];
-    
-    d3.select("#p-value").text(p.toFixed(2));
-    d3.select("#p-slider").property("value", p);
-
-}
-
-function update(params) {
-
-    d3.selectAll(".bar").remove();  // clear chart
-    
-    update_controls(params);
-    add_dist_bar(params);
-
-}
-
-function geo_pmf(x, p) {
-    return (x < 1) ? 0 : Math.pow(1-p,x-1)*p;
-}
+update_chart_bars(dist_name, params);

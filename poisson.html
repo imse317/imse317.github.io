@@ -3,7 +3,7 @@
 <meta charset="utf-8">
  
 <head>
-    <title>Poisson uniform</title>
+    <title>Poisson distribution</title>
     <link type="text/css" rel="stylesheet" media="screen" href="./css/page.css">
     <link type="text/css" rel="stylesheet" media="screen" href="./css/chart.css">
     <script src="https://d3js.org/d3.v6.min.js"></script>
@@ -26,11 +26,11 @@
 
 <div class="controls">
     <div class="slider-label">
-        <p>$\lambda=$ <span id="lambda-value"></span></p>
+        <p>$\lambda=$ <span id="slider_value_0"></span></p>
     </div>
 
     <div class="slider-container">
-        <input type="range" id="lambda-slider" class="slider" min="0.8" max="15" step="0.1"><br>
+        <input type="range" id="slider_0" class="slider" min="0.8" max="15" step="0.1"><br>
     </div>
 </div>
 
@@ -46,6 +46,7 @@ $$
 $$
 </div>
 
+<script src="./js/chart_functions.js"></script>
 <script src="./js/dist/poisson.js"></script>
 
 </div>

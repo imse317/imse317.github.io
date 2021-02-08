@@ -40,10 +40,8 @@ svg.append("g")
 
 var dist_name = "chisquare";
 
-var dof_init = 1;         // set initial params
+var params = [dof=1];   // set initial params
 
-var params = [dof_init]   // save params in a list
+initial_chart_line(dist_name, params);
 
-initial_chart(dist_name, params);
-
-update_chart(dist_name, params);
+update_chart_line(dist_name, params);

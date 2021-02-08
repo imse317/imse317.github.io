@@ -35,10 +35,8 @@ svg.append("g")
 
 var dist_name = "exponential";
 
-var lambda_init = 3;        // set initial params
+var params = [lambda=3];  // set initial params
 
-var params = [lambda_init]  // save params in a list
+initial_chart_line(dist_name, params);
 
-initial_chart(dist_name, params);
-
-update_chart(dist_name, params);
+update_chart_line(dist_name, params);

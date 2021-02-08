@@ -34,7 +34,4 @@ svg.append("g")
 
 var dist_name = "standard_normal";
 
-initial_chart(dist_name);
-
-// add_mean_line(dist_name);
-// add_mean_line("normal", [0, 1]);
+initial_chart_line(dist_name);

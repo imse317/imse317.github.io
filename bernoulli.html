@@ -6,7 +6,7 @@
     <title>Bernoulli distribution</title>
     <link type="text/css" rel="stylesheet" media="screen" href="./css/page.css">
     <link type="text/css" rel="stylesheet" media="screen" href="./css/chart.css">
-    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
     <script src="./js/mathjax_config.js"></script>
@@ -27,11 +27,11 @@
 
 <div class="controls">
     <div class="slider-label">
-        <p>$p=$ <span id="p-value"></span></p>
+        <p>$p=$ <span id="slider_value_0"></span></p>
     </div>
 
     <div class="slider-container">
-        <input type="range" id="p-slider" class="slider" min="0" max="1" step="0.01"><br>
+        <input type="range" id="slider_0" class="slider" min="0" max="1" step="0.01"><br>
     </div>
 </div>
 
@@ -48,6 +48,7 @@ p(k)=
 $$
 </div>
 
+<script src="./js/chart_functions.js"></script>
 <script src="./js/dist/bernoulli.js"></script>
 
 </div>

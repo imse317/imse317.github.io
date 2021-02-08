@@ -36,112 +36,11 @@ svg.append("g")
         .tickFormat(d3.format('.1f'))
     );
 
-var lambda_init = 4;  // initial params for poisson
 
-var params = [lambda_init];
+var dist_name = "poisson";
 
-initial_chart(params);
+var params = [lambda=4];   // set initial params
 
-function generate_data(params){
+initial_chart_bars(dist_name, params);
 
-    var lambda = params[0];
-
-    var data = [];
-
-    for (var x = 0; x < 21; x += 1) { 
-        var pmf = jStat.poisson.pdf(x, lambda);
-        data.push([x, pmf]);
-    }
-
-    return data;
-}
-
-var darkred = "#b30000";
-
-function add_dist_bar(params){  
-
-    var data = generate_data(params);
-
-    bars = svg.selectAll("bar")
-      .data(data)
-    .enter().append("rect")
-      .attr("class", "bar")
-      .attr("x", function(d) { return x(d[0]) })
-      .attr("width", x.bandwidth())
-      .attr("y", function(d) { return y(d[1]) })
-      .attr("height", function(d) { return height - y(d[1]) });
-
-    mouseOver(); 
-}
-
-function initial_chart(params){
-
-    add_dist_bar(params);
-    
-    // add transition
-    bars.attr("y",  function(d) { return height; })
-    .attr("height", 0)
-      .transition()
-      .duration(700)
-      .delay(function (d, i) {
-          return i * 100;
-      })
-    .attr("y", function(d) { return y(d[1]) })
-    .attr("height", function(d) { return height - y(d[1]) });
-
-    mouseOver();
-
-    update_controls(params);
-
-}
-
-function mouseOver(){
-
-    bars.on("mouseover", function() {
-        d3.select(this)
-            .style("fill", darkred);
-        })
-      .on("mouseout", function() {
-        d3.select(this)
-            .style("fill", "red");
-        }); 
-}
-
-// function chart(data){  
-
-//     bars = svg.selectAll("bar")
-//       .data(data)
-//     .enter().append("rect")
-//       .attr("class", "bar")
-//       .attr("x", function(d) { return x(d[0]) })
-//       .attr("width", x.bandwidth())
-//       .attr("y", function(d) { return y(d[1]) })
-//       .attr("height", function(d) { return height - y(d[1]) });
-
-//       mouseOver();
-   
-// }
-
-
-d3.select("#lambda-slider").on("input", function() {
-    params[0] = +this.value;
-    update(params);
-});
-
-function update_controls(params) {
-
-    var lambda = params[0];
-    
-    d3.select("#lambda-value").text(lambda.toFixed(1));
-    d3.select("#lambda-slider").property("value", lambda);
-
-}
-
-function update(params) {
-
-    d3.selectAll(".bar").remove();  // clear chart
-    
-    update_controls(params);
-    add_dist_bar(params);
-
-}
+update_chart_bars(dist_name, params);
