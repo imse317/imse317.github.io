@@ -42,6 +42,10 @@ var dist_name = "chisquare";
 
 var params = [dof=1];   // set initial params
 
-initial_chart_line(dist_name, params);
+var start = 0.01, stop = 16 + 0.2, step = 0.1;
 
-update_chart_line(dist_name, params);
+var xrange = [start, stop, step];
+
+initial_chart_line(dist_name, params, xrange);
+
+update_chart_line(dist_name, params, xrange);

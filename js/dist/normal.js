@@ -36,6 +36,10 @@ var dist_name = "normal";
 
 var params = [mu=25, sigma=6];  // set initial params
 
-initial_chart_line(dist_name, params);
+var start = 0, stop = 50 + 0.5, step = 0.1;
 
-update_chart_line(dist_name, params);
+var xrange = [start, stop, step];
+
+initial_chart_line(dist_name, params, xrange);
+
+update_chart_line(dist_name, params, xrange);

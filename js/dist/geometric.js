@@ -43,6 +43,10 @@ var dist_name = "geometric";
 
 var params = [p=0.5];   // set initial params
 
-initial_chart_bars(dist_name, params);
+var start = 0, stop = 41, step = 1;
 
-update_chart_bars(dist_name, params);
+var xrange = [start, stop, step];
+
+initial_chart_bars(dist_name, params, xrange);
+
+update_chart_bars(dist_name, params, xrange);

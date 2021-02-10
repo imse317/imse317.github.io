@@ -37,8 +37,12 @@ var dist_name = "studentt";
 
 var params = [dof=1];   // set initial params
 
-initial_chart_line(dist_name, params);
+var start = -5, stop = 5 + 0.1, step = 0.01;
 
-update_chart_line(dist_name, params);
+var xrange = [start, stop, step];
 
-add_dist_line("standard_normal");  // add standard normal dist as a reference
+initial_chart_line(dist_name, params, xrange);
+
+update_chart_line(dist_name, params, xrange);
+
+add_dist_line(dist_name="normal", params=[0, 1], xrange=xrange, ref=true);  // add standard normal dist as a reference

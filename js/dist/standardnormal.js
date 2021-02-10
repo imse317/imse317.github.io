@@ -32,6 +32,12 @@ svg.append("g")
    .attr("class", "y-axis")    
    .call(yAxis);
 
-var dist_name = "standard_normal";
+var dist_name = "normal";
 
-initial_chart_line(dist_name);
+var params = [mu=0, sigma=1];
+
+var start = -5, stop = 5 + 0.1, step = 0.01;
+
+var xrange = [start, stop, step];
+
+initial_chart_line(dist_name, params, xrange);

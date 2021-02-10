@@ -41,6 +41,10 @@ var dist_name = "poisson";
 
 var params = [lambda=4];   // set initial params
 
-initial_chart_bars(dist_name, params);
+var start = 0, stop = 21, step = 1;
 
-update_chart_bars(dist_name, params);
+var xrange = [start, stop, step];
+
+initial_chart_bars(dist_name, params, xrange);
+
+update_chart_bars(dist_name, params, xrange);
