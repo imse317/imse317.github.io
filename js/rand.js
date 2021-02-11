@@ -40,6 +40,14 @@ function generate_data(dist_name, params) {
             }
             break;
 
+        case "negbin":
+            var pdf = function(x, params) {
+                var r = params[0];
+                var p = params[1];
+                return jStat.negbin.pdf(x, r, p);
+            }
+            break;
+
         case "poisson":
             var pdf = function(x, params) {
                 var lambda = params[0];
