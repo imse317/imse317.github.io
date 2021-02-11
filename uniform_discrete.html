@@ -8,8 +8,9 @@
     <link type="text/css" rel="stylesheet" media="screen" href="./css/chart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css"/>
     <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.2.0/wNumb.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured"></script>
     <script src="./js/mathjax_config.js"></script>
 </head>
@@ -26,25 +27,9 @@
 
 <div id="chart"></div>
 
-<div id="slider"></div>
-
 <div class="controls">
-    <div class="slider-label">
-        <p>$a=$ <span id="slider_value_0"></span></p>
-    </div>
-
-    <div class="slider-container">
-        <input type="range" id="slider_0" class="slider" min="1" max="10" step="1"><br>
-    </div>
-
-    <br>
-    <div class="slider-label">
-        <p>$b=$ <span id="slider_value_1"></span></p>
-    </div>
-
-    <div class="slider-container">
-        <input type="range" id="slider_1" class="slider" min="1" max="10" step="1"><br>
-    </div>
+    <div class="slider-label"></div>
+    <div id="slider_0"></div>
 </div>
 
 <div class="formula">
@@ -62,19 +47,6 @@ $$
 <script src="./js/rand.js"></script>
 <script src="./js/chart_functions.js"></script>
 <script src="./js/dist/uniform_discrete.js"></script>
-
-<!-- <script>
-var slider = document.getElementById('slider');
-
-noUiSlider.create(slider, {
-    start: [20, 80],
-    connect: true,
-    range: {
-        'min': 0,
-        'max': 100
-    }
-});
-</script> -->
 
 </div>
 

@@ -40,6 +40,22 @@ var params = [p=0.5];   // set initial params
 
 var start = 0, stop = 2, step = 1;
 
-initial_chart_bars(dist_name, params);
+var slider_0 = document.getElementById('slider_0');
 
-update_chart_bars(dist_name, params);
+noUiSlider.create(slider_0, {
+    start: 0.5,
+    step: 0.01,
+    tooltips: true,
+    range: {
+        'min': 0,
+        'max': 1
+    }
+});
+
+slider_0.noUiSlider.on('update', function() {
+    params[0] = +slider_0.noUiSlider.get();
+    update_bars(dist_name, params);
+    update_bar_values(dist_name, params);
+});
+
+initial_transition_bars(dist_name, params);

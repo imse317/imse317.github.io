@@ -27,47 +27,32 @@ body {
   margin-bottom: 40px;
 }
 
-.controls {
-  margin-bottom: 80px;
-}
-
 .slider-label {
 	font-size: 16pt;
-	padding-top: 20px;
-	padding-bottom: 10px;
+  margin-top: -4px;
+  text-align: justify;
+  float:left;
   }
 
-.slider-container {
-	margin-bottom:10px;
-  }
-
-  /* styling the slider */
-
-input[type=range]{
-  -webkit-appearance: none;
+.controls {
+  margin-top: 60px;
+  margin-bottom: 80px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
-input[type=range]::-webkit-slider-runnable-track {
-  height: 8px;
-  background: #ddd;
-  border: none;
-  border-radius: 8px;
+#slider_0 {
+  margin-left: 50px;
 }
 
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  border: none;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background: #00274C;
-  margin-top: -11px;
+#slider_1 {
+  margin-left: 50px;
 }
 
-input[type=range]:focus {
-  outline: none;
+#slider_2 {
+  margin-left: 50px;
 }
 
-input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #ccc;
+.noUi-connect {
+  background: #00274C !important;     /* michigan blue */
 }

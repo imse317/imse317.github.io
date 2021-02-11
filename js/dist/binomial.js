@@ -43,6 +43,37 @@ var params = [n=20, p=0.5];    // set initial params
 
 var start = 0, stop = 101, step = 1;
 
-initial_chart_bars(dist_name, params);
+var slider_0 = document.getElementById('slider_0');
+var slider_1 = document.getElementById('slider_1');
 
-update_chart_bars(dist_name, params);
+noUiSlider.create(slider_0, {
+    start: n,
+    step: 1,
+    tooltips: wNumb({decimals: 0}),
+    range: {
+        'min': 10,
+        'max': 100
+    }
+});
+
+noUiSlider.create(slider_1, {
+    start: p,
+    step: 0.01,
+    tooltips: true,
+    range: {
+        'min': 0.01,
+        'max': 0.99
+    }
+});
+
+slider_0.noUiSlider.on('update', function() {
+    params[0] = +slider_0.noUiSlider.get();
+    update_bars(dist_name, params);
+});
+
+slider_1.noUiSlider.on('update', function() {
+    params[1] = +slider_1.noUiSlider.get();
+    update_bars(dist_name, params);
+});
+
+initial_transition_bars(dist_name, params);

@@ -38,6 +38,24 @@ var params = [a=4, b=6];   // set initial params
 
 var start = 0, stop = 10 + 0.1, step = 0.01;
 
-initial_chart_line(dist_name, params);
+var slider_0 = document.getElementById('slider_0');
 
-update_chart_line(dist_name, params);
+noUiSlider.create(slider_0, {
+    start: [a, b],
+    step: 0.01,
+    margin: 0.9,     // minimum distance between the handles
+    connect: [false, true, false],
+    tooltips: [wNumb({decimals: 2}), wNumb({decimals: 2})],
+    range: {
+        'min': 0.1,
+        'max': 10
+    }
+});
+
+slider_0.noUiSlider.on('update', function() {
+    params[0] = +slider_0.noUiSlider.get()[0];
+    params[1] = +slider_0.noUiSlider.get()[1];
+    update_line(dist_name, params);
+});
+
+initial_transition_line(dist_name, params);

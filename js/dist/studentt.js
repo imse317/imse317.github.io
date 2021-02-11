@@ -39,8 +39,24 @@ var params = [dof=1];   // set initial params
 
 var start = -5, stop = 5 + 0.1, step = 0.01;
 
-initial_chart_line(dist_name, params);
+var slider_0 = document.getElementById('slider_0');
 
-update_chart_line(dist_name, params);
+noUiSlider.create(slider_0, {
+    start: dof,
+    step: 1,
+    tooltips: wNumb({decimals: 0}),
+    range: {
+        'min': 1,
+        'max': 30
+    }
+});
 
-add_dist_line(dist_name="normal", params=[0, 1], ref=true);  // add standard normal dist as a reference
+slider_0.noUiSlider.on('update', function() {
+    params[0] = +slider_0.noUiSlider.get();
+    update_line(dist_name, params);
+    
+});
+
+initial_transition_line(dist_name, params);
+
+add_ref_line("normal", [0, 1])   // add standard normal dist as a reference

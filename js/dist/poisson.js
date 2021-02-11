@@ -43,6 +43,21 @@ var params = [lambda=4];   // set initial params
 
 var start = 0, stop = 21, step = 1;
 
-initial_chart_bars(dist_name, params);
+var slider_0 = document.getElementById('slider_0');
 
-update_chart_bars(dist_name, params);
+noUiSlider.create(slider_0, {
+    start: lambda,
+    step: 0.1,
+    tooltips: wNumb({decimals: 1}),
+    range: {
+        'min': 0.8,
+        'max': 15
+    }
+});
+
+slider_0.noUiSlider.on('update', function() {
+    params[0] = +slider_0.noUiSlider.get();
+    update_bars(dist_name, params);
+});
+
+initial_transition_bars(dist_name, params);

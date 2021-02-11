@@ -45,6 +45,21 @@ var params = [p=0.5];   // set initial params
 
 var start = 0, stop = 41, step = 1;
 
-initial_chart_bars(dist_name, params);
+var slider_0 = document.getElementById('slider_0');
 
-update_chart_bars(dist_name, params);
+noUiSlider.create(slider_0, {
+    start: p,
+    step: 0.01,
+    tooltips: true,
+    range: {
+        'min': 0.01,
+        'max': 0.6
+    }
+});
+
+slider_0.noUiSlider.on('update', function() {
+    params[0] = +slider_0.noUiSlider.get();
+    update_bars(dist_name, params);
+});
+
+initial_transition_bars(dist_name, params);

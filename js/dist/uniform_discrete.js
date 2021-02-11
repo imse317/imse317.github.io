@@ -40,6 +40,25 @@ var params = [a=1, b=6];   // set initial params
 
 var start = 0, stop = 11, step = 1;
 
-initial_chart_bars(dist_name, params);
+var slider_0 = document.getElementById('slider_0');
 
-update_chart_bars(dist_name, params);
+noUiSlider.create(slider_0, {
+    start: [a, b],
+    step: 1,
+    margin: 1,     // minimum distance between the handles
+    connect: [false, true, false],
+    // behaviour: 'drag-tap',
+    tooltips: [wNumb({decimals: 0}), wNumb({decimals: 0})],
+    range: {
+        'min': 1,
+        'max': 10
+    }
+});
+
+slider_0.noUiSlider.on('update', function() {
+    params[0] = +slider_0.noUiSlider.get()[0];
+    params[1] = +slider_0.noUiSlider.get()[1];
+    update_bars(dist_name, params);
+});
+
+initial_transition_bars(dist_name, params);

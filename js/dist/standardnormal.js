@@ -38,4 +38,4 @@ var params = [mu=0, sigma=1];
 
 var start = -5, stop = 5 + 0.1, step = 0.01;
 
-initial_chart_line(dist_name, params);
+initial_transition_line(dist_name, params);

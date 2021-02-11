@@ -38,6 +38,39 @@ var params = [mu=25, sigma=6];  // set initial params
 
 var start = 0, stop = 50 + 0.5, step = 0.1;
 
-initial_chart_line(dist_name, params);
+var slider_0 = document.getElementById('slider_0');
+var slider_1 = document.getElementById('slider_1');
 
-update_chart_line(dist_name, params);
+noUiSlider.create(slider_0, {
+    start: mu,
+    step: 0.1,
+    tooltips: wNumb({decimals: 1}),
+    range: {
+        'min': 0,
+        'max': 50
+    }
+});
+
+noUiSlider.create(slider_1, {
+    start: sigma,
+    step: 0.1,
+    tooltips: wNumb({decimals: 1}),
+    range: {
+        'min': 3,
+        'max': 20
+    }
+});
+
+slider_0.noUiSlider.on('update', function() {
+    params[0] = +slider_0.noUiSlider.get();
+    update_line(dist_name, params);
+    update_mean_line(dist_name, params);
+});
+
+slider_1.noUiSlider.on('update', function() {
+    params[1] = +slider_1.noUiSlider.get();
+    update_line(dist_name, params);
+    update_mean_line(dist_name, params);
+});
+
+initial_transition_line(dist_name, params);

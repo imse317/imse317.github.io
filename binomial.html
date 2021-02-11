@@ -6,11 +6,13 @@
     <title>Binomial distribution</title>
     <link type="text/css" rel="stylesheet" media="screen" href="./css/page.css">
     <link type="text/css" rel="stylesheet" media="screen" href="./css/chart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css"/>
     <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.2.0/wNumb.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured"></script>
     <script src="./js/mathjax_config.js"></script>
-
 </head>
  
 <body>
@@ -26,21 +28,13 @@
 <div id="chart"></div>
 
 <div class="controls">
-    <div class="slider-label">
-        <p>$n=$ <span id="slider_value_0"></span></p>
-    </div>
+    <div class="slider-label">$n$</div>
+    <div id="slider_0"></div>
+</div>
 
-    <div class="slider-container">
-        <input type="range" id="slider_0" class="slider" min="10" max="100" step="1"><br>
-    </div>
-
-    <div class="slider-label">
-        <p>$p=$ <span id="slider_value_1"></span></p>
-    </div>
-
-    <div class="slider-container">
-        <input type="range" id="slider_1" class="slider" min="0.01" max="0.99" step="0.01"><br>
-    </div>
+<div class="controls">
+    <div class="slider-label">$p$</div>
+    <div id="slider_1"></div>
 </div>
 
 <div class="formula">

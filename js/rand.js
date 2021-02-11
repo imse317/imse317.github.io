@@ -95,10 +95,6 @@ function generate_data(dist_name, params) {
             break;
     }
 
-    // var start = xrange[0];
-    // var stop = xrange[1];
-    // var step = xrange[2];
-
     var data = [];
 
     // generating data from the probability function (pdf)
