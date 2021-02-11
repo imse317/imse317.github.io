@@ -1,6 +1,6 @@
 // generate data for each distribution
 
-function generate_data(dist_name, params, xrange) {
+function generate_data(dist_name, params) {
 
     // first define the probability function for each distribution
     switch(dist_name) {
@@ -95,9 +95,9 @@ function generate_data(dist_name, params, xrange) {
             break;
     }
 
-    var start = xrange[0];
-    var stop = xrange[1];
-    var step = xrange[2];
+    // var start = xrange[0];
+    // var stop = xrange[1];
+    // var step = xrange[2];
 
     var data = [];
 

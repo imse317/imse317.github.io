@@ -6,9 +6,11 @@
     <title>Discrete uniform distribution</title>
     <link type="text/css" rel="stylesheet" media="screen" href="./css/page.css">
     <link type="text/css" rel="stylesheet" media="screen" href="./css/chart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css"/>
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured"></script>
     <script src="./js/mathjax_config.js"></script>
 </head>
  
@@ -23,6 +25,8 @@
 </p>
 
 <div id="chart"></div>
+
+<div id="slider"></div>
 
 <div class="controls">
     <div class="slider-label">
@@ -58,6 +62,19 @@ $$
 <script src="./js/rand.js"></script>
 <script src="./js/chart_functions.js"></script>
 <script src="./js/dist/uniform_discrete.js"></script>
+
+<!-- <script>
+var slider = document.getElementById('slider');
+
+noUiSlider.create(slider, {
+    start: [20, 80],
+    connect: true,
+    range: {
+        'min': 0,
+        'max': 100
+    }
+});
+</script> -->
 
 </div>
 

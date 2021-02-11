@@ -39,10 +39,8 @@ var params = [dof=1];   // set initial params
 
 var start = -5, stop = 5 + 0.1, step = 0.01;
 
-var xrange = [start, stop, step];
+initial_chart_line(dist_name, params);
 
-initial_chart_line(dist_name, params, xrange);
+update_chart_line(dist_name, params);
 
-update_chart_line(dist_name, params, xrange);
-
-add_dist_line(dist_name="normal", params=[0, 1], xrange=xrange, ref=true);  // add standard normal dist as a reference
+add_dist_line(dist_name="normal", params=[0, 1], ref=true);  // add standard normal dist as a reference

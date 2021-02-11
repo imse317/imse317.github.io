@@ -1,13 +1,13 @@
 // This file contains common functions for making the d3 charts
 
 // add the line for continuous distributions
-function add_dist_line(dist_name, params, xrange, ref=false) {
+function add_dist_line(dist_name, params, ref=false) {
 
     var line = d3.line()
     .x(function(d) { return x(d[0]) })
     .y(function(d) { return y(d[1]) });
 
-    var data = generate_data(dist_name, params, xrange);
+    var data = generate_data(dist_name, params);
 
     if (ref == false) {
         path = svg.append('path')
@@ -25,9 +25,9 @@ function add_dist_line(dist_name, params, xrange, ref=false) {
 
 
 // add the bars for discrete distributions
-function add_dist_bars(dist_name, params, xrange){  
+function add_dist_bars(dist_name, params){  
 
-    var data = generate_data(dist_name, params, xrange);
+    var data = generate_data(dist_name, params);
 
     bars = svg.selectAll("bar")
       .data(data)
@@ -43,9 +43,9 @@ function add_dist_bars(dist_name, params, xrange){
 
 
 // for continuous distributions
-function initial_chart_line(dist_name, params, xrange) {
+function initial_chart_line(dist_name, params) {
 
-    add_dist_line(dist_name, params, xrange);
+    add_dist_line(dist_name, params);
 
     // add transition
     var totalLength = path.node().getTotalLength();
@@ -74,9 +74,9 @@ function initial_chart_line(dist_name, params, xrange) {
 
 
 // for discrete distributions
-function initial_chart_bars(dist_name, params, xrange) {
+function initial_chart_bars(dist_name, params) {
 
-    add_dist_bars(dist_name, params, xrange);
+    add_dist_bars(dist_name, params);
 
     // add transition
     if (dist_name != "bernoulli") {
@@ -100,15 +100,15 @@ function initial_chart_bars(dist_name, params, xrange) {
             })
             .attr("y", function(d) { return y(d[1]) })
             .attr("height", function(d) { return height - y(d[1]) })
-            .on("end", function() {add_bar_values(dist_name, params, xrange)});
+            .on("end", function() {add_bar_values(dist_name, params)});
     }
 
     update_controls(dist_name, params);
 }
 
-function add_bar_values(dist_name, params, xrange){
+function add_bar_values(dist_name, params){
 
-    var data = generate_data(dist_name, params, xrange);
+    var data = generate_data(dist_name, params);
 
     svg.selectAll("text.bar")
       .data(data)
@@ -135,31 +135,31 @@ function mouseover_bars(){
 }
 
 
-function update_line(dist_name, params, xrange) {
+function update_line(dist_name, params) {
 
     d3.selectAll(".line").remove();  // clear chart
 
     update_controls(dist_name, params);
-    add_dist_line(dist_name, params, xrange);
+    add_dist_line(dist_name, params);
 }
 
-function update_bars(dist_name, params, xrange) {
+function update_bars(dist_name, params) {
     
     d3.selectAll(".bar").remove();  // clear chart
     
     update_controls(dist_name, params);
-    add_dist_bars(dist_name, params, xrange);
+    add_dist_bars(dist_name, params);
 }
 
 
 // update additional things that are specific to some distributions
-function update_misc(dist_name, params, xrange) {
+function update_misc(dist_name, params) {
 
     switch (dist_name) {
 
         case "bernoulli":
             d3.selectAll(".bar-value").remove();
-            add_bar_values(dist_name, params, xrange);
+            add_bar_values(dist_name, params);
             break;
 
         case "normal": 
@@ -261,42 +261,42 @@ function add_mean_line(dist_name, params){
 
 
 // call this function to make all the needed updates
-function update_chart_line(dist_name, params, xrange) {
+function update_chart_line(dist_name, params) {
 
     d3.select("#slider_0").on("input", function() {
 
         params[0] = +this.value;
-        update_line(dist_name, params, xrange);
-        update_misc(dist_name, params, xrange);
+        update_line(dist_name, params);
+        update_misc(dist_name, params);
     });
     
     d3.select("#slider_1").on("input", function() {
 
         params[1] = +this.value;        
-        update_line(dist_name, params, xrange);
-        update_misc(dist_name, params, xrange);
+        update_line(dist_name, params);
+        update_misc(dist_name, params);
     });
 }
 
 
 // call this function to make all the needed updates
-function update_chart_bars(dist_name, params, xrange) {
+function update_chart_bars(dist_name, params) {
 
     d3.select("#slider_0").on("input", function() {
         params[0] = +this.value;
-        update_bars(dist_name, params, xrange);
-        update_misc(dist_name, params, xrange);
+        update_bars(dist_name, params);
+        update_misc(dist_name, params);
     });
     
     d3.select("#slider_1").on("input", function() {
         params[1] = +this.value;
-        update_bars(dist_name, params, xrange);
-        update_misc(dist_name, params, xrange);
+        update_bars(dist_name, params);
+        update_misc(dist_name, params);
     });
 
     d3.select("#slider_2").on("input", function() {
         params[2] = +this.value;
-        update_bars(dist_name, params, xrange);
-        update_misc(dist_name, params, xrange);
+        update_bars(dist_name, params);
+        update_misc(dist_name, params);
     });
 }

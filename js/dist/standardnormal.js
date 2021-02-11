@@ -38,6 +38,4 @@ var params = [mu=0, sigma=1];
 
 var start = -5, stop = 5 + 0.1, step = 0.01;
 
-var xrange = [start, stop, step];
-
-initial_chart_line(dist_name, params, xrange);
+initial_chart_line(dist_name, params);

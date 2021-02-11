@@ -40,8 +40,6 @@ var params = [a=1, b=6];   // set initial params
 
 var start = 0, stop = 11, step = 1;
 
-var xrange = [start, stop, step];
+initial_chart_bars(dist_name, params);
 
-initial_chart_bars(dist_name, params, xrange);
-
-update_chart_bars(dist_name, params, xrange);
+update_chart_bars(dist_name, params);

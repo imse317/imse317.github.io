@@ -39,8 +39,6 @@ var params = [lambda=3];  // set initial params
 
 var start = 0, stop = 5 + 0.05, step = 0.01;
 
-var xrange = [start, stop, step];
+initial_chart_line(dist_name, params);
 
-initial_chart_line(dist_name, params, xrange);
-
-update_chart_line(dist_name, params, xrange);
+update_chart_line(dist_name, params);
