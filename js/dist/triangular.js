@@ -8,69 +8,56 @@ var svg = d3.select("#chart")
         .attr("height", height + margin.top + margin.bottom)
     .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
- 
+
 var x = d3.scaleLinear()
-        .domain([0, 50])
+        .domain([0, 10])
         .range([0, width]);
  
 var y = d3.scaleLinear()
-        .domain([0, 0.1])
+        .domain([0, 1])
         .range([height, 0]);
-
+  
 var xAxis = d3.axisBottom()
-              .scale(x);
+        .scale(x);
 
 var yAxis = d3.axisLeft()
-              .scale(y);
+        .scale(y);
 
 svg.append("g")
-   .attr("class", "x-axis")
-   .attr("transform", "translate(0," + height + ")")
-   .call(xAxis);
+    .attr("class", "x-axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis);
 
 svg.append("g")
-   .attr("class", "y-axis")    
-   .call(yAxis);
+    .attr("class", "y-axis")    
+    .call(yAxis);
 
-var dist_name = "normal";
+var dist_name = "triangular";
 
-var params = [mu=25, sigma=6];  // set initial params
+var params = [a=3, b=6, c=5];   // set initial params
 
-var start = 0, stop = 50 + 0.5, step = 0.1;
+var start = 0, stop = 10 + 0.1, step = 0.01;
 
 var slider_0 = document.getElementById('slider_0');
-var slider_1 = document.getElementById('slider_1');
 
 noUiSlider.create(slider_0, {
-    start: mu,
+    start: [a, c, b],
     step: 0.01,
-    tooltips: wNumb({decimals: 1}),
+    margin: 0.9,     // minimum distance between the handles
+    connect: [false, true, true, false],
+    tooltips: [wNumb({decimals: 2}), wNumb({decimals: 2}), wNumb({decimals: 2})],
     range: {
         'min': 0,
-        'max': 50
-    }
-});
-
-noUiSlider.create(slider_1, {
-    start: sigma,
-    step: 0.01,
-    tooltips: wNumb({decimals: 1}),
-    range: {
-        'min': 3,
-        'max': 20
+        'max': 10
     }
 });
 
 slider_0.noUiSlider.on('update', function() {
-    params[0] = +slider_0.noUiSlider.get();
-    update_line(dist_name, params);
+    params[0] = +slider_0.noUiSlider.get()[0];
+    params[1] = +slider_0.noUiSlider.get()[2];
+    params[2] = +slider_0.noUiSlider.get()[1];
     update_aid_lines(dist_name, params);
-});
-
-slider_1.noUiSlider.on('update', function() {
-    params[1] = +slider_1.noUiSlider.get();
     update_line(dist_name, params);
-    update_aid_lines(dist_name, params);
 });
 
 initial_transition_line(dist_name, params);

@@ -125,13 +125,13 @@ function initial_transition_line(dist_name, params) {
         .duration(1000)
         .ease(d3.easeLinear)
         .attr("stroke-dashoffset", 0) // Set final value of dash-offset for transition
-        .on("end", function() {update_mean_line(dist_name, params)});
+        .on("end", function() {update_aid_lines(dist_name, params)});
 }
 
 
-var mean_dist_list = ["normal", "standard_normal"];
+var mean_dist_list = ["normal", "standard_normal", "triangular"];
 
-function update_mean_line(dist_name, params){
+function update_aid_lines(dist_name, params){
 
     if (mean_dist_list.includes(dist_name)) {
 
@@ -142,21 +142,28 @@ function update_mean_line(dist_name, params){
             case "standard_normal": 
                 var mu = params[0];
                 var sigma = params[1];        
-                var mean = mu;
-                var height_mean = jStat.normal.pdf(mean, mu, sigma);
+                var x_aid = mu;
+                var height_aid = jStat.normal.pdf(x_aid, mu, sigma);
+                break;
+            case "triangular":
+                var a = params[0];
+                var b = params[1];
+                var c = params[2];
+                var x_aid = c;
+                var height_aid = jStat.triangular.pdf(x_aid, a, b, c);
                 break;
             case "exponential": 
                 var lambda = params[0];  
-                var mean = 1/lambda;
-                var height_mean = jStat.exponential.pdf(mean, lambda);
+                var x_aid = 1/lambda;
+                var height_aid = jStat.exponential.pdf(x_aid, lambda);
                 break;
         }
 
     svg.append("line")
         .attr("class", "mean")
-        .attr("x1", x(mean))
-        .attr("y1", y(height_mean)+5)  // add a few pixels to avoid overlapping
-        .attr("x2", x(mean))
+        .attr("x1", x(x_aid))
+        .attr("y1", y(height_aid)+5)  // add a few pixels to avoid overlapping
+        .attr("x2", x(x_aid))
         .attr("y2", height);
     }
 }

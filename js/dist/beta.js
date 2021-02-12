@@ -10,11 +10,11 @@ var svg = d3.select("#chart")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
  
 var x = d3.scaleLinear()
-        .domain([0, 50])
+        .domain([0, 1])
         .range([0, width]);
  
 var y = d3.scaleLinear()
-        .domain([0, 0.1])
+        .domain([0, 2.5])
         .range([height, 0]);
 
 var xAxis = d3.axisBottom()
@@ -30,47 +30,47 @@ svg.append("g")
 
 svg.append("g")
    .attr("class", "y-axis")    
-   .call(yAxis);
+   .call(yAxis
+    .tickValues(d3.range(0, 2.6, 0.5)));
 
-var dist_name = "normal";
+var dist_name = "beta";
 
-var params = [mu=25, sigma=6];  // set initial params
+var params = [alpha=2, beta=2];  // set initial params
 
-var start = 0, stop = 50 + 0.5, step = 0.1;
+var start = 0.01, stop = 1, step = 0.01;
 
 var slider_0 = document.getElementById('slider_0');
 var slider_1 = document.getElementById('slider_1');
 
 noUiSlider.create(slider_0, {
-    start: mu,
+    start: alpha,
     step: 0.01,
-    tooltips: wNumb({decimals: 1}),
+    tooltips: true,
     range: {
-        'min': 0,
-        'max': 50
+        'min': 0.1,
+        'max': 5
     }
 });
 
 noUiSlider.create(slider_1, {
-    start: sigma,
+    start: beta,
     step: 0.01,
-    tooltips: wNumb({decimals: 1}),
+    tooltips: true,
     range: {
-        'min': 3,
-        'max': 20
+        'min': 0.1,
+        'max': 5
     }
 });
+
 
 slider_0.noUiSlider.on('update', function() {
     params[0] = +slider_0.noUiSlider.get();
     update_line(dist_name, params);
-    update_aid_lines(dist_name, params);
 });
 
 slider_1.noUiSlider.on('update', function() {
     params[1] = +slider_1.noUiSlider.get();
     update_line(dist_name, params);
-    update_aid_lines(dist_name, params);
 });
 
 initial_transition_line(dist_name, params);

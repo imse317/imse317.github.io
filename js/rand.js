@@ -65,6 +65,14 @@ function generate_data(dist_name, params) {
 
         // continuous distributions 
 
+        case "beta":
+            var pdf = function(x, params) {
+                var alpha = params[0];
+                var beta = params[1];
+                return jStat.beta.pdf(x, alpha, beta);
+            }
+            break;
+
         case "chisquare":
             var pdf = function(x, params) {
                 var dof = params[0];
@@ -79,11 +87,43 @@ function generate_data(dist_name, params) {
             }
             break;
 
+        case "centralF":
+            var pdf = function(x, params) {
+                var d1 = params[0];
+                var d2 = params[1];
+                return jStat.centralF.pdf(x, d1, d2);
+            }
+            break;
+
+        case "gamma":
+            var pdf = function(x, params) {
+                var shape = params[0];
+                var scale = params[1];
+                return jStat.gamma.pdf(x, shape, scale);
+            }
+            break;
+
+        case "lognormal":
+            var pdf = function(x, params) {
+                var mu = params[0];
+                var sigma = params[1];
+                return jStat.lognormal.pdf(x, mu, sigma);
+            }
+            break;
+
         case "normal":
             var pdf = function(x, params) {
                 var mu = params[0];
                 var sigma = params[1];
                 return jStat.normal.pdf(x, mu, sigma);
+            }
+            break;
+
+        case "pareto":
+            var pdf = function(x, params) {
+                var xm = params[0];
+                var shape = params[1];
+                return jStat.pareto.pdf(x, xm, shape);
             }
             break;
 
@@ -94,11 +134,28 @@ function generate_data(dist_name, params) {
             }
             break;
 
+        case "triangular":
+            var pdf = function(x, params) {
+                var a = params[0];
+                var b = params[1];
+                var c = params[2];
+                return jStat.triangular.pdf(x, a, b, c);
+            }
+            break;
+
         case "uniform":
             var pdf = function(x, params) {
                 var a = params[0];
                 var b = params[1];
                 return jStat.uniform.pdf(x, a, b);
+            }
+            break;
+
+        case "weibull":
+            var pdf = function(x, params) {
+                var shape = params[0];
+                var scale = params[1];
+                return jStat.weibull.pdf(x, scale, shape);
             }
             break;
     }

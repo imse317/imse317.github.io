@@ -10,11 +10,11 @@ var svg = d3.select("#chart")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
  
 var x = d3.scaleLinear()
-        .domain([0, 50])
+        .domain([0, 5])
         .range([0, width]);
  
 var y = d3.scaleLinear()
-        .domain([0, 0.1])
+        .domain([0, 2])
         .range([height, 0]);
 
 var xAxis = d3.axisBottom()
@@ -32,11 +32,11 @@ svg.append("g")
    .attr("class", "y-axis")    
    .call(yAxis);
 
-var dist_name = "normal";
+var dist_name = "lognormal";
 
-var params = [mu=25, sigma=6];  // set initial params
+var params = [mu=0, sigma=1];  // set initial params
 
-var start = 0, stop = 50 + 0.5, step = 0.1;
+var start = 0, stop = 5, step = 0.01;
 
 var slider_0 = document.getElementById('slider_0');
 var slider_1 = document.getElementById('slider_1');
@@ -44,33 +44,31 @@ var slider_1 = document.getElementById('slider_1');
 noUiSlider.create(slider_0, {
     start: mu,
     step: 0.01,
-    tooltips: wNumb({decimals: 1}),
+    tooltips: wNumb({decimals: 2}),
     range: {
-        'min': 0,
-        'max': 50
+        'min': -1,
+        'max': 5
     }
 });
 
 noUiSlider.create(slider_1, {
     start: sigma,
     step: 0.01,
-    tooltips: wNumb({decimals: 1}),
+    tooltips: wNumb({decimals: 2}),
     range: {
-        'min': 3,
-        'max': 20
+        'min': 0.2,
+        'max': 3
     }
 });
 
 slider_0.noUiSlider.on('update', function() {
     params[0] = +slider_0.noUiSlider.get();
     update_line(dist_name, params);
-    update_aid_lines(dist_name, params);
 });
 
 slider_1.noUiSlider.on('update', function() {
     params[1] = +slider_1.noUiSlider.get();
     update_line(dist_name, params);
-    update_aid_lines(dist_name, params);
 });
 
 initial_transition_line(dist_name, params);

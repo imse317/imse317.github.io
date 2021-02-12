@@ -43,8 +43,8 @@ var slider_0 = document.getElementById('slider_0');
 
 noUiSlider.create(slider_0, {
     start: lambda,
-    step: 0.1,
-    tooltips: wNumb({decimals: 1}),
+    step: 0.01,
+    tooltips: true,
     range: {
         'min': 0.1,
         'max': 6

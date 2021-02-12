@@ -3,7 +3,7 @@
 <meta charset="utf-8">
  
 <head>
-    <title>Standard normal distribution</title>
+    <title>Triangular distribution</title>
     <link type="text/css" rel="stylesheet" media="screen" href="./css/page.css">
     <link type="text/css" rel="stylesheet" media="screen" href="./css/chart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css"/>
@@ -19,27 +19,33 @@
 
 <div class="container">
 
-<h1>Standard normal distribution</h1>
-
-<p class="description">
-    A normal distribution with mean of 0 and variance of 1. 
-</p>
-
+<h1>Triangular distribution</h1>
 
 <div id="chart"></div>
 
+<div class="controls">
+    <div class="slider-label"></div>
+    <div id="slider_0"></div>
+</div>
+
 <div class="formula">
 $$
-f(x)=\frac{1}{\sqrt{2\pi}}\exp \bigg(-\frac{1}{2}x^2\bigg)
+    f(x) = 
+    \begin{cases}
+        \frac{2(x-a)}{(b-a)(c-a)}, & \text{if $a \leq x < c$,} \\
+        \frac{2(b-x)}{(b-a)(b-c)}, & \text{if $c \leq x < b$,} \\
+        0,              & \text{otherwise.}
+    \end{cases}
+    \\[25pt]
+    \text{where $a$ and $b$ are the lower and upper limit and c is the mode.}
 $$
 </div>
+
+<script src="./js/rand.js"></script>
+<script src="./js/chart_functions.js"></script>
+<script src="./js/dist/triangular.js"></script>
 
 </div>
 
 </body>
-
-<script src="./js/rand.js"></script>
-<script src="./js/chart_functions.js"></script>
-<script src="./js/dist/standardnormal.js"></script>
-
 </html>

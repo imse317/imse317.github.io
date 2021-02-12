@@ -3,7 +3,7 @@
 <meta charset="utf-8">
  
 <head>
-    <title>Standard normal distribution</title>
+    <title>Weibull distribution</title>
     <link type="text/css" rel="stylesheet" media="screen" href="./css/page.css">
     <link type="text/css" rel="stylesheet" media="screen" href="./css/chart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css"/>
@@ -19,18 +19,30 @@
 
 <div class="container">
 
-<h1>Standard normal distribution</h1>
-
-<p class="description">
-    A normal distribution with mean of 0 and variance of 1. 
-</p>
-
+<h1>Weibull distribution</h1>
 
 <div id="chart"></div>
 
+<div class="controls">
+    <div class="slider-label">$k$</div>
+    <div id="slider_0"></div>
+</div>
+
+<div class="controls">
+    <div class="slider-label">$\lambda$</div>
+    <div id="slider_1"></div>
+</div>
+
+
 <div class="formula">
 $$
-f(x)=\frac{1}{\sqrt{2\pi}}\exp \bigg(-\frac{1}{2}x^2\bigg)
+    f(x) = 
+    \begin{cases}
+        \frac{k}{\lambda}(\frac{x}{\lambda})^{k-1}e^{-(x/\lambda)^k}, & \text{if $x \geq 0$,} \\
+        0,                      & \text{otherwise.}
+    \end{cases}
+    \\[24pt]
+    \text{where $k$ is shape parameter and $\lambda$ is the scale parameter.} \\
 $$
 </div>
 
@@ -40,6 +52,6 @@ $$
 
 <script src="./js/rand.js"></script>
 <script src="./js/chart_functions.js"></script>
-<script src="./js/dist/standardnormal.js"></script>
+<script src="./js/dist/weibull.js"></script>
 
 </html>

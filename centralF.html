@@ -3,7 +3,7 @@
 <meta charset="utf-8">
  
 <head>
-    <title>Standard normal distribution</title>
+    <title>F-distribution</title>
     <link type="text/css" rel="stylesheet" media="screen" href="./css/page.css">
     <link type="text/css" rel="stylesheet" media="screen" href="./css/chart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css"/>
@@ -19,18 +19,37 @@
 
 <div class="container">
 
-<h1>Standard normal distribution</h1>
+<h1>F-distribution</h1>
 
 <p class="description">
-    A normal distribution with mean of 0 and variance of 1. 
+    The ratio of two (scaled) independent chi-square random variables
 </p>
-
 
 <div id="chart"></div>
 
+<div class="controls">
+    <div class="slider-label">$d_1$</div>
+    <div id="slider_0"></div>
+</div>
+
+<div class="controls">
+    <div class="slider-label">$d_2$</div>
+    <div id="slider_1"></div>
+</div>
+
 <div class="formula">
 $$
-f(x)=\frac{1}{\sqrt{2\pi}}\exp \bigg(-\frac{1}{2}x^2\bigg)
+X=\frac{\frac{1}{d_1}\sum_{i=1}^{d1} Z_i^2}{\frac{1}{d_2}\sum_{i=1}^{d2} Z_i^2}
+$$
+</div>
+
+<div class="formula">
+$$
+    f(x) = \frac{\sqrt{\frac{(d_1x)^{d_1}d_2^{d_2}}{(d_1x+d_2)^{d_1+d_2}}}}{x\text{B}\big(\frac{d_1}{2}, \frac{d_2}{2}\big)}
+    \\[24pt]
+    \text{where $d_1$ and $d_2$ are the degrees of freedom of the two} \\
+    \\
+    \text{chi-square random variables, and $\text{B}$ is the beta function.}
 $$
 </div>
 
@@ -40,6 +59,6 @@ $$
 
 <script src="./js/rand.js"></script>
 <script src="./js/chart_functions.js"></script>
-<script src="./js/dist/standardnormal.js"></script>
+<script src="./js/dist/centralF.js"></script>
 
 </html>

@@ -14,17 +14,17 @@ body {
 }
 
 main {
-	padding: 25px 10px 50px;
+	padding: 10px;
 	clear: both;
 }
 
 h2 {
 	text-align: center;
-	padding-bottom: 30px;
+	margin-bottom: 5px;
 }
 
 li {
-	padding-bottom: 20px;
+	padding-bottom: 12px;
 }
 
 a:link, a:visited, a:active, a:hover {
@@ -38,8 +38,8 @@ a:hover {
 }
 
 .dist-category {
-	font-size: 20pt;
-	margin-bottom: 20px;
+	font-size: 18pt;
+	margin-bottom: 0px;
 }
 
 #distributions {

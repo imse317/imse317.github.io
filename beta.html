@@ -3,7 +3,7 @@
 <meta charset="utf-8">
  
 <head>
-    <title>Standard normal distribution</title>
+    <title>Beta distribution</title>
     <link type="text/css" rel="stylesheet" media="screen" href="./css/page.css">
     <link type="text/css" rel="stylesheet" media="screen" href="./css/chart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css"/>
@@ -19,18 +19,25 @@
 
 <div class="container">
 
-<h1>Standard normal distribution</h1>
-
-<p class="description">
-    A normal distribution with mean of 0 and variance of 1. 
-</p>
-
+<h1>Beta distribution</h1>
 
 <div id="chart"></div>
 
+<div class="controls">
+    <div class="slider-label">$\alpha$</div>
+    <div id="slider_0"></div>
+</div>
+
+<div class="controls">
+    <div class="slider-label">$\beta$</div>
+    <div id="slider_1"></div>
+</div>
+
 <div class="formula">
 $$
-f(x)=\frac{1}{\sqrt{2\pi}}\exp \bigg(-\frac{1}{2}x^2\bigg)
+    f(x) = \frac{x^{\alpha-1}(1-x)^{\beta-1}}{\text{B}(\alpha, \beta)}
+    \\[20pt]
+    \text{where $\text{B}(\alpha, \beta)=\frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}$ and $\Gamma$ is the Gamma function.} \\
 $$
 </div>
 
@@ -40,6 +47,6 @@ $$
 
 <script src="./js/rand.js"></script>
 <script src="./js/chart_functions.js"></script>
-<script src="./js/dist/standardnormal.js"></script>
+<script src="./js/dist/beta.js"></script>
 
 </html>
