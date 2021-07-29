@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Bernoulli</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+
+class: middle, center
+
+.huge[Bernoulli distribution]
+
+
+![:scale 75%](../images/coin-toss-cover.png)
+
+<div style="margin-top: 0px;"><a class="sourcelink" href="https://unsplash.com/photos/mRolSP4jcnA">Image source</a></div>
+
+---
+# [Bernoulli random variable](https://en.wikipedia.org/wiki/Bernoulli_distribution)
+
+Toss a coin 
+- It lands on a heads ![:scale 3.8%](../images/coin_heads.png) with probability of $p$
+- It lands on a tails ![:scale 3.8%](../images/coin_tails.png) with probability of $1-p$.
+
+--
+
+The Bernoulli random variable $X$:
+
+.center[![:scale 90%](../images/rv-bernoulli.png)]
+
+--
+
+$$p_X(x) = 
+\begin{cases}
+    p, & \text{if $x = 1$,} \\\
+    1-p, & \text{if $x = 0$,} \\\
+    0,   & \text{otherwise.} \\\
+\end{cases}
+$$
+
+
+---
+
+$$p_X(x) = 
+\begin{cases}
+    p, & \text{if $x = 1$,} \\\
+    1-p, & \text{if $x = 0$,} \\\
+    0,   & \text{otherwise.} \\\
+\end{cases}
+$$
+
+We refer to $X$ as a Bernoulli RV with parameter $p$.
+
+Or simply
+
+$$X \sim \text{Bernoulli}(p)$$
+
+--
+
+Tossing a fair coin
+
+$$X \sim \text{Bernoulli}(0.5)$$
+
+---
+class: center, middle
+
+.huge[[Interactive visualization](https://probstats.org/bernoulli.html)]
+
+
+---
+# Expected value & variance
+
+$$X \sim \text{Bernoulli}(p)$$
+
+$$p_X(x) = 
+\begin{cases}
+    p, & \text{if $x = 1$,} \\\
+    1-p, & \text{if $x = 0$,} \\\
+    0,   & \text{otherwise.} \\\
+\end{cases}
+$$
+
+<br>
+
+$$
+\begin{aligned}
+\text{E}[X]&=? \\\
+\\\
+\text{var}(X)&=? \\\
+\end{aligned}
+$$
+
+
+???
+$$\text{E}[X]=1 \cdot p + 0 \cdot (1-p)=p$$
+
+$$\text{var}(X)=\text{E}[X^2]-\big(\text{E}[X]\big)^2$$
+
+$$\text{E}[X^2]=1^2 \cdot p + 0^2 \cdot (1-p)=p$$
+
+$$\text{var}(X)=p-p^2=p(1-p)$$
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

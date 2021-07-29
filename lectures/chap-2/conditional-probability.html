@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Conditional probability</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+class: middle, center
+
+.huge[Conditional probability]
+
+<br>
+
+![:scale 50%](../images/conditional-prob-cover.png)
+<br><br>
+<div class="source"><a class="sourcelink" href="https://medium.com/swlh/naive-bayes-explained-and-implemented-8dbd16c5ee47">Image source</a></div>
+
+---
+
+Roll a die 🎲
+
+What is the probability the number is .red[less than 4]?
+
+--
+
+.center[![:scale 60%](../images/1dice-samplespace.png)]
+
+--
+
+Without seeing it, we were told .green[it landed on an odd #]. 
+
+With this new info, how should we adjust our belief that the number is .purple[less than 4]?
+
+
+---
+
+For any event $A$, we have our initial belief of how likely it would occur. $\rightarrow\text{P}(A)$ 
+
+--
+
+Now, we learned that another event $B$ has occurred.
+
+With this new information, how should we adjust our belief on how likely event $A$ would occur? 
+
+--
+
+$$\text{Conditional probability:}\;\;\text{P}(A \mid B)$$
+
+--
+
+.center[
+<svg width="400" height="200" viewBox="-10 -10 200 200">
+  <defs>
+    <circle id="circle_a" cx="90" cy="90" r="70"></circle>
+    <circle id="circle_b" cx="170" cy="90" r="70"></circle>
+    <rect id="sample-space" x="0" y="0" width="260" height="180" stroke="black", stroke-width="3"></rect>
+  </defs>
+
+  <use xlink:href="#sample-space" fill="none"/>
+  <use xlink:href="#circle_a" fill="red" fill-opacity="0.4"/>
+  <use xlink:href="#circle_b" fill="green", fill-opacity="0.4"/>
+
+  <g fill="none" stroke="black" stroke-width="3">
+    <use xlink:href="#circle_a"/>
+    <use xlink:href="#circle_b"/>
+  </g>
+
+  <foreignObject x="45" y="70" width="40" height="40"><span style="font-size:20pt">\(A\)</span></foreignObject>
+  <foreignObject x="175" y="70" width="40" height="40"><span style="font-size:20pt">\(B\)</span></foreignObject>
+  <foreignObject x="0" y="0" width="40" height="40"><span style="font-size:20pt">\(\Omega\)</span></foreignObject>
+</svg>
+]
+
+---
+# Conditional probability
+
+<br>
+For any two events $A$ and $B$, where $\text{P}(B)>0$, 
+
+the conditional probability $\text{P}(A \mid B)$ is defined as
+
+<br>
+$$\large{\text{P}(A \mid B)=\frac{\text{P}(A \cap B)}{\text{P}(B)}}$$
+
+
+---
+# Exercise
+
+Toss a coin twice.
+
+We were told that one of the coin landed on heads.
+
+What is the probability the other coin landed on tails?
+
+
+---
+# Exercise
+
+Roll two dice 🎲🎲
+
+- What is the probability that doubles are rolled?
+
+- We were told that the sum is 4 or less. 
+
+- Now what is the probability that doubles are rolled?
+
+
+---
+# Exercise - Simplify $\text{P}(A \mid B)$
+
+- $A$ and $B$ are disjoint
+
+<br>
+
+- $A \subset B$
+
+<br>
+
+- $B \subset A$
+
+<br>
+
+- $A=B$
+
+<!-- $$\text{P}(B \mid B)=\frac{\text{P}(B \cap B)}{\text{P}(B)}=\frac{\text{P}(B)}{\text{P}(B)}=1$$ -->
+
+
+<!-- ---
+name: additivity_conditional
+# Conditional probability .gray[\- properties]
+
+If $A \cap B=\Phi$, the additivity axiom tells us that 
+
+$$\text{P}(A \cup B)=\text{P}(A) + \text{P}(B)$$
+
+Property:
+
+If \\(A\\) and \\(B\\) are disjoint, the additivity of an conditional probability still holds. 
+
+$$\text{P}((A \cup B)  \mid C)=\text{P}(A \mid C) + \text{P}(B \mid C)$$
+
+[Proof](#additivity_conditional_proof) -->
+
+
+<!-- ---
+class: middle, center
+
+# Appendices -->
+
+<!-- ---
+name: additivity_conditional_proof
+
+Proof  [(Go back)](#additivity_conditional)
+
+$$\begin{aligned}
+\text{P}((A \cup B)  \mid C) &= \frac{\text{P}((A \cup B) \cap C)}{\text{P}(C)} \\\
+&= \frac{\text{P}((A \cap C) \cup (B \cap C) )}{\text{P}(C)} \\\
+&= \frac{\text{P}(A \cap C) + \text{P}(B \cap C)}{\text{P}(C)} \\\
+&= \frac{\text{P}(A \cap C)}{\text{P}(C)} + \frac{\text{P}(B \cap C)}{\text{P}(C)} \\\
+\\\
+&= \text{P}(A \mid C) + \text{P}(B \mid C) \\\
+\end{aligned}$$ -->
+
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

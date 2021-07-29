@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Data visualization</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+class: split-50
+
+.column[
+<br><br><br><br>
+.huge[Data visualization]
+]
+.column[
+<br><br><br>
+![:scale 50%](../images/pie-chart-cover.png)
+
+]
+
+---
+class: center
+# [Anscombe’s quartet](https://en.wikipedia.org/wiki/Anscombe%27s_quartet)
+
+![:scale 60%](../images/anscombe-table.png)
+
+
+---
+class: center
+# [Anscombe’s quartet](https://en.wikipedia.org/wiki/Anscombe%27s_quartet)
+
+All four data sets share the same following statistics:
+
+![:scale 90%](../images/anscombe-stats.png)
+
+
+---
+class: center
+# [Anscombe’s quartet](https://en.wikipedia.org/wiki/Anscombe%27s_quartet): Graphics reveal data
+
+![:scale 100%](../images/anscombe-plots.png)
+
+---
+# Descriptive statistics
+
+Describe & summarize important features of the data.
+
+--
+
+- Graphical methods
+  - Stem-and-leaf
+  - Dot plot
+  - Histogram
+
+--
+
+- Numerical methods
+  - Measure of location (i.e., center)
+  - Measure of variability (i.e., spread)
+
+---
+# Heights (in feet) of 216 volcanoes 🌋
+
+<br>
+
+$$[19882, 19728, 19335, 19287, \cdots, 617, 555, 529, 242]$$
+
+.center[[`volcano_heights.csv`](../data/volcano_heights.csv)]
+
+---
+# Stem-and-leaf plot
+
+.center[![:scale 70%](../images/stemleaf.png)]
+
+---
+# Dot plot
+
+- Each data point is represented by a dot above its corresponding location on a horizontal scale.
+- Dots with the same values are stacked vertically. 
+
+ 
+$$\large{[9, 10, 15, 22, 9, 15, 16, 24, 11]}$$
+
+<br><br><br>
+.center[![:scale 80%](../images/dotplot-scale.png)]
+
+---
+# Dot plot
+
+.center[![:scale 100%](../images/dotplot-volcano.png)]
+
+---
+# Histogram
+
+.center[
+![:scale 48%](../images/hist-volcano-frequency.png)&nbsp;&nbsp;&nbsp;
+![:scale 48%](../images/hist-volcano-percent.png)
+]
+
+--
+- Frequency: The number of data points in a bin
+
+--
+
+- Divide frequency by the total number of data points
+
+$$\text{percent (or relative frequency)}=\frac{\text{frequency}}{\text{total # of data points}}$$
+
+---
+
+.center[
+![:scale 38%](../images/stemleaf-rotated.png)&nbsp;&nbsp;&nbsp;
+![:scale 38%](../images/hist-volcano-frequency.png)
+]
+
+--
+
+Stem-and-leaf plot
+- contains more info as it includes the values of data.
+- only suitable with small data size, as large amount of data require room for the leaves.
+- requires the viewer to "decode" the chart. 
+
+Histogram is more commonly used in practice. 
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

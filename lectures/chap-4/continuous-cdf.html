@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Cumulative distribution functions</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+
+class: middle, center
+
+.huge[Cumulative distribution functions]
+
+
+![:scale 75%](../images/cumulation-cover.png)
+
+---
+
+The .red[cumulative distribution functions (CDF)] is always defined as
+
+$$
+F_X(x)=\text{P}(X \leq x)
+$$
+
+--
+
+$$\text{If $X$ is discrete,} \;\;\;\; \text{P}(X \leq x)=\sum_{k \leq x}p_X(k)$$
+
+--
+
+$$\text{If $X$ is continuous,} \;\;\;\; \text{P}(X \leq x)=\int_{-\infty}^x f_X(t) dt$$
+
+.center[
+![:scale 40%](../images/cdf-def-1.png)
+]
+
+---
+
+$$F_X(x)=\text{P}(X \leq x)=\int_{-\infty}^x f_X(t) dt$$
+
+.center[
+![:scale 40%](../images/cdf-def-1.png)
+![:scale 43%](../images/cdf-def-2.png)
+]
+
+$$0 < F_X(x) < 1 $$
+
+--
+
+$$
+\begin{aligned}
+\lim_{x\rightarrow-\infty}F_X(x)&=0 \\\
+\lim_{x \rightarrow \infty}F_X(x)&=1 \\\
+\end{aligned}
+$$
+
+$F_X$ is non-decreasing.
+
+---
+# Calculate probability using CDF
+
+<br>
+
+$$\text{For any constant $a$,}$$
+
+$$\text{P}(X>a)=1-F_X(a)$$
+
+<br>
+.center[![:scale 100%](../images/cdf-compute-1.png)]
+
+---
+# Calculate probability using CDF
+
+<br>
+
+$$\text{For any two constants $a$ and $b$ with $a < b$,}$$
+
+$$\text{P}(a < X < b )=F_X(b)-F_X(a)$$
+
+<br>
+.center[![:scale 100%](../images/cdf-compute-2.png)]
+
+---
+# Relationship between PDF & CDF
+
+<br>
+
+$$F_X(x)=\int_{-\infty}^x f_X(t) dt$$
+
+The CDF $F_X(x)$ is the integral of the PDF $f_X(x)$.
+
+<br>
+--
+
+$$f_X(x)=\frac{dF_X(x)}{dx}$$
+
+The PDF $f_X(x)$ is the derivative of the CDF $F_X(x)$.
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

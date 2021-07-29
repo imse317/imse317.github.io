@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - z-test</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+
+class: middle, center
+
+.huge[.huge[*z*-test]]
+
+---
+.center[*z*-test about a population mean (.green[upper]-tailed)]
+
+Suppose $\small{X_1, X_2, \cdots, X_n}$ are i.i.d. .red[normal], 
+with unknown mean $\small{\mu}$ and known variance $\small{\sigma^2=100}$.
+
+--
+
+$$\small{H_0: \mu=40, \;\;\;\;H_a: \mu > 40}$$
+
+--
+
+$$\small{\text{Sample size }n=25, \;\;\bar{X} \sim \text{N}\big(\mu, \frac{100}{25}\big)}$$
+
+--
+
+$$\small{\text{sample mean }\bar{x}=42}$$
+
+--
+
+$$\small{p\text{-value}=\text{P}\big(\bar{X}\geq 42 \text{ when $H_0$ is true}\big)}$$
+
+.center[![:scale 45%](../images/pvalue-right.png)]
+
+---
+
+.center[![:scale 45%](../images/pvalue-right.png)]
+
+$$
+\small{
+\begin{aligned}
+p\text{-value}&=\text{P}\big(\bar{X}\geq 42 \text{ when $H_0$ is true}\big) \\\
+\\\
+&=\text{P}\big(\bar{X}\geq 42 \text{ when $\mu=40$ } \big) \\\
+\\\
+&=\text{P}\bigg(\frac{\bar{X}-40}{2} \geq \frac{42-40}{2}\bigg) \\\
+\\\
+&=\text{P}(Z \geq 1) \\\
+\\\
+&=0.1587 \\\
+\end{aligned}
+}
+$$
+
+--
+
+$$\small{\text{At $\alpha=0.05$ we fail to reject $H_0$ as the $p$-value exceeds $\alpha$.}}$$
+
+---
+
+.center[An alterative method]
+
+$$\small{\text{Test statistic: }\;\;z=\frac{\bar{x}-\mu}{\sigma/\sqrt{n}}}=\frac{42-40}{2}=1$$
+
+--
+
+$$\small{\text{At } \alpha=0.05 \text{ the critical value } z_{\alpha}=1.645}$$
+
+
+.center[![:scale 70%](../images/table-z-critical.png)]
+
+--
+
+.center[![:scale 45%](../images/z-critical.png)]
+
+--
+
+$$\small{\text{Since the test statistic } z < z_{\alpha}, \text{we failed to reject $H_0$.}}$$
+
+
+
+---
+.center[*z*-test about a population mean (.green[lower]-tailed)]
+
+Suppose $\small{X_1, X_2, \cdots, X_n}$ are i.i.d. .red[normal], 
+with unknown mean $\small{\mu}$ and known variance $\small{\sigma^2=100}$.
+
+--
+
+$$\small{H_0: \mu=40, \;\;\;\;H_a: \mu < 40}$$
+
+--
+
+$$\small{\text{Sample size }n=25, \;\;\bar{X} \sim \text{N}\big(\mu, \frac{100}{25}\big)}$$
+
+--
+
+$$\small{\text{sample mean }\bar{x}=36}$$
+
+--
+
+$$\small{p\text{-value}=\text{P}(\bar{X}\leq 36 \text{ when } H_0 \text{ is true})}$$
+
+.center[![:scale 38%](../images/pvalue-left.png)]
+
+---
+
+.center[![:scale 40%](../images/pvalue-left.png)]
+
+$$
+\small{
+\begin{aligned}
+p\text{-value}&=\text{P}(\bar{X}\leq 36 \text{ when $H_0$ is true}) \\\
+\\\
+&=\text{P}(\bar{X}\leq 36 \text{ when $\mu=40$} ) \\\
+\\\
+&=\text{P}\bigg(\frac{\bar{X}-40}{2} \leq \frac{36-40}{2}\bigg) \\\
+\\\
+&=\text{P}(Z \leq -2) = 0.0228 \\\
+\end{aligned}
+}
+$$
+
+--
+
+$$\small{\text{At $\alpha=0.05$ we reject $H_0$ as the $p$-value is smaller than $\alpha$.}}$$
+
+
+---
+
+.center[Similarly, we can also use the test statistic.]
+
+$$\small{\text{Test statistic: }\;\;z=\frac{\bar{x}-\mu}{\sigma/\sqrt{n}}}=\frac{36-40}{2}=-2$$
+
+--
+
+$$\small{\text{At } \alpha=0.05 \text{ the critical value } z_{\alpha}=1.645}$$
+
+
+.center[![:scale 70%](../images/table-z-critical.png)]
+
+--
+
+.center[![:scale 32%](../images/z-critical-left.png)]
+
+--
+
+$$\small{\text{Since the test statistic $z< -z_{\alpha}$, we reject $H_0$.}}$$
+
+---
+.center[*z*-test about a population mean (.green[two]-tailed)]
+
+Suppose $\small{X_1, X_2, \cdots, X_n}$ are i.i.d. .red[normal], 
+with unknown mean $\small{\mu}$ and known variance $\small{\sigma^2=100}$.
+
+--
+
+$$\small{H_0: \mu=40, \;\;\;\;H_a: \mu \neq 40}$$
+
+--
+
+$$\small{\text{Sample size }n=25, \;\;\bar{X} \sim \text{N}\big(\mu, \frac{100}{25}\big)}$$
+
+--
+
+$$\small{\text{sample mean }\bar{x}=36}$$
+
+--
+
+$$\small{\text{$p$-value}=\text{P}\big(\bar{X}\leq 36 \text{ or } \bar{X}\geq 44 \text{ when $H_0$ is true}\big)}$$
+
+.center[![:scale 35%](../images/pvalue-both.png)]
+
+
+---
+
+.center[![:scale 38%](../images/pvalue-both.png)]
+
+$$
+\small{
+\begin{aligned}
+\text{$p$-value}&=\text{P}\big(\bar{X}\leq 36 \text{ or } \bar{X}\geq 44 \text{ when $H_0$ is true}\big) \\\
+\\\
+&=2\cdot \text{P}(\bar{X}\leq 36 \text{ when} \mu=40) \\\
+\\\
+&=2\cdot \text{P}\bigg(\frac{\bar{X}-40}{2} \leq \frac{36-40}{2}\bigg) \\\
+\\\
+&=2\cdot \text{P}(Z \leq -2) = 0.0456 \\\
+\end{aligned}
+}
+$$
+
+--
+
+$$\small{\text{At $\alpha=0.05$ we reject $H_0$ as the $p$-value is smaller than $\alpha$.}}$$
+
+
+---
+
+.center[Similarly, we can also use the test statistic.]
+
+$$\small{\text{Test statistic: }\;\;z=\frac{\bar{x}-\mu}{\sigma/\sqrt{n}}}=\frac{36-40}{2}=-2$$
+
+--
+
+$$\small{\text{At } \alpha=0.05 \text{ the critical value } z_{\alpha/2}=1.96}$$
+
+
+.center[![:scale 70%](../images/table-z-critical.png)]
+
+--
+
+.center[![:scale 32%](../images/z-critical-both.png)]
+
+--
+
+$$\small{\text{Since $|z|> z_{\alpha/2}$, we reject $H_0$.}}$$
+
+
+---
+# Large-sample tests
+
+Recall the large-sample confidence interval.
+
+If the sample size $n$ is sufficiently large, 
+
+$$\frac{\bar{X}-\mu}{\hat{S}_n/\sqrt{n}}$$
+
+has approximately a standard normal distribution. 
+
+--
+
+We can use $\hat{S}_n$ to replace $\sigma$. 
+
+Then follow the exact same *z*-test procedure as before.
+
+--
+
+Rule of thumb for sample size: $n > 40$. 
+
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

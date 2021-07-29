@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Random variables</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+
+class: middle, center
+
+
+.huge[Random variables]
+
+<br>
+
+![:scale 50%](../images/dice-cover.png)
+
+
+
+---
+# Random variables
+
+For a given sample space $\Omega$ of some experiment, 
+
+a random variable (RV) is defined as 
+
+a .red[function] that .red[assigns a number to each outcome].
+
+<br>
+.center[![:scale 100%](../images/rv-def.png)]
+
+
+---
+# Examples
+
+Random variable $X$:
+
+Roll a die 🎲 and record the roll.
+
+<br>
+.center[![:scale 100%](../images/rv-dice.png)]
+
+
+---
+# Examples
+
+Random variable $X$: 
+
+Roll a pair of dice 🎲🎲 and record the maximum roll.
+
+<br>
+.center[![:scale 100%](../images/rv-2dice.png)]
+
+
+---
+# Exercise
+
+Roll a pair of dice 🎲🎲
+
+Is each of the following a random variable?
+
+- $X$: the sum of the two rolls
+- $Y$: the number of doubles we get
+- $Z$: the second roll raised to the square (e.g., $3^2=9$)
+- $W$: the sequence of two rolls (e.g., 5 followed by 3)
+
+???
+The sequence of two rolls is .red[not] a random variable because it is not one number. 
+
+---
+# .red[Discrete] random variables
+
+The variable takes .green[finite] or .green[countably infinite] values.
+
+- Toss a coin 4 times, the number of heads you get<br><br>
+- Roll a die 🎲<br><br>
+- The number of orders that a shop receives in a day
+
+---
+# .red[Continuous] random variables
+
+The variable takes .green[infinitely many], .green[uncountable] values.
+
+
+- The speed of riding a bicycle<br><br>
+- The water level of a dam<br><br>
+- The time when customers arrive at a shop
+
+<br>
+If it can take on two particular real values, it can also take on all real values between them.
+
+---
+# Functions of random variables
+
+$Y$ is a function of a random variable $X$
+
+$$Y=g(X)$$ 
+
+Is $Y$ a random variable?
+
+--
+
+.red[Yes.]
+
+.center[![:scale 100%](../images/function-rv-1.png)]
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

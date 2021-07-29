@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Probability density function</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+
+class: middle, center
+
+.huge[Probability density function]
+
+<br>
+
+![:scale 60%](../images/pdf-cover.png)
+
+---
+# Continuous variables
+
+It can take on .red[infinitely many], .red[uncountable] values.
+
+--
+
+<br>
+If it can take on two particular values, it can also take on all the values between them.
+
+--
+
+<br>
+Examples
+
+- Speed of riding a bicycle
+
+- Water level of a dam
+
+- Time when a customer arrives at a store
+
+---
+# Continuous random variables
+
+A random variable $X$ is called .red[continuous] 
+
+if there is a nonnegative function $f_X$, such that
+
+$$
+\begin{aligned}
+&\text{P}(X \in B)=\int_B f_X dx \\\
+\\\
+&\text{for every subset $B$ of the real line.} \\\
+\end{aligned}
+$$
+
+.center[![:scale 45%](../images/continuous-rv-def.png)]
+
+--
+
+In particular, for one interval $[a, b]$
+
+$$\text{P}(a \leq X \leq b)=\int_a^b f_X dx$$
+
+---
+
+$$\text{P}(a \leq X \leq b)=\int_a^b f_X dx$$
+
+$f_X$ is called the .red[probability density function] of $X$.
+
+<br>
+.center[![:scale 100%](../images/pdf-def.png)]
+
+---
+We describe discrete RVs w/ probability .green[mass] function.
+
+Why $f_X$ is called the probability .red[density] function?
+
+--
+
+.center[![:scale 38%](../images/pdf-interpretation.png)]
+
+--
+
+$$\small{\text{P}([x, x+\delta])=\int_x^{x+\delta} f_X(t)dt \approx f_X(x) \cdot \delta}$$
+
+--
+
+$$\small{f_X(x) \approx \frac{\text{P}([x, x+\delta])}{\delta}}$$
+
+--
+
+$f_X$ is the probability mass .red[per unit length].
+
+
+
+
+---
+# Properties of PDF - Non-negativity
+
+$$\text{P}(a \leq X \leq b)=\int_a^b f_X dx$$
+
+As probability can not be negative, we have
+
+$$f_X(x) \geq 0, \;\;\;\; \text{for all $x$.}$$
+
+---
+# Properties of PDF
+
+$$\text{P}(a \leq X \leq b)=\int_a^b f_X dx$$
+
+Set $b=a$, we have
+
+$$
+\begin{aligned}
+\text{P}(a \leq X \leq a)&=\int_a^a f_X dx=0 \\\
+\\\
+\text{P}(X = a)&=0
+\end{aligned}
+$$
+
+The probability that a continuous RV takes any single value is 0.
+
+---
+# Properties of PDF
+
+$$\text{P}(X = a)=0$$
+
+Including or excluding the endpoints of an interval has no effect on its probability. 
+
+$$
+\begin{aligned}
+\text{P}(a \leq X \leq b)&=\text{P}(a < X \leq b) \\\
+\\\
+&=\text{P}(a \leq X < b) \\\
+\\\
+&=\text{P}(a < X < b) \\\
+\end{aligned}
+$$
+
+---
+# Properties of PDF - Normalization
+
+For any discrete RV, we have
+
+$$\sum_{x} p_X(x) = 1$$
+
+--
+
+For any continuous RV, we have
+$$\text{P}(-\infty < X < +\infty)=\int_{-\infty}^{+\infty} f_X dx=1$$
+
+.center[![:scale 32%](../images/pdf-normalization.png)]
+
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

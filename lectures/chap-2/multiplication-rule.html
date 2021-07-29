@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Multiplication rule</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+
+class: split-50
+
+.column[
+<br><br><br><br><br>
+.huge[Multiplication rule]
+]
+.column[
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+![:scale 42%](../images/multiplication-rule-cover.png)
+<br><br><br>
+<div class="source"><a class="sourcelink" href="https://unsplash.com/photos/4wF66_KWJxA">Image source</a></div>
+]
+
+---
+
+By the definition of conditional probability
+
+$$\text{P}(A|B)=\frac{\text{P}(A \cap B)}{\text{P}(B)}$$
+
+
+???
+Multiply $\text{P}(B)$ on both sides, we have
+
+$$\text{P}(A \cap B)=\text{P}(B) \cdot \text{P}(A|B)$$
+
+The above is the multiplication rule.
+
+If we swap $A$ and $B$ in the above formula, we have
+
+$$\text{P}(B \cap A)=\text{P}(A) \cdot \text{P}(B|A)$$
+
+Note $\text{P}(B \cap A)=\text{P}(A \cap B)$, thus we have
+
+$$\text{P}(A \cap B)=\text{P}(A) \cdot \text{P}(B|A)$$
+
+The multiplication rule can be described as:
+
+"The probability that both events occur is the probability that first event occurs multiply by the (conditional) probability that the second event occurs, given that the first event has occurred."
+
+---
+# Multiplication rule for any three events
+
+$$\text{P}(A \cap B  \cap C)=\text{P}(A) \cdot \text{P}(B|A) \cdot \text{P}(C|A \cap B)$$
+
+
+
+---
+# General form of multiplication rule
+
+For any $n$ events $A_1, A_2, \cdots, A_n$ w/ positive probability,
+
+we have
+
+
+$$\begin{aligned}
+\text{P}(A_1 \cap A_2  \cap \cdots \cap A_n)=& \; \text{P}(A_1) \cdot \\\
+\\\
+&\; \text{P}(A_2|A_1) \cdot \\\
+\\\
+&\; \text{P}(A_3|A_1 \cap A_2) \cdot \\\
+\\\
+&\; \cdots \\\
+\\\
+&\; \text{P}(A_n|A_1 \cap A_2  \cap \cdots \cap A_{n-1}) \\\
+\end{aligned}$$
+
+
+---
+# Exercise
+
+We deal from a well-shuffled 52-card deck. 
+
+
+What is the chance .red[none of the first 3 cards is a heart]? 
+
+--
+
+Can you solve it using two different methods?
+- combinatorics
+
+<br>
+
+- multiplication rule
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

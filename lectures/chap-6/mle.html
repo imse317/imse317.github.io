@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Maximum Likelihood Estimates</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+class: split-50
+
+.column[
+<br><br><br><br>
+.huge[Maximum Likelihood Estimates]
+]
+.column[
+<br><br>
+![:scale 50%](../images/jar.png)
+<br><br>
+<div style="margin-top: 0px; text-align: right;"><a class="sourcelink" href="https://unsplash.com/photos/lW25Zxpkln8">Image source</a></div>
+
+]
+
+---
+# Probability vs. Statistics
+
+![:scale 100%](../images/prob-stats.png)
+
+---
+# How biased is the coin? &nbsp;&nbsp;&nbsp; ![:scale 18%](../images/coin-biased.png)
+
+- We were given a coin and told it is biased.
+- However, the probability of heads $\theta$ is unknown.
+- We tossed the coin 10 times, and received 7 heads.
+- Based on this data, what is our best guess of $\theta$?
+
+| Toss|1|2|3|4|5|6|7|8|9|10|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|&nbsp;Result&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;T&nbsp;&nbsp;|&nbsp;&nbsp;T&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;T&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|
+|$x_i$|1|0|0|1|0|1|1|1|1|1|
+
+
+<div style="margin-top: 100px; text-align: left;"><a class="sourcelink" href="https://www.probabilisticworld.com/calculating-coin-bias-bayes-theorem/">Image source</a></div>
+
+---
+# Point estimation
+
+Given a distribution parameter of interest, a point estimation is to 
+.red[use data to compute a number that represents an educated guess for the true value of the parameter]. 
+
+The estimation (e.g., $\hat{\theta}=0.7$) is a single number, hence the name "point" estimation. 
+
+In the next chapter we'll discuss "interval" estimation.
+
+---
+# [Maximum Likelihood Estimation (MLE)](https://en.wikipedia.org/wiki/Maximum_likelihood_estimation)
+
+Select the distribution parameter that makes the observed data .red[most likely.] 
+
+That is, .red[select the parameter that maximizes the probability (likelihood) of obtaining the data at hand].
+
+---
+# Recall the Bayes' rule example
+
+.center[![:scale 100%](../images/marbles.png)]
+
+Given the observation, how likely is each scenario?
+
+--
+
+$$\text{P}(A_i  \mid  B) = \frac{\text{P}(A_i)\text{P}(B  \mid  A_i)}{\text{P}(B)}$$
+
+--
+
+If we have to pick a scenario, which one shall we pick?
+
+Pick the scenario that makes the data "most likely". 
+
+---
+
+A vector of $n$ observations 
+$$X=(X_1, X_2, \cdots, X_n)$$
+
+$X$ can be described by 
+- a joint PMF $p_X(x; \theta)$ (if $X$ is discrete)
+
+- a joint PDF $f_X(x; \theta)$ (if $X$ is continuous)
+
+whose form depends on an unknown parameter $\theta$. 
+
+---
+
+Suppose we made $n$ particular observations 
+$$x=(x_1, x_2, \cdots, x_n)$$
+
+The likelihood function
+
+$$
+\begin{aligned}
+\text{Discrete case:}&\;\;\;\;p_X(x_1, x_2, \cdots, x_n; \theta) \\\
+\\\
+\text{Continuous case:}&\;\;\;\;f_X(x_1, x_2, \cdots, x_n; \theta) \\\
+\end{aligned}
+$$
+
+--
+
+Important note:
+
+$p_X(x_1, x_2, \cdots, x_n; \theta)$ is .red[not] the probability that the unknown parameter is equal to $\theta$.
+
+It is the probability that the observations $x_1, x_2, \cdots, x_n$ would arise when the unknown parameter is equal to $\theta$.
+
+---
+# Maximum Likelihood Estimate (MLE)
+
+A .red[maximum likelihood estimate] is a value of the parameter $\theta$ that maximizes the likelihood function:
+
+$$
+\begin{aligned}
+\text{Discrete case:}&\;\;\;\;\hat{\theta}=\arg \max_{\theta} p_X(x_1, x_2, \cdots, x_n; \theta) \\\
+\\\
+\text{Continuous case:}&\;\;\;\;\hat{\theta}=\arg \max_{\theta} f_X(x_1, x_2, \cdots, x_n; \theta) \\\
+\end{aligned}
+$$
+
+--
+
+In maximizing the likelihood, we are essentially asking:
+
+What is the value of $\theta$ under which the data we received are most likely to arise?
+
+---
+
+| Toss|1|2|3|4|5|6|7|8|9|10|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|&nbsp;Result&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;T&nbsp;&nbsp;|&nbsp;&nbsp;T&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;T&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|
+|$x_i$|1|0|0|1|0|1|1|1|1|1|
+
+$$X_i \sim \text{Bernoulli}(\theta)$$
+
+--
+
+The likelihood function
+
+$$
+\begin{aligned}
+p_X(x_1, x_2, \cdots, x_n; \theta) &= \text{P}(X_1=1, X_2=0, \cdots, X_{10}=1; \theta) \\\
+\\\
+&= \theta^7 (1-\theta)^3 \\\
+\end{aligned}
+$$
+
+--
+
+Find the $\theta$ that maximize the likelihood function. 
+
+$$\hat{\theta}=\arg \max_{\theta} \big(\theta^7 (1-\theta)^3 \big)$$
+
+
+---
+
+$$\small{p_X(x_1, x_2, \cdots, x_{10}; \theta)=\theta^7 (1-\theta)^3}$$
+
+--
+
+$$\small{\theta=0.1 \;\;\rightarrow\;\; p_X=0.1^7 \cdot 0.9^3=7.29\times 10^{-8}}$$
+
+--
+
+$$\small{\theta=0.2 \;\;\rightarrow\;\; p_X=0.2^7 \cdot 0.8^3\approx6.55\times 10^{-6}}$$
+
+--
+
+$$\small{\theta=0.3 \;\;\rightarrow\;\; p_X=0.3^7 \cdot 0.7^3\approx7.50\times 10^{-5}}$$
+
+--
+
+$$\small{\theta=0.4 \;\;\rightarrow\;\; p_X=0.4^7 \cdot 0.6^3\approx3.54\times 10^{-4}}$$
+
+--
+
+$$\small{\theta=0.5 \;\;\rightarrow\;\; p_X=0.5^7 \cdot 0.5^3\approx9.77\times 10^{-4}}$$
+
+--
+
+$$\small{\theta=0.6 \;\;\rightarrow\;\; p_X=0.6^7 \cdot 0.4^3\approx1.79\times 10^{-3}}$$
+
+--
+
+$$\small{\theta=0.7 \;\;\rightarrow\;\; p_X=0.7^7 \cdot 0.3^3\approx2.22\times 10^{-3}}$$
+
+--
+
+$$\small{\theta=0.8 \;\;\rightarrow\;\; p_X=0.8^7 \cdot 0.2^3\approx1.68\times 10^{-3}}$$
+
+
+<!-- $$\small{\theta=0.9 \;\;\rightarrow\;\; p_X=0.9^7 \cdot 0.1^3\approx4.78\times 10^{-4}}$$ -->
+
+
+---
+
+<!-- The likelihood function -->
+
+<!-- $$p\_X(x\_1, x\_2, \cdots, x\_{10}; \theta)=\theta^7 (1-\theta)^3$$ -->
+
+# How to find the maximum analytically? 
+
+$$\hat{\theta}=\arg \max_{\theta} \big (\theta^7 (1-\theta)^3 \big )$$
+
+--
+
+It is often more convenient to maximize its logarithm, called the .red[log-likelihood function.]
+
+--
+
+$$
+\begin{aligned}
+\ln\big(\theta^7(1-\theta)^3\big)&=\ln(\theta^7)+\ln(1-\theta)^3 \\\
+\\\
+&= 7\ln\theta +3\ln(1-\theta) \\\
+\end{aligned}
+$$ 
+
+Get the derivative of this function w.r.t. $\theta$. Set it to zero.
+
+--
+
+$$7\frac{1}{\hat{\theta}}+3\frac{-1}{1-\hat{\theta}}=0 \;\;\;\;\;\; \rightarrow \;\;\;\;\hat{\theta}=\frac{7}{10}$$
+
+---
+
+Lastly, check 2nd derivative is negative at this point.
+
+.center[![:scale 100%](../images/maxmin.png)]
+
+--
+
+$$
+\begin{aligned}
+\text{First derivative:}&\;\;\;\;\frac{7}{\theta}-\frac{3}{1-\theta} \\\
+\\\
+\text{Second derivative:}&\;\;\;\;-\frac{7}{\theta^2}-\frac{3}{(1-\theta)^2} < 0
+\end{aligned}
+$$ 
+
+
+<div style="margin-top: 80px; text-align: left;"><a class="sourcelink" href="http://hyperphysics.phy-astr.gsu.edu/hbase/Math/maxmin.html">Image source</a></div>
+
+
+
+???
+The second derivative demonstrates whether a point with zero first derivative is a maximum, 
+a minimum, or an inflection point. 
+
+---
+
+| Toss|1|2|3|4|5|6|7|8|9|10|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|&nbsp;Result&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;T&nbsp;&nbsp;|&nbsp;&nbsp;T&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;T&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|
+|$x_i$|1|0|0|1|0|1|1|1|1|1|
+
+Alternative: We can also consider the 7 heads out of 10 tosses as a single data point of $y=7$, where
+
+$$Y \sim \text{bin}(10, \theta)$$
+
+--
+
+The likelihood function
+
+$$p_Y(y; \theta)=\text{P}(Y=y; \theta)={10 \choose 7}\theta^7(1-\theta)^3$$
+
+It is the same maximization problem as before. 
+
+---
+
+# Summary: standard procedure of MLE
+
+Step 1. Obtain the .red[likelihood function.]
+
+$$
+\begin{aligned}
+\text{Discrete case:}&\;\;\;\;p_X(x_1, x_2, \cdots, x_n; \theta) \\\
+\\\
+\text{Continuous case:}&\;\;\;\;f_X(x_1, x_2, \cdots, x_n; \theta) \\\
+\end{aligned}
+$$
+
+--
+
+In many cases, the observations are assumed to be independent. 
+
+
+$$
+\begin{aligned}
+p_X(x_1, x_2, \cdots, x_n; \theta) &= p_X(x_1; \theta)\cdot p_X(x_2; \theta) \cdots p_X(x_n; \theta) \\\
+\\\
+&= \prod_{i=1}^n p_X(x_i; \theta) \\\
+\end{aligned}
+$$
+
+---
+# Summary: standard procedure of MLE
+
+Step 2 (optional). It is often more convenient to convert the likelihood function to the .red[log-likelihood function]. 
+
+$$
+\begin{aligned}
+\ln \big(p_X(x_1, x_2, \cdots, x_n; \theta)\big) &= \ln \bigg(\prod_{i=1}^n p_X(x_i; \theta) \bigg) \\\
+\\\
+&= \sum_{i=1}^n \ln \big(p_X(x_i; \theta)\big) \\\
+\end{aligned}
+$$
+
+---
+# Summary: standard procedure of MLE
+
+Step 3. Maximization
+
+- Get the derivative of log-likelihood function w.r.t. $\theta$.
+
+- Set the derivative to zero, and solve for $\theta$.
+
+- Check the 2nd derivative at this point is negative. 
+
+---
+
+$$\small{X_i \sim \text{Bernoulli}(\theta)}$$
+
+If we got $k$ heads out of $n$ independent coin tosses,
+
+$$\small{x_1+x_2+\cdots+x_n=k}$$
+
+--
+
+$$
+\small{
+\begin{aligned}
+\ln \big(p_X(x_1, x_2, \cdots, x_n; \theta)\big)&=\ln \bigg(\prod_{i=1}^n p_X(x_i; \theta) \bigg) \\\
+\\\
+&=\ln \big(\theta^k(1-\theta)^{n-k} \big)  \\\
+\\\
+&=k \ln\theta + (n-k)\ln(1-\theta) \\\
+\end{aligned}
+}
+$$
+
+--
+
+Set its derivative to zero, solve for $\theta$.
+
+$$\small{\frac{k}{\theta}-\frac{n-k}{1-\theta}=0\;\;\; \rightarrow \;\;\hat{\theta}=\frac{k}{n}=\frac{x_1+x_2+\cdots+x_n}{n}}$$
+
+---
+
+$$\small{X_i \sim \text{Bernoulli}(\theta)}$$
+
+<br>
+
+$$\small{\hat{\theta}=\frac{k}{n}=\frac{x_1+x_2+\cdots+x_n}{n}}$$
+
+<br>
+
+If we use RVs $X_1, X_2, \cdots, X_n$ for the outcomes of $n$ independent tosses, 
+the .red[maximum likelihood estimator]
+
+$$\hat{\Theta}_n=\frac{X_1+X_2+\cdots+X_n}{n}$$
+
+---
+
+$$X_i \sim \text{expo}(\theta)$$
+
+Assume the interarrival time between consecutive customers at a store, $X_i$, 
+is exponentially distributed with unknown arrival rate $\theta$.
+
+
+We also assume $X_1, X_2, \cdots, X_n$ are independent.
+
+Find the maximum likelihood estimator of the arrival rate, 
+on the basis of $n$ observations $X_1, X_2, \cdots, X_n$.
+
+--
+
+The likelihood function
+
+$$f_X(x_1, x_2, \cdots, x_n; \theta)=\prod_{i=1}^n f_X(x_i; \theta)=\prod_{i=1}^n \theta e^{-\theta x_i}$$
+
+---
+
+The log-likelihood function
+
+--
+
+$$
+\small{
+\begin{aligned}
+\ln \big(f_X(x_1, x_2, \cdots, x_n; \theta)\big)&=\ln \bigg(\prod_{i=1}^n \theta e^{-\theta x_i} \bigg) \\\
+\\\
+&=\sum_{i=1}^n \ln (\theta e^{-\theta x_i}) \\\
+\\\
+&=\sum_{i=1}^n \big(\ln\theta + \ln e^{-\theta x_i}\big) \\\
+\\\
+&=n\ln\theta + \sum_{i=1}^n (-\theta x_i) \\\
+\\\
+&=n\ln\theta -\theta \sum_{i=1}^n x_i \\\
+\end{aligned}
+}
+$$
+
+---
+Get the derivative of the log-likelihood function w.r.t. $\theta$. 
+
+$$\frac{d}{d\theta}\bigg(n\ln\theta -\theta \sum_{i=1}^n x_i \bigg)=\frac{n}{\theta}-\sum_{i=1}^n x_i$$
+
+--
+
+Set the derivative to zero, solve for $\theta$.
+
+$$\frac{n}{\theta}-\sum_{i=1}^n x_i=0 \;\;\;\;\rightarrow \;\;\;\; \hat{\theta}=\frac{n}{\sum_{i=1}^n x_i}=\frac{1}{\frac{1}{n}\sum_{i=1}^n x_i}=\frac{1}{\bar{x}}$$
+
+--
+
+Check the second derivative.
+
+$$\frac{d}{d\theta}\bigg(\frac{n}{\theta}-\sum_{i=1}^n \bigg)=-\frac{n}{\theta^2}< 0$$
+
+---
+
+$$\hat{\theta}=\frac{1}{\frac{1}{n}\sum_{i=1}^n x_i}$$
+
+Find the MLE of the rate parameter, on the basis of $n$ observations $X_1, X_2, \cdots, X_n$.
+
+$$\hat{\Theta}=\frac{1}{\frac{1}{n}\sum_{i=1}^n X_i}=\frac{1}{\bar{X}}$$
+
+---
+
+$$\small{X_i \sim \text{unif}(0, \theta)}$$
+
+The likelihood function
+
+$$
+\small{
+\begin{aligned}
+f_X(x_1, x_2, \cdots, x_n; \theta) &= \prod_{i=1}^n f_X(x_i; \theta) \\\
+\\\
+&=
+\begin{cases}
+  \prod\limits_{i=1}^n \frac{1}{\theta}=\frac{1}{\theta^n}, & \text{if $\theta \geq \max\limits_{i=1, 2, \cdots, n} x_i$,} \\\
+  \\\
+  0, & \text{otherwise.} \\\
+\end{cases}
+\end{aligned}
+}
+$$
+
+--
+
+Note $\frac{1}{\theta^n}$ is a monotonically decreasing function of $\theta$.
+
+The MLE of $\theta$ is 
+
+$$\hat{\theta}=\max\limits_{i=1, 2, \cdots, n} x_i$$
+
+---
+# Unbiased estimator
+
+<br>
+
+A point estimator $\hat{\Theta}_n$ is said to be unbiased of $\theta$ if
+
+$$\text{E}\big[\hat{\Theta}_n\big]=\theta,\;\;\;\;\text{for all } \theta.$$
+
+---
+# Estimate the mean of an RV
+
+Let $X_1, X_2, \cdots, X_n$ be i.i.d. RVs with mean $\mu$ and variance $\sigma^2$.
+
+Sample mean
+
+$$\bar{X}=\frac{X_1+X_2+\cdots+X_n}{n}=\frac{1}{n}\sum_{i=1}^n X_i$$
+
+--
+
+Is the sample mean $\bar{X}$ a unbiased estimator of the population mean $\mu$?
+
+$$\text{E}\big[\bar{X}\big]=\text{E}\bigg[\frac{1}{n}\sum_{i=1}^n X_i\bigg]=\frac{1}{n}\sum_{i=1}^n\text{E}[X_i]=\frac{1}{n}n\mu=\mu$$
+
+---
+# Estimate the variance of an RV
+
+Let $X_1, X_2, \cdots, X_n$ be i.i.d. RVs with mean $\mu$ and variance $\sigma^2$.
+
+Sample variance
+
+$$S^2=\frac{\sum_{i=1}^n (X_i-\bar{X})^2}{n-1}$$
+
+Is the sample variance $S^2$ a unbiased estimator of the population variance $\sigma^2$?
+
+???
+$$
+\begin{aligned}
+\text{E}[S^2]&=\text{E}\bigg[\frac{\sum (X_i-\bar{X})^2}{n-1}\bigg] \\\
+\\\
+&=\text{E}\bigg[\frac{\sum X_i^2-\frac{1}{n}(\sum X_i)^2}{n-1}\bigg] \\\
+\\\
+&=\frac{1}{n-1}\bigg(\sum \text{E}[X_i^2] -\frac{1}{n}\text{E}\big[\big(\sum X_i\big)^2\big]\bigg) \\\
+\\\
+&=\frac{1}{n-1}\bigg(\sum (\sigma^2+\mu^2)-\frac{1}{n}\big(\text{var}\big(\sum X_i\big)+\big(\text{E}\big[\sum X_i\big]\big)^2\big)\bigg) \\\
+\\\
+&=\frac{1}{n-1}\big(n\sigma^2+n\mu^2 -\frac{1}{n}(n\sigma^2+n^2\mu^2)\big) \\\
+\\\
+&=\frac{1}{n-1}\big(n\sigma^2+n\mu^2 -\sigma^2-n\mu^2)\big) \\\
+\\\
+&=\sigma^2 \\\
+\end{aligned}
+$$
+
+---
+# Estimate the variance of an RV
+
+Following the same procedure, we can also prove that 
+
+$$\frac{\sum_{i=1}^n (X_i-\bar{X})^2}{n}$$ is a biased estimator of $\sigma^2$, as
+
+$$\text{E}\bigg[\frac{\sum (X_i-\bar{X})^2}{n}\bigg] = \bigg(\frac{n-1}{n}\bigg) \sigma^2 \neq \sigma^2$$
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

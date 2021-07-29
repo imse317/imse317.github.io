@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Cumulative distribution functions</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+
+class: middle, center
+
+.large[Cumulative distribution functions]
+
+<br>
+
+![:scale 60%](../images/cumulation-cover.png)
+
+
+---
+# Definition
+
+
+The .red[cumulative distribution function (CDF)] of a RV $X$ 
+
+is defined by
+
+$$F_X(x)=\text{P}(X \leq x), \;\;\;\;\;\text{for all $x$.}$$
+
+--
+
+It is the probability that the value of $X$ will be .red[at most] $x$.
+
+--
+
+Loosely speaking, the CDF .red[accumulates] the probability .red[up to] the value $x$.
+
+--
+
+If RV $X$ is discrete,
+
+$$F_X(x)=\text{P}(X \leq x)=\sum_{k \leq x} p_X(k)$$
+
+
+---
+# Calculating CDF
+
+$X$: Roll a die 🎲 and record the number
+
+What is the CDF of $X$?
+
+--
+
+$$\text{CDF def:} \;\;\;\; F_X(x)=\text{P}(X \leq x), \;\;\;\;\;\text{for all $x$.}$$
+
+--
+
+.left[![:scale 45%](../images/pmf-roll1die.png)]
+
+
+
+
+---
+.center[![:scale 90%](../images/cdf-roll1die.png)]
+
+--
+
+$$
+\small{
+F_X(x) = 
+\begin{cases}
+    0, & \text{if $ x < 1$,} \\\
+    1/6, & \text{if } 1 \leq x < 2, \\\
+    2/6, & \text{if } 2 \leq x < 3, \\\
+    3/6, & \text{if } 3 \leq x < 4, \\\
+    4/6, & \text{if } 4 \leq x < 5, \\\
+    5/6, & \text{if } 5 \leq x < 6, \\\
+    1,   & \text{if } x \geq 6. \\\
+\end{cases}
+}
+$$
+
+--
+
+For discrete RVs, the CDF $F_X(x)$ is a .green[step function] of $x$.
+
+---
+
+$X$: Toss a coin twice and record the number of heads.
+
+What is the CDF of $X$?
+
+--
+
+$$
+\small{
+p_X(x) = 
+\begin{cases}
+    0.25, & \text{if $x = 0$ or 2}, \\\
+    0.5, & \text{if $x = 1$,} \\\
+    0,              & \text{otherwise.}
+\end{cases}
+}
+$$
+
+--
+
+.center[![:scale 75%](../images/cdf-binomial-n2.png)]
+
+--
+
+$$
+\small{
+F_X(x) = 
+\begin{cases}
+    0, & \text{if $x < 0$,} \\\
+    0.25, & \text{if } 0 \leq x < 1, \\\
+    0.75, & \text{if } 1 \leq x < 2, \\\
+    1,   & \text{if } x \geq 2. \\\
+\end{cases}
+}
+$$
+
+---
+
+If $X$ only takes integer values, 
+its PMF can be obtained from CDF by .red[differencing].
+
+$$
+\small{
+\begin{aligned}
+p_X(k)&=\text{P}(X \leq k) - \text{P}(X \leq k-1) \\\
+&= F_X(k) - F_X(k-1) \\\
+\end{aligned}
+}
+$$
+
+--
+
+.center[![:scale 75%](../images/cdf-binomial-n2.png)]
+
+--
+
+$$
+\small{
+\begin{aligned}
+p_X(2)&=F_X(2)-F_X(1)=1-0.75=0.25 \\\
+\\\
+p_X(1)&=F_X(1)-F_X(0)=0.75-0.25=0.5 \\\
+\\\
+p_X(0)&=F_X(0)-F_X(-1)=0.25-0=0.25 \\\
+\end{aligned}
+}
+$$
+
+
+---
+# Properties of CDF $F_X(x)$ 
+
+$F_X(x)$ is .red[nondecreasing].
+
+$$\text{If $a \leq b$, then $F_X(a) \leq F_X(b)$.}$$
+
+--
+
+<br>
+$F_X(x)$ tends to $0$ as $x\rightarrow -\infty$, and to $1$ as $x \rightarrow +\infty$.
+
+.center[![:scale 54%](../images/cdf-example.png)]
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

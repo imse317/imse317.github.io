@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Marginal PDF</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+class: split-50
+
+.column[
+<br><br><br><br><br>
+.huge[Marginal PDF]
+]
+.column[
+<br><br><br>
+![:scale 50%](../images/joint-pdf-cover.png)
+]
+
+---
+
+For .green[discrete] RVs $X$ and $Y$, the .red[marginal] PMFs are
+
+$$p_X(x)=\sum_y p_{X, Y}(x, y)$$
+
+$$p_Y(y)=\sum_x p_{X, Y}(x, y)$$
+
+--
+
+For .red[continuous] RVs $X$ and $Y$, the .red[marginal] PDFs are
+
+$$f_X(x)=\int_{-\infty}^{+\infty} f_{X, Y}(x, y) dy$$
+
+$$f_Y(y)=\int_{-\infty}^{+\infty} f_{X, Y}(x, y) dx$$
+
+???
+Integrate the joint PDF over all possible values of the other variable.
+
+
+---
+
+Let $(X, Y)$ be a random point on the unit square.
+
+.center[![:scale 35%](../images/unit-square.png)]
+
+What is its joint PDF?
+
+--
+
+$$f_{X, Y}(x, y) = 
+\begin{cases}
+    c, & \text{if $x, y \in [0, 1]$,} \\\
+    0, & \text{otherwise.}
+\end{cases}
+$$
+
+---
+
+$$f_{X, Y}(x, y) = 
+\begin{cases}
+    c, & \text{if $x, y \in [0, 1]$,} \\\
+    0, & \text{otherwise.}
+\end{cases}
+$$
+
+To satisfy the normalization property
+
+$$
+\begin{aligned}
+&\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} f_{X, Y}(x, y) dxdy \\\
+\\\
+=\;&\int_0^1 \int_0^1 c dxdy \\\
+\\\
+=\;&c \int_0^1 \int_0^1 dxdy =c \\\
+\end{aligned}
+$$
+
+We must set $c=1$.
+
+---
+<!-- The joint PDF: -->
+
+$$f_{X, Y}(x, y) = 
+\begin{cases}
+    c, & \text{if $x, y \in [0, 1]$,} \\\
+    0,              & \text{otherwise.}
+\end{cases}
+$$
+
+.center[![:scale 18%](../images/unit-square.png)]
+
+What are the marginal PDFs?
+
+$$
+f_X(x)=\int_{-\infty}^{+\infty} f_{X, Y}(x, y) dy=\int_0^1 1 \cdot dy =1,  \;\; \text{if } x \in [0, 1].
+$$
+
+--
+
+That is, $X \sim \text{unif}(0, 1)$
+
+Similarly, $Y \sim \text{unif}(0, 1)$
+
+---
+# Uniform joint PDF
+
+More generally, let $S$ be a subset of the 2-D plane.
+
+The corresponding uniform joint PDF on $S$ is
+
+$$f_{X, Y}(x, y) = 
+\begin{cases}
+    \frac{1}{\text{area of $S$}}, & \text{if $(x, y) \in S$,} \\\
+    0,                           & \text{otherwise.}
+\end{cases}
+$$
+
+.center[![:scale 30%](../images/joint-pdf-uniform.png)]
+
+---
+
+.center[![:scale 26%](../images/joint-pdf-uniform.png)]
+
+$$
+\begin{aligned}
+\text{P}\big((X, Y) \in A\big)&=\iint\limits_{(x, y) \in A} f_{X, Y}(x, y) dxdy \\\
+\\\
+&=\frac{1}{\text{area of $S$}}\iint\limits_{(x, y) \in A} dxdy \\\
+\\\
+&=\frac{\text{area of $A$}}{\text{area of $S$}} \\\
+\end{aligned}
+$$
+
+---
+# Uniform distribution on the unit square
+
+$$f_{X, Y}(x, y) = 
+\begin{cases}
+    1, & \text{if $x, y \in [0, 1]$,} \\\
+    0, & \text{otherwise.}
+\end{cases}
+$$
+
+What is the probability that $X < Y$?
+
+--
+
+.center[
+![:scale 30%](../images/unit-square.png)
+&nbsp;
+![:scale 30%](../images/unit-square-xy.png)
+]
+
+---
+# Uniform distribution on the unit disk
+
+Let $(X, Y)$ be a random point on the unit disk.
+
+.center[![:scale 35%](../images/unit-disk.png)]
+
+What is its joint PDF?
+
+--
+
+$$f_{X, Y}(x, y) = 
+\begin{cases}
+    1/\pi, & \text{if $x^2+y^2 \leq 1$,} \\\
+    0,     & \text{otherwise.} \\\
+\end{cases}
+$$
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

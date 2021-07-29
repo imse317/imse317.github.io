@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Conditional PMF</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+class: middle, center
+
+.huge[Conditional PMF]
+
+<br>
+
+![:scale 50%](../images/pmf-conditional-cover.png)
+
+---
+# Conditional PMF
+
+The .red[conditional PMF] of $X$ given $Y=y$ is defined by
+
+$$
+\begin{aligned}
+\\\
+p_{X \mid Y}(x \mid y)&=\text{P}(X=x \mid Y=y) \\\
+\\\
+&=\frac{\text{P}(X=x, Y=y)}{\text{P}(Y=y)} \\\
+\\\
+&=\frac{p_{X, Y}(x, y)}{p_Y(y)} \\\
+\end{aligned}
+$$
+
+---
+name: normalization
+
+$$p_{X \mid Y}(x \mid y)=\frac{p_{X, Y}(x, y)}{p_Y(y)}$$
+
+.center[![:scale 100%](../images/pmf-conditional.png)]
+
+
+$p_{X \mid Y}(x \mid y)$ has the same shape as $p_{X, Y}(x, y)$
+except that it is divided by $p_Y(y)$, 
+which enforce the normalization property. ([Proof](#normalization_appendix))
+
+
+---
+$X$: whether they are a current smoker
+
+$Y$: whether they will develop lung cancer at some point
+
+| |&nbsp;&nbsp;&nbsp;&nbsp;$Y=0$&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;$Y=1$&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$p_X(x)$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|:---:|:---:|:---:|:---:|
+|&nbsp;&nbsp;&nbsp;&nbsp;$X=0$&nbsp;&nbsp;&nbsp;&nbsp;|$72\%$|$3\%$|$75\%$|
+|&nbsp;&nbsp;&nbsp;&nbsp;$X=1$&nbsp;&nbsp;&nbsp;&nbsp;|$20\%$|$5\%$|$25\%$|
+|$p_Y(y)$|$92\%$|$8\%$|$100\%$|
+
+If an individual developed lung cancer, what is the probability that they are a current smoker?
+
+---
+$X$: whether they are a current smoker
+
+$Y$: whether they will develop lung cancer at some point
+
+| |&nbsp;&nbsp;&nbsp;&nbsp;$Y=0$&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;$Y=1$&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$p_X(x)$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|:---:|:---:|:---:|:---:|
+|&nbsp;&nbsp;&nbsp;&nbsp;$X=0$&nbsp;&nbsp;&nbsp;&nbsp;|$72\%$|$3\%$|$75\%$|
+|&nbsp;&nbsp;&nbsp;&nbsp;$X=1$&nbsp;&nbsp;&nbsp;&nbsp;|$20\%$|$5\%$|$25\%$|
+|$p_Y(y)$|$92\%$|$8\%$|$100\%$|
+
+If an individual is a current smoker, what is the probability that they will develop lung cancer?
+
+---
+# Slice view of conditional PMF 
+
+$$p_{X \mid Y}(x \mid y)=\frac{p_{X, Y}(x, y)}{p_Y(y)}$$
+
+.center[![:scale 62%](../images/pmf-conditional-x.png)]
+
+---
+# Slice view of conditional PMF 
+
+$$p_{Y \mid X}(y \mid x)=\frac{p_{X, Y}(x, y)}{p_X(x)}$$
+
+.center[![:scale 62%](../images/pmf-conditional-y.png)]
+
+---
+
+$$p_{X \mid Y}(x \mid y)=\frac{p_{X, Y}(x, y)}{p_Y(y)}$$
+
+$$\require{color}\colorbox{yellow}{$p_{X, Y}(x, y) = p_Y(y) \cdot p_{X \mid Y}(x \mid y)$}$$
+
+--
+
+Similarly, 
+
+$$p_{Y \mid X}(y \mid x)=\frac{p_{X, Y}(x, y)}{p_X(x)}$$
+
+$$\require{color}\colorbox{yellow}{$p_{X, Y}(x, y) = p_X(x) \cdot p_{Y \mid X}(y \mid x)$}$$
+
+--
+
+We can use this formula to calculate the joint PMF.
+
+---
+
+<br>
+
+$$
+\begin{aligned}
+p_{X, Y}(x, y) &= p_X(x) \cdot p_{Y \mid X}(y \mid x) \\\
+\\\
+&= p_Y(y) \cdot p_{X \mid Y}(x \mid y) \\\
+\end{aligned}
+$$
+
+Does this look like something we have learned before?
+
+--
+
+<br>
+
+This is the counterpart of the .green[multiplication rule].
+
+$$
+\begin{aligned}
+\text{P}(A \cap B) &= \text{P}(A) \cdot \text{P}(B \mid A) \\\
+\\\
+&= \text{P}(B) \cdot \text{P}(A \mid B) \\\
+\end{aligned}
+$$
+
+---
+
+# Exercise
+
+Consider the rolls of 4 dice 🎲🎲🎲🎲 
+
+- Let $X$ be the number of 1's obtained.
+- Let $Y$ be the number of 2's obtained.
+
+What is the joint PMF of $X$ and $Y$?
+
+---
+class: middle, center
+
+# Appendices
+
+---
+name: normalization_appendix
+# Appendix A ([Go back](#normalization))
+
+$$
+\begin{aligned}
+\\\
+\sum_x p_{X \mid Y}(x \mid y)&=\sum_x \frac{p_{X,Y}(x,y)}{p_Y(y)} \\\
+\\\
+&=\frac{1}{p_Y(y)}  \sum_x p_{X,Y}(x,y) \\\
+\\\
+&=\frac{1}{p_Y(y)} \; p_Y(y) \\\
+\\\
+&=1 \\\
+\end{aligned}
+$$
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

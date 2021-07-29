@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Measures of variability</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+
+
+class: middle, center
+
+.huge[Measures of variability]
+
+<br>
+
+![:scale 50%](../images/rug-cover.png)
+
+
+---
+# Measures of variability (or spread)
+
+<br>
+![:scale 100%](../images/variability.png)
+
+--
+
+- Reporting a measure of center gives only partial information about the data.
+- Different data may have similar measures of center yet differ from one another in other important ways. 
+
+---
+# Measures of variability (or spread)
+
+How about using the .red[range] to measure the variability?
+
+$$ \text{range} = \text{largest value} - \text{smallest value}$$
+
+<br>
+![:scale 100%](../images/variability.png)
+
+--
+
+<br>
+.center[Range is sensitive to outliers.] 
+
+---
+# Measures of variability (or spread)
+
+.center[![:scale 80%](../images/boxplot.png)]
+
+.center[[Interquartile range (IQR)](https://en.wikipedia.org/wiki/Interquartile_range)]
+
+$$ \text{IQR} = \text{Third quartile} - \text{First quartile}$$
+
+---
+# Measures of variability (or spread)
+
+How about using the .red[deviations from the mean]?
+
+![:scale 100%](../images/deviations.png)
+
+$$x_1-\bar{x}, \;x_2-\bar{x}, \;\cdots, \;x_n-\bar{x}$$
+
+--
+
+<br>
+How about we use the .green[average deviation] as a metric?
+
+$$\frac{1}{n}\big[(x_1-\bar{x}) + (x_2-\bar{x}) + \cdots + (x_n-\bar{x})\big]$$
+
+---
+Bad idea. 
+We can show that
+
+The sum of all deviations from the sample mean is always zero.
+
+$$(x_1-\bar{x}) + (x_2-\bar{x}) + \cdots + (x_n-\bar{x})=0$$
+
+---
+We cannot use the average deviation as a metric for variability. 
+
+What can we do then?
+
+--
+
+- One solution is to use the .red[absolute] deviations. 
+
+$$\frac{1}{n}\bigg[|x_1-\bar{x}| + |x_2-\bar{x}| + \cdots + |x_n-\bar{x}|\bigg]$$
+
+--
+
+- However, absolute values would lead to a number of mathematical difficulties later on.
+
+--
+
+- The .red[squared] deviations is the preferred approach.
+
+$$(x_1-\bar{x})^2, \;(x_2-\bar{x})^2, \;\cdots, \;(x_n-\bar{x})^2$$
+
+---
+# Sample variance $s^2$
+
+<br>
+
+$$\begin{aligned}
+s^2 &= \frac{(x_1-\bar{x})^2 + (x_2-\bar{x})^2 + \cdots + (x_n-\bar{x})^2}{n-1} \\\
+\\\
+&= \frac{\displaystyle\sum_{i=1}^{n}(x_i-\bar{x})^2}{n-1}  \;\;\color{gray}{\leftarrow\text{sigma notation}}
+\end{aligned}$$
+
+---
+# Why divided by $(n-1)$ instead of $n$?
+
+[Degree of freedom](https://en.wikipedia.org/wiki/Degrees_of_freedom_%28statistics%29)
+- The # of values in a calculation that are free to vary.
+
+<br>
+
+Pick .red[any three numbers] and calculate the mean.
+
+<br><br>
+
+Now we add a constraint: the #'s have to add up to 20.
+
+---
+
+$$s^2 = \frac{(x_1-\bar{x})^2 + (x_2-\bar{x})^2 + \cdots + (x_n-\bar{x})^2}{n-1}$$
+
+Are there any constraints when we calculate the sample variance?
+
+$$[9, 4, 5]$$
+
+
+|&nbsp;&nbsp;&nbsp;$i$&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;$x_i$&nbsp;&nbsp;|&nbsp;$x_i-\bar{x}$&nbsp;|&nbsp;$(x_i-\bar{x})^2$&nbsp;|
+|:-----:|:-----:|:-----:|:-----:|
+| $1$ | $9$ |  |  | 
+| $2$ | $4$ | |  | 
+| $3$ | $5$ | | &nbsp; | 
+
+
+---
+Heights (in ft) of 216 volcanoes:
+
+$$[19882, 19728, 19335, 19287, \cdots, 617, 555, 529, 242]$$
+
+--
+
+$$
+\begin{aligned}
+\text{Sample mean: }\;\bar{x}&=7047.6 \\\
+\\\
+\text{Sample variance: }\; s^2 &= \frac{\sum_{i=1}^{n}(x_i-\bar{x})^2}{n-1}=18,507,834 \text{ (ft}^2) \\\
+\end{aligned}
+$$
+
+--
+
+<br>
+
+The .green[sample standard deviation] $s$, is given by
+
+$$ s = \sqrt{s^2} = \sqrt{\frac{\sum_{i=1}^{n}(x_i-\bar{x})^2}{n-1}}=4302.1 \text{ (ft})$$
+
+---
+# Property I
+
+$ x_1, x_2, \cdots, x_n $ are sample data and $c$ is any constant.
+
+
+$$\text{If }\; y_1=x_1+c, \;y_2=x_2+c, \;\cdots, \;y_n=x_n+c$$
+
+$$\begin{aligned}
+\text{then }\; s_y^2&=s_x^2 \\\
+(\text{or }s_y&=s_x)
+\end{aligned}$$
+
+--
+
+<br>
+
+Intuition: Adding a constant to the data would shift the distribution right or left 
+without changing its shape (spread or variability).
+
+---
+# Property II
+
+$ x_1, x_2, \cdots, x_n $ are sample data and $c$ is any constant.
+
+$$\text{If }\; y_1=cx_1, \;y_2=cx_2, \;\cdots, \;y_n=cx_n$$
+
+$$\begin{aligned}
+\text{then } \; s_y^2&=c^2s_x^2 \\\
+(\text{or }s_y&=cs_x)
+\end{aligned}$$
+
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

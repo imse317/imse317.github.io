@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Hypotheses and test procedures</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+
+class: middle, center
+
+.huge[Hypothesis testing]
+
+<br>
+![:scale 70%](../images/hypothesis-cover.png)
+
+---
+# Definitions
+
+Hypothesis: a .red[statement] about a .red[population] parameter. 
+ 
+--
+
+- The mean height for an adult male is 5'9".
+
+--
+
+- The drug lowers patients' blood pressure. 
+
+--
+
+- Record the height from 20 people, the sample mean is 5'9". 
+--
+.gray[(Not a hypothesis)]
+
+--
+
+.green[Simple] hypothesis
+- The parameter takes a single value (e.g., $\mu=8$). 
+
+--
+
+.purple[Composite] hypothesis
+- The parameter takes more than one value ($\mu > 8$). 
+
+---
+# Null hypothesis $H_0$
+
+The statement that is initially assumed to be true.
+
+--
+
+- It is the .red[default] hypothesis (or favored or "protected" hypothesis) that we stick with unless evidences are strongly against it. 
+
+
+--
+
+It usually states that nothing "interesting" is happening.
+
+--
+
+- The drug has no effect on blood pressure. 
+
+--
+
+- The coin is fair.
+
+--
+
+A criminal trial analogy: "Innocent until proven guilty"
+- $H_0$: The defendant is innocent.
+
+
+---
+# Alternative hypothesis $H_a$
+
+It is the hypothesis that is contradictory to $H_0$.
+
+--
+
+It states something "interesting" is happening.
+
+--
+
+- The drug lowers patients' blood pressure. 
+
+--
+
+- The coin is biased. 
+
+--
+
+- The defendant is guilty.
+
+--
+
+The "burden of proof" is placed on the alternative hypothesis.
+
+---
+# Hypothesis testing
+
+Many scientific questions can be boiled down to a simple yes or no: 
+
+.red[Is something "interesting" happening, or not?]
+
+- Is the drug effective ($H_a$) or not ($H_0$)?
+
+--
+
+<br>
+
+Hypothesis testing
+
+A method for using sample data to decide whether the null hypothesis should be rejected or not. 
+
+---
+
+.center[The two types of errors in hypothesis testing]
+
+$H_0$: the person is not pregnant.
+
+| | &nbsp;&nbsp;Fail to reject $H_0$ &nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reject $H_0$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|:---:|:---:|:---:|
+|$H_0$ is true<br>.gray[(not pregnant)]|.green[Correct]|.red[Type I error <br> (false alarms)]|
+|&nbsp;&nbsp;&nbsp;&nbsp;$H_0$ is false&nbsp;&nbsp;&nbsp;&nbsp;<br>.gray[(pregnant)]|.red[Type II error <br> (misses)]|.green[Correct]|
+
+--
+
+.center[![:scale 80%](../images/error-types.png)]
+
+---
+
+$H_0$: the person is not pregnant.
+
+| | &nbsp;&nbsp;Fail to reject $H_0$ &nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reject $H_0$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|:---:|:---:|:---:|
+|$H_0$ is true<br>.gray[(not pregnant)]|.green[Correct]|.red[Type I error <br> (false alarms)]|
+|&nbsp;&nbsp;&nbsp;&nbsp;$H_0$ is false&nbsp;&nbsp;&nbsp;&nbsp;<br>.gray[(pregnant)]|.red[Type II error <br> (misses)]|.green[Correct]|
+
+$$
+\begin{aligned}
+\text{P}(\text{Type I error})&=\text{P}(\text{false alarm}) \\\
+&=\text{P}(\text{reject $H_0$ when it is true}) \\\
+&=\alpha \\\
+\\\
+\text{P}(\text{Type II error})&=\text{P}(\text{misses}) \\\
+&=\text{P}(\text{fail to reject $H_0$ when it is false}) \\\
+&=\beta \\\
+\end{aligned}
+$$
+
+---
+# Test procedure
+
+Test statistic
+- A function of the sample ($X_1, X_2, \cdots, X_n$) that we use to conduct our hypothesis test. For example,
+
+$$\small{\bar{X}=\frac{X_1+X_2+\cdots+X_n}{n}}$$
+
+--
+
+Rejection region
+- The set of all test statistic values for which $H_0$ will be rejected. For example,
+  - Reject $H_0$ if $\bar{X}>10$.
+  - Fail to reject $H_0$ if $\bar{X} \leq 10$.
+
+---
+
+$$X_i \stackrel{\text{i.i.d.}}{\sim} \text{N}(\mu, 36)$$
+
+--
+
+$$H_0: \mu=20; \;\;\;\; H_a: \mu=25$$
+
+--
+
+$$\text{sample size: $n=16$}$$
+
+--
+
+$$\small{\text{Decision rule: Reject $H_0$ if $\bar{X}>23$.}}$$
+
+--
+
+.center[![:scale 70%](../images/test-1.png)]
+
+--
+
+Find $\alpha$ and $\beta$.
+
+---
+
+$$\small{X_i \stackrel{\text{i.i.d.}}{\sim} \text{N}(\mu, 36), \;\;\;\; \text{sample size: } n=16, \;\;\;\;\bar{X} \sim \text{N}\big(\mu, \frac{36}{16}\big)}$$
+
+$$\small{\text{Decision rule: Reject $H_0$ if $\bar{X}>23$.}}$$
+
+.center[![:scale 50%](../images/test-1.png)]
+
+--
+
+$$
+\small{
+\begin{aligned}
+\alpha=\text{P}(\text{Type I error})&=\text{P}(\text{reject $H_0$ when it is true}) \\\
+&=\text{P}(\bar{X}>23 \text{ when $\mu=20$}) \\\
+&=\text{P}\bigg(\frac{\bar{X}-20}{6/4} > \frac{23-20}{6/4}\bigg) \\\
+&=\text{P}(Z \geq 2) \\\
+&= 1-\Phi(2) \\\
+&=0.0228 \\\
+\end{aligned}
+}
+$$
+
+---
+
+$$\small{X_i \stackrel{\text{i.i.d.}}{\sim} \text{N}(\mu, 36), \;\;\;\; \text{sample size: } n=16, \;\;\;\;\bar{X} \sim \text{N}\big(\mu, \frac{36}{16}\big)}$$
+
+.center[![:scale 50%](../images/test-1.png)]
+
+$$
+\small{
+\begin{aligned}
+\beta=\text{P}(\text{Type II error})&=\text{P}(\text{fail to reject $H_0$ when it is false}) \\\
+\\\
+&=\text{P}(\bar{X} \leq 23 \text{ when $\mu=25$}) \\\
+\\\
+&=\text{P}\bigg(\frac{\bar{X}-25}{6/4} \leq \frac{23-25}{6/4}\bigg) \\\
+\\\
+&=\text{P}(Z \leq -4/3) = 1-\Phi(4/3) =0.0913 \\\
+\end{aligned}
+}
+$$
+
+---
+# Type I vs. type II errors
+
+Suppose the experiment and sample size $n$ are fixed, and a test statistic is chosen, 
+.red[changing the rejection region to decrease one type of the error would result in increasing the other type of the error].
+
+Unfortunately, we cannot decrease both type I and II error at the same time. 
+
+A tradeoff has to be made. 
+
+
+---
+# Type I vs. type II errors
+
+A type I error is often more serious than a type II error in many domains. 
+
+--
+
+Criminal trial
+- Type I error: Innocent person wrongfully convicted.
+- Type II error: Guilty person going free.
+
+
+--
+
+Drug testing
+- Type I error: Approving a drug that has no effect.
+- Type II error: Not approving an effective drug.
+
+
+---
+# Significance level
+
+In practice, we often specify the largest value of $\alpha$ that can be tolerated.
+
+The resulting $\alpha$ is called the significance level. 
+
+Common significance levels $\alpha=0.05, 0.01, 0.001$.
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

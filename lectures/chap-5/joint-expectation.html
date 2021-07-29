@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Expected values</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+
+class: middle, center
+
+.huge[Joint expectation]
+
+<br>
+
+![:scale 65%](../images/joint-expectation-cover.png)
+
+<div style="margin-top: 0px;"><a class="sourcelink" href="https://unsplash.com/photos/e1u0YdAkh9k">Image source</a></div>
+
+---
+
+.center[[LOTUS (Law Of The Unconscious Statistician)](https://en.wikipedia.org/wiki/Law_of_the_unconscious_statistician)]
+
+1-D version
+
+$$
+\small{
+\begin{aligned}
+\text{E}\big[g(X)\big]=
+\begin{cases}
+    \displaystyle \sum_x g(x) \cdot p_X(x), & \text{if $X$ is discrete,} \\\
+    \\\
+     \int_{-\infty}^{+\infty} g(x) \cdot f_X(x) dx, & \text{if $X$ is continuous.} \\\
+\end{cases}
+\end{aligned}
+}
+$$
+
+--
+
+2-D version
+
+$$
+\small{
+\begin{aligned}
+\text{E}\big[g(X, Y)\big]=
+\begin{cases}
+    \displaystyle \sum_x \sum_y g(x, y) \cdot p_{X, Y}(x, y), & \text{if discrete,} \\\
+    \\\
+     \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} g(x, y) \cdot f_{X, Y}(x, y) dxdy, & \text{if continuous.} \\\
+\end{cases}
+\end{aligned}
+}
+$$
+
+---
+name: independence
+# Properties
+
+If $X$ and $Y$ are independent
+
+$$\text{E}[X \cdot Y]=\text{E}[X] \cdot \text{E}[Y]$$
+
+[Proof](#independence_appendix)
+
+???
+If two RVs are independent, the expected value of their product is the product of their own expected values. 
+
+---
+name: linearity
+# Linearity of expected values
+
+For any two RVs $X$ and $Y$, we have
+
+$$\text{E}[X+Y]=\text{E}[X]+\text{E}[Y]$$
+
+Note this property .red[does not] require their independence. 
+
+[Proof](#linearity_appendix)
+
+--
+
+<br>
+
+More generally, for any $n$ RVs $X_1, X_2, \cdots, X_n$, 
+
+$$\small{\text{E}[X_1+X_2+\cdots+X_n]=\text{E}[X_1]+\text{E}[X_2] + \cdots + \text{E}[X_n]}$$
+
+---
+name: variance
+# Properties
+
+If $X$ and $Y$ are independent, then
+
+$$\text{var}(X + Y)=\text{var}(X) + \text{var}(Y)$$
+
+[Proof](#variance_appendix)
+
+--
+
+$$\text{var}(X - Y)=?$$
+
+
+---
+
+$$
+\small{
+\text{var}(X + Y)=\text{var}(X) + \text{var}(Y),\;\; \text{if $X$ and $Y$ are independent.}
+}
+$$
+
+If $X$ and $Y$ are independent, so are $X$ and $-Y$.
+
+Now, let's replace $Y$ with $-Y$. 
+
+
+
+$$
+\begin{aligned}
+\text{var}\big(X + (-Y)\big)&=\text{var}(X) + \text{var}(-Y) \\\
+\\\
+\text{var}(X -Y)&=\text{var}(X) + (-1)^2\text{var}(Y) \\\
+\\\
+&=\text{var}(X) + \text{var}(Y) \\\
+\end{aligned}
+$$
+
+---
+
+if $X$ and $Y$ are independent
+
+$$
+\begin{aligned}
+\text{var}(X + Y)&=\text{var}(X) + \text{var}(Y) \\\
+\\\
+\text{var}(X - Y)&=\text{var}(X) + \text{var}(Y) \\\
+\end{aligned}
+$$
+
+Does this make sense?
+
+--
+
+Let $(X, Y)$ be the rolls from two 6-sided dice 🎲🎲
+
+What is the range of
+
+- $X$ (or $Y$)
+- $X+Y$
+- $X-Y$
+
+
+---
+# The Hat Problem 🎩🎩🎩🎩🎩
+
+At a party $n$ people checks in their hats at the entrance. 
+
+When they leave, the attendant randomly picks out a hat for each of them. 
+
+What is the expected # of people to get their own hat?
+
+---
+# Three discrete RVs
+
+Joint PMF
+$$p_{X, Y, Z}(x, y, z)=\text{P}(X=x, Y=y, Z=z)$$
+
+---
+# Three discrete RVs
+
+Marginal PMFs
+
+$$
+\small{
+\begin{aligned}
+p_{X, Y}(x, y)&=\sum_z p_{X, Y, Z}(x, y, z) \\\
+p_{X, Z}(x, z)&=\sum_y p_{X, Y, Z}(x, y, z) \\\
+p_{Y, Z}(y, z)&=\sum_x p_{X, Y, Z}(x, y, z) \\\
+\\\
+p_{X}(x)&=\sum_y \sum_z p_{X, Y, Z}(x, y, z) \\\
+p_{Y}(y)&=\sum_x \sum_z p_{X, Y, Z}(x, y, z) \\\
+p_{Z}(z)&=\sum_x \sum_y p_{X, Y, Z}(x, y, z) \\\
+\end{aligned}
+}
+$$
+
+---
+# Three discrete RVs
+
+3-D LOTUS
+
+$$\text{E}\big[g(X, Y, Z)\big]=\sum_x \sum_y \sum_z g(x, y, z) p_{X, Y, Z}(x, y, z)$$
+
+
+---
+class: middle, center
+
+# Appendices
+
+
+---
+name: independence_appendix
+# Appendix A ([Go back](#independence))
+
+$$
+\small{
+\begin{aligned}
+\\\
+\text{E}[XY] &= \sum_x \sum_y xy p_{X, Y}(x, y) \;\;\;\;\;\;\;\; \color{gray}{\leftarrow\text{by 2-D LOTUS}}\\\
+\\\
+&= \sum_x \sum_y xy p_{X}(x) p_{Y}(y) \;\;\;\;\;\; \color{gray}{\leftarrow\text{by independence}}\\\
+\\\
+&= \sum_x \big (xp_{X}(x) \sum_y y p_{Y}(y)\big) \;\; \color{gray}{\leftarrow\text{factor out $xp_{X}(x)$}} \\\
+\\\
+&= \sum_y y p_{Y}(y) \cdot \sum_x xp_{X}(x) \;\;\;\; \color{gray}{\leftarrow\text{factor out $\sum_y y p_{Y}(y)$}} \\\
+\\\
+&= \text{E}[X] \cdot \text{E}[Y] \;\;\;\;\;\;\;\; \color{gray}{\leftarrow\text{by definition of expected value}} \\\
+\end{aligned}
+}
+$$
+
+---
+name: linearity_appendix
+# Appendix B: Discrete case ([Go back](#linearity))
+
+$$
+\small{
+\begin{aligned}
+\text{E}[X+Y] &= \sum_x \sum_y (x+y) p_{X, Y}(x, y) \;\;\;\; \color{gray}{\leftarrow\text{by LOTUS}} \\\
+\\\
+&= \sum_x \sum_y \big (xp_{X, Y}(x, y)+yp_{X, Y}(x, y) \big) \\\
+\\\
+&= \sum_x \sum_y xp_{X, Y}(x, y)+ \sum_y \sum_x yp_{X, Y}(x, y) \\\
+\\\
+&= \sum_x x\sum_y p_{X, Y}(x, y)+ \sum_y y\sum_x p_{X, Y}(x, y) \\\
+\\\
+&= \sum_x xp_{X}(x)+ \sum_y yp_{Y}(y) \;\; \color{gray}{\leftarrow\text{by definition of marginal pmf}} \\\
+&=\text{E}[X] + \text{E}[Y] \hspace{5em} \color{gray}{\leftarrow\text{by definition of expected value}} \\\
+\end{aligned}
+}
+$$
+
+---
+name: variance_appendix
+# Appendix C ([Go back](#variance))
+
+$$
+\small{
+\begin{aligned}
+\text{var}(X + Y)&=\text{E}\big[(X+Y)^2\big]-\big(\text{E}[X+Y]\big)^2 \\\
+\\\
+\text{E}\big[(X+Y)^2\big]&=\text{E}[X^2+2XY+Y^2] \\\
+&=\text{E}[X^2]+2\text{E}[XY]+\text{E}[Y^2] \;\;\;\;\color{gray}{\leftarrow\text{by linearity}} \\\
+&=\text{E}[X^2]+2\text{E}[X]\text{E}[Y]+\text{E}[Y^2] \;\color{gray}{\leftarrow\text{by independence}} \\\
+\\\
+\big(\text{E}[X+Y]\big)^2&=\big(\text{E}[X]+\text{E}[Y]\big)^2 \;\;\;\;\color{gray}{\leftarrow\text{by linearity}} \\\
+&=\big(\text{E}[X]\big)^2+2\text{E}[X]\text{E}[Y]+\big(\text{E}[Y]\big)^2 \\\
+\\\
+\text{var}(X + Y)&=\text{E}[X^2]-\big(\text{E}[X]\big)^2 + \text{E}[Y^2] - \big(\text{E}[Y]\big)^2 \\\
+&=\text{var}(X) + \text{var}(Y) \\\
+\end{aligned}
+}
+$$
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

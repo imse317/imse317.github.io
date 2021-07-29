@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Test of proportions</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+
+class: middle, center
+
+.huge[Test of proportions]
+
+---
+# Tests concerning a population proportion
+
+It was claimed that 40% of human have type A blood. 
+
+--
+
+You suspect the proportion differs from 40%.
+
+--
+
+$$H_0: p=0.4; \;\;\;\; H_a: p \neq 0.4$$
+
+---
+
+Suppose $Y$ follows a binomial distribution with 
+- known parameter $n$ (number of trials)
+- unknown parameter $p$ (probability of a success)
+
+$$Y \sim \text{bin}(n, p)$$
+
+--
+
+We want to test $p$. 
+
+---
+
+$$\small{Y \sim \text{bin}(n, p), \;\;\;\;\text{E}[Y]=np, \;\;\;\;\text{var}(Y)=np(1-p)}$$
+
+--
+
+$$\small{\text{Sample proportion } \hat{P}=\frac{Y}{n} \text{ is an estimator for $p$}.}$$
+
+--
+
+$$\small{\text{E}\big[\hat{P}\big]=\text{E}\bigg[\frac{Y}{n}\bigg]}=\frac{1}{n}\text{E}[Y]=\frac{1}{n}np=p\;\;\;\;\color{gray}{\rightarrow \text{unbiased}}$$
+
+--
+
+$$\small{\text{var}\big(\hat{P}\big)=\text{var}\bigg(\frac{Y}{n}\bigg)}=\frac{1}{n^2}\text{var}(Y)=\frac{1}{n^2}np(1-p)=\frac{p(1-p)}{n}$$
+
+--
+
+$$\small{\text{When $n$ is large, }\hat{P} \text{ is approximately } \text{N}\bigg(p, \frac{p(1-p)}{n}\bigg)}$$
+
+--
+
+$$\small{\text{Standardization: }\;\;\frac{\hat{P}-p}{\sqrt{\frac{p(1-p)}{n}}} \text{ is approximately } \text{N}(0, 1)}$$
+
+
+---
+
+$$\small{z=\frac{\hat{p}-p}{\sqrt{\frac{p(1-p)}{n}}}} \text{ is our test statistic.}$$
+
+--
+
+- It was claimed 40% of human have type A blood. 
+
+- You suspect the proportion differs from 40%.
+
+$$\small{H_0: p=0.4; \;\;\;\; H_a: p \neq 0.4}$$
+
+--
+
+A random sample of 150 donations at a blood bank reveals that 73 were type A blood. 
+
+$$
+\small{
+\begin{aligned}
+\text{Sample proportion: }\hat{p}&=\frac{73}{150} \\\
+\text{Test statistic: }z&=\frac{\hat{p}-p}{\sqrt{\frac{p(1-p)}{n}}}=\frac{\frac{73}{150}-0.4}{\sqrt{\frac{0.4\times0.6}{150}}}=2.167 \\\
+\end{aligned}
+}
+$$
+
+---
+
+$$H_0: p=0.4; \;\;\;\; H_a: p \neq 0.4$$
+
+$$\text{Test statistic:}\;\;z=2.167$$
+
+.center[![:scale 40%](../images/pvalue-both-nolabel.png)]
+
+$$\text{$p$-value}=2\cdot\text{P}(Z>2.167) = 0.030 $$
+
+--
+
+Thus, at a significance level $\alpha=0.05$ we reject the $H_0$, 
+and conclude that the proportion of type A blood differs from 40%. 
+
+---
+
+Similarly, we can conduct a one-tailed test for different alternative hypothesis. 
+
+E.g., You suspect the proportion is higher than 40%.
+
+$$H_0: p=0.4; \;\;\;\; H_a: p > 0.4$$
+
+$$\text{Test statistic:}\;\;z=2.167$$
+
+.center[![:scale 40%](../images/pvalue-right-nolabel.png)]
+
+
+$$\text{$p$-value}=\text{P}(Z>2.167) = 0.015$$
+
+At a significance level $\alpha=0.05$ we reject the $H_0$
+
+
+
+
+
+
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

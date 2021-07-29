@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Joint PDF</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+class: split-40
+
+.column[
+<br><br><br><br><br>
+.huge[Joint PDF]
+]
+.column[
+<br><br><br>
+![:scale 60%](../images/joint-pdf-cover.png)
+]
+
+---
+# Probability density function (PDF)
+
+A RV $X$ is called continuous if there is a nonnegative function $f_X$, such that
+
+$$
+\begin{aligned}
+&\text{P}(X \in B)=\int_B f_X dx \\\
+\\\
+&\text{for every subset $B$ of the real line.} \\\
+\end{aligned}
+$$
+
+---
+Consider two continuous RVs $X$ and $Y$ associated with the same experiment. 
+
+The .red[joint PDF] is a nonnegative function that satisfies
+
+$$\text{P}\big((X, Y) \in A\big)=\iint\limits_{(x, y) \in A} f_{X, Y}(x, y) dxdy $$
+
+The integration is carried over $A$ on the 2-D plane. 
+
+.center[![:scale 30%](../images/joint-pdf.png)]
+
+---
+
+$$\text{P}\big((X, Y) \in A\big)=\iint\limits_{(x, y) \in A} f_{X, Y}(x, y) dxdy $$
+
+Let 
+$A=\{(x, y) \mid a \leq x \leq b, c \leq y \leq d\}$
+
+.center[![:scale 32%](../images/joint-pdf-rectangle.png)]
+
+$$\text{P}(a \leq x \leq b, \; c \leq y \leq d)=\int_c^d \int_a^b f_{X, Y}(x, y)dxdy$$
+
+---
+# Single continuous RV
+
+$$\text{P}(a \leq X \leq b)=\int_a^b f_X dx$$
+
+The probability is the .red[area under the density curve].
+
+.center[![:scale 90%](../images/pdf-def.png)]
+
+---
+# Two continuous RVs
+
+$$\text{P}(a \leq x \leq b, \; c \leq y \leq d)=\int_c^d \int_a^b f_{X, Y}(x, y)dxdy$$
+
+<br>
+
+.center[![:scale 80%](../images/joint-pdf-3d-1.png)]
+
+The probability is the .red[volume under the density surface]
+
+---
+
+.center[![:scale 60%](../images/joint-pdf-3d-2.png)]
+
+$$
+\begin{aligned}
+&\text{P}(a \leq x \leq a+\delta, c \leq y \leq c+\delta) \\\
+=\;&\int_c^{c+\delta} \int_a^{a+\delta} f_{X, Y}(x, y)dxdy \\\
+\approx \;& f_{X, Y}(a, c) \cdot \delta ^2 \\\
+\end{aligned}
+$$
+
+$f_{X, Y}(a, c)$ is the probability .red[per unit area] in the vicinity of $(a, c)$.
+
+---
+# Visualization of joint PDF
+
+<br>
+.center[![:scale 80%](../images/joint-pdf-normal.png)]
+
+---
+# The normalization property (1-D)
+
+For a single continuous RV, we have
+
+$$\int_{-\infty}^{+\infty} f_X dx=1$$
+
+.center[
+![:scale 45%](../images/pdf-normalization.png)
+]
+
+The total area under the density curve is 1.
+
+---
+# The normalization property (2-D)
+
+For two continuous RVs $X$ and $Y$, we have
+
+$$\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} f_{X, Y}(x, y) dxdy=1$$
+
+.center[
+![:scale 50%](../images/joint-pdf-normal.png)
+]
+
+The total volume under the density surface is 1.
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Independence</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+class: split-50
+
+.column[
+<br><br><br><br><br>
+<!-- &nbsp;&nbsp;&nbsp; -->
+.huge[Independence]
+]
+.column[
+&nbsp;
+![:scale 46%](../images/independence-cover.png)
+<br><br><br>
+<div class="source"><a class="sourcelink" href="https://unsplash.com/photos/UGi_Ng56FRI">Image source</a></div>
+]
+
+---
+
+.center[![:scale 100%](../images/independent-def-blank.png)]
+
+---
+
+.center[![:scale 100%](../images/independent-def.png)]
+
+---
+Event $A$ is independent of event $B$ if
+
+$$\text{P}(A|B)=\text{P}(A)$$
+
+--
+
+By the definition of conditional probability, 
+
+$$\text{P}(A|B) = \frac{\text{P}(A \cap B)}{\text{P}(B)}$$
+
+--
+
+From the two equation above, we have
+
+$$\text{P}(A) = \frac{\text{P}(A \cap B)}{\text{P}(B)} $$
+
+--
+
+$$\text{P}(A \cap B) = \text{P}(A) \cdot \text{P}(B)$$
+<!-- $$\require{color}\colorbox{yellow}{$\text{P}(A \cap B) = \text{P}(A) \cdot \text{P}(B)$}$$ -->
+
+---
+# Exercise
+
+Roll a die twice 🎲🎲
+
+$A_i$: the first roll lands on $i$. 
+
+$B_j$: the second roll lands on $j$.
+
+where $i, j=1, 2, \cdots, 6.$
+
+Are $A_i$ and $B_j$ independent?
+
+
+---
+# Properties of independence
+
+
+If $A$ and $B$ are independent, so are $A$ and $B^c$. 
+
+Intuitively, if the .red[occurrence] of $B$ does not provide any new info on how likely $A$ occurs, 
+
+$$\text{P}(A|B)=\text{P}(A)$$
+
+then the .red[non-occurrence] of $B$ should also provide no info on how likely $A$ occurs. 
+
+$$\text{P}(A|B^c)=\text{P}(A)$$
+
+???
+Proof:
+
+---
+# Are two disjoint events independent?
+
+<br>
+
+.center[![:scale 40%](../images/venn-A-disjoint-B.png)]
+
+---
+# Independence of three events
+
+We have three events $A$, $B$, and $C$. 
+
+- $A$ and $B$ are independent. 
+- $B$ and $C$ are independent.  
+
+Question: Are $A$ and $C$ independent?
+
+--
+
+No. Counterexample:
+
+Let $A$ and $B$ be two independent events, and $C = A^c$, 
+
+Then $B$ and $C$ (which is $A^c$) are independent. 
+
+However, $A$ and $C$ (which is $A^c$) are disjoint and thus not independent.
+
+
+---
+We say events $A$, $B$, and $C$ are .red[pairwise independent] if 
+
+- $A$ and $B$ are independent $$\text{P}(A \cap B)=\text{P}(A)\cdot\text{P}(B)$$
+- $B$ and $C$ are independent $$\text{P}(B \cap C)=\text{P}(B)\cdot\text{P}(C)$$
+- $C$ and $A$ are independent $$\text{P}(C \cap A)=\text{P}(C)\cdot\text{P}(A)$$
+
+--
+
+How about
+
+$$\text{P}(A \cap B \cap C) \stackrel{?}{=} \text{P}(A)\cdot\text{P}(B)\cdot\text{P}(C)$$
+<!-- $$\require{color}\colorbox{yellow}{$\text{P}(A \cap B \cap C) \stackrel{?}{=} \text{P}(A)\cdot\text{P}(B)\cdot\text{P}(C)$}$$ -->
+
+---
+# Example: Toss a coin twice
+
+$A$: first toss is a heads. 
+
+$B$: second toss is a heads. 
+
+$C$: different results for two tosses. 
+
+
+
+---
+class: middle, center
+
+# Pairwise independence does not imply (mutual) independence. 
+
+
+---
+# Independence of three events
+
+
+<br>
+Event $A$, $B$, and $C$ are (mutually) independent if
+
+$$
+\begin{aligned}
+\text{P}(A \cap B) &= \text{P}(A)\cdot\text{P}(B) \\\
+\\\
+\text{P}(B \cap C) &= \text{P}(B)\cdot\text{P}(C) \\\
+\\\
+\text{P}(C \cap A) &= \text{P}(C)\cdot\text{P}(A) \\\
+\\\
+\text{P}(A \cap B \cap C) &= \text{P}(A)\cdot\text{P}(B)\cdot\text{P}(C) \\\
+\end{aligned}
+$$
+
+---
+# Independence of four events
+
+$$
+\begin{aligned}
+\text{P}(A \cap B) &= \text{P}(A)\cdot\text{P}(B) \\\
+\text{P}(B \cap C) &= \text{P}(B)\cdot\text{P}(C) \\\
+\text{P}(C \cap D) &= \text{P}(C)\cdot\text{P}(D) \\\
+\text{P}(D \cap A) &= \text{P}(D)\cdot\text{P}(A) \\\
+\\\
+\text{P}(A \cap B \cap C) &= \text{P}(A)\cdot\text{P}(B)\cdot\text{P}(C) \\\
+\text{P}(A \cap B \cap D) &= \text{P}(A)\cdot\text{P}(B)\cdot\text{P}(D) \\\
+\text{P}(A \cap C \cap D) &= \text{P}(A)\cdot\text{P}(C)\cdot\text{P}(D) \\\
+\text{P}(B \cap C \cap D) &= \text{P}(B)\cdot\text{P}(C)\cdot\text{P}(D) \\\
+\\\
+\text{P}(A \cap B \cap C \cap D) &= \text{P}(A)\cdot\text{P}(B)\cdot\text{P}(C)\cdot\text{P}(D) \\\
+\end{aligned}
+$$
+
+
+---
+# Independence of $n$ events
+
+<br>
+Events $A_1, A_2, \cdots, A_n$ are (mutually) independent if
+
+$$\text{P}\bigg(\bigcap_{i \in S} A_i\bigg)=\prod_{i \in S} \text{P}(A_i)$$
+
+for every subset $S$ of $\{1, 2, \cdots, n\}$. 
+
+---
+# Independent trials
+
+An experiment that involves 
+
+a sequence of .red[independent] and .red[identical] stages
+
+--
+
+A sequence of 
+
+- rolling the same dice?
+
+--
+- tossing the same coin?
+
+--
+- tossing the same coin .green[on a bowl of honey without cleaning it]?
+
+--
+- drawing a card from a deck without replacement?
+
+--
+- drawing a card from a deck with replacement?
+
+
+---
+# Bernoulli trials
+
+A special case of independent trials where there are .red[only two possible results at each stage]. 
+
+- A sequence of coin tosses 
+
+  - either .green[heads] or .green[tails] at each stage
+
+- Product inspection
+  - either .green[pass] or .green[no-pass] for each sample
+
+
+---
+What is the probability to get 2 heads from 3 tosses?  
+
+$$\text{P}(\text{heads}) = p; \;\;\; \text{P}(\text{tails}) = 1-p$$
+
+--
+
+<br>
+![:scale 35%](../images/tree-bernoulli.png)
+
+
+---
+# Example – Network connectivity
+
+A computer network connects two nodes A and B through 3 components that are connected .red[in series]. 
+
+The component failures are independent of each other.
+
+$p_i$ is the probability that component $i$ is operational ($i=1, 2, 3$).
+
+What is the probability that the A-B connection is up?
+
+.center[![:scale 70%](../images/network-serial.png)]
+
+
+---
+# Example – Network connectivity
+
+Now, the two nodes A and B through 3 components are connected .red[in parallel]. 
+
+What is the probability that the A-B connection is up?
+
+![:scale 45%](../images/network-parallel.png)
+
+
+---
+# How about the following configuration?
+
+The component failures are independent of each other.
+
+$p_i$: probability that $i$ is operational ($i=1, 2, \cdots, 6$).
+
+<br>
+.center[![:scale 90%](../images/network-mixed.png)]
+
+---
+# A system with $n$ identical components
+
+Each component is up with probability $p$, independent of other components. 
+
+The system is up if at least $k$ out of the $n$ components are operational. 
+
+What is the probability that the system is up?
+
+---
+
+$A_i$: exact $i$ components are up. $(i=1, 2, \cdots, n)$
+
+$$
+\begin{aligned}
+&\text{P}(\text{at least $k$ components are up}) \\\
+\\\
+=\; &\text{P}(A_k \cup A_{k+1} \cup \cdots \cup A_n) \\\
+\\\
+=\;&\text{P}(A_k) + \text{P}(A_{k+1}) + \cdots + \text{P}(A_n) \\\
+\\\
+=\; &{n \choose k}p^k(1-p)^{n-k} + \cdots + {n \choose n}p^n(1-p)^{n-n} \\\
+\\\
+=\; &\sum_{i=k}^n {n \choose i}p^i(1-p)^{n-i} \\\
+\end{aligned}
+$$
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+class: split-60
+
+.column[
+<br><br><br><br>
+.huge[Sample space]
+
+.huge[Events]
+]
+.column[
+<br><br><br>
+![:scale 40%](../images/rolling-dice-cover.png)
+
+<br><br><br><br><br>
+<div class="source"><a class="sourcelink" href="https://unsplash.com/photos/m4sGYaHYN5o">Image source</a></div>
+]
+
+---
+# Sample space
+
+--
+
+Probability starts with a sample space, which is a set that describes .red[all possible outcomes in an experiment].
+
+It must be [collectively exhaustive](https://en.wikipedia.org/wiki/Collectively_exhaustive_events) 
+& [mutually exclusive](https://en.wikipedia.org/wiki/Mutual_exclusivity).
+
+--
+
+- Flip a coin once
+![:scale 3.8%](../images/coin_heads.png)
+&nbsp;
+
+--
+$$\Omega = \\{\text{heads, tails}\\}$$
+
+--
+
+- Flip a coin twice
+![:scale 3.8%](../images/coin_heads.png)
+![:scale 3.8%](../images/coin_tails.png)
+
+--
+
+$$
+\begin{align}
+\Omega = \\{&(\text{heads, heads}), (\text{tails, tails}), \\\
+&(\text{heads, tails}), \;\;(\text{tails, heads}) \\} \\\
+\end{align}
+$$
+
+---
+# Sample space
+
+- Roll a six-sided die once 🎲
+
+--
+
+$$\Omega = \\{ ⚀, ⚁, ⚂, ⚃, ⚄, ⚅ \\}$$
+
+--
+
+- Roll a six-sided die twice 🎲🎲
+
+--
+
+$$
+\begin{aligned}
+\Omega = \\{&⚀⚀, ⚀⚁, ⚀⚂, ⚀⚃, ⚀⚄, ⚀⚅, \\\
+            &⚁⚀, ⚁⚁, ⚁⚂, ⚁⚃, ⚁⚄, ⚁⚅, \\\
+            &⚂⚀, ⚂⚁, ⚂⚂, ⚂⚃, ⚂⚄, ⚂⚅, \\\
+            &⚃⚀, ⚃⚁, ⚃⚂, ⚃⚃, ⚃⚄, ⚃⚅, \\\
+            &⚄⚀, ⚄⚁, ⚄⚂, ⚄⚃, ⚄⚄, ⚄⚅, \\\
+            &⚄⚀, ⚄⚁, ⚄⚂, ⚄⚃, ⚄⚄, ⚄⚅ \\}
+\end{aligned}
+$$
+
+---
+# Exercise
+
+We bet on the total from a roll of two dice 🎲🎲
+
+What is the sample space?
+
+<br>
+
+![:scale 50%](../images/2dice.png)
+
+---
+# Event
+
+.red[A collection of outcomes in the sample space] 
+
+--
+
+Or simply, a .green[subset] of the sample space.
+
+--
+
+- Event $A$: Roll a die 🎲, it lands on an odd number. 
+
+--
+
+$$A = \\{ ⚀, ⚂, ⚄ \\}$$
+
+--
+
+- Event $B$: Roll two dice 🎲🎲, the total is under 7.
+
+--
+
+$$B = \\{ 2, 3, 4, 5, 6\\}$$
+
+--
+
+- Event $C$: Making at least one free throw out of two
+
+--
+
+$$C=\\{(\text{hit, hit}), (\text{hit, miss}), (\text{miss, hit})\\}$$
+
+
+---
+# .red[Simple] & .green[compound] event
+
+--
+
+A .red[simple] event consists of .red[a single outcome].
+
+--
+
+A .green[compound] event consists of .green[multiple outcomes].
+
+--
+
+- Roll a die 🎲, it lands on an odd number.
+
+--
+$$\\{ ⚀, ⚂, ⚄ \\}$$
+
+--
+
+- Roll two dice 🎲🎲 and get a double.
+
+--
+
+$$\\{(⚀,⚀), (⚁, ⚁), (⚂, ⚂), (⚃, ⚃), (⚄, ⚄), (⚅, ⚅) \\}$$
+
+--
+
+- Roll two dice 🎲🎲, the total is 12.
+
+--
+$$\\{ (⚅, ⚅) \\}$$
+
+---
+# .red[Simple] & .green[compound] event
+
+
+.center[![:scale 15%](../images/free-throw.png)]
+
+<!-- https://upload.wikimedia.org/wikipedia/commons/a/af/Franz_Wagner_Michigan.jpg -->
+
+- A basketball player makes .red[both] free throws
+
+--
+
+$$\\{(\text{hit, hit})\\}$$
+
+--
+
+- Making .red[at least one] free throw
+
+--
+
+$$\\{(\text{hit, hit}), (\text{hit, miss}), (\text{miss, hit})\\}$$
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

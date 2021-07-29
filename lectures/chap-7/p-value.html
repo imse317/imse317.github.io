@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - p-value</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+class: middle, center
+
+.huge[.huge[*p*-value]]
+
+---
+
+<br>
+
+# .left[In some sense the *p*-value offers a first defense line against being fooled by randomness, separating signal from noise.]
+
+.quote_author[Yoav Benjamini, 2016]
+
+<div style="margin-top: 0px; text-align: right;"><a class="sourcelink" href="https://www.r-statistics.com/2016/03/its-not-the-p-values-fault-reflections-on-the-recent-asa-statement/">Quote source</a></div>
+
+
+---
+
+# *p*-value
+
+Roughly speaking, *p*-values tell us how .red[surprising] the data is, assuming there is .red[no effect].
+
+--
+
+<br>
+
+Definition:
+
+The probability of getting a test statistic .red[as extreme or more extreme than] the one we observed from our data, 
+.red[assuming that the null hypothesis is true].
+
+---
+
+We suspect a coin is biased towards heads. 
+
+$$
+\small{
+\begin{aligned}
+&\text{$H_0$: the coin is fair ($p=0.5$).} \\\
+&\text{$H_a$: the coin is biased towards heads ($p>0.5$).} \\\
+\end{aligned}
+}
+$$
+
+--
+
+We tossed the coin 10 times and got .red[10] heads. 
+
+--
+
+$$
+\small{
+\begin{aligned}
+\text{$p$-value}&=\text{P}(\text{got 10 heads when $H_0$ is true}) \;\color{gray}{\leftarrow\text{as extreme}} \\\
+&={10 \choose 10}0.5^{10} \\\
+&\approx 0.001 \\\
+\end{aligned}
+}
+$$
+
+--
+
+If $H_0$ is true, it is unlikely to get 10 heads out of 10. 
+
+--
+
+Since we indeed got 10 heads, $H_0$ is likely not true. 
+
+Thus we reject it.
+
+---
+
+$$
+\small{
+\begin{aligned}
+&\text{$H_0$: the coin is fair ($p=0.5$).} \\\
+&\text{$H_a$: the coin is biased towards heads ($p>0.5$).} \\\
+\end{aligned}
+}
+$$
+
+--
+
+We tossed the coin 10 times and got .red[9] heads. 
+
+--
+
+$$
+\small{
+\begin{aligned}
+\text{$p$-value}=\;&\text{P}(\text{got 9 heads when $H_0$ is true})\;+ \;\color{gray}{\leftarrow\text{as extreme}} \\\
+&\text{P}(\text{got 10 heads when $H_0$ is true}) \;\;\;\color{gray}{\leftarrow\text{more extreme}} \\\
+\\\
+=\;&{10 \choose 9}0.5^{10}+{10 \choose 10}0.5^{10} \\\
+\\\
+\approx\;&0.011 \\\
+\end{aligned}
+}
+$$
+
+--
+
+If $H_0$ is true, it is unlikely to get 9 or more heads. 
+
+--
+
+Since we indeed got 9 heads, $H_0$ is likely not true. 
+
+Thus we reject it.
+
+---
+
+$$
+\small{
+\begin{aligned}
+&\text{$H_0$: the coin is fair ($p=0.5$).} \\\
+&\text{$H_a$: the coin is biased towards heads ($p>0.5$).} \\\
+\end{aligned}
+}
+$$
+
+We tossed the coin 10 times and got .red[8] heads. 
+--
+
+$$
+\small{
+\begin{aligned}
+p\text{-value}=\;&\text{P}(\text{got 8 heads when $H_0$ is true})\;+ \;\color{gray}{\leftarrow\text{as extreme}} \\\
+&\text{P}(\text{got 9 heads when $H_0$ is true})\;+ \;\color{gray}{\leftarrow\text{more extreme}} \\\
+&\text{P}(\text{got 10 heads when $H_0$ is true}) \;\;\;\color{gray}{\leftarrow\text{more extreme}} \\\
+=\;&{10 \choose 8}0.5^{10}+{10 \choose 9}0.5^{10}+{10 \choose 10}0.5^{10}\\\
+\approx\;&0.055 \\\
+\end{aligned}
+}
+$$
+
+--
+
+If $H_0$ is true, it is somewhat unlikely (?) to get 8+ heads. 
+
+---
+
+$$
+\small{
+\begin{aligned}
+&\text{$H_0$: the coin is fair ($p=0.5$).} \\\
+&\text{$H_a$: the coin is biased towards heads ($p>0.5$).} \\\
+\end{aligned}
+}
+$$
+
+We tossed the coin 10 times and got .red[7] heads. 
+
+--
+
+$$
+\small{
+\begin{aligned}
+p\text{-value}=\;&\text{P}(\text{got 7 heads when $H_0$ is true})\;+ \;\color{gray}{\leftarrow\text{as extreme}} \\\
+&\text{P}(\text{got 8 heads when $H_0$ is true})\;+ \;\color{gray}{\leftarrow\text{more extreme}} \\\
+&\text{P}(\text{got 9 heads when $H_0$ is true})\;+ \;\color{gray}{\leftarrow\text{more extreme}} \\\
+&\text{P}(\text{got 10 heads when $H_0$ is true}) \;\;\;\color{gray}{\leftarrow\text{more extreme}} \\\
+=\;&{10 \choose 7}0.5^{10}+{10 \choose 8}0.5^{10}+{10 \choose 9}0.5^{10}+{10 \choose 10}0.5^{10} \\\
+\approx\;&0.172 \\\
+\end{aligned}
+}
+$$
+
+--
+
+If $H_0$ is true, it is quite possible to get 7+ heads. 
+
+--
+
+Getting 7 heads is not enough evidence against $H_0$. 
+
+We fail to reject it.
+
+---
+
+$$
+\small{
+\begin{aligned}
+&\text{$H_0$: the coin is fair ($p=0.5$).} \\\
+&\text{$H_a$: the coin is biased towards heads ($p>0.5$).} \\\
+\end{aligned}
+}
+$$
+
+We tossed the coin 10 times and got .red[6] heads. 
+--
+
+$$
+\small{
+\begin{aligned}
+p\text{-value}=\;&\text{P}(\text{got 6 heads when $H_0$ is true})\;+ \;\color{gray}{\leftarrow\text{as extreme}} \\\
+&\text{P}(\text{got 7 heads when $H_0$ is true})\;+ \;\color{gray}{\leftarrow\text{more extreme}} \\\
+&\text{P}(\text{got 8 heads when $H_0$ is true})\;+ \;\color{gray}{\leftarrow\text{more extreme}} \\\
+&\text{P}(\text{got 9 heads when $H_0$ is true})\;+ \;\color{gray}{\leftarrow\text{more extreme}} \\\
+&\text{P}(\text{got 10 heads when $H_0$ is true}) \;\;\;\color{gray}{\leftarrow\text{more extreme}} \\\
+=\;&{10 \choose 6}0.5^{10}+{10 \choose 7}0.5^{10}+{10 \choose 8}0.5^{10}+ {10 \choose 9}0.5^{10}+{10 \choose 10}0.5^{10} \\\
+\approx\;&0.377 \\\
+\end{aligned}
+}
+$$
+
+--
+If $H_0$ is true, it is quite possible to get 6+ heads. 
+
+--
+
+Getting 6 heads is not enough evidence against $H_0$. 
+
+
+---
+# Decision rule based on *p*-value
+
+Select a significance level $\alpha$ (the desired tolerance for type I error probability)
+
+Then, 
+
+$$
+\small{
+\begin{aligned}
+&\text{Reject $H_0$ if $p\text{-value} < \alpha$}, \\\
+\\\
+&\text{Fail to reject $H_0$ if $p\text{-value} \geq \alpha$}. \\\
+\end{aligned}
+}
+$$
+
+---
+
+We suspect a coin is biased (towards heads or tails).
+
+$$
+\small{
+\begin{aligned}
+&\text{$H_0$: the coin is fair ($p=0.5$).} \\\
+&\text{$H_a$: the coin is biased ($p \neq 0.5$).} \\\
+\end{aligned}
+}
+$$
+
+--
+
+We tossed the coin 10 times and got .red[9] heads. 
+
+--
+
+$$
+\small{
+\begin{aligned}
+&\text{$p$-value} \\\
+=\;&\text{P}(\text{got 9 heads when $H_0$ is true})+ \;\color{gray}{\leftarrow\text{as extreme}} \\\
+&\text{P}(\text{got 9}\color{red}{\text{ tails }} \text{when $H_0$ is true})+ \;\color{gray}{\leftarrow\text{as extreme}} \\\
+&\text{P}(\text{got 10 heads when $H_0$ is true})+ \;\color{gray}{\leftarrow\text{more extreme}} \\\
+&\text{P}(\text{got 10}\color{red}{\text{ tails }} \text{when $H_0$ is true}) \;\color{gray}{\leftarrow\text{more extreme}} \\\
+\approx\;&0.022 \\\
+\end{aligned}
+}
+$$
+
+--
+If $H_0$ is true, it is unlikely to get 9+ heads or 9+ tails. 
+
+--
+
+Since we indeed got 9 heads, $H_0$ is likely not true. 
+
+Thus we reject it.
+
+---
+
+A p-value is the probability of obtaining the data, assuming the null hypothesis is true. 
+
+It is .red[NOT] the probability the null hypothesis is true. 
+
+
+$$\text{P}(\text{data} \mid \text{$H_0$ is true}) \neq \text{P}(\text{$H_0$ is true} \mid \text{data})$$
+
+---
+
+# What does it mean if p-value > 0.05?
+
+p-value > 0.05 does not mean there is no true effect, or the null hypothesis is true.  
+
+It simply means that we do not have enough information to answer this question. 
+
+There might be small effects that would reveal with more data.
+
+Do aliens exist? 👽
+
+---
+
+class: center, middle
+
+.huge[Absence of evidence is not evidence of absence.]
+
+---
+
+class: center, middle
+
+![:scale 100%](../images/fail-to-reject.png)
+
+---
+
+class: center, middle
+
+![:scale 50%](../images/pvalues-xkcd.png)
+
+<div style="margin-top: 0px; text-align: center;"><a class="sourcelink" href="https://xkcd.com/1478/">@xkcd</a></div>
+
+---
+
+# Further reading
+
+<iframe width="750" height="422" src="https://www.youtube.com/embed/RVxHlsIw_Do" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

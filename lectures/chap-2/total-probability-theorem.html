@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Total probability theorem</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+class: middle, center
+
+.huge[Total probability theorem]
+
+<br>
+![:scale 60%](../images/total-prob-cover.png)
+
+
+---
+# Partition of a sample space $\Omega$
+
+.center[![:scale 36%](../images/partition.png)]
+
+
+If a collection of events are 
+
+- disjoint (i.e., [mutually exclusive](https://en.wikipedia.org/wiki/Mutual_exclusivity)) 
+- their union is $\Omega$ (i.e., [collectively exhaustive](https://en.wikipedia.org/wiki/Collectively_exhaustive_events)) 
+
+then this collection of events is called a .red[partition] of $\Omega$. 
+
+--
+
+This means any outcome in an experiment is included in .green[one and exactly one] of the partitioning events.
+
+
+---
+# Partition of sample space $\Omega$
+
+<br>
+
+.center[![:scale 30%](../images/venn-compliment.png)]
+
+
+$A$ and $A^c$ always form a partition of sample space $\Omega$.
+
+---
+# Total probability theorem
+
+Let $A_1, A_2, \cdots, A_n$ form a partition of sample space $\Omega$.
+
+.center[![:scale 33%](../images/partition-4.png)]
+
+Then, for any event $B$, we have
+
+$$B = (A_1 \cap B) \cup (A_2 \cap B) \cup \cdots \cup (A_n \cap B)$$
+
+--
+
+.center[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![:scale 40%](../images/partition-total-prob.png)]
+
+---
+<!-- # Total probability theorem -->
+
+.center[![:scale 40%](../images/partition-total-prob.png)]
+
+--
+
+$$
+\small{
+\begin{aligned}
+B =\;& (A_1 \cap B) \cup (A_2 \cap B) \cup \cdots \cup (A_n \cap B) \\\
+\\\
+\text{P}(B) =\;& \text{P}\big((A_1 \cap B) \cup (A_2 \cap B) \cup \cdots \cup (A_n \cap B)\big)\\\
+\\\
+=\;& \text{P}(A_1 \cap B) + \text{P}(A_2 \cap B) + \cdots + \text{P}(A_n \cap B)\\\
+\\\
+=\;& \text{P}(A_1)\text{P}(B \mid A_1) + \text{P}(A_2)\text{P}(B \mid A_2) + \cdots + \text{P}(A_n)\text{P}(B \mid A_n) \\\
+\end{aligned}
+}
+$$
+
+--
+
+.center[.large[.red[Divide and conquer]]]
+
+---
+
+![:scale 46%](../images/tree-total-prob.png)
+.right[![:scale 30%](../images/partition-total-prob.png)]
+
+
+---
+# Exercise
+
+You enter a tennis tournament. 
+
+Your probability of winning a game is 
+
+- 0.3 against .green[half of] the (stronger) players
+- 0.5 against .green[a quarter of] the (similar-level) players
+- 0.6 against .green[a quarter of] the (weaker) players
+
+You play a game against a randomly chosen opponent. 
+
+What is the probability of you winning the game?
+
+---
+# The Monty Hall problem
+
+<iframe width="750" height="500" src="https://www.youtube.com/embed/cXqDIFUB7YU" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+# The Monty Hall problem
+
+.center[![:scale 100%](../images/montyhall.png)]
+
+---
+
+# Assumptions
+
+- Monty knows which room has the car.
+
+--
+
+- He always opens one of the two unchosen doors .red[that does not have the car].
+
+--
+
+- If both unchosen doors do not have the car (i.e., your first choice is correct), Monty opens one of the two doors at random. 
+
+--
+
+- You want the car, not 🐐. 
+
+
+---
+.left[![:scale 50%](../images/montyhall.png)]
+
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

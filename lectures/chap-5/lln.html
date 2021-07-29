@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Weak Law of Large Numbers</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+class: middle, center
+
+.huge[Law of Large Numbers]
+
+<br>
+
+![:scale 80%](../images/lln-cover.png)
+
+---
+# [Weak Law of Large Numbers](https://en.wikipedia.org/wiki/Law_of_large_numbers)
+
+Let $X_1, X_2, \cdots, X_n$ be i.i.d. random variables.
+
+They all have mean $\mu$ and variance $\sigma^2$.
+
+The .red[sample mean] is defined by
+
+$$\bar{X}_n=\frac{X_1+X_2+\cdots+X_n}{n}=\frac{1}{n}\sum_{i=1}^n X_i$$
+
+--
+
+Loosely speaking, the Weak Law of Large Numbers states that:
+
+.red[with high probability, the sample mean of many i.i.d. random variables is very close to the true mean.] 
+
+???
+Note $\bar{X}$ is not a number, but a random variable. 
+
+---
+
+$$
+\small{
+\begin{aligned}
+\bar{X}_n&=\frac{X_1+X_2+\cdots+X_n}{n} \\\
+\\\
+\text{E}[\bar{X}_n]&=\frac{\text{E}[X_1]+\text{E}[X_2]+\cdots+\text{E}[X_n]}{n}=\frac{n\mu}{n}=\mu \\\
+\\\
+\text{var}(\bar{X}_n)&=\frac{\text{var}(X_1)+\text{var}(X_2)+\cdots+\text{var}(X_n)}{n^2}=\frac{n\sigma^2}{n^2}=\frac{\sigma^2}{n} \\\
+\end{aligned}
+}
+$$
+
+--
+
+We apply the Chebyshev inequality and obtain
+
+$$\text{P}\big(|\bar{X}_n - \mu| \geq \epsilon \big) \leq \frac{\sigma^2}{n\epsilon^2}, \;\;\;\;\;\; \text{for all $\epsilon > 0$.}$$
+
+For any fixed $\epsilon$, the right-hand side of the inequality approaches to zero as $n$ increases.  
+
+---
+# The Weak Law of Large Numbers
+
+Let $X_1, X_2, \cdots, X_n$ be i.i.d. RVs with mean $\mu$.
+
+$$\require{color}\colorbox{yellow}{$\lim_{n\rightarrow +\infty}\text{P}(|\bar{X}_n - \mu| < \epsilon)=1, \;\;\;\; \text{for every $\epsilon >0$}.$}$$
+
+--
+
+We say the sequence $\bar{X}_n$ converges to $\mu$ in probability. 
+
+--
+
+Keep flipping a coin for many times (simulation data)
+.center[![:scale 100%](../images/lln-coin.png)]
+
+
+---
+# Records from 8 sequences 
+.center[![:scale 100%](../images/lln-coin-8runs.png)]
+
+---
+# Overlay of 10 sequences 
+
+.center[![:scale 100%](../images/lln-coin-overlay.png)]
+
+--
+
+.center[![:scale 100%](../images/lln-coin-overlay-1m.png)]
+
+---
+Keep tossing a six-sided die.
+
+<br>
+
+.center[![:scale 100%](../images/lln-die.png)]
+
+---
+# Records from 8 sequences 
+.center[![:scale 100%](../images/lln-die-8runs.png)]
+
+---
+# Overlay of 10 sequences 
+
+.center[![:scale 90%](../images/lln-die-overlay.png)]
+
+--
+
+.center[![:scale 90%](../images/lln-die-overlay-1m.png)]
+
+---
+# Exercise - Desperation
+
+You have $100. You need 1,000 dollars by tomorrow.
+
+Your only way to get it is to gamble.
+
+If you bet k dollars, you will
+- either win k dollars (i.e., 1:1 payout) w/ probability $p$
+- or lose what you bet w/ probability $1-p$
+
+--
+
+.red[Maximal strategy]: Bet as much as you can, up to what you need, each time.
+
+--
+
+.green[Minimal str.]: Bet as little as allowed, say $1, each time.
+
+--
+
+If $p=0.6$, which is the better strategy? 
+--
+What if $p=0.4$?
+
+
+---
+# Roulette
+
+37 numbers including 18 .red[reds], 18 blacks, and 1 .green[green].
+
+.center[![:scale 55%](../images/roulette.png)]
+
+Guessing .red[red] or black correctly: a 1:1 payout
+
+If wheel lands on .green[green], both .red[red] and black lose. 
+
+What is a player's expected net gain for betting $1?
+
+---
+# Why casinos don't lose money
+
+.center[![:scale 55%](../images/roulette.png)]
+
+What are the expected gain for betting other things?
+- Odd (1, 3,..., 35) or even (2, 4,..., 36) with 1:1 payout
+- Small (1-18) or large(19-36) with 1:1 payout
+- .green[Green] (0) with 36:1 payout
+
+---
+class: middle, center
+# Who is the best 3 point shooter in NBA?
+
+---
+
+.center[![:scale 78%](../images/nba-all.png)]
+
+---
+
+.center[![:scale 80%](../images/nba-qualified.png)]
+
+---
+
+# [Gambler's fallacy](https://en.wikipedia.org/wiki/Gambler%27s_fallacy)
+
+.center[![:scale 80%](../images/gambler.png)]
+
+Does the Weak Law of Large Numbers contradict with the gambler's fallacy?
+
+<div style="margin-top: 100px; text-align: left;"><a class="sourcelink" href="https://psychologenie.com/gamblers-fallacy-definition-examples">Image Source</a></div>
+
+---
+
+# Does the Weak Law of Large Numbers contradict with the gambler's fallacy?
+
+.center[.large[.red[No]]]
+
+The law works not by balancing out what has already happened, 
+but by .red[diluting what has happened with new data], so that the past is less and less important. 
+
+---
+# [Wisdom of the Crowd](https://en.wikipedia.org/wiki/Wisdom_of_the_crowd)
+
+<iframe width="750" height="500" src="https://www.youtube.com/embed/iOucwX7Z1HU?start=62" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

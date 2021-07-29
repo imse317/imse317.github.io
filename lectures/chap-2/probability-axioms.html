@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Probability axioms</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+
+class: split-50
+
+.column[
+<br><br><br><br>
+.huge[Probability axioms]
+]
+.column[
+<br><br><br>
+![:scale 50%](../images/sheep-cover.png)
+<br><br><br><br><br><br>
+<div class="source"><a class="sourcelink" href="https://unsplash.com/photos/4ApmfdVo32Q">Image source</a></div>
+]
+
+---
+# Probability
+
+A number that encodes our knowledge or belief about the collective "likelihood" of the elements of $A$.
+
+$\text{P}(A)$: the probability of event $A$. 
+
+--
+
+Roll a fair die. Which of the two would you bet on?
+- It's an even number
+- It's an odd number
+
+--
+
+Roll two dice. Which of the two would you bet on?
+
+- Total of 7
+- Total of 12 
+
+
+---
+# Probability [axioms](https://en.wikipedia.org/wiki/Axiom)
+
+I. Non-negativity
+
+$$\text{P}(A)\geq0,\; \text{for any event $A$}$$
+
+--
+
+II. Normalization
+
+$$ \text{P}(\Omega)=1$$
+
+
+--
+
+III. Additivity
+
+$$ \text{If } A \cap B = \Phi, \text{ then}$$
+
+$$ \text{P}(A \cup B) = \text{P}(A) + \text{P}(B) $$
+
+---
+# A more general form of the additivity
+
+If $ A_1, A_2, A_3, \cdots $ is an infinite collection of disjoint events, then
+
+$$ \text{P}(A_1 \cup A_2 \cup A_3 \cup \cdots) = \text{P}(A_1) + \text{P}(A_2) + \text{P}(A_3) + \cdots$$
+
+---
+# Discussion
+
+Recall the non-negativity axiom:
+
+$$\text{P}(A)\geq0,\; \text{for any event $A$}$$
+
+<br>
+
+Do we need to also add the following as an axiom?
+
+$$\text{P}(A) \leq 1, \;\text{for any event } A$$
+
+???
+No, as it is already implied by the existing axioms. 
+
+
+---
+class: center
+# Propositions
+
+$$\text{P}(A) + \text{P}(A^c) = 1, \;\text{for any event } A$$
+
+--
+
+<br>
+
+$$ \text{P}(\Phi) = 0 $$
+
+---
+# Propositions
+
+<!-- For any two events $A$ and $B$ -->
+
+$$ \text{P}(A \cup B) = \text{P}(A) + \text{P}(B) - \text{P}(A \cap B), $$
+
+$$\text{for any events $A$ and $B$}$$
+
+--
+
+.center[
+<!-- Venn: A OR B -->
+<svg width="200" height="200" viewBox="-10 -10 280 280">
+  <defs>
+    <circle id="circle_a" cx="90" cy="90" r="70"></circle>
+    <circle id="circle_b" cx="170" cy="90" r="70"></circle>
+    <rect id="sample-space" x="0" y="0" width="260" height="180" stroke="black", stroke-width="3"></rect>
+  </defs>
+
+  <use xlink:href="#sample-space" fill="none"/>
+  <use xlink:href="#circle_a" fill="red"/>
+  <use xlink:href="#circle_b" fill="red"/>
+
+  <g fill="none" stroke="black" stroke-width="3">
+    <use xlink:href="#circle_a"/>
+    <use xlink:href="#circle_b"/>
+  </g>
+
+  <foreignObject x="45" y="70" width="40" height="40"><span style="font-size:20pt">\(A\)</span></foreignObject>
+  <foreignObject x="175" y="70" width="40" height="40"><span style="font-size:20pt">\(B\)</span></foreignObject>
+  <foreignObject x="0" y="0" width="40" height="40"><span style="font-size:20pt">\(\Omega\)</span></foreignObject>
+</svg>
+
+<!-- Venn: A -->
+<svg width="200" height="200" viewBox="-10 -10 280 280">
+
+  <use xlink:href="#sample-space" fill="none"/>
+  <use xlink:href="#circle_a" fill="red"/>
+
+  <g fill="none" stroke="black" stroke-width="3">
+    <use xlink:href="#circle_a"/>
+    <use xlink:href="#circle_b"/>
+  </g>
+
+  <foreignObject x="45" y="70" width="40" height="40"><span style="font-size:20pt">\(A\)</span></foreignObject>
+  <foreignObject x="175" y="70" width="40" height="40"><span style="font-size:20pt">\(B\)</span></foreignObject>
+  <foreignObject x="0" y="0" width="40" height="40"><span style="font-size:20pt">\(\Omega\)</span></foreignObject>
+</svg>
+
+<!-- Venn: A^c AND B -->
+<svg width="200" height="200" viewBox="-10 -10 280 280">
+
+  <use xlink:href="#sample-space" fill="none"/>
+  <use xlink:href="#circle_b" fill="red"/>
+  <use xlink:href="#circle_a" fill="white"/>
+
+  <g fill="none" stroke="black" stroke-width="3">
+    <use xlink:href="#circle_b"/>
+    <use xlink:href="#circle_a"/>
+  </g>
+
+  <foreignObject x="45" y="70" width="40" height="40"><span style="font-size:20pt">\(A\)</span></foreignObject>
+  <foreignObject x="175" y="70" width="40" height="40"><span style="font-size:20pt">\(B\)</span></foreignObject>
+  <foreignObject x="0" y="0" width="40" height="40"><span style="font-size:20pt">\(\Omega\)</span></foreignObject>
+</svg>
+
+]
+
+---
+# Exercise
+
+Assume we know the following
+
+- 75% of the students use Facebook
+- 35% use Twitter
+- 25% use both
+
+We randomly select a student. 
+
+What is the probability that 
+
+- they use neither? 
+
+--
+
+- they use one but not the other? 
+--
+[Exclusive or (XOR)](https://en.wikipedia.org/wiki/Exclusive_or)
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Poisson</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+class: split-50
+
+.column[
+<br><br><br><br>
+.huge[Poisson distribution]
+]
+.column[
+<br>
+![:scale 50%](../images/poisson-cover.png)
+]
+
+---
+# [Poisson distribution](https://en.wikipedia.org/wiki/Poisson_distribution)
+
+An intersection has a constant rate of $\lambda$ cyclists passing through (independently) per minute.
+
+$X$: the # of cyclists passing through during any minute
+
+--
+
+We refer to $X$ as a Poisson RV w/ the rate parameter $\lambda$.
+
+$$X \sim \text{Poisson}(\lambda)$$
+
+--
+
+Assumptions
+
+- The events occur at a .red[constant rate] ($\lambda$)
+- The events are independent of each other
+
+---
+# Usages
+
+Poisson distributions are commonly used to model .red[the number of events in a fixed interval of time or space]. 
+
+- \# of calls received during any hour at a call center
+
+- \# of vehicle crashes during any day in a city
+
+- \# of component failures during any month in a system (reliability analysis)
+
+- \# of typos on any page of a book
+
+
+---
+name: proof
+# PMF
+
+$$p_X(k)=\text{P}(X=k)=\frac{\lambda^k e^{-\lambda}}{k!}, \;\;\;\;\;\;\text{for } k=0, 1, \cdots$$
+
+.center[[Proof](#proof_appendix)]
+
+---
+# PMF
+
+$$
+\begin{aligned}
+p_X(k)=\text{P}(X=k)&=\frac{\lambda^k e^{-\lambda}}{k!}, \;\;\;\;\;\;\text{for } k=0, 1, \cdots \\\
+\\\
+\text{P}(X=0) &= \frac{\lambda^0 e^{-\lambda}}{0!}=e^{-\lambda} \\\
+\\\
+\text{P}(X=1) &= \frac{\lambda^1 e^{-\lambda}}{1!}=\lambda e^{-\lambda} \\\
+\\\
+\text{P}(X=2) &= \frac{\lambda^2 e^{-\lambda}}{2!}=\frac{1}{2}\lambda^2 e^{-\lambda} \\\
+\\\
+\cdots
+\end{aligned}
+$$
+
+---
+class: center, middle
+
+.huge[[Interactive visualization](https://probstats.org/poisson.html)]
+
+---
+# Exercise
+
+
+
+---
+# Expectation & variance
+
+<br>
+
+$$p_X(k)=\text{P}(X=k)=\frac{\lambda^k e^{-\lambda}}{k!}, \;\;\;\;\;\;\text{for } k=0, 1, \cdots$$
+
+<br>
+$$
+\begin{aligned}
+\text{E}[X]&=\sum_{k=0}^{\infty} k \frac{\lambda^k e^{-\lambda}}{k!} = \lambda \\\
+\\\
+\text{var}(X)&=\text{E}[X^2]-\big(\text{E}[X]\big)^2=\lambda \\\
+\end{aligned}
+$$
+
+
+
+---
+class: center, middle
+
+[Other discrete distributions](https://probstats.org/) 
+
+that we will not cover in this class
+
+---
+name: proof_appendix
+Appendix A ([Go back](#proof))
+
+The Poisson distribution is the limiting form of the binomial distribution when 
+$n\rightarrow \infty$ and $p = \lambda / n$
+
+$$
+\small{
+\begin{aligned}
+\text{P}(X=k)&={n \choose k}\cdot \big(\frac{\lambda}{n}\big)^k \cdot \big(1-\frac{\lambda}{n}\big)^{n-k} \\\
+\\\
+&= \frac{n!}{k!(n-k)!} \cdot \frac{\lambda^k}{n^k} \cdot \big(1-\frac{\lambda}{n}\big)^n \cdot \big(1-\frac{\lambda}{n}\big)^{-k} \\\
+\\\
+&= \frac{\lambda^k}{k!} \cdot \frac{n \cdot (n-1) \cdots (n-k+1)}{n \cdot n \cdots n} \cdot \big(1-\frac{\lambda}{n}\big)^n \cdot \big(1-\frac{\lambda}{n}\big)^{-k} \\\
+\\\
+&= \frac{\lambda^k}{k!} \cdot 1 \cdot \big(1-\frac{1}{n}\big) \cdots \big(1-\frac{k-1}{n}\big) \cdot \big(1-\frac{\lambda}{n}\big)^n \cdot \big(1-\frac{\lambda}{n}\big)^{-k} \\\
+\end{aligned}
+}
+$$
+
+---
+
+$$
+\small{
+\begin{aligned}
+\text{P}(X=k)&= \frac{\lambda^k}{k!} \cdot 1 \cdot \big(1-\frac{1}{n}\big) \cdots \big(1-\frac{k-1}{n}\big) \cdot \big(1-\frac{\lambda}{n}\big)^n \cdot \big(1-\frac{\lambda}{n}\big)^{-k} \\\
+\end{aligned}
+}
+$$
+
+$$
+\small{
+\lim_{n\rightarrow \infty} \text{P}(X=k) = \frac{\lambda^k}{k!} \cdot \big(1-\frac{\lambda}{n}\big)^n
+}
+$$
+
+$$\small{\text{Let $-\frac{\lambda}{n}=\frac{1}{n'}$, that is, $n=-\lambda n'$}}$$
+
+$$
+\small{
+\begin{aligned}
+\lim_{n' \rightarrow \infty} \text{P}(X=k) &= \frac{\lambda^k}{k!} \cdot \big(1+\frac{1}{n'}\big)^{-\lambda n'} \\\
+\\\
+&= \frac{\lambda^k}{k!} \cdot \bigg[\big(1+\frac{1}{n'}\big)^{n'}\bigg]^{-\lambda} \\\
+\\\
+&= \frac{\lambda^k}{k!} \cdot e^{-\lambda} \;\;\;  \color{gray}{\rightarrow \text{as } \lim_{n' \rightarrow \infty} \big(1+\frac{1}{n'}\big)^{n'}=e. \; \text{See next page.}}
+\end{aligned}
+}
+$$
+
+---
+
+Using [binomial expansion](https://en.wikipedia.org/wiki/Binomial_theorem)
+
+$$
+\small{
+\begin{aligned}
+\big(1+\frac{1}{n}\big)^n &= {n \choose 0}\big(\frac{1}{n}\big)^0+{n \choose 1}\big(\frac{1}{n}\big)^1+{n \choose 2}\big(\frac{1}{n}\big)^2 +{n \choose 3}\big(\frac{1}{n}\big)^3 + \cdots \\\
+\\\
+&=1+1+\frac{n(n-1)}{2!}\big(\frac{1}{n^2}\big) +\frac{n(n-1)(n-2)}{3!}\big(\frac{1}{n^3}\big) + \cdots \\\
+\\\
+&=1+1+\frac{1(1-\frac{1}{n})}{2!} +\frac{1(1-\frac{1}{n})(1-\frac{2}{n })}{3!} + \cdots \\\
+\end{aligned}
+}
+$$
+
+$$
+\small{
+\begin{aligned}
+\lim_{n\rightarrow \infty} \big(1+\frac{1}{n}\big)^n &=\lim_{n\rightarrow \infty} \bigg[1+1+\frac{1(1-\frac{1}{n})}{2!} +\frac{1(1-\frac{1}{n})(1-\frac{2}{n })}{3!} + \cdots \bigg] \\\
+\\\
+&= \lim_{n\rightarrow \infty} \big(1+1+\frac{1}{2!}+\frac{1}{3!}+\cdots \big) \\\
+\\\
+&= e \;\;\;\; \color{gray}{\rightarrow \text{by definition of Euler's number}} \\\
+\end{aligned}
+}
+$$
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

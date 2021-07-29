@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Discrete independence</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+class: split-50
+
+.column[
+<br><br><br><br><br>
+.huge[Discrete independence]
+]
+.column[
+&nbsp;
+![:scale 46%](../images/independence-cover.png)
+<br><br><br>
+<div class="source"><a class="sourcelink" href="https://unsplash.com/photos/UGi_Ng56FRI">Image source</a></div>
+]
+
+---
+
+# Recall Chapter 2
+
+Two events $A$ and $B$ are independent if 
+
+$$\text{P}(A|B)=\text{P}(A)$$
+
+By the definition of the conditional probability,
+
+$$\text{P}(A|B)=\frac{\text{P}(A \cap B)}{\text{P}(B)}$$
+
+We have
+
+$$\text{P}(A \cap B) = \text{P}(A) \cdot \text{P}(B), \;\; \text{if $A$ and $B$ are independent.}$$
+
+---
+
+Two RVs $X$ and $Y$ are independent if 
+
+$$p_{X|Y}(x|y)=p_X(x), \;\;\; \text{for all $x$ and $y$ with $p_Y(y)>0$.}$$
+
+--
+
+By the definition of the conditional PMF,
+
+$$p_{X|Y}(x|y)=\frac{p_{X, Y}(x, y)}{p_Y(y)}$$
+
+--
+$X$ and $Y$ are independent if 
+
+$$\require{color}\colorbox{yellow}{$p_{X, Y}(x, y) = p_X(x) \cdot p_{Y}(y), \;\;\;\; \text{for all $x$ and $y$.} $}$$
+
+???
+Given that we just know $Y=y$, it does not affect our believe on how likely $X=x$ occurs. 
+
+---
+# Example: Roll two 4-sided dice
+
+$X$ and $Y$ are the rolls on the die #1 and #2. 
+
+Are $X$ and $Y$ independent?
+
+--
+
+| |&nbsp;$Y=1$&nbsp;|&nbsp;$Y=2$&nbsp;|&nbsp;$Y=3$&nbsp;|&nbsp;$Y=4$&nbsp;|&nbsp;$p_X(x)$&nbsp;|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|&nbsp;$X=1$&nbsp;|$\frac{1}{16}$|$\frac{1}{16}$|$\frac{1}{16}$|$\frac{1}{16}$|$\frac{1}{4}$|
+|$X=2$|$\frac{1}{16}$|$\frac{1}{16}$|$\frac{1}{16}$|$\frac{1}{16}$|$\frac{1}{4}$|
+|$X=3$|$\frac{1}{16}$|$\frac{1}{16}$|$\frac{1}{16}$|$\frac{1}{16}$|$\frac{1}{4}$|
+|$X=4$|$\frac{1}{16}$|$\frac{1}{16}$|$\frac{1}{16}$|$\frac{1}{16}$|$\frac{1}{4}$|
+|$p_Y(y)$|$\frac{1}{4}$|$\frac{1}{4}$|$\frac{1}{4}$|$\frac{1}{4}$|$\frac{100}{100}$|
+
+???
+Learning the 1st roll doesn’t give us any information about the 2nd roll. 
+
+---
+# Exercise
+
+$X$ is the roll on the die #1.
+
+$T$ is the sum of the two rolls. 
+
+Are $X$ and $T$ independent?
+
+--
+
+|&nbsp;$X \setminus T$&nbsp;|&nbsp;&nbsp;&nbsp;$2$&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;$3$&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;$4$&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;$5$&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;$6$&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;$7$&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;$8$&nbsp;&nbsp;&nbsp;|&nbsp;$p_X(x)$&nbsp;|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|&nbsp;$1$&nbsp;|$\frac{1}{16}$|$\frac{1}{16}$|$\frac{1}{16}$|$\frac{1}{16}$|$0$|$0$|$0$|$\frac{1}{4}$|
+|&nbsp;$2$&nbsp;|$0$|$\frac{1}{16}$|$\frac{1}{16}$|$\frac{1}{16}$|$\frac{1}{16}$|$0$|$0$|$\frac{1}{4}$|
+|&nbsp;$3$&nbsp;|$0$|$0$|$\frac{1}{16}$|$\frac{1}{16}$|$\frac{1}{16}$|$\frac{1}{16}$|$0$|$\frac{1}{4}$|
+|&nbsp;$4$&nbsp;|$0$|$0$|$0$|$\frac{1}{16}$|$\frac{1}{16}$|$\frac{1}{16}$|$\frac{1}{16}$|$\frac{1}{4}$|
+|&nbsp;$p_T(t)$&nbsp;|$\frac{1}{16}$|$\frac{2}{16}$|$\frac{3}{16}$|$\frac{4}{16}$|$\frac{3}{16}$|$\frac{2}{16}$|$\frac{1}{16}$|$1$|
+
+???
+Learning the 1st roll gives us information about the sum. 
+
+---
+We randomly sample an adult from the MI population.
+
+$X$: whether they are a current smoker
+
+$Y$: whether they will develop lung cancer at some point
+
+| |&nbsp;&nbsp;&nbsp;&nbsp;$Y=0$&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;$Y=1$&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$p_X(x)$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|:---:|:---:|:---:|
+|&nbsp;&nbsp;&nbsp;&nbsp;$X=0$&nbsp;&nbsp;&nbsp;&nbsp;|$72\%$|$3\%$||
+|&nbsp;&nbsp;&nbsp;&nbsp;$X=1$&nbsp;&nbsp;&nbsp;&nbsp;|$20\%$|$5\%$||
+|$p_Y(y)$|||||
+
+Are $X$ and $Y$ independent?
+
+???
+Learning whether or not the person is a current smoker
+gives us information about the probability that he will develop lung cancer. 
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

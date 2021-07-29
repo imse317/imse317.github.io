@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Confidence intervals</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+
+class: middle, center
+
+.huge[Confidence intervals]
+
+.huge[\- unknown variance]
+
+---
+# What if we don't know $\sigma^2$?
+
+Suppose $X_1, X_2, \cdots, X_n$ are i.i.d. with 
+- unknown mean $\theta$ and .red[unknown] variance $\sigma^2$
+
+--
+
+$$\small{\text{Sample mean estimator:}\;\;\hat{\Theta}_n=\frac{X_1+X_2+\cdots+X_n}{n}}$$
+
+--
+
+We can estimate the population variance $\sigma^2$ with
+
+$$\small{\text{Sample variance estimator:}\;\;\hat{S}_n^2}=\frac{\sum\big(X_i - \hat{\Theta}_n\big)^2}{n-1}$$
+
+--
+
+Recall $\hat{S}_n^2$ is an unbiased estimator of $\sigma^2$: $\text{E}\bigg[\hat{S}_n^2\bigg]=\sigma^2$
+
+
+---
+
+Previously we have
+
+$$\small{\frac{\hat{\Theta}_n-\theta}{\sigma/\sqrt{n}} \sim \text{N}(0, 1), \; \text{if $X_i$ is normally distributed.}}$$
+
+--
+
+$$\small{\frac{\hat{\Theta}_n-\theta}{\sigma/\sqrt{n}} \text{ is approximately } \text{N}(0, 1), \; \text{if $X_i$ is not normal, but $n$ is large.}}$$
+
+--
+
+Once we replace $\sigma$ with $\hat{S}_n$, we have
+
+$$\small{\frac{\hat{\Theta}_n-\theta}{\hat{S}_n/\sqrt{n}}}$$
+
+--
+
+$$\small{\frac{\hat{\Theta}_n-\theta}{\hat{S}_n/\sqrt{n}} \text{ is approximately } \text{N}(0, 1), \; \text{if $n$ is sufficiently large.}}$$
+
+---
+
+If $n$ is sufficiently large,
+
+$$\small{\text{P}\bigg(-z_{\frac{\alpha}{2}} < \frac{\hat{\Theta}_n-\theta}{\hat{S}_n/\sqrt{n}} < z_{\frac{\alpha}{2}}\bigg) \approx 1-\alpha}$$
+
+--
+
+Generally speaking, $n>40$ would be sufficient. 
+
+--
+
+$$\small{\hat{\Theta}_n \pm z_{\frac{\alpha}{2}} \frac{\hat{S}_n}{\sqrt{n}}}$$
+
+is a CI for $\theta$ with confidence level approximately $1-\alpha$. 
+
+--
+
+The CI can be expressed in words as
+
+$$\small{\text{(point estimate)} \pm \text{($z$ critical value)} \cdot \text{(estimated standard error)}}$$
+
+---
+# What if the sample size $n$ is small?
+
+Suppose $X_1, X_2, \cdots, X_n$ are i.i.d. normal with 
+- unknown mean $\theta$ and .red[unknown] variance $\sigma^2$
+
+--
+
+$$\small{\text{Sample mean estimator:}\;\;\hat{\Theta}_n=\frac{X_1+X_2+\cdots+X_n}{n}}$$
+
+--
+
+Then, 
+
+$$\small{T_n=\frac{\hat{\Theta}_n-\theta}{\hat{S}_n/\sqrt{n}}}$$
+
+has a probability distribution called a [*t*-distribution](https://en.wikipedia.org/wiki/Student's_t-distribution) with $v=n-1$ degrees of freedom.   
+
+---
+
+$$\small{t\text{-distribution:}\;\;\;T_n=\frac{\hat{\Theta}_n-\theta}{\hat{S}_n/\sqrt{n}}}$$
+
+
+.center[![:scale 58%](../images/t-1.png)]
+
+--
+
+.center[![:scale 58%](../images/t-5.png)]
+
+???
+- Symmetric
+- Bell-shaped
+- More spread out
+- Approaches N(0, 1) as $v\rightarrow +\infty$
+
+---
+class: center, middle
+
+.huge[[Interactive visualization](https://probstats.org/studentt.html)]
+
+---
+
+For small $n$, we use *t*-distribution to construct the CI. 
+
+.center[![:scale 60%](../images/ci-t.png)]
+
+--
+
+$$\small{\text{P}\bigg(-t_{\frac{\alpha}{2}, n-1} < \frac{\hat{\Theta}_n-\theta}{\hat{S}_n/\sqrt{n}} < t_{\frac{\alpha}{2}, n-1}\bigg) = 1-\alpha}$$
+
+--
+
+$$\small{\text{P}\bigg(\hat{\Theta}_n - t_{\frac{\alpha}{2}, n-1} \frac{\hat{S}_n}{\sqrt{n}} < \theta < \hat{\Theta}_n + t_{\frac{\alpha}{2}, n-1} \frac{\hat{S}_n}{\sqrt{n}}\bigg) \approx 1-\alpha}$$
+
+--
+
+$$\small{\text{Or, more compactly, }\hat{\Theta}_n \pm t_{\frac{\alpha}{2}, n-1} \frac{\hat{S}_n}{\sqrt{n}}\;\;\text{is a } (1-\alpha) \text{ CI.}}$$
+
+
+---
+
+#Critical values for *t*-distribution
+
+<br>
+
+.center[![:scale 60%](../images/table-t-critical-curve.png)]
+
+.center[Table in next slide.]
+
+---
+
+.center[![:scale 80%](../images/table-t-critical.png)]
+
+---
+
+# Exercise ⚖️
+
+An object is weighted using a scale. 
+
+The scale reports the true weight plus a random error that is normal with $\mu=0$ and unknown variance. 
+
+Assume that the errors are independent.
+
+The object was weighted eight times.
+
+$$[0.555,  0.540,  0.636,  0.644,  0.492,  0.567,  0.556,  0.607]$$
+
+Construct a 95% confidence interval for the weight. 
+
+---
+
+$$\small{[0.555,  0.540,  0.636,  0.644,  0.492,  0.567,  0.556,  0.607]}$$
+
+--
+
+$$\small{\bigg[\hat{\Theta}_n - t_{\frac{\alpha}{2}, n-1} \frac{\hat{S}_n}{\sqrt{n}}, \;\;\;\hat{\Theta}_n + t_{\frac{\alpha}{2}, n-1} \frac{\hat{S}_n}{\sqrt{n}}\bigg]}$$
+
+--
+
+$$
+\small{
+\begin{aligned}
+\text{Sample mean:}&\; \hat{\Theta}_n=\frac{1}{n}\sum_{i=1}^n X_i=0.5746 \\\
+\\\
+\text{Sample variance:}&\; \hat{S}_n^2=\frac{1}{n-1}\sum_{i=1}^n \big(X_i - \hat{\Theta}_n\big)^2=0.002635 \\\
+\\\
+\text{Critical value:}&\; t_{\frac{\alpha}{2}, n-1}=t_{0.025, 7}=2.365 \\\
+\end{aligned}
+}
+$$
+
+--
+
+$$\small{\bigg[\hat{\Theta}_n - t_{\frac{\alpha}{2} n-1} \frac{\hat{S}_n}{\sqrt{n}}, \hat{\Theta}_n + t_{\frac{\alpha}{2}, n-1} \frac{\hat{S}_n}{\sqrt{n}}\bigg]=[0.532, 0.618]}$$
+
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

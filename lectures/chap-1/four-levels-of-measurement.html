@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Four levels of measurement</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+class: split-60
+
+.column[
+<br><br><br><br><br>
+.huge[Four levels of measurement]
+]
+.column[
+<br><br><br><br>
+![:scale 40%](../images/ruler.png)
+]
+
+---
+# [Four levels of measurement](https://en.wikipedia.org/wiki/Level_of_measurement)
+
+![:scale 100%](../images/levels-of-measurement.png)
+
+--
+Why do we care?
+
+The level dictates what we can do (in terms of math operations) with the data. 
+
+---
+class: center, middle 
+
+![:scale 100%](../images/nominal.png)
+
+---
+# [Nominal](https://en.wikipedia.org/wiki/Nominal_category) (or [categorical](https://en.wikipedia.org/wiki/Categorical_variable)) data
+
+- Country code: 1 (USA), 44 (UK), 81 (Japan), ...
+- Marital status: single, married, divorced, ...
+- Blood type: A, B, AB, O
+- Social security numbers
+
+--
+
+<br>
+
+Nominal data: when numbers are .blue[not] numbers
+- They act like names or labels.
+- Can not be put into order.
+
+---
+# Nominal (or categorical) data
+
+Implications
+
+- The only math operations that can be done are $=, \neq$
+- They can not be compared (e.g., $>, <$)
+- We can not carry out any calculations ($+,  −,  ×, \div$)
+
+---
+# [Ordinal data](https://en.wikipedia.org/wiki/Ordinal_data)
+
+When numbers are almost numbers
+- They go into order.
+- But that's about it (i.e., they don’t tell us about the distance between two numbers.)
+
+--
+
+Examples
+
+- Airline cabin classes
+
+.center[.gray[.small[1: first class, 2: business, 3: premium economy, 4: economy]]]
+
+--
+
+- Hotel ratings
+
+.center[.gray[.small[5-star, 4-star, 3-star, 2-star, 1-star]]]
+
+---
+
+- Finish place in Chicago Marathon men's race
+
+.center[![:scale 35%](../images/chima-ordinal.png)]
+
+--
+
+Implications
+- Ordinal numbers can be compared (e.g., $>,  <$)
+  - Mo Farah finished ahead of Galen Rupp. 
+
+--
+- We can not carry out calculations for differences or magnitudes ($+,  −, ×, \div$) 
+
+---
+.center[![:scale 90%](../images/nominal-ordinal.png)]
+
+<div style="margin-top: -20px; text-align: left;"><a class="sourcelink" href="https://github.com/allisonhorst/stats-illustrations">Artwork by @allison_horst</a></div>
+
+---
+# .red[Interval] & .red[ratio] measures 
+
+When numbers are .blue[really] numbers
+- Not only can be put to order
+- The distance between them tell us something. 
+
+--
+Examples
+- Tom drinks 3 cups of coffee. Kate drinks 1 cup. 
+
+--
+
+- Mo finishes in 2:05:11. Rupp finishes in 2:06:21.
+
+.center[![:scale 50%](../images/chima-ratio.png)]
+
+---
+# .red[Ratio] data
+
+Ratio data have a "genuine", non-arbitrary zero point.
+
+--
+
+A "genuine" zero means .blue[there is none of the thing being measured]. 
+
+--
+
+- "I have zero dollars."
+--
+&nbsp;→ absence of money
+
+--
+- Riding a bicycle at speed of 0 mph
+--
+&nbsp;→ no movement
+
+---
+# Examples of .red[ratio] data 
+
+- Length (100 meters)
+- Weight (50 lbs)
+- Size (800 square feet)
+- Speed (20 mph)
+- Time duration (5 hours)
+
+--
+
+<br>
+
+The majority of scientific measures are ratio measures.
+
+---
+# [Interval data](https://en.wikipedia.org/wiki/Level_of_measurement#Interval_scale)
+
+Interval data have an .red[arbitrary zero point].
+
+Zero does .red[not] mean there is none of the things being measured. 
+- What is the temperature for $0^\circ \text{C}$? 
+
+--
+  - $0^\circ \text{C}$ does not mean there is no warmth.
+
+--
+- We are in year <span id="year"></span>. What does year 0 mean?
+
+--
+ - Year $0$ does not mean it's the beginning of time. 
+
+---
+# Examples of .red[interval] data 
+
+- Temperature in Fahrenheit ($70^\circ \text{F}$) or Celsius ($20^\circ \text{C}$)
+- Calendar year ($2020$)
+- GPS coordinates ($42.3185, -83.2327$)
+- GPS heading ($90^\circ$)
+
+---
+# Implications without a genuine zero point
+
+We can talk about ratios with ratio measures (duh!)
+
+--
+
+- Tom drinks ☕☕☕. Kate drinks ☕. 
+
+--
+  - Tom drink ☕☕ more coffee than Kate. 
+--
+✔️
+
+--
+  - Tom drink .red[3 times] as much coffee as Kate. 
+--
+✔️
+
+
+--
+- Today is $40^\circ \text{F}$. Yesterday was $20^\circ \text{F}$. 
+
+--
+  - Today is $20^\circ \text{F}$ warmer than yesterday.
+--
+✔️
+
+--
+  - The average temp of the two days is $30^\circ \text{F}$.
+--
+✔️
+
+--
+  - Today is .red[twice as warm] as yesterday. 
+--
+❌
+
+---
+# Implications without a genuine zero point
+
+In summary,
+
+- with .red[interval] data 
+
+  - we can calculate the difference ($-$).
+
+  - we can not calculate the ratio ($\div$).
+
+--
+
+<br>
+
+- with .green[ratio] data we can carry out most calculations.
+
+
+---
+# Qualitative and quantitative data
+
+![:scale 100%](../images/levels-of-measurement.png)
+
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+<script>
+  document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+</body>
+</html>

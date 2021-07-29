@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+body {
+    font-family: 'Roboto'; 
+    font-weight: bold; 
+    line-height: 1.4;
+}
+
+.remark-code, .remark-inline-code {
+    font-family: 'Ubuntu Mono';
+}
+
+.remark-slide-content h1 {
+    font-size: 40px; 
+    text-align: center;
+}
+
+.remark-slide-content p, .remark-slide-content li {
+    font-size:30px; 
+    margin: 20px 0;
+}
+
+a:link, a:visited, a:active, a:hover {
+	color: #0645AD;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+img {
+    max-height: 100%;
+}
+
+.quote_author {
+    display: block; 
+    text-align: right;
+}
+
+.source {
+    margin-top: -40px;
+}
+
+a.sourcelink:link, a.sourcelink:visited, a.sourcelink:active, a.sourcelink:hover {
+    color:lightgray;
+    font-size: 12pt;
+    text-decoration: none;
+}
+
+.red {
+    color:red;
+}
+.green {
+    color:green;
+}
+.gray {
+    color:gray;
+}
+.lightgray {
+    color:lightgray;
+}
+
+.purple {
+    color: purple;
+}
+
+td, th {
+    border: 1px solid black; 
+    font-size: 30px;    /* bayes' rule table */
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.huge { 
+    font-size: 200%;
+}
+.large {
+    font-size: 160%;
+} 
+.small { 
+    font-size: 80%;
+}
+.tiny { 
+    font-size: 60%;
+}
+
+.column:first-of-type {float:left}
+.column:last-of-type {float:right}
+
+.split-30 .column:first-of-type {width: 30%}
+.split-30 .column:last-of-type {width: 70%}
+.split-40 .column:first-of-type {width: 40%}
+.split-40 .column:last-of-type {width: 60%}
+.split-50 .column:first-of-type {width: 50%}
+.split-50 .column:last-of-type {width: 50%}
+.split-60 .column:first-of-type {width: 60%}
+.split-60 .column:last-of-type {width: 40%}
+.split-70 .column:first-of-type {width: 70%}
+.split-70 .column:last-of-type {width: 30%}

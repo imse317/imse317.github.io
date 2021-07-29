@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Continuous independence</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+class: split-50
+
+.column[
+<br><br><br><br><br>
+.huge[Continuous independence]
+]
+.column[
+&nbsp;
+![:scale 46%](../images/independence-cover.png)
+<br><br><br>
+<div class="source"><a class="sourcelink" href="https://unsplash.com/photos/UGi_Ng56FRI">Image source</a></div>
+]
+
+---
+# Independence
+
+In the .green[discrete] case,
+
+two RVs $X$ and $Y$ are independent if 
+
+$$p_{X, Y}(x, y) = p_X(x) \cdot p_{Y}(y), \;\;\;\; \text{for all $x$ and $y$.}$$
+
+--
+
+<br>
+
+In the .red[continuous] case,
+
+two RVs $X$ and $Y$ are independent if 
+
+$$f_{X, Y}(x, y) = f_X(x) \cdot f_{Y}(y), \;\;\;\; \text{for all $x$ and $y$.}$$
+
+---
+
+Let $(X, Y)$ be a random point on the unit square.
+
+.center[![:scale 40%](../images/unit-square.png)]
+
+--
+
+Its joint PDF:
+
+$$
+\begin{aligned}
+f\_{X, Y}(x, y) &= 
+\begin{cases}
+    1, & \text{if $x, y \in [0, 1]$,} \\\
+    0, & \text{otherwise.}
+\end{cases}
+\end{aligned}
+$$
+
+---
+
+Let $(X, Y)$ be a random point on the unit square.
+
+$$
+\begin{aligned}
+f_{X, Y}(x, y) &= 
+\begin{cases}
+    1, & \text{if $x, y \in [0, 1]$,} \\\
+    0, & \text{otherwise.}
+\end{cases} \\\
+\\\
+f_{X}(x) &= 
+\begin{cases}
+    1, & \text{if $x \in [0, 1]$,} \\\
+    0, & \text{otherwise.}
+\end{cases} \\\
+\\\
+f_{Y}(y) &= 
+\begin{cases}
+    1, & \text{if $y \in [0, 1]$,} \\\
+    0, & \text{otherwise.}
+\end{cases}
+\end{aligned}
+$$
+
+--
+
+$$f_{X, Y}(x, y)=f_{X}(x) \cdot f_{Y}(y)$$
+
+$X$ and $Y$ are independent.
+
+---
+# [Buffon's Needle](https://en.wikipedia.org/wiki/Buffon's_needle_problem)
+
+We draw parallel lines with distance $d$ from each other.
+
+We threw a needle of length $l$ on the surface at random.
+
+What is the chance that the needle intersects a line? 
+
+.center[![:scale 49%](../images/buffon-1.png)]
+
+<div style="margin-top: 0px; text-align: center;"><a class="sourcelink" href="https://www.pepijnvanerp.nl/2018/09/lazzarini-buffons-needle-pi/">Image source</a></div>
+
+---
+
+Let $X$ be the vertical distance from the midpoint of the needle to the closest line.
+
+Let $\Theta$ be the acute angle between the needle and lines.  
+
+.center[![:scale 40%](../images/buffon-2.png)]
+
+
+???
+
+$$
+\begin{aligned}
+f_{X}(x) &= 
+\begin{cases}
+    \frac{1}{d/2}, & \text{if $0 \leq x \leq \frac{d}{2}$,} \\\
+    0,             & \text{otherwise.}
+\end{cases} \\\
+\\\
+f_{\Theta}(\theta) &= 
+\begin{cases}
+    \frac{1}{\pi/2}, & \text{if $0 \leq \theta \leq \frac{\pi}{2}$,} \\\
+    0,               & \text{otherwise.}
+\end{cases} \\\
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+f_{X, \Theta}(x, \theta) &= f_{X}(x) \cdot f_{\Theta}(\theta) \\\
+&=
+\begin{cases}
+    \frac{4}{\pi d}, & \text{if $0 \leq x \leq \frac{d}{2}, 0 \leq \theta \leq \frac{\pi}{2}$,} \\\
+    0,              & \text{otherwise.}
+\end{cases}
+\end{aligned}
+$$
+
+---
+
+When does the needle intersect with a line?
+
+.center[![:scale 90%](../images/buffon-3.png)]
+
+
+???
+The needle intersects with a line if and only if 
+
+$$x \leq \frac{l}{2}\sin \theta$$
+
+$$
+\begin{aligned}
+\text{P}(\text{needle intersects line})&= \text{P}(X \leq \frac{l}{2}\sin \Theta) \\\
+\\\
+&=\iint \limits_{x\leq \frac{l}{2}\sin \theta} f_{X, \Theta}(x, \theta)dx d\theta \\\
+\\\
+&=\iint \limits_{x\leq \frac{l}{2}\sin \theta} \frac{4}{\pi d}dx d\theta \\\
+\\\
+&=\frac{4}{\pi d}\int _0^{\pi/2} \int _0^{\frac{l}{2}\sin \theta} dx d\theta \\\
+\\\
+&=\frac{4}{\pi d}\int _0^{\pi/2} \frac{l}{2}\sin \theta \; d\theta \\\
+\\\
+&=\frac{2l}{\pi d}\int _0^{\pi/2}\sin \theta \; d\theta \\\
+\\\
+&=\frac{2l}{\pi d} (-\cos \theta) \bigg |_0^{\pi/2} \\\
+\\\
+&=\frac{2l}{\pi d} (0-(-1)) \\\
+\\\
+&=\frac{2l}{\pi d} \\\
+\end{aligned}
+$$
+
+---
+# We can use this result to estimate $\pi$
+
+To simplify, let $l=d/2$. 
+
+$$\text{P}(\text{intersect})=\frac{2l}{\pi d}=\frac{2(d/2)}{\pi d}=\frac{1}{\pi}$$
+
+--
+
+<br>
+
+$$\text{P}(\text{intersect})=\frac{1}{\pi}\approx \frac{\text{# of intersections}}{\text{# of throws}}$$
+
+--
+
+<br>
+$$\require{color}\colorbox{yellow}{$\pi \approx \frac{\text{# of throws}}{\text{# of intersections}}$}$$
+
+---
+
+$$\require{color}\colorbox{yellow}{$\pi \approx \frac{\text{# of throws}}{\text{# of intersections}}$}$$
+
+.center[![:scale 100%](../images/buffon-pi.png)]
+
+<div style="margin-top: 0px; text-align: center;"><a class="sourcelink" href="https://mathworld.wolfram.com/BuffonsNeedleProblem.html">Image source</a></div>
+
+---
+# Buffon's Needle
+
+<iframe width="750" height="500" src="https://www.youtube.com/embed/sJVivjuMfWA" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Expected values</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+
+
+class: split-60
+
+.column[
+<br><br><br><br><br>
+.huge[Expected values]
+]
+.column[
+<br><br><br>
+&nbsp;&nbsp;&nbsp;
+![:scale 36%](../images/expectation-cover.png)
+<br><br><br><br><br>
+<div class="source"><a class="sourcelink" href="https://unsplash.com/photos/7lyRKyKIdJY">Image source</a></div>
+]
+
+
+
+---
+
+# Probability mass function of a RV $X$
+
+<br>
+.center[![:scale 60%](../images/pmf-example.png)]
+
+What is a single .red[representative] value for $X$?
+
+---
+# Definition
+
+The .red[expected value] of a discrete RV $X$ is defined by
+
+$$\text{E}[X]=\sum_x x \cdot p_X(x)$$
+
+--
+
+.center[![:scale 38%](../images/pmf-example.png)]
+
+It is the .green[probability-weighted average] of all values of $X$.
+
+It measures the .red[center] of the distribution.
+
+---
+# Exercise
+
+What is the expected value of $X$?
+
+.center[![:scale 38%](../images/pmf-example.png)]
+
+$$
+\small{
+p_X(x) = 
+\begin{cases}
+    0.15, & \text{if $x = 1$,} \\\
+    0.30, & \text{if $x = 2$,} \\\
+    0.10, & \text{if $x = 3$,} \\\
+    0.15, & \text{if $x = 4$,} \\\
+    0.25, & \text{if $x = 5$,} \\\
+    0.05, & \text{if $x = 6$,} \\\
+    0,              & \text{otherwise.}
+\end{cases}
+}
+$$
+
+???
+$$
+\begin{aligned}
+ &\; \text{E}[X] \\\
+=&\; 1 \cdot p_X(1) + 2\cdot p_X(2) + 3 \cdot p_X(3) + 4 \cdot p_X(4) + 5 \cdot p_X(5) + 6 \cdot p_X(6) \\\
+=&\; 1 \cdot 0.15 + 2 \cdot 0.30 + 3 \cdot 0.10 + 4 \cdot 0.15 + 5 \cdot 0.25 + 6 \cdot 0.05 \\\
+=&\; 3.2 \\\
+\end{aligned}
+$$
+
+
+---
+# Exercise
+
+$X$: Roll a fair die 🎲 and record the number
+
+What is the expected value of $X$?
+
+--
+
+$$
+\small{
+p_X(x) = 
+\begin{cases}
+    1/6, & \text{if } x = 1, 2, \cdots, 6, \\\
+    0,              & \text{otherwise.}
+\end{cases}
+}
+$$
+
+--
+
+.center[![:scale 40%](../images/pmf-1die.png)]
+
+--
+
+If the PMF is symmetrical, $\text{E}[X]$ is at the middle point. 
+
+???
+$$
+\begin{aligned}
+\text{E}[X]&=1\cdot\frac{1}{6}+2\cdot\frac{1}{6}+3\cdot\frac{1}{6}+4\cdot\frac{1}{6}+5\cdot\frac{1}{6}+6\cdot\frac{1}{6} \\\
+&=3.5
+\end{aligned}
+$$
+
+---
+# Exercise
+
+A lottery ticket offers 
+
+- 1 in 500 chance to win $1,000
+- 1 in 10 chance to win $10
+- otherwise, you win nothing.
+
+If the lottery ticket costs $2 each, should you buy it?
+
+---
+
+.center[![:scale 55%](../images/extended-warranty.png)]
+
+Assume during the coverage of the extended warranty, 
+the laptop will break with the following probabilities:
+
+- zero/once/twice/three times: 65% / 20% / 10% / 5%
+
+Each break would cost $200 to repair. 
+
+Should you buy this extended warranty?
+
+---
+
+<br>
+
+.center[![:scale 100%](../images/oral-roberts.png)]
+
+--
+
+
+What is the expected points by putting Florida's Osifo to the free throw line?
+
+
+---
+# Expected value of .red[a function of a RV]
+
+Let $X$ be a discrete RV with PMF $p_X(x)$
+
+Let $Y=g(X)$
+
+Then, we have
+
+$$
+\begin{aligned}
+&\text{E}[Y]=\sum_y y\cdot\; p_Y(y) \;\;\;\; \color{gray}{\leftarrow\text{by def. of expected value}} \\\
+\\\
+&\text{where} \;\;\; p_Y(y)=\sum_{\{x|g(x)=y\}}p_X(x) \\\
+\end{aligned}
+$$
+
+---
+A random variable $X$ has a PMF
+
+$$p_X(x) = 
+\begin{cases}
+    1/5, & \text{if $x = -2, -1, 0, 1, 2$,} \\\
+    0,              & \text{otherwise.}
+\end{cases}
+$$
+
+$$Y=|X|$$
+
+What is the expected value of $Y$?
+
+
+
+.center[![:scale 70%](../images/function-rv-3.png)]
+
+---
+Can we get $\text{E}[g(X)]$ w/o calculating the PMF of $g(X)$?
+
+--
+
+<br>
+
+.center[[Law Of The Unconscious Statistician (LOTUS)](https://en.wikipedia.org/wiki/Law_of_the_unconscious_statistician)]
+
+$$\text{E}[g(X)]=\sum_x \big[g(x) \cdot p_X(x)\big] $$
+
+--
+
+<br>
+
+.center[![:scale 70%](../images/function-rv-3.png)]
+
+
+---
+# Proof of LOTUS
+
+$$
+\begin{aligned}
+\text{E}[Y]&=\sum_y \big[y \cdot p_Y(y)\big] \;\;\;\;\;\; \color{gray}{\leftarrow\text{by def. of expected value}} \\\
+&=\sum_y \bigg[y \cdot \sum_{\{x|g(x)=y\}}p_X(x)\bigg] \\\
+\\\
+&=\sum_y \bigg[\sum_{\{x|g(x)=y\}} y \cdot p_X(x) \bigg] \\\
+\\\
+&=\sum_y \bigg[\sum_{\{x|g(x)=y\}} g(x) \cdot p_X(x) \bigg] \\\
+\\\
+&=\sum_x \big[g(x) \cdot p_X(x) \big] \\\
+\end{aligned}
+$$
+
+---
+# .red[Linearity] of the expected value
+
+For any given constants $a$ and $b$, we have
+
+$$\text{E}[aX+b]=a \text{E}[X] + b$$
+
+--
+
+Proof
+
+$$
+\begin{aligned}
+\text{E}[aX+b]&=\sum_x \big[(ax+b) \cdot p_X(x)\big] \;\;\;\;\;  \color{gray}{\leftarrow\text{by LOTUS}} \\\
+&=\sum_x \big[ ax \cdot p_X(x) + b \cdot p_X(x)\big] \\\
+&=a\sum_x \big[x \cdot p_X(x) \big] + b \sum_x p_X(x) \\\
+&=a\text{E}[X]+b \\\
+\end{aligned}
+$$
+
+
+---
+<!-- # One caution -->
+
+$$\text{E}[aX+b]=a \text{E}[X] + b$$
+
+That is, when $g(X)$ is a linear function $g(X)=aX+b$, 
+
+we have
+
+$$\text{E}\big[g(X)\big]=g\big(\text{E}[X]\big)$$
+
+
+--
+
+$$\text{Celcius}=g(\text{Farenheit})=(\text{Farenheit}-32) \cdot \frac{5}{9}$$
+
+--
+
+$$\text{E[Celcius]}=(\text{E[Farenheit]}-32) \cdot \frac{5}{9}$$
+
+--
+
+However, in general, 
+
+<!-- $$\require{color}\colorbox{yellow}{$\text{E}[g(X)] \neq g(\text{E}[X])$}$$ -->
+
+$$\text{E}\big[g(X)\big] \neq g\big(\text{E}[X]\big)$$
+
+
+---
+# Example
+
+Sarah lives 2 miles away from the campus.
+
+She walks to classes at 4 mph if the weather is good (assuming that is half of the time).
+
+Otherwise, she cycles to classes at a speed of 20 mph. 
+
+What is the expected 
+
+- travel speed? 
+
+- travel time?
+
+---
+
+# Travel speed $V$
+
+$$
+\begin{aligned}
+p_V(v) &=
+\begin{cases}
+    0.5, & \text{if $v=4$ or 20 mph,} \\\
+    0,   & \text{otherwise.} \\\
+\end{cases}
+\end{aligned}
+$$
+
+--
+$$\text{E}[V] = 4 \cdot 0.5 + 20 \cdot 0.5 = 12 \text{ (mph)}$$
+
+---
+# Travel time
+
+$$T=g(V)=\frac{\text{distance}}{V}=\frac{2}{V}$$
+
+--
+
+$$
+\begin{aligned}
+t &= 
+\begin{cases}
+2/4=0.5, & \text{if walking,} \\\
+2/20=0.1,   & \text{if cycling.} \\\
+\end{cases}
+\end{aligned}
+$$
+
+--
+
+$$
+\begin{aligned}
+p_T(t) &= 
+\begin{cases}
+    0.5, & \text{if $t=0.1$ or 0.5 hours,} \\\
+    0,   & \text{otherwise.} \\\
+\end{cases}
+\end{aligned}
+$$
+
+--
+
+$$\color{gray}{\big(\text{E}\big[g(V)\big]=\big)} \;\; \text{E}[T] = 0.1 \cdot 0.5 + 0.5 \cdot 0.5 = 0.3 \text{ (hours)}$$
+
+--
+
+$$g\big(\text{E}[V]\big)=\frac{2}{\text{E}[V]}=\frac{2}{12}\approx0.167$$
+
+--
+
+$$\text{E}\big[g(V)\big] \neq g\big(\text{E}[V]\big)$$
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

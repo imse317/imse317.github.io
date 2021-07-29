@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Covariance</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+class: split-50
+
+.column[
+<br><br><br><br><br>
+.huge[Covariance]
+]
+.column[
+<br><br><br>
+![:scale 40%](../images/cov-cover.png)
+]
+
+---
+# [Covariance](https://en.wikipedia.org/wiki/Covariance)
+
+It measures the degree to which two RVs .red[vary together]. 
+
+- People's height & weight
+- Houses: size & market value
+
+--
+
+.center[![:scale 45%](../images/dist-to-bike-lane.png)]
+
+---
+
+# Covariance
+
+The covariance between two RVs $X$ and $Y$ is defined by
+
+$$\text{cov}(X, Y)=\text{E}\big[(X-\text{E}[X])(Y-\text{E}[Y])\big]$$
+
+--
+
+.center[
+![:scale 32%](../images/cov-pos.png)
+![:scale 32%](../images/cov-neg.png)
+![:scale 32%](../images/cov-zero.png)
+]
+
+--
+
+If $\text{cov}(X, Y)=0$, we say $X$ and $Y$ are .green[uncorrelated].   
+
+---
+# Properties
+
+<br>
+
+$$\text{cov}(X, X)=\text{var}(X)$$
+
+--
+
+<br>
+
+$$\text{cov}(X, Y)=\text{E}[XY]-\text{E}[X]\text{E}[Y]$$
+
+.center[☝️ A shortcut formula to calculate covariance]
+
+
+???
+Proofs
+$$
+\begin{aligned}
+\text{cov}(X, X)&=\text{E}\big[(X-\text{E}[X])(X-\text{E}[X])\big] \\\
+\\\
+&=\text{E}\big[(X-\text{E}[X])^2\big] \\\
+\\\
+&=\text{var}(X) \;\;\; \color{gray}{\leftarrow\text{by definition of variance}}\\\
+\end{aligned}
+$$
+
+
+$$
+\begin{aligned}
+\text{cov}(X, Y)&=\text{E}\big[(X-\text{E}[X])(Y-\text{E}[Y])\big] \\\
+\\\
+&=\text{E}\big[XY-\text{E}[X]Y-\text{E}[Y]X+\text{E}[X]\text{E}[Y]\big] \\\
+\\\
+&=\text{E}[XY]-\text{E}[X]\text{E}[Y]-\text{E}[Y]\text{E}[X]+\text{E}[X]\text{E}[Y] \\\
+\\\
+&=\text{E}[XY]-\text{E}[X]\text{E}[Y] \\\
+\end{aligned}
+$$
+
+---
+$X$: whether they are a current smoker
+
+$Y$: whether they will develop lung cancer at some point
+
+| |&nbsp;&nbsp;&nbsp;&nbsp;$Y=0$&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;$Y=1$&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$p_X(x)$&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|:---:|:---:|:---:|:---:|
+|&nbsp;&nbsp;&nbsp;&nbsp;$X=0$&nbsp;&nbsp;&nbsp;&nbsp;|$72\%$|$3\%$|$75\%$|
+|&nbsp;&nbsp;&nbsp;&nbsp;$X=1$&nbsp;&nbsp;&nbsp;&nbsp;|$20\%$|$5\%$|$25\%$|
+|$p_Y(y)$|$92\%$|$8\%$|$100\%$|
+
+What is the covariance between $X$ and $Y$?
+
+---
+
+# Properties
+
+<br>
+
+$$\text{cov}(aX+b, Y)=a\cdot\text{cov}(X, Y),$$
+$$\text{for any constants $a$ and $b$.}$$
+
+
+???
+Proof
+
+$$
+\begin{aligned}
+\text{cov}(aX+b, Y)&=\text{E}\big[(aX+b-\text{E}[aX+b])(Y-\text{E}[Y])\big] \\\
+\\\
+&=\text{E}\big[(aX+b-a\text{E}[X]-b)(Y-\text{E}[Y])\big] \\\
+\\\
+&=a\cdot\text{E}\big[(X-\text{E}[X])(Y-\text{E}[Y])\big] \\\
+\\\
+&=a\cdot\text{cov}(X, Y) \\\
+\end{aligned}
+$$
+
+---
+# Commutative property
+
+<br>
+
+$$\text{cov}(X, Y)=\text{cov}(Y, X)$$
+
+???
+Proof
+
+$$
+\begin{aligned}
+\text{cov}(X, Y)&=\text{E}\big[(X-\text{E}[X])(Y-\text{E}[Y])\big] \\\
+\\\
+&=\text{E}\big[(Y-\text{E}[Y])(X-\text{E}[X])\big] \\\
+\\\
+&=\text{cov}(Y, X) \\\
+\end{aligned}
+$$
+
+---
+# Distributive property
+
+<br>
+
+$$\text{cov}(X+Y, Z)=\text{cov}(X, Z)+\text{cov}(Y, Z)$$
+
+--
+
+<br>
+
+Similarly, we can prove that 
+
+$$
+\begin{aligned}
+\text{cov}(X, Y+Z)=&\;\text{cov}(X, Y)+\text{cov}(X, Z) \\\
+\\\
+\text{cov}(X+Y, Z+W)=&\;\text{cov}(X, Z) + \\\
+&\; \text{cov}(Y, Z)+ \\\
+&\; \text{cov}(X, W)+ \\\
+&\; \text{cov}(Y, W) \\\
+\end{aligned}
+$$
+
+???
+Proof
+
+$$
+\begin{aligned}
+&\;\text{cov}(X+Y, Z) \\\
+\\\
+=&\;\text{E}\big[(X+Y-\text{E}[X+Y])(Z-\text{E}[Z])\big] \;\;\; \color{gray}{\leftarrow\text{by definition}} \\\
+\\\
+=&\;\text{E}\big[(X-\text{E}[X]+Y-\text{E}[Y])(Z-\text{E}[Z])\big] \\\
+\\\
+=&\;\text{E}\big[(X-\text{E}[X])(Z-\text{E}[Z])+(Y-\text{E}[Y])(Z-\text{E}[Z])\big] \\\
+\\\
+=&\;\text{E}\big[(X-\text{E}[X])(Z-\text{E}[Z])\big]+\text{E}\big[(Y-\text{E}[Y])(Z-\text{E}[Z])\big] \\\
+\\\
+=&\;\text{cov}(X, Z)+\text{cov}(Y, Z) \\\
+\end{aligned}
+$$
+
+---
+# Properties
+
+$$
+\small{
+\text{var}(X+Y)=\text{var}(X)+\text{var}(Y)+2\text{cov}(X, Y)
+}
+$$
+
+--
+
+We can also write it as
+
+$$
+\small{
+\text{var}(X+Y) = \text{cov}(X, X)+ \text{cov}(Y, Y)+ \text{cov}(X, Y)+ \text{cov}(Y, X)
+}
+$$
+
+--
+
+If we replace $Y$ with $-Y$
+
+$$
+\small{
+\begin{aligned}
+\text{var}(X-Y)&=\text{var}(X)+\text{var}(-Y)+2\text{cov}(X, -Y) \\\
+\\\
+&=\text{var}(X)+\text{var}(Y)-2\text{cov}(X, Y) \\\
+\end{aligned}
+}
+$$
+
+???
+Proof
+
+$$
+\begin{aligned}
+&\;\text{var}(X+Y) \\\
+\\\
+=&\;\text{E}\big[(X+Y-\text{E}[X+Y])^2\big] \;\;\; \color{gray}{\leftarrow\text{by definition of variance}} \\\
+\\\
+=&\;\text{E}\big[(X-\text{E}[X]+Y-\text{E}[Y])^2\big] \\\
+\\\
+=&\;\text{E}\big[(X-\text{E}[X])^2+(Y-\text{E}[Y])^2+2(X-\text{E}[X])(Y-\text{E}[Y])\big] \\\
+\\\
+=&\;\text{E}\big[(X-\text{E}[X])^2\big]+\text{E}\big[(Y-\text{E}[Y])^2\big] +2\text{E}\big[(X-\text{E}[X])(Y-\text{E}[Y])\big] \\\
+\\\
+=&\;\text{var}(X)+\text{var}(Y)+2\text{cov}(X, Y) \\\
+\end{aligned}
+$$
+
+---
+# For three random variables 
+
+$$
+\small{
+\begin{aligned}
+\text{var}(X_1+X_2+X_3) =&\; \text{var}(X_1)+\text{var}(X_2)+\text{var}(X_3)+ \\\
+\\\
+&\;2\text{cov}(X_1, X_2)+2\text{cov}(X_1, X_3)+2\text{cov}(X_2, X_3) \\\
+\end{aligned}
+}
+$$
+
+--
+
+Or
+
+$$
+\small{
+\begin{aligned}
+&\;\text{var}(X_1+X_2+X_3) \\\
+\\\
+=&\;\text{var}(X_1)+\text{var}(X_2)+\text{var}(X_3)+ \\\
+\\\
+&\;\text{cov}(X_1, X_2)+\text{cov}(X_2, X_1)+ \\\
+\\\
+&\;\text{cov}(X_1, X_3)+\text{cov}(X_3, X_1)+ \\\
+\\\
+&\;\text{cov}(X_2, X_3)+\text{cov}(X_3, X_2) \\\
+\end{aligned}
+}
+$$
+
+---
+
+$$
+\small{
+\begin{aligned}
+\text{var}(X_1+X_2+X_3)=&\;\text{cov}(X_1, X_1)+ \\\
+&\;\text{cov}(X_1, X_2)+ \\\
+&\;\text{cov}(X_1, X_3)+ \\\
+\\\
+&\;\text{cov}(X_2, X_1)+ \\\
+&\;\text{cov}(X_2, X_2)+ \\\
+&\;\text{cov}(X_2, X_3)+ \\\
+\\\
+&\;\text{cov}(X_3, X_1)+ \\\
+&\;\text{cov}(X_3, X_2)+ \\\
+&\;\text{cov}(X_3, X_3)+ \\\
+\end{aligned}
+}
+$$
+
+--
+
+<br>
+
+$$
+\small{
+\text{var}(X_1+X_2+X_3)=\sum_{i, j}\text{cov}(X_i, X_j)
+}
+$$
+
+???
+The variance of the sum of random variables is the sum of the covariance over all possible pairs. 
+
+---
+More generally, 
+
+$$
+\small{
+\begin{aligned}
+&\;\text{var}(X_1+X_2+\cdots+X_n) \\\
+=&\;\text{var}(X_1)+\text{var}(X_2)+\cdots+\text{var}(X_n)+2\sum_{i < j}\text{cov}(X_i, X_j) \\\
+\end{aligned}
+}
+$$
+
+--
+Or
+
+$$
+\small{
+\begin{aligned}
+&\;\text{var}(X_1+X_2+\cdots+X_n) \\\
+=&\;\text{var}(X_1)+\text{var}(X_2)+\cdots+\text{var}(X_n)+\sum_{i \neq j}\text{cov}(X_i, X_j) \\\
+\end{aligned}
+}
+$$
+
+--
+Or
+
+$$
+\small{
+\text{var}(X_1+X_2+\cdots+X_n)=\sum_{i, j}\text{cov}(X_i, X_j)
+}
+$$
+
+---
+# Independence
+
+If two RVs $X$ and $Y$ are independent, 
+
+$$\text{cov}(X, Y)=0$$
+
+--
+
+<br>
+- Independent RVs are uncorrelated. 
+
+--
+
+- However, the converse is not true. 
+  - Uncorrelated RVs may not be independent. 
+
+???
+Proof
+
+$$\text{cov}(X, Y)=\text{E}[XY]-\text{E}[X]\text{E}[Y]=0$$
+
+---
+
+$$
+\begin{aligned}
+X &\sim \text{N}(0, 1) \\\
+\\\
+Y &=  X^2\\\
+\end{aligned}
+$$
+
+--
+
+$$\text{cov}(X, Y)=\text{E}[XY]-\text{E}[X]\text{E}[Y]=\text{E}[XY]$$
+
+--
+
+$$\text{E}[XY]=\text{E}[X^3]=\int_{-\infty}^{+\infty} z^3(\frac{1}{\sqrt{2\pi}}e^{-\frac{z^2}{2}})dz=0$$
+
+--
+
+$$\text{cov}(X, Y)=0$$
+
+$X$ and $Y$ are uncorrelated. 
+
+--
+
+However, they are not independent. 
+
+In fact, knowing $X$ gives us complete info about $Y$.
+
+---
+# Uncorrelated but dependent 
+
+$$X \sim \text{N}(0, 1), \;\;\;\;Y =  X^2, \;\;\;\;\text{cov}(X, Y)=0$$
+
+.center[![:scale 45%](../images/uncorrelated-ind.png)]
+
+
+Covariance is a measure of .red[linear] relationship. 
+
+RVs can be dependent in nonlinear ways, and still have zero covariance. 
+
+---
+# Independence
+
+If $X$ and $Y$ are independent, then
+
+$$\text{var}(X + Y)=\text{var}(X) + \text{var}(Y)$$
+
+???
+Proof
+
+$$
+\begin{aligned}
+\text{var}(X+Y)&=\text{var}(X)+\text{var}(Y)+2\text{cov}(X, Y) \\\
+\\\
+&=\text{var}(X)+\text{var}(Y)+2\cdot 0 \\\
+\\\
+&=\text{var}(X)+\text{var}(Y) \\\
+\end{aligned}
+$$
+
+---
+# Independence
+
+Generally, if $n$ RVs $X_1, X_2, \cdots, X_n$ are independent, 
+
+$$\text{var}\bigg(\sum_{i=1}^n X_i\bigg)=\sum_{i=1}^n \text{var}(X_i)$$
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

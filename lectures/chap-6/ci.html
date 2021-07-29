@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Confidence intervals</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+
+class: middle, center
+
+.huge[Confidence intervals]
+
+<br>
+![:scale 90%](../images/ci-cover.png)
+
+<br><br>
+<div style="text-align: left;"><a class="sourcelink" href="https://www.pinterest.com/pin/544231936198354675/">Image source</a></div>
+
+---
+
+Point estimate
+
+- Battery life: $\hat{\theta}=11.45$ hours based on 100 samples
+
+- It provides no info about how .red[precise] is the estimate
+
+--
+
+<br>
+
+We are often interested in constructing a so-called [confidence interval (CI)](https://en.wikipedia.org/wiki/Confidence_interval).
+
+--
+
+Roughly speaking, it is an interval that contains the unknown parameter $\theta$ with a specified high probability.
+
+- The battery life has a CI of $[10.21,12.69]$ hours
+
+---
+# Constructing a confidence interval
+
+First, we need to specify a desired high probability.
+
+- This high probability is called the .red[confidence level]
+
+- Common choices are 95% or 99%
+
+- $(1-\alpha)$ is often used to indicate the confidence level
+
+$$95\% \;(\alpha=0.05),\;\; 99\% \;(\alpha=0.01)$$
+
+---
+# Constructing a confidence interval
+
+Once we specified the confidence level $(1-\alpha)$, 
+
+we replace the point estimator $\hat{\Theta}_n$ by 
+
+- a lower estimator $\hat{\Theta}_n^{-}$
+
+- an upper estimator $\hat{\Theta}_n^{+}$
+
+so that
+
+$$\text{P}\bigg(\hat{\Theta}_n^{-} \leq \theta \leq \hat{\Theta}_n^{+}\bigg) = 1-\alpha$$
+
+--
+
+We call $\bigg[\hat{\Theta}_n^{-}, \; \hat{\Theta}_n^{+}\bigg]$ a $(1-\alpha)$ confidence interval. 
+
+
+---
+# Procedures for constructing a CI
+
+Suppose $X_1, X_2, \cdots, X_n$ are i.i.d. .red[normal], with 
+
+- unknown mean $\theta$
+- known variance $\sigma^2$
+
+$$\hat{\Theta}_n=\frac{X_1+X_2+\cdots+X_n}{n}$$
+
+--
+
+$$\hat{\Theta}_n \sim \text{N}\bigg(\theta, \frac{\sigma^2}{n}\bigg)\;\;\rightarrow\;\;\frac{\hat{\Theta}_n-\theta}{\sigma/\sqrt{n}} \sim \text{N}(0, 1)$$
+
+--
+
+.small[Note this is a simple, albeit unrealistic case, as typically if we don't know the mean, we don't know the variance either. We will discuss how to deal with unknown variance later.]
+
+---
+# Procedures for constructing a CI
+
+Let's construct a 95% CI, that is, $\alpha=0.05$.
+
+.center[![:scale 85%](../images/ci-95.png)]
+
+--
+
+$$\Phi(\color{red}{?})=1-0.025=0.975$$
+
+--
+
+It is called a .red[critical value] of $z$ corresponding to $0.025$.
+
+We can check the standard normal table (next slide). 
+
+
+---
+
+.center[![:scale 90%](../images/table-z.png)]
+
+
+---
+
+.center[![:scale 70%](../images/z-critical.png)]
+
+
+
+.center[![:scale 100%](../images/table-z-critical.png)]
+
+
+---
+
+.center[![:scale 100%](../images/ci-95-full.png)]
+
+We want 
+
+$$\text{P}\bigg(-1.96 < \frac{\hat{\Theta}_n-\theta}{\sigma/\sqrt{n}} < 1.96\bigg) = 0.95$$
+
+---
+
+Multiply through by $\sigma/\sqrt{n}$
+
+$$\small{\text{P}\bigg(-1.96 \cdot \frac{\sigma}{\sqrt{n}} < \hat{\Theta}_n-\theta < 1.96 \cdot \frac{\sigma}{\sqrt{n}}\bigg) = 0.95}$$
+
+--
+
+Subtract $\hat{\Theta}_n$ from each term
+
+$$\small{\text{P}\bigg(-\hat{\Theta}_n-1.96 \cdot \frac{\sigma}{\sqrt{n}} < -\theta < -\hat{\Theta}_n + 1.96 \cdot \frac{\sigma}{\sqrt{n}}\bigg) = 0.95}$$
+
+--
+
+Multiply through by $-1$
+
+$$\small{\text{P}\bigg(\hat{\Theta}_n + 1.96 \cdot \frac{\sigma}{\sqrt{n}} > \theta > \hat{\Theta}_n - 1.96 \cdot \frac{\sigma}{\sqrt{n}}\bigg) = 0.95}$$
+
+--
+
+$$\small{\text{P}\bigg(\hat{\Theta}_n - 1.96 \cdot \frac{\sigma}{\sqrt{n}} < \theta < \hat{\Theta}_n + 1.96 \cdot \frac{\sigma}{\sqrt{n}}\bigg) = 0.95}$$
+
+
+---
+
+$$\require{color}\colorbox{yellow}{$\text{P}\bigg(\hat{\Theta}_n - 1.96 \cdot \frac{\sigma}{\sqrt{n}} < \theta < \hat{\Theta}_n + 1.96 \cdot \frac{\sigma}{\sqrt{n}}\bigg) = 0.95$}$$
+
+This means that 
+
+$$\bigg[\hat{\Theta}_n - 1.96 \cdot \frac{\sigma}{\sqrt{n}},\;\; \hat{\Theta}_n + 1.96 \cdot \frac{\sigma}{\sqrt{n}}\bigg]$$
+
+is a 95% confidence interval.
+
+--
+
+<br>
+
+More compactly, it can be written as
+
+$$\hat{\Theta}_n \pm 1.96 \cdot \frac{\sigma}{\sqrt{n}}$$
+
+---
+
+More generally, for a confidence level of $1-\alpha$, 
+
+let $z_{\frac{\alpha}{2}}$ be such that $\Phi(z_{\frac{\alpha}{2}})=1-\frac{\alpha}{2}$. 
+
+.center[![:scale 60%](../images/ci-alpha.png)]
+
+--
+
+$$\small{\text{P}\bigg(\hat{\Theta}_n - z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}} < \theta < \hat{\Theta}_n + z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}}\bigg) = 1-\alpha}$$
+
+$$\small{\bigg[\hat{\Theta}_n - z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}},\;\; \hat{\Theta}_n + z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}}\bigg]}, \;\;\text{or }\;\; \hat{\Theta}_n \pm z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}}$$
+
+is a $(1-\alpha)$ confidence interval.
+
+---
+# Interpretation
+
+Assume we have calculated the 95% confidence interval for an unknown parameter $\theta$ as $[10.21,12.69]$.
+
+What does this interval really mean?
+
+--
+
+<br>
+
+Does it mean that the true parameter $\theta$ lies in this CI $[10.21,12.69]$ with a probability of 95%?
+
+--
+
+<br>
+
+.red[No]. 
+$\theta$ is a fixed unknown parameter. 
+The CI that we obtained $[10.21,12.69]$ is a fixed interval. 
+
+---
+We construct a CI many times w/ the same procedure. 
+
+That is, each time we
+- obtain an independent collection of $n$ observations
+- construct a 95% CI based on the $n$ observations
+
+We expect that about 95% of these CIs will include $\theta$.
+
+--
+
+.center[![:scale 28%](../images/cis.png)]
+
+---
+
+.center[![:scale 100%](../images/ci-alpha-result.png)]
+
+It is a random interval centered at $\hat{\Theta}_n$. 
+
+The half-width of the CI is $z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}}$.
+
+The width of the CI indicates how .red[precise] the estimate is. 
+
+---
+
+$$\hat{\Theta}_n \pm \colorbox{yellow}{$z_{\alpha/2}$} \frac{\sigma}{\sqrt{n}}$$
+
+.center[![:scale 100%](../images/table-z-critical.png)]
+
+--
+
+$$\text{90% CI: }\;\;\;\; \hat{\Theta}_n \pm 1.645 \frac{\sigma}{\sqrt{n}}$$
+
+$$\text{95% CI: }\;\;\;\; \hat{\Theta}_n \pm 1.96 \frac{\sigma}{\sqrt{n}}$$
+
+$$\text{99% CI: }\;\;\;\; \hat{\Theta}_n \pm 2.58 \frac{\sigma}{\sqrt{n}}$$
+
+---
+
+$$\hat{\Theta}_n \pm z_{\frac{\alpha}{2}} \frac{\colorbox{yellow}{$\sigma$}}{\sqrt{n}}$$
+
+The half-width is proportional to $\sigma$ (population standard deviation). 
+
+--
+
+<br>
+
+.center[![:scale 100%](../images/normal-std.png)]
+
+---
+
+$$\hat{\Theta}_n \pm z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{\colorbox{yellow}{$n$}}}$$
+
+The half-width decreases as $n$ increases. 
+
+--
+
+.center[![:scale 100%](../images/sample-size.png)]
+
+
+---
+# Sample size calculation
+
+
+You have a desired precision (i.e., $\pm 0.5$ hours) and confidence level (e.g., 99%) for a CI. 
+
+What sample size should you use?
+
+--
+
+$$\text{Half width:}\;\;d=z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}}, \;\;\;\;\text{Solve for $n$.}$$
+
+--
+
+The sample size needed for a desired half-width of $d$ is
+
+$$n=\bigg(z_{\frac{\alpha}{2}} \frac{\sigma}{d}\bigg)^2$$
+
+---
+
+Suppose $X_1, X_2, \cdots, X_n$ are i.i.d. .red[normal], 
+with unknown mean $\theta$ and known variance $\sigma^2$.
+
+
+$$\small{\text{Sample mean estimator:}\;\;\hat{\Theta}_n=\frac{X_1+X_2+\cdots+X_n}{n}}$$
+
+--
+
+$$\small{\text{var}\big(\hat{\Theta}_n\big)=\frac{\sigma^2}{n}, \;\;\;\;\sqrt{\text{var}\big(\hat{\Theta}_n\big)}=\frac{\sigma}{\sqrt{n}}}$$
+
+--
+
+The standard deviation of $\hat{\Theta}_n$ is termed .red[standard error].
+
+--
+
+$$\small{\hat{\Theta}_n \pm z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}}}$$
+
+The CI above can be expressed in words as
+
+$$\small{\text{(point estimate)} \pm \text{($z$ critical value}) \cdot \text{(standard error)}}$$
+
+---
+# A large sample interval for the mean
+
+Suppose $X_1, X_2, \cdots, X_n$ are 
+
+- i.i.d. (.red[not necessarily normal]) 
+- with unknown mean $\theta$ and known variance $\sigma^2$
+
+$$\small{\text{Sample mean estimator:}\;\;\hat{\Theta}_n=\frac{X_1+X_2+\cdots+X_n}{n}}$$
+
+--
+
+If $n$ is sufficiently large, what does the CLT tell us?
+
+--
+
+$$
+\small{
+\begin{aligned}
+\hat{\Theta}_n \;&\text{ is approximately } \text{N}\bigg(\theta, \frac{\sigma^2}{n}\bigg) \\\
+\frac{\hat{\Theta}_n-\theta}{\sigma/\sqrt{n}} \;&\text{ is approximately } \text{N}(0, 1) \\\
+\end{aligned}
+}
+$$
+
+---
+# Procedures for constructing a CI
+
+
+We can proceed exactly as in the previous case. 
+
+.center[![:scale 60%](../images/ci-alpha.png)]
+
+$$\small{\text{P}\bigg(-z_{\frac{\alpha}{2}} < \frac{\hat{\Theta}_n-\theta}{\sigma/\sqrt{n}} < z\_{\frac{\alpha}{2}}\bigg) \approx 1-\alpha \;\;\;\color{gray}{\rightarrow \text{by CLT}}}$$
+
+--
+
+$$\small{\text{P}\bigg(\hat{\Theta}_n - z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}} < \theta < \hat{\Theta}_n + z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}}\bigg) \approx 1-\alpha}$$
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

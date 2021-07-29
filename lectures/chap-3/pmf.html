@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Probability mass functions</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+
+class: middle, center
+
+.huge[Probability mass functions]
+
+![:scale 70%](../images/pmf-cover.png)
+
+---
+# Definition
+
+The .red[probability mass function (PMF)] of a discrete RV $X$
+
+is defined by:
+
+$$
+\begin{aligned}
+p_X(x) =& \; \text{P}(X=x) \\\
+=& \; \text{P}(\text{all outcomes in $\Omega$ that give rise to} \\\
+& \;\;\;\;\; \text{a value of $X$ equal to $x$}) \\\
+\text{for all $x$.}& \\\
+\end{aligned}
+$$
+
+
+.center[![:scale 100%](../images/pmf-def.png)]
+
+---
+# Probability mass function (PMF)
+
+Notations
+- An upper case character (e.g., $X$) to denote a RV (which is a function).
+- A lower case character (e.g., $x$) to denote a specific value that a RV can take.
+
+<br>
+The PMF of a discrete RV $X$:
+
+$$p_X(x) = \text{P}(X=x)$$
+
+
+---
+# Example
+
+$X$: Roll a die and record the number
+
+.center[![:scale 90%](../images/rv-dice.png)]
+
+--
+
+$$
+\begin{aligned}
+p_X(1) &= \text{P}(X=1)= \text{P}(⚀)=1/6 \\\
+\\\
+p_X(2) &= \text{P}(X=2)= \text{P}(⚁)=1/6 \\\
+\\\
+&\cdots \\\
+\\\
+p_X(6) &= \text{P}(X=6)= \text{P}(⚅)=1/6 \\\
+\end{aligned}
+$$
+
+---
+# Example (cont'd)
+
+$X$: Roll a die and record the number
+
+$$p_X(x) = 
+\begin{cases}
+    1/6, & \text{if } x = 1, 2, \cdots, 6, \\\
+    0,              & \text{otherwise.}
+\end{cases}
+$$
+
+--
+
+.center[![:scale 60%](../images/pmf-1die.png)]
+
+---
+# Calculating the PMF of a RV
+
+$$
+\begin{aligned}
+\text{PMF def: }\;\;\;p_X(x) =& \; \text{P}(X=x) \\\
+=& \; \text{P}(\text{all outcomes in $\Omega$ that give rise to} \\\
+& \;\;\;\;\; \text{a value of $X$ equal to $x$}) \\\
+\text{for all $x$.}& \\\
+\end{aligned}
+$$
+
+--
+
+Procedure
+
+1. Find the sample space of the experiment.
+1. List all possible values of $x$ that the RV $X$ can take.
+1. For each $x$, collect all the possible outcomes that give rise to the event $\{X=x\}$
+1. Add their probabilities to obtain $p_X(x)$
+
+---
+# Exercise - Find the PMF of $X$
+
+$X$: Toss a coin twice and record the number of heads.
+
+--
+
+<br>
+![:scale 40%](../images/samplespace-2tosses.png)
+
+
+---
+# Exercise - Find the PMF of $X$
+
+$X$: Toss a coin twice and record the number of heads.
+
+$$p_X(x) = 
+\begin{cases}
+    1/4, & \text{if $x = 0$ or 2,} \\\
+    1/2, & \text{if $x = 1$,} \\\
+    0,              & \text{otherwise.}
+\end{cases}
+$$
+
+--
+
+.center[![:scale 60%](../images/pmf-binomial-n2.png)]
+
+---
+# Exercise - Find the PMF of $X$
+
+$X$: Roll a pair of dice 🎲🎲 and record the max roll.
+
+<br>
+![:scale 40%](../images/samplespace-2dice.png)
+
+---
+# Exercise - Find the PMF of $X$
+
+$X$: Roll a pair of dice and record the maximum roll.
+
+<br>
+.center[![:scale 100%](../images/pmf-2dice-maxroll.png)]
+
+---
+# Properties of PMF
+
+For any RV $X$
+
+$$p_X(x) \geq 0, \;\;\;\; \text{for any $x$.}$$
+
+--
+
+<br>
+For any RV $X$
+
+$$\sum_x p_X(x) = 1$$
+
+$$\text{where $x$ ranges over all possible values of $X$.}$$
+
+
+---
+# Functions of random variables
+
+
+.center[![:scale 100%](../images/function-rv-2.png)]
+
+
+--
+
+<br>
+
+$$\large{p_Y(y)=\sum_{\{x|g(x)=y\}}p_X(x)}$$
+
+
+---
+# Exercise
+
+RV $X$ has the following PMF:
+
+$$p_X(x) = 
+\begin{cases}
+    1/5, & \text{if $x = -2, -1, 0, 1, 2$,} \\\
+    0,              & \text{otherwise.}
+\end{cases}
+$$
+
+--
+
+RV $Y$ is a function of $X$
+
+$$Y=|X|$$
+
+What is the PMF of $Y$?
+
+---
+
+$$p_X(x) = 
+\begin{cases}
+    1/5, & \text{if $x = -2, -1, 0, 1, 2$,} \\\
+    0,              & \text{otherwise.}
+\end{cases}
+$$
+
+$$Y=|X|$$
+
+<br>
+
+.center[![:scale 64%](../images/function-rv-3.png)]
+
+--
+
+$$p_Y(y) = 
+\begin{cases}
+    2/5, & \text{if $y = 1, 2$,} \\\
+    1/5, & \text{if $y = 0$,} \\\
+    0,              & \text{otherwise.}
+\end{cases}
+$$
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

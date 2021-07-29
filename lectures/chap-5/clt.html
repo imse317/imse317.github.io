@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Central Limit Theorem</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+class: middle, center
+
+.huge[Central Limit Theorem]
+
+<br>
+
+![:scale 50%](../images/clt-cover.png)
+
+---
+# [Central Limit Theorem (CLT)](https://en.wikipedia.org/wiki/Central_limit_theorem)
+
+Let $X_1, X_2, \cdots, X_n$ be i.i.d. random variables.
+
+They all have mean $\mu$ and variance $\sigma^2$.
+
+$$
+\small{
+\begin{aligned}
+\bar{X}_n&=\frac{X_1+X_2+\cdots+X_n}{n} \\\
+\\\
+S_n&=X_1+X_2+\cdots+X_n \\\
+\end{aligned}
+}
+$$
+
+Then, if $n$ is large, 
+
+$$
+\small{
+\begin{aligned}
+\bar{X}_n &\text{ is approximately } \text{N}(\mu, \frac{\sigma^2}{n}) \\\
+\\\
+S_n &\text{ is approximately } \text{N}(n\mu, n\sigma^2) \\\
+\end{aligned}
+}
+$$
+
+---
+# Central Limit Theorem (CLT)
+
+If $n$ is large, 
+
+$$
+\begin{aligned}
+\bar{X}_n &\text{ is approximately } \text{N}(\mu, \frac{\sigma^2}{n}) \\\
+\\\
+S_n &\text{ is approximately } \text{N}(n\mu, n\sigma^2) \\\
+\end{aligned}
+$$
+
+The standardized version:
+
+$$Z_n=\frac{\bar{X}_n-\mu}{\sigma/\sqrt{n}}=\frac{S_n-n\mu}{\sqrt{n}\sigma} \;\text{ is approximately } \text{N}(0, 1)$$
+
+---
+
+$$X_i \sim \text{unif}(0, 1)$$
+
+$$\bar{X}_n=\frac{X_1+X_2+\cdots+X_n}{n}$$
+
+.center[
+![:scale 30%](../images/clt-unif-1.png)
+![:scale 30%](../images/clt-unif-2.png)
+![:scale 30%](../images/clt-unif-3.png)
+![:scale 32%](../images/clt-unif-5.png)
+![:scale 30%](../images/clt-unif-30.png)
+![:scale 30%](../images/clt-unif-100.png)
+]
+
+
+---
+
+$$X_i \sim \text{unif}(0, 1)$$
+
+$$\bar{X}_n=\frac{X_1+X_2+\cdots+X_n}{n}$$
+
+Let's fix the scale for the x-axis
+
+.center[
+![:scale 30%](../images/clt-unif-1-fixed.png)
+![:scale 30%](../images/clt-unif-2-fixed.png)
+![:scale 30%](../images/clt-unif-3-fixed.png)
+![:scale 32%](../images/clt-unif-5-fixed.png)
+![:scale 30%](../images/clt-unif-30-fixed.png)
+![:scale 30%](../images/clt-unif-100-fixed.png)
+]
+
+
+---
+
+$$X_i \sim \text{bin}(10, 0.9)$$
+
+$$\bar{X}_n=\frac{X_1+X_2+\cdots+X_n}{n}$$
+
+.center[
+![:scale 30%](../images/clt-bin-1.png)
+![:scale 30%](../images/clt-bin-2.png)
+![:scale 30%](../images/clt-bin-3.png)
+![:scale 32%](../images/clt-bin-5.png)
+![:scale 30%](../images/clt-bin-30.png)
+![:scale 30%](../images/clt-bin-100.png)
+]
+
+---
+
+$$X_i \sim \text{expo}(1)$$
+
+$$\bar{X}_n=\frac{X_1+X_2+\cdots+X_n}{n}$$
+
+.center[
+![:scale 30%](../images/clt-expo-1.png)
+![:scale 30%](../images/clt-expo-2.png)
+![:scale 30%](../images/clt-expo-3.png)
+![:scale 32%](../images/clt-expo-5.png)
+![:scale 30%](../images/clt-expo-30.png)
+![:scale 30%](../images/clt-expo-100.png)
+]
+
+---
+# How big does $n$ need to be for the CLT?
+
+Not very big. Rule of thumb: $n > 30$.
+
+--
+
+$$\small{\text{unif}(0, 1)\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\text{bin}(10, 0.9)\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\text{expo}(1)}$$
+.center[
+![:scale 33%](../images/clt-unif-1.png)
+![:scale 31%](../images/clt-bin-1.png)
+![:scale 31%](../images/clt-expo-1.png)
+![:scale 31%](../images/clt-unif-30.png)
+![:scale 31%](../images/clt-bin-30.png)
+![:scale 33%](../images/clt-expo-30.png)
+]
+
+---
+# Exercise
+
+An accountant rounds each transaction to the nearest dollar (e.g., from $8.63 to 9 dollars). 
+
+Assume the error in rounding is $\text{unif}(-0.5, 0.5).$
+
+What is the probability that the total error in 300 transaction entries is more than $5?
+
+---
+.center[![:scale 90%](../images/table-z.png)]
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

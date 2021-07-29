@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Permutation</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+
+class: split-50
+
+.column[
+<br><br><br><br><br><br>
+.huge[Permutation]
+]
+.column[
+<br><br><br><br><br>
+![:scale 50%](../images/permutation-cover.png)
+<br><br><br><br><br><br>
+<div class="source"><a class="sourcelink" href="https://unsplash.com/photos/XAX8vCM5G6o">Image source</a></div>
+]
+
+---
+
+<br>
+
+![:scale 100%](../images/permutate-def-blank.png)
+
+---
+
+<br>
+
+![:scale 100%](../images/permutate-def.png)
+
+---
+How many possible ways to .red[rank] two teams A and B?
+
+Assume there are no ties. 
+
+---
+How many possible ways to .red[rank] 3 teams A, B, and C?
+
+Assume there are no ties. 
+
+???
+![:scale 30%](../images/permutation-tree.png)
+
+---
+class: center
+# Permutation
+
+An .red[ordering] of distinguishable objects
+
+<br><br><br>
+![:scale 80%](../images/permutation-slots.png)
+
+
+???
+$$
+\begin{aligned}
+\text{Permutations of }n &= n \times (n-1) \times (n-2) \times \cdots \times 2 \times 1 \\\
+\\\
+&=n! \\\
+\end{aligned}
+$$
+
+---
+# Exercise
+
+In a track race with 8 athletes, how many results are possible? 
+.gray[(Assume no ties.)]
+
+.center[![:scale 80%](../images/track-race.png)]
+
+<br><br>
+<div class="source"><a class="sourcelink" href="https://pixabay.com/photos/women-race-track-and-field-running-801940/">Image source</a></div>
+
+
+???
+$$8! = 8 \times 7 \times \cdots \times 2 \times 1 = 40,320$$
+
+---
+# Exercise (cont'd)
+
+How many .red[podium (i.e., top three)] results are possible? 
+
+.center[![:scale 80%](../images/track-race.png)]
+
+???
+$$8 \times 7 \times 6 = 336$$
+
+---
+class: center
+# $k$-permutations of $n$ objects
+
+<br><br><br>
+![:scale 80%](../images/permutation-k-slots.png)
+
+---
+# $k$-permutations of $n$ objects
+
+$$ n \times (n-1) \times (n-2) \times \cdots \times (n-k+1) $$
+
+???
+$$
+\begin{aligned}
+&n \times (n-1) \times (n-2) \times \cdots \times (n-k+1) \\\
+\\\
+=& \frac{n \times (n-1) \times (n-2) \times \cdots \times (n-k+1)}{1} \\\
+\\\
+=& \frac{n \times (n-1) \times (n-2) \times \cdots \times (n-k+1) \times (n-k) \times (n-k-1) \times \cdots \times 2 \times 1}{(n-k) \times (n-k-1) \times \cdots \times 2 \times 1} \\\
+\\\
+=& \frac{n!}{(n-k)!} \\\
+\end{aligned}
+$$
+
+---
+class: center, middle
+
+# $0!=1$
+
+.center[![:scale 50%](../images/why.gif)]
+
+---
+
+class: split-50
+
+.column[
+<br><br>
+### $a^0=1$
+]
+.column[
+<br><br>
+### &nbsp;&nbsp;&nbsp;&nbsp;$0!=1$
+]
+
+---
+# Exercise
+
+Suppose your music collection include
+
+- $n_1$ pop songs
+- $n_2$ rock songs
+- $n_3$ country songs
+
+In how many ways can you arrange your music, so that each genre is contiguous?
+
+
+---
+# Exercise (cont’d)
+
+Now you are making a playlist.
+
+You pick $k_i$ out of the $n_i$ songs of genre $i\;(= 1, 2, 3)$, 
+
+where $k_i = 0, 1, \cdots, n_i$.
+
+How many playlists are possible, so that each genre is contiguous?
+
+
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

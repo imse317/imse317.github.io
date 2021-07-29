@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Combination</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+
+class: split-60
+
+.column[
+<br><br><br><br><br><br>
+.huge[Combination]
+]
+.column[
+![:scale 33%](../images/set-partitions.svg)
+<div class="source"><a class="sourcelink" href="https://commons.wikimedia.org/wiki/File%3ASet_partitions_5%3B_circles.svg">Image source</a></div>
+]
+
+---
+Choose 2 students from 5 to volunteer this weekend.
+
+How many possible ways to choose the students? 
+
+--
+
+<br>
+.center[![:scale 80%](../images/set-partitions-5choose2.svg)]
+
+
+---
+# Combinations - an .red[unordered] subset
+
+Choose 3 students from 40 to form a committee.
+
+How many possible ways to form the committee? 
+
+--
+
+- How many .green[ordered] list of 3 students can be formed?
+
+
+--
+
+<br>
+
+- How many ways to order each chosen 3 students?
+
+--
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+![:scale 22%](../images/permutation-tree.png)
+
+
+???
+- How many .green[ordered] list of 3 students can be formed?
+$$3\text{-permutations of }40=\frac{40!}{(40-3)!}=59,280$$
+
+- How many ways to order each chosen 3 students?
+$$\text{Permutations of }3=3!=6$$
+
+They are: (A-B-C), (A-C-B), (B-A-C), (B-C-A), (C-A-B), (C-B-A)
+
+---
+# Combinations - an .red[unordered] subset
+
+Choose 3 students from 40 to form a committee.
+
+How many possible ways to form the committee? 
+
+???
+$$\begin{aligned}
+\text{number of unordered list}&=\frac{3\text{-permutations of }40}{\text{permutations of }3} \\\
+\\\
+&=\frac{40!}{3!(40-3)!} \\\
+\\\
+&=9,880
+\end{aligned}$$
+
+---
+# General formula for combinations
+
+<br>
+The number of ways of choosing $k$ objects out of $n$ is
+
+<br>
+
+$$\begin{aligned}
+{n \choose k}&=\frac{k\text{-permutations of }n}{\text{permutations of }k} \\\
+\\\
+&=\frac{n!}{k!(n-k)!} \\\
+\end{aligned}$$
+
+---
+# Permutation vs. combination
+
+.center[
+2-permutations of 4 letters A, B, C, and D
+
+$$\frac{4!}{(4-2)!}=12$$
+
+.green[AB&nbsp;&nbsp;BA&nbsp;&nbsp;AC&nbsp;&nbsp;CA&nbsp;&nbsp;AD&nbsp;&nbsp;DA&nbsp;&nbsp;BC&nbsp;&nbsp;CB&nbsp;&nbsp;BD&nbsp;&nbsp;DB&nbsp;&nbsp;CD&nbsp;&nbsp;DC]
+]
+
+--
+
+<br>
+
+.center[
+.green[AB&nbsp;&nbsp;AC&nbsp;&nbsp;AD&nbsp;&nbsp;BC&nbsp;&nbsp;BD&nbsp;&nbsp;CD]
+
+Combinations of choosing 2 letters from 4
+
+$${4 \choose 2}=\frac{4!}{2!(4-2)!}=6$$
+]
+
+---
+# Properties
+
+$${n \choose k}={n \choose n-k}$$
+
+--
+
+$${5 \choose 3}={5 \choose 5-3}$$
+
+
+.center[![:scale 60%](../images/set-partitions-5choose3.svg)]
+
+---
+$${n \choose k}={n \choose n-k}$$
+
+Proof:
+
+---
+# Exercise
+
+In a [round-robin](https://en.wikipedia.org/wiki/Round-robin_tournament) tennis tournament with $n$ players, 
+each player meets every other player exact once. 
+
+How many games need to be played in total?
+
+---
+# Exercise - [Powerball](https://en.wikipedia.org/wiki/Powerball)
+
+.center[![:scale 50%](../images/powerball.png)]
+
+Draw five numbers from a pool of 69 white balls and one number from a pool of 26 .red[Powerballs]. 
+
+To win a jackpot one needs to match all five white balls plus the power ball.
+
+What is the winning chance if you buy a single ticket?
+
+---
+# Exercise
+
+Toss a fair coin $n$ times.
+
+What is the chance there are $k\; (= 0, 1, \cdots, n)$ heads? 
+
+---
+# Exercise
+
+A jar contains $m$ maize and $n$ blue balls. 
+
+Two balls are drawn randomly from the jar. 
+
+What is the chance that the balls are of the same color?
+
+.left[![:scale 15%](../images/bag.png)]
+
+---
+# Exercise
+
+Draw 7 cards from a well-shuffled 52-card deck. 
+
+Find the probability that:
+
+- the 7 cards include .red[exact 3 aces].
+
+---
+# Exercise
+
+Draw 7 cards from a well-shuffled 52-card deck. 
+
+Find the probability that:
+
+- the 7 cards include .red[exact 2 kings]
+
+---
+# Exercise
+
+Draw 7 cards from a well-shuffled 52-card deck. 
+
+Find the probability that:
+
+- the 7 cards include .red[exact 3 aces or exact 2 kings].
+
+---
+# Exercise
+
+Your academic department offers
+
+- .red[8 lower level courses]  $L_1, L_2, \cdots, L_8$
+- .green[10 higher level courses] $H_1, H_2, \cdots, H_{10}$
+
+A valid curriculum consists of
+
+- .red[4 lower level courses] + .green[3 higher level courses]
+
+How many different curricula are possible? 
+
+---
+
+# Exercise (cont'd)
+
+- .red[8 lower level courses]  $L_1, L_2, \cdots, L_8$
+- .green[10 higher level courses] $H_1, H_2, \cdots, H_{10}$
+
+A valid curriculum consists of
+
+- .red[4 lower level courses] + .green[3 higher level courses]
+
+<br>
+In fact, $H_1, H_2, \cdots, H_5$ have $L_1$ as a prerequisite.
+
+Now how many different curricula are possible? 
+
+---
+# [Birthday problem](https://en.wikipedia.org/wiki/Birthday_problem)
+
+.center[![:scale 70%](../images/birthday.png)]
+
+How many people would it take to have a 50-50 chance that at least two of them share the same birthday?
+
+---
+# [Birthday problem](https://en.wikipedia.org/wiki/Birthday_problem)
+
+Another way to describe it:
+
+There are $n$ people at a party. 
+
+How likely at least two of them share their birthday?
+
+--
+
+Assumptions
+
+- Everyone has an equal probability of being born on any day in the year, independent of everyone else. 
+
+--
+
+- Ignore February 29th from leap years.
+
+---
+
+# [Birthday problem](https://en.wikipedia.org/wiki/Birthday_problem)
+
+You are at a party with a total of $n$ people. 
+
+How likely someone shares the birthday .red[with you]?
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

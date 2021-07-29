@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Correlation</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+class: split-50
+
+.column[
+<br><br><br><br><br>
+.huge[Correlation]
+]
+.column[
+<br><br><br>
+![:scale 40%](../images/cov-cover.png)
+]
+
+---
+# [Correlation coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)
+
+The .red[correlation coefficient] (or simply, .red[correlation]) between two RVs $X$ and $Y$ is defined by
+
+$$\rho(X, Y)=\frac{\text{cov}(X, Y)}{\sqrt{\text{var}(X)\text{var}(Y)}}$$
+
+--
+We can rewrite it as 
+
+$$\rho=\text{cov}\bigg(\frac{X-\text{E}[X]}{\sqrt{\text{var}(X)}}, \frac{Y-\text{E}[Y]}{\sqrt{\text{var}(Y)}} \bigg)$$
+
+
+The correlation is the covariance after standardization.
+
+--
+
+Note $\rho$ is dimensionless. 
+
+---
+# Properties
+
+For any constants $a$ and $b$
+
+$$
+\begin{aligned}
+\text{cov}(aX+b, Y)&=a\cdot\text{cov}(X, Y) \\\
+\\\
+\rho(aX+b, Y)&=\rho(X, Y) \\\
+\end{aligned}
+$$
+
+Scaling a variable does not change the correlation. 
+
+???
+Proof
+
+$$
+\begin{aligned}
+\rho(aX+b, Y)&= \frac{\text{cov}(aX+b, Y)}{\sqrt{\text{var}(aX+b)\text{var}(Y)}} \\\
+\\\
+&= \frac{a\cdot\text{cov}(X, Y)}{\sqrt{a^2\text{var}(X)\text{var}(Y)}} \\\
+\\\
+&= \frac{\text{cov}(X, Y)}{\sqrt{\text{var}(X)\text{var}(Y)}} \\\
+\\\
+&=\rho(X, Y) \\\
+\end{aligned}
+$$
+
+---
+# Correlation bounds
+
+For any two RVs $X$ and $Y$, we have
+
+$$-1 \leq \rho(X, Y) \leq 1$$
+
+--
+
+<br>
+
+$$
+\begin{aligned}
+\rho=1, & \;\text{if and only if $Y=aX+b$ with $a>0$.} \\\
+\\\
+\rho=-1, & \;\text{if and only if $Y=aX+b$ with $a < 0$.} \\\
+\end{aligned}
+$$
+
+
+???
+Proof
+
+$$
+\small{
+\begin{aligned}
+&\;\text{var}\bigg(\frac{X}{\sqrt{\text{var}(X)}}+\frac{Y}{\sqrt{\text{var}(Y)}}\bigg) \\\
+\\\
+=&\;\text{var}\bigg(\frac{X}{\sqrt{\text{var}(X)}}\bigg)+\text{var}\bigg(\frac{Y}{\sqrt{\text{var}(Y)}}\bigg) \\\
+&+2\text{cov}\bigg(\frac{X}{\sqrt{\text{var}(X)}}, \frac{Y}{\sqrt{\text{var}(Y)}}\bigg) \\\
+\\\
+=&\;1+1+2\rho \\\
+\\\
+\geq&\; 0
+\end{aligned}
+}
+$$
+
+So 
+
+$$\rho \geq -1$$
+
+Similarly, 
+
+$$
+\small{
+\begin{aligned}
+&\;\text{var}\bigg(\frac{X}{\sqrt{\text{var}(X)}}-\frac{Y}{\sqrt{\text{var}(Y)}}\bigg) \\\
+\\\
+=&\;\text{var}\bigg(\frac{X}{\sqrt{\text{var}(X)}}\bigg)+\text{var}\bigg(\frac{Y}{\sqrt{\text{var}(Y)}}\bigg) \\\
+&-2\text{cov}\bigg(\frac{X}{\sqrt{\text{var}(X)}}, \frac{Y}{\sqrt{\text{var}(Y)}}\bigg)\\\
+\\\
+=&\;1+1-2\rho \\\
+\\\
+\geq&\; 0
+\end{aligned}
+}
+$$
+
+So 
+
+$$\rho \leq 1$$
+
+Lastly, 
+
+$$
+\begin{aligned}
+\rho(X, aX+b)&= \frac{\text{cov}(X, aX+b)}{\sqrt{\text{var}(X)\text{var}(aX+b)}} \\\
+\\\
+&= \frac{a\cdot\text{cov}(X, X)}{\sqrt{a^2\text{var}(X)\text{var}(X)}} \\\
+\\\
+&= \frac{a}{|a|} \\\
+\end{aligned}
+$$
+
+---
+# Correlation coefficient
+<br>
+
+![:scale 100%](../images/correlation-1.png)
+
+<br>
+
+--
+
+![:scale 100%](../images/correlation-2.png)
+
+---
+For two random variables (i.e., population distributions)
+
+$$
+\begin{aligned}
+\text{cov}(X, Y)&=\text{E}\big[(X-\text{E}[X])\cdot(Y-\text{E}[Y])\big] \\\
+\\\
+\rho(X, Y)&=\frac{\text{cov}(X, Y)}{\sqrt{\text{var}(X)\text{var}(Y)}} \\\
+\end{aligned}
+$$
+
+--
+
+Sample covariance
+
+$$ \text{cov}(x, y) = \frac{\sum(x_i-\bar{x})(y_i-\bar{y})}{n-1} $$
+
+--
+
+Sample correlation coefficient
+
+$$ r = \frac{\sum(x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum(x_i-\bar{x})^2}\sqrt{\sum(y_i-\bar{y})^2}} $$
+
+---
+
+$X$: Ice cream sales 🍦
+
+$Y$: Number of people drowning in swimming pools 🏊
+
+Are $X$ and $Y$ correlated?
+
+---
+
+# [Correlation does not imply causation.](https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation)
+
+--
+
+<br>
+
+.center[![:scale 90%](../images/correlation-xkcd.png)]
+
+<div style="margin-top: 0px; text-align: center;"><a class="sourcelink" href="https://xkcd.com/552/">@xkcd</a></div>
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

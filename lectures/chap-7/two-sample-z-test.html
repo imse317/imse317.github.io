@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Two sample z-test</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+class: middle, center
+
+.huge[Two sample *z*-test]
+
+---
+# Hypothesis test based on two samples
+
+We are interested in the .red[lifetimes] of Duracell and Energizer batteries. 
+
+--
+
+We took 100 randomly selected batteries from each brand and tested them. 
+
+--
+
+$$\bar{x}=4.1 \text{ hours}, \;\;\;\;\bar{y}=4.4 \text{ hours}$$
+
+--
+
+Assume we know that
+
+$$\sigma_X=1.8 \text{ hours}, \;\;\;\;\sigma_Y=2.0 \text{ hours}$$
+
+--
+
+Does the Energizer has significant longer battery life?
+
+---
+# Assumptions
+
+
+$$\small{X_1, X_2, \cdots, X_m \stackrel{\text{i.i.d.}}{\sim} \text{N}\big(\mu_X, \sigma_X^2\big)}$$
+
+--
+
+And independently, 
+
+$$\small{Y_1, Y_2, \cdots, Y_n \stackrel{\text{i.i.d.}}{\sim} \text{N}\big(\mu_Y, \sigma_Y^2\big)}$$
+
+--
+
+Then, 
+
+$$\small{\bar{X} \sim \text{N}\big(\mu_X, \frac{\sigma_X^2}{m}\big), \;\;\;\;\bar{Y} \sim \text{N}\big(\mu_Y, \frac{\sigma_Y^2}{n}\big)}$$
+
+$$\small{\text{with $\bar{X}$ independent of $\bar{Y}$.}}$$
+
+---
+
+$$\small{\bar{X} \sim \text{N}\big(\mu_X, \frac{\sigma_X^2}{m}\big), \;\;\;\;\bar{Y} \sim \text{N}\big(\mu_Y, \frac{\sigma_Y^2}{n}\big)}$$
+
+
+Let's construct a new random variable $\small{\bar{X}-\bar{Y}}$.
+
+--
+
+$$
+\small{
+\begin{aligned}
+\text{E}[\bar{X}-\bar{Y}]&=\text{E}[\bar{X}]-\text{E}[\bar{Y}]=\mu_X-\mu_Y\;\;\;\;\color{gray}{\rightarrow \text{unbiased}} \\\
+\\\
+\text{var}(\bar{X}-\bar{Y})&=\text{var}(\bar{X})+\text{var}(\bar{Y})=\frac{\sigma_X^2}{m}+\frac{\sigma_y^2}{n} \\\
+\end{aligned}
+}
+$$
+
+--
+
+$\small{\bar{X}-\bar{Y}}$ also follows a normal distribution.
+
+$$\small{\bar{X}-\bar{Y} \sim \text{N}\big(\mu_X-\mu_Y, \frac{\sigma_X^2}{m}+\frac{\sigma_Y^2}{n}\big)}$$
+
+---
+
+$$\small{\text{Standardization:}\;\;\;\frac{\bar{X}-\bar{Y}-(\mu_X-\mu_Y)}{\sqrt{\frac{\sigma_X^2}{m}+\frac{\sigma_Y^2}{n}}} \sim \text{N}(0, 1)}$$
+
+--
+
+Suppose we want to test if $\mu_X=\mu_Y \text{ (i.e., } \mu_X-\mu_Y=0)$
+
+$$
+\begin{aligned}
+&H_0: \mu_X=\mu_Y \; \text{ (or, } \mu_X-\mu_Y=0 ) \\\
+(1)\; &H_a: \mu_X \neq \mu_Y \;\text{ (or, } \mu_X-\mu_Y\neq0)\;\;\;\;\color{gray}{\rightarrow\text{two-tailed}} \\\
+(2)\; &H_a: \mu_X < \mu_Y \;\text{ (or, } \mu_X-\mu_Y < 0) \;\;\;\;\color{gray}{\rightarrow\text{one-tailed}} \\\
+(3)\; &H_a: \mu_X > \mu_Y \;\text{ (or, } \mu_X-\mu_Y > 0) \;\;\;\;\color{gray}{\rightarrow\text{one-tailed}} \\\
+\end{aligned}
+$$
+
+--
+
+Regardless of $H_a$, our test statistic is
+
+$$z=\frac{\bar{x}-\bar{y}-(\mu_X-\mu_Y)}{\sqrt{\frac{\sigma_X^2}{m}+\frac{\sigma_Y^2}{n}}}=\frac{\bar{x}-\bar{y}-0}{\sqrt{\frac{\sigma_X^2}{m}+\frac{\sigma_Y^2}{n}}}=\frac{\bar{x}-\bar{y}}{\sqrt{\frac{\sigma_X^2}{m}+\frac{\sigma_Y^2}{n}}}$$
+
+---
+
+Does Duracell has shorter battery life than Energizer?
+
+$$
+\small{
+\begin{aligned}
+&H_0: \mu_X=\mu_Y \;\text{ (or, } \mu_X-\mu_Y=0) \\\
+&H_a: \mu_X < \mu_Y \;\text{ (or, } \mu_X-\mu_Y < 0) \\\
+\end{aligned}
+}
+$$
+
+--
+
+$$\small{\sigma_X=1.8 \text{ hours}, \;\;\;\;\sigma_Y=2.0 \text{ hours}}$$
+
+--
+
+$$\small{\text{Sample size:}\;m=n=100}$$
+
+$$\small{\bar{x}=4.1 \text{ hours}, \;\;\;\;\bar{y}=4.4 \text{ hours}}$$
+
+--
+
+$$\small{\frac{\bar{x}-\bar{y}}{\sqrt{\frac{\sigma_X^2}{m}+\frac{\sigma_Y^2}{n}}}=\frac{4.1-4.4}{\sqrt{\frac{1.8^2}{100}+\frac{2.0^2}{100}}}\approx -1.11}$$
+
+--
+
+$$\small{\text{$p$-value}=\text{P}(Z<-1.11)=0.1335}$$
+
+---
+# Large sample tests
+
+When both sample sizes are sufficiently large, 
+the CLT tells us that $\small{\bar{X}-\bar{Y}}$ is approximately normal.
+
+--
+
+In addition, we can use the sample variance to estimate the population variance (often unknown in practice).  
+
+$$\small{\frac{\bar{X}-\bar{Y}-(\mu_X-\mu_Y)}{\sqrt{\frac{s_X^2}{m}+\frac{s_Y^2}{n}}} \text{ is approximately } \text{N}(0, 1)}$$
+
+We can use it as the test statistic. 
+
+--
+
+It is usually appropriate if both $\small{m>40}$ and $\small{n>40}$. 
+
+---
+.center[Effects of fast food consumption on calorie intake]
+
+
+|&nbsp;$\text{Eat fast food}$&nbsp;|&nbsp;$\text{Sample size}$&nbsp;|&nbsp;$\text{Sample mean}$&nbsp;|&nbsp;$\text{Sample SD}$&nbsp;|
+|:---:|:---:|:---:|:---:|
+|$\text{Yes } (X)$|$413$|$2637$|$1138$|
+|$\text{No } (Y)$|$663$|$2258$|$1519$|
+
+--
+
+Is the calorie intake for people who eat fast food significantly higher than those who don't?
+
+--
+
+$$\small{H_0: \mu_X-\mu_Y=0,\;\;\;\;H_a: \mu_X-\mu_Y>0}$$
+
+--
+
+$$\small{z=\frac{\bar{x}-\bar{y}}{\sqrt{\frac{s_X^2}{m}+\frac{s_Y^2}{n}}}=\frac{2637-2258}{\sqrt{\frac{1138^2}{413}+\frac{1519^2}{663}}}\approx 4.660}$$
+
+--
+
+$$\small{\text{$p$-value}=\text{P}(Z>4.66)< 0.001}$$
+
+
+---
+.center[Effects of fast food consumption on calorie intake]
+
+|&nbsp;$\text{Eat fast food}$&nbsp;|&nbsp;$\text{Sample size}$&nbsp;|&nbsp;$\text{Sample mean}$&nbsp;|&nbsp;$\text{Sample SD}$&nbsp;|
+|:---:|:---:|:---:|:---:|
+|$\text{Yes } (X)$|$413$|$2637$|$1138$|
+|$\text{No } (Y)$|$663$|$2258$|$1519$|
+
+Is the calorie intake for people who eat fast food .red[more than 200] higher than those who don't?
+
+--
+
+$$\small{H_0: \mu_X-\mu_Y=200,\;\;\;\;H_a: \mu_X-\mu_Y>200}$$
+
+--
+
+$$\small{z=\frac{\bar{x}-\bar{y}-200}{\sqrt{\frac{s_X^2}{m}+\frac{s_Y^2}{n}}}=\frac{2637-2258-200}{\sqrt{\frac{1138^2}{413}+\frac{1519^2}{663}}}\approx 2.201}$$
+
+--
+
+$$\small{\text{$p$-value}=\text{P}(Z>2.201)}=0.0217$$
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Marginal PMF</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+
+class: middle, center
+
+.huge[Marginal PMF]
+
+<br>
+
+![:scale 60%](../images/marginal-pmf-cover.png)
+
+---
+We can calculate the PMF of $X$ using
+
+$$
+\small{
+  p_X(x)=\text{P}(X=x)=\sum_y \text{P}(X=x, Y=y) =\sum_y p_{X, Y}(x, y)
+}
+$$
+
+
+We refer to $p_X(x)$ as the .red[marginal PMF] of $X$.
+
+--
+
+.center[![:scale 60%](../images/marginal-pmf.png)]
+
+---
+Similarly, we can calculate the PMF of $Y$ using
+
+$$
+\small{
+p_Y(y)=\text{P}(Y=y)=\sum_x \text{P}(X=x, Y=y)=\sum_x p_{X, Y}(x, y)
+}
+$$
+
+We refer to $p_Y(y)$ as the .red[marginal PMF] of $Y$.
+
+--
+
+.center[![:scale 60%](../images/marginal-pmf.png)]
+
+
+---
+We randomly sample an adult from the MI population.
+
+$X$: whether they are a current smoker
+
+$Y$: whether they will develop lung cancer at some point
+
+Suppose the joint PMF is as follows*.
+
+
+| |&nbsp;&nbsp;&nbsp;&nbsp;$Y=0$&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;$Y=1$&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|:---:|:---:|:---:|
+|&nbsp;&nbsp;&nbsp;&nbsp;$X=0$&nbsp;&nbsp;&nbsp;&nbsp;|$72\%$|$3\%$||
+|&nbsp;&nbsp;&nbsp;&nbsp;$X=1$&nbsp;&nbsp;&nbsp;&nbsp;|$20\%$|$5\%$||
+|&nbsp;|||||
+
+What are the marginal PMFs of $X$ and $Y$?
+
+
+<br><br>
+.lightgray[.tiny[\* All number are fictional.]]
+
+
+---
+# Functions of a random variable
+
+If $Y$ is a function of a random variable $X$
+
+$$Y=g(X)$$ 
+
+then $Y$ is also a random variable.
+
+--
+
+.center[![:scale 80%](../images/function-rv-2.png)]
+
+$$p_Y(y)=\sum_{\\{x \mid g(x)=y\\}}p_X(x)$$
+
+---
+# Functions of two RVs
+
+If $Z$ is a function of two random variables $X$ and $Y$
+
+$$Z=g(X, Y)$$ 
+
+then $Z$ is also a random variable.
+
+--
+
+Its PMF
+
+$$p_Z(z)=\sum_{\\{(x, y) \mid g(x, y)=z\\}}p_{X, Y}(x, y)$$
+
+It's the sum of the joint PMF of $X$ and $Y$ over all possible pairs of $(x, y)$ that give rise to $g(x, y)=z$.
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

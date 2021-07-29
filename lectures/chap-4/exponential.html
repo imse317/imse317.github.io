@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Exponential distribution</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+
+class: middle, center
+
+.huge[Exponential distribution]
+
+<br>
+
+![:scale 50%](../images/expo-cover.png)
+
+
+---
+# [Exponential distribution](https://en.wikipedia.org/wiki/Exponential_distribution)
+
+.green[Geometric] RV: \# of tosses needed to get the first heads
+
+--
+
+$$p_X(k)=(1-p)^{k-1}p, \;\;\;\;\text{for } k=1, 2, \cdots $$
+
+--
+
+.center[
+$\text{geo}(0.5)\;\;\;$
+<img align="middle" width="300" src="../images/pmf-geo-p50.png">
+]
+
+--
+
+<br>
+
+.red[Exponential]: the continuous counterpart of .green[geometric]. 
+
+---
+# Usages of exponential distribution
+
+Widely used to model the time between two successive events (termed the "interarrival time")
+
+- Customers arriving at a store
+- Phone calls coming in to a call center
+- "Survival time" of components in reliability analysis
+
+---
+
+.center[
+![:scale 45%](../images/pmf-geo-p50.png)
+![:scale 45%](../images/pdf-expo-08.png)
+]
+
+Probability density function
+
+$$
+f_X(x) = 
+\begin{cases}
+    ce^{-\lambda x}, & \text{if $x \geq 0$,} \\\
+    0,              & \text{otherwise.}
+\end{cases}
+$$
+
+where $\lambda$ is the .red[rate] parameter ($\lambda>0$).
+
+
+---
+name: expo
+
+$$f_X(x) = 
+\begin{cases}
+    ce^{-\lambda x}, & \text{if $x \geq 0$,} \\\
+    0,              & \text{otherwise}
+\end{cases}
+$$
+
+The constant $c$ is to ensure the normalization property. 
+
+$$
+\begin{aligned}
+\int_{-\infty}^{+\infty}f_X(x)dx &= \int_0^{+\infty}ce^{-\lambda x}dx \\\
+&=c\big(-\frac{1}{\lambda}\big)e^{-\lambda x}\bigg|_0^{+\infty} \\\
+&=-\frac{c}{\lambda}(0-1)=\frac{c}{\lambda} = 1 \\\
+\end{aligned}
+$$
+
+Thus $c=\lambda$. 
+
+[Click here](#cal) for the calculus review. 
+
+
+---
+# Exponential PDF
+
+$$X \sim \text{expo}(\lambda)$$
+
+$$
+f_X(x) = 
+\begin{cases}
+    \lambda e^{-\lambda x}, & \text{if $x \geq 0$,} \\\
+    0,              & \text{otherwise.}
+\end{cases}
+$$
+
+<br>
+$$f_X(0) = \lambda e^{-\lambda \cdot 0}=\lambda$$
+
+
+.center[
+![:scale 32%](../images/pdf-expo-04.png)
+![:scale 32%](../images/pdf-expo-08.png)
+![:scale 32%](../images/pdf-expo-16.png)
+]
+
+
+---
+class: center, middle
+
+.huge[[Interactive visualization](https://probstats.org/exponential.html)]
+
+---
+# Exponential CDF
+
+$$
+f_X(x) = 
+\begin{cases}
+    \lambda e^{-\lambda x}, & \text{if $x \geq 0$,} \\\
+    0,              & \text{otherwise.}
+\end{cases}
+$$
+
+$$
+\begin{aligned}
+\text{If } x \leq 0, \;\;\;\; F_X(x)&=\text{P}(X \leq x)=0 \\\
+\\\
+\text{If } x \leq 0, \;\;\;\; F_X(x)&=\int_0^{x}\lambda e^{-\lambda x}dx=-e^{-\lambda x}\bigg|_0^x=1-e^{-\lambda x}\
+\end{aligned}
+$$
+
+
+.center[
+![:scale 45%](../images/pdf-expo-lambda.png)
+&nbsp;
+![:scale 45%](../images/cdf-expo.png)
+]
+
+---
+# Exponential CDF
+
+$$
+F_X(x) = 
+\begin{cases}
+    0,                & \text{if $x \leq 0$,} \\\
+    1-e^{-\lambda x}, & \text{if $x > 0$}.
+\end{cases}
+$$
+
+$$\text{P}(X > x) = 1-F_X(x)=1-\big(1-e^{-\lambda x}\big)=e^{-\lambda x}$$
+
+.center[
+![:scale 45%](../images/cdf-expo.png)
+&nbsp;
+![:scale 45%](../images/cdf-expo-1minus.png)
+]
+
+
+---
+name: memoryless
+# .red[Memoryless] property
+
+Given that $X$ has already exceeded $t$, 
+
+the probability of $X$ exceeding an additional $s$ 
+
+is simply the same as the probability of $X$ exceeding $s$.
+
+--
+
+$$\text{P}(X>t+s|X>t)=\text{P}(X>s)$$
+
+$$\text{for all nonnegative values $t$ and $s$}$$
+
+.center[[Proof](#appendix_B)]
+
+The past has no bearing on its future behavior.
+
+---
+# .red[Memoryless] property
+
+Assume time between phone calls is exponential RV. 
+
+You have waited for 2 hrs, and there was no phone call. 
+
+The probability of having to wait for at least another hour, 
+is the same as the probability of having to wait for at least one hour.
+
+--
+
+.green[Every instant is like the beginning of a new random period, 
+which has the same distribution regardless of how much time has already passed.]
+
+--
+
+Geometric and exponential RVs are the only two RVs that have this memoryless property. 
+
+
+---
+# Exercise ✉
+
+Assume the time until you receive a new email is exponentially distributed with a rate of 12 emails a day. 
+
+Assume the time is currently at noon. 
+
+--
+
+What is the probability of 
+- getting an email within the next 2 hours?
+
+--
+
+- getting an email between 4 PM and 6 PM today?
+
+--
+
+Now it is 1 PM, and you have not received any email. 
+
+What is the probability of getting one in the next 2 hrs?
+
+---
+name: expo_expectation
+# Expected value of &nbsp; $X \sim \text{expo}(\lambda) $
+
+$$
+f_X(x) = 
+\begin{cases}
+    \lambda e^{-\lambda x}, & \text{if $x \geq 0$,} \\\
+    0,              & \text{otherwise.}
+\end{cases}
+$$
+
+$$\text{E}[X]=\frac{1}{\lambda}$$
+
+.center[![:scale 40%](../images/pdf-expo-expectation.png)]
+
+.center[[Proof](#expo_expectation_appendix)]
+
+
+---
+name: expo_variance
+# Variance of &nbsp; $X \sim \text{expo}(\lambda) $
+
+$$\text{var}(X)=\sigma^2=\frac{1}{\lambda^2}$$
+
+
+.center[[Proof](#expo_variance_appendix)]
+
+--
+
+<br>
+Standard deviation:
+$$\sigma =\sqrt{\sigma^2}=\frac{1}{\lambda}$$
+
+---
+CDF of exponential RV
+
+$$F_X(x) = 
+\begin{cases}
+    0,                & \text{if $x \leq 0$,} \\\
+    1-e^{-\lambda x}, & \text{if $x > 0$.} 
+\end{cases}
+$$
+
+.center[![:scale 35%](../images/cdf-expo.png)]
+
+--
+
+Solve $x$ from the CDF, we get its inverse function
+
+$$F_X^{-1}=x=-\frac{1}{\lambda}\ln(1-F_X)$$
+
+Inverse function of CDF is called a [quantile function](https://en.wikipedia.org/wiki/Quantile_function).
+
+
+
+---
+# Quantile function
+
+$$F_X^{-1}=x=-\frac{1}{\lambda}\ln(1-F_X)$$
+
+The .red[median] of exponential distribution:
+
+$$F_X^{-1}(0.5)=-\frac{1}{\lambda}\ln(1-0.5)=-\frac{1}{\lambda}\ln(\frac{1}{2})=\frac{\ln2}{\lambda}$$
+
+.center[
+![:scale 40%](../images/cdf-expo-median.png)
+&nbsp;
+![:scale 40%](../images/pdf-expo-median.png)
+]
+
+---
+$$
+\small{
+f_X(x) = 
+\begin{cases}
+    \lambda e^{-\lambda x}, & \text{if $x \geq 0$,} \\\
+    0,                      & \text{otherwise.}
+\end{cases}
+}
+$$
+
+$\lambda$ is the .red[rate] parameter (e.g, 2 emails per hour)
+
+--
+
+$$
+\small{
+\text{E}[X]=\frac{1}{\lambda}; \;\; \text{var}(X)=\frac{1}{\lambda^2}
+}
+$$
+
+--
+
+We can replace $\lambda$ with $1/\beta$.
+
+$$
+\small{
+f_X(x) = 
+\begin{cases}
+    1/\beta \cdot e^{-\frac{x}{\beta}}, & \text{if $x \geq 0$,} \\\
+    0,                                  & \text{otherwise.}
+\end{cases}
+}
+$$
+
+$\beta$ is the .green[mean] parameter (e.g, 0.5 hrs between emails)
+
+--
+
+$$
+\small{
+\text{E}[X]=\beta; \;\; \text{var}(X)=\beta^2
+}
+$$
+
+--
+
+These are two "parameterizations" of the distribution.
+
+???
+Parameterization
+
+---
+
+class: center, middle
+
+# Appendices
+
+---
+name: cal
+class: middle, center
+
+# Appendix A
+
+# Calculus review (next 3 slides)
+
+# [Go back](#expo)
+
+---
+class: split-50
+
+.column[
+
+# Common derivatives 
+
+<br>
+
+$$
+\begin{aligned}
+&\frac{d}{dx}(c)=0 \\\
+\\\
+&\frac{d}{dx}(kx)=k \\\
+\\\
+&\frac{d}{dx}(x^n)=nx^{n-1} \\\
+\end{aligned}
+$$
+
+]
+.column[
+
+<br><br><br>
+
+$$
+\begin{aligned}
+&\frac{d}{dx}(\ln x)=\frac{1}{x} \\\
+\\\
+&\frac{d}{dx}(e^x)=e^x \\\
+\\\
+&\frac{d}{dx}(a^x)=a^x \ln(a) \\\
+\end{aligned}
+$$
+]
+
+---
+
+
+class: split-60
+
+.column[
+# Common integrals
+
+<br>
+
+$$
+\begin{aligned}
+&\int k\;dx=kx+c \\\
+\\\
+&\int x^n dx=\frac{x^{n+1}}{n+1}+c, \;\;n \neq -1 \\\
+\\\
+&\int \frac{1}{x}dx=\ln |x|+c \\\
+\end{aligned}
+$$
+
+]
+.column[
+
+<br><br><br>
+
+$$
+\begin{aligned}
+&\int e^x dx=e^x+c \\\
+\\\
+&\int a^x dx=\frac{a^x}{\ln a}+c \\\
+\end{aligned}
+$$
+]
+
+---
+# Rules
+
+[Chain rule](https://en.wikipedia.org/wiki/Chain_rule)
+
+$$\frac{d}{dx}\bigg(f\big(g(x)\big)\bigg)=f'\big(g(x)\big)\cdot g'(x)$$
+
+<br>
+
+[Fundamental theorem of calculus](https://en.wikipedia.org/wiki/Fundamental_theorem_of_calculus)
+
+$$\int_a^b f(x)dx=F(x)\bigg|_a ^b=F(b)-F(a)$$
+
+$$\text{where $F(x)$ is any antiderivative of $f(x)$.}$$
+
+---
+name: appendix_B
+# Appendix B ([Go back](#memoryless))
+
+$$
+\begin{aligned}
+\text{P}(X>t+s|X>t)&=\frac{\text{P}\big((X>t+s) \cap (X>t)\big)}{\text{P}(X>t)} \\\
+\\\
+&=\frac{\text{P}(X>t+s)}{\text{P}(X>t)} \\\
+\\\
+&=\frac{e^{-\lambda(t+s)}}{e^{-\lambda t}} \\\
+\\\
+&=e^{-\lambda s} \\\
+\\\
+&=\text{P}(X>s) \\\
+\end{aligned}
+$$
+
+
+---
+name: expo_expectation_appendix
+# Appendix C ([Go back](#expo_expectation))
+
+$$
+\begin{aligned}
+\text{E}[X]&=\int_0^{+\infty} x\lambda e^{-\lambda x} dx \;\;\;\;\;\;\;\; \color{gray}{\leftarrow\text{Integration by parts}} \\\
+&=x\big(-e^{-\lambda x}\big)\bigg|_0^{+\infty}-\int_0^{+\infty}1\cdot\big(-e^{-\lambda x}\big) dx \\\
+&=(0-0)+\int_0^{+\infty}e^{-\lambda x} dx \\\
+&=-\frac{1}{\lambda}e^{-\lambda x}\bigg|_0^{+\infty} \\\
+&=0-\big(-\frac{1}{\lambda}\big)\cdot 1 \\\
+&=\frac{1}{\lambda}
+\end{aligned}
+$$
+
+
+---
+name: expo_variance_appendix
+# Appendix D (1/2) ([Go back](#expo_variance))
+
+$$
+\begin{aligned}
+\text{E}[X^2]&=\int_0^{+\infty} x^2\lambda e^{-\lambda x} dx \;\; \color{gray}{\leftarrow\text{Integration by parts}} \\\
+&=x^2\big(-e^{-\lambda x}\big)\bigg|_0^{+\infty}-\int_0^{+\infty}2x\cdot\big(-e^{-\lambda x}\big) dx \\\
+&=(0-0)+2\int_0^{+\infty}xe^{-\lambda x} dx \\\
+&=\frac{2}{\lambda}\int_0^{+\infty}x\lambda e^{-\lambda x} dx \\\
+&=\frac{2}{\lambda}\cdot\text{E}[X] \\\
+&=\frac{2}{\lambda}\cdot\frac{1}{\lambda}=\frac{2}{\lambda^2} \\\
+\end{aligned}
+$$
+
+---
+# Appendix D (2/2) ([Go back](#expo_variance))
+
+<br>
+
+Apply the shortcut formula for calculating the variance.
+
+$$
+\begin{aligned}
+\text{var}(X)&=\text{E}[X^2]-\big(\text{E}[X]\big)^2 \\\
+\\\
+&=\frac{2}{\lambda^2}-\big(\frac{1}{\lambda}\big)^2 \\\
+\\\
+&=\frac{1}{\lambda^2}
+\end{aligned}
+$$
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

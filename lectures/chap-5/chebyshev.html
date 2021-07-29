@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Chebyshev Inequality</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+class: split-60
+
+.column[
+<br><br><br><br><br>
+.huge[Chebyshev Inequality]
+]
+.column[
+<br><br>
+![:scale 40%](../images/chebyshev.png)
+
+<!-- <div style="margin-top: 0px; text-align: right;"><a class="sourcelink" href="https://github.com/allisonhorst/stats-illustrations">Artwork by @allison_horst</a></div> -->
+
+]
+
+
+---
+# [Markov inequality](https://en.wikipedia.org/wiki/Markov%27s_inequality)
+
+<br>
+
+If a RV $X$ is non-negative with mean $\mu$, then
+
+$$\text{P}(X \geq a) \leq \frac{\mu}{a}, \;\;\;\;\;\; \text{for all $a > 0$.}$$
+
+???
+Proof
+
+For the discrete case:
+
+$$
+\begin{aligned}
+\mu&=\sum_x xp_x(x) \\\
+\\\
+&=\sum_{0 \leq x < a} xp_x(x) + \sum_{x \geq a} xp_x(x) \\\
+\\\
+&\geq 0 + \sum_{x \geq a} ap_x(x) \;\; \color{gray}{\leftarrow\text{Since $x$ is non-negative}} \\\
+\\\
+&= a\sum_{x \geq a} p_x(x) \\\
+\\\
+&= a\text{P}(X \geq a) \\\
+\end{aligned}
+$$
+
+
+Similarly, for the continuous case:
+
+$$
+\begin{aligned}
+\mu &= \int_0^{+\infty} xf_x(x)dx \\\
+\\\
+&=\int_0^a xf_x(x)dx + \int_a^{+\infty} xf_x(x)dx \\\
+\\\
+&\geq 0 + \int_a^{+\infty} af_x(x)dx  \\\
+\\\
+&= a\int_a^{+\infty} f_x(x)dx \\\
+\\\
+&= a\text{P}(X \geq a) \\\
+\end{aligned}
+$$
+
+---
+<!-- # Markov inequality -->
+
+<!-- If a RV $X$ can only take .green[nonnegative] values, then -->
+
+$$\text{P}(X \geq a) \leq \frac{\mu}{a}, \;\;\;\;\;\; \text{for all $a > 0$.}$$
+
+--
+
+An alternative form is obtained by letting 
+
+$$a=k\mu, \;\;\; \text{where $k > 0$}.$$
+
+$$\text{P}(X \geq k\mu) \leq \frac{1}{k}, \;\;\;\;\;\; \text{for all $k > 0$.}$$
+
+--
+
+The probability that a non-negative RV takes a value greater than $k$ times of its mean is at most $1/k$.
+
+The inequality is only helpful when $k > 1$. 
+
+E.g., the probability of someone earning more than 3 times of the mean salary cannot be greater than 1/3. 
+
+
+---
+# [Chebyshev inequality](https://en.wikipedia.org/wiki/Chebyshev%27s_inequality)
+
+<br>
+
+If $X$ is a RV with mean $\mu$ and variance $\sigma^2$, then
+
+$$\text{P}\big(|X - \mu| \geq c \big) \leq \frac{\sigma^2}{c^2}, \;\;\;\;\;\; \text{for all $c > 0$.}$$
+
+
+???
+Proof
+
+Let $Y=(X-\mu)^2$. We know $Y$ is non-negative.
+
+Apply the Markov inequality with $a=c^2$, we have
+
+$$\text{P}\big((X-\mu)^2 \geq c^2\big) \leq \frac{\text{E}[(X-\mu)^2]}{c^2}=\frac{\sigma^2}{c^2}$$
+
+Event $(X-\mu)^2 \geq c^2$ is identical to $|X-\mu| \geq c$.
+
+Thus, we have
+
+$$\text{P}\big(|X - \mu| \geq c\big) = \text{P}\big((X-\mu)^2 \geq c^2\big) \leq \frac{\sigma^2}{c^2}$$
+
+
+
+
+---
+
+<!-- If $X$ is a RV with mean $\mu$ and variance $\sigma^2$, then -->
+
+$$\text{P}(|X - \mu| \geq c) \leq \frac{\sigma^2}{c^2}, \;\;\;\;\;\; \text{for all $c > 0$.}$$
+
+An alternative form is obtained by letting 
+
+$$c=k\sigma, \;\;\; \text{where $k > 0$}.$$
+
+$$\text{P}\big(|X - \mu| \geq k\sigma \big) \leq \frac{\sigma^2}{k^2\sigma^2} = \frac{1}{k^2}, \;\;\;\; \text{for all $k > 0$.}$$
+
+--
+
+The probability that a RV is more than $k$ standard deviations away from its mean is at most $1/k^2$.
+
+E.g., the probability of someone's salary is more than $3\sigma$ away from the mean cannot be greater than $1/9$. 
+
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

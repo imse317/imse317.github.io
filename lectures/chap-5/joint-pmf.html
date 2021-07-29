@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Joint PMF</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+class: split-50
+
+.column[
+<br><br><br><br><br>
+&nbsp;&nbsp;
+.huge[Joint PMF]
+]
+.column[
+<br><br><br>
+![:scale 50%](../images/joint-pmf.png)
+]
+
+---
+# Joint distribution – the discrete case
+
+Example: randomly draw a person from a population and record their .red[age] and .green[\# of credit cards] they own. 
+
+--
+
+Two discrete RV $X$ and $Y$ from the same experiment.
+
+$(x, y)$ is a pair of possible values of $X$ and $Y$.
+
+--
+
+The .red[joint PMF] of $X$ and $Y$ is defined as
+
+$$p_{X, Y}(x, y)=\text{P}\big(\\{X=x\\} \cap \\{Y=y\\}\big)$$
+
+--
+
+For simplicity, we often use the abbreviated notation.
+
+$$p_{X, Y}(x, y)=\text{P}(X=x, Y=y)$$
+
+---
+# PMF visualization
+<br>
+.center[![:scale 80%](../images/pmf-example.png)]
+
+---
+# Joint PMF visualization
+
+.center[![:scale 80%](../images/joint-pmf.png)]
+
+---
+We randomly sample an adult from the MI population.
+
+$X$: whether they are a current smoker
+
+$Y$: whether they will develop lung cancer at some point
+
+Suppose the joint PMF is as follows*.
+
+| |&nbsp;&nbsp;&nbsp;&nbsp;$Y=0$&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;$Y=1$&nbsp;&nbsp;&nbsp;&nbsp;|
+|:---:|:---:|:---:|
+|&nbsp;&nbsp;&nbsp;&nbsp;$X=0$&nbsp;&nbsp;&nbsp;&nbsp;|$72\%$|$3\%$|
+|&nbsp;&nbsp;&nbsp;&nbsp;$X=1$&nbsp;&nbsp;&nbsp;&nbsp;|$20\%$|$5\%$|
+
+<br><br><br><br>
+.lightgray[.tiny[\* All number are fictional.]]
+
+---
+# Non-negativity
+
+PMF of a single discrete RV $X$
+
+$$p_X(x) \geq 0, \;\;\;\; \text{for all $x$.}$$
+
+--
+
+<br>
+
+Joint PMF of two discrete RVs $X$ and $Y$
+
+$$p_{X, Y}(x, y) \geq 0, \;\;\;\; \text{for all $x$ and $y$.}$$
+
+---
+# Normalization property
+
+PMF of a single discrete RV $X$
+
+$$\sum_x p_X(x)=1$$
+
+--
+
+Joint PMF of two discrete RVs $X$ and $Y$
+
+$$\sum_x\sum_y p_{X, Y}(x, y)=1$$
+
+--
+
+| |&nbsp;&nbsp;&nbsp;&nbsp;$Y=0$&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;$Y=1$&nbsp;&nbsp;&nbsp;&nbsp;|
+|:---:|:---:|:---:|
+|&nbsp;&nbsp;&nbsp;&nbsp;$X=0$&nbsp;&nbsp;&nbsp;&nbsp;|$72\%$|$3\%$|
+|&nbsp;&nbsp;&nbsp;&nbsp;$X=1$&nbsp;&nbsp;&nbsp;&nbsp;|$20\%$|$5\%$|
+
+---
+# Cumulative Distribution Function (CDF)
+
+The CDF of a RV $X$ is (always) defined by
+
+$$F_X(x)=\text{P}(X \leq x), \;\;\;\; \text{for all $x$.}$$
+
+--
+
+<br>
+
+The .red[joint CDF] of two RVs $X$ and $Y$ is defined by
+
+$$F_{X, Y}(x, y)=\text{P}(X \leq x, Y \leq y), \;\;\;\;\;\text{for all $x$ and $y$.}$$
+
+--
+
+Joint .red[CDFs] are often harder to work w/ than joint .green[PMFs].
+
+For this reason, we will mainly stick with joint .green[PMFs]. 
+
+---
+# Calculate probabilities from joint PMF
+
+<br>
+$A$: the set of all pairs $(x, y)$ that have a certain property.
+
+$$\text{P}\big((X, Y) \in A\big)=\sum_{(x, y) \in A}p_{X, Y}(x, y)$$
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

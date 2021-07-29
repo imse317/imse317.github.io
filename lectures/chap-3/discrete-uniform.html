@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Discrete uniform</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+
+class: middle, center
+
+.huge[Discrete uniform distribution]
+
+<br>
+
+![:scale 60%](../images/discrete-uniform-cover.png)
+
+---
+# [Discrete uniform random variable](https://en.wikipedia.org/wiki/Discrete_uniform_distribution)
+
+$X$: Roll a die 🎲 and record the roll
+
+.center[![:scale 45%](../images/samplespace-1die.png)]
+
+--
+
+$$p_X(x) = 
+\begin{cases}
+    1/6, & \text{if } x = 1, 2, \cdots, 6, \\\
+    0,   & \text{otherwise.}
+\end{cases}
+$$
+
+--
+
+.center[![:scale 45%](../images/pmf-1die.png)]
+
+
+---
+# Discrete .red[uniform] RV
+
+A discrete uniform RV takes one out of a range of contiguous integer values, 
+.red[with equal probability].
+
+<br>
+
+.center[![:scale 100%](../images/uniform-a2b.png)]
+
+--
+
+$$p_X(k) = 
+\begin{cases}
+    \frac{1}{b-a+1}, & \text{if } k = a, a+1, \cdots, b, \\\
+    0,               & \text{otherwise.} \\\
+\end{cases}
+$$
+
+$$\text{where $a$ and $b$ are two integers with $a < b$}$$
+
+---
+# Discrete .red[uniform] RV
+
+.center[![:scale 55%](../images/pmf-uniform.png)]
+
+$X$ is a discrete uniform RV with parameters $a$ and $b$.
+
+$$X\sim\text{unif}\\{a, b\\}$$
+
+It is a family of all discrete uniform distributions for different values of $a$ and $b$. 
+
+---
+class: center, middle
+
+.huge[[Interactive visualization](https://probstats.org/uniform_discrete.html)]
+
+---
+# Expected value of $X\sim\text{unif}\{a, b\}$
+
+$$
+\small{
+p_X(k) = 
+\begin{cases}
+    1/n, & \text{if } k = a, a+1, \cdots, b, \\\
+    0,               & \text{otherwise.} \\\
+\end{cases}
+\\\
+\text{where $n=b-a+1$ } \;\;\;\;  \color{gray}{\leftarrow\text{the # of outcomes}}
+}
+$$
+
+--
+
+$$
+\small{
+\begin{aligned}
+\text{E}[X]=\;&\frac{1}{n}\cdot a+\frac{1}{n} \cdot (a+1)+ \cdots+\frac{1}{n} \cdot b \\\
+\\\
+=\;&\frac{1}{n} \cdot \big[a+(a+1)+\cdots+b\big] \\\
+\\\
+=\;&\frac{1}{n} \cdot \frac{n(a+b)}{2} \\\
+\\\
+=\;&\frac{a+b}{2} \\\
+\end{aligned}
+}
+$$
+
+---
+# Variance of $X\sim\text{unif}\{a, b\}$
+
+$$
+p_X(k) = 
+\begin{cases}
+    1/n, & \text{if } k = a, a+1, \cdots, b, \\\
+    0,               & \text{otherwise.} \\\
+\end{cases}
+\\\
+\text{where $n=b-a+1$ } \;\;\;\;  \color{gray}{\leftarrow\text{total # of outcomes}}
+$$
+
+--
+
+$$\text{Let} \;\;\;\; Y=X-a+1$$
+
+$$\text{var}(Y)=\text{var}(X-a+1)=\text{var}(X)$$
+
+--
+
+.center[
+![:scale 48%](../images/pmf-uniform.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+![:scale 38%](../images/pmf-uniform-n.png)
+]
+
+---
+
+$$
+\small{
+p_Y(k) = 
+\begin{cases}
+    \frac{1}{n}, & \text{if } y = 1, 2, \cdots, n, \\\
+    0,           & \text{otherwise.} \\\
+\end{cases}
+}
+$$
+
+--
+
+$$\small{\text{var}(Y)=\text{E}\big[Y^2\big]-\big(\text{E}[Y]\big)^2}$$
+
+--
+
+$$
+\small{
+\begin{aligned}
+\text{E}[Y]&=\frac{n+1}{2} \\\
+\\\
+\text{E}\big[Y^2\big]&=\sum_{k=1}^n \big(k^2 \frac{1}{n} \big)=\frac{1}{n}\sum_{k=1}^nk^2 =\frac{1}{6}(n+1)(2n+1) \\\
+\\\
+\text{var}(Y)&=\text{E}\big[Y^2\big]-\big(\text{E}[Y]\big)^2 \\\
+&=\frac{1}{6}(n+1)(2n+1)-\big(\frac{n+1}{2}\big)^2 \\\
+&=\frac{n^2-1}{12} \\\
+\end{aligned}
+}
+$$
+
+---
+$$X\sim\text{unif}\\{a, b\\}$$
+
+.center[![:scale 45%](../images/pmf-uniform.png)]
+
+$$
+\begin{aligned}
+\text{E}[X]&=\frac{a+b}{2} \\\
+\\\
+\text{var}(X)&=\frac{n^2-1}{12}
+\end{aligned}
+$$
+
+$$\text{where } n=b-a+1   \;\;\;\;\;  \color{gray}{\leftarrow\text{total # of outcomes}}$$
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>

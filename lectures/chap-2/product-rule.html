@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMSE 317 - Product rule</title>
+    <meta charset="utf-8">
+    <link href='../style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+<textarea id="source">
+
+
+class: split-60
+
+.column[
+<br><br><br><br><br><br>
+.huge[Product rule]
+]
+.column[
+<br>
+![:scale 35%](../images/product-rule.png)
+]
+
+---
+# Discrete probability law
+
+If the sample space $\Omega$ consists of a finite number of possible outcomes, 
+
+then the probability of any event $\{s_1, s_2, \cdots, s_k \}$ 
+
+is the sum of the probabilities of its elements.
+
+<br>
+
+$$\text{P}\big(\{s_1, s_2, \cdots, s_k \}\big) = \text{P}(s_1) + \text{P}(s_2) + \cdots + \text{P}(s_k) $$
+
+---
+# Discrete uniform probability law
+
+If the sample space $\Omega$ consists of $N$ possible outcomes that are equally likely,
+
+then the probability of any event $A$ is given by:
+
+$$ \text{P}(A) = \frac{\text{number of elements in } A}{N} $$
+
+--
+
+$|A|$ denotes the number of elements in event $A$ (termed .green[cardinality] of the set $A$)
+
+$$ \text{P}(A) = \frac{|A|}{N} $$
+
+---
+# Equally likely outcomes
+
+In many experiments, it is reasonable to assume equal probabilities to all simple events.
+
+--
+
+<br>
+
+Roll a fair six-sided die 🎲
+
+$$ \text{P}(⚀) = \text{P}(⚁) = \text{P}(⚂) = \text{P}(⚃) = \text{P}(⚄) = \text{P}(⚅) = \frac{1}{6} $$
+
+$$\text{P}\text{(odd number)}=\text{P}\big(\{⚀, ⚂, ⚄\}\big)=\frac{3}{6}$$
+
+
+---
+Roll two dice 🎲🎲
+
+- What is the probability to roll a double?
+
+- What is the probability that the total is over 7?
+
+--
+
+<br>
+
+.center[![:scale 58%](../images/2dice.png)]
+
+
+---
+Draw a card from a well-shuffled deck of 52 cards.
+
+What is the chance to draw an ace? a spade?
+
+.center[![:scale 75%](../images/deck-cards.png)]
+
+--
+
+$$
+\begin{aligned}
+\text{P}(\text{Aces}) = \text{P}(\{🃑, 🃁, 🂱, 🂡\}) &= \frac{4}{52}= \frac{1}{13} \\\
+\\\
+\text{P}(\text{spades}) = \text{P}(\{🂡, 🂢, \cdots, 🂮\})&= \frac{13}{52}= \frac{1}{4} \\\
+\end{aligned}
+$$
+
+
+---
+
+### Roll a die 🎲 twice. 
+### how many pairs of numbers are possible?
+
+--
+
+![:scale 60%](../images/2dice.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+--
+![:scale 11%](../images/2dice-tree.png)
+
+
+---
+# The product rule
+
+.center[![:scale 22%](../images/3by4-tree.png)]
+
+--
+
+Suppose that
+
+- there are $\large{\color{red}{n_1}}$ possible results at the first stage
+
+- for every possible result at the first stage, there are $\large{\color{green}{n_2}}$ possible results at the second stage
+
+then the total number of possible results is 
+$\large{\color{red}{n_1} \times \color{green}{n_2}}$
+
+<!-- $$\require{color}\colorbox{yellow}{$n_1 \times n_2$}$$. -->
+
+???
+The product rule is sometimes also called the multiplication principle.
+
+---
+# The product rule: four stages
+
+![:scale 45%](../images/tree-4stages.png)
+
+---
+### General form: the product rule with $r$-stages
+
+If for any sequence of possible results at the first $(i-1)$ stages,
+there are $n_i$ possible results at the $i$-th stage
+
+then the total number of possible results in a $r$-stage process is 
+
+$$n_1 \times n_2 \times \cdots \times n_r$$
+
+---
+# Exercise
+
+How many [iPad Pro](https://www.apple.com/shop/buy-ipad/ipad-pro) variants does Apple need to make?
+
+- Screen size: 11-inch, 12.9-inch
+- Color: Space gray, Silver 
+- Storage: 128GB, 256GB, 512GB, 1TB, 2TB
+- Connectivity: Wi-Fi, Wi-Fi + Cellular
+
+
+
+
+---
+# Exercise
+
+How many unique MI license plate numbers are there?
+
+.center[![:scale 16%](../images/license.png)]
+
+Rules
+
+- 7 characters
+- Only uppercase letters (A-Z) and numbers (0-9)
+- Letter O is not allowed.
+- Spaces are allowed and counted as characters.
+
+
+---
+# Exercise
+
+How many subsets does a $n$-element set have?
+
+$$ \\{s_1, s_2, \cdots, s_n\\} $$
+
+--
+
+<br><br>
+.center[[Curse of dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensionality)]
+
+
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML&delayStartupUntil=configured"></script>
+<script src="../config.js"></script>
+
+</body>
+</html>
