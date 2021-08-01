@@ -23,7 +23,7 @@
             }
         }
     </style>
-    
+   
 </head>
 <body>
 
@@ -38,10 +38,8 @@
     $.get( "syllabus.md", function( data ) {
             var result = md.render(data);
             $('.markdown-body').html(result);
-            console.log(result)
+            // console.log(result)
     },'text');
-
-    
 
 </script>
 

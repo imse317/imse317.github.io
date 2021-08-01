@@ -76,7 +76,7 @@ Students will need a standalone scientific calculator.
 
 If you have difficulty obtaining such a device, contact the instructor by the third week of the class. 
 
-## Homework
+<h2 id="homework">Homework</h2>
 
 There will be roughly weekly homework (for a total of ten assignments). 
 
@@ -111,7 +111,7 @@ Incomplete or unreadable parts of homework may receive a zero.
 - Paginate and staple all your papers together.
 - Point deductions may be applied for format noncompliance.
 
-## Exams
+<h2 id="exams">Exams</h2>
 
 There are two midterm exams and one final exam. 
 
@@ -137,7 +137,7 @@ There are two midterm exams and one final exam.
 
 No makeup or early exam will be given without valid documented excuse and *prior* instructor consent. 
 
-## Honor code
+<h2 id="honor-code">Honor code</h2>
 
 UM-Dearborn values academic honesty and integrity. 
 Each student has a responsibility to understand, accept, and comply with the University's standards of academic conduct as set forth by the 
@@ -149,7 +149,7 @@ Cheating, collusion, misconduct, fabrication, and plagiarism are considered seri
 **General course rules**
 
 - All course work (i.e., homework, exams) must represent your own work.
-- **Using unauthorized tutoring websites or services, including, but not limited to Chegg, Course Hero, and Bartleby, for any course work (i.e., exams, homework) constitutes cheating and violates the Honor Code.**
+- **Using unauthorized tutoring websites or services, including, but not limited to, Chegg, Course Hero, and Bartleby, for any course work (i.e., exams, homework) constitutes cheating and violates the Honor Code.**
 - If you have any questions about whether something is or is not allowed, ask the instructor *beforehand*.
 - All violations will be penalized and reported to the Academic Integrity Board (AIB) at the University *with no exceptions*.
 
