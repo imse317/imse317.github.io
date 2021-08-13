@@ -34,7 +34,9 @@ Please include `IMSE 317` or `BENG 364` in the email subject line.
 
 ## GSI
 
-TBA
+Shixin Liu
+
+<liushixi@umich.edu>
 
 **Office hours**: TBA
 
