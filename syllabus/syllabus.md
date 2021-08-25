@@ -166,6 +166,8 @@ Cheating, collusion, misconduct, fabrication, and plagiarism are considered seri
 Work that includes material derived in any way from the efforts of another author, either by direct quotation or paraphrasing, should be fully and properly documented. 
 To avoid plagiarism, you should cite all sources of both ideas and direct quotations, including those found on the internet. 
 The citation should provide enough information so that the original source of the material can be located.
+- **Work reuse**: If you are retaking the course, you may reuse your own work, provided it was wholly written according to rules outlined in this syllabus. 
+It is possible for instructors to miss an Honor Code violation in a previous term, but catch it when the work is reused.
 - **Penalty policy**: A single offense will result in 0 points for the involved homework *and* a reduction of one letter grade in the final course grade (e.g., from A- to B-). Multiple offenses in homework will result in a failing grade (E) for the course. 
 If a student provided unauthorized help to other students, all parties will receive the same penalty.
 

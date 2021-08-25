@@ -32,25 +32,46 @@ Why do we care?
 The level dictates what we can do (in terms of math operations) with the data. 
 
 ---
-class: center, middle 
+class: center, top
+
+# .large[nominal?]
+
+--
 
 ![:scale 100%](../images/nominal.png)
 
 ---
 # [Nominal](https://en.wikipedia.org/wiki/Nominal_category) (or [categorical](https://en.wikipedia.org/wiki/Categorical_variable)) data
 
-- Country code: 1 (USA), 44 (UK), 81 (Japan), ...
-- Marital status: single, married, divorced, ...
-- Blood type: A, B, AB, O
-- Social security numbers
+When numbers are .red[not] numbers
+- They act like names or labels.
+- Can not be put into order.
 
 --
 
-<br>
+Examples
 
-Nominal data: when numbers are .blue[not] numbers
-- They act like names or labels.
-- Can not be put into order.
+- Country code: 1 (USA), 44 (UK), 81 (Japan), ...
+
+--
+
+- Marital status: *single*, *married*, *divorced*, ...
+
+--
+
+- Blood type: A, B, AB, O
+
+--
+
+- Social security numbers
+
+---
+# Tokyo Olympics men's marathon results
+
+.center[![:scale 80%](../images/marathon-results.png)]
+
+Which column(s) are .red[nominal] data?
+
 
 ---
 # Nominal (or categorical) data
@@ -83,19 +104,20 @@ Examples
 .center[.gray[.small[5-star, 4-star, 3-star, 2-star, 1-star]]]
 
 ---
+# Tokyo Olympics men's marathon results
 
-- Finish place in Chicago Marathon men's race
+.center[![:scale 80%](../images/marathon-results.png)]
 
-.center[![:scale 35%](../images/chima-ordinal.png)]
+Which column(s) are .red[ordinal] data?
 
---
+---
+# [Ordinal data](https://en.wikipedia.org/wiki/Ordinal_data)
 
 Implications
 - Ordinal numbers can be compared (e.g., $>,  <$)
-  - Mo Farah finished ahead of Galen Rupp. 
 
 --
-- We can not carry out calculations for differences or magnitudes ($+,  −, ×, \div$) 
+- However, we can not carry out calculations for differences or magnitudes ($−, \div$) 
 
 ---
 .center[![:scale 90%](../images/nominal-ordinal.png)]
@@ -103,21 +125,19 @@ Implications
 <div style="margin-top: -20px; text-align: left;"><a class="sourcelink" href="https://github.com/allisonhorst/stats-illustrations">Artwork by @allison_horst</a></div>
 
 ---
-# .red[Interval] & .red[ratio] measures 
+# .red[Interval] & .red[ratio] data 
 
 When numbers are .blue[really] numbers
 - Not only can be put to order
 - The distance between them tell us something. 
 
 --
+
 Examples
+
 - Tom drinks 3 cups of coffee. Kate drinks 1 cup. 
 
---
 
-- Mo finishes in 2:05:11. Rupp finishes in 2:06:21.
-
-.center[![:scale 50%](../images/chima-ratio.png)]
 
 ---
 # .red[Ratio] data
@@ -233,6 +253,15 @@ In summary,
 <br>
 
 - with .green[ratio] data we can carry out most calculations.
+
+---
+# Tokyo Olympics men's marathon results
+
+.center[![:scale 80%](../images/marathon-results.png)]
+
+Which column(s) are .red[ratio] data?
+
+Which column(s) are <div class="red" interval=""></div> data?
 
 
 ---
