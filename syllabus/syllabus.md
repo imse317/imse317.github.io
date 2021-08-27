@@ -10,7 +10,7 @@ MATH 116 or Mathematics Placement with a score of 215 or MATH 114
 
 Mondays & Wednesdays 12:30 PM - 1:45 PM
 
-Location TBD
+Location: ELB (Engineering Lab Building) 2392
 
 ## Google Calendar
 
@@ -45,7 +45,11 @@ Shixin Liu
 
 ## SI Leader
 
-TBA
+Shouryan Nikam
+
+<snnikam@umich.edu>
+
+**SI sessions**: TBA
 
 ## Course description
 
@@ -201,16 +205,20 @@ Requests for improving grades based on individual needs will *never* be consider
 You shall not send, upload, or distribute any of the course materials to another person or on the internet. 
 The course materials include the homework and the solutions, practice exams and the solutions, and the exams and the solutions.
 
+## COVID-19 vaccination & face covering policy
+In order to protect our classes, campus, and community from COVID-19 infections, the University of Michigan has instituted a [mandatory vaccination](https://umdearborn.edu/about/policies-and-procedures/general-university-policies-and-procedures/university-michigan-covid-19-vaccination-policy) and [face covering policy](https://president.umich.edu/news-communications/letters-to-the-community/covid-19-update-requiring-face-coverings-indoors-to-enhance-community-safety/) for the fall semester. Please remember to report your [proof of vaccination](https://umich.qualtrics.com/jfe/form/SV_425w4eoxN3zSMqq) and to wear a mask indoors and on the campus shuttle *regardless of vaccination status*.
+Additional COVID-19 information, including FAQs, can be found at <https://campusblueprint.umich.edu/>
 ## Food pantry
 
 The pantry exists to support individuals on their journey as they work toward achieving their goals. We are committed to increasing access to food as a key to success, by assisting any student in need! If you need access or have questions, please contact the Office of Student Life by phone at 313-593-5390, by email at <umdearbornpantry@umich.edu>.
 
 ## University-wide policies or statements
 
-Please see the Course Policies menu on Canvas for information on the following
+Please see the Course Policies menu on Canvas for information on the following topics. 
+To find the Course Policies menu on Canvas, log into any course in Canvas, and then on the blue ribbon on the far left scroll down to Course Policies and click on it. This opens a white ribbon with individual links to UM-Dearborn websites on the following topics:
 - University Attendance Policy
 - Academic Integrity Policy
 - Counseling
-- Disabilities Services
+- Disability and Accessibility Services 
 - Safety Statement
 - Harassment, Sexual Violence, Bias, and Discrimination
