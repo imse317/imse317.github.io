@@ -10,7 +10,7 @@ MATH 116 or Mathematics Placement with a score of 215 or MATH 114
 
 Mondays & Wednesdays 12:30 PM - 1:45 PM
 
-Location: ELB (Engineering Lab Building) 2392
+Location: 2392 ELB
 
 ## Google Calendar
 
@@ -38,10 +38,15 @@ Shixin Liu
 
 <liushixi@umich.edu>
 
-**Office hours**: TBA
+**Review session**
 
-**Review session**: TBA
+- Wednesdays 3:00 PM - 5:00 PM, in-person at 1130 PEC
+- Fridays 3:00 PM - 5:00 PM, on Zoom (link in Google Calendar)
 
+**Office hours**
+
+- Wednesdays 5:00 PM - 7:00 PM, in-person at 1130 PEC
+- Fridays 5:00 PM - 7:00 PM, on Zoom (link in Google Calendar)
 
 ## SI Leader
 
