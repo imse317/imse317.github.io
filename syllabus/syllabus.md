@@ -1,4 +1,4 @@
-<h1 style="text-align: center;">IMSE 317 / BENG 364: Engineering Probability and Statistics</h1>
+<h2 style="text-align: center;"><a href="../">IMSE 317 / BENG 364: Engineering Probability and Statistics</a></h2>
 
 <h3 style="text-align: center;">Fall 2021 - 3 Credit Hours</h3>
 
