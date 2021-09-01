@@ -209,6 +209,7 @@ Requests for improving grades based on individual needs will *never* be consider
 
 You shall not send, upload, or distribute any of the course materials to another person or on the internet. 
 The course materials include the homework and the solutions, practice exams and the solutions, and the exams and the solutions.
+You shall not record or share any videos or audios of the course activities including the lectures and study sessions. 
 
 ## COVID-19 vaccination & face covering policy
 In order to protect our classes, campus, and community from COVID-19 infections, the University of Michigan has instituted a [mandatory vaccination](https://umdearborn.edu/about/policies-and-procedures/general-university-policies-and-procedures/university-michigan-covid-19-vaccination-policy) and [face covering policy](https://president.umich.edu/news-communications/letters-to-the-community/covid-19-update-requiring-face-coverings-indoors-to-enhance-community-safety/) for the fall semester. Please remember to report your [proof of vaccination](https://umich.qualtrics.com/jfe/form/SV_425w4eoxN3zSMqq) and to wear a mask indoors and on the campus shuttle *regardless of vaccination status*.
