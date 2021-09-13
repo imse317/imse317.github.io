@@ -69,7 +69,7 @@ Describe & summarize important features of the data.
 
 $$[19882, 19728, 19335, 19287, \cdots, 617, 555, 529, 242]$$
 
-.center[[`volcano_heights.csv`](../data/volcano_heights.csv)]
+.center[[`volcano_heights.csv`](../../data/volcano_heights.csv)]
 
 ---
 # Stem-and-leaf plot
@@ -125,6 +125,33 @@ Stem-and-leaf plot
 - requires the viewer to "decode" the chart. 
 
 Histogram is more commonly used in practice. 
+
+---
+# Plotting with Python [seaborn](https://seaborn.pydata.org/) library
+
+Go to [Google Colab](https://colab.research.google.com/) and sign in.
+
+Open a new notebook.
+
+```
+import numpy
+import pandas
+import seaborn
+```
+
+```
+bank = pandas.read_csv("https://imse317.github.io/data/bank.csv")
+bank.head()
+```
+
+```
+seaborn.histplot(data=bank["age"], bins=np.arange(0, 90, 5), stat="probability")
+```
+
+---
+# Python workshop
+
+<iframe width="750" height="500" src="https://www.youtube.com/embed/7IsFmtvBOyc" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 </textarea>

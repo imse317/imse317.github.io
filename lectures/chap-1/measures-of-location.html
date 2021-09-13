@@ -254,6 +254,35 @@ class: center
 
 .tiny[[Source](https://linkinghub.elsevier.com/retrieve/pii/S0001457518301143)]
 
+---
+# Descriptive statistics with Python [pandas](https://pandas.pydata.org/)
+
+Go to [Google Colab](https://colab.research.google.com/) and sign in.
+
+Open a new notebook.
+
+```
+import pandas
+bank = pandas.read_csv("https://imse317.github.io/data/bank.csv")
+bank.head()
+```
+
+```
+bank.describe()
+```
+
+```
+bank["age"].mean()
+```
+
+```
+bank["age"].median()
+```
+
+```
+bank["age"].quantile(0.99)
+```
+
 
 </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

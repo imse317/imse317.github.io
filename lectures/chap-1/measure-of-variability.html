@@ -197,6 +197,26 @@ $$\begin{aligned}
 (\text{or }s_y&=cs_x)
 \end{aligned}$$
 
+---
+# Descriptive statistics with Python [pandas](https://pandas.pydata.org/)
+
+Go to [Google Colab](https://colab.research.google.com/) and sign in.
+
+Open a new notebook.
+
+```
+import pandas
+bank = pandas.read_csv("https://imse317.github.io/data/bank.csv")
+bank.head()
+```
+
+```
+bank["age"].var()
+```
+
+```
+bank["age"].std()
+```
 
 
 </textarea>

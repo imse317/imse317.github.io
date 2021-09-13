@@ -23,6 +23,9 @@ document.body.innerHTML = s;
 
 var slideshow = remark.create({
 countIncrementalSlides: false,
+highlightStyle: 'zenburn',
+highlightLanguage: 'python',
+highlightSpans: true,
 });
 
 // Setup MathJax
