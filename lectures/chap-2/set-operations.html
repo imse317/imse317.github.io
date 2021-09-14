@@ -24,11 +24,13 @@ class: split-60
 ]
 
 ---
-# .red[Union] of two events $A$ and $B$
+# [Union](https://en.wikipedia.org/wiki/Union_%28set_theory%29) of two events $A$ and $B$
 
-The event consisting of all outcomes that are either in $A$ or in $B$.
+The event consisting of all outcomes that are 
 
-Notation: $A \cup B$ &nbsp;&nbsp;(Reads: $A \text{ union } B$)
+.center[.red[either in $A$ or in $B$.]]
+
+.gray[Notation:] $A \cup B$ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.gray[Reads:] $A \text{ union } B$
 
 --
 
@@ -45,11 +47,13 @@ A \cup B &= \\\
 $$
 
 ---
-# .red[Intersection] of two events $A$ and $B$
+# [Intersection](https://en.wikipedia.org/wiki/Intersection_%28set_theory%29) of two events $A$ and $B$
 
-The event consisting of all outcomes that are in both $A$ and $B$.
+The event consisting of all outcomes that are 
 
-Notation: $A \cap B$ &nbsp;&nbsp;(Reads: $A \text{ intersect } B$)
+.center[.red[in both $A$ and $B$.]]
+
+.gray[Notation:] $A \cap B$ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.gray[Reads:] $A \text{ intersect } B$
 
 --
 
@@ -64,9 +68,11 @@ A \cap B &=
 \end{aligned}$$
 
 ---
-# Commutative laws
+# [Commutative property](https://en.wikipedia.org/wiki/Commutative_property)
 
 $$ a + b = b + a $$
+
+--
 
 $$ a \times b = b \times a $$
 
@@ -80,7 +86,7 @@ $$ A \cup B = B \cup A $$
 $$ A \cap B = B \cap A $$
 
 ---
-# Associative laws
+# [Associative property](https://en.wikipedia.org/wiki/Associative_property)
 
 $$ (a + b) + c = a + (b + c) $$
 $$ (a \times b) \times c = a \times (b \times c) $$
@@ -95,7 +101,7 @@ $$ (A \cup B) \cup C = A \cup (B \cup C) $$
 $$ (A \cap B) \cap C = A \cap (B \cap C) $$
 
 ---
-# Distributive laws
+# [Distributive property](https://en.wikipedia.org/wiki/Distributive_property)
 
 $$ (a + b) \times c = (a \times c) + (b \times c) $$
 
@@ -134,29 +140,56 @@ A \cap B &= \Phi \\\
 
 
 ---
-# .red[Complement] of an event $A$
+# [Complement](https://en.wikipedia.org/wiki/Complement_%28set_theory%29) of an event $A$
 
 The set of all outcomes in $\Omega$ that are not in $A$.
 
-Notation: $A^c$ &nbsp;&nbsp;(Reads: $A \text{ complement}$)
+.gray[Notation:] $A^c$ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .gray[Reads:] $A \text{ complement}$
 
 --
 
 By definition, 
 
-$$\begin{aligned}
-A \cap A^c = \Phi \\\
-A \cup A^c = \Omega \\\
-\end{aligned}$$
+$$A \cap A^c = \Phi$$
 
 --
 
-Roll a six-sided die, $A = \\{ 5, 6 \\}$, 
+$$A \cup A^c = \Omega$$
 
-$$ A^c = $$
+--
+
+Roll a six-sided die.
+
+$$\begin{aligned}
+A &= \\{ 5, 6 \\} \\\
+\\\
+A^c &= \\\
+\end{aligned}$$
+
 
 ---
-# Venn diagram
+# [Subset](https://en.wikipedia.org/wiki/Subset)
+
+An event $A$ is a .red[subset] of an event $B$ if all outcomes in $A$ are also outcomes in $B$. 
+
+.gray[Notation:] $ A \subset B $
+
+
+--
+
+Roll a six-sided die
+
+$$\begin{aligned}
+A &= \\{ 1, 3, 5\\} \text{ (odd numbers)} \\\
+\\\
+B &= \\{ 1, 2, 3, 4, 5 \\} \text{ (less than 6)} \\\
+\\\
+A &\subset B \\\
+\end{aligned}$$
+
+
+---
+# [Venn diagram](https://en.wikipedia.org/wiki/Venn_diagram)
 
 .center[What is the red region in each Venn diagram?]
 
@@ -284,7 +317,7 @@ $$ A^c = $$
 ]
 
 ---
-# De Morgan's laws
+# [De Morgan's laws](https://en.wikipedia.org/wiki/De_Morgan%27s_laws) (I)
 
 .center[
 <svg width="200" height="200" viewBox="-10 -10 280 280">
@@ -302,34 +335,71 @@ $$ A^c = $$
     <foreignObject x="175" y="70" width="40" height="40"><span style="font-size:20pt">\(B\)</span></foreignObject>
     <foreignObject x="0" y="0" width="40" height="40"><span style="font-size:20pt">\(\Omega\)</span></foreignObject>
  </svg>
- &nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  <svg width="200" height="200" viewBox="-10 -10 280 280">
+ 
+  <use xlink:href="#sample-space" fill="red"/>
+  <use xlink:href="#circle_a" fill="white"/>
 
-    <defs>
-      <mask id="mask2">
-        <use xlink:href="#circle_a" fill="black"/>
-        <use xlink:href="#circle_b" fill="white"/>
-      </mask>
-    </defs>
-  
-    <use xlink:href="#sample-space" fill="red"/>
-    <use xlink:href="#circle_a" fill="white" mask="url(#mask2)"/>
-    
-  
-    <g fill="none" stroke="black" stroke-width="3">
-      <use xlink:href="#circle_b"/>
-      <use xlink:href="#circle_a"/>
-    </g>
-  
-    <foreignObject x="45" y="70" width="40" height="40"><span style="font-size:20pt">\(A\)</span></foreignObject>
-    <foreignObject x="175" y="70" width="40" height="40"><span style="font-size:20pt">\(B\)</span></foreignObject>
-    <foreignObject x="0" y="0" width="40" height="40"><span style="font-size:20pt">\(\Omega\)</span></foreignObject>
-  </svg>
-  ]
+  <g fill="none" stroke="black" stroke-width="3">
+    <use xlink:href="#circle_a"/>
+    <use xlink:href="#circle_b"/>
+  </g>
+
+  <foreignObject x="45" y="70" width="40" height="40"><span style="font-size:20pt">\(A\)</span></foreignObject>
+  <foreignObject x="175" y="70" width="40" height="40"><span style="font-size:20pt">\(B\)</span></foreignObject>
+  <foreignObject x="0" y="0" width="40" height="40"><span style="font-size:20pt">\(\Omega\)</span></foreignObject>
+</svg>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<svg width="200" height="200" viewBox="-10 -10 280 280">
+
+  <use xlink:href="#sample-space" fill="red"/>
+  <use xlink:href="#circle_b" fill="white"/>
+
+  <g fill="none" stroke="black" stroke-width="3">
+    <use xlink:href="#circle_a"/>
+    <use xlink:href="#circle_b"/>
+  </g>
+
+  <foreignObject x="45" y="70" width="40" height="40"><span style="font-size:20pt">\(A\)</span></foreignObject>
+  <foreignObject x="175" y="70" width="40" height="40"><span style="font-size:20pt">\(B\)</span></foreignObject>
+  <foreignObject x="0" y="0" width="40" height="40"><span style="font-size:20pt">\(\Omega\)</span></foreignObject>
+</svg>
+
+]
 
 --
 
+$$ (A \cup B)^c = A^c \cap B^c $$
+
+---
+# [De Morgan's laws](https://en.wikipedia.org/wiki/De_Morgan%27s_laws) (II)
+
 .center[
+
+<svg width="200" height="200" viewBox="-10 -10 280 280">
+
+  <defs>
+    <mask id="mask2">
+      <use xlink:href="#circle_a" fill="black"/>
+      <use xlink:href="#circle_b" fill="white"/>
+    </mask>
+  </defs>
+
+  <use xlink:href="#sample-space" fill="red"/>
+  <use xlink:href="#circle_a" fill="white" mask="url(#mask2)"/>
+  
+
+  <g fill="none" stroke="black" stroke-width="3">
+    <use xlink:href="#circle_b"/>
+    <use xlink:href="#circle_a"/>
+  </g>
+
+  <foreignObject x="45" y="70" width="40" height="40"><span style="font-size:20pt">\(A\)</span></foreignObject>
+  <foreignObject x="175" y="70" width="40" height="40"><span style="font-size:20pt">\(B\)</span></foreignObject>
+  <foreignObject x="0" y="0" width="40" height="40"><span style="font-size:20pt">\(\Omega\)</span></foreignObject>
+</svg>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <svg width="200" height="200" viewBox="-10 -10 280 280">
  
     <use xlink:href="#sample-space" fill="red"/>
@@ -344,7 +414,7 @@ $$ A^c = $$
     <foreignObject x="175" y="70" width="40" height="40"><span style="font-size:20pt">\(B\)</span></foreignObject>
     <foreignObject x="0" y="0" width="40" height="40"><span style="font-size:20pt">\(\Omega\)</span></foreignObject>
   </svg>
-&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <svg width="200" height="200" viewBox="-10 -10 280 280">
  
     <use xlink:href="#sample-space" fill="red"/>
@@ -362,16 +432,18 @@ $$ A^c = $$
 ]
 
 
-???
-$$ (A \cup B)^c = A^c \cap B^c $$
-
 $$ (A \cap B)^c = A^c \cup B^c $$
+
 
 ---
 # Venn diagram
 
+$$ A \cap B = \Phi $$
+
+--
+
 .center[
-$ A \cap B = \Phi $
+
 <svg width="360" height="200" viewBox="-10 -10 280 280">
 
   <rect x="0" y="0" width="360" height="180" fill="white" stroke="black", stroke-width="3"></rect>
@@ -386,8 +458,12 @@ $ A \cap B = \Phi $
 
 --
 
+$$ A \subset B $$
+
+--
+
 .center[
-$ A \subset B $
+
 <svg width="360" height="200" viewBox="-10 -10 280 280">
 
   <rect x="0" y="0" width="360" height="180" fill="white" stroke="black", stroke-width="3"></rect>
