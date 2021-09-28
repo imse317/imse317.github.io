@@ -258,9 +258,33 @@ Assumptions
 
 ---
 
+$$
+\text{P(sharing birthday)}=1-\frac{365!}{(365-k)!\cdot 365^k}
+$$
+
+Go to [Google Colab](https://colab.research.google.com/) and sign in.
+
+Open a new notebook.
+
+
+```
+import math
+
+n = 365  # number of possible birthday dates
+
+k = 40  # number of people at a party
+
+p = 1 - math.factorial(n) / math.factorial(n-k) / (n**k)
+
+print(p)
+```
+
+
+---
+
 # [Birthday problem](https://en.wikipedia.org/wiki/Birthday_problem)
 
-You are at a party with a total of $n$ people. 
+You joined a party with $n$ people. 
 
 How likely someone shares the birthday .red[with you]?
 
