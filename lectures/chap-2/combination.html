@@ -259,7 +259,7 @@ Assumptions
 ---
 
 $$
-\text{P(sharing birthday)}=1-\frac{365!}{(365-k)!\cdot 365^k}
+\text{P(sharing birthday)}=1-\frac{365!}{(365-n)!\cdot 365^n}
 $$
 
 Go to [Google Colab](https://colab.research.google.com/) and sign in.
@@ -270,11 +270,9 @@ Open a new notebook.
 ```
 import math
 
-n = 365  # number of possible birthday dates
+n = 40  # number of people at a party
 
-k = 40  # number of people at a party
-
-p = 1 - math.factorial(n) / math.factorial(n-k) / (n**k)
+p = 1 - math.factorial(365) / math.factorial(365-k) / (365**n)
 
 print(p)
 ```
