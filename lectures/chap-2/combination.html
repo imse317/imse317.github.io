@@ -272,11 +272,15 @@ import math
 
 n = 40  # number of people at a party
 
-p = 1 - math.factorial(365) / math.factorial(365-k) / (365**n)
+p = 1 - math.factorial(365) / math.factorial(365-n) / (365**n)
 
 print(p)
 ```
 
+--
+
+<br>
+[Birthday attack](https://en.wikipedia.org/wiki/Birthday_attack)
 
 ---
 
