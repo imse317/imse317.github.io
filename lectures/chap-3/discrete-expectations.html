@@ -156,7 +156,7 @@ Should you buy this extended warranty?
 What is the expected points by putting Florida's Osifo to the free throw line?
 
 
----
+<!-- ---
 # Expected value of .red[a function of a RV]
 
 Let $X$ be a discrete RV with PMF $p_X(x)$
@@ -169,12 +169,57 @@ $$
 \begin{aligned}
 &\text{E}[Y]=\sum_y y\cdot\; p_Y(y) \;\;\;\; \color{gray}{\leftarrow\text{by def. of expected value}} \\\
 \\\
-&\text{where} \;\;\; p_Y(y)=\sum_{\{x|g(x)=y\}}p_X(x) \\\
+&\text{where} \;\;\; p_Y(y)=\sum_{\\{x|g(x)=y\\}}p_X(x) \\\
 \end{aligned}
+$$ -->
+
+---
+# Expected value of .red[a function of a RV]
+
+A random variable $X$ has a PMF
+
+$$
+p_X(x) = 
+\begin{cases}
+    1/5, & \text{if $x = -2, -1, 0, 1, 2$,} \\\
+    0,              & \text{otherwise.}
+\end{cases}
+$$
+
+What is the expected value of $Y=|X|$?
+
+--
+
+.center[![:scale 45%](../images/function-rv-3.png)]
+
+
+$$
+p_Y(y) = 
+\begin{cases}
+    2/5, & \text{if $y = 1, 2$,} \\\
+    1/5, & \text{if $y = 0$,} \\\
+    0,              & \text{otherwise.}
+\end{cases}
 $$
 
 ---
-A random variable $X$ has a PMF
+Can we get $\text{E}[Y]$ directly using the PMF of $X$, rather than having to first calculating the PMF of $Y=|X|$?
+
+--
+
+<br>
+
+.center[[Law Of The Unconscious Statistician (LOTUS)](https://en.wikipedia.org/wiki/Law_of_the_unconscious_statistician)]
+
+<!-- $$\text{E}[g(X)]=\sum_x \big[g(x) \cdot p_X(x)\big] $$ -->
+
+$$\require{color}\colorbox{yellow}{$\text{E}[g(X)]=\sum_x \big[g(x) \cdot p_X(x)\big] $}$$
+
+--
+
+<!-- <br>
+
+.center[![:scale 70%](../images/function-rv-3.png)] -->
 
 $$p_X(x) = 
 \begin{cases}
@@ -187,39 +232,17 @@ $$Y=|X|$$
 
 What is the expected value of $Y$?
 
-
-
-.center[![:scale 70%](../images/function-rv-3.png)]
-
----
-Can we get $\text{E}[g(X)]$ w/o calculating the PMF of $g(X)$?
-
---
-
-<br>
-
-.center[[Law Of The Unconscious Statistician (LOTUS)](https://en.wikipedia.org/wiki/Law_of_the_unconscious_statistician)]
-
-$$\text{E}[g(X)]=\sum_x \big[g(x) \cdot p_X(x)\big] $$
-
---
-
-<br>
-
-.center[![:scale 70%](../images/function-rv-3.png)]
-
-
 ---
 # Proof of LOTUS
 
 $$
 \begin{aligned}
 \text{E}[Y]&=\sum_y \big[y \cdot p_Y(y)\big] \;\;\;\;\;\; \color{gray}{\leftarrow\text{by def. of expected value}} \\\
-&=\sum_y \bigg[y \cdot \sum_{\{x|g(x)=y\}}p_X(x)\bigg] \\\
+&=\sum_y \bigg[y \cdot \sum_{\\{x|g(x)=y\\}}p_X(x)\bigg] \\\
 \\\
-&=\sum_y \bigg[\sum_{\{x|g(x)=y\}} y \cdot p_X(x) \bigg] \\\
+&=\sum_y \bigg[\sum_{\\{x|g(x)=y\\}} y \cdot p_X(x) \bigg] \\\
 \\\
-&=\sum_y \bigg[\sum_{\{x|g(x)=y\}} g(x) \cdot p_X(x) \bigg] \\\
+&=\sum_y \bigg[\sum_{\\{x|g(x)=y\\}} g(x) \cdot p_X(x) \bigg] \\\
 \\\
 &=\sum_x \big[g(x) \cdot p_X(x) \big] \\\
 \end{aligned}
@@ -251,26 +274,24 @@ $$
 
 $$\text{E}[aX+b]=a \text{E}[X] + b$$
 
-That is, when $g(X)$ is a linear function $g(X)=aX+b$, 
-
-we have
+That is, when $g(X)$ is a linear function, we have
 
 $$\text{E}\big[g(X)\big]=g\big(\text{E}[X]\big)$$
 
 
 --
 
-$$\text{Celcius}=g(\text{Farenheit})=(\text{Farenheit}-32) \cdot \frac{5}{9}$$
+$$\text{Celcius}=(\text{Farenheit}-32) \cdot \frac{5}{9}$$
 
 --
 
-$$\text{E[Celcius]}=(\text{E[Farenheit]}-32) \cdot \frac{5}{9}$$
+If we already know $\text{E[Farenheit]}=41$, then 
+
+$$\text{E[Celcius]}=(\text{E[Farenheit]}-32) \cdot \frac{5}{9}=(41-32) \cdot \frac{5}{9}=5$$
 
 --
 
 However, in general, 
-
-<!-- $$\require{color}\colorbox{yellow}{$\text{E}[g(X)] \neq g(\text{E}[X])$}$$ -->
 
 $$\text{E}\big[g(X)\big] \neq g\big(\text{E}[X]\big)$$
 
