@@ -88,16 +88,16 @@ $$\text{P}(X=k) ={n \choose k}p^k(1-p)^{n-k}$$
 
 $$\text{for } k=0, 1, 2, \cdots, n.$$
 
-This is in the same format as the [binomial expansion](https://en.wikipedia.org/wiki/Binomial_theorem) in algebra, 
-hence the name of the distribution. 
+Note it is in the same format as the [binomial expansion](https://en.wikipedia.org/wiki/Binomial_theorem) in algebra:
 
 $$
 (x+y)^n=\sum_{k=0}^n {n \choose k}x^k y^{n-k}
 $$
 
+
 ${n \choose k}$ is often called the [binomial coefficient](https://en.wikipedia.org/wiki/Binomial_coefficient). 
 
----
+<!-- ---
 # Exercise
 
 A family has 4 children. 
@@ -106,7 +106,7 @@ Each child has equal probability of being a girl or a boy, independent of the ot
 
 Let $X$ be the number of girls in the family.
 
-Find the PMF of $X$. 
+Find the PMF of $X$.  -->
 
 
 ---
@@ -171,35 +171,33 @@ class: center, middle
 
 .huge[[Interactive visualization](https://probstats.org/binomial.html)]
 
----
-
+<!-- 
 For any PMF we have 
 
 $$\small{\sum_x p_X(x)=1}$$
 
---
+
 
 $$\small{\sum_{k=0}^n {n \choose k}p^k(1-p)^{n-k}=1}$$
 
---
+
 
 When $p=1/2$ (i.e., a fair coin)
 
---
+
 
 $$\small{\sum_{k=0}^n {n \choose k}\bigg(\frac{1}{2}\bigg)^n=1}$$
 
---
+
 
 $$\small{\sum_{k=0}^n {n \choose k}=2^n}$$
 
---
+
 
 $$\small{1+n+\frac{n(n-1)}{2}+\cdots+\frac{n(n-1)}{2}+n+1=2^n}$$
 
 
-???
-We will need this property later when finding the expected value of binomial RV. 
+We will need this property later when finding the expected value of binomial RV.  -->
 
 ---
 name: expected_binomial
