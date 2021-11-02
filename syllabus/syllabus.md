@@ -128,7 +128,7 @@ There are two midterm exams and one final exam.
 
 - **Midterm 1**: Monday, **October 18** during lecture time (12:30 PM - 1:45 PM), coverage: Lectures 1-10
 - **Midterm 2**: Monday, **November 15** during lecture time (12:30 PM - 1:45 PM), coverage: Lectures 11-17
-- **Final exam**: Date/time TBA - Comprehensive with slightly more focus on Lectures 18-23. 
+- **Final exam**: Wednesday, **December 15**, 12:00 PM (noon) - 2:00 PM - Comprehensive with slightly more focus on Lectures 18-23. 
 
 **Formats** (for all three exams)
 
