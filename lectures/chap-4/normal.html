@@ -33,12 +33,13 @@ class: split-50
 
 --
 
-Arguably the most important distribution in science.
+Arguably the most important distribution.
 
 --
 
 Central limit theorem: 
-The sum of many i.i.d. RVs (could be ANY distribution) is approximately normal.
+The sum of many independent and identically distributed (i.i.d.) random variables is approximately normally distributed.
+<!-- The sum of many (i.i.d.) RVs (could be ANY distribution) is approximately normal. -->
 
 ---
 # .red[Standard normal] distribution
@@ -48,7 +49,7 @@ A continuous RV $Z$ is standard normal if it has a PDF
 $$f_Z(z)=\frac{1}{\sqrt{2\pi}}e^{-\frac{z^2}{2}}$$
 
 .center[
-$Z \sim \text{N}(0, 1)\;\;\;\;$
+<!-- $Z \sim \text{N}(0, 1)\;\;\;\;$ -->
 <img align="middle" width="320" src="../images/pdf-z.png">
 ]
 
@@ -56,19 +57,19 @@ $Z \sim \text{N}(0, 1)\;\;\;\;$
 
 The factor $\frac{1}{\sqrt{2\pi}}$ is to ensure the normalization property. 
 
----
+<!-- ---
 # .red[Standard normal] distribution
 
 $$f_Z(z)=\frac{1}{\sqrt{2\pi}}e^{-\frac{z^2}{2}}$$
 
 <br>
-Where does the bell shape come from?
+.center[Where does the bell shape come from?]
 
 .center[
 ![:scale 32%](../images/parabola.png)
 ![:scale 32%](../images/exp.png)
 ![:scale 32%](../images/pdf-z.png)
-]
+] -->
 
 ---
 # .red[Normal] distribution
@@ -196,19 +197,18 @@ $$\Phi(-x)=1-\Phi(x), \;\;\;\; \text{for all $x$.} $$
 ---
 # Exercise ❄
 
-The annual snowfall in Dearborn is modeled as a normal distribution
-with 
+Assume the annual snowfall in Dearborn follows a normal distribution with 
 - a mean of $\mu=60$ inches
 - a standard deviation of $\sigma=20$ inches
 
-What is the probability next year has 80+ inches snow?
+What is the probability this year has 80+ inches snow?
 
 --
 
-![:scale 31%](../images/normal-exercise-1.png)
+![:scale 45%](../images/normal-exercise-1.png)
 &nbsp;&nbsp;&nbsp;&nbsp;
 --
-![:scale 31%](../images/normal-exercise-2.png)
+![:scale 45%](../images/normal-exercise-2.png)
 
 ---
 
@@ -287,7 +287,7 @@ $$
 \end{aligned}
 $$
 
----
+<!-- ---
 # Mixed random variables
 
 A RV could be a mixture of both discrete & continuous.
@@ -296,7 +296,7 @@ Consider the following game of tossing a coin
 
 - If it lands on heads, you get $10.
 
-- If it lands on tails, you get <span>$</span> amount of $\text{unif}(5, 15)$
+- If it lands on tails, you get <span>$</span> amount of $\text{unif}(5, 15)$ -->
 
 ---
 

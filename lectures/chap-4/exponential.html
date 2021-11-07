@@ -21,35 +21,39 @@ class: middle, center
 
 
 ---
-# [Exponential distribution](https://en.wikipedia.org/wiki/Exponential_distribution)
+<!-- # [Exponential distribution](https://en.wikipedia.org/wiki/Exponential_distribution) -->
 
-.green[Geometric] RV: \# of tosses needed to get the first heads
+.green[Geometric] RV: 
 
 --
 
-$$p_X(k)=(1-p)^{k-1}p, \;\;\;\;\text{for } k=1, 2, \cdots $$
+\# of coin tosses needed to see the very first heads
+
+--
+
+$$\small{p_X(k)=(1-p)^{k-1}p, \;\;\;\;\text{for } k=1, 2, \cdots }$$
 
 --
 
 .center[
 $\text{geo}(0.5)\;\;\;$
-<img align="middle" width="300" src="../images/pmf-geo-p50.png">
+<img align="middle" width="280" src="../images/pmf-geo-p50.png">
 ]
 
 --
 
-<br>
-
 .red[Exponential]: the continuous counterpart of .green[geometric]. 
 
----
-# Usages of exponential distribution
+.center[![:scale 30%](../images/expo-cover.png)]
 
-Widely used to model the time between two successive events (termed the "interarrival time")
+---
+# [Exponential distribution](https://en.wikipedia.org/wiki/Exponential_distribution)
+
+It is commonly used to model .red[the time between two successive events] (termed "interarrival time")
 
 - Customers arriving at a store
 - Phone calls coming in to a call center
-- "Survival time" of components in reliability analysis
+- "Survival time" (or time to failure) of components
 
 ---
 
@@ -83,15 +87,21 @@ $$
 
 The constant $c$ is to ensure the normalization property. 
 
+--
+
 $$
 \begin{aligned}
 \int_{-\infty}^{+\infty}f_X(x)dx &= \int_0^{+\infty}ce^{-\lambda x}dx \\\
+\\\
 &=c\big(-\frac{1}{\lambda}\big)e^{-\lambda x}\bigg|_0^{+\infty} \\\
-&=-\frac{c}{\lambda}(0-1)=\frac{c}{\lambda} = 1 \\\
+\\\
+&=-\frac{c}{\lambda}(0-1) \\\
+\\\
+&=\frac{c}{\lambda} \color{red}{= 1} \\\
 \end{aligned}
 $$
 
-Thus $c=\lambda$.
+<!-- Thus $c=\lambda$. -->
 
 
 ---
@@ -107,9 +117,9 @@ f_X(x) =
 \end{cases}
 $$
 
-<br>
-$$f_X(0) = \lambda e^{-\lambda \cdot 0}=\lambda$$
+--
 
+<br>
 
 .center[
 ![:scale 32%](../images/pdf-expo-04.png)
@@ -117,6 +127,9 @@ $$f_X(0) = \lambda e^{-\lambda \cdot 0}=\lambda$$
 ![:scale 32%](../images/pdf-expo-16.png)
 ]
 
+--
+
+$$f_X(0) = \lambda e^{-\lambda \cdot 0}=\lambda$$
 
 ---
 class: center, middle
@@ -168,6 +181,24 @@ $$\text{P}(X > x) = 1-F_X(x)=1-\big(1-e^{-\lambda x}\big)=e^{-\lambda x}$$
 ![:scale 45%](../images/cdf-expo-1minus.png)
 ]
 
+---
+# .red[Memoryless] property
+
+Assume time between phone calls is exponentially distributed. 
+
+You have waited for 2 hrs, and there was no phone call. 
+
+The probability of having to wait for at least another hour, 
+is the same as the probability of having to wait for at least one hour.
+
+--
+
+.green[Every instant is like the beginning of a new random period, 
+which has the same distribution regardless of how much time has already passed.]
+
+--
+
+Geometric and exponential RVs are the only two RVs that have this memoryless property. 
 
 ---
 name: memoryless
@@ -189,25 +220,6 @@ $$\text{for all nonnegative values $t$ and $s$}$$
 
 The past has no bearing on its future behavior.
 
----
-# .red[Memoryless] property
-
-Assume time between phone calls is exponential RV. 
-
-You have waited for 2 hrs, and there was no phone call. 
-
-The probability of having to wait for at least another hour, 
-is the same as the probability of having to wait for at least one hour.
-
---
-
-.green[Every instant is like the beginning of a new random period, 
-which has the same distribution regardless of how much time has already passed.]
-
---
-
-Geometric and exponential RVs are the only two RVs that have this memoryless property. 
-
 
 ---
 # Exercise ✉
@@ -223,11 +235,11 @@ What is the probability of
 
 --
 
-- getting an email between 4 PM and 6 PM today?
+- getting the first email between 4 PM and 6 PM?
 
 --
 
-Now it is 1 PM, and you have not received any email. 
+Now it is 1 PM, and you have yet received any email. 
 
 What is the probability of getting one in the next 2 hrs?
 
@@ -265,42 +277,6 @@ $$\text{var}(X)=\sigma^2=\frac{1}{\lambda^2}$$
 Standard deviation:
 $$\sigma =\sqrt{\sigma^2}=\frac{1}{\lambda}$$
 
----
-CDF of exponential RV
-
-$$F_X(x) = 
-\begin{cases}
-    0,                & \text{if $x \leq 0$,} \\\
-    1-e^{-\lambda x}, & \text{if $x > 0$.} 
-\end{cases}
-$$
-
-.center[![:scale 35%](../images/cdf-expo.png)]
-
---
-
-Solve $x$ from the CDF, we get its inverse function
-
-$$F_X^{-1}=x=-\frac{1}{\lambda}\ln(1-F_X)$$
-
-Inverse function of CDF is called a [quantile function](https://en.wikipedia.org/wiki/Quantile_function).
-
-
-
----
-# Quantile function
-
-$$F_X^{-1}=x=-\frac{1}{\lambda}\ln(1-F_X)$$
-
-The .red[median] of exponential distribution:
-
-$$F_X^{-1}(0.5)=-\frac{1}{\lambda}\ln(1-0.5)=-\frac{1}{\lambda}\ln(\frac{1}{2})=\frac{\ln2}{\lambda}$$
-
-.center[
-![:scale 40%](../images/cdf-expo-median.png)
-&nbsp;
-![:scale 40%](../images/pdf-expo-median.png)
-]
 
 ---
 $$
@@ -426,6 +402,47 @@ $$
 &=\frac{1}{\lambda^2}
 \end{aligned}
 $$
+
+<!-- ---
+CDF of exponential RV
+
+$$F_X(x) = 
+\begin{cases}
+    0,                & \text{if $x \leq 0$,} \\\
+    1-e^{-\lambda x}, & \text{if $x > 0$.} 
+\end{cases}
+$$
+
+.center[![:scale 35%](../images/cdf-expo.png)]
+
+--
+
+Solve $x$ from the CDF, we get its inverse function
+
+$$F_X^{-1}=x=-\frac{1}{\lambda}\ln(1-F_X)$$
+
+Inverse function of CDF is called a [quantile function](https://en.wikipedia.org/wiki/Quantile_function).
+ -->
+
+
+<!-- ---
+# Quantile function
+
+$$F_X^{-1}=x=-\frac{1}{\lambda}\ln(1-F_X)$$
+
+The .red[median] of exponential distribution:
+
+$$F_X^{-1}(0.5)=-\frac{1}{\lambda}\ln(1-0.5)=-\frac{1}{\lambda}\ln(\frac{1}{2})=\frac{\ln2}{\lambda}$$
+
+.center[
+![:scale 40%](../images/cdf-expo-median.png)
+&nbsp;
+![:scale 40%](../images/pdf-expo-median.png)
+] -->
+
+
+
+
 
 
 </textarea>
