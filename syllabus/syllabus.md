@@ -28,7 +28,7 @@ Please include `IMSE 317` or `BENG 364` in the email subject line.
 
 **Office hours**
 
-- Wednesdays 2:00 PM - 3:00 PM, in-person at Prof. Feng's office (2320 HPEC)
+- Wednesdays 11:00 AM - noon, in-person at Prof. Feng's office (2320 HPEC)
 - Thursdays 3:00 PM - 4:00 PM, on Zoom at <https://umich.zoom.us/my/fredfeng>
 - or by appointment
 
