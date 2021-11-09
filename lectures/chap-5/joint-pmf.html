@@ -136,6 +136,68 @@ $A$: the set of all pairs $(x, y)$ that have a certain property.
 
 $$\text{P}\big((X, Y) \in A\big)=\sum_{(x, y) \in A}p_{X, Y}(x, y)$$
 
+---
+class: middle, center
+
+.huge[Marginal PMF]
+
+<br>
+
+![:scale 60%](../images/marginal-pmf-cover.png)
+
+---
+We can calculate the PMF of $X$ using
+
+$$
+\small{
+  p_X(x)=\text{P}(X=x)=\sum_y \text{P}(X=x, Y=y) =\sum_y p_{X, Y}(x, y)
+}
+$$
+
+
+We refer to $p_X(x)$ as the .red[marginal PMF] of $X$.
+
+--
+
+.center[![:scale 60%](../images/marginal-pmf.png)]
+
+---
+Similarly, we can calculate the PMF of $Y$ using
+
+$$
+\small{
+p_Y(y)=\text{P}(Y=y)=\sum_x \text{P}(X=x, Y=y)=\sum_x p_{X, Y}(x, y)
+}
+$$
+
+We refer to $p_Y(y)$ as the .red[marginal PMF] of $Y$.
+
+--
+
+.center[![:scale 60%](../images/marginal-pmf.png)]
+
+
+---
+We randomly sample an adult from the MI population.
+
+$X$: whether they are a current smoker
+
+$Y$: whether they will develop lung cancer at some point
+
+Suppose the joint PMF is as follows*.
+
+
+| |&nbsp;&nbsp;&nbsp;&nbsp;$Y=0$&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;$Y=1$&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+|:---:|:---:|:---:|
+|&nbsp;&nbsp;&nbsp;&nbsp;$X=0$&nbsp;&nbsp;&nbsp;&nbsp;|$72\%$|$3\%$||
+|&nbsp;&nbsp;&nbsp;&nbsp;$X=1$&nbsp;&nbsp;&nbsp;&nbsp;|$20\%$|$5\%$||
+|&nbsp;|||||
+
+What are the marginal PMFs of $X$ and $Y$?
+
+
+<br><br>
+.lightgray[.tiny[\* All number are fictional.]]
 
 </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
