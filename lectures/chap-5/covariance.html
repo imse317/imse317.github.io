@@ -27,11 +27,13 @@ class: split-50
 It measures the degree to which two RVs .red[vary together]. 
 
 - People's height & weight
-- Houses: size & market value
+<!-- - Houses: size & market value -->
 
 --
 
-.center[![:scale 45%](../images/dist-to-bike-lane.png)]
+<!-- .center[![:scale 45%](../images/dist-to-bike-lane.png)] -->
+
+.center[![:scale 70%](../images/tv-sales.png)]
 
 ---
 
@@ -39,7 +41,7 @@ It measures the degree to which two RVs .red[vary together].
 
 The covariance between two RVs $X$ and $Y$ is defined by
 
-$$\text{cov}(X, Y)=\text{E}\big[(X-\text{E}[X])(Y-\text{E}[Y])\big]$$
+$$\text{cov}(X, Y)=\text{E}\bigg[\big(X-\text{E}[X]\big)\cdot\big(Y-\text{E}[Y]\big)\bigg]$$
 
 --
 
@@ -56,35 +58,36 @@ If $\text{cov}(X, Y)=0$, we say $X$ and $Y$ are .green[uncorrelated].
 ---
 # Properties
 
-<br>
-
 $$\text{cov}(X, X)=\text{var}(X)$$
 
 --
 
-<br>
+Proof
 
-$$\text{cov}(X, Y)=\text{E}[XY]-\text{E}[X]\text{E}[Y]$$
-
-.center[☝️ A shortcut formula to calculate covariance]
-
-
-???
-Proofs
 $$
 \begin{aligned}
-\text{cov}(X, X)&=\text{E}\big[(X-\text{E}[X])(X-\text{E}[X])\big] \\\
+\text{cov}(X, X)&=\text{E}\big[(X-\text{E}[X])(X-\text{E}[X])\big] \;\;\; \color{gray}{\leftarrow\text{by def. of cov}}\\\
 \\\
 &=\text{E}\big[(X-\text{E}[X])^2\big] \\\
 \\\
-&=\text{var}(X) \;\;\; \color{gray}{\leftarrow\text{by definition of variance}}\\\
+&=\text{var}(X) \;\;\; \color{gray}{\leftarrow\text{by def. of variance}}\\\
 \end{aligned}
 $$
 
+---
+# Properties
+
+$$\text{cov}(X, Y)=\text{E}[XY]-\text{E}[X]\text{E}[Y]$$
+
+.center[A shortcut formula to calculate covariance]
+
+--
+
+Proof
 
 $$
 \begin{aligned}
-\text{cov}(X, Y)&=\text{E}\big[(X-\text{E}[X])(Y-\text{E}[Y])\big] \\\
+\text{cov}(X, Y)&=\text{E}\big[(X-\text{E}[X])(Y-\text{E}[Y])\big] \;\;\; \color{gray}{\leftarrow\text{by def. of cov}}\\\
 \\\
 &=\text{E}\big[XY-\text{E}[X]Y-\text{E}[Y]X+\text{E}[X]\text{E}[Y]\big] \\\
 \\\
@@ -94,7 +97,7 @@ $$
 \end{aligned}
 $$
 
----
+<!-- ---
 $X$: whether they are a current smoker
 
 $Y$: whether they will develop lung cancer at some point
@@ -105,19 +108,18 @@ $Y$: whether they will develop lung cancer at some point
 |&nbsp;&nbsp;&nbsp;&nbsp;$X=1$&nbsp;&nbsp;&nbsp;&nbsp;|$20\%$|$5\%$|$25\%$|
 |$p_Y(y)$|$92\%$|$8\%$|$100\%$|
 
-What is the covariance between $X$ and $Y$?
+What is the covariance between $X$ and $Y$? -->
 
 ---
 
 # Properties
 
-<br>
 
 $$\text{cov}(aX+b, Y)=a\cdot\text{cov}(X, Y),$$
 $$\text{for any constants $a$ and $b$.}$$
 
+--
 
-???
 Proof
 
 $$
@@ -135,11 +137,9 @@ $$
 ---
 # Commutative property
 
-<br>
-
 $$\text{cov}(X, Y)=\text{cov}(Y, X)$$
 
-???
+--
 Proof
 
 $$
@@ -152,14 +152,27 @@ $$
 \end{aligned}
 $$
 
-<!-- <!-- ---
+---
 # Distributive property
 
-<br>
+$$\text{cov}(X+Y, Z)=\text{cov}(X, Z)+\text{cov}(Y, Z)$$
 
-$$\text{cov}(X+Y, Z)=\text{cov}(X, Z)+\text{cov}(Y, Z)$$ -->
+--
+Proof
 
-<!-- ---
+$$
+\begin{aligned}
+&\;\text{cov}(X+Y, Z) \\\
+=&\;\text{E}\big[(X+Y-\text{E}[X+Y])(Z-\text{E}[Z])\big] \;\;\; \color{gray}{\leftarrow\text{by def. of cov}} \\\
+=&\;\text{E}\big[(X-\text{E}[X]+Y-\text{E}[Y])(Z-\text{E}[Z])\big] \\\
+=&\;\text{E}\big[(X-\text{E}[X])(Z-\text{E}[Z])+(Y-\text{E}[Y])(Z-\text{E}[Z])\big] \\\
+=&\;\text{E}\big[(X-\text{E}[X])(Z-\text{E}[Z])\big]+\text{E}\big[(Y-\text{E}[Y])(Z-\text{E}[Z])\big] \\\
+=&\;\text{cov}(X, Z)+\text{cov}(Y, Z) \\\
+\end{aligned}
+$$
+
+---
+# Distributive property (cont'd)
 
 <br>
 
@@ -176,45 +189,40 @@ $$
 \end{aligned}
 $$
 
-???
-Proof
 
-$$
-\begin{aligned}
-&\;\text{cov}(X+Y, Z) \\\
-\\\
-=&\;\text{E}\big[(X+Y-\text{E}[X+Y])(Z-\text{E}[Z])\big] \;\;\; \color{gray}{\leftarrow\text{by definition}} \\\
-\\\
-=&\;\text{E}\big[(X-\text{E}[X]+Y-\text{E}[Y])(Z-\text{E}[Z])\big] \\\
-\\\
-=&\;\text{E}\big[(X-\text{E}[X])(Z-\text{E}[Z])+(Y-\text{E}[Y])(Z-\text{E}[Z])\big] \\\
-\\\
-=&\;\text{E}\big[(X-\text{E}[X])(Z-\text{E}[Z])\big]+\text{E}\big[(Y-\text{E}[Y])(Z-\text{E}[Z])\big] \\\
-\\\
-=&\;\text{cov}(X, Z)+\text{cov}(Y, Z) \\\
-\end{aligned}
-$$ -->
 
 ---
 # Properties
 
 $$
-\small{
 \text{var}(X+Y)=\text{var}(X)+\text{var}(Y)+2\text{cov}(X, Y)
-}
 $$
 
 --
+Proof
 
-We can also write it as
+$$
+\small{
+\begin{aligned}
+&\;\text{var}(X+Y) \\\
+=&\;\text{E}\bigg[\big(X+Y-\text{E}[X+Y]\big)^2\bigg] \;\;\; \color{gray}{\leftarrow\text{by definition of variance}} \\\
+=&\;\text{E}\bigg[\big(X-\text{E}[X]+Y-\text{E}[Y]\big)^2\bigg] \\\
+=&\;\text{E}\bigg[\big(X-\text{E}[X]\big)^2+\big(Y-\text{E}[Y]\big)^2+2\big(X-\text{E}[X]\big)\big(Y-\text{E}[Y]\big)\bigg] \\\
+=&\;\text{E}\big[(X-\text{E}[X])^2\big]+\text{E}\big[(Y-\text{E}[Y])^2\big] +2\text{E}\big[(X-\text{E}[X])(Y-\text{E}[Y])\big] \\\
+=&\;\text{var}(X)+\text{var}(Y)+2\text{cov}(X, Y) \\\
+\end{aligned}
+}
+$$
 
+
+<!-- We can also write it as
 $$
 \small{
 \text{var}(X+Y) = \text{cov}(X, X)+ \text{cov}(Y, Y)+ \text{cov}(X, Y)+ \text{cov}(Y, X)
 }
-$$
+$$ -->
 
---
+<!-- ---
 
 If we replace $Y$ with $-Y$
 
@@ -226,51 +234,30 @@ $$
 &=\text{var}(X)+\text{var}(Y)-2\text{cov}(X, Y) \\\
 \end{aligned}
 }
-$$
-
-???
-Proof
-
-$$
-\begin{aligned}
-&\;\text{var}(X+Y) \\\
-\\\
-=&\;\text{E}\big[(X+Y-\text{E}[X+Y])^2\big] \;\;\; \color{gray}{\leftarrow\text{by definition of variance}} \\\
-\\\
-=&\;\text{E}\big[(X-\text{E}[X]+Y-\text{E}[Y])^2\big] \\\
-\\\
-=&\;\text{E}\big[(X-\text{E}[X])^2+(Y-\text{E}[Y])^2+2(X-\text{E}[X])(Y-\text{E}[Y])\big] \\\
-\\\
-=&\;\text{E}\big[(X-\text{E}[X])^2\big]+\text{E}\big[(Y-\text{E}[Y])^2\big] +2\text{E}\big[(X-\text{E}[X])(Y-\text{E}[Y])\big] \\\
-\\\
-=&\;\text{var}(X)+\text{var}(Y)+2\text{cov}(X, Y) \\\
-\end{aligned}
-$$
+$$ -->
 
 
----
+
+
+
+<!-- ---
 # Independence
 
 If two RVs $X$ and $Y$ are independent, 
 
 $$\text{cov}(X, Y)=0$$
 
---
-
 <br>
 - Independent RVs are uncorrelated. 
-
---
 
 - However, the converse is not true. 
   - Uncorrelated RVs may not be independent. 
 
-???
 Proof
 
-$$\text{cov}(X, Y)=\text{E}[XY]-\text{E}[X]\text{E}[Y]=0$$
+$$\text{cov}(X, Y)=\text{E}[XY]-\text{E}[X]\text{E}[Y]=0$$ -->
 
----
+<!-- ---
 
 $$
 \begin{aligned}
@@ -280,27 +267,19 @@ Y &=  X^2\\\
 \end{aligned}
 $$
 
---
-
 $$\text{cov}(X, Y)=\text{E}[XY]-\text{E}[X]\text{E}[Y]=\text{E}[XY]$$
 
---
-
 $$\text{E}[XY]=\text{E}[X^3]=\int_{-\infty}^{+\infty} z^3(\frac{1}{\sqrt{2\pi}}e^{-\frac{z^2}{2}})dz=0$$
-
---
 
 $$\text{cov}(X, Y)=0$$
 
 $X$ and $Y$ are uncorrelated. 
 
---
-
 However, they are not independent. 
 
-In fact, knowing $X$ gives us complete info about $Y$.
+In fact, knowing $X$ gives us complete info about $Y$. -->
 
----
+<!-- ---
 # Uncorrelated but dependent 
 
 $$X \sim \text{N}(0, 1), \;\;\;\;Y =  X^2, \;\;\;\;\text{cov}(X, Y)=0$$
@@ -310,16 +289,16 @@ $$X \sim \text{N}(0, 1), \;\;\;\;Y =  X^2, \;\;\;\;\text{cov}(X, Y)=0$$
 
 Covariance is a measure of .red[linear] relationship. 
 
-RVs can be dependent in nonlinear ways, and still have zero covariance. 
+RVs can be dependent in nonlinear ways, and still have zero covariance.  -->
 
----
+<!-- ---
 # Independence
 
 If $X$ and $Y$ are independent, then
 
 $$\text{var}(X + Y)=\text{var}(X) + \text{var}(Y)$$
 
-???
+
 Proof
 
 $$
@@ -330,14 +309,138 @@ $$
 \\\
 &=\text{var}(X)+\text{var}(Y) \\\
 \end{aligned}
-$$
+$$ -->
 
----
+<!-- ---
 # Independence
 
 Generally, if $n$ RVs $X_1, X_2, \cdots, X_n$ are independent, 
 
-$$\text{var}\bigg(\sum_{i=1}^n X_i\bigg)=\sum_{i=1}^n \text{var}(X_i)$$
+$$\text{var}\bigg(\sum_{i=1}^n X_i\bigg)=\sum_{i=1}^n \text{var}(X_i)$$ -->
+
+---
+# [Correlation coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)
+
+The .red[correlation coefficient] (or simply, .red[correlation]) between two RVs $X$ and $Y$ is defined by
+
+$$\rho(X, Y)=\frac{\text{cov}(X, Y)}{\sqrt{\text{var}(X)\text{var}(Y)}}$$
+
+--
+We can rewrite it as 
+
+$$\rho=\text{cov}\bigg(\frac{X-\text{E}[X]}{\sqrt{\text{var}(X)}}, \frac{Y-\text{E}[Y]}{\sqrt{\text{var}(Y)}} \bigg)$$
+
+
+The correlation is the covariance after standardization.
+
+--
+
+Note $\rho$ is dimensionless. 
+
+---
+# Properties
+
+For any constants $a$ and $b$
+
+$$
+\begin{aligned}
+\text{cov}(aX+b, Y)&=a\cdot\text{cov}(X, Y) \\\
+\\\
+\rho(aX+b, Y)&=\rho(X, Y) \\\
+\end{aligned}
+$$
+
+Scaling a variable does not change the correlation. 
+
+???
+Proof
+
+$$
+\begin{aligned}
+\rho(aX+b, Y)&= \frac{\text{cov}(aX+b, Y)}{\sqrt{\text{var}(aX+b)\text{var}(Y)}} \\\
+\\\
+&= \frac{a\cdot\text{cov}(X, Y)}{\sqrt{a^2\text{var}(X)\text{var}(Y)}} \\\
+\\\
+&= \frac{\text{cov}(X, Y)}{\sqrt{\text{var}(X)\text{var}(Y)}} \\\
+\\\
+&=\rho(X, Y) \\\
+\end{aligned}
+$$
+
+---
+# Correlation bounds
+
+For any two RVs $X$ and $Y$, we have
+
+$$-1 \leq \rho(X, Y) \leq 1$$
+
+--
+
+<br>
+
+$$
+\begin{aligned}
+\rho=1, & \;\text{if and only if $Y=aX+b$ with $a>0$.} \\\
+\\\
+\rho=-1, & \;\text{if and only if $Y=aX+b$ with $a < 0$.} \\\
+\end{aligned}
+$$
+
+
+???
+Proof
+
+$$
+\small{
+\begin{aligned}
+&\;\text{var}\bigg(\frac{X}{\sqrt{\text{var}(X)}}+\frac{Y}{\sqrt{\text{var}(Y)}}\bigg) \\\
+\\\
+=&\;\text{var}\bigg(\frac{X}{\sqrt{\text{var}(X)}}\bigg)+\text{var}\bigg(\frac{Y}{\sqrt{\text{var}(Y)}}\bigg) \\\
+&+2\text{cov}\bigg(\frac{X}{\sqrt{\text{var}(X)}}, \frac{Y}{\sqrt{\text{var}(Y)}}\bigg) \\\
+\\\
+=&\;1+1+2\rho \\\
+\\\
+\geq&\; 0
+\end{aligned}
+}
+$$
+
+So 
+
+$$\rho \geq -1$$
+
+Similarly, 
+
+$$
+\small{
+\begin{aligned}
+&\;\text{var}\bigg(\frac{X}{\sqrt{\text{var}(X)}}-\frac{Y}{\sqrt{\text{var}(Y)}}\bigg) \\\
+\\\
+=&\;\text{var}\bigg(\frac{X}{\sqrt{\text{var}(X)}}\bigg)+\text{var}\bigg(\frac{Y}{\sqrt{\text{var}(Y)}}\bigg) \\\
+&-2\text{cov}\bigg(\frac{X}{\sqrt{\text{var}(X)}}, \frac{Y}{\sqrt{\text{var}(Y)}}\bigg)\\\
+\\\
+=&\;1+1-2\rho \\\
+\\\
+\geq&\; 0
+\end{aligned}
+}
+$$
+
+So 
+
+$$\rho \leq 1$$
+
+Lastly, 
+
+$$
+\begin{aligned}
+\rho(X, aX+b)&= \frac{\text{cov}(X, aX+b)}{\sqrt{\text{var}(X)\text{var}(aX+b)}} \\\
+\\\
+&= \frac{a\cdot\text{cov}(X, X)}{\sqrt{a^2\text{var}(X)\text{var}(X)}} \\\
+\\\
+&= \frac{a}{|a|} \\\
+\end{aligned}
+$$
 
 
 </textarea>

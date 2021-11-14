@@ -100,101 +100,6 @@ $$\text{var}(X + Y)=\text{var}(X) + \text{var}(Y)$$
 
 [Proof](#variance_appendix)
 
---
-
-$$\text{var}(X - Y)=?$$
-
-
----
-
-$$
-\small{
-\text{var}(X + Y)=\text{var}(X) + \text{var}(Y),\;\; \text{if $X$ and $Y$ are independent.}
-}
-$$
-
-If $X$ and $Y$ are independent, so are $X$ and $-Y$.
-
-Now, let's replace $Y$ with $-Y$. 
-
-
-
-$$
-\begin{aligned}
-\text{var}\big(X + (-Y)\big)&=\text{var}(X) + \text{var}(-Y) \\\
-\\\
-\text{var}(X -Y)&=\text{var}(X) + (-1)^2\text{var}(Y) \\\
-\\\
-&=\text{var}(X) + \text{var}(Y) \\\
-\end{aligned}
-$$
-
----
-
-if $X$ and $Y$ are independent
-
-$$
-\begin{aligned}
-\text{var}(X + Y)&=\text{var}(X) + \text{var}(Y) \\\
-\\\
-\text{var}(X - Y)&=\text{var}(X) + \text{var}(Y) \\\
-\end{aligned}
-$$
-
-Does this make sense?
-
---
-
-Let $(X, Y)$ be the rolls from two 6-sided dice 🎲🎲
-
-What is the range of
-
-- $X$ (or $Y$)
-- $X+Y$
-- $X-Y$
-
-
----
-# The Hat Problem 🎩🎩🎩🎩🎩
-
-At a party $n$ people checks in their hats at the entrance. 
-
-When they leave, the attendant randomly picks out a hat for each of them. 
-
-What is the expected # of people to get their own hat?
-
----
-# Three discrete RVs
-
-Joint PMF
-$$p_{X, Y, Z}(x, y, z)=\text{P}(X=x, Y=y, Z=z)$$
-
----
-# Three discrete RVs
-
-Marginal PMFs
-
-$$
-\small{
-\begin{aligned}
-p_{X, Y}(x, y)&=\sum_z p_{X, Y, Z}(x, y, z) \\\
-p_{X, Z}(x, z)&=\sum_y p_{X, Y, Z}(x, y, z) \\\
-p_{Y, Z}(y, z)&=\sum_x p_{X, Y, Z}(x, y, z) \\\
-\\\
-p_{X}(x)&=\sum_y \sum_z p_{X, Y, Z}(x, y, z) \\\
-p_{Y}(y)&=\sum_x \sum_z p_{X, Y, Z}(x, y, z) \\\
-p_{Z}(z)&=\sum_x \sum_y p_{X, Y, Z}(x, y, z) \\\
-\end{aligned}
-}
-$$
-
----
-# Three discrete RVs
-
-3-D LOTUS
-
-$$\text{E}\big[g(X, Y, Z)\big]=\sum_x \sum_y \sum_z g(x, y, z) p_{X, Y, Z}(x, y, z)$$
-
 
 ---
 class: middle, center
@@ -260,7 +165,7 @@ $$
 \big(\text{E}[X+Y]\big)^2&=\big(\text{E}[X]+\text{E}[Y]\big)^2 \;\;\;\;\color{gray}{\leftarrow\text{by linearity}} \\\
 &=\big(\text{E}[X]\big)^2+2\text{E}[X]\text{E}[Y]+\big(\text{E}[Y]\big)^2 \\\
 \\\
-\text{var}(X + Y)&=\text{E}[X^2]-\big(\text{E}[X]\big)^2 + \text{E}[Y^2] - \big(\text{E}[Y]\big)^2 \\\
+\text{var}(X + Y)&=\text{E}\big[X^2\big]-\big(\text{E}[X]\big)^2 + \text{E}\big[Y^2\big] - \big(\text{E}[Y]\big)^2 \\\
 &=\text{var}(X) + \text{var}(Y) \\\
 \end{aligned}
 }
