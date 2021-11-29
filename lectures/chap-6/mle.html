@@ -40,7 +40,6 @@ class: split-50
 | Toss|1|2|3|4|5|6|7|8|9|10|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |&nbsp;Result&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;T&nbsp;&nbsp;|&nbsp;&nbsp;T&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;T&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|
-|$x_i$|1|0|0|1|0|1|1|1|1|1|
 
 
 <div style="margin-top: 100px; text-align: left;"><a class="sourcelink" href="https://www.probabilisticworld.com/calculating-coin-bias-bayes-theorem/">Image source</a></div>
@@ -48,12 +47,14 @@ class: split-50
 ---
 # Point estimation
 
-Given a distribution parameter of interest, a point estimation is to 
-.red[use data to compute a number that represents an educated guess for the true value of the parameter]. 
+Given a distribution parameter of interest, 
 
-The estimation (e.g., $\hat{\theta}=0.7$) is a single number, hence the name "point" estimation. 
+a point estimation is to 
+.red[use data to compute a single number that represents an educated guess for the true value of the parameter]. 
 
-In the next chapter we'll discuss "interval" estimation.
+<!-- The estimation (e.g., $\hat{\theta}=0.7$) is a single number, hence the name "point" estimation.  -->
+
+In the next lecture we'll discuss "interval" estimation (confidence intervals).
 
 ---
 # [Maximum Likelihood Estimation (MLE)](https://en.wikipedia.org/wiki/Maximum_likelihood_estimation)
@@ -62,22 +63,19 @@ Select the distribution parameter that makes the observed data .red[most likely.
 
 That is, .red[select the parameter that maximizes the probability (likelihood) of obtaining the data at hand].
 
----
+<!-- ---
 # Recall the Bayes' rule example
 
 .center[![:scale 100%](../images/marbles.png)]
 
 Given the observation, how likely is each scenario?
 
---
 
 $$\text{P}(A_i  \mid  B) = \frac{\text{P}(A_i)\text{P}(B  \mid  A_i)}{\text{P}(B)}$$
 
---
-
 If we have to pick a scenario, which one shall we pick?
 
-Pick the scenario that makes the data "most likely". 
+Pick the scenario that makes the data "most likely".  -->
 
 ---
 
@@ -131,7 +129,7 @@ $$
 
 In maximizing the likelihood, we are essentially asking:
 
-What is the value of $\theta$ under which the data we received are most likely to arise?
+.red[What is the value of $\theta$ under which the data we received are most likely to arise?]
 
 ---
 
@@ -368,164 +366,6 @@ If we use RVs $X_1, X_2, \cdots, X_n$ for the outcomes of $n$ independent tosses
 the .red[maximum likelihood estimator]
 
 $$\hat{\Theta}_n=\frac{X_1+X_2+\cdots+X_n}{n}$$
-
----
-
-$$X_i \sim \text{expo}(\theta)$$
-
-Assume the interarrival time between consecutive customers at a store, $X_i$, 
-is exponentially distributed with unknown arrival rate $\theta$.
-
-
-We also assume $X_1, X_2, \cdots, X_n$ are independent.
-
-Find the maximum likelihood estimator of the arrival rate, 
-on the basis of $n$ observations $X_1, X_2, \cdots, X_n$.
-
---
-
-The likelihood function
-
-$$f_X(x_1, x_2, \cdots, x_n; \theta)=\prod_{i=1}^n f_X(x_i; \theta)=\prod_{i=1}^n \theta e^{-\theta x_i}$$
-
----
-
-The log-likelihood function
-
---
-
-$$
-\small{
-\begin{aligned}
-\ln \big(f_X(x_1, x_2, \cdots, x_n; \theta)\big)&=\ln \bigg(\prod_{i=1}^n \theta e^{-\theta x_i} \bigg) \\\
-\\\
-&=\sum_{i=1}^n \ln (\theta e^{-\theta x_i}) \\\
-\\\
-&=\sum_{i=1}^n \big(\ln\theta + \ln e^{-\theta x_i}\big) \\\
-\\\
-&=n\ln\theta + \sum_{i=1}^n (-\theta x_i) \\\
-\\\
-&=n\ln\theta -\theta \sum_{i=1}^n x_i \\\
-\end{aligned}
-}
-$$
-
----
-Get the derivative of the log-likelihood function w.r.t. $\theta$. 
-
-$$\frac{d}{d\theta}\bigg(n\ln\theta -\theta \sum_{i=1}^n x_i \bigg)=\frac{n}{\theta}-\sum_{i=1}^n x_i$$
-
---
-
-Set the derivative to zero, solve for $\theta$.
-
-$$\frac{n}{\theta}-\sum_{i=1}^n x_i=0 \;\;\;\;\rightarrow \;\;\;\; \hat{\theta}=\frac{n}{\sum_{i=1}^n x_i}=\frac{1}{\frac{1}{n}\sum_{i=1}^n x_i}=\frac{1}{\bar{x}}$$
-
---
-
-Check the second derivative.
-
-$$\frac{d}{d\theta}\bigg(\frac{n}{\theta}-\sum_{i=1}^n \bigg)=-\frac{n}{\theta^2}< 0$$
-
----
-
-$$\hat{\theta}=\frac{1}{\frac{1}{n}\sum_{i=1}^n x_i}$$
-
-Find the MLE of the rate parameter, on the basis of $n$ observations $X_1, X_2, \cdots, X_n$.
-
-$$\hat{\Theta}=\frac{1}{\frac{1}{n}\sum_{i=1}^n X_i}=\frac{1}{\bar{X}}$$
-
----
-
-$$\small{X_i \sim \text{unif}(0, \theta)}$$
-
-The likelihood function
-
-$$
-\small{
-\begin{aligned}
-f_X(x_1, x_2, \cdots, x_n; \theta) &= \prod_{i=1}^n f_X(x_i; \theta) \\\
-\\\
-&=
-\begin{cases}
-  \prod\limits_{i=1}^n \frac{1}{\theta}=\frac{1}{\theta^n}, & \text{if $\theta \geq \max\limits_{i=1, 2, \cdots, n} x_i$,} \\\
-  \\\
-  0, & \text{otherwise.} \\\
-\end{cases}
-\end{aligned}
-}
-$$
-
---
-
-Note $\frac{1}{\theta^n}$ is a monotonically decreasing function of $\theta$.
-
-The MLE of $\theta$ is 
-
-$$\hat{\theta}=\max\limits_{i=1, 2, \cdots, n} x_i$$
-
----
-# Unbiased estimator
-
-<br>
-
-A point estimator $\hat{\Theta}_n$ is said to be unbiased of $\theta$ if
-
-$$\text{E}\big[\hat{\Theta}_n\big]=\theta,\;\;\;\;\text{for all } \theta.$$
-
----
-# Estimate the mean of an RV
-
-Let $X_1, X_2, \cdots, X_n$ be i.i.d. RVs with mean $\mu$ and variance $\sigma^2$.
-
-Sample mean
-
-$$\bar{X}=\frac{X_1+X_2+\cdots+X_n}{n}=\frac{1}{n}\sum_{i=1}^n X_i$$
-
---
-
-Is the sample mean $\bar{X}$ a unbiased estimator of the population mean $\mu$?
-
-$$\text{E}\big[\bar{X}\big]=\text{E}\bigg[\frac{1}{n}\sum_{i=1}^n X_i\bigg]=\frac{1}{n}\sum_{i=1}^n\text{E}[X_i]=\frac{1}{n}n\mu=\mu$$
-
----
-# Estimate the variance of an RV
-
-Let $X_1, X_2, \cdots, X_n$ be i.i.d. RVs with mean $\mu$ and variance $\sigma^2$.
-
-Sample variance
-
-$$S^2=\frac{\sum_{i=1}^n (X_i-\bar{X})^2}{n-1}$$
-
-Is the sample variance $S^2$ a unbiased estimator of the population variance $\sigma^2$?
-
-???
-$$
-\begin{aligned}
-\text{E}[S^2]&=\text{E}\bigg[\frac{\sum (X_i-\bar{X})^2}{n-1}\bigg] \\\
-\\\
-&=\text{E}\bigg[\frac{\sum X_i^2-\frac{1}{n}(\sum X_i)^2}{n-1}\bigg] \\\
-\\\
-&=\frac{1}{n-1}\bigg(\sum \text{E}[X_i^2] -\frac{1}{n}\text{E}\big[\big(\sum X_i\big)^2\big]\bigg) \\\
-\\\
-&=\frac{1}{n-1}\bigg(\sum (\sigma^2+\mu^2)-\frac{1}{n}\big(\text{var}\big(\sum X_i\big)+\big(\text{E}\big[\sum X_i\big]\big)^2\big)\bigg) \\\
-\\\
-&=\frac{1}{n-1}\big(n\sigma^2+n\mu^2 -\frac{1}{n}(n\sigma^2+n^2\mu^2)\big) \\\
-\\\
-&=\frac{1}{n-1}\big(n\sigma^2+n\mu^2 -\sigma^2-n\mu^2)\big) \\\
-\\\
-&=\sigma^2 \\\
-\end{aligned}
-$$
-
----
-# Estimate the variance of an RV
-
-Following the same procedure, we can also prove that 
-
-$$\frac{\sum_{i=1}^n (X_i-\bar{X})^2}{n}$$ is a biased estimator of $\sigma^2$, as
-
-$$\text{E}\bigg[\frac{\sum (X_i-\bar{X})^2}{n}\bigg] = \bigg(\frac{n-1}{n}\bigg) \sigma^2 \neq \sigma^2$$
 
 
 </textarea>
