@@ -54,7 +54,7 @@ The statement that is initially assumed to be true.
 
 --
 
-- It is the .red[default] hypothesis (or favored or "protected" hypothesis) that we stick with unless evidences are strongly against it. 
+- It is the .red[default] (or "favored" or "protected") hypothesis that we stick with unless evidences are strongly against it. 
 
 
 --
@@ -86,19 +86,19 @@ It states something "interesting" is happening.
 
 --
 
-- The drug lowers patients' blood pressure. 
+- The drug .red[lowers] patients' blood pressure. 
 
 --
 
-- The coin is biased. 
+- The coin is .red[biased]. 
 
 --
 
-- The defendant is guilty.
+- The defendant is .red[guilty].
 
 --
 
-The "burden of proof" is placed on the alternative hypothesis.
+The .red[burden of proof] is placed on the alternative hypothesis.
 
 ---
 # Hypothesis testing
@@ -153,7 +153,7 @@ $$
 \end{aligned}
 $$
 
----
+<!-- ---
 # Test procedure
 
 Test statistic
@@ -161,95 +161,18 @@ Test statistic
 
 $$\small{\bar{X}=\frac{X_1+X_2+\cdots+X_n}{n}}$$
 
---
-
 Rejection region
 - The set of all test statistic values for which $H_0$ will be rejected. For example,
   - Reject $H_0$ if $\bar{X}>10$.
   - Fail to reject $H_0$ if $\bar{X} \leq 10$.
+ -->
 
----
-
-$$X_i \stackrel{\text{i.i.d.}}{\sim} \text{N}(\mu, 36)$$
-
---
-
-$$H_0: \mu=20; \;\;\;\; H_a: \mu=25$$
-
---
-
-$$\text{sample size: $n=16$}$$
-
---
-
-$$\small{\text{Decision rule: Reject $H_0$ if $\bar{X}>23$.}}$$
-
---
-
-.center[![:scale 70%](../images/test-1.png)]
-
---
-
-Find $\alpha$ and $\beta$.
-
----
-
-$$\small{X_i \stackrel{\text{i.i.d.}}{\sim} \text{N}(\mu, 36), \;\;\;\; \text{sample size: } n=16, \;\;\;\;\bar{X} \sim \text{N}\big(\mu, \frac{36}{16}\big)}$$
-
-$$\small{\text{Decision rule: Reject $H_0$ if $\bar{X}>23$.}}$$
-
-.center[![:scale 50%](../images/test-1.png)]
-
---
-
-$$
-\small{
-\begin{aligned}
-\alpha=\text{P}(\text{Type I error})&=\text{P}(\text{reject $H_0$ when it is true}) \\\
-&=\text{P}(\bar{X}>23 \text{ when $\mu=20$}) \\\
-&=\text{P}\bigg(\frac{\bar{X}-20}{6/4} > \frac{23-20}{6/4}\bigg) \\\
-&=\text{P}(Z \geq 2) \\\
-&= 1-\Phi(2) \\\
-&=0.0228 \\\
-\end{aligned}
-}
-$$
-
----
-
-$$\small{X_i \stackrel{\text{i.i.d.}}{\sim} \text{N}(\mu, 36), \;\;\;\; \text{sample size: } n=16, \;\;\;\;\bar{X} \sim \text{N}\big(\mu, \frac{36}{16}\big)}$$
-
-.center[![:scale 50%](../images/test-1.png)]
-
-$$
-\small{
-\begin{aligned}
-\beta=\text{P}(\text{Type II error})&=\text{P}(\text{fail to reject $H_0$ when it is false}) \\\
-\\\
-&=\text{P}(\bar{X} \leq 23 \text{ when $\mu=25$}) \\\
-\\\
-&=\text{P}\bigg(\frac{\bar{X}-25}{6/4} \leq \frac{23-25}{6/4}\bigg) \\\
-\\\
-&=\text{P}(Z \leq -4/3) = 1-\Phi(4/3) =0.0913 \\\
-\end{aligned}
-}
-$$
-
----
-# Type I vs. type II errors
-
-Suppose the experiment and sample size $n$ are fixed, and a test statistic is chosen, 
-.red[changing the rejection region to decrease one type of the error would result in increasing the other type of the error].
-
-Unfortunately, we cannot decrease both type I and II error at the same time. 
-
-A tradeoff has to be made. 
 
 
 ---
 # Type I vs. type II errors
 
-A type I error is often more serious than a type II error in many domains. 
+In many cases, a type I error (false alarms) is often more serious than a type II error (misses). 
 
 --
 
@@ -261,7 +184,7 @@ Criminal trial
 --
 
 Drug testing
-- Type I error: Approving a drug that has no effect.
+- Type I error: Approving a drug that does nothing.
 - Type II error: Not approving an effective drug.
 
 

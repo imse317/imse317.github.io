@@ -48,16 +48,18 @@ First, we need to specify a desired high probability.
 
 - This high probability is called the .red[confidence level]
 
-- Common choices are 95% or 99%
+- Two most common choices are 95% and 99%
 
 - $(1-\alpha)$ is often used to indicate the confidence level
 
-$$95\% \;(\alpha=0.05),\;\; 99\% \;(\alpha=0.01)$$
+$$95\% \;(\alpha=0.05)$$
+
+$$99\% \;(\alpha=0.01)$$
 
 ---
 # Constructing a confidence interval
 
-Once we specified the confidence level $(1-\alpha)$, 
+Once we specified the confidence level, say 95%, 
 
 we replace the point estimator $\hat{\Theta}_n$ by 
 
@@ -67,11 +69,11 @@ we replace the point estimator $\hat{\Theta}_n$ by
 
 so that
 
-$$\text{P}\bigg(\hat{\Theta}_n^{-} \leq \theta \leq \hat{\Theta}_n^{+}\bigg) = 1-\alpha$$
+$$\text{P}\bigg(\hat{\Theta}_n^{-} \leq \theta \leq \hat{\Theta}_n^{+}\bigg) = 95\%$$
 
 --
 
-We call $\bigg[\hat{\Theta}_n^{-}, \; \hat{\Theta}_n^{+}\bigg]$ a $(1-\alpha)$ confidence interval. 
+We call $\big[\hat{\Theta}_n^{-}, \; \hat{\Theta}_n^{+}\big]$ a 95% confidence interval. 
 
 
 ---

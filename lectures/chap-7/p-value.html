@@ -75,9 +75,7 @@ If $H_0$ is true, it is unlikely to get 10 heads out of 10.
 
 --
 
-Since we indeed got 10 heads, $H_0$ is likely not true. 
-
-Thus we reject it.
+Since we indeed got 10 heads, thus $H_0$ is likely not true, and we should reject it. 
 
 ---
 
@@ -139,7 +137,9 @@ $$
 p\text{-value}=\;&\text{P}(\text{got 8 heads when $H_0$ is true})\;+ \;\color{gray}{\leftarrow\text{as extreme}} \\\
 &\text{P}(\text{got 9 heads when $H_0$ is true})\;+ \;\color{gray}{\leftarrow\text{more extreme}} \\\
 &\text{P}(\text{got 10 heads when $H_0$ is true}) \;\;\;\color{gray}{\leftarrow\text{more extreme}} \\\
+\\\
 =\;&{10 \choose 8}0.5^{10}+{10 \choose 9}0.5^{10}+{10 \choose 10}0.5^{10}\\\
+\\\
 \approx\;&0.055 \\\
 \end{aligned}
 }
@@ -183,9 +183,8 @@ If $H_0$ is true, it is quite possible to get 7+ heads.
 
 --
 
-Getting 7 heads is not enough evidence against $H_0$. 
-
-We fail to reject it.
+Thus, getting 7 heads is not enough evidence against $H_0$. 
+we should not reject it.
 
 ---
 
