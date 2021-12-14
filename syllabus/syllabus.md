@@ -101,11 +101,10 @@ No homework will be accepted after the end of the lecture.
 - Submissions via email or other delivery methods will not be accepted without prior approval by the instructor.
 - **Late homework will not be accepted** without a valid documented excuse. Barring extraordinary circumstances, the documented excuse must be available to the instructor at least two (2) academic calendar days prior to the deadline.
 Valid excuses include your own illness or injury, family emergencies, certain University-approved curricular and extra-curricular activities, and religious holidays. 
+- **Your one lowest homework grade will be dropped when calculating the final grade.** No questions asked. An un-submitted work counts as zero.
 - Graded homework would be returned in typically a week. 
 The solutions will also be posted on Canvas.
 It is recommended to go through the solutions (even briefly) for your study purposes.
-- **We will drop your one lowest homework grade when calculating the final grade.** 
-An un-submitted work counts as zero.
 
 **Format requirements**
 
