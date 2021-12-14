@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMSE 317 / BENG 364 Syllabus</title>
+    <title>IMSE 317 Syllabus</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.0.6/markdown-it.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
@@ -38,7 +38,6 @@
     $.get( "syllabus.md", function( data ) {
             var result = md.render(data);
             $('.markdown-body').html(result);
-            // console.log(result)
     },'text');
 
 </script>
