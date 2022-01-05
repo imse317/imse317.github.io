@@ -44,23 +44,7 @@ class: center
 
 ![:scale 100%](../images/anscombe-plots.png)
 
----
-# Descriptive statistics
 
-Describe & summarize important features of the data.
-
---
-
-- Graphical methods
-  - Stem-and-leaf
-  - Dot plot
-  - Histogram
-
---
-
-- Numerical methods
-  - Measure of location (i.e., center)
-  - Measure of variability (i.e., spread)
 
 ---
 # Heights (in feet) of 216 volcanoes 🌋
@@ -69,14 +53,14 @@ Describe & summarize important features of the data.
 
 $$[19882, 19728, 19335, 19287, \cdots, 617, 555, 529, 242]$$
 
-.center[[`volcano_heights.csv`](../../data/volcano_heights.csv)]
+.center[[volcano_heights.csv](../../data/volcano_heights.csv)]
 
----
+<!-- ---
 # Stem-and-leaf plot
 
-.center[![:scale 70%](../images/stemleaf.png)]
+.center[![:scale 70%](../images/stemleaf.png)] -->
 
----
+<!-- ---
 # Dot plot
 
 - Each data point is represented by a dot above its corresponding location on a horizontal scale.
@@ -86,45 +70,43 @@ $$[19882, 19728, 19335, 19287, \cdots, 617, 555, 529, 242]$$
 $$\large{[9, 10, 15, 22, 9, 15, 16, 24, 11]}$$
 
 <br><br><br>
-.center[![:scale 80%](../images/dotplot-scale.png)]
+.center[![:scale 80%](../images/dotplot-scale.png)] -->
 
----
+<!-- ---
 # Dot plot
 
-.center[![:scale 100%](../images/dotplot-volcano.png)]
+.center[![:scale 100%](../images/dotplot-volcano.png)] -->
 
 ---
 # Histogram
 
-.center[
-![:scale 48%](../images/hist-volcano-frequency.png)&nbsp;&nbsp;&nbsp;
-![:scale 48%](../images/hist-volcano-percent.png)
-]
+.center[![:scale 100%](../images/hist-volcano-count.png)]
 
 --
-- Frequency: The number of data points in a bin
+- Count: The number of data points in a bin
 
---
+---
+# Histogram
 
-- Divide frequency by the total number of data points
+.center[![:scale 100%](../images/hist-volcano-percent.png)]
+
+<!-- - Divide frequency by the total number of data points -->
 
 $$\text{percent (or relative frequency)}=\frac{\text{frequency}}{\text{total # of data points}}$$
 
----
+<!-- ---
 
 .center[
 ![:scale 38%](../images/stemleaf-rotated.png)&nbsp;&nbsp;&nbsp;
 ![:scale 38%](../images/hist-volcano-frequency.png)
 ]
 
---
-
 Stem-and-leaf plot
 - contains more info as it includes the values of data.
 - only suitable with small data size, as large amount of data require room for the leaves.
 - requires the viewer to "decode" the chart. 
 
-Histogram is more commonly used in practice. 
+Histogram is more commonly used in practice.  -->
 
 ---
 # Plotting with Python [seaborn](https://seaborn.pydata.org/) library
@@ -146,8 +128,8 @@ bank.head()
 
 ```
 seaborn.histplot(data=bank["age"], 
-                 bins=np.arange(0, 90, 5), 
-                 stat="probability")
+                 bins=numpy.arange(0, 90, 5), 
+                 stat="count")
 ```
 
 ---
