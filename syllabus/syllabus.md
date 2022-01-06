@@ -11,7 +11,7 @@ Mathematics Placement with a score of 215
 
 Mondays & Wednesdays 12:30 PM - 1:45 PM
 
-Location: TBA
+Location: 1321 ELB
 
 ## Google Calendar
 
@@ -44,17 +44,13 @@ Shixin Liu
 
 **Review session**
 
-TBA
-
-<!-- - Wednesdays 3:00 PM - 5:00 PM, in-person at 1130 PEC
-- Fridays 3:00 PM - 5:00 PM, on Zoom (link in Google Calendar) -->
+- Tuesdays 3:00 PM - 5:00 PM, in-person at 1130 PEC
+- Fridays 3:00 PM - 5:00 PM, on Zoom at <https://umich.zoom.us/j/98810307739>
 
 **Office hours**
 
-TBA
-
-<!-- - Wednesdays 5:00 PM - 7:00 PM, in-person at 1130 PEC
-- Fridays 5:00 PM - 7:00 PM, on Zoom (link in Google Calendar) -->
+- Tuesdays 5:00 PM - 7:00 PM, in-person at 1130 PEC
+- Fridays 5:00 PM - 7:00 PM, on Zoom at <https://umich.zoom.us/j/93164810973>
 
 <!-- ## SI Leader
 
