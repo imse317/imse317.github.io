@@ -112,7 +112,6 @@ Histogram is more commonly used in practice.  -->
 # Plotting with Python [seaborn](https://seaborn.pydata.org/) library
 
 Go to [Google Colab](https://colab.research.google.com/) and sign in.
-
 Open a new notebook.
 
 ```
@@ -122,7 +121,8 @@ import seaborn
 ```
 
 ```
-bank = pandas.read_csv("https://imse317.github.io/data/bank.csv")
+url = "https://imse317.github.io/data/bank.csv"
+bank = pandas.read_csv(url)
 bank.head()
 ```
 

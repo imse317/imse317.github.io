@@ -283,15 +283,37 @@ class: center
 .tiny[[Source](https://linkinghub.elsevier.com/retrieve/pii/S0001457518301143)]
 
 ---
-# Descriptive statistics with Python [pandas](https://pandas.pydata.org/)
+# Descriptive statistics with Python [numpy](https://numpy.org/)
 
 Go to [Google Colab](https://colab.research.google.com/) and sign in.
-
 Open a new notebook.
 
 ```
+import numpy
+
+x = [12, 34, 14, 5, 44, 28, 22, 19, 36, 25]
+```
+
+```
+numpy.mean(x)
+```
+
+```
+numpy.median(x)
+```
+
+```
+numpy.quantile(x, 0.5)
+```
+
+---
+# Descriptive statistics with Python [pandas](https://pandas.pydata.org/)
+
+```
 import pandas
-bank = pandas.read_csv("https://imse317.github.io/data/bank.csv")
+
+url = "https://imse317.github.io/data/bank.csv"
+bank = pandas.read_csv(url)
 bank.head()
 ```
 
