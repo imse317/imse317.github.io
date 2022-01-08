@@ -25,8 +25,8 @@ Location: 1321 ELB
 
 - Wednesdays 2:00 PM - 3:00 PM, in-person at my office (2320 HPEC)
 - Thursdays 2:00 PM - 3:00 PM, on Zoom at <https://umich.zoom.us/my/fredfeng>
-    - Students will be admitted to the meeting room *one at a time*, so that they can talk to the instructor individually.
-    - Please wait in the Zoom waiting room for your turn if there are multiple students present.
+    - Students will be admitted to the meeting room one at a time, so that you can talk to me individually.
+    - Please wait in the Zoom waiting room for your turn.
 - If you can't meet during the office hours, you can email me with a request for a meeting at another time.
 
 ## How can I contact you?
@@ -105,7 +105,8 @@ No homework will be accepted after the end of the lecture.
 - Submissions via email or other delivery methods will not be accepted without prior approval by the instructor.
 - **Late homework will not be accepted** without a valid documented excuse. Barring extraordinary circumstances, the documented excuse must be available to the instructor at least two (2) academic calendar days prior to the deadline.
 Valid excuses include your own illness or injury, family emergencies, certain University-approved curricular and extra-curricular activities, and religious holidays. 
-- **Your one lowest homework grade will be dropped when calculating the final grade.** No questions asked. An un-submitted work counts as zero.
+- Your one lowest homework grade will be dropped when calculating the final grade.
+An un-submitted work counts as zero.
 - Graded homework would be returned in typically a week. 
 The solutions will also be posted on Canvas.
 It is recommended to go through the solutions (even briefly) for your study purposes.
@@ -115,7 +116,7 @@ It is recommended to go through the solutions (even briefly) for your study purp
 - Use only one side of letter-size (8.5" x 11") paper.
 - Use paper with smooth edges. If you use paper from a spiral notebook, tear off the ragged edge before submission. 
 - You are required to sign the Honor Code for each homework on the cover page. Note if you are not printing out the cover page, you need to write down the Honor Code statement and sign. 
-**Homework without signing the Honor Code will receive an automatic zero.**
+Homework without signing the Honor Code will receive an automatic zero.
 - For all problems, you need to include all major steps and calculations that were used to obtain the answers. 
 A final answer without showing sufficient work on how you got there may receive partial or zero points. 
 - Whenever possible, follow the notations and conventions that were used in the lectures. 
@@ -187,7 +188,7 @@ If a student provided unauthorized help to other students, all parties will rece
 
 - In an exam, you shall work alone. You may *not* receive (or give) any help from another person or unauthorized resource.
 - Penalty policy: **Any offense in an exam will automatically result in a failing grade (E) for the course.**
-Once you have read this syllabus to completion please use *confidence interval* as the answer to the question in the first homework. 
+Once you have read this syllabus to completion please use *jasmine tea* as the answer to the question in the first homework. 
 
 ## What are the homework and exam <font color="red">regrading</font> policies?
 
@@ -216,8 +217,12 @@ You shall not record or share any videos or audios of the course activities incl
 
 ## What are the <font color="red">COVID-19 vaccination & face-covering</font> policies?
 
-In order to protect our classes, campus, and community from COVID-19 infections, the University of Michigan has instituted a [mandatory vaccination](https://umdearborn.edu/about/policies-and-procedures/general-university-policies-and-procedures/university-michigan-covid-19-vaccination-policy) and [face covering policy](https://president.umich.edu/news-communications/letters-to-the-community/covid-19-update-requiring-face-coverings-indoors-to-enhance-community-safety/) for the fall semester. Please remember to report your [proof of vaccination](https://umich.qualtrics.com/jfe/form/SV_425w4eoxN3zSMqq) and to wear a mask indoors and on the campus shuttle *regardless of vaccination status*.
-Additional COVID-19 information, including FAQs, can be found at <https://campusblueprint.umich.edu/>
+- Before coming to campus, students are required to complete the [ResponsiBLUE](https://responsiblue.umich.edu/sign-in) daily health screening.
+- Required vaccination, [face-covering](https://president.umich.edu/news-communications/letters-to-the-community/covid-19-update-requiring-face-coverings-indoors-to-enhance-community-safety/), and daily health screening policies will remain in place for the Winter 2022 semester.
+- All students must be compliant with the [vaccination policy](https://umdearborn.edu/offices/external-relations/key-issues/um-dearborn-covid-19-response/vaccine-information) by Jan 3, 2022 and by Feb 4, 2022 for [required boosters](https://umdearborn.edu/offices/external-relations/key-issues/um-dearborn-covid-19-response/resources/campus-communications-date/articles/vaccine-booster-policy).
+- If you feel sick, please follow [the university guidelines](https://umdearborn.edu/policies-and-procedures/faculty-staff-policies-and-procedures/faculty-handbook-policies/instructional-faculty-guidelines-student-or-faculty-personal-covid-cases).
+- Students should report positive COVID illness to <DearbornCOVIDsupport@umich.edu> or call 313-593-5056.
+
 ## Food pantry
 
 The pantry exists to support individuals on their journey as they work toward achieving their goals. We are committed to increasing access to food as a key to success, by assisting any student in need! If you need access or have questions, please contact the Office of Student Life by phone at 313-593-5390, by email at <umdearbornpantry@umich.edu>.
