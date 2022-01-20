@@ -115,16 +115,20 @@ s^2 &= \frac{(x_1-\bar{x})^2 + (x_2-\bar{x})^2 + \cdots + (x_n-\bar{x})^2}{n-1} 
 ---
 # Why divided by $(n-1)$ instead of $n$?
 
-[Degree of freedom](https://en.wikipedia.org/wiki/Degrees_of_freedom_%28statistics%29)
-- The # of values in a calculation that are free to vary.
+[Degree of freedom](https://en.wikipedia.org/wiki/Degrees_of_freedom_%28statistics%29):
+The number of values in a calculation that are .red[free to vary].
 
 <br>
 
-Pick .red[any three numbers] and calculate the mean.
+Pick any three numbers and calculate the mean.
 
-<br><br>
+--
 
-Now we add a constraint: the #'s have to add up to 20.
+<br>
+
+Now we add some constraints: 
+- The numbers have to add up to 20.
+- The first two numbers have to be the same.
 
 ---
 
@@ -134,7 +138,6 @@ Are there any constraints when we calculate the sample variance?
 
 $$[9, 4, 5]$$
 
-
 |&nbsp;&nbsp;&nbsp;$i$&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;$x_i$&nbsp;&nbsp;|&nbsp;$x_i-\bar{x}$&nbsp;|&nbsp;$(x_i-\bar{x})^2$&nbsp;|
 |:-----:|:-----:|:-----:|:-----:|
 | $1$ | $9$ |  |  | 
@@ -143,7 +146,7 @@ $$[9, 4, 5]$$
 
 
 ---
-Heights (in ft) of 216 volcanoes:
+Heights (in feet) of 216 volcanoes:
 
 $$[19882, 19728, 19335, 19287, \cdots, 617, 555, 529, 242]$$
 
@@ -153,7 +156,7 @@ $$
 \begin{aligned}
 \text{Sample mean: }\;\bar{x}&=7047.6 \\\
 \\\
-\text{Sample variance: }\; s^2 &= \frac{\sum_{i=1}^{n}(x_i-\bar{x})^2}{n-1}=18,507,834 \text{ (ft}^2) \\\
+\text{Sample variance: }\; s^2 &= \frac{\sum_{i=1}^{n}(x_i-\bar{x})^2}{n-1}=18,507,834 \text{ (feet}^2) \\\
 \end{aligned}
 $$
 
@@ -168,7 +171,9 @@ $$ s = \sqrt{s^2} = \sqrt{\frac{\sum_{i=1}^{n}(x_i-\bar{x})^2}{n-1}}=4302.1 \tex
 ---
 # Property I
 
-$ x_1, x_2, \cdots, x_n $ are sample data and $c$ is any constant.
+$ x_1, x_2, \cdots, x_n $ are sample data.
+
+$c$ is any constant.
 
 
 $$\text{If }\; y_1=x_1+c, \;y_2=x_2+c, \;\cdots, \;y_n=x_n+c$$
@@ -180,10 +185,8 @@ $$\begin{aligned}
 
 --
 
-<br>
-
-Intuition: Adding a constant to the data would shift the distribution right or left 
-without changing its shape (spread or variability).
+ Intuition: Adding a constant to the data would shift the distribution right or left 
+without changing its shape (spread).
 
 ---
 # Property II
