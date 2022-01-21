@@ -23,18 +23,25 @@ Location: 1321 ELB
 
 ## When are <font color="red">office hours</font>?
 
-- Wednesdays 2:00 PM - 3:00 PM, in-person at my office (2320 HPEC)
-- Thursdays 2:00 PM - 3:00 PM, on Zoom at <https://umich.zoom.us/my/fredfeng>
-    - Students will be admitted to the meeting room one at a time, so that you can talk to me individually.
-    - Please wait in the Zoom waiting room for your turn.
-- If you can't meet during the office hours, you can email me with a request for a meeting at another time.
+All office hours are held on Zoom at <https://umich.zoom.us/my/fredfeng>
+
+- Wednesdays 4:00 PM - 5:00 PM
+- Thursdays 2:00 PM - 3:00 PM
+- If you can't meet during the above office hours, you can email me with a request for a meeting at another time.
+
+In the Zoom meeting
+
+- Students will be admitted to the meeting room one at a time, so that you can talk to me individually.
+- Please wait in the waiting room for your turn if I'm not immediately available.
 
 ## How can I contact you?
 
 <fredfeng@umich.edu>
 
 **Email** is the preferred way to contact me (rather than Canvas message).
-Use subject line: **IMSE 317 (or BENG 364) - My Topic**
+- Use your University email
+- Use subject line: **IMSE 317 (or BENG 364) - My Topic**
+
 
 ## Who is the <font color="red">GSI</font>?
 
