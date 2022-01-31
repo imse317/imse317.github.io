@@ -34,7 +34,7 @@ MathJax.Hub.Config({
     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'], 
     inlineMath: [['$','$'], ['\\(','\\)']]
     },
-    "HTML-CSS": { scale: 81, linebreaks: { automatic: true } }   // change default font size
+    "HTML-CSS": { scale: 90, linebreaks: { automatic: true } }   // change default font size
 });
 
 MathJax.Hub.Configured();
