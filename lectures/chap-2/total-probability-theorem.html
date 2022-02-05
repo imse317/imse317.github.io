@@ -62,6 +62,36 @@ $$B = (A_1 \cap B) \cup (A_2 \cap B) \cup \cdots \cup (A_n \cap B)$$
 .center[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![:scale 40%](../images/partition-total-prob.png)]
 
 ---
+# Exercise
+
+Your academic department offers
+
+- .red[8 lower level courses]  $L_1, L_2, \cdots, L_8$
+- .green[10 higher level courses] $H_1, H_2, \cdots, H_{10}$
+
+A valid curriculum consists of
+
+- .red[4 lower level courses] + .green[3 higher level courses]
+
+How many different curricula are possible? 
+
+---
+
+# Exercise (cont'd)
+
+- .red[8 lower level courses]  $L_1, L_2, \cdots, L_8$
+- .green[10 higher level courses] $H_1, H_2, \cdots, H_{10}$
+
+A valid curriculum consists of
+
+- .red[4 lower level courses] + .green[3 higher level courses]
+
+<br>
+In fact, $H_1, H_2, \cdots, H_5$ have $L_1$ as a prerequisite.
+
+Now how many different curricula are possible? 
+
+---
 <!-- # Total probability theorem -->
 
 .center[![:scale 40%](../images/partition-total-prob.png)]
@@ -77,7 +107,7 @@ B =\;& (A_1 \cap B) \cup (A_2 \cap B) \cup \cdots \cup (A_n \cap B) \\\
 \\\
 =\;& \text{P}(A_1 \cap B) + \text{P}(A_2 \cap B) + \cdots + \text{P}(A_n \cap B)\\\
 \\\
-=\;& \text{P}(A_1)\text{P}(B \mid A_1) + \text{P}(A_2)\text{P}(B \mid A_2) + \cdots + \text{P}(A_n)\text{P}(B \mid A_n) \\\
+=\;& \text{P}(A_1)\text{P}(B | A_1) + \text{P}(A_2)\text{P}(B | A_2) + \cdots + \text{P}(A_n)\text{P}(B | A_n) \\\
 \end{aligned}
 }
 $$
@@ -90,7 +120,6 @@ $$
 
 ![:scale 46%](../images/tree-total-prob.png)
 .right[![:scale 30%](../images/partition-total-prob.png)]
-
 
 ---
 # Exercise
