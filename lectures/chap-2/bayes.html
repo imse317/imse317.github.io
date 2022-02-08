@@ -114,14 +114,14 @@ What is the chance this person has the disease?
 
 We were given three coins.
 
-- One is regular (heads and tails on each face)
+- One is regular
 - One has heads in both faces
 - One has tails in both faces
 
 Without looking at it, we chose a coin at random and tossed it. 
 It landed on heads. 
 
-What is the chance the opposite is tails?
+What is the probability that the opposite is tails?
 
 
 ---
@@ -134,91 +134,9 @@ Let's define the following events
 
 --
 
-What is the chance that the opposite is tails .red[given that it landed on heads]?
-
-<!-- ---
-# Exercise
-
-- A bag contains 4 marbles of either maize or blue. 
-
-- We don't know how many of each are there.
-
-- We draw a marble from the bag each time with replacement (i.e., put the marble back after a draw).
-
-- If we observed the following, what can we say about how many maize and blue marbles are in the bag?
-
-.center[![:scale 80%](../images/marbles-1.png)] -->
+What is the probability that the opposite is tails .red[given that it landed on heads]?
 
 
----
-# Bayes' rule in odds form
-
-<br>
-$$\begin{align}
-\text{P}(A \mid B) &= \frac{\text{P}(A) \; \text{P}(B \mid A)}{\text{P}(B)} \\\
-\\\
-\text{P}(A^c \mid B) &= \frac{\text{P}(A^c) \; \text{P}(B \mid A^c)}{\text{P}(B)} \\\
-\\\
-\frac{\text{P}(A \mid B)}{\text{P}(A^c \mid B)} &= \frac{\text{P}(A)}{\text{P}(A^c)} \cdot \frac{\text{P}(B \mid A)}{\text{P}(B \mid A^c)} \\\
-\end{align}
-$$
-
-
----
-# Previous coin toss problem
-
-- $A_1$: .red[regular] coin is chosen
-- $A_2$: .red[two-headed] coin is chosen
-- $A_3$: .red[two-tailed] coin is chosen
-- $B$: coin landed on heads
-
-Given $B$ has occurred, should you bet on $A_1$ or $A_2$?
-
-
-$$\frac{\text{P}(A_1 \mid B)}{\text{P}(A_2 \mid B)} = \frac{\text{P}(A_1)}{\text{P}(A_2)} \cdot \frac{\text{P}(B \mid A_1)}{\text{P}(B \mid A_2)}$$
-
-<!-- ---
-# Revisit the Monty Hall problem
-
-- You first choose a door, let's call it door $X$. 
-
-- Then Monty opens one of the unchosen doors that does not have the car. 
-
-- Let's call the door that is opened by Monty $Y$, and the door that remains closed $Z$.
-
-- Now would you stick to door $X$ or switch to door $Z$? -->
-
-
-<!-- ---
-# Revisit the Monty Hall problem
-
-Let's define the following events
-
-- $A_1$: car behind door $X$
-- $A_2$: car behind door $Z$
-- $B$: Monty opens door $Y$ -->
-
-
-<!-- ---
-# Revisit the Monty Hall problem
-
-- Assume one night Monty is drunk before the show. 
-
-- He would randomly open an unchosen door. 
-
-- You are playing the game and chose a door.  
-
-- Monty opened one of the unchosen doors, and luckily, there was no car behind it. 
-
-- Now should you switch? -->
-
-
-<!-- ---
-# Revisit the Monty Hall problem
-
-- $A_1$: car behind door $X$
-- $A_2$: car behind door $Z$
-- $B$: Monty opens door $Y$ -->
 
 ---
 class: center
