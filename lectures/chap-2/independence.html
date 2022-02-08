@@ -35,13 +35,13 @@ class: split-50
 ---
 Event $A$ is independent of event $B$ if
 
-$$\text{P}(A|B)=\text{P}(A)$$
+$$\text{P}(A \mid B)=\text{P}(A)$$
 
 --
 
 By the definition of conditional probability, 
 
-$$\text{P}(A|B) = \frac{\text{P}(A \cap B)}{\text{P}(B)}$$
+$$\text{P}(A \mid B) = \frac{\text{P}(A \cap B)}{\text{P}(B)}$$
 
 --
 
@@ -74,13 +74,13 @@ If $A$ and $B$ are independent, so are $A$ and $B^c$.
 
 --
 
-Intuitively, if the .red[occurrence] of $B$ does not provide any new info on how likely $A$ occurs, 
+Intuitively, if the .red[occurrence] of $B$ does not provide any new information on how likely $A$ occurs, 
 
-$$\text{P}(A|B)=\text{P}(A)$$
+$$\text{P}(A \mid B)=\text{P}(A)$$
 
-then the .red[non-occurrence] of $B$ should also provide no info on how likely $A$ occurs. 
+then the .red[non-occurrence] of $B$ should also provide no information on how likely $A$ occurs. 
 
-$$\text{P}(A|B^c)=\text{P}(A)$$
+$$\text{P}(A \mid B^c)=\text{P}(A)$$
 
 ???
 Proof:
@@ -97,15 +97,17 @@ Proof:
 ---
 # Independence of three events
 
-We have three events $A$, $B$, and $C$. 
+Three events $A$, $B$, and $C$
 
 - $A$ and $B$ are independent. 
-- $B$ and $C$ are independent.  
+- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$B$ and $C$ are independent.  
 
-Question: Are $A$ and $C$ independent?
+<br>
 
---
+Are $A$ and $C$ independent?
 
+
+???
 No. Counterexample:
 
 Let $A$ and $B$ be two independent events, and $C = A^c$, 
@@ -136,7 +138,7 @@ $A$: first toss is a heads.
 
 $B$: second toss is a heads. 
 
-$C$: different results for two tosses. 
+$C$: different results from the two tosses. 
 
 
 
@@ -193,45 +195,7 @@ Events $A_1, A_2, \cdots, A_n$ are (mutually) independent if
 
 $$\text{P}\bigg(\bigcap_{i \in S} A_i\bigg)=\prod_{i \in S} \text{P}(A_i)$$
 
-for every subset $S$ of $\{1, 2, \cdots, n\}$. 
-
----
-# Independent trials
-
-An experiment that involves 
-
-a sequence of .red[independent] and .red[identical] stages
-
---
-
-A sequence of 
-
-- rolling the same dice?
-
---
-- tossing the same coin?
-
---
-- tossing the same coin .green[on a bowl of honey without cleaning it]?
-
---
-- drawing a card from a deck without replacement?
-
---
-- drawing a card from a deck with replacement?
-
-
----
-# Bernoulli trials
-
-A special case of independent trials where there are .red[only two possible results at each stage]. 
-
-- A sequence of coin tosses 
-
-  - either .green[heads] or .green[tails] at each stage
-
-- Product inspection
-  - either .green[pass] or .green[no-pass] for each sample
+for every subset $S$ of $\\{1, 2, \cdots, n\\}$. 
 
 
 ---
@@ -241,7 +205,9 @@ A computer network connects two nodes A and B through 3 components that are conn
 
 The component failures are independent of each other.
 
-$p_i$ is the probability that component $i$ is operational ($i=1, 2, 3$).
+$p_i$ is the probability that 
+
+component $i$ is operational ($i=1, 2, 3$).
 
 What is the probability that the A-B connection is up?
 
