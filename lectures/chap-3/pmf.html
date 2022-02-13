@@ -18,35 +18,37 @@ class: middle, center
 ![:scale 70%](../images/pmf-cover.png)
 
 ---
-# Definition
+# Some notations
 
-The .red[probability mass function (PMF)] of a discrete RV $X$
+By convention, we use
+- an upper case character (e.g., $X$) to denote a RV.
 
-is defined by:
+--
+
+- a lower case character (e.g., $x$) to denote any specific value that a RV can take.
+
+--
+
+<br>
+
+$X=x$: the event that RV $X$ takes value $x$.
+
+---
+# [Probability Mass Function (PMF)](https://en.wikipedia.org/wiki/Probability_mass_function)
+
+The .red[probability mass function] of a discrete RV $X$ is defined by:
 
 $$
 \begin{aligned}
 p_X(x) =& \; \text{P}(X=x) \\\
 =& \; \text{P}(\text{all outcomes in $\Omega$ that give rise to} \\\
-& \;\;\;\;\; \text{a value of $X$ equal to $x$}) \\\
+& \;\;\;\;\; \text{$X=x$}) \\\
 \text{for all $x$.}& \\\
 \end{aligned}
 $$
 
 
 .center[![:scale 100%](../images/pmf-def.png)]
-
----
-# Probability mass function (PMF)
-
-Notations
-- An upper case character (e.g., $X$) to denote a RV.
-- A lower case character (e.g., $x$) to denote a specific value that a RV can take.
-
-<br>
-The PMF of a discrete RV $X$:
-
-$$p_X(x) = \text{P}(X=x)$$
 
 
 ---
@@ -73,7 +75,7 @@ $$
 ---
 # Example (cont'd)
 
-$X$: Roll a die and record the number
+More compactly, we can write the PMF as
 
 $$p_X(x) = 
 \begin{cases}
@@ -131,13 +133,13 @@ $X$: Roll a pair of dice and record the maximum roll.
 .center[![:scale 100%](../images/pmf-2dice-maxroll.png)]
 
 ---
-# Calculating the PMF of a RV
+# Finding the PMF of a RV
 
 $$
 \begin{aligned}
 \text{PMF def: }\;\;\;p_X(x) =& \; \text{P}(X=x) \\\
-=& \; \text{P}(\text{all outcomes in $\Omega$ that give rise to} \\\
-& \;\;\;\;\; \text{a value of $X$ equal to $x$}) \\\
+=& \; \text{P}(\text{all outcomes in $\Omega$ that} \\\
+& \;\;\;\;\; \text{give rise to $X=x$}) \\\
 \text{for all $x$.}& \\\
 \end{aligned}
 $$
@@ -146,7 +148,6 @@ $$
 
 Procedure
 
-1. Find the sample space of the experiment.
 1. List all possible values of $x$ that the RV $X$ can take.
 1. For each $x$, collect all the possible outcomes that give rise to the event $\{X=x\}$
 1. Add their probabilities to obtain $p_X(x)$
@@ -196,7 +197,7 @@ $$
 
 --
 
-RV $Y$ is a function of $X$
+RV $Y$ is defined as
 
 $$Y=|X|$$
 
@@ -219,7 +220,7 @@ $$p_Y(y)=\sum_{\\{x|g(x)=y\\}}p_X(x)$$
 
 --
 
-.center[![:scale 60%](../images/function-rv-3.png)]
+.center[![:scale 50%](../images/function-rv-3.png)]
 
 --
 

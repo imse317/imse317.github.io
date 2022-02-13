@@ -38,7 +38,7 @@ class: split-60
 What is a single .red[representative] value for $X$?
 
 ---
-# Definition
+# [Expected value](https://en.wikipedia.org/wiki/Expected_value)
 
 The .red[expected value] of a discrete RV $X$ is defined by
 
@@ -48,7 +48,7 @@ $$\text{E}[X]=\sum_x x \cdot p_X(x)$$
 
 .center[![:scale 38%](../images/pmf-example.png)]
 
-It is the .green[probability-weighted average] of all values of $X$.
+It's the .green[probability-weighted average] of all values of $X$.
 
 It measures the .red[center] of the distribution.
 
@@ -176,7 +176,7 @@ $$ -->
 ---
 # Expected value of .red[a function of a RV]
 
-A random variable $X$ has a PMF
+A RV $X$ has a PMF
 
 $$
 p_X(x) = 
@@ -239,11 +239,8 @@ $$
 \begin{aligned}
 \text{E}[Y]&=\sum_y \big[y \cdot p_Y(y)\big] \;\;\;\;\;\; \color{gray}{\leftarrow\text{by def. of expected value}} \\\
 &=\sum_y \bigg[y \cdot \sum_{\\{x|g(x)=y\\}}p_X(x)\bigg] \\\
-\\\
 &=\sum_y \bigg[\sum_{\\{x|g(x)=y\\}} y \cdot p_X(x) \bigg] \\\
-\\\
 &=\sum_y \bigg[\sum_{\\{x|g(x)=y\\}} g(x) \cdot p_X(x) \bigg] \\\
-\\\
 &=\sum_x \big[g(x) \cdot p_X(x) \big] \\\
 \end{aligned}
 $$
@@ -329,13 +326,14 @@ $$
 $$\text{E}[V] = 4 \cdot 0.5 + 20 \cdot 0.5 = 12 \text{ (mph)}$$
 
 ---
-# Travel time
+# Travel time $T$
 
 $$T=g(V)=\frac{\text{distance}}{V}=\frac{2}{V}$$
 
 --
 
 $$
+\small{
 \begin{aligned}
 t &= 
 \begin{cases}
@@ -343,11 +341,13 @@ t &=
 2/20=0.1,   & \text{if cycling.} \\\
 \end{cases}
 \end{aligned}
+}
 $$
 
 --
 
 $$
+\small{
 \begin{aligned}
 p_T(t) &= 
 \begin{cases}
@@ -355,19 +355,20 @@ p_T(t) &=
     0,   & \text{otherwise.} \\\
 \end{cases}
 \end{aligned}
+}
 $$
 
 --
 
-$$\color{gray}{\big(\text{E}\big[g(V)\big]=\big)} \;\; \text{E}[T] = 0.1 \cdot 0.5 + 0.5 \cdot 0.5 = 0.3 \text{ (hours)}$$
+$$\small{\color{gray}{\big(\text{E}\big[g(V)\big]=\big)} \;\; \text{E}[T] = 0.1 \cdot 0.5 + 0.5 \cdot 0.5 = 0.3 \text{ (hours)}}$$
 
 --
 
-$$g\big(\text{E}[V]\big)=\frac{2}{\text{E}[V]}=\frac{2}{12}\approx0.167$$
+$$\small{g\big(\text{E}[V]\big)=\frac{2}{\text{E}[V]}=\frac{2}{12}\approx0.167}$$
 
 --
 
-$$\text{E}\big[g(V)\big] \neq g\big(\text{E}[V]\big)$$
+$$\small{\text{E}\big[g(V)\big] \neq g\big(\text{E}[V]\big)}$$
 
 
 </textarea>

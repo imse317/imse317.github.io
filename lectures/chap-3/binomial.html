@@ -289,11 +289,8 @@ X_i \text{'s are i.i.d.} &\sim \text{Bernoulli}(p) \\\
 Y&=X_1+X_2+\cdots+X_n \\\
 \\\
 \text{E}[Y] &= \text{E}[X_1+X_2+\cdots+X_n] \\\
-\\\
 &=\text{E}[X_1] + \text{E}[X_2]+\cdots+\text{E}[X_n] \\\
-\\\
 &=p + p+\cdots+p \\\
-\\\
 &= np 
 \end{aligned}
 $$
@@ -367,8 +364,6 @@ $$
 &=\sum_{k=1}^n k \frac{n!}{k!(n-k)!} p^k(1-p)^{n-k} \\\
 \\\
 &=\sum_{k=1}^n k \frac{n \cdot (n-1)!}{k\cdot(k-1)!(n-k)!} p\cdot p^{k-1}(1-p)^{n-k} \\\
-\\\
-&=np\sum_{k=1}^n \frac{(n-1)!}{(k-1)!(n-k)!} p^{k-1}(1-p)^{n-k} \\\
 \end{aligned}
 }
 $$
@@ -376,11 +371,12 @@ $$
 ---
 Appendix A (cont'd)
 
-<br>
 
 $$
 \small{
 \begin{aligned}
+&=np\sum_{k=1}^n \frac{(n-1)!}{(k-1)!(n-k)!} p^{k-1}(1-p)^{n-k} \\\
+\\\
 &=np\sum_{k=1}^n \frac{(n-1)!}{(k-1)!(n-k)!} p^{k-1}(1-p)^{n-k} \\\
 \\\
 & \text{In the summation, let $k'=k-1$ and $n'=n-1$} \\\
