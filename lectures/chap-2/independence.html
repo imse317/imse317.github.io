@@ -74,16 +74,31 @@ If $A$ and $B$ are independent, so are $A$ and $B^c$.
 
 --
 
-Intuitively, if the .red[occurrence] of $B$ does not provide any new information on how likely $A$ occurs, 
+Intuitively, if .red[knowing that $B$ has occurred] does not provide any new information on how likely $A$ occurs, 
 
 $$\text{P}(A \mid B)=\text{P}(A)$$
 
-then the .red[non-occurrence] of $B$ should also provide no information on how likely $A$ occurs. 
+then .red[knowing that the complement of $B$ has occurred] should also provide no info on how likely $A$ occurs. 
 
 $$\text{P}(A \mid B^c)=\text{P}(A)$$
 
+<br>
+.center[.lightgray[See comment for proof.]]
+
 ???
 Proof:
+
+$$
+\begin{aligned}
+\text{P}(A \cap B^c) =& \text{P}(A) - P(A \cap B) \\\
+\\\
+=& \text{P}(A) - \text{P}(A) \cdot \text{P}(B) \\\
+\\\
+=& \text{P}(A) \cdot (1- \text{P}(B)) \\\
+\\\
+=&\text{P}(A) \cdot \text{P}(B)
+\end{aligned}
+$$
 
 ---
 # Are two disjoint events independent?
@@ -105,6 +120,9 @@ Three events $A$, $B$, and $C$
 <br>
 
 Are $A$ and $C$ independent?
+
+<br><br><br>
+.center[.lightgray[See comment for answer.]]
 
 
 ???
