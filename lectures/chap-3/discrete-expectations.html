@@ -35,14 +35,14 @@ class: split-60
 <br>
 .center[![:scale 60%](../images/pmf-example.png)]
 
-What is a single .red[representative] value for $X$?
+.center[What is a .red[single representative] value for $X$?]
 
 ---
 # [Expected value](https://en.wikipedia.org/wiki/Expected_value)
 
 The .red[expected value] of a discrete RV $X$ is defined by
 
-$$\text{E}[X]=\sum_x x \cdot p_X(x)$$
+$$\require{color}\colorbox{yellow}{$\text{E}[X]=\sum_x x \cdot p_X(x) $}$$
 
 --
 
@@ -53,11 +53,9 @@ It's the .green[probability-weighted average] of all values of $X$.
 It measures the .red[center] of the distribution.
 
 ---
-# Exercise
-
 What is the expected value of $X$?
 
-.center[![:scale 38%](../images/pmf-example.png)]
+.center[![:scale 30%](../images/pmf-example.png)]
 
 $$
 \small{
@@ -74,14 +72,16 @@ p_X(x) =
 }
 $$
 
-???
+--
+
 $$
+\tiny{
 \begin{aligned}
- &\; \text{E}[X] \\\
-=&\; 1 \cdot p_X(1) + 2\cdot p_X(2) + 3 \cdot p_X(3) + 4 \cdot p_X(4) + 5 \cdot p_X(5) + 6 \cdot p_X(6) \\\
+\text{E}[X]=&\; 1 \cdot p_X(1) + 2\cdot p_X(2) + 3 \cdot p_X(3) + 4 \cdot p_X(4) + 5 \cdot p_X(5) + 6 \cdot p_X(6) \\\
 =&\; 1 \cdot 0.15 + 2 \cdot 0.30 + 3 \cdot 0.10 + 4 \cdot 0.15 + 5 \cdot 0.25 + 6 \cdot 0.05 \\\
 =&\; 3.2 \\\
 \end{aligned}
+}
 $$
 
 
@@ -179,11 +179,13 @@ $$ -->
 A RV $X$ has a PMF
 
 $$
+\small{
 p_X(x) = 
 \begin{cases}
     1/5, & \text{if $x = -2, -1, 0, 1, 2$,} \\\
     0,              & \text{otherwise.}
 \end{cases}
+}
 $$
 
 What is the expected value of $Y=|X|$?
@@ -194,12 +196,14 @@ What is the expected value of $Y=|X|$?
 
 
 $$
+\small{
 p_Y(y) = 
 \begin{cases}
     2/5, & \text{if $y = 1, 2$,} \\\
     1/5, & \text{if $y = 0$,} \\\
     0,              & \text{otherwise.}
 \end{cases}
+}
 $$
 
 ---
@@ -337,8 +341,8 @@ $$
 \begin{aligned}
 t &= 
 \begin{cases}
-2/4=0.5, & \text{if walking,} \\\
-2/20=0.1,   & \text{if cycling.} \\\
+2 \textcolor{lightgray}{\text{ miles}}/4 \textcolor{lightgray}{\text{ mph}}=0.5 \textcolor{lightgray}{\text{ hours}}, & \text{if walking,} \\\
+2 \textcolor{lightgray}{\text{ miles}}/20 \textcolor{lightgray}{\text{ mph}}=0.1 \textcolor{lightgray}{\text{ hours}},   & \text{if cycling.} \\\
 \end{cases}
 \end{aligned}
 }
