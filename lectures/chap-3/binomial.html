@@ -44,30 +44,25 @@ $$X \sim \text{bin}(n, p)$$
 
 Toss a coin for 3 times. 
 
-What is the probability of getting 2 heads?
+<!-- What is the probability of getting 2 heads? -->
+
+<!-- .left[![:scale 40%](../images/tree-bernoulli.png)] -->
+
+
+$$\small{\text{P}(\text{getting exact 2 heads})=?}$$
 
 --
 
-<br>
-
-.left[![:scale 40%](../images/tree-bernoulli.png)]
-
-
----
-
-$$\text{P}(\text{2 heads in 3 tosses})=?$$
-
-
-.center[![:scale 70%](../images/tree-binomial.png)]
+.center[![:scale 55%](../images/tree-binomial.png)]
 
 --
 
-$$\text{P}(\text{2 heads in 3 tosses})={3 \choose 2}p^2(1-p)$$
+$$\small{\text{P}(\text{getting exact 2 heads})={3 \choose 2}p^2(1-p)}$$
 
 ---
 # Probability mass function
 
-$X$: the number of heads we receive after $n$ tosses.
+$X$: the number of heads we get after $n$ tosses.
 
 $$X \sim \text{bin}(n, p)$$
 
@@ -75,7 +70,7 @@ PMF:
 
 --
 
-.center[![:scale 70%](../images/permutation-slots.png)]
+.center[![:scale 60%](../images/permutation-slots.png)]
 
 --
 
@@ -84,18 +79,27 @@ $$p_X(k)=\text{P}(X=k) ={n \choose k}p^k(1-p)^{n-k}$$
 $$\text{for } k=0, 1, 2, \cdots, n.$$
 
 ---
+
+# Why it is called .red[binomial]?
+
+--
+
 $$\text{P}(X=k) ={n \choose k}p^k(1-p)^{n-k}$$
 
 $$\text{for } k=0, 1, 2, \cdots, n.$$
 
-Note it is in the same format as the [binomial expansion](https://en.wikipedia.org/wiki/Binomial_theorem) in algebra:
+--
+
+It has the same format as the [binomial expansion](https://en.wikipedia.org/wiki/Binomial_theorem) terms in algebra:
 
 $$
 (x+y)^n=\sum_{k=0}^n {n \choose k}x^k y^{n-k}
 $$
 
 
-${n \choose k}$ is often called the [binomial coefficient](https://en.wikipedia.org/wiki/Binomial_coefficient). 
+--
+
+where ${n \choose k}$ is called the [binomial coefficient](https://en.wikipedia.org/wiki/Binomial_coefficient). 
 
 <!-- ---
 # Exercise
@@ -109,14 +113,14 @@ Let $X$ be the number of girls in the family.
 Find the PMF of $X$.  -->
 
 
----
+<!-- ---
 # Exercise
 
 You go to a party with $n$ other people. 
 
 Let $X$ be the number of people who share the same birthday as you.
 
-Find the PMF of $X$. 
+Find the PMF of $X$.  -->
 
 
 ---
@@ -201,7 +205,7 @@ We will need this property later when finding the expected value of binomial RV.
 
 ---
 name: expected_binomial
-# Expected value of $X \sim \text{bin}(n, p)$
+# Expected value
 
 $$
 \begin{aligned}
@@ -223,7 +227,7 @@ $$
 \end{aligned}
 $$
 
-[Proof](#appendix_A)
+.center[[Proof](#appendix_A)]
 
 
 ---
@@ -282,14 +286,16 @@ $$
 
 $$
 \begin{aligned}
-Y &\sim \text{bin}(n, p) \\\
-\\\
 X_i \text{'s are i.i.d.} &\sim \text{Bernoulli}(p) \\\
 \\\
 Y&=X_1+X_2+\cdots+X_n \\\
 \\\
+Y &\sim \text{bin}(n, p) \\\
+\\\
 \text{E}[Y] &= \text{E}[X_1+X_2+\cdots+X_n] \\\
+\\\
 &=\text{E}[X_1] + \text{E}[X_2]+\cdots+\text{E}[X_n] \\\
+\\\
 &=p + p+\cdots+p \\\
 &= np 
 \end{aligned}

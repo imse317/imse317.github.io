@@ -78,7 +78,7 @@ class: center, middle
 .huge[[Interactive visualization](https://probstats.org/uniform_discrete.html)]
 
 ---
-# Expected value of $X\sim\text{unif}\\{a, b\\}$
+# Expected value
 
 $$
 \small{
@@ -88,7 +88,7 @@ p_X(k) =
     0,               & \text{otherwise.} \\\
 \end{cases}
 \\\
-\text{where $n=b-a+1$ } \;\;\;\;  \color{gray}{\leftarrow\text{the # of outcomes}}
+\text{where $n=b-a+1$ }
 }
 $$
 
@@ -99,7 +99,8 @@ $$
 \begin{aligned}
 \text{E}[X]=\;&\frac{1}{n}\cdot a+\frac{1}{n} \cdot (a+1)+ \cdots+\frac{1}{n} \cdot b \\\
 \\\
-=\;&\frac{1}{n} \cdot \big[a+(a+1)+\cdots+b\big] \\\
+=\;&\frac{1}{n} \cdot \big[a+(a+1)+\cdots+b\big] \\\   
+&\color{lightgray}{\text{Note the 2nd part above is an arithmetic series.}}
 \\\
 =\;&\frac{1}{n} \cdot \frac{n(a+b)}{2} \\\
 \\\
@@ -109,7 +110,7 @@ $$
 $$
 
 ---
-# Variance of $X\sim\text{unif}\\{a, b\\}$
+# Variance
 
 $$
 p_X(k) = 
@@ -118,7 +119,7 @@ p_X(k) =
     0,               & \text{otherwise.} \\\
 \end{cases}
 \\\
-\text{where $n=b-a+1$ } \;\;\;\;  \color{gray}{\leftarrow\text{total # of outcomes}}
+\text{where $n=b-a+1$ }
 $$
 
 --
