@@ -29,7 +29,7 @@ At each toss
 
 --
 
-$X$: the number of tosses needed to get the .red[first heads]
+$X$: the number of tosses needed to see the .red[first heads]
 
 .center[![:scale 80%](../images/geo.png)]
 
@@ -130,41 +130,26 @@ $$
 \end{aligned}
 $$
 
----
-# Exercise
-
-You rented a large house and the landlord gave you 5 keys, 
-one for each of its 5 doors.
-
-Unfortunately, all keys look identical 🔑🔑🔑🔑🔑
-
-You are at the front door and try the keys at random.
-
-Using each of the two strategies below
-
-- After an unsuccessful trial, you mark the wrong key, so that you will not try it again.
-- At each trial you randomly choose any key.
-
-what is the expected # of trials to open the front door?
 
 ---
 class: center
 # [Gambler's fallacy](https://en.wikipedia.org/wiki/Gambler%27s_fallacy)
 
 <iframe width="750" height="500" src="https://www.youtube.com/embed/4eVluL-idkM" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ---
 # [Memoryless property](https://en.wikipedia.org/wiki/Memorylessness) of geometric RV
 
 Given that a coin has been tossed $t$ times with all tails, 
+the probability of needing more than another $s$ tosses to see the first heads, 
+is the same as the probability of simply needing more than $s$ tosses to see the first heads originally.
 
-the probability of needing more than another $s$ tosses to get a first heads, 
-is the same as the prob.   of needing more than $s$ tosses to get a first heads originally.
+$$\small{
+  \text{P}(X>t+s|X>t)=\text{P}(X>s) \\\
+  \text{for all nonnegative integers $t$ and $s$}
+}$$
 
-$$\text{P}(X>t+s|X>t)=\text{P}(X>s)$$
-
-$$\text{for all nonnegative integers $t$ and $s$}$$
-
-It's called memoryless because .red[the past has no bearing on its future behavior]. 
+It's called memoryless because .red[the past (a coin has been tossed $t$ times with all tails) has no bearing on its future (the probability of needing more than $s$ tosses to see the first heads)]. 
 
 
 ---

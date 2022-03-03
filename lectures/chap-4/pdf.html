@@ -48,11 +48,13 @@ A random variable $X$ is called .red[continuous]
 if there is a nonnegative function $f_X$, such that
 
 $$
+\small{
 \begin{aligned}
 &\text{P}(X \in B)=\int_B f_X dx \\\
 \\\
 &\text{for every subset $B$ of the real line.} \\\
 \end{aligned}
+}
 $$
 
 .center[![:scale 45%](../images/continuous-rv-def.png)]
@@ -65,9 +67,13 @@ $$\text{P}(a \leq X \leq b)=\int_a^b f_X dx$$
 
 ---
 
+# [Probability density function (PDF)](https://en.wikipedia.org/wiki/Probability_density_function)
+
 $$\text{P}(a \leq X \leq b)=\int_a^b f_X dx$$
 
 $f_X$ is called the .red[probability density function] of $X$.
+
+--
 
 <br>
 .center[![:scale 100%](../images/pdf-def.png)]
@@ -79,7 +85,7 @@ Why $f_X$ is called the probability .red[density] function?
 
 --
 
-.center[![:scale 38%](../images/pdf-interpretation.png)]
+.center[![:scale 36%](../images/pdf-interpretation.png)]
 
 --
 
@@ -97,9 +103,11 @@ $f_X$ is the probability mass .red[per unit length].
 
 
 ---
-# Properties of PDF - Non-negativity
+# Properties of PDF
 
 $$\text{P}(a \leq X \leq b)=\int_a^b f_X dx$$
+
+Non-negativity:
 
 As probability can not be negative, we have
 
@@ -140,18 +148,24 @@ $$
 $$
 
 ---
-# Properties of PDF - Normalization
+# Properties of PDF
+
+Normalization:
 
 For any discrete RV, we have
 
-$$\sum_{x} p_X(x) = 1$$
+$$\small{\sum_{x} p_X(x) = 1}$$
 
 --
 
 For any continuous RV, we have
-$$\text{P}(-\infty < X < +\infty)=\int_{-\infty}^{+\infty} f_X dx=1$$
+$$
+\small{
+\text{P}(-\infty < X < +\infty)=\int_{-\infty}^{+\infty} f_X dx=1
+}
+$$
 
-.center[![:scale 32%](../images/pdf-normalization.png)]
+.center[![:scale 25%](../images/pdf-normalization.png)]
 
 
 
@@ -211,6 +225,7 @@ class: split-60
 <br>
 
 $$
+\small{
 \begin{aligned}
 &\int k\;dx=kx+c \\\
 \\\
@@ -218,6 +233,7 @@ $$
 \\\
 &\int \frac{1}{x}dx=\ln |x|+c \\\
 \end{aligned}
+}
 $$
 
 ]
@@ -226,11 +242,13 @@ $$
 <br><br><br>
 
 $$
+\small{
 \begin{aligned}
 &\int e^x dx=e^x+c \\\
 \\\
 &\int a^x dx=\frac{a^x}{\ln a}+c \\\
 \end{aligned}
+}
 $$
 ]
 
