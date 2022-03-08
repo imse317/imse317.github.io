@@ -34,30 +34,28 @@ If it can take on two particular values, it can also take on all the values betw
 <br>
 Examples
 
-- Speed of riding a bicycle
+- Speed of riding a bicycle 🚲
 
-- Water level of a dam
+- Water level of a dam 🌊
 
-- Time when a customer arrives at a store
+- Customer arrival time at a store 🏪
 
 ---
-# Continuous random variables
+<!-- # Continuous random variables -->
 
 A random variable $X$ is called .red[continuous] 
 
 if there is a nonnegative function $f_X$, such that
 
-$$
-\small{
-\begin{aligned}
-&\text{P}(X \in B)=\int_B f_X dx \\\
-\\\
-&\text{for every subset $B$ of the real line.} \\\
-\end{aligned}
-}
-$$
+for every subset $B$ of the real line
 
 .center[![:scale 45%](../images/continuous-rv-def.png)]
+
+we have
+
+$$\text{P}(X \in B)=\int_B f_X dx$$
+
+
 
 --
 
@@ -79,7 +77,7 @@ $f_X$ is called the .red[probability density function] of $X$.
 .center[![:scale 100%](../images/pdf-def.png)]
 
 ---
-We describe discrete RVs w/ probability .green[mass] function.
+We describe *discrete* RVs w/ probability .green[mass] function.
 
 Why $f_X$ is called the probability .red[density] function?
 
@@ -103,11 +101,11 @@ $f_X$ is the probability mass .red[per unit length].
 
 
 ---
-# Properties of PDF
+# Properties of PDF - Non-negativity
 
 $$\text{P}(a \leq X \leq b)=\int_a^b f_X dx$$
 
-Non-negativity:
+<br>
 
 As probability can not be negative, we have
 
@@ -148,24 +146,18 @@ $$
 $$
 
 ---
-# Properties of PDF
-
-Normalization:
+# Properties of PDF - Normalization
 
 For any discrete RV, we have
 
-$$\small{\sum_{x} p_X(x) = 1}$$
+$$\sum_{x} p_X(x) = 1$$
 
 --
 
 For any continuous RV, we have
-$$
-\small{
-\text{P}(-\infty < X < +\infty)=\int_{-\infty}^{+\infty} f_X dx=1
-}
-$$
+$$\text{P}(-\infty < X < +\infty)=\int_{-\infty}^{+\infty} f_X dx=1$$
 
-.center[![:scale 25%](../images/pdf-normalization.png)]
+.center[![:scale 30%](../images/pdf-normalization.png)]
 
 
 
