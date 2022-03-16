@@ -33,7 +33,7 @@ class: split-50
 
 --
 
-Arguably the most important distribution.
+.center[Arguably the most important distribution]
 
 --
 
@@ -183,8 +183,8 @@ $$
 ---
 # Standard normal table (or $Z$ table)
 
-- The table only contains values of $\Phi(x)$ for $x \geq 0$. 
-- What if $x < 0$?
+- The table only contains values of $\Phi(z)$ for $z \geq 0$. 
+- What if $z < 0$?
 
 .center[![:scale 45%](../images/pdf-z.png)]
 
@@ -192,14 +192,14 @@ $$
 
 More generally, we have
 
-$$\Phi(-x)=1-\Phi(x), \;\;\;\; \text{for all $x$.} $$
+$$\Phi(-z)=1-\Phi(z), \;\;\;\; \text{for all $z$.} $$
 
 ---
 # Exercise ❄
 
 Assume the annual snowfall in Dearborn follows a normal distribution with 
-- a mean of $\mu=60$ inches
-- a standard deviation of $\sigma=20$ inches
+- a mean of 60 inches
+- a standard deviation of 20 inches
 
 What is the probability this year has 80+ inches snow?
 
@@ -212,7 +212,7 @@ What is the probability this year has 80+ inches snow?
 
 ---
 
-$$X \sim \text{N}(\mu, \sigma^2)$$
+$$X \sim \text{N}\big(\mu, \sigma^2\big)$$
 
 What is the probability that $X$ takes values 
 
@@ -226,7 +226,7 @@ within .red[one] standard deviation from its mean?
 
 ---
 
-$$X \sim \text{N}(\mu, \sigma^2)$$
+$$X \sim \text{N}\big(\mu, \sigma^2\big)$$
 
 What is the probability that $X$ takes values 
 
@@ -240,7 +240,7 @@ within .red[two] standard deviation from its mean?
 
 ---
 
-$$X \sim \text{N}(\mu, \sigma^2)$$
+$$X \sim \text{N}\big(\mu, \sigma^2\big)$$
 
 What is the probability that $X$ takes values 
 
@@ -255,7 +255,7 @@ within .red[three] standard deviation from its mean?
 ---
 # 68-95-99.7 rule
 
-$$X \sim \text{N}(\mu, \sigma^2)$$
+$$X \sim \text{N}\big(\mu, \sigma^2\big)$$
 
 .center[![:scale 70%](../images/pdf-normal-rule.png)]
 
@@ -267,24 +267,26 @@ $$\text{P}(-6\sigma < X < 6 \sigma)=99.99966\%$$
 ---
 # General procedure to get the normal CDF
 
-$$X \sim \text{N}(\mu, \sigma^2)$$
+$$\small{X \sim \text{N}\big(\mu, \sigma^2\big)}$$
 
 --
 
 Step 1. Standardize $X$ to obtain the standard normal $Z$
 
-$$Z=\frac{X-\mu}{\sigma}$$
+$$\small{Z=\frac{X-\mu}{\sigma}}$$
 
 --
 
 Step 2. Obtain the CDF value from the $Z$ table
 
 $$
+\small{
 \begin{aligned}
-\text{P}(X < x)&=\text{P}(\frac{X-\mu}{\sigma} < \frac{x-\mu}{\sigma}) \\\
-&=\text{P}(Z< \frac{x-\mu}{\sigma}) \\\
-&=\Phi(\frac{x-\mu}{\sigma}) \\\
+\text{P}(X < x)&=\text{P}\bigg(\frac{X-\mu}{\sigma} < \frac{x-\mu}{\sigma}\bigg) \\\
+&=\text{P}\bigg(Z < \frac{x-\mu}{\sigma}\bigg) \\\
+&=\Phi\bigg(\frac{x-\mu}{\sigma}\bigg) \\\
 \end{aligned}
+}
 $$
 
 <!-- ---
