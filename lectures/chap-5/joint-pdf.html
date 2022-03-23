@@ -49,10 +49,13 @@ The integration is carried over $A$ on the 2-D plane.
 
 $$\text{P}\big((X, Y) \in A\big)=\iint\limits_{(x, y) \in A} f_{X, Y}(x, y) dxdy $$
 
-Let 
-$A=\\{(x, y) \mid a \leq x \leq b, c \leq y \leq d\\}$
+--
+
+$$\text{Let } A=\\{(x, y) \mid a \leq x \leq b, c \leq y \leq d\\}$$
 
 .center[![:scale 32%](../images/joint-pdf-rectangle.png)]
+
+--
 
 $$\text{P}(a \leq x \leq b, \; c \leq y \leq d)=\int_c^d \int_a^b f_{X, Y}(x, y)dxdy$$
 
@@ -74,16 +77,18 @@ $$\text{P}(a \leq x \leq b, \; c \leq y \leq d)=\int_c^d \int_a^b f_{X, Y}(x, y)
 
 .center[![:scale 80%](../images/joint-pdf-3d-1.png)]
 
-The probability is the .red[volume under the density surface]
+The probability is the .red[volume under the density surface].
 
 ---
 
-.center[![:scale 60%](../images/joint-pdf-3d-2.png)]
+.center[![:scale 50%](../images/joint-pdf-3d-2.png)]
 
 $$
 \begin{aligned}
 &\text{P}(a \leq x \leq a+\delta, c \leq y \leq c+\delta) \\\
+\\\
 =\;&\int_c^{c+\delta} \int_a^{a+\delta} f_{X, Y}(x, y)dxdy \\\
+\\\
 \approx \;& f_{X, Y}(a, c) \cdot \delta ^2 \\\
 \end{aligned}
 $$
@@ -103,6 +108,8 @@ For a single continuous RV, we have
 
 $$\int_{-\infty}^{+\infty} f_X dx=1$$
 
+--
+
 .center[
 ![:scale 45%](../images/pdf-normalization.png)
 ]
@@ -115,6 +122,8 @@ The total area under the density curve is 1.
 For two continuous RVs $X$ and $Y$, we have
 
 $$\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} f_{X, Y}(x, y) dxdy=1$$
+
+--
 
 .center[
 ![:scale 50%](../images/joint-pdf-normal.png)

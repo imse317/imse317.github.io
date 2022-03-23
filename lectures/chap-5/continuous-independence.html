@@ -26,9 +26,7 @@ class: split-50
 ---
 # Independence
 
-In the .green[discrete] case,
-
-two RVs $X$ and $Y$ are independent if 
+Two .green[discrete] RVs $X$ and $Y$ are independent if
 
 $$p_{X, Y}(x, y) = p_X(x) \cdot p_{Y}(y), \;\;\;\; \text{for all $x$ and $y$.}$$
 
@@ -36,9 +34,7 @@ $$p_{X, Y}(x, y) = p_X(x) \cdot p_{Y}(y), \;\;\;\; \text{for all $x$ and $y$.}$$
 
 <br>
 
-In the .red[continuous] case,
-
-two RVs $X$ and $Y$ are independent if 
+Two .red[continuous] RVs $X$ and $Y$ are independent if
 
 $$f_{X, Y}(x, y) = f_X(x) \cdot f_{Y}(y), \;\;\;\; \text{for all $x$ and $y$.}$$
 
@@ -54,7 +50,7 @@ Its joint PDF:
 
 $$
 \begin{aligned}
-f\_{X, Y}(x, y) &= 
+f_{X, Y}(x, y) &= 
 \begin{cases}
     1, & \text{if $x, y \in [0, 1]$,} \\\
     0, & \text{otherwise.}
@@ -101,7 +97,7 @@ We draw parallel lines with distance $d$ from each other.
 
 We threw a needle of length $l$ on the surface at random.
 
-What is the chance that the needle intersects a line? 
+What is the probability that the needle intersects a line? 
 
 .center[![:scale 49%](../images/buffon-1.png)]
 
@@ -190,16 +186,16 @@ $$\text{P}(\text{intersect})=\frac{2l}{\pi d}=\frac{2(d/2)}{\pi d}=\frac{1}{\pi}
 
 <br>
 
-$$\text{P}(\text{intersect})=\frac{1}{\pi}\approx \frac{\text{# of intersections}}{\text{# of throws}}$$
+$$\text{P}(\text{intersect})\approx \frac{\text{# of intersections}}{\text{# of needles}}$$
 
 --
 
 <br>
-$$\require{color}\colorbox{yellow}{$\pi \approx \frac{\text{# of throws}}{\text{# of intersections}}$}$$
+$$\require{color}\colorbox{yellow}{$\pi \approx \frac{\text{# of needles}}{\text{# of intersections}}$}$$
 
 ---
 
-$$\require{color}\colorbox{yellow}{$\pi \approx \frac{\text{# of throws}}{\text{# of intersections}}$}$$
+$$\require{color}\colorbox{yellow}{$\pi \approx \frac{\text{# of needles}}{\text{# of intersections}}$}$$
 
 .center[![:scale 100%](../images/buffon-pi.png)]
 

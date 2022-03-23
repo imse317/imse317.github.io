@@ -100,6 +100,12 @@ $$\text{var}(X + Y)=\text{var}(X) + \text{var}(Y)$$
 
 [Proof](#variance_appendix)
 
+--
+
+<br>
+
+$$\text{var}(X - Y)=?$$
+
 
 ---
 class: middle, center
@@ -135,16 +141,13 @@ name: linearity_appendix
 $$
 \small{
 \begin{aligned}
-\text{E}[X+Y] &= \sum_x \sum_y (x+y) p_{X, Y}(x, y) \;\;\;\; \color{gray}{\leftarrow\text{by LOTUS}} \\\
-\\\
-&= \sum_x \sum_y \big (xp_{X, Y}(x, y)+yp_{X, Y}(x, y) \big) \\\
-\\\
-&= \sum_x \sum_y xp_{X, Y}(x, y)+ \sum_y \sum_x yp_{X, Y}(x, y) \\\
-\\\
-&= \sum_x x\sum_y p_{X, Y}(x, y)+ \sum_y y\sum_x p_{X, Y}(x, y) \\\
-\\\
-&= \sum_x xp_{X}(x)+ \sum_y yp_{Y}(y) \;\; \color{gray}{\leftarrow\text{by definition of marginal pmf}} \\\
-&=\text{E}[X] + \text{E}[Y] \hspace{5em} \color{gray}{\leftarrow\text{by definition of expected value}} \\\
+& \text{E}[X+Y] \\\
+=& \sum_x \sum_y (x+y) p_{X, Y}(x, y) \;\;\;\; \color{gray}{\leftarrow\text{by LOTUS}} \\\
+=& \sum_x \sum_y \big (xp_{X, Y}(x, y)+yp_{X, Y}(x, y) \big) \\\
+=& \sum_x \sum_y xp_{X, Y}(x, y)+ \sum_y \sum_x yp_{X, Y}(x, y) \\\
+=& \sum_x x\sum_y p_{X, Y}(x, y)+ \sum_y y\sum_x p_{X, Y}(x, y) \\\
+=& \sum_x xp_{X}(x)+ \sum_y yp_{Y}(y) \;\; \color{gray}{\leftarrow\text{by definition of marginal pmf}} \\\
+=&\text{E}[X] + \text{E}[Y] \hspace{2em} \color{gray}{\leftarrow\text{by definition of expected value}} \\\
 \end{aligned}
 }
 $$

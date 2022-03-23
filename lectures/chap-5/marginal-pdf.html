@@ -23,19 +23,19 @@ class: split-50
 
 ---
 
-For .green[discrete] RVs $X$ and $Y$, the .red[marginal] PMFs are
+For discrete RVs $\color{red}{X}$ and $\color{blue}{Y}$, the marginal PMFs are
 
-$$p_X(x)=\sum_y p_{X, Y}(x, y)$$
+$$p_\color{red}{X}(\color{red}{x})=\sum_\color{blue}{y} p_{X, Y}(x, y)$$
 
-$$p_Y(y)=\sum_x p_{X, Y}(x, y)$$
+$$p_\color{blue}{Y}(\color{blue}{y})=\sum_\color{red}{x} p_{X, Y}(x, y)$$
 
 --
 
-For .red[continuous] RVs $X$ and $Y$, the .red[marginal] PDFs are
+For continuous RVs $\color{red}{X}$ and $\color{blue}{Y}$, the marginal PDFs are
 
-$$f_X(x)=\int_{-\infty}^{+\infty} f_{X, Y}(x, y) dy$$
+$$f_\color{red}{X}(\color{red}{x})=\int_{-\infty}^{+\infty} f_{X, Y}(x, y) d\color{blue}{y}$$
 
-$$f_Y(y)=\int_{-\infty}^{+\infty} f_{X, Y}(x, y) dx$$
+$$f_\color{blue}{Y}(\color{blue}{y})=\int_{-\infty}^{+\infty} f_{X, Y}(x, y) d\color{red}{x}$$
 
 ???
 Integrate the joint PDF over all possible values of the other variable.
@@ -60,12 +60,12 @@ $$
 
 ---
 
-$$f_{X, Y}(x, y) = 
+<!-- $$f_{X, Y}(x, y) = 
 \begin{cases}
     c, & \text{if $x, y \in [0, 1]$,} \\\
     0, & \text{otherwise.}
 \end{cases}
-$$
+$$ -->
 
 To satisfy the normalization property
 
@@ -73,11 +73,15 @@ $$
 \begin{aligned}
 &\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} f_{X, Y}(x, y) dxdy \\\
 \\\
-=\;&\int_0^1 \int_0^1 c dxdy \\\
+=\;&\int_0^1 \int_0^1 c \; dxdy \\\
 \\\
-=\;&c \int_0^1 \int_0^1 dxdy =c \\\
+=\;&c \int_0^1 \int_0^1 1 \; dxdy \\\
+\\\
+=\;&c \\\
 \end{aligned}
 $$
+
+--
 
 We must set $c=1$.
 
@@ -86,27 +90,59 @@ We must set $c=1$.
 
 $$f_{X, Y}(x, y) = 
 \begin{cases}
-    c, & \text{if $x, y \in [0, 1]$,} \\\
+    1, & \text{if $x, y \in [0, 1]$,} \\\
     0,              & \text{otherwise.}
 \end{cases}
 $$
 
-.center[![:scale 18%](../images/unit-square.png)]
+<!-- .center[![:scale 18%](../images/unit-square.png)] -->
 
-What are the marginal PDFs?
+What is the marginal PDF of $X$?
+
+
+--
+
+If $x < 0$ or $x > 1$, 
+
+$$f_X(x)=\int_{-\infty}^{+\infty} f_{X, Y}(x, y) dy =\int_{-\infty}^{+\infty} 0 \; dy=0$$
+
+--
+
+If $x \in [0, 1]$
 
 $$
-f_X(x)=\int_{-\infty}^{+\infty} f_{X, Y}(x, y) dy=\int_0^1 1 \cdot dy =1,  \;\; \text{if } x \in [0, 1].
+f_X(x)=\int_{-\infty}^{+\infty} f_{X, Y}(x, y) dy=\int_0^1 1 \; dy =1
 $$
 
 --
 
-That is, $X \sim \text{unif}(0, 1)$
-
-Similarly, $Y \sim \text{unif}(0, 1)$
+$$X \sim \text{unif}(0, 1)$$
 
 ---
-# Uniform joint PDF
+
+$$f_{X, Y}(x, y) = 
+\begin{cases}
+    1, & \text{if $x, y \in [0, 1]$,} \\\
+    0,              & \text{otherwise.}
+\end{cases}
+$$
+
+$$X \sim \text{unif}(0, 1)$$
+
+<br>
+
+--
+
+.center[What is the marginal PDF of $Y$?]
+
+<!-- .center[![:scale 30%](../images/unit-square.png)] -->
+
+--
+
+$$Y \sim \text{unif}(0, 1)$$
+
+---
+# .red[Uniform] joint PDF
 
 More generally, let $S$ be a subset of the 2-D plane.
 
@@ -123,16 +159,17 @@ $$
 
 ---
 
-.center[![:scale 26%](../images/joint-pdf-uniform.png)]
+.center[![:scale 24%](../images/joint-pdf-uniform.png)]
 
 $$
+\small{
 \begin{aligned}
 \text{P}\big((X, Y) \in A\big)&=\iint\limits_{(x, y) \in A} f_{X, Y}(x, y) dxdy \\\
-\\\
-&=\frac{1}{\text{area of $S$}}\iint\limits_{(x, y) \in A} dxdy \\\
-\\\
+&=\iint\limits_{(x, y) \in A} \frac{1}{\text{area of $S$}} dxdy \\\
+&=\frac{1}{\text{area of $S$}}\iint\limits_{(x, y) \in A} 1 \;dxdy \\\
 &=\frac{\text{area of $A$}}{\text{area of $S$}} \\\
 \end{aligned}
+}
 $$
 
 ---
@@ -150,10 +187,14 @@ What is the probability that $X < Y$?
 --
 
 .center[
-![:scale 30%](../images/unit-square.png)
+![:scale 28%](../images/unit-square.png)
 &nbsp;
-![:scale 30%](../images/unit-square-xy.png)
+![:scale 28%](../images/unit-square-xy.png)
 ]
+
+--
+
+$$\text{P}(X < Y) = \frac{\text{area of yellow}}{\text{area of green}}= \frac{\frac{1}{2}}{1}=0.5$$
 
 ---
 # Uniform distribution on the unit disk
