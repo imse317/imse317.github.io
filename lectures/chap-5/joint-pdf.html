@@ -51,18 +51,18 @@ $$\text{P}\big((X, Y) \in A\big)=\iint\limits_{(x, y) \in A} f_{X, Y}(x, y) dxdy
 
 --
 
-$$\text{Let } A=\\{(x, y) \mid a \leq x \leq b, c \leq y \leq d\\}$$
+$$\text{Let } A=\\{(x, y) \mid a < x < b, c < y < d\\}$$
 
 .center[![:scale 32%](../images/joint-pdf-rectangle.png)]
 
 --
 
-$$\text{P}(a \leq x \leq b, \; c \leq y \leq d)=\int_c^d \int_a^b f_{X, Y}(x, y)dxdy$$
+$$\text{P}(a < x < b, \; c < y < d)=\int_c^d \int_a^b f_{X, Y}(x, y)dxdy$$
 
 ---
 # Single continuous RV
 
-$$\text{P}(a \leq X \leq b)=\int_a^b f_X dx$$
+$$\text{P}(a < X < b)=\int_a^b f_X dx$$
 
 The probability is the .red[area under the density curve].
 
@@ -71,7 +71,7 @@ The probability is the .red[area under the density curve].
 ---
 # Two continuous RVs
 
-$$\text{P}(a \leq x \leq b, \; c \leq y \leq d)=\int_c^d \int_a^b f_{X, Y}(x, y)dxdy$$
+$$\text{P}(a < x < b, \; c < y < d)=\int_c^d \int_a^b f_{X, Y}(x, y)dxdy$$
 
 <br>
 
@@ -81,11 +81,11 @@ The probability is the .red[volume under the density surface].
 
 ---
 
-.center[![:scale 50%](../images/joint-pdf-3d-2.png)]
+.center[![:scale 45%](../images/joint-pdf-3d-2.png)]
 
 $$
 \begin{aligned}
-&\text{P}(a \leq x \leq a+\delta, c \leq y \leq c+\delta) \\\
+&\text{P}(a < x < a+\delta, c < y < c+\delta) \\\
 \\\
 =\;&\int_c^{c+\delta} \int_a^{a+\delta} f_{X, Y}(x, y)dxdy \\\
 \\\

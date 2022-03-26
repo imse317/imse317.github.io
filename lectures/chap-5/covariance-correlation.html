@@ -15,9 +15,12 @@ class: split-50
 .column[
 <br><br><br><br><br>
 .huge[Covariance]
+
+.huge[& correlation]
 ]
 .column[
 <br><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;
 ![:scale 40%](../images/cov-cover.png)
 ]
 
@@ -27,9 +30,11 @@ class: split-50
 It measures the degree to which two RVs .red[vary together]. 
 
 - People's height & weight
-<!-- - Houses: size & market value -->
 
 --
+
+- Advertising budget & product sales
+<!-- - Houses: size & market value -->
 
 <!-- .center[![:scale 45%](../images/dist-to-bike-lane.png)] -->
 
@@ -39,9 +44,9 @@ It measures the degree to which two RVs .red[vary together].
 
 # Covariance
 
-The covariance between two RVs $X$ and $Y$ is defined by
+The covariance between two RVs $\color{red}{X}$ and $\color{blue}{Y}$:
 
-$$\text{cov}(X, Y)=\text{E}\bigg[\big(X-\text{E}[X]\big)\cdot\big(Y-\text{E}[Y]\big)\bigg]$$
+$$\text{cov}(\color{red}{X}, \color{blue}{Y})\stackrel{\text{def}}{=}\text{E}\big[\big(\color{red}{X}-\text{E}[\color{red}{X}]\big)\cdot\big(\color{blue}{Y}-\text{E}[\color{blue}{Y}]\big)\big]$$
 
 --
 
@@ -52,6 +57,8 @@ $$\text{cov}(X, Y)=\text{E}\bigg[\big(X-\text{E}[X]\big)\cdot\big(Y-\text{E}[Y]\
 ]
 
 --
+
+<br>
 
 If $\text{cov}(X, Y)=0$, we say $X$ and $Y$ are .green[uncorrelated].   
 
@@ -66,11 +73,11 @@ Proof
 
 $$
 \begin{aligned}
-\text{cov}(X, X)&=\text{E}\big[(X-\text{E}[X])(X-\text{E}[X])\big] \;\;\; \color{gray}{\leftarrow\text{by def. of cov}}\\\
+\text{cov}(X, X)&=\text{E}\big[(X-\text{E}[X])(X-\text{E}[X])\big] \\\
 \\\
 &=\text{E}\big[(X-\text{E}[X])^2\big] \\\
 \\\
-&=\text{var}(X) \;\;\; \color{gray}{\leftarrow\text{by def. of variance}}\\\
+&=\text{var}(X) \;\;\; \color{gray}{\leftarrow\text{by the definition of variance}}\\\
 \end{aligned}
 $$
 
@@ -87,7 +94,7 @@ Proof
 
 $$
 \begin{aligned}
-\text{cov}(X, Y)&=\text{E}\big[(X-\text{E}[X])(Y-\text{E}[Y])\big] \;\;\; \color{gray}{\leftarrow\text{by def. of cov}}\\\
+\text{cov}(X, Y)&=\text{E}\big[(X-\text{E}[X])(Y-\text{E}[Y])\big] \\\
 \\\
 &=\text{E}\big[XY-\text{E}[X]Y-\text{E}[Y]X+\text{E}[X]\text{E}[Y]\big] \\\
 \\\
@@ -97,7 +104,7 @@ $$
 \end{aligned}
 $$
 
-<!-- ---
+---
 $X$: whether they are a current smoker
 
 $Y$: whether they will develop lung cancer at some point
@@ -108,7 +115,7 @@ $Y$: whether they will develop lung cancer at some point
 |&nbsp;&nbsp;&nbsp;&nbsp;$X=1$&nbsp;&nbsp;&nbsp;&nbsp;|$20\%$|$5\%$|$25\%$|
 |$p_Y(y)$|$92\%$|$8\%$|$100\%$|
 
-What is the covariance between $X$ and $Y$? -->
+What is the covariance between $X$ and $Y$?
 
 ---
 
@@ -133,6 +140,21 @@ $$
 &=a\cdot\text{cov}(X, Y) \\\
 \end{aligned}
 $$
+
+---
+
+# Properties
+
+
+$$\text{cov}(aX+b, Y)=a\cdot\text{cov}(X, Y),$$
+$$\text{for any constants $a$ and $b$.}$$
+
+<br>
+
+Similarly, we have
+
+$$\text{cov}(X, aY+b)=a\cdot\text{cov}(X, Y),$$
+$$\text{for any constants $a$ and $b$.}$$
 
 ---
 # Commutative property
@@ -161,6 +183,7 @@ $$\text{cov}(X+Y, Z)=\text{cov}(X, Z)+\text{cov}(Y, Z)$$
 Proof
 
 $$
+\small{
 \begin{aligned}
 &\;\text{cov}(X+Y, Z) \\\
 =&\;\text{E}\big[(X+Y-\text{E}[X+Y])(Z-\text{E}[Z])\big] \;\;\; \color{gray}{\leftarrow\text{by def. of cov}} \\\
@@ -169,6 +192,7 @@ $$
 =&\;\text{E}\big[(X-\text{E}[X])(Z-\text{E}[Z])\big]+\text{E}\big[(Y-\text{E}[Y])(Z-\text{E}[Z])\big] \\\
 =&\;\text{cov}(X, Z)+\text{cov}(Y, Z) \\\
 \end{aligned}
+}
 $$
 
 ---
@@ -176,7 +200,7 @@ $$
 
 <br>
 
-Similarly, we can prove that 
+Similarly, we have
 
 $$
 \begin{aligned}
@@ -214,72 +238,114 @@ $$
 }
 $$
 
+---
+# Properties
 
-<!-- We can also write it as
 $$
-\small{
-\text{var}(X+Y) = \text{cov}(X, X)+ \text{cov}(Y, Y)+ \text{cov}(X, Y)+ \text{cov}(Y, X)
-}
-$$ -->
+\text{var}(X+Y)=\text{var}(X)+\text{var}(Y)+2\text{cov}(X, Y)
+$$
 
-<!-- ---
+
+We can also write it as
+$$
+\begin{aligned}
+\text{var}(X+Y) =& \text{cov}(X, X) + \\\
+                 & \text{cov}(Y, Y) + \\\
+                 & \text{cov}(X, Y) + \\\
+                 & \text{cov}(Y, X)
+\end{aligned}
+$$
+
+---
+# Properties
+
+$$
+\begin{aligned}
+\text{var}(X+Y)&=\text{var}(X)+\text{var}(Y)+2\text{cov}(X, Y) \\\
+\\\
+\text{var}(X-Y)&=? \\\
+\end{aligned}
+$$
+
+--
+
+<br>
 
 If we replace $Y$ with $-Y$
 
 $$
-\small{
 \begin{aligned}
 \text{var}(X-Y)&=\text{var}(X)+\text{var}(-Y)+2\text{cov}(X, -Y) \\\
 \\\
+&=\text{var}(X)+(-1)^2\text{var}(Y)-2\text{cov}(X, Y) \\\
+\\\
 &=\text{var}(X)+\text{var}(Y)-2\text{cov}(X, Y) \\\
 \end{aligned}
-}
-$$ -->
+$$
 
 
 
-
-
-<!-- ---
+---
 # Independence
 
 If two RVs $X$ and $Y$ are independent, 
 
 $$\text{cov}(X, Y)=0$$
 
-<br>
-- Independent RVs are uncorrelated. 
-
-- However, the converse is not true. 
-  - Uncorrelated RVs may not be independent. 
-
+--
 Proof
 
-$$\text{cov}(X, Y)=\text{E}[XY]-\text{E}[X]\text{E}[Y]=0$$ -->
+$$\text{cov}(X, Y)=\text{E}[XY]-\text{E}[X]\text{E}[Y]=0$$
 
-<!-- ---
+--
+
+- Independent random variables are uncorrelated. 
+
+--
+
+- Are uncorrelated random variables independent?
+
+--
+
+  - Not necessarily. 
+  - Uncorrelated RVs may not be independent. 
+
+
+
+---
+
+$$X \sim \text{N}(0, 1),\;\;\;\;\;\; Y =  X^2$$
+
+
+--
 
 $$
 \begin{aligned}
-X &\sim \text{N}(0, 1) \\\
+\text{cov}(X, Y)&=\text{E}[XY]-\text{E}[X]\text{E}[Y] \\\
+&=\text{E}\big[X \cdot X^2\big] - 0 \cdot \text{E}\big[X^2\big] \\\
+&=\text{E}\big[X^3\big] \\\
 \\\
-Y &=  X^2\\\
+&=\int_{-\infty}^{+\infty} z^3(\frac{1}{\sqrt{2\pi}}e^{-\frac{z^2}{2}})dz \\\
+\\\
+&=0
 \end{aligned}
 $$
 
-$$\text{cov}(X, Y)=\text{E}[XY]-\text{E}[X]\text{E}[Y]=\text{E}[XY]$$
+--
+.center[$X$ and $Y$ are uncorrelated.]
 
-$$\text{E}[XY]=\text{E}[X^3]=\int_{-\infty}^{+\infty} z^3(\frac{1}{\sqrt{2\pi}}e^{-\frac{z^2}{2}})dz=0$$
+--
 
-$$\text{cov}(X, Y)=0$$
+.center[Are $X$ and $Y$ independent?]
 
-$X$ and $Y$ are uncorrelated. 
 
-However, they are not independent. 
 
-In fact, knowing $X$ gives us complete info about $Y$. -->
+???
+They are not independent.
 
-<!-- ---
+In fact, knowing $X$ gives us complete info about $Y$.
+
+---
 # Uncorrelated but dependent 
 
 $$X \sim \text{N}(0, 1), \;\;\;\;Y =  X^2, \;\;\;\;\text{cov}(X, Y)=0$$
@@ -289,9 +355,9 @@ $$X \sim \text{N}(0, 1), \;\;\;\;Y =  X^2, \;\;\;\;\text{cov}(X, Y)=0$$
 
 Covariance is a measure of .red[linear] relationship. 
 
-RVs can be dependent in nonlinear ways, and still have zero covariance.  -->
+Random variables can be dependent in nonlinear ways, and still have zero covariance. 
 
-<!-- ---
+---
 # Independence
 
 If $X$ and $Y$ are independent, then
@@ -309,36 +375,37 @@ $$
 \\\
 &=\text{var}(X)+\text{var}(Y) \\\
 \end{aligned}
-$$ -->
+$$
 
-<!-- ---
-# Independence
 
-Generally, if $n$ RVs $X_1, X_2, \cdots, X_n$ are independent, 
-
-$$\text{var}\bigg(\sum_{i=1}^n X_i\bigg)=\sum_{i=1}^n \text{var}(X_i)$$ -->
 
 ---
 # [Correlation coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)
 
-The .red[correlation coefficient] (or simply, .red[correlation]) between two RVs $X$ and $Y$ is defined by
+The .red[correlation coefficient] (or simply, .red[correlation]) between two RVs $X$ and $Y$:
 
-$$\rho(X, Y)=\frac{\text{cov}(X, Y)}{\sqrt{\text{var}(X)\text{var}(Y)}}$$
+$$\rho_{X, Y} \stackrel{\text{def}}{=} \frac{\text{cov}(X, Y)}{\sqrt{\text{var}(X)\text{var}(Y)}}$$
 
 --
 We can rewrite it as 
 
-$$\rho=\text{cov}\bigg(\frac{X-\text{E}[X]}{\sqrt{\text{var}(X)}}, \frac{Y-\text{E}[Y]}{\sqrt{\text{var}(Y)}} \bigg)$$
-
-
-The correlation is the covariance after standardization.
+$$\rho_{X, Y} \stackrel{\text{def}}{=} \text{cov}\bigg(\frac{X-\text{E}[X]}{\sqrt{\text{var}(X)}}, \frac{Y-\text{E}[Y]}{\sqrt{\text{var}(Y)}} \bigg)$$
 
 --
 
-Note $\rho$ is dimensionless. 
+The correlation is the covariance after [standardization](https://en.wikipedia.org/wiki/Standard_score).
+
 
 ---
 # Properties
+
+$$\rho_{X, Y} \stackrel{\text{def}}{=} \text{cov}\bigg(\frac{X-\text{E}[X]}{\sqrt{\text{var}(X)}}, \frac{Y-\text{E}[Y]}{\sqrt{\text{var}(Y)}} \bigg)$$
+
+.center[$\rho$ is dimensionless.]
+
+--
+
+<br>
 
 For any constants $a$ and $b$
 
@@ -349,6 +416,8 @@ $$
 \rho(aX+b, Y)&=\rho(X, Y) \\\
 \end{aligned}
 $$
+
+--
 
 Scaling a variable does not change the correlation. 
 
@@ -380,9 +449,9 @@ $$-1 \leq \rho(X, Y) \leq 1$$
 
 $$
 \begin{aligned}
-\rho=1, & \;\text{if and only if $Y=aX+b$ with $a>0$.} \\\
+\rho=1, & \;\text{iff (if and only if) $Y=aX+b$ with $a>0$.} \\\
 \\\
-\rho=-1, & \;\text{if and only if $Y=aX+b$ with $a < 0$.} \\\
+\rho=-1, & \;\text{iff $Y=aX+b$ with $a < 0$.} \\\
 \end{aligned}
 $$
 
@@ -442,6 +511,68 @@ $$
 \end{aligned}
 $$
 
+---
+
+Population covariance & correlation
+
+$$
+  \begin{aligned}
+  \text{cov}(X, Y)&=\text{E}\big[\big(X-\text{E}[X]\big)\big(Y-\text{E}[Y]\big)\big] \\\
+  \\\
+  \rho&=\frac{\text{cov}(X, Y)}{\sqrt{\text{var}(X) \text{var}(Y)}} \\\
+  \end{aligned}
+$$
+
+--
+Sample covariance & correlation
+
+$$
+  \begin{aligned}
+  \text{cov}(x, y)&=\frac{\sum(x_i-\bar{x})(y_i-\bar{y})}{n-1} \\\
+  \\\
+  r&=\frac{\sum(x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum(x_i-\bar{x})^2\sum(y_i-\bar{y})^2}} \\\
+  \end{aligned}
+$$
+
+---
+
+$$\large{r=\frac{\sum(x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum(x_i-\bar{x})^2\sum(y_i-\bar{y})^2}}}$$
+
+$r$ measures the .red[linear relationship] between $x$ and $y$.
+
+--
+
+<br>
+
+![:scale 100%](../images/correlation-1.png)
+
+<br>
+
+--
+
+![:scale 100%](../images/correlation-2.png)
+
+---
+
+$x$: ice cream sales 🍦
+
+$y$: number of people drowning in swimming pool 🏊
+
+--
+
+Are $x$ and $y$ correlated?
+
+---
+
+# [Correlation does not imply causation.](https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation)
+
+--
+
+<br>
+
+.center[![:scale 90%](../images/correlation-xkcd.png)]
+
+.center[[xkcd](https://xkcd.com/552/)]
 
 </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
