@@ -553,6 +553,50 @@ $r$ measures the .red[linear relationship] between $x$ and $y$.
 ![:scale 100%](../images/correlation-2.png)
 
 ---
+# Calculate correlation with Python
+
+Go to [Google Colab](https://colab.research.google.com/) and sign in.
+Open a new notebook.
+
+```
+import numpy as np
+import pandas as pd
+import seaborn as sns
+
+url = "https://imse317.github.io/data/advertising.csv"
+df = pd.read_csv(url)
+df.head()
+```
+
+```
+# examine the relationship between TV budget and sales
+sns.scatterplot(x="TV", y="sales", data=df)
+```
+
+---
+<!-- # Calculate correlation with Python -->
+
+```
+# manually calculating correlation coefficient r
+
+x = df["TV"]
+y = df["sales"]
+
+Sxy = sum((x - x.mean()) * (y - y.mean()))
+Sxx = sum((x - x.mean())**2)     # **2 is to square
+Syy = sum((y - y.mean())**2)
+
+r = Sxy / np.sqrt(Sxx * Syy)     # correlation formula 
+
+print(r)
+```
+
+```
+# alternatively, we can use the pandas corr method
+bank[["age", "balance"]].`corr`()
+```
+
+---
 
 $x$: ice cream sales 🍦
 

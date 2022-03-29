@@ -118,24 +118,26 @@ $$
 \begin{aligned}
 f_{X}(x) &= 
 \begin{cases}
-    \frac{1}{d/2}, & \text{if $0 \leq x \leq \frac{d}{2}$,} \\\
+    \frac{1}{d/2}, & \text{if $0 < x < \frac{d}{2}$,} \\\
     0,             & \text{otherwise.}
 \end{cases} \\\
 \\\
 f_{\Theta}(\theta) &= 
 \begin{cases}
-    \frac{1}{\pi/2}, & \text{if $0 \leq \theta \leq \frac{\pi}{2}$,} \\\
+    \frac{1}{\pi/2}, & \text{if $0 < \theta < \frac{\pi}{2}$,} \\\
     0,               & \text{otherwise.}
 \end{cases} \\\
 \end{aligned}
 $$
+
+By independence of $X$ and $\Theta$, we have
 
 $$
 \begin{aligned}
 f_{X, \Theta}(x, \theta) &= f_{X}(x) \cdot f_{\Theta}(\theta) \\\
 &=
 \begin{cases}
-    \frac{4}{\pi d}, & \text{if $0 \leq x \leq \frac{d}{2}, 0 \leq \theta \leq \frac{\pi}{2}$,} \\\
+    \frac{4}{\pi d}, & \text{if $0 < x < \frac{d}{2}, 0 < \theta < \frac{\pi}{2}$,} \\\
     0,              & \text{otherwise.}
 \end{cases}
 \end{aligned}
@@ -151,15 +153,15 @@ When does the needle intersect with a line?
 ???
 The needle intersects with a line if and only if 
 
-$$x \leq \frac{l}{2}\sin \theta$$
+$$x < \frac{l}{2}\sin \theta$$
 
 $$
 \begin{aligned}
-\text{P}(\text{needle intersects line})&= \text{P}(X \leq \frac{l}{2}\sin \Theta) \\\
+\text{P}(\text{intersect})&= \text{P}(X < \frac{l}{2}\sin \Theta) \\\
 \\\
-&=\iint \limits_{x\leq \frac{l}{2}\sin \theta} f_{X, \Theta}(x, \theta)dx d\theta \\\
+&=\iint \limits_{x < \frac{l}{2}\sin \theta} f_{X, \Theta}(x, \theta)dx d\theta \\\
 \\\
-&=\iint \limits_{x\leq \frac{l}{2}\sin \theta} \frac{4}{\pi d}dx d\theta \\\
+&=\iint \limits_{x < \frac{l}{2}\sin \theta} \frac{4}{\pi d}dx d\theta \\\
 \\\
 &=\frac{4}{\pi d}\int _0^{\pi/2} \int _0^{\frac{l}{2}\sin \theta} dx d\theta \\\
 \\\
