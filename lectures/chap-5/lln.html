@@ -25,21 +25,20 @@ class: middle, center
 
 
 ---
-# [Weak Law of Large Numbers](https://en.wikipedia.org/wiki/Law_of_large_numbers)
+# [Law of Large Numbers (LLN)](https://en.wikipedia.org/wiki/Law_of_large_numbers)
 
-Let $X_1, X_2, \cdots, X_n$ be i.i.d. random variables.
+Assume $X_1, X_2, \cdots, X_n$ are [i.i.d.](https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables)
 
-They all have mean $\mu$ and variance $\sigma^2$.
+(.red[i]ndependent and .red[i]dentically .red[d]istributed) RVs
 
-The .red[sample mean] is defined by
+with mean $\mu$ and variance $\sigma^2$.
 
-$$\bar{X}_n=\frac{X_1+X_2+\cdots+X_n}{n}=\frac{1}{n}\sum_{i=1}^n X_i$$
+$$\bar{X}_n \stackrel{\text{def}}{=} \frac{X_1+X_2+\cdots+X_n}{n}=\frac{1}{n}\sum_{i=1}^n X_i$$
 
 --
 
-Loosely speaking, the Weak Law of Large Numbers states that:
-
-.red[with high probability, the sample mean of many i.i.d. random variables is very close to the true mean.] 
+Loosely speaking, the LLN states that
+.red[with high probability, the sample mean $(\bar{X}_n)$ of many i.i.d. random variables is very close to the true mean $(\mu)$.] 
 
 ???
 Note $\bar{X}$ is not a number, but a random variable. 
@@ -67,11 +66,11 @@ $$\text{P}\big(|\bar{X}_n - \mu| \geq \epsilon \big) \leq \frac{\sigma^2}{n\epsi
 For any fixed $\epsilon$, the right-hand side of the inequality approaches to zero as $n$ increases.  
 
 ---
-# The Weak Law of Large Numbers
+# The (weak) Law of Large Numbers
 
 Let $X_1, X_2, \cdots, X_n$ be i.i.d. RVs with mean $\mu$.
 
-$$\require{color}\colorbox{yellow}{$\lim_{n\rightarrow +\infty}\text{P}(|\bar{X}_n - \mu| < \epsilon)=1, \;\;\;\; \text{for every $\epsilon >0$}.$}$$
+$$\require{color}\colorbox{yellow}{$\lim_{n\rightarrow +\infty}\text{P}\big(|\bar{X}_n - \mu| < \epsilon\big)=1, \;\;\;\; \text{for every $\epsilon >0$}.$}$$
 
 --
 
@@ -97,6 +96,12 @@ Keep flipping a coin for many times (simulation data)
 .center[![:scale 100%](../images/lln-coin-overlay-1m.png)]
 
 ---
+class: middle, center
+
+.center[![:scale 40%](https://upload.wikimedia.org/wikipedia/commons/4/49/Lawoflargenumbersanimation2.gif)]
+
+
+---
 Keep tossing a six-sided die.
 
 <br>
@@ -117,6 +122,79 @@ Keep tossing a six-sided die.
 .center[![:scale 90%](../images/lln-die-overlay-1m.png)]
 
 
+---
+# Which exam format to pick?
+
+The instructor offers two formats for an exam
+
+- Format A: 100 questions with 1 point each
+
+- Format B: only 2 questions, but with 50 points each
+
+Assume you can answer each question correctly with probability $p$.
+
+Assume the exam has no time limit.
+
+Which format should you choose if $p=0.95$?
+
+--
+
+Which format should you choose if $p=0.4$?
+
+
+
+---
+# [Roulette](https://en.wikipedia.org/wiki/Roulette)
+
+37 numbers including 18 .red[reds], 18 blacks, and 1 .green[green].
+
+.center[![:scale 55%](../images/roulette.png)]
+
+Batting .red[red] or black with 1:1 payout
+
+If wheel lands on .green[green], both .red[red] and black lose. 
+
+What is a player's expected net gain for betting $1?
+
+---
+# Why casinos don't lose money
+
+.center[![:scale 55%](../images/roulette.png)]
+
+What are the expected gain for betting other things?
+- Odd (1, 3,..., 35) or even (2, 4,..., 36) with 1:1 payout
+- Small (1-18) or large(19-36) with 1:1 payout
+- .green[Green] (0) with 36:1 payout
+
+---
+class: middle, center
+# Who is the best 3 point shooter in NBA?
+
+---
+
+.center[![:scale 78%](../images/nba-all.png)]
+
+---
+
+.center[![:scale 80%](../images/nba-qualified.png)]
+
+---
+
+.center[![:scale 60%](../images/gambler.png)]
+
+--
+
+Does the LLN contradict with the [Gambler's fallacy](https://en.wikipedia.org/wiki/Gambler%27s_fallacy)?
+
+--
+
+.center[.red[No]]
+
+The law works not by balancing out what has already happened, 
+but by .red[diluting what has happened with new data], so that the past is less and less important. 
+
+
+<div style="margin-top: 100px; text-align: left;"><a class="sourcelink" href="https://psychologenie.com/gamblers-fallacy-definition-examples">Image Source</a></div>
 
 
 </textarea>

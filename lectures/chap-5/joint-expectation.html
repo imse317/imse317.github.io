@@ -65,10 +65,27 @@ If $X$ and $Y$ are independent
 
 $$\text{E}[X \cdot Y]=\text{E}[X] \cdot \text{E}[Y]$$
 
-[Proof](#independence_appendix)
+.center[[Proof](#independence_appendix)]
 
 ???
 If two RVs are independent, the expected value of their product is the product of their own expected values. 
+
+<!-- ---
+If $X$ and $Y$ are independent
+
+$$\text{E}\bigg[\frac{X}{Y}\bigg] \stackrel{?}{=} \frac{\text{E}[X]}{\text{E}[Y]}$$
+
+.center[In general, .red[no], even when $X$ and $Y$ are independent!]
+
+.center[Counter example?]
+
+$$X = 1, Y \sim \text{discrete unif}\\{1, 2\\}$$
+
+.center[Don't assume a reciprocal expectation rule.] -->
+
+
+
+
 
 ---
 name: linearity
@@ -80,7 +97,7 @@ $$\text{E}[X+Y]=\text{E}[X]+\text{E}[Y]$$
 
 Note this property .red[does not] require their independence. 
 
-[Proof](#linearity_appendix)
+.center[[Proof](#linearity_appendix)]
 
 --
 
@@ -98,7 +115,7 @@ If $X$ and $Y$ are independent, then
 
 $$\text{var}(X + Y)=\text{var}(X) + \text{var}(Y)$$
 
-[Proof](#variance_appendix)
+.center[[Proof](#variance_appendix)]
 
 --
 
@@ -107,6 +124,16 @@ $$\text{var}(X + Y)=\text{var}(X) + \text{var}(Y)$$
 Generally, if $n$ RVs $X_1, X_2, \cdots, X_n$ are independent, 
 
 $$\text{var}\bigg(\sum_{i=1}^n X_i\bigg)=\sum_{i=1}^n \text{var}(X_i)$$
+
+<!-- ---
+
+# The Hat Problem
+
+At a party $n$ people checks in their hats at the entrance. 
+
+When they leave, the attendant randomly picks out a hat for each of them. 
+
+How many people should we expect to .red[get their own hat back]? -->
 
 ---
 # Properties
@@ -191,7 +218,6 @@ $$
 \text{E}\big[(X+Y)^2\big]&=\text{E}[X^2+2XY+Y^2] \\\
 &=\text{E}[X^2]+2\text{E}[XY]+\text{E}[Y^2] \;\;\;\;\color{gray}{\leftarrow\text{by linearity}} \\\
 &=\text{E}[X^2]+2\text{E}[X]\text{E}[Y]+\text{E}[Y^2] \;\color{gray}{\leftarrow\text{by independence}} \\\
-\\\
 \big(\text{E}[X+Y]\big)^2&=\big(\text{E}[X]+\text{E}[Y]\big)^2 \;\;\;\;\color{gray}{\leftarrow\text{by linearity}} \\\
 &=\big(\text{E}[X]\big)^2+2\text{E}[X]\text{E}[Y]+\big(\text{E}[Y]\big)^2 \\\
 \\\
