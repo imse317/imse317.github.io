@@ -286,9 +286,7 @@ $$
 
 
 ---
-# Independence
-
-If two RVs $X$ and $Y$ are independent, 
+If two random variables $X$ and $Y$ are independent, 
 
 $$\text{cov}(X, Y)=0$$
 
@@ -308,6 +306,7 @@ $$\text{cov}(X, Y)=\text{E}[XY]-\text{E}[X]\text{E}[Y]=0$$
 --
 
   - Not necessarily. 
+  - Correlation only measures the .red[linear] relationship.
   - Uncorrelated RVs may not be independent. 
 
 
@@ -570,6 +569,7 @@ df.head()
 
 ```
 # examine the relationship between TV budget and sales
+
 sns.scatterplot(x="TV", y="sales", data=df)
 ```
 
@@ -592,8 +592,9 @@ print(r)
 ```
 
 ```
-# alternatively, we can use the pandas corr method
-df[["TV", "sales"]].corr()
+# alternatively, we can use the pandas `corr` method
+
+df[["TV", "sales"]].`corr()`
 ```
 
 ---

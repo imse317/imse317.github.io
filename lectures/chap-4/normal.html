@@ -290,17 +290,33 @@ $$
 $$
 
 ---
-# Getting the standard normal CDF $\Phi(z)$ in Python with [scipy](https://scipy.org/) library
+# Getting normal CDF in Python with [scipy](https://scipy.org/)
 
 Go to [Google Colab](https://colab.research.google.com/) and sign in.
 Open a new notebook.
 
 
 ```
+# get the CDF of a standard normal distribution
+
 from scipy import stats
 
-stats.norm.cdf(x=1)
+stats.norm.cdf(x=0)   
 ```
+
+--
+
+How about $F_X(x=0)=\text{P}(X \leq 0)$ where $X \sim \text{N}(1, 3^2)$?
+
+--
+
+```
+stats.norm.cdf(x=0, loc=1, scale=3)
+
+# loc: mean (mu), scale: standard deviation (sigma)
+```
+
+<!-- https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html -->
 
 
 <!-- ---

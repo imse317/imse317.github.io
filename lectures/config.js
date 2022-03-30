@@ -23,7 +23,7 @@ document.body.innerHTML = s;
 
 var slideshow = remark.create({
 countIncrementalSlides: false,
-highlightStyle: 'zenburn',
+highlightStyle: 'github',
 highlightLanguage: 'python',
 highlightSpans: true,
 });
