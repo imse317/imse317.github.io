@@ -66,9 +66,11 @@ a.sourcelink:link, a.sourcelink:visited, a.sourcelink:active, a.sourcelink:hover
 .lightgray {
     color:lightgray;
 }
-
 .purple {
     color: purple;
+}
+.blue {
+    color: blue;
 }
 
 td, th {

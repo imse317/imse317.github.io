@@ -65,8 +65,36 @@ $$\text{P}\big(|\bar{X}_n - \mu| \geq \epsilon \big) \leq \frac{\sigma^2}{n\epsi
 
 For any fixed $\epsilon$, the right-hand side of the inequality approaches to zero as $n$ increases.  
 
+
+---
+# Keep flipping a (fair) coin for many times
+
+.center[Mark a .blue[blue] dot for heads, a .red[red] dot for tails]
+
+<!-- .center[Running proportion of heads (blue dots)] -->
+
+.center[![:scale 35%](https://upload.wikimedia.org/wikipedia/commons/4/49/Lawoflargenumbersanimation2.gif)]
+
+
+---
+# Keep flipping a (fair) coin for many times
+
+.center[![:scale 90%](../images/lln-coin.png)]
+
+--
+
+Let $X_1, X_2, \cdots, X_n$ be i.i.d. Bernoulli RV with $p=0.5$.
+
+$$\mu = \text{E}[X_i] = 0.5, \;\;\;\;\;\;\bar{X}_n = \frac{1}{n}\sum_{i=1}^n X_i$$
+
+The proportion of heads ($\bar{X}_n$) gets closer and closer to 0.5 as $n$ gets bigger. 
+
+
+
 ---
 # The (weak) Law of Large Numbers
+
+<br>
 
 Let $X_1, X_2, \cdots, X_n$ be i.i.d. RVs with mean $\mu$.
 
@@ -76,14 +104,10 @@ $$\require{color}\colorbox{yellow}{$\lim_{n\rightarrow +\infty}\text{P}\big(|\ba
 
 We say the sequence $\bar{X}_n$ converges to $\mu$ in probability. 
 
---
-
-Keep flipping a coin for many times (simulation data)
-.center[![:scale 100%](../images/lln-coin.png)]
-
 
 ---
-# Records from 8 sequences 
+# With 8 sequences (simulated data)
+
 .center[![:scale 100%](../images/lln-coin-8runs.png)]
 
 ---
@@ -95,11 +119,6 @@ Keep flipping a coin for many times (simulation data)
 
 .center[![:scale 100%](../images/lln-coin-overlay-1m.png)]
 
----
-class: middle, center
-
-.center[![:scale 40%](https://upload.wikimedia.org/wikipedia/commons/4/49/Lawoflargenumbersanimation2.gif)]
-
 
 ---
 Keep tossing a six-sided die.
@@ -109,7 +128,7 @@ Keep tossing a six-sided die.
 .center[![:scale 100%](../images/lln-die.png)]
 
 ---
-# Records from 8 sequences 
+# With 8 sequences (simulated data) 
 .center[![:scale 100%](../images/lln-die-8runs.png)]
 
 ---
@@ -127,19 +146,21 @@ Keep tossing a six-sided die.
 
 The instructor offers two formats for an exam
 
-- Format A: 100 questions with 1 point each
+- .gray[Format A:] 100 questions with 1 point each
 
-- Format B: only 2 questions, but with 50 points each
+- .gray[Format B:] only 1 question that worth 100 point
+
+--
 
 Assume you can answer each question correctly with probability $p$.
 
 Assume the exam has no time limit.
 
-Which format should you choose if $p=0.95$?
+Which format should you choose if $p=0.9$?
 
 --
 
-Which format should you choose if $p=0.4$?
+Which format should you choose if $p=0.5$?
 
 
 

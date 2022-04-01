@@ -82,11 +82,31 @@ $$
 $$
 
 ---
+# Commutative property
+
+$$\text{cov}(X, Y)=\text{cov}(Y, X)$$
+
+--
+Proof
+
+$$
+\begin{aligned}
+\text{cov}(X, Y)&=\text{E}\big[(X-\text{E}[X])(Y-\text{E}[Y])\big] \\\
+\\\
+&=\text{E}\big[(Y-\text{E}[Y])(X-\text{E}[X])\big] \\\
+\\\
+&=\text{cov}(Y, X) \\\
+\end{aligned}
+$$
+
+---
 # Properties
 
 $$\text{cov}(X, Y)=\text{E}[XY]-\text{E}[X]\text{E}[Y]$$
 
-.center[A shortcut formula to calculate covariance]
+--
+
+.center[☝️ A shortcut formula to compute covariance]
 
 --
 
@@ -145,7 +165,6 @@ $$
 
 # Properties
 
-
 $$\text{cov}(aX+b, Y)=a\cdot\text{cov}(X, Y),$$
 $$\text{for any constants $a$ and $b$.}$$
 
@@ -157,22 +176,20 @@ $$\text{cov}(X, aY+b)=a\cdot\text{cov}(X, Y),$$
 $$\text{for any constants $a$ and $b$.}$$
 
 ---
-# Commutative property
 
-$$\text{cov}(X, Y)=\text{cov}(Y, X)$$
+Assume we found the covariance between air temperature (in Fahrenheit) and humidity is 18.
+
+$$\text{cov}(\text{Fahrenheit, Humidity}) = 18$$
 
 --
-Proof
 
-$$
-\begin{aligned}
-\text{cov}(X, Y)&=\text{E}\big[(X-\text{E}[X])(Y-\text{E}[Y])\big] \\\
-\\\
-&=\text{E}\big[(Y-\text{E}[Y])(X-\text{E}[X])\big] \\\
-\\\
-&=\text{cov}(Y, X) \\\
-\end{aligned}
-$$
+What is the covariance if the temperature is in Celsius?
+
+$$\text{cov}(\text{Celsius, Humidity}) = ?$$
+
+--
+
+$$\text{Celsius} = \frac{5}{9} (\text{Fahrenheit} - 32)$$
 
 ---
 # Distributive property
@@ -214,7 +231,6 @@ $$
 $$
 
 
-
 ---
 # Properties
 
@@ -226,33 +242,14 @@ $$
 Proof
 
 $$
-\small{
 \begin{aligned}
 &\;\text{var}(X+Y) \\\
-=&\;\text{E}\bigg[\big(X+Y-\text{E}[X+Y]\big)^2\bigg] \;\;\; \color{gray}{\leftarrow\text{by definition of variance}} \\\
-=&\;\text{E}\bigg[\big(X-\text{E}[X]+Y-\text{E}[Y]\big)^2\bigg] \\\
-=&\;\text{E}\bigg[\big(X-\text{E}[X]\big)^2+\big(Y-\text{E}[Y]\big)^2+2\big(X-\text{E}[X]\big)\big(Y-\text{E}[Y]\big)\bigg] \\\
-=&\;\text{E}\big[(X-\text{E}[X])^2\big]+\text{E}\big[(Y-\text{E}[Y])^2\big] +2\text{E}\big[(X-\text{E}[X])(Y-\text{E}[Y])\big] \\\
-=&\;\text{var}(X)+\text{var}(Y)+2\text{cov}(X, Y) \\\
-\end{aligned}
-}
-$$
-
----
-# Properties
-
-$$
-\text{var}(X+Y)=\text{var}(X)+\text{var}(Y)+2\text{cov}(X, Y)
-$$
-
-
-We can also write it as
-$$
-\begin{aligned}
-\text{var}(X+Y) =& \text{cov}(X, X) + \\\
-                 & \text{cov}(Y, Y) + \\\
-                 & \text{cov}(X, Y) + \\\
-                 & \text{cov}(Y, X)
+\\\
+=&\;\text{cov}(X+Y, X+Y) \\\
+\\\
+=&\;\text{cov}(X, X) + \text{cov}(Y, X) + \text{cov}(X, Y) + \text{cov}(Y, Y) \\\
+\\\
+=&\;\text{var}(X)+\text{var}(Y)+2\text{cov}(X, Y)
 \end{aligned}
 $$
 
@@ -383,12 +380,12 @@ $$
 
 The .red[correlation coefficient] (or simply, .red[correlation]) between two RVs $X$ and $Y$:
 
-$$\rho_{X, Y} \stackrel{\text{def}}{=} \frac{\text{cov}(X, Y)}{\sqrt{\text{var}(X)\text{var}(Y)}}$$
+$$\rho(X, Y) \stackrel{\text{def}}{=} \frac{\text{cov}(X, Y)}{\sqrt{\text{var}(X)\text{var}(Y)}}$$
 
 --
 We can rewrite it as 
 
-$$\rho_{X, Y} \stackrel{\text{def}}{=} \text{cov}\bigg(\frac{X-\text{E}[X]}{\sqrt{\text{var}(X)}}, \frac{Y-\text{E}[Y]}{\sqrt{\text{var}(Y)}} \bigg)$$
+$$\rho(X, Y) \stackrel{\text{def}}{=} \text{cov}\bigg(\frac{X-\text{E}[X]}{\sqrt{\text{var}(X)}}, \frac{Y-\text{E}[Y]}{\sqrt{\text{var}(Y)}} \bigg)$$
 
 --
 
@@ -398,7 +395,7 @@ The correlation is the covariance after [standardization](https://en.wikipedia.o
 ---
 # Properties
 
-$$\rho_{X, Y} \stackrel{\text{def}}{=} \text{cov}\bigg(\frac{X-\text{E}[X]}{\sqrt{\text{var}(X)}}, \frac{Y-\text{E}[Y]}{\sqrt{\text{var}(Y)}} \bigg)$$
+$$\rho(X, Y) \stackrel{\text{def}}{=} \text{cov}\bigg(\frac{X-\text{E}[X]}{\sqrt{\text{var}(X)}}, \frac{Y-\text{E}[Y]}{\sqrt{\text{var}(Y)}} \bigg)$$
 
 .center[$\rho$ is dimensionless.]
 
@@ -434,6 +431,21 @@ $$
 &=\rho(X, Y) \\\
 \end{aligned}
 $$
+
+---
+
+Assume we found the correlation between air temperature (in Fahrenheit) and humidity is 0.4.
+
+$$\rho(\text{Fahrenheit, Humidity}) = 0.4$$
+
+--
+
+What is the correlation if the temperature is in Celsius?
+
+$$\text{Celsius} = \frac{5}{9} (\text{Fahrenheit} - 32)$$
+
+$$\rho(\text{Celsius, Humidity}) = ?$$
+
 
 ---
 # Correlation bounds
