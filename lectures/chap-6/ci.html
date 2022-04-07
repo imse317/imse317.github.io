@@ -27,7 +27,7 @@ Point estimate
 
 - Battery life: $\hat{\theta}=11.45$ hours based on 100 samples
 
-- It provides no info about how .red[precise] is the estimate
+- It provides no information about how .red[precise] the estimate is.
 
 --
 
@@ -37,27 +37,27 @@ We are often interested in constructing a so-called [confidence interval (CI)](h
 
 --
 
-Roughly speaking, it is an interval that contains the unknown parameter $\theta$ with a specified high probability.
+Roughly speaking, it is an interval that contains the parameter $\theta$ w/k a specified high probability (e.g., 95%).
 
 - The battery life has a CI of $[10.21,12.69]$ hours
 
 ---
-# Constructing a confidence interval
+# How to construct a confidence interval?
 
 First, we need to specify a desired high probability.
 
 - This high probability is called the .red[confidence level]
 
-- Two most common choices are 95% and 99%
+- Common choices include 95% and 99%
 
 - $(1-\alpha)$ is often used to indicate the confidence level
 
-$$95\% \;(\alpha=0.05)$$
+$$95\% \; \rightarrow \alpha=0.05$$
 
-$$99\% \;(\alpha=0.01)$$
+$$99\% \; \rightarrow \alpha=0.01$$
 
 ---
-# Constructing a confidence interval
+# How to construct a confidence interval?
 
 Once we specified the confidence level, say 95%, 
 
@@ -308,11 +308,11 @@ The standard deviation of $\hat{\Theta}_n$ is termed .red[standard error].
 
 --
 
-$$\small{\hat{\Theta}_n \pm z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}}}$$
+$$\hat{\Theta}_n \pm z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}}$$
 
 The CI above can be expressed in words as
 
-$$\small{\text{(point estimate)} \pm \text{($z$ critical value}) \cdot \text{(standard error)}}$$
+$$\text{(point estimate)} \pm \text{($z$ critical value}) \cdot \text{(standard error)}$$
 
 ---
 # A large sample interval for the mean
@@ -347,11 +347,11 @@ We can proceed exactly as in the previous case.
 
 .center[![:scale 60%](../images/ci-alpha.png)]
 
-$$\small{\text{P}\bigg(-z_{\frac{\alpha}{2}} < \frac{\hat{\Theta}_n-\theta}{\sigma/\sqrt{n}} < z\_{\frac{\alpha}{2}}\bigg) \approx 1-\alpha \;\;\;\color{gray}{\rightarrow \text{by CLT}}}$$
+$$\text{P}\bigg(-z_{\frac{\alpha}{2}} < \frac{\hat{\Theta}_n-\theta}{\sigma/\sqrt{n}} < z\_{\frac{\alpha}{2}}\bigg) \approx 1-\alpha \;\;\;\color{gray}{\rightarrow \text{by CLT}}$$
 
 --
 
-$$\small{\text{P}\bigg(\hat{\Theta}_n - z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}} < \theta < \hat{\Theta}_n + z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}}\bigg) \approx 1-\alpha}$$
+$$\text{P}\bigg(\hat{\Theta}_n - z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}} < \theta < \hat{\Theta}_n + z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}}\bigg) \approx 1-\alpha$$
 
 
 </textarea>
