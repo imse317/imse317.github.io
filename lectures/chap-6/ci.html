@@ -16,7 +16,7 @@ class: middle, center
 .huge[Confidence intervals]
 
 <br>
-![:scale 90%](../images/ci-cover.png)
+![:scale 100%](../images/ci-cover.png)
 
 <br><br>
 <div style="text-align: left;"><a class="sourcelink" href="https://www.pinterest.com/pin/544231936198354675/">Image source</a></div>
@@ -25,7 +25,7 @@ class: middle, center
 
 Point estimate
 
-- Battery life: $\hat{\theta}=11.45$ hours based on 100 samples
+- Based on 80 samples battery life is $\hat{\theta}=11.4$ hours.
 
 - It provides no information about how .red[precise] the estimate is.
 
@@ -33,20 +33,20 @@ Point estimate
 
 <br>
 
-We are often interested in constructing a so-called [confidence interval (CI)](https://en.wikipedia.org/wiki/Confidence_interval).
+Oftentimes, we are interested in constructing a so-called [confidence interval (CI)](https://en.wikipedia.org/wiki/Confidence_interval).
 
 --
 
-Roughly speaking, it is an interval that contains the parameter $\theta$ w/k a specified high probability (e.g., 95%).
+Roughly speaking, it is an interval that contains the parameter with a specified high probability (e.g., 95%).
 
-- The battery life has a CI of $[10.21,12.69]$ hours
+- The battery life has a 95% CI of $[10.2,12.7]$ hours.
 
 ---
 # How to construct a confidence interval?
 
 First, we need to specify a desired high probability.
 
-- This high probability is called the .red[confidence level]
+- This high probability is called the .red[confidence level].
 
 - Common choices include 95% and 99%
 
@@ -61,19 +61,19 @@ $$99\% \; \rightarrow \alpha=0.01$$
 
 Once we specified the confidence level, say 95%, 
 
-we replace the point estimator $\hat{\Theta}_n$ by 
+we aim to have a confidence interval with
 
-- a lower estimator $\hat{\Theta}_n^{-}$
+- a lower bound estimator $\hat{\Theta}_n^{-}$
 
-- an upper estimator $\hat{\Theta}_n^{+}$
+- an upper bound estimator $\hat{\Theta}_n^{+}$
 
 so that
 
 $$\text{P}\bigg(\hat{\Theta}_n^{-} \leq \theta \leq \hat{\Theta}_n^{+}\bigg) = 95\%$$
 
---
 
-We call $\big[\hat{\Theta}_n^{-}, \; \hat{\Theta}_n^{+}\big]$ a 95% confidence interval. 
+
+<!-- We call $\big[\hat{\Theta}_n^{-}, \; \hat{\Theta}_n^{+}\big]$ a 95% confidence interval.  -->
 
 
 ---
@@ -99,18 +99,22 @@ $$\hat{\Theta}_n \sim \text{N}\bigg(\theta, \frac{\sigma^2}{n}\bigg)\;\;\rightar
 
 Let's construct a 95% CI, that is, $\alpha=0.05$.
 
-.center[![:scale 85%](../images/ci-95.png)]
+.center[![:scale 75%](../images/ci-95.png)]
 
 --
 
-$$\Phi(\color{red}{?})=1-0.025=0.975$$
+$$
+\begin{aligned}
+\Phi(\color{red}{?})&=0.025 \\\
+\Phi(\color{red}{?})&=1-0.025=0.975 \\\
+\end{aligned}
+$$
 
 --
 
 It is called a .red[critical value] of $z$ corresponding to $0.025$.
 
 We can check the standard normal table (next slide). 
-
 
 ---
 
@@ -196,7 +200,7 @@ is a $(1-\alpha)$ confidence interval.
 
 Assume we have calculated the 95% confidence interval for an unknown parameter $\theta$ as $[10.21,12.69]$.
 
-What does this interval really mean?
+What does this interval mean?
 
 --
 
@@ -209,7 +213,7 @@ Does it mean that the true parameter $\theta$ lies in this CI $[10.21,12.69]$ wi
 <br>
 
 .red[No]. 
-$\theta$ is a fixed unknown parameter. 
+$\theta$ is a unknown but fixed  parameter. 
 The CI that we obtained $[10.21,12.69]$ is a fixed interval. 
 
 ---
@@ -229,7 +233,7 @@ We expect that about 95% of these CIs will include $\theta$.
 
 .center[![:scale 100%](../images/ci-alpha-result.png)]
 
-It is a random interval centered at $\hat{\Theta}_n$. 
+It is a random interval centered at point estimate $\hat{\Theta}_n$. 
 
 The half-width of the CI is $z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}}$.
 
@@ -253,7 +257,8 @@ $$\text{99% CI: }\;\;\;\; \hat{\Theta}_n \pm 2.58 \frac{\sigma}{\sqrt{n}}$$
 
 $$\hat{\Theta}_n \pm z_{\frac{\alpha}{2}} \frac{\colorbox{yellow}{$\sigma$}}{\sqrt{n}}$$
 
-The half-width is proportional to $\sigma$ (population standard deviation). 
+The half-width is proportional to $\sigma$ (population standard deviation), 
+the inherent variability of the thing we are trying to measure.
 
 --
 
@@ -265,7 +270,7 @@ The half-width is proportional to $\sigma$ (population standard deviation).
 
 $$\hat{\Theta}_n \pm z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{\colorbox{yellow}{$n$}}}$$
 
-The half-width decreases as $n$ increases. 
+The half-width decreases as sample size $n$ increases. 
 
 --
 
@@ -276,19 +281,19 @@ The half-width decreases as $n$ increases.
 # Sample size calculation
 
 
-You have a desired precision (i.e., $\pm 0.5$ hours) and confidence level (e.g., 99%) for a CI. 
+We often have a desired precision (i.e., $\pm 0.5$ hours) and a confidence level (e.g., 99%) for a confidence interval. 
 
-What sample size should you use?
+Q: how many data points should we collect?
 
 --
 
-$$\text{Half width:}\;\;d=z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}}, \;\;\;\;\text{Solve for $n$.}$$
+$$\text{Half width:}\;\;d=z_{\frac{\alpha}{2}} \cdot \frac{\sigma}{\sqrt{n}}, \;\;\;\;\text{Solve for $n$.}$$
 
 --
 
 The sample size needed for a desired half-width of $d$ is
 
-$$n=\bigg(z_{\frac{\alpha}{2}} \frac{\sigma}{d}\bigg)^2$$
+$$n=\bigg(z_{\frac{\alpha}{2}} \cdot \frac{\sigma}{d}\bigg)^2$$
 
 ---
 
@@ -319,7 +324,7 @@ $$\text{(point estimate)} \pm \text{($z$ critical value}) \cdot \text{(standard 
 
 Suppose $X_1, X_2, \cdots, X_n$ are 
 
-- i.i.d. (.red[not necessarily normal]) 
+- i.i.d. (.red[not necessarily follow a normal distribution!]) 
 - with unknown mean $\theta$ and known variance $\sigma^2$
 
 $$\small{\text{Sample mean estimator:}\;\;\hat{\Theta}_n=\frac{X_1+X_2+\cdots+X_n}{n}}$$
@@ -352,6 +357,186 @@ $$\text{P}\bigg(-z_{\frac{\alpha}{2}} < \frac{\hat{\Theta}_n-\theta}{\sigma/\sqr
 --
 
 $$\text{P}\bigg(\hat{\Theta}_n - z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}} < \theta < \hat{\Theta}_n + z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}}\bigg) \approx 1-\alpha$$
+
+---
+# What if we don't know $\sigma^2$?
+
+Suppose $X_1, X_2, \cdots, X_n$ are i.i.d. with 
+- unknown mean $\theta$ and .red[unknown] variance $\sigma^2$
+
+--
+
+$$\small{\text{Sample mean estimator:}\;\;\hat{\Theta}_n=\frac{X_1+X_2+\cdots+X_n}{n}}$$
+
+--
+
+We can estimate the population variance $\sigma^2$ with
+
+$$\small{\text{Sample variance estimator:}\;\;\hat{S}_n^2}=\frac{\sum\big(X_i - \hat{\Theta}_n\big)^2}{n-1}$$
+
+--
+
+Recall $\hat{S}_n^2$ is an unbiased estimator of $\sigma^2$: $\text{E}\bigg[\hat{S}_n^2\bigg]=\sigma^2$
+
+
+---
+
+Previously we have
+
+$$\small{\frac{\hat{\Theta}_n-\theta}{\sigma/\sqrt{n}} \sim \text{N}(0, 1), \; \text{if $X_i$ is normally distributed.}}$$
+
+--
+
+$$\small{\frac{\hat{\Theta}_n-\theta}{\sigma/\sqrt{n}} \text{ is approximately } \text{N}(0, 1), \; \text{if $X_i$ is not normal, but $n$ is large.}}$$
+
+--
+
+Once we replace $\sigma$ with $\hat{S}_n$, we have
+
+$$\small{\frac{\hat{\Theta}_n-\theta}{\hat{S}_n/\sqrt{n}}}$$
+
+--
+
+$$\small{\frac{\hat{\Theta}_n-\theta}{\hat{S}_n/\sqrt{n}} \text{ is approximately } \text{N}(0, 1), \; \text{if $n$ is sufficiently large.}}$$
+
+---
+
+If $n$ is sufficiently large,
+
+$$\small{\text{P}\bigg(-z_{\frac{\alpha}{2}} < \frac{\hat{\Theta}_n-\theta}{\hat{S}_n/\sqrt{n}} < z_{\frac{\alpha}{2}}\bigg) \approx 1-\alpha}$$
+
+--
+
+Generally speaking, $n>40$ would be sufficient. 
+
+--
+
+$$\small{\hat{\Theta}_n \pm z_{\frac{\alpha}{2}} \frac{\hat{S}_n}{\sqrt{n}}}$$
+
+is a CI for $\theta$ with confidence level approximately $1-\alpha$. 
+
+--
+
+The CI can be expressed in words as
+
+$$\small{\text{(point estimate)} \pm \text{($z$ critical value)} \cdot \text{(estimated standard error)}}$$
+
+---
+# What if the sample size $n$ is small?
+
+Suppose $X_1, X_2, \cdots, X_n$ are i.i.d. normal with 
+- unknown mean $\theta$ and .red[unknown] variance $\sigma^2$
+
+--
+
+$$\small{\text{Sample mean estimator:}\;\;\hat{\Theta}_n=\frac{X_1+X_2+\cdots+X_n}{n}}$$
+
+--
+
+Then, 
+
+$$\small{T_n=\frac{\hat{\Theta}_n-\theta}{\hat{S}_n/\sqrt{n}}}$$
+
+has a probability distribution called a [*t*-distribution](https://en.wikipedia.org/wiki/Student's_t-distribution) with $v=n-1$ degrees of freedom.   
+
+---
+
+$$\small{t\text{-distribution:}\;\;\;T_n=\frac{\hat{\Theta}_n-\theta}{\hat{S}_n/\sqrt{n}}}$$
+
+
+.center[![:scale 58%](../images/t-1.png)]
+
+--
+
+.center[![:scale 58%](../images/t-5.png)]
+
+???
+- Symmetric
+- Bell-shaped
+- More spread out
+- Approaches N(0, 1) as $v\rightarrow +\infty$
+
+---
+class: center, middle
+
+.huge[[Interactive visualization](https://probstats.org/studentt.html)]
+
+---
+
+For small $n$, we use *t*-distribution to construct the CI. 
+
+.center[![:scale 60%](../images/ci-t.png)]
+
+--
+
+$$\small{\text{P}\bigg(-t_{\frac{\alpha}{2}, n-1} < \frac{\hat{\Theta}_n-\theta}{\hat{S}_n/\sqrt{n}} < t_{\frac{\alpha}{2}, n-1}\bigg) = 1-\alpha}$$
+
+--
+
+$$\small{\text{P}\bigg(\hat{\Theta}_n - t_{\frac{\alpha}{2}, n-1} \frac{\hat{S}_n}{\sqrt{n}} < \theta < \hat{\Theta}_n + t_{\frac{\alpha}{2}, n-1} \frac{\hat{S}_n}{\sqrt{n}}\bigg) \approx 1-\alpha}$$
+
+--
+
+$$\small{\text{Or, more compactly, }\hat{\Theta}_n \pm t_{\frac{\alpha}{2}, n-1} \frac{\hat{S}_n}{\sqrt{n}}\;\;\text{is a } (1-\alpha) \text{ CI.}}$$
+
+
+---
+
+#Critical values for *t*-distribution
+
+<br>
+
+.center[![:scale 60%](../images/table-t-critical-curve.png)]
+
+.center[Table in next slide.]
+
+---
+
+.center[![:scale 80%](../images/table-t-critical.png)]
+
+---
+
+# Exercise ⚖️
+
+An object is weighted using a scale. 
+
+The scale reports the true weight plus a random error that is normal with $\mu=0$ and unknown variance. 
+
+Assume that the errors are independent.
+
+The object was weighted eight times.
+
+$$[0.555,  0.540,  0.636,  0.644,  0.492,  0.567,  0.556,  0.607]$$
+
+Construct a 95% confidence interval for the weight. 
+
+---
+
+$$\small{[0.555,  0.540,  0.636,  0.644,  0.492,  0.567,  0.556,  0.607]}$$
+
+--
+
+$$\small{\bigg[\hat{\Theta}_n - t_{\frac{\alpha}{2}, n-1} \frac{\hat{S}_n}{\sqrt{n}}, \;\;\;\hat{\Theta}_n + t_{\frac{\alpha}{2}, n-1} \frac{\hat{S}_n}{\sqrt{n}}\bigg]}$$
+
+--
+
+$$
+\small{
+\begin{aligned}
+\text{Sample mean:}&\; \hat{\Theta}_n=\frac{1}{n}\sum_{i=1}^n X_i=0.5746 \\\
+\\\
+\text{Sample variance:}&\; \hat{S}_n^2=\frac{1}{n-1}\sum_{i=1}^n \big(X_i - \hat{\Theta}_n\big)^2=0.002635 \\\
+\\\
+\text{Critical value:}&\; t_{\frac{\alpha}{2}, n-1}=t_{0.025, 7}=2.365 \\\
+\end{aligned}
+}
+$$
+
+--
+
+$$\small{\bigg[\hat{\Theta}_n - t_{\frac{\alpha}{2} n-1} \frac{\hat{S}_n}{\sqrt{n}}, \hat{\Theta}_n + t_{\frac{\alpha}{2}, n-1} \frac{\hat{S}_n}{\sqrt{n}}\bigg]=[0.532, 0.618]}$$
+
+
 
 
 </textarea>

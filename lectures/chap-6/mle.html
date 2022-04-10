@@ -30,19 +30,21 @@ class: split-50
 ![:scale 100%](../images/prob-stats.png)
 
 ---
-# How biased is the coin? &nbsp;&nbsp;&nbsp; ![:scale 18%](../images/coin-biased.png)
+.center[![:scale 18%](../images/coin-biased.png)]
 
-- We were given a coin and told it might be biased.
+- We were given a coin.
+
+- We were told the coin might be biased.
 
 --
 
-- However, we don't know .red[how biased] it is. 
+- However, we don't know .red[how biased] the coin is. 
 
   - i.e., the probability of heads $p$ is unknown.
 
 --
 
-- To find it out, we tossed the coin for 10 times.
+- To find out, we tossed the coin for 10 times.
 
 --
 
@@ -55,30 +57,43 @@ class: split-50
 - Based on the results, what is our best guess of $p$?
 
 
-<div style="margin-top: 60px; text-align: left;"><a class="sourcelink" href="https://www.probabilisticworld.com/calculating-coin-bias-bayes-theorem/">Image source</a></div>
+<div style="margin-top: 30px; text-align: left;"><a class="sourcelink" href="https://www.probabilisticworld.com/calculating-coin-bias-bayes-theorem/">Image source</a></div>
 
 ---
 # Point estimation
 
 Given a distribution parameter of interest, 
 
-a point estimation is to 
-.red[use data to compute a single number (hence the name "point") that represents an educated guess for the true value of the parameter]. 
+(e.g., $p$, the probability a biased coin lands on heads)
 
-<!-- The estimation (e.g., $\hat{\theta}=0.7$) is a single number, hence the name "point" estimation.  -->
+a point estimation is to 
+.red[use data to compute a single number that represents an educated guess for the true value of the parameter]. 
+
+--
+
+The estimation (e.g., $\hat{p}=0.9$) is a single number, hence the name "point" estimation. 
+
+--
+
+
+In upcoming lectures we'll discuss .green[interval] estimation (confidence intervals).
+
+---
+A natural thought:
+
+select the parameters .red[under which the observed data is most likely to arise.] 
 
 --
 
 <br>
 
-In upcoming lectures we'll discuss .green[interval] estimation (confidence intervals).
-
----
-# [Maximum Likelihood Estimation (MLE)](https://en.wikipedia.org/wiki/Maximum_likelihood_estimation)
-
-Select the parameters under which .red[the observed data is most likely to arise.] 
-
 That is, select the parameters that .red[maximize the probability (likelihood) of obtaining the data at hand].
+
+--
+
+<br>
+
+# [Maximum Likelihood Estimation (MLE)](https://en.wikipedia.org/wiki/Maximum_likelihood_estimation)
 
 <!-- ---
 # Recall the Bayes' rule example
@@ -96,7 +111,7 @@ Pick the scenario that makes the data "most likely".  -->
 
 ---
 
-A vector of $n$ observations 
+With a vector of $n$ observations 
 $$X=(X_1, X_2, \cdots, X_n)$$
 
 --
@@ -110,9 +125,9 @@ whose form depends on an unknown parameter $\theta$.
 
 ---
 
-$$\text{With $n$ particular observations:}\;\;x=(x_1, x_2, \cdots, x_n)$$
+$$\text{With $n$ observations:}\;\;x=(x_1, x_2, \cdots, x_n)$$
 
-The likelihood function:
+The .red[likelihood] function:
 
 $$
 \begin{aligned}
@@ -125,9 +140,14 @@ $$
 
 ⚠️ Important note
 
-A likelihood function is .red[not] the probability that the unknown parameter is equal to $\theta$, given the observations $(x_1, x_2, \cdots, x_n)$.
+A .red[likelihood] function is .blue[not] the probability that the unknown parameter is equal to a particular value $\theta$, given the observations.
 
-Instead, it is the probability that the observations $(x_1, x_2, \cdots, x_n)$ would arise, assuming the unknown parameter is equal to $\theta$.
+--
+
+Instead, it is the probability that the observations would arise, assuming the unknown parameter is equal to $\theta$.
+
+
+<!-- $$\text{P}(\text{data} \mid \text {hypothesis}) \neq \text{P}(\text{hypothesis} \mid \text {data})$$ -->
 
 ---
 # Maximum Likelihood Estimate (MLE)
@@ -155,6 +175,8 @@ In maximizing the likelihood, we are essentially asking:
 |&nbsp;Result&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;T&nbsp;&nbsp;|&nbsp;&nbsp;T&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;T&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|&nbsp;&nbsp;H&nbsp;&nbsp;|
 |$x_i$|1|0|0|1|0|1|1|1|1|1|
 
+--
+
 $$X_i \sim \text{Bernoulli}(\theta)$$
 
 --
@@ -162,16 +184,24 @@ $$X_i \sim \text{Bernoulli}(\theta)$$
 The likelihood function
 
 $$
-\small{
 \begin{aligned}
-p_X(x_1, x_2, \cdots, x_n; \theta) &= \text{P}(X_1=1, X_2=0, \cdots, X_{10}=1; \theta) \\\
+&p_X(x_1, x_2, \cdots, x_n; \theta) \\\
 \\\
-&= \theta^7 (1-\theta)^3 \\\
+= \;&\text{P}(X_1=1, X_2=0, \cdots, X_{10}=1; \theta) \\\
+\\\
+= \;&\text{P}(X_1=1; \theta) \cdot \text{P}(X_2=0; \theta) \cdots \text{P}(X_{10}=1; \theta) \\\
+\\\
+= \;&\theta^7 (1-\theta)^3 \\\
 \end{aligned}
-}
 $$
 
---
+---
+
+The likelihood function
+
+$$
+p_X(x_1, x_2, \cdots, x_n; \theta) = \color{blue}{\theta^7 (1-\theta)^3}
+$$
 
 Find the $\theta$ that maximize the likelihood function. 
 
@@ -222,7 +252,7 @@ A likelihood function is often in a multiplication form.
 
 --
 
-As a result, it is often easier to maximize its logarithm, called the .red[log-likelihood function.]
+It is often more convenient to maximize its logarithm, called the .red[log-likelihood function.]
 
 --
 
@@ -246,12 +276,15 @@ $$
 
 ---
 
-Lastly, check 2nd derivative is negative at this point.
+The 2nd derivative shows whether a point with zero 1st derivative is a max, 
+a min, or an inflection point. 
+
 
 .center[![:scale 80%](../images/maxmin.png)]
 
-The 2nd derivative shows whether a point with zero 1st derivative is a max, 
-a min, or an inflection point. 
+--
+
+Lastly, we check whether .red[the second derivative is negative] at this point.
 
 
 --
@@ -280,7 +313,7 @@ $$
 
 An alternative approach: 
 
-We can also consider the above result (i.e., 7 heads out of 10 tosses) as a single data point of $y=7$, where
+We can also consider the above result (i.e., 7 heads out of 10) as a single data point of $y=7$, where
 
 $$Y \sim \text{bin}(10, \theta)$$
 
@@ -290,7 +323,7 @@ The likelihood function
 
 $$p_Y(y; \theta)=\text{P}(Y=y; \theta)={10 \choose 7} \color{blue}{\theta^7(1-\theta)^3}$$
 
-It is the same maximization problem as before. 
+Note it is the same maximization problem as before. 
 
 ---
 
@@ -322,7 +355,7 @@ $$
 ---
 # Summary: standard procedure of MLE
 
-Step 2 (optional). It is often easier to convert the likelihood function to the .red[log-likelihood function]. 
+Step 2. It is often more convenient to convert the likelihood function to the .red[log-likelihood function]. 
 
 $$
 \begin{aligned}
@@ -337,18 +370,18 @@ $$
 
 Step 3. Maximization
 
-- Get the derivative of log-likelihood function w.r.t. $\theta$.
+1. Get the derivative of log-likelihood function w.r.t. $\theta$.
 
-- Set the derivative to zero, and solve for $\theta$.
+1. Set the derivative to zero, and solve for $\theta$.
 
-- Check the 2nd derivative at this point is negative. 
+1. Confirm that the second derivative at this point is negative. 
 
 ---
 
-$$\small{X_i \sim \text{Bernoulli}(\theta)}$$
+A more general case: If we got $k$ heads out of $n$ tosses, what is the MLE of the probability of heads?
 
-If we got $k$ heads out of $n$ tosses,
-$\small{x_1+x_2+\cdots+x_n=k}$
+$$\small{X_i \sim \text{Bernoulli}(\theta),\;\;\;\; x_1+x_2+\cdots+x_n=k}$$
+
 
 --
 
@@ -368,7 +401,7 @@ $$
 
 Set its derivative to zero, solve for $\theta$.
 
-$$\small{\frac{k}{\theta}-\frac{n-k}{1-\theta}=0\;\;\; \rightarrow \;\;\hat{\theta}=\frac{k}{n}=\frac{x_1+x_2+\cdots+x_n}{n}=\bar{x}}$$
+$$\small{\frac{k}{\theta}-\frac{n-k}{1-\theta}=0\;\;\; \rightarrow \;\;\hat{\theta}=\frac{k}{n}}$$
 
 ---
 
