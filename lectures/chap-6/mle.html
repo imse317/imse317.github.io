@@ -418,6 +418,126 @@ the .red[maximum likelihood estimator]
 
 $$\hat{\Theta}_n=\frac{X_1+X_2+\cdots+X_n}{n}=\bar{X}$$
 
+---
+class: middle, center
+
+.huge[Supplementary exercises]
+
+---
+
+Suppose $X$ is a discrete RV with the following PMF:
+
+\begin{aligned}
+    p_X(x) =
+      \begin{cases}
+        \theta/3, & \text{if $x=0$,}\\\
+        2\theta/3, & \text{if $x=1$,}\\\
+        1-\theta, & \text{if $x=2$,}\\\
+        0, & \text{otherwise.}\\\
+      \end{cases}       
+  \end{aligned}
+
+
+where $0 \leq \theta \leq 1$ is a parameter. 
+
+To estimate $\theta$, you collected 10 sample data:
+
+$$[2, 0, 0, 1, 2, 0, 2, 0, 0, 1]$$
+    
+Assume the data are i.i.d. from this distribution. 
+
+What is the maximum likelihood estimate of $\theta$?
+
+---
+# Solution
+
+\begin{aligned}
+    p_X(x) =
+      \begin{cases}
+        \theta/3, & \text{if $x=0$,}\\\
+        2\theta/3, & \text{if $x=1$,}\\\
+        1-\theta, & \text{if $x=2$,}\\\
+        0, & \text{otherwise.}\\\
+      \end{cases}       
+  \end{aligned}
+
+First, we can see that the above is a valid PMF, as the probability mass values are always non-negative and add up to 1, for any $0 \leq \theta \leq 1$.
+
+$$\theta/3 + 2\theta/3 + (1-\theta) = 1$$
+
+---
+
+$$\text{Data:}\;\;[2, 0, 0, 1, 2, 0, 2, 0, 0, 1]$$
+
+The likelihood function (for obtaining the above data)
+
+$$
+\begin{aligned}
+    &p_X(x_1, x_2, \cdots, x_{10};\theta) \\\
+    \\\
+    =\;&\text{P}(X_1=2, X_2=0, X_3=0,\cdots, X_9=0, X_{10}=1;\theta) \\\
+    \\\
+    =\;&\text{P}(X_1=2;\theta)\cdot\text{P}(X_2=0;\theta)\cdots \text{P}(X_{10}=1;\theta) \\\
+    \\\
+    =\;&\bigg(\frac{\theta}{3}\bigg)^5 \cdot \bigg(\frac{2\theta}{3}\bigg)^2 \cdot \bigg(1-\theta\bigg)^3 \\\
+\end{aligned}
+$$
+
+
+Note the exponent 5(/2/3) is from the count of zeros(/ones/twos) in the data.
+
+
+---
+
+The log-likelihood function
+
+\begin{aligned}
+    &\ln \bigg(\bigg(\frac{\theta}{3}\bigg)^5 \bigg(\frac{2\theta}{3}\bigg)^2 \bigg(1-\theta\bigg)^3\bigg) \\\
+    \\\
+  = & 5\ln\bigg(\frac{\theta}{3}\bigg) + 2\ln\bigg(\frac{2\theta}{3}\bigg) + 3\ln(1-\theta) \\\
+\end{aligned}
+
+---
+
+Get the derivative of the log-likelihood function w.r.t. $\theta$.
+
+\begin{aligned}
+&\frac{d}{d\theta}\bigg(5\ln\bigg(\frac{\theta}{3}\bigg) + 2\ln\bigg(\frac{2\theta}{3}\bigg) + 3\ln(1-\theta)\bigg) \\\
+\\\
+=\;&5\frac{3}{\theta}\frac{1}{3} + 2\frac{3}{2\theta}\frac{2}{3}+3\frac{1}{1-\theta}(-1) \\\
+\\\
+=\;&\frac{5}{\theta}+\frac{2}{\theta}-\frac{3}{1-\theta} \\\
+\\\
+=\;&\frac{7}{\theta}-\frac{3}{1-\theta} \\\
+\end{aligned}
+
+---
+
+Set the derivative to zero. Solve for $\theta$. 
+
+$$\frac{7}{\theta}-\frac{3}{1-\theta} = 0$$
+
+$$\hat{\theta}=0.7$$
+
+---
+
+Lastly, we check the second derivative of the log-likelihood function w.r.t. $\theta$.
+
+$$
+\begin{aligned}
+\frac{d}{d\theta}\bigg(\frac{7}{\theta}-\frac{3}{1-\theta}\bigg) &= -\frac{7}{\theta^2}-(-1)\frac{3}{(1-\theta)^2}(-1) \\\
+\\\
+&=-\frac{7}{\theta^2}-\frac{3}{(1-\theta)^2} \\\
+\\\
+& < 0 
+\end{aligned}
+$$
+
+The second derivative is negative. 
+Thus, $\hat{\theta}$ is the value that .red[maximizes] the log-likelihood function. 
+
+In conclusion, the MLE of the parameter $\theta$ is 0.7.
+
 
 </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
