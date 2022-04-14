@@ -35,7 +35,7 @@ $$\small{\text{sample mean }\bar{x}=42}$$
 
 --
 
-$$\small{p\text{-value}=\text{P}\big(\bar{X}\geq 42 \text{ when $H_0$ is true}\big)}$$
+$$\small{p\text{-value}=\text{P}\big(\bar{X}\geq 42 \text{ $\mid$ $H_0$ is true}\big)}$$
 
 .center[![:scale 45%](../images/pvalue-right.png)]
 
@@ -46,8 +46,8 @@ $$\small{p\text{-value}=\text{P}\big(\bar{X}\geq 42 \text{ when $H_0$ is true}\b
 $$
 \small{
 \begin{aligned}
-p\text{-value}&=\text{P}\big(\bar{X}\geq 42 \text{ when $H_0$ is true}\big) \\\
-&=\text{P}\big(\bar{X}\geq 42 \text{ when $\mu=40$ } \big) \\\
+p\text{-value}&=\text{P}\big(\bar{X}\geq 42 \text{ $\mid$ $H_0$ is true}\big) \\\
+&=\text{P}\big(\bar{X}\geq 42 \text{ $\mid$ $\mu=40$ } \big) \\\
 &=\text{P}\bigg(\frac{\bar{X}-40}{2} \geq \frac{42-40}{2}\bigg) \\\
 &=\text{P}(Z \geq 1) \\\
 &=0.1587 \\\
@@ -102,7 +102,7 @@ $$\small{\text{sample mean }\bar{x}=36}$$
 
 --
 
-$$\small{p\text{-value}=\text{P}(\bar{X}\leq 36 \text{ when } H_0 \text{ is true})}$$
+$$\small{p\text{-value}=\text{P}(\bar{X}\leq 36 \mid H_0 \text{ is true})}$$
 
 .center[![:scale 38%](../images/pvalue-left.png)]
 
@@ -113,9 +113,9 @@ $$\small{p\text{-value}=\text{P}(\bar{X}\leq 36 \text{ when } H_0 \text{ is true
 $$
 \small{
 \begin{aligned}
-p\text{-value}&=\text{P}(\bar{X}\leq 36 \text{ when $H_0$ is true}) \\\
+p\text{-value}&=\text{P}(\bar{X} \leq 36 \text{ $\mid$ $H_0$ is true}) \\\
 \\\
-&=\text{P}(\bar{X}\leq 36 \text{ when $\mu=40$} ) \\\
+&=\text{P}(\bar{X}\leq 36 \mid \mu=40 ) \\\
 \\\
 &=\text{P}\bigg(\frac{\bar{X}-40}{2} \leq \frac{36-40}{2}\bigg) \\\
 \\\
@@ -170,7 +170,7 @@ $$\small{\text{sample mean }\bar{x}=36}$$
 
 --
 
-$$\small{\text{$p$-value}=\text{P}\big(\bar{X}\leq 36 \text{ or } \bar{X}\geq 44 \text{ when $H_0$ is true}\big)}$$
+$$\small{\text{$p$-value}=\text{P}\big(\bar{X}\leq 36 \text{ or } \bar{X}\geq 44 \text{ $\mid$ $H_0$ is true}\big)}$$
 
 .center[![:scale 30%](../images/pvalue-both.png)]
 
@@ -182,9 +182,9 @@ $$\small{\text{$p$-value}=\text{P}\big(\bar{X}\leq 36 \text{ or } \bar{X}\geq 44
 $$
 \small{
 \begin{aligned}
-\text{$p$-value}&=\text{P}\big(\bar{X}\leq 36 \text{ or } \bar{X}\geq 44 \text{ when $H_0$ is true}\big) \\\
+\text{$p$-value}&=\text{P}\big(\bar{X}\leq 36 \text{ or } \bar{X}\geq 44 \text{ $\mid$ $H_0$ is true}\big) \\\
 \\\
-&=2\cdot \text{P}(\bar{X}\leq 36 \text{ when} \mu=40) \\\
+&=2\cdot \text{P}(\bar{X}\leq 36 \mid \mu=40) \\\
 \\\
 &=2\cdot \text{P}\bigg(\frac{\bar{X}-40}{2} \leq \frac{36-40}{2}\bigg) \\\
 \\\
@@ -240,7 +240,6 @@ Then follow the exact same *z*-test procedure as before.
 --
 
 Rule of thumb for sample size: $n > 40$. 
-
 
 
 </textarea>
