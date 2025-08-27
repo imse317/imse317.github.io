@@ -1,0 +1,426 @@
+[
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#what-is-probability",
+    "href": "lecture-slides/ch01/01-course-intro.html#what-is-probability",
+    "title": "Course introduction",
+    "section": "What is probability?",
+    "text": "What is probability?\n\n\nSource: Merriam-Webster",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Course introduction"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#pierre-simon-laplace",
+    "href": "lecture-slides/ch01/01-course-intro.html#pierre-simon-laplace",
+    "title": "Course introduction",
+    "section": "Pierre-Simon Laplace",
+    "text": "Pierre-Simon Laplace",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Course introduction"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#which-one-is-more-likely",
+    "href": "lecture-slides/ch01/01-course-intro.html#which-one-is-more-likely",
+    "title": "Course introduction",
+    "section": "Which one is more likely?",
+    "text": "Which one is more likely?\n\n\nRoll one (six-sided) die 🎲\n\nGetting an even number\nGetting an odd number\n\n\n\n\nRoll two dice 🎲 🎲\n\nGetting a sum of 7\nGetting a sum of 12\n\n\nRoll three dice 🎲 🎲 🎲\n\nGetting a sum of 11\nGetting a sum of 12",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Course introduction"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#section",
+    "href": "lecture-slides/ch01/01-course-intro.html#section",
+    "title": "Course introduction",
+    "section": "",
+    "text": "“Probability is common sense reduced to calculation.”\n\n\nPierre-Simon Laplace",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Course introduction"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#what-is-statistics",
+    "href": "lecture-slides/ch01/01-course-intro.html#what-is-statistics",
+    "title": "Course introduction",
+    "section": "What is statistics?",
+    "text": "What is statistics?\n\nThe science of collecting, analyzing, presenting, and interpreting data.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Course introduction"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#airline-travelers-club",
+    "href": "lecture-slides/ch01/01-course-intro.html#airline-travelers-club",
+    "title": "Course introduction",
+    "section": "Airline travelers’ club",
+    "text": "Airline travelers’ club\n\nAn airline offers an executive club and claim that 10% of its customers would qualify for the membership.\nYou suspect it is actually less than 10%.\nYou randomly selected 1000 customers, and found 91 of them would qualify.\nIs the airline’s premise correct?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Course introduction"
+    ]
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Fall 2025 - 3 Credit Hours"
+  },
+  {
+    "objectID": "syllabus.html#food-pantry",
+    "href": "syllabus.html#food-pantry",
+    "title": "Syllabus",
+    "section": "Food pantry",
+    "text": "Food pantry\nThe pantry exists to support individuals on their journey as they work toward achieving their goals. We are committed to increasing access to food as a key to success, by assisting any student in need! If you need access or have questions, please contact the Office of Student Life by phone at 313-593-5390, by email at umdearbornpantry@umich.edu."
+  },
+  {
+    "objectID": "syllabus.html#university-wide-policies-statements",
+    "href": "syllabus.html#university-wide-policies-statements",
+    "title": "Syllabus",
+    "section": "University-wide policies & statements",
+    "text": "University-wide policies & statements\nPlease see the Course Policies menu on Canvas for information on the following topics. To find the Course Policies menu on Canvas, log into any course in Canvas, and then on the blue ribbon on the far left scroll down to Course Policies and click on it. This opens a white ribbon with individual links to UM-Dearborn websites on the following topics:\n\nUniversity Attendance Policy\nAcademic Integrity Policy\nCounseling\nDisability and Accessibility Services\nSafety Statement\nHarassment, Sexual Violence, Bias, and Discrimination"
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#population",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#population",
+    "title": "Population, sample, and variable",
+    "section": "Population",
+    "text": "Population\n\nDefinition: A collection of objects of interest in a study\nStudying who will win an upcoming mayoral election\n\nPopulation: Everyone who are planning to vote\n\nStudying the defect rate of a cellphone screen from a manufacturer\n\nPopulation: All the cellphone screens made by the manufacturer",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#sample",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#sample",
+    "title": "Population, sample, and variable",
+    "section": "Sample",
+    "text": "Sample\n\nDefinition: A subset of the population selected by a defined procedure\nStudying who will win an upcoming mayoral election\n\nSample: An telephone poll of 500 randomly selected potential voters\n\nStudying the defect rate of a cellphone screen from a manufacturer\n\nSample: 200 randomly selected screens for inspection",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#variable",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#variable",
+    "title": "Population, sample, and variable",
+    "section": "Variable",
+    "text": "Variable\n\nDefinition: A characteristic of interest for the elements\nHouses\n\nsize, # of bedrooms, year built, school district, …\n\nPatients\n\nage, weight, blood sugar level, …\n\nUniversities\n\ntuition, enrollment, graduation rate, …",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#discrete-variables",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#discrete-variables",
+    "title": "Population, sample, and variable",
+    "section": "Discrete variables",
+    "text": "Discrete variables\nThe variable takes finite or countably infinite values.\n\nToss a coin four times, the number of heads you get\nThe attendance to a basketball game\nThe number of orders that an online shop receives in a day",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#continuous-variables",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#continuous-variables",
+    "title": "Population, sample, and variable",
+    "section": "Continuous variables",
+    "text": "Continuous variables\nThe variable takes infinitely many, uncountable values.\n\nThe water level of dam\nThe speed of riding a bicycle\nThe time when an order arrives at a shop\n\n\nIf it can take on two particular real values, it can also take on all real values between them.\n\n\n\nIf you can count it, it is discrete.\nIf you need to measure it, it is continuous.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#univariate-vs.-multivariate",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#univariate-vs.-multivariate",
+    "title": "Population, sample, and variable",
+    "section": "Univariate vs. multivariate",
+    "text": "Univariate vs. multivariate\nUnivariate: A single variable\n\nBattery life of a cellphone model\nBlood sugar level of diabetic patients\n\n\nThis course focuses mostly on a single variable (except for Chapter 5. Joint Distributions).",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#multivariate",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#multivariate",
+    "title": "Population, sample, and variable",
+    "section": "Multivariate",
+    "text": "Multivariate\nStudying the relationship among two or more variables",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#section-1",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#section-1",
+    "title": "Population, sample, and variable",
+    "section": "",
+    "text": "IMSE 440 Applied Statistical Models in Engineering\nOffered in Winter semesters",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#four-levels-of-measurement",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#four-levels-of-measurement",
+    "title": "Four levels of measurement",
+    "section": "Four levels of measurement",
+    "text": "Four levels of measurement",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#why-do-we-care",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#why-do-we-care",
+    "title": "Four levels of measurement",
+    "section": "Why do we care?",
+    "text": "Why do we care?\nThe level dictates what we can do with the data.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#nominal-or-categorical-data",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#nominal-or-categorical-data",
+    "title": "Four levels of measurement",
+    "section": "Nominal (or categorical) data",
+    "text": "Nominal (or categorical) data\nWhen numbers are not numbers\n\nThey act like names or labels.\nCan not be put into order.\n\n\nExamples\n\nCountry code: 1 (USA), 44 (UK), 81 (Japan), …\nSocial security numbers\nYour UMID\nMarital status: single, married, divorced, …",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon",
+    "title": "Four levels of measurement",
+    "section": "Tokyo Olympics men’s marathon",
+    "text": "Tokyo Olympics men’s marathon\n\nWhat information are nominal data?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#nominal-or-categorical-data-1",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#nominal-or-categorical-data-1",
+    "title": "Four levels of measurement",
+    "section": "Nominal (or categorical) data",
+    "text": "Nominal (or categorical) data\nImplications\n\nThey can not be compared (e.g., \\(&gt;, &lt;\\))\nWe can not carry out any calculations (\\(+,  −,  ×, \\div\\))\nThe only math operations that can be done are \\(=, \\neq\\)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#ordinal-data",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#ordinal-data",
+    "title": "Four levels of measurement",
+    "section": "Ordinal data",
+    "text": "Ordinal data\nWhen numbers are almost numbers\n\nThey go into order.\nBut that’s about it.\nThey don’t tell us about the distance between two numbers.\nAirline cabin classes\n\n1: first class, 2: business, 3: premium economy, 4: economy\n\nHotel ratings (1-5 stars)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon-1",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon-1",
+    "title": "Four levels of measurement",
+    "section": "Tokyo Olympics men’s marathon",
+    "text": "Tokyo Olympics men’s marathon\n\nWhat information are ordinal data?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#ordinal-data-1",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#ordinal-data-1",
+    "title": "Four levels of measurement",
+    "section": "Ordinal data",
+    "text": "Ordinal data\nImplications\n\nOrdinal numbers can be compared (e.g., \\(&gt;,  &lt;\\))\nHowever, we can not carry out calculations for differences or magnitudes (\\(−, \\div\\))",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#interval-ratio-data",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#interval-ratio-data",
+    "title": "Four levels of measurement",
+    "section": "Interval & ratio data",
+    "text": "Interval & ratio data\nWhen numbers are really numbers\n\nNot only can be put to order\nThe distance between them tell us something.\nTom drinks 3 cups of coffee. Kate drinks 1 cup.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#ratio-data",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#ratio-data",
+    "title": "Four levels of measurement",
+    "section": "Ratio data",
+    "text": "Ratio data\nRatio data have a genuine1, non-arbitrary zero point.\n\nI have zero dollars.\n\nabsence of money\n\nI walk at a speed of 0 mph\n\nno movement\n\n\nA “genuine” zero means there is none of the thing being measured.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#examples-of-ratio-data",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#examples-of-ratio-data",
+    "title": "Four levels of measurement",
+    "section": "Examples of ratio data",
+    "text": "Examples of ratio data\n\nLength (100 meters)\nWeight (50 lbs)\nSize (800 square feet)\nSpeed (20 mph)\nTime duration (5 hours)\n\n\nThe majority of scientific measures are ratio measures.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#interval-data",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#interval-data",
+    "title": "Four levels of measurement",
+    "section": "Interval data",
+    "text": "Interval data\nInterval data have an arbitrary zero point.\nZero does not mean there is none of the things being measured.\n\nWhat is the temperature for 0°C?\n\n0°C does not mean there is no warmth.\n\nCalendar year 2025. What does year 0 mean?\n\nYear 0 does not mean it’s the beginning of time.\n\nWhat is longitude (geographic coordinate) of 0°?\n\nPrime meridian",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#examples-of-interval-data",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#examples-of-interval-data",
+    "title": "Four levels of measurement",
+    "section": "Examples of interval data",
+    "text": "Examples of interval data\n\nTemperature in Fahrenheit (70°F) or Celsius (20°C)\nCalendar year\nGPS coordinates (42.3185, -83.2327)\nGPS heading (90°)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#implications-without-a-genuine-zero",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#implications-without-a-genuine-zero",
+    "title": "Four levels of measurement",
+    "section": "Implications without a genuine zero",
+    "text": "Implications without a genuine zero\nWe can talk about ratios with ratio measures (duh!)\n\nTom drinks ☕☕☕. Kate drinks ☕.\n\nTom drink ☕☕ more coffee than Kate.\nTom drink 3 times as much coffee as Kate.\n\nToday is 40°F. Yesterday was 20°F.\n\nToday is 20°F warmer than yesterday.\nThe average temp of the two days is 30°F.\nToday is twice as warm as yesterday.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#implications-without-a-genuine-zero-1",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#implications-without-a-genuine-zero-1",
+    "title": "Four levels of measurement",
+    "section": "Implications without a genuine zero",
+    "text": "Implications without a genuine zero\n\nWith interval data\n\nwe can calculate the difference (\\(-\\)).\nwe can not calculate the ratio (\\(\\div\\)).\n\nWith ratio data we can carry out most calculations.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon-2",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon-2",
+    "title": "Four levels of measurement",
+    "section": "Tokyo Olympics men’s marathon",
+    "text": "Tokyo Olympics men’s marathon\n\nWhat information are ratio data?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#qualitative-and-quantitative-data",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#qualitative-and-quantitative-data",
+    "title": "Four levels of measurement",
+    "section": "Qualitative and quantitative data",
+    "text": "Qualitative and quantitative data",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Four levels of measurement"
+    ]
+  }
+]
