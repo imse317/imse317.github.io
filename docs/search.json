@@ -2,79 +2,79 @@
   {
     "objectID": "lecture-slides/ch01/01-course-intro.html#what-is-probability",
     "href": "lecture-slides/ch01/01-course-intro.html#what-is-probability",
-    "title": "Course introduction",
+    "title": "1.1 Course introduction",
     "section": "What is probability?",
     "text": "What is probability?\n\n\nSource: Merriam-Webster",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Course introduction"
+      "1.1 Course introduction"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/01-course-intro.html#pierre-simon-laplace",
     "href": "lecture-slides/ch01/01-course-intro.html#pierre-simon-laplace",
-    "title": "Course introduction",
+    "title": "1.1 Course introduction",
     "section": "Pierre-Simon Laplace",
     "text": "Pierre-Simon Laplace",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Course introduction"
+      "1.1 Course introduction"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/01-course-intro.html#which-one-is-more-likely",
     "href": "lecture-slides/ch01/01-course-intro.html#which-one-is-more-likely",
-    "title": "Course introduction",
+    "title": "1.1 Course introduction",
     "section": "Which one is more likely?",
     "text": "Which one is more likely?\n\n\nRoll one (six-sided) die 🎲\n\nGetting an even number\nGetting an odd number\n\n\n\n\nRoll two dice 🎲 🎲\n\nGetting a sum of 7\nGetting a sum of 12\n\n\nRoll three dice 🎲 🎲 🎲\n\nGetting a sum of 11\nGetting a sum of 12",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Course introduction"
+      "1.1 Course introduction"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/01-course-intro.html#section",
     "href": "lecture-slides/ch01/01-course-intro.html#section",
-    "title": "Course introduction",
+    "title": "1.1 Course introduction",
     "section": "",
     "text": "“Probability is common sense reduced to calculation.”\n\n\nPierre-Simon Laplace",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Course introduction"
+      "1.1 Course introduction"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/01-course-intro.html#what-is-statistics",
     "href": "lecture-slides/ch01/01-course-intro.html#what-is-statistics",
-    "title": "Course introduction",
+    "title": "1.1 Course introduction",
     "section": "What is statistics?",
     "text": "What is statistics?\n\nThe science of collecting, analyzing, presenting, and interpreting data.",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Course introduction"
+      "1.1 Course introduction"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/01-course-intro.html#airline-travelers-club",
     "href": "lecture-slides/ch01/01-course-intro.html#airline-travelers-club",
-    "title": "Course introduction",
+    "title": "1.1 Course introduction",
     "section": "Airline travelers’ club",
     "text": "Airline travelers’ club\n\nAn airline offers an executive club and claim that 10% of its customers would qualify for the membership.\nYou suspect it is actually less than 10%.\nYou randomly selected 1000 customers, and found 91 of them would qualify.\nIs the airline’s premise correct?",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Course introduction"
+      "1.1 Course introduction"
     ]
   },
   {
@@ -101,326 +101,651 @@
   {
     "objectID": "lecture-slides/ch01/02-population-sample-variable.html#population",
     "href": "lecture-slides/ch01/02-population-sample-variable.html#population",
-    "title": "Population, sample, and variable",
+    "title": "1.2 Population, sample, and variable",
     "section": "Population",
     "text": "Population\n\nDefinition: A collection of objects of interest in a study\nStudying who will win an upcoming mayoral election\n\nPopulation: Everyone who are planning to vote\n\nStudying the defect rate of a cellphone screen from a manufacturer\n\nPopulation: All the cellphone screens made by the manufacturer",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Population, sample, and variable"
+      "1.2 Population, sample, and variable"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/02-population-sample-variable.html#sample",
     "href": "lecture-slides/ch01/02-population-sample-variable.html#sample",
-    "title": "Population, sample, and variable",
+    "title": "1.2 Population, sample, and variable",
     "section": "Sample",
     "text": "Sample\n\nDefinition: A subset of the population selected by a defined procedure\nStudying who will win an upcoming mayoral election\n\nSample: An telephone poll of 500 randomly selected potential voters\n\nStudying the defect rate of a cellphone screen from a manufacturer\n\nSample: 200 randomly selected screens for inspection",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Population, sample, and variable"
+      "1.2 Population, sample, and variable"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/02-population-sample-variable.html#variable",
     "href": "lecture-slides/ch01/02-population-sample-variable.html#variable",
-    "title": "Population, sample, and variable",
+    "title": "1.2 Population, sample, and variable",
     "section": "Variable",
     "text": "Variable\n\nDefinition: A characteristic of interest for the elements\nHouses\n\nsize, # of bedrooms, year built, school district, …\n\nPatients\n\nage, weight, blood sugar level, …\n\nUniversities\n\ntuition, enrollment, graduation rate, …",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Population, sample, and variable"
+      "1.2 Population, sample, and variable"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/02-population-sample-variable.html#discrete-variables",
     "href": "lecture-slides/ch01/02-population-sample-variable.html#discrete-variables",
-    "title": "Population, sample, and variable",
+    "title": "1.2 Population, sample, and variable",
     "section": "Discrete variables",
     "text": "Discrete variables\nThe variable takes finite or countably infinite values.\n\nToss a coin four times, the number of heads you get\nThe attendance to a basketball game\nThe number of orders that an online shop receives in a day",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Population, sample, and variable"
+      "1.2 Population, sample, and variable"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/02-population-sample-variable.html#continuous-variables",
     "href": "lecture-slides/ch01/02-population-sample-variable.html#continuous-variables",
-    "title": "Population, sample, and variable",
+    "title": "1.2 Population, sample, and variable",
     "section": "Continuous variables",
     "text": "Continuous variables\nThe variable takes infinitely many, uncountable values.\n\nThe water level of dam\nThe speed of riding a bicycle\nThe time when an order arrives at a shop\n\n\nIf it can take on two particular real values, it can also take on all real values between them.\n\n\n\nIf you can count it, it is discrete.\nIf you need to measure it, it is continuous.",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Population, sample, and variable"
+      "1.2 Population, sample, and variable"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/02-population-sample-variable.html#univariate-vs.-multivariate",
     "href": "lecture-slides/ch01/02-population-sample-variable.html#univariate-vs.-multivariate",
-    "title": "Population, sample, and variable",
+    "title": "1.2 Population, sample, and variable",
     "section": "Univariate vs. multivariate",
     "text": "Univariate vs. multivariate\nUnivariate: A single variable\n\nBattery life of a cellphone model\nBlood sugar level of diabetic patients\n\n\nThis course focuses mostly on a single variable (except for Chapter 5. Joint Distributions).",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Population, sample, and variable"
+      "1.2 Population, sample, and variable"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/02-population-sample-variable.html#multivariate",
     "href": "lecture-slides/ch01/02-population-sample-variable.html#multivariate",
-    "title": "Population, sample, and variable",
+    "title": "1.2 Population, sample, and variable",
     "section": "Multivariate",
     "text": "Multivariate\nStudying the relationship among two or more variables",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Population, sample, and variable"
+      "1.2 Population, sample, and variable"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/02-population-sample-variable.html#section-1",
     "href": "lecture-slides/ch01/02-population-sample-variable.html#section-1",
-    "title": "Population, sample, and variable",
+    "title": "1.2 Population, sample, and variable",
     "section": "",
     "text": "IMSE 440 Applied Statistical Models in Engineering\nOffered in Winter semesters",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Population, sample, and variable"
+      "1.2 Population, sample, and variable"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#four-levels-of-measurement",
     "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#four-levels-of-measurement",
-    "title": "Four levels of measurement",
+    "title": "1.3 Four levels of measurement",
     "section": "Four levels of measurement",
     "text": "Four levels of measurement",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Four levels of measurement"
+      "1.3 Four levels of measurement"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#why-do-we-care",
     "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#why-do-we-care",
-    "title": "Four levels of measurement",
+    "title": "1.3 Four levels of measurement",
     "section": "Why do we care?",
     "text": "Why do we care?\nThe level dictates what we can do with the data.",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Four levels of measurement"
+      "1.3 Four levels of measurement"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#nominal-or-categorical-data",
     "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#nominal-or-categorical-data",
-    "title": "Four levels of measurement",
+    "title": "1.3 Four levels of measurement",
     "section": "Nominal (or categorical) data",
     "text": "Nominal (or categorical) data\nWhen numbers are not numbers\n\nThey act like names or labels.\nCan not be put into order.\n\n\nExamples\n\nCountry code: 1 (USA), 44 (UK), 81 (Japan), …\nSocial security numbers\nYour UMID\nMarital status: single, married, divorced, …",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Four levels of measurement"
+      "1.3 Four levels of measurement"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon",
     "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon",
-    "title": "Four levels of measurement",
+    "title": "1.3 Four levels of measurement",
     "section": "Tokyo Olympics men’s marathon",
     "text": "Tokyo Olympics men’s marathon\n\nWhat information are nominal data?",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Four levels of measurement"
+      "1.3 Four levels of measurement"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#nominal-or-categorical-data-1",
     "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#nominal-or-categorical-data-1",
-    "title": "Four levels of measurement",
+    "title": "1.3 Four levels of measurement",
     "section": "Nominal (or categorical) data",
     "text": "Nominal (or categorical) data\nImplications\n\nThey can not be compared (e.g., \\(&gt;, &lt;\\))\nWe can not carry out any calculations (\\(+,  −,  ×, \\div\\))\nThe only math operations that can be done are \\(=, \\neq\\)",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Four levels of measurement"
+      "1.3 Four levels of measurement"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#ordinal-data",
     "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#ordinal-data",
-    "title": "Four levels of measurement",
+    "title": "1.3 Four levels of measurement",
     "section": "Ordinal data",
     "text": "Ordinal data\nWhen numbers are almost numbers\n\nThey go into order.\nBut that’s about it.\nThey don’t tell us about the distance between two numbers.\nAirline cabin classes\n\n1: first class, 2: business, 3: premium economy, 4: economy\n\nHotel ratings (1-5 stars)",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Four levels of measurement"
+      "1.3 Four levels of measurement"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon-1",
     "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon-1",
-    "title": "Four levels of measurement",
+    "title": "1.3 Four levels of measurement",
     "section": "Tokyo Olympics men’s marathon",
     "text": "Tokyo Olympics men’s marathon\n\nWhat information are ordinal data?",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Four levels of measurement"
+      "1.3 Four levels of measurement"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#ordinal-data-1",
     "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#ordinal-data-1",
-    "title": "Four levels of measurement",
+    "title": "1.3 Four levels of measurement",
     "section": "Ordinal data",
     "text": "Ordinal data\nImplications\n\nOrdinal numbers can be compared (e.g., \\(&gt;,  &lt;\\))\nHowever, we can not carry out calculations for differences or magnitudes (\\(−, \\div\\))",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Four levels of measurement"
+      "1.3 Four levels of measurement"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#interval-ratio-data",
     "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#interval-ratio-data",
-    "title": "Four levels of measurement",
+    "title": "1.3 Four levels of measurement",
     "section": "Interval & ratio data",
     "text": "Interval & ratio data\nWhen numbers are really numbers\n\nNot only can be put to order\nThe distance between them tell us something.\nTom drinks 3 cups of coffee. Kate drinks 1 cup.",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Four levels of measurement"
+      "1.3 Four levels of measurement"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#ratio-data",
     "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#ratio-data",
-    "title": "Four levels of measurement",
+    "title": "1.3 Four levels of measurement",
     "section": "Ratio data",
     "text": "Ratio data\nRatio data have a genuine1, non-arbitrary zero point.\n\nI have zero dollars.\n\nabsence of money\n\nI walk at a speed of 0 mph\n\nno movement\n\n\nA “genuine” zero means there is none of the thing being measured.",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Four levels of measurement"
+      "1.3 Four levels of measurement"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#examples-of-ratio-data",
     "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#examples-of-ratio-data",
-    "title": "Four levels of measurement",
+    "title": "1.3 Four levels of measurement",
     "section": "Examples of ratio data",
     "text": "Examples of ratio data\n\nLength (100 meters)\nWeight (50 lbs)\nSize (800 square feet)\nSpeed (20 mph)\nTime duration (5 hours)\n\n\nThe majority of scientific measures are ratio measures.",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Four levels of measurement"
+      "1.3 Four levels of measurement"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#interval-data",
     "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#interval-data",
-    "title": "Four levels of measurement",
+    "title": "1.3 Four levels of measurement",
     "section": "Interval data",
     "text": "Interval data\nInterval data have an arbitrary zero point.\nZero does not mean there is none of the things being measured.\n\nWhat is the temperature for 0°C?\n\n0°C does not mean there is no warmth.\n\nCalendar year 2025. What does year 0 mean?\n\nYear 0 does not mean it’s the beginning of time.\n\nWhat is longitude (geographic coordinate) of 0°?\n\nPrime meridian",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Four levels of measurement"
+      "1.3 Four levels of measurement"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#examples-of-interval-data",
     "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#examples-of-interval-data",
-    "title": "Four levels of measurement",
+    "title": "1.3 Four levels of measurement",
     "section": "Examples of interval data",
     "text": "Examples of interval data\n\nTemperature in Fahrenheit (70°F) or Celsius (20°C)\nCalendar year\nGPS coordinates (42.3185, -83.2327)\nGPS heading (90°)",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Four levels of measurement"
+      "1.3 Four levels of measurement"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#implications-without-a-genuine-zero",
     "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#implications-without-a-genuine-zero",
-    "title": "Four levels of measurement",
+    "title": "1.3 Four levels of measurement",
     "section": "Implications without a genuine zero",
     "text": "Implications without a genuine zero\nWe can talk about ratios with ratio measures (duh!)\n\nTom drinks ☕☕☕. Kate drinks ☕.\n\nTom drink ☕☕ more coffee than Kate.\nTom drink 3 times as much coffee as Kate.\n\nToday is 40°F. Yesterday was 20°F.\n\nToday is 20°F warmer than yesterday.\nThe average temp of the two days is 30°F.\nToday is twice as warm as yesterday.",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Four levels of measurement"
+      "1.3 Four levels of measurement"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#implications-without-a-genuine-zero-1",
     "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#implications-without-a-genuine-zero-1",
-    "title": "Four levels of measurement",
+    "title": "1.3 Four levels of measurement",
     "section": "Implications without a genuine zero",
     "text": "Implications without a genuine zero\n\nWith interval data\n\nwe can calculate the difference (\\(-\\)).\nwe can not calculate the ratio (\\(\\div\\)).\n\nWith ratio data we can carry out most calculations.",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Four levels of measurement"
+      "1.3 Four levels of measurement"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon-2",
     "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon-2",
-    "title": "Four levels of measurement",
+    "title": "1.3 Four levels of measurement",
     "section": "Tokyo Olympics men’s marathon",
     "text": "Tokyo Olympics men’s marathon\n\nWhat information are ratio data?",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Four levels of measurement"
+      "1.3 Four levels of measurement"
     ]
   },
   {
     "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#qualitative-and-quantitative-data",
     "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#qualitative-and-quantitative-data",
-    "title": "Four levels of measurement",
+    "title": "1.3 Four levels of measurement",
     "section": "Qualitative and quantitative data",
     "text": "Qualitative and quantitative data",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Four levels of measurement"
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/04-graphical-integrity.html#the-principle-of-.redproportional-ink",
+    "href": "lecture-slides/ch01/04-graphical-integrity.html#the-principle-of-.redproportional-ink",
+    "title": "Graphical integrity",
+    "section": "The Principle of .red[Proportional Ink]",
+    "text": "The Principle of .red[Proportional Ink]\nThe representation of numbers,\nas physically measured on the surface of the graphic itself (i.e., the amount of ink used),\n.red[should be directly proportional to the numerical quantities represented.]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "Graphical integrity"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/04-graphical-integrity.html#the-principle-of-proportional-ink",
+    "href": "lecture-slides/ch01/04-graphical-integrity.html#the-principle-of-proportional-ink",
+    "title": "1.4 Graphical integrity",
+    "section": "The Principle of Proportional Ink",
+    "text": "The Principle of Proportional Ink\n\nThe representation of numbers, as physically measured on the surface of the graphic itself (i.e., the amount of ink used),\nshould be directly proportional to the numerical quantities represented.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.4 Graphical integrity"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/04-graphical-integrity.html#section-5",
+    "href": "lecture-slides/ch01/04-graphical-integrity.html#section-5",
+    "title": "1.4 Graphical integrity",
+    "section": "",
+    "text": "Friends don’t let friends make 3D pie charts.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.4 Graphical integrity"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/05-measures-of-location.html#heights-in-feet-of-216-volcanoes",
+    "href": "lecture-slides/ch01/05-measures-of-location.html#heights-in-feet-of-216-volcanoes",
+    "title": "1.5 Measures of location",
+    "section": "Heights (in feet) of 216 volcanoes",
+    "text": "Heights (in feet) of 216 volcanoes\n\n\\[19882, 19728, 19335, 19287, \\cdots, 617, 555, 529, 242\\]\nvolcano-heights.csv\n\n\nWhat is the typical height of a volcano?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.5 Measures of location"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/05-measures-of-location.html#descriptive-statistics",
+    "href": "lecture-slides/ch01/05-measures-of-location.html#descriptive-statistics",
+    "title": "1.5 Measures of location",
+    "section": "Descriptive statistics",
+    "text": "Descriptive statistics\nDescribe & summarize important features of the data.\n\nNumerical methods\n\nMeasures of location (i.e., center)\nMeasures of variability (i.e., spread)\n\nGraphical methods\n\nHistogram\nBoxplot",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.5 Measures of location"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/05-measures-of-location.html#measures-of-location",
+    "href": "lecture-slides/ch01/05-measures-of-location.html#measures-of-location",
+    "title": "1.5 Measures of location",
+    "section": "Measures of location",
+    "text": "Measures of location\n\nSample mean\nSample median\nQuartile/percentile\nTrimmed mean\nBoxplot",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.5 Measures of location"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/05-measures-of-location.html#sample-mean",
+    "href": "lecture-slides/ch01/05-measures-of-location.html#sample-mean",
+    "title": "1.5 Measures of location",
+    "section": "Sample mean",
+    "text": "Sample mean\nFor a given set of \\(n\\) numbers\n\\[x_1, x_2, \\cdots, x_n\\]\n\nthe sample mean \\(\\bar{x}\\) is given by\n\\[\\bar{x} = \\frac{1}{n}(x_1 + x_2 + \\cdots + x_n)\\]\n\n\nWe often use the shorthand sigma notation\n\\[\\bar{x} = \\frac{1}{n}\\sum_{i=1}^n x_i\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.5 Measures of location"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/05-measures-of-location.html#sample-mean-1",
+    "href": "lecture-slides/ch01/05-measures-of-location.html#sample-mean-1",
+    "title": "1.5 Measures of location",
+    "section": "Sample mean",
+    "text": "Sample mean\n\\[12, 34, 14, 5, 44, 28, 22, 19, 36, 25\\]\n\n\\[\\bar{x} = \\frac{1}{10}(12 + 34 + \\cdots + 25)=23.9\\]\n\n\n\nInterpretation: the center of gravity for a series of weights positioned at the specified values in a dot plot.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.5 Measures of location"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/05-measures-of-location.html#section",
+    "href": "lecture-slides/ch01/05-measures-of-location.html#section",
+    "title": "1.5 Measures of location",
+    "section": "",
+    "text": "In a startup company of 10 people\n9 employees earn a salary of $50k a year each\nThe CEO earns $550k a year\n\n\n\\[50, 50, 50, 50, 50, 50, 50, 50, 50, 550\\]\n\n\n\\[\\bar{x} = \\frac{1}{10}(50\\times9 + 550\\times1)=100\\]\n\nOne may argue that $100k is not a “typical” value.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.5 Measures of location"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/05-measures-of-location.html#sample-median",
+    "href": "lecture-slides/ch01/05-measures-of-location.html#sample-median",
+    "title": "1.5 Measures of location",
+    "section": "Sample median",
+    "text": "Sample median\nThe median, \\(\\tilde{x}\\) (reads x tilde), is the middle value in a set of data that is arranged in order.\nIf the sample size \\(n\\) is an even number, there are two middle values.\n\\[1, 3, 4, 6, 8, 9\\]\n\\(\\tilde{x}\\) is the average of the two.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.5 Measures of location"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/05-measures-of-location.html#exercise",
+    "href": "lecture-slides/ch01/05-measures-of-location.html#exercise",
+    "title": "1.5 Measures of location",
+    "section": "Exercise",
+    "text": "Exercise\nData set:\n\\[12, 34, 14, 5, 44, 28, 22, 19, 36, 25\\]\n\nSort the data to order:\n\\[5, 12, 14, 19, 22, 25, 28, 34, 36, 44\\]\n\n\n\\[\\tilde{x} = \\frac{1}{2}(22+25)=23.5\\]\n\n\nInterpretation: half of the data are smaller than 23.5, half are larger than 23.5.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.5 Measures of location"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/05-measures-of-location.html#the-earlier-example",
+    "href": "lecture-slides/ch01/05-measures-of-location.html#the-earlier-example",
+    "title": "1.5 Measures of location",
+    "section": "The earlier example",
+    "text": "The earlier example\n\nIn a company of ten people,\nNine employees earn a salary of .red[$50k] a year each;\nThe CEO earns .red[$550k] a year.\n\n\n\\[50, 50, 50, 50, 50, 50, 50, 50, 50, 550\\]\n\n\n\\[\\tilde{x} = \\frac{1}{2}(50 + 50)=50\\]\n\nThe median of $50k is arguably more “typical”.\n\nThe median is less sensitive to outliers.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.5 Measures of location"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/05-measures-of-location.html#quartiles-percentiles",
+    "href": "lecture-slides/ch01/05-measures-of-location.html#quartiles-percentiles",
+    "title": "1.5 Measures of location",
+    "section": "Quartiles & percentiles",
+    "text": "Quartiles & percentiles\n\nFirst quartile (25th percentile)\n\nSeparating the bottom 25% data from the top 75%\nThe middle value between the smallest and median.\n\nSecond quartile (50th percentile, or simply, the median)\n\nSeparating the bottom 50% data from the top 50%\n\nThird quartile (75th percentile)\n\nSeparating the bottom 75% data from the top 25%\nThe middle value between the median and largest.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.5 Measures of location"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/05-measures-of-location.html#xtext-th-percentile",
+    "href": "lecture-slides/ch01/05-measures-of-location.html#xtext-th-percentile",
+    "title": "1.5 Measures of location",
+    "section": "\\(x\\text{-th}\\) percentile",
+    "text": "\\(x\\text{-th}\\) percentile\nThe value below which \\(x\\%\\) of the data will be found.\n\n\n\n\n\n\nImage source",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.5 Measures of location"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/05-measures-of-location.html#section-1",
+    "href": "lecture-slides/ch01/05-measures-of-location.html#section-1",
+    "title": "1.5 Measures of location",
+    "section": "",
+    "text": "\\[50, 50, 50, 50, 50, 50, 50, 50, 50, 550\\]\n\nSample mean is sensitive to the presence of outliers1, especially for small data sets.\ndata points that lie at an abnormal distance from the rest.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.5 Measures of location"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/05-measures-of-location.html#trimmed-mean",
+    "href": "lecture-slides/ch01/05-measures-of-location.html#trimmed-mean",
+    "title": "1.5 Measures of location",
+    "section": "Trimmed mean",
+    "text": "Trimmed mean\nThe mean after discarding the smallest & largest \\(\\alpha\\%\\) of the data\n\nDive scores from 7 judges:\n\\[4, 6, 6, 6, 7, 7, 8\\]\n\n\nThe lowest and highest scores are eliminated.\n\\[6, 6, 6, 7, 7\\]\n\n\nThe remaining scores are totaled.\n\\[6+6+6+7+7=32\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.5 Measures of location"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/05-measures-of-location.html#trimmed-mean-1",
+    "href": "lecture-slides/ch01/05-measures-of-location.html#trimmed-mean-1",
+    "title": "1.5 Measures of location",
+    "section": "Trimmed mean",
+    "text": "Trimmed mean\nTypically \\(\\alpha\\%\\) is between 5 to 25%.\nWhen discarding the bottom 25% and top 25%, it is called the interquartile mean.\n\n\nThe sample mean and median can be considered as two special cases of trimmed mean.\n\n\\(\\alpha\\%=0\\%\\)\n\nDiscard no data: mean\n\n\\(\\alpha\\%=50\\%\\)\n\nDiscard all but the middle number(s): median",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.5 Measures of location"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/05-measures-of-location.html#a-simple-boxplot",
+    "href": "lecture-slides/ch01/05-measures-of-location.html#a-simple-boxplot",
+    "title": "1.5 Measures of location",
+    "section": "A simple boxplot",
+    "text": "A simple boxplot",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.5 Measures of location"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/05-measures-of-location.html#how-much-space-does-drivers-give-to-cyclists-when-passing",
+    "href": "lecture-slides/ch01/05-measures-of-location.html#how-much-space-does-drivers-give-to-cyclists-when-passing",
+    "title": "1.5 Measures of location",
+    "section": "How much space does drivers give to cyclists when passing?",
+    "text": "How much space does drivers give to cyclists when passing?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.5 Measures of location"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/05-measures-of-location.html#descriptive-statistics-with-python-numpy",
+    "href": "lecture-slides/ch01/05-measures-of-location.html#descriptive-statistics-with-python-numpy",
+    "title": "1.5 Measures of location",
+    "section": "Descriptive statistics with Python numpy",
+    "text": "Descriptive statistics with Python numpy\nGo to Google Colab and sign in. Open a new notebook.\nimport numpy\n\nx = [12, 34, 14, 5, 44, 28, 22, 19, 36, 25]\nnumpy.mean(x)\nnumpy.median(x)\nnumpy.quantile(x, 0.5)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.5 Measures of location"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/05-measures-of-location.html#descriptive-statistics-with-python-pandas",
+    "href": "lecture-slides/ch01/05-measures-of-location.html#descriptive-statistics-with-python-pandas",
+    "title": "1.5 Measures of location",
+    "section": "Descriptive statistics with Python pandas",
+    "text": "Descriptive statistics with Python pandas\nimport pandas\n\nurl = \"https://imse317.github.io/data/bank.csv\"\nbank = pandas.read_csv(url)\nbank.head()\nbank.describe()\nbank[\"age\"].mean()\nbank[\"age\"].median()\nbank[\"age\"].quantile(0.99)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.5 Measures of location"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/05-measures-of-location.html#section-2",
+    "href": "lecture-slides/ch01/05-measures-of-location.html#section-2",
+    "title": "1.5 Measures of location",
+    "section": "",
+    "text": "\\[\\text{Percentile} = \\frac{r-0.5}{n}\\times100\\]\n\n\n\n\n\n\n\n\n\\(\\text{ Rank}(r)\\)\n  \\(x_i\\)  \n \\(\\text{Percentile}\\) \n\n\n\n\n\\(1\\)\n\\(5\\)\n\\(5\\text{th}\\)\n\n\n\\(2\\)\n\\(12\\)\n\\(15\\text{th}\\)\n\n\n\\(3\\)\n\\(14\\)\n\\(25\\text{th}\\)\n\n\n\\(4\\)\n\\(19\\)\n\\(35\\text{th}\\)\n\n\n\\(5\\)\n\\(22\\)\n\\(45\\text{th}\\)\n\n\n\\(6\\)\n\\(25\\)\n\\(55\\text{th}\\)\n\n\n\\(7\\)\n\\(28\\)\n\\(65\\text{th}\\)\n\n\n\\(8\\)\n\\(34\\)\n\\(75\\text{th}\\)\n\n\n\\(9\\)\n\\(36\\)\n\\(85\\text{th}\\)\n\n\n\\(10\\)\n\\(44\\)\n\\(95\\text{th}\\)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.5 Measures of location"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/05-measures-of-location.html#the-earlier-startup-company-example",
+    "href": "lecture-slides/ch01/05-measures-of-location.html#the-earlier-startup-company-example",
+    "title": "1.5 Measures of location",
+    "section": "The earlier startup company example",
+    "text": "The earlier startup company example\n\\[50, 50, 50, 50, 50, 50, 50, 50, 50, 550\\]\n\n\\[\\tilde{x} = \\frac{1}{2}(50 + 50)=50\\]\n\nThe median of $50k is arguably more “typical”.\nThe median is less sensitive to outliers.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.5 Measures of location"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/05-measures-of-location.html#descriptive-statistics-with-python",
+    "href": "lecture-slides/ch01/05-measures-of-location.html#descriptive-statistics-with-python",
+    "title": "1.5 Measures of location",
+    "section": "Descriptive statistics with Python",
+    "text": "Descriptive statistics with Python\nGo to Google Colab and sign in. Open a new notebook.\nWe use the NumPy library.\n\nimport numpy\n\nages = [12, 34, 14, 5, 44, 28, 22, 19, 36, 25]\n\nprint(numpy.mean(ages))\nprint(numpy.median(ages))\nprint(numpy.quantile(ages, 0.5))",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.5 Measures of location"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/05-measures-of-location.html#descriptive-statistics-with-python-1",
+    "href": "lecture-slides/ch01/05-measures-of-location.html#descriptive-statistics-with-python-1",
+    "title": "1.5 Measures of location",
+    "section": "Descriptive statistics with Python",
+    "text": "Descriptive statistics with Python\nWe use the pandas library.\n\nimport pandas\nurl = \"https://imse317.github.io/lecture-slides/ch01/data/bank.csv\"\nbank = pandas.read_csv(url)\nbank.head()\n\n\nbank.describe()\nbank['age'].mean()\nbank['age'].median()\nbank['age'].quantile(0.99)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.5 Measures of location"
     ]
   }
 ]
