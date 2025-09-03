@@ -1,208 +1,5 @@
 [
   {
-    "objectID": "lecture-slides/ch01/01-course-intro.html#what-is-probability",
-    "href": "lecture-slides/ch01/01-course-intro.html#what-is-probability",
-    "title": "1.1 Course introduction",
-    "section": "What is probability?",
-    "text": "What is probability?\n\n\nSource: Merriam-Webster",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.1 Course introduction"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/01-course-intro.html#pierre-simon-laplace",
-    "href": "lecture-slides/ch01/01-course-intro.html#pierre-simon-laplace",
-    "title": "1.1 Course introduction",
-    "section": "Pierre-Simon Laplace",
-    "text": "Pierre-Simon Laplace",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.1 Course introduction"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/01-course-intro.html#which-one-is-more-likely",
-    "href": "lecture-slides/ch01/01-course-intro.html#which-one-is-more-likely",
-    "title": "1.1 Course introduction",
-    "section": "Which one is more likely?",
-    "text": "Which one is more likely?\n\n\nRoll one (six-sided) die 🎲\n\nGetting an even number\nGetting an odd number\n\n\n\n\nRoll two dice 🎲 🎲\n\nGetting a sum of 7\nGetting a sum of 12\n\n\nRoll three dice 🎲 🎲 🎲\n\nGetting a sum of 11\nGetting a sum of 12",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.1 Course introduction"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/01-course-intro.html#section",
-    "href": "lecture-slides/ch01/01-course-intro.html#section",
-    "title": "1.1 Course introduction",
-    "section": "",
-    "text": "“Probability is common sense reduced to calculation.”\n\n\nPierre-Simon Laplace",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.1 Course introduction"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/01-course-intro.html#what-is-statistics",
-    "href": "lecture-slides/ch01/01-course-intro.html#what-is-statistics",
-    "title": "1.1 Course introduction",
-    "section": "What is statistics?",
-    "text": "What is statistics?\n\nThe science of collecting, analyzing, presenting, and interpreting data.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.1 Course introduction"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/01-course-intro.html#airline-travelers-club",
-    "href": "lecture-slides/ch01/01-course-intro.html#airline-travelers-club",
-    "title": "1.1 Course introduction",
-    "section": "Airline travelers’ club",
-    "text": "Airline travelers’ club\n\nAn airline offers an executive club and claim that 10% of its customers would qualify for the membership.\nYou suspect it is actually less than 10%.\nYou randomly selected 1000 customers, and found 91 of them would qualify.\nIs the airline’s premise correct?",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.1 Course introduction"
-    ]
-  },
-  {
-    "objectID": "syllabus.html",
-    "href": "syllabus.html",
-    "title": "Syllabus",
-    "section": "",
-    "text": "Fall 2025 - 3 Credit Hours"
-  },
-  {
-    "objectID": "syllabus.html#food-pantry",
-    "href": "syllabus.html#food-pantry",
-    "title": "Syllabus",
-    "section": "Food pantry",
-    "text": "Food pantry\nThe pantry exists to support individuals on their journey as they work toward achieving their goals. We are committed to increasing access to food as a key to success, by assisting any student in need! If you need access or have questions, please contact the Office of Student Life by phone at 313-593-5390, by email at umdearbornpantry@umich.edu."
-  },
-  {
-    "objectID": "syllabus.html#university-wide-policies-statements",
-    "href": "syllabus.html#university-wide-policies-statements",
-    "title": "Syllabus",
-    "section": "University-wide policies & statements",
-    "text": "University-wide policies & statements\nPlease see the Course Policies menu on Canvas for information on the following topics. To find the Course Policies menu on Canvas, log into any course in Canvas, and then on the blue ribbon on the far left scroll down to Course Policies and click on it. This opens a white ribbon with individual links to UM-Dearborn websites on the following topics:\n\nUniversity Attendance Policy\nAcademic Integrity Policy\nCounseling\nDisability and Accessibility Services\nSafety Statement\nHarassment, Sexual Violence, Bias, and Discrimination"
-  },
-  {
-    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#population",
-    "href": "lecture-slides/ch01/02-population-sample-variable.html#population",
-    "title": "1.2 Population, sample, and variable",
-    "section": "Population",
-    "text": "Population\n\nDefinition: A collection of objects of interest in a study\nStudying who will win an upcoming mayoral election\n\nPopulation: Everyone who are planning to vote\n\nStudying the defect rate of a cellphone screen from a manufacturer\n\nPopulation: All the cellphone screens made by the manufacturer",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.2 Population, sample, and variable"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#sample",
-    "href": "lecture-slides/ch01/02-population-sample-variable.html#sample",
-    "title": "1.2 Population, sample, and variable",
-    "section": "Sample",
-    "text": "Sample\n\nDefinition: A subset of the population selected by a defined procedure\nStudying who will win an upcoming mayoral election\n\nSample: An telephone poll of 500 randomly selected potential voters\n\nStudying the defect rate of a cellphone screen from a manufacturer\n\nSample: 200 randomly selected screens for inspection",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.2 Population, sample, and variable"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#variable",
-    "href": "lecture-slides/ch01/02-population-sample-variable.html#variable",
-    "title": "1.2 Population, sample, and variable",
-    "section": "Variable",
-    "text": "Variable\n\nDefinition: A characteristic of interest for the elements\nHouses\n\nsize, # of bedrooms, year built, school district, …\n\nPatients\n\nage, weight, blood sugar level, …\n\nUniversities\n\ntuition, enrollment, graduation rate, …",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.2 Population, sample, and variable"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#discrete-variables",
-    "href": "lecture-slides/ch01/02-population-sample-variable.html#discrete-variables",
-    "title": "1.2 Population, sample, and variable",
-    "section": "Discrete variables",
-    "text": "Discrete variables\nThe variable takes finite or countably infinite values.\n\nToss a coin four times, the number of heads you get\nThe attendance to a basketball game\nThe number of orders that an online shop receives in a day",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.2 Population, sample, and variable"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#continuous-variables",
-    "href": "lecture-slides/ch01/02-population-sample-variable.html#continuous-variables",
-    "title": "1.2 Population, sample, and variable",
-    "section": "Continuous variables",
-    "text": "Continuous variables\nThe variable takes infinitely many, uncountable values.\n\nThe water level of dam\nThe speed of riding a bicycle\nThe time when an order arrives at a shop\n\n\nIf it can take on two particular real values, it can also take on all real values between them.\n\n\n\nIf you can count it, it is discrete.\nIf you need to measure it, it is continuous.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.2 Population, sample, and variable"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#univariate-vs.-multivariate",
-    "href": "lecture-slides/ch01/02-population-sample-variable.html#univariate-vs.-multivariate",
-    "title": "1.2 Population, sample, and variable",
-    "section": "Univariate vs. multivariate",
-    "text": "Univariate vs. multivariate\nUnivariate: A single variable\n\nBattery life of a cellphone model\nBlood sugar level of diabetic patients\n\n\nThis course focuses mostly on a single variable (except for Chapter 5. Joint Distributions).",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.2 Population, sample, and variable"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#multivariate",
-    "href": "lecture-slides/ch01/02-population-sample-variable.html#multivariate",
-    "title": "1.2 Population, sample, and variable",
-    "section": "Multivariate",
-    "text": "Multivariate\nStudying the relationship among two or more variables",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.2 Population, sample, and variable"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#section-1",
-    "href": "lecture-slides/ch01/02-population-sample-variable.html#section-1",
-    "title": "1.2 Population, sample, and variable",
-    "section": "",
-    "text": "IMSE 440 Applied Statistical Models in Engineering\nOffered in Winter semesters",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.2 Population, sample, and variable"
-    ]
-  },
-  {
     "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#four-levels-of-measurement",
     "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#four-levels-of-measurement",
     "title": "1.3 Four levels of measurement",
@@ -424,42 +221,206 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/04-graphical-integrity.html#the-principle-of-.redproportional-ink",
-    "href": "lecture-slides/ch01/04-graphical-integrity.html#the-principle-of-.redproportional-ink",
-    "title": "Graphical integrity",
-    "section": "The Principle of .red[Proportional Ink]",
-    "text": "The Principle of .red[Proportional Ink]\nThe representation of numbers,\nas physically measured on the surface of the graphic itself (i.e., the amount of ink used),\n.red[should be directly proportional to the numerical quantities represented.]",
+    "objectID": "lecture-slides/ch01/01-course-intro.html#what-is-probability",
+    "href": "lecture-slides/ch01/01-course-intro.html#what-is-probability",
+    "title": "1.1 Course introduction",
+    "section": "What is probability?",
+    "text": "What is probability?\n\n\nSource: Merriam-Webster",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "Graphical integrity"
+      "1.1 Course introduction"
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/04-graphical-integrity.html#the-principle-of-proportional-ink",
-    "href": "lecture-slides/ch01/04-graphical-integrity.html#the-principle-of-proportional-ink",
-    "title": "1.4 Graphical integrity",
-    "section": "The Principle of Proportional Ink",
-    "text": "The Principle of Proportional Ink\n\nThe representation of numbers, as physically measured on the surface of the graphic itself (i.e., the amount of ink used),\nshould be directly proportional to the numerical quantities represented.",
+    "objectID": "lecture-slides/ch01/01-course-intro.html#pierre-simon-laplace",
+    "href": "lecture-slides/ch01/01-course-intro.html#pierre-simon-laplace",
+    "title": "1.1 Course introduction",
+    "section": "Pierre-Simon Laplace",
+    "text": "Pierre-Simon Laplace",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "1.4 Graphical integrity"
+      "1.1 Course introduction"
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/04-graphical-integrity.html#section-5",
-    "href": "lecture-slides/ch01/04-graphical-integrity.html#section-5",
-    "title": "1.4 Graphical integrity",
+    "objectID": "lecture-slides/ch01/01-course-intro.html#which-one-is-more-likely",
+    "href": "lecture-slides/ch01/01-course-intro.html#which-one-is-more-likely",
+    "title": "1.1 Course introduction",
+    "section": "Which one is more likely?",
+    "text": "Which one is more likely?\n\n\nRoll one (six-sided) die 🎲\n\nGetting an even number\nGetting an odd number\n\n\n\n\nRoll two dice 🎲 🎲\n\nGetting a sum of 7\nGetting a sum of 12\n\n\nRoll three dice 🎲 🎲 🎲\n\nGetting a sum of 11\nGetting a sum of 12",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.1 Course introduction"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#section",
+    "href": "lecture-slides/ch01/01-course-intro.html#section",
+    "title": "1.1 Course introduction",
     "section": "",
-    "text": "Friends don’t let friends make 3D pie charts.",
+    "text": "“Probability is common sense reduced to calculation.”\n\n\nPierre-Simon Laplace",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "1.4 Graphical integrity"
+      "1.1 Course introduction"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#what-is-statistics",
+    "href": "lecture-slides/ch01/01-course-intro.html#what-is-statistics",
+    "title": "1.1 Course introduction",
+    "section": "What is statistics?",
+    "text": "What is statistics?\n\nThe science of collecting, analyzing, presenting, and interpreting data.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.1 Course introduction"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#airline-travelers-club",
+    "href": "lecture-slides/ch01/01-course-intro.html#airline-travelers-club",
+    "title": "1.1 Course introduction",
+    "section": "Airline travelers’ club",
+    "text": "Airline travelers’ club\n\nAn airline offers an executive club and claim that 10% of its customers would qualify for the membership.\nYou suspect it is actually less than 10%.\nYou randomly selected 1000 customers, and found 91 of them would qualify.\nIs the airline’s premise correct?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.1 Course introduction"
+    ]
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Fall 2025 - 3 Credit Hours"
+  },
+  {
+    "objectID": "syllabus.html#food-pantry",
+    "href": "syllabus.html#food-pantry",
+    "title": "Syllabus",
+    "section": "Food pantry",
+    "text": "Food pantry\nThe pantry exists to support individuals on their journey as they work toward achieving their goals. We are committed to increasing access to food as a key to success, by assisting any student in need! If you need access or have questions, please contact the Office of Student Life by phone at 313-593-5390, by email at umdearbornpantry@umich.edu."
+  },
+  {
+    "objectID": "syllabus.html#university-wide-policies-statements",
+    "href": "syllabus.html#university-wide-policies-statements",
+    "title": "Syllabus",
+    "section": "University-wide policies & statements",
+    "text": "University-wide policies & statements\nPlease see the Course Policies menu on Canvas for information on the following topics. To find the Course Policies menu on Canvas, log into any course in Canvas, and then on the blue ribbon on the far left scroll down to Course Policies and click on it. This opens a white ribbon with individual links to UM-Dearborn websites on the following topics:\n\nUniversity Attendance Policy\nAcademic Integrity Policy\nCounseling\nDisability and Accessibility Services\nSafety Statement\nHarassment, Sexual Violence, Bias, and Discrimination"
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#population",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#population",
+    "title": "1.2 Population, sample, and variable",
+    "section": "Population",
+    "text": "Population\n\nDefinition: A collection of objects of interest in a study\nStudying who will win an upcoming mayoral election\n\nPopulation: Everyone who are planning to vote\n\nStudying the defect rate of a cellphone screen from a manufacturer\n\nPopulation: All the cellphone screens made by the manufacturer",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.2 Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#sample",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#sample",
+    "title": "1.2 Population, sample, and variable",
+    "section": "Sample",
+    "text": "Sample\n\nDefinition: A subset of the population selected by a defined procedure\nStudying who will win an upcoming mayoral election\n\nSample: An telephone poll of 500 randomly selected potential voters\n\nStudying the defect rate of a cellphone screen from a manufacturer\n\nSample: 200 randomly selected screens for inspection",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.2 Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#variable",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#variable",
+    "title": "1.2 Population, sample, and variable",
+    "section": "Variable",
+    "text": "Variable\n\nDefinition: A characteristic of interest for the elements\nHouses\n\nsize, # of bedrooms, year built, school district, …\n\nPatients\n\nage, weight, blood sugar level, …\n\nUniversities\n\ntuition, enrollment, graduation rate, …",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.2 Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#discrete-variables",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#discrete-variables",
+    "title": "1.2 Population, sample, and variable",
+    "section": "Discrete variables",
+    "text": "Discrete variables\nThe variable takes finite or countably infinite values.\n\nToss a coin four times, the number of heads you get\nThe attendance to a basketball game\nThe number of orders that an online shop receives in a day",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.2 Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#continuous-variables",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#continuous-variables",
+    "title": "1.2 Population, sample, and variable",
+    "section": "Continuous variables",
+    "text": "Continuous variables\nThe variable takes infinitely many, uncountable values.\n\nThe water level of dam\nThe speed of riding a bicycle\nThe time when an order arrives at a shop\n\n\nIf it can take on two particular real values, it can also take on all real values between them.\n\n\n\nIf you can count it, it is discrete.\nIf you need to measure it, it is continuous.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.2 Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#univariate-vs.-multivariate",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#univariate-vs.-multivariate",
+    "title": "1.2 Population, sample, and variable",
+    "section": "Univariate vs. multivariate",
+    "text": "Univariate vs. multivariate\nUnivariate: A single variable\n\nBattery life of a cellphone model\nBlood sugar level of diabetic patients\n\n\nThis course focuses mostly on a single variable (except for Chapter 5. Joint Distributions).",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.2 Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#multivariate",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#multivariate",
+    "title": "1.2 Population, sample, and variable",
+    "section": "Multivariate",
+    "text": "Multivariate\nStudying the relationship among two or more variables",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.2 Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#section-1",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#section-1",
+    "title": "1.2 Population, sample, and variable",
+    "section": "",
+    "text": "IMSE 440 Applied Statistical Models in Engineering\nOffered in Winter semesters",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.2 Population, sample, and variable"
     ]
   },
   {
@@ -541,6 +502,19 @@
     ]
   },
   {
+    "objectID": "lecture-slides/ch01/05-measures-of-location.html#section-1",
+    "href": "lecture-slides/ch01/05-measures-of-location.html#section-1",
+    "title": "1.5 Measures of location",
+    "section": "",
+    "text": "\\[50, 50, 50, 50, 50, 50, 50, 50, 50, 550\\]\n\nSample mean is sensitive to the presence of outliers1, especially for small data sets.\ndata points that lie at an abnormal distance from the rest.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.5 Measures of location"
+    ]
+  },
+  {
     "objectID": "lecture-slides/ch01/05-measures-of-location.html#sample-median",
     "href": "lecture-slides/ch01/05-measures-of-location.html#sample-median",
     "title": "1.5 Measures of location",
@@ -567,11 +541,11 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/05-measures-of-location.html#the-earlier-example",
-    "href": "lecture-slides/ch01/05-measures-of-location.html#the-earlier-example",
+    "objectID": "lecture-slides/ch01/05-measures-of-location.html#the-earlier-startup-company-example",
+    "href": "lecture-slides/ch01/05-measures-of-location.html#the-earlier-startup-company-example",
     "title": "1.5 Measures of location",
-    "section": "The earlier example",
-    "text": "The earlier example\n\nIn a company of ten people,\nNine employees earn a salary of .red[$50k] a year each;\nThe CEO earns .red[$550k] a year.\n\n\n\\[50, 50, 50, 50, 50, 50, 50, 50, 50, 550\\]\n\n\n\\[\\tilde{x} = \\frac{1}{2}(50 + 50)=50\\]\n\nThe median of $50k is arguably more “typical”.\n\nThe median is less sensitive to outliers.",
+    "section": "The earlier startup company example",
+    "text": "The earlier startup company example\n\\[50, 50, 50, 50, 50, 50, 50, 50, 50, 550\\]\n\n\\[\\tilde{x} = \\frac{1}{2}(50 + 50)=50\\]\n\nThe median of $50k is arguably more “typical”.\nThe median is less sensitive to outliers.",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -598,19 +572,6 @@
     "title": "1.5 Measures of location",
     "section": "\\(x\\text{-th}\\) percentile",
     "text": "\\(x\\text{-th}\\) percentile\nThe value below which \\(x\\%\\) of the data will be found.\n\n\n\n\n\n\nImage source",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.5 Measures of location"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/05-measures-of-location.html#section-1",
-    "href": "lecture-slides/ch01/05-measures-of-location.html#section-1",
-    "title": "1.5 Measures of location",
-    "section": "",
-    "text": "\\[50, 50, 50, 50, 50, 50, 50, 50, 50, 550\\]\n\nSample mean is sensitive to the presence of outliers1, especially for small data sets.\ndata points that lie at an abnormal distance from the rest.",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -671,58 +632,6 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/05-measures-of-location.html#descriptive-statistics-with-python-numpy",
-    "href": "lecture-slides/ch01/05-measures-of-location.html#descriptive-statistics-with-python-numpy",
-    "title": "1.5 Measures of location",
-    "section": "Descriptive statistics with Python numpy",
-    "text": "Descriptive statistics with Python numpy\nGo to Google Colab and sign in. Open a new notebook.\nimport numpy\n\nx = [12, 34, 14, 5, 44, 28, 22, 19, 36, 25]\nnumpy.mean(x)\nnumpy.median(x)\nnumpy.quantile(x, 0.5)",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.5 Measures of location"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/05-measures-of-location.html#descriptive-statistics-with-python-pandas",
-    "href": "lecture-slides/ch01/05-measures-of-location.html#descriptive-statistics-with-python-pandas",
-    "title": "1.5 Measures of location",
-    "section": "Descriptive statistics with Python pandas",
-    "text": "Descriptive statistics with Python pandas\nimport pandas\n\nurl = \"https://imse317.github.io/data/bank.csv\"\nbank = pandas.read_csv(url)\nbank.head()\nbank.describe()\nbank[\"age\"].mean()\nbank[\"age\"].median()\nbank[\"age\"].quantile(0.99)",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.5 Measures of location"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/05-measures-of-location.html#section-2",
-    "href": "lecture-slides/ch01/05-measures-of-location.html#section-2",
-    "title": "1.5 Measures of location",
-    "section": "",
-    "text": "\\[\\text{Percentile} = \\frac{r-0.5}{n}\\times100\\]\n\n\n\n\n\n\n\n\n\\(\\text{ Rank}(r)\\)\n  \\(x_i\\)  \n \\(\\text{Percentile}\\) \n\n\n\n\n\\(1\\)\n\\(5\\)\n\\(5\\text{th}\\)\n\n\n\\(2\\)\n\\(12\\)\n\\(15\\text{th}\\)\n\n\n\\(3\\)\n\\(14\\)\n\\(25\\text{th}\\)\n\n\n\\(4\\)\n\\(19\\)\n\\(35\\text{th}\\)\n\n\n\\(5\\)\n\\(22\\)\n\\(45\\text{th}\\)\n\n\n\\(6\\)\n\\(25\\)\n\\(55\\text{th}\\)\n\n\n\\(7\\)\n\\(28\\)\n\\(65\\text{th}\\)\n\n\n\\(8\\)\n\\(34\\)\n\\(75\\text{th}\\)\n\n\n\\(9\\)\n\\(36\\)\n\\(85\\text{th}\\)\n\n\n\\(10\\)\n\\(44\\)\n\\(95\\text{th}\\)",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.5 Measures of location"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/05-measures-of-location.html#the-earlier-startup-company-example",
-    "href": "lecture-slides/ch01/05-measures-of-location.html#the-earlier-startup-company-example",
-    "title": "1.5 Measures of location",
-    "section": "The earlier startup company example",
-    "text": "The earlier startup company example\n\\[50, 50, 50, 50, 50, 50, 50, 50, 50, 550\\]\n\n\\[\\tilde{x} = \\frac{1}{2}(50 + 50)=50\\]\n\nThe median of $50k is arguably more “typical”.\nThe median is less sensitive to outliers.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.5 Measures of location"
-    ]
-  },
-  {
     "objectID": "lecture-slides/ch01/05-measures-of-location.html#descriptive-statistics-with-python",
     "href": "lecture-slides/ch01/05-measures-of-location.html#descriptive-statistics-with-python",
     "title": "1.5 Measures of location",
@@ -746,6 +655,32 @@
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
       "1.5 Measures of location"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/04-graphical-integrity.html#the-principle-of-proportional-ink",
+    "href": "lecture-slides/ch01/04-graphical-integrity.html#the-principle-of-proportional-ink",
+    "title": "1.4 Graphical integrity",
+    "section": "The Principle of Proportional Ink",
+    "text": "The Principle of Proportional Ink\n\nThe representation of numbers, as physically measured on the surface of the graphic itself (i.e., the amount of ink used),\nshould be directly proportional to the numerical quantities represented.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.4 Graphical integrity"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/04-graphical-integrity.html#section-5",
+    "href": "lecture-slides/ch01/04-graphical-integrity.html#section-5",
+    "title": "1.4 Graphical integrity",
+    "section": "",
+    "text": "Friends don’t let friends make 3D pie charts.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.4 Graphical integrity"
     ]
   }
 ]
