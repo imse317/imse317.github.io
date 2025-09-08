@@ -1,699 +1,288 @@
 [
   {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#four-levels-of-measurement",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#four-levels-of-measurement",
-    "title": "1.3 Four levels of measurement",
-    "section": "Four levels of measurement",
-    "text": "Four levels of measurement",
+    "objectID": "lecture-slides/ch02/02-set-operations.html#union-of-two-events-a-and-b",
+    "href": "lecture-slides/ch02/02-set-operations.html#union-of-two-events-a-and-b",
+    "title": "2.2 Set operations",
+    "section": "Union of two events A and B",
+    "text": "Union of two events A and B\nThe event consisting of all outcomes that are in either A or B.\nNotation: \\(A \\cup B\\)  (Reads: A union B)\n\nRoll a six-sided die 🎲\n\\[\n\\begin{aligned}\nA &= \\{ 5, 6 \\} \\\\\n\\\\\nB &= \\{ 1, 3, 5 \\} \\\\\n\\\\\nA \\cup B &= \\\\\n\\end{aligned}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
+      "Chapter 2. Probability",
+      "2.2 Set operations"
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#why-do-we-care",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#why-do-we-care",
-    "title": "1.3 Four levels of measurement",
-    "section": "Why do we care?",
-    "text": "Why do we care?\nThe level dictates what we can do with the data.",
+    "objectID": "lecture-slides/ch02/02-set-operations.html#intersection-of-two-events-a-and-b",
+    "href": "lecture-slides/ch02/02-set-operations.html#intersection-of-two-events-a-and-b",
+    "title": "2.2 Set operations",
+    "section": "Intersection of two events A and B",
+    "text": "Intersection of two events A and B\nThe event consisting of all outcomes that are in both A and B.\nNotation: \\(A \\cap B\\)  (Reads: A intersect B)\n\nRoll a six-sided die 🎲\n\\[\n\\begin{aligned}\nA &= \\{ 5, 6 \\} \\\\\n\\\\\nB &= \\{ 1, 3, 5 \\} \\\\\n\\\\\nA \\cap B &=\n\\end{aligned}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
+      "Chapter 2. Probability",
+      "2.2 Set operations"
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#nominal-or-categorical-data",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#nominal-or-categorical-data",
-    "title": "1.3 Four levels of measurement",
-    "section": "Nominal (or categorical) data",
-    "text": "Nominal (or categorical) data\nWhen numbers are not numbers\n\nThey act like names or labels.\nCan not be put into order.\n\n\nExamples\n\nCountry code: 1 (USA), 44 (UK), 81 (Japan), …\nSocial security numbers\nYour UMID\nMarital status: single, married, divorced, …",
+    "objectID": "lecture-slides/ch02/02-set-operations.html#commutative-property",
+    "href": "lecture-slides/ch02/02-set-operations.html#commutative-property",
+    "title": "2.2 Set operations",
+    "section": "Commutative property",
+    "text": "Commutative property\n\n\\[ a + b = b + a \\]\n\n\n\\[ a \\times b = b \\times a \\]\n\n\n \\[ A \\cup B = B \\cup A \\]\n\n\n\\[ A \\cap B = B \\cap A \\]",
     "crumbs": [
       "Home",
       "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
+      "Chapter 2. Probability",
+      "2.2 Set operations"
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon",
-    "title": "1.3 Four levels of measurement",
-    "section": "Tokyo Olympics men’s marathon",
-    "text": "Tokyo Olympics men’s marathon\n\nWhat information are nominal data?",
+    "objectID": "lecture-slides/ch02/02-set-operations.html#associative-property",
+    "href": "lecture-slides/ch02/02-set-operations.html#associative-property",
+    "title": "2.2 Set operations",
+    "section": "Associative property",
+    "text": "Associative property\n\n\\[ (a + b) + c = a + (b + c) \\]\n\n\n\\[ (a \\times b) \\times c = a \\times (b \\times c) \\]\n\n\n \\[ (A \\cup B) \\cup C = A \\cup (B \\cup C) \\]\n\n\n\\[ (A \\cap B) \\cap C = A \\cap (B \\cap C) \\]",
     "crumbs": [
       "Home",
       "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
+      "Chapter 2. Probability",
+      "2.2 Set operations"
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#nominal-or-categorical-data-1",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#nominal-or-categorical-data-1",
-    "title": "1.3 Four levels of measurement",
-    "section": "Nominal (or categorical) data",
-    "text": "Nominal (or categorical) data\nImplications\n\nThey can not be compared (e.g., \\(&gt;, &lt;\\))\nWe can not carry out any calculations (\\(+,  −,  ×, \\div\\))\nThe only math operations that can be done are \\(=, \\neq\\)",
+    "objectID": "lecture-slides/ch02/02-set-operations.html#distributive-property",
+    "href": "lecture-slides/ch02/02-set-operations.html#distributive-property",
+    "title": "2.2 Set operations",
+    "section": "Distributive property",
+    "text": "Distributive property\n\n\\[ (a + b) \\times c = (a \\times c) + (b \\times c) \\]\n\n\n \\[ (A \\cup B) \\cap C = (A \\cap C) \\cup (B \\cap C) \\]\n\n\n\\[ (A \\cap B) \\cup C = (A \\cup C) \\cap (B \\cup C) \\]",
     "crumbs": [
       "Home",
       "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
+      "Chapter 2. Probability",
+      "2.2 Set operations"
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#ordinal-data",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#ordinal-data",
-    "title": "1.3 Four levels of measurement",
-    "section": "Ordinal data",
-    "text": "Ordinal data\nWhen numbers are almost numbers\n\nThey go into order.\nBut that’s about it.\nThey don’t tell us about the distance between two numbers.\nAirline cabin classes\n\n1: first class, 2: business, 3: premium economy, 4: economy\n\nHotel ratings (1-5 stars)",
+    "objectID": "lecture-slides/ch02/02-set-operations.html#mutually-exclusive-events",
+    "href": "lecture-slides/ch02/02-set-operations.html#mutually-exclusive-events",
+    "title": "2.2 Set operations",
+    "section": "Mutually exclusive events",
+    "text": "Mutually exclusive events\nNull event \\(\\Phi\\): the event consisting of no outcomes.\n\n\\(A\\) and \\(B\\) are mutually exclusive (or disjoint) events if they do not share any outcome, or simply\n\\[A \\cap B=\\Phi\\]\n\n\nRoll a six-sided die 🎲\n\\[\n\\begin{aligned}\nA &= \\{ 1, 3, 5\\} \\text{ (odd numbers)} \\\\\nB &= \\{ 2, 4, 6 \\} \\text{ (even numbers)} \\\\\nA \\cap B &= \\Phi \\\\\n\\end{aligned}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
+      "Chapter 2. Probability",
+      "2.2 Set operations"
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon-1",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon-1",
-    "title": "1.3 Four levels of measurement",
-    "section": "Tokyo Olympics men’s marathon",
-    "text": "Tokyo Olympics men’s marathon\n\nWhat information are ordinal data?",
+    "objectID": "lecture-slides/ch02/02-set-operations.html#complement-of-an-event-a",
+    "href": "lecture-slides/ch02/02-set-operations.html#complement-of-an-event-a",
+    "title": "2.2 Set operations",
+    "section": "Complement of an event A",
+    "text": "Complement of an event A\nThe set of all outcomes in \\(\\Omega\\) that are not in A.\nNotation: \\(A^c\\)  (Reads: A complement)\n\nBy definition,\n\\[A \\cap A^c = \\Phi\\]\n\n\n\\[A \\cup A^c = \\Omega\\]\n\n\nRoll a six-sided die 🎲\n\\[\n\\begin{aligned}\nA &= \\{ 5, 6 \\} \\\\\nA^c &= \\\\\n\\end{aligned}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
+      "Chapter 2. Probability",
+      "2.2 Set operations"
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#ordinal-data-1",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#ordinal-data-1",
-    "title": "1.3 Four levels of measurement",
-    "section": "Ordinal data",
-    "text": "Ordinal data\nImplications\n\nOrdinal numbers can be compared (e.g., \\(&gt;,  &lt;\\))\nHowever, we can not carry out calculations for differences or magnitudes (\\(−, \\div\\))",
+    "objectID": "lecture-slides/ch02/02-set-operations.html#subset",
+    "href": "lecture-slides/ch02/02-set-operations.html#subset",
+    "title": "2.2 Set operations",
+    "section": "Subset",
+    "text": "Subset\nAn event A is a subset of an event B if all outcomes in A are also outcomes in B.\nNotation: \\(A \\subseteq B\\)\n\nRoll a six-sided die 🎲\n\\[\n\\begin{aligned}\nA &= \\{ 1, 3, 5\\} \\text{ (odd numbers)} \\\\\n\\\\\nB &= \\{ 1, 2, 3, 4, 5 \\} \\text{ (less than 6)} \\\\\n\\\\\nA &\\subseteq B \\\\\n\\end{aligned}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
+      "Chapter 2. Probability",
+      "2.2 Set operations"
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#interval-ratio-data",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#interval-ratio-data",
-    "title": "1.3 Four levels of measurement",
-    "section": "Interval & ratio data",
-    "text": "Interval & ratio data\nWhen numbers are really numbers\n\nNot only can be put to order\nThe distance between them tell us something.\nTom drinks 3 cups of coffee. Kate drinks 1 cup.",
+    "objectID": "lecture-slides/ch02/02-set-operations.html#venn-diagram",
+    "href": "lecture-slides/ch02/02-set-operations.html#venn-diagram",
+    "title": "2.2 Set operations",
+    "section": "Venn diagram",
+    "text": "Venn diagram\nWhat is the red region in each Venn diagram?\n\n\n\n    \n    \n    \n    \n  \n\n    \n    \n  \n    \n      \n      \n    \n  \n    \\(A\\)\n    \\(B\\)\n    \\(\\Omega\\)\n  \n\n\n  \n  \n\n    \n  \n\n  \n    \n    \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)\n\n\n\n\n \n    \n    \n  \n    \n      \n      \n    \n  \n    \\(A\\)\n    \\(B\\)\n    \\(\\Omega\\)\n  \n\n\n\n \n    \n    \n    \n  \n    \n      \n      \n    \n  \n    \\(A\\)\n    \\(B\\)\n    \\(\\Omega\\)\n  \n\n\n\n\n  \n    \n      \n      \n    \n  \n\n  \n  \n\n  \n    \n    \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)\n\n\n\n\n \n    \n    \n    \n  \n    \n      \n      \n    \n  \n    \\(A\\)\n    \\(B\\)\n    \\(\\Omega\\)",
     "crumbs": [
       "Home",
       "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
+      "Chapter 2. Probability",
+      "2.2 Set operations"
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#ratio-data",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#ratio-data",
-    "title": "1.3 Four levels of measurement",
-    "section": "Ratio data",
-    "text": "Ratio data\nRatio data have a genuine1, non-arbitrary zero point.\n\nI have zero dollars.\n\nabsence of money\n\nI walk at a speed of 0 mph\n\nno movement\n\n\nA “genuine” zero means there is none of the thing being measured.",
+    "objectID": "lecture-slides/ch02/02-set-operations.html#de-morgans-laws-i",
+    "href": "lecture-slides/ch02/02-set-operations.html#de-morgans-laws-i",
+    "title": "2.2 Set operations",
+    "section": "De Morgan’s laws (I)",
+    "text": "De Morgan’s laws (I)\n\n \n    \n    \n    \n  \n    \n      \n      \n    \n  \n    \\(A\\)\n    \\(B\\)\n    \\(\\Omega\\)\n \n\n \n \n  \n  \n\n  \n    \n    \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)\n\n\n\n\n  \n  \n\n  \n    \n    \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)\n\n\n\\[ (A \\cup B)^c = A^c \\cap B^c \\]",
     "crumbs": [
       "Home",
       "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
+      "Chapter 2. Probability",
+      "2.2 Set operations"
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#examples-of-ratio-data",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#examples-of-ratio-data",
-    "title": "1.3 Four levels of measurement",
-    "section": "Examples of ratio data",
-    "text": "Examples of ratio data\n\nLength (100 meters)\nWeight (50 lbs)\nSize (800 square feet)\nSpeed (20 mph)\nTime duration (5 hours)\n\n\nThe majority of scientific measures are ratio measures.",
+    "objectID": "lecture-slides/ch02/02-set-operations.html#de-morgans-laws-ii",
+    "href": "lecture-slides/ch02/02-set-operations.html#de-morgans-laws-ii",
+    "title": "2.2 Set operations",
+    "section": "De Morgan’s laws (II)",
+    "text": "De Morgan’s laws (II)\n\n\n  \n    \n      \n      \n    \n  \n\n  \n  \n  \n\n  \n    \n    \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)\n\n\n\n \n    \n    \n  \n    \n      \n      \n    \n  \n    \\(A\\)\n    \\(B\\)\n    \\(\\Omega\\)\n  \n\n\n \n    \n    \n  \n    \n      \n      \n    \n  \n    \\(A\\)\n    \\(B\\)\n    \\(\\Omega\\)\n  \n\\[ (A \\cap B)^c = A^c \\cup B^c \\]",
     "crumbs": [
       "Home",
       "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
+      "Chapter 2. Probability",
+      "2.2 Set operations"
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#interval-data",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#interval-data",
-    "title": "1.3 Four levels of measurement",
-    "section": "Interval data",
-    "text": "Interval data\nInterval data have an arbitrary zero point.\nZero does not mean there is none of the things being measured.\n\nWhat is the temperature for 0°C?\n\n0°C does not mean there is no warmth.\n\nCalendar year 2025. What does year 0 mean?\n\nYear 0 does not mean it’s the beginning of time.\n\nWhat is longitude (geographic coordinate) of 0°?\n\nPrime meridian",
+    "objectID": "lecture-slides/ch02/02-set-operations.html#venn-diagram-1",
+    "href": "lecture-slides/ch02/02-set-operations.html#venn-diagram-1",
+    "title": "2.2 Set operations",
+    "section": "Venn diagram",
+    "text": "Venn diagram\n\\[ A \\cap B = \\Phi \\]\n\n\n\n\n  \n  \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)",
     "crumbs": [
       "Home",
       "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
+      "Chapter 2. Probability",
+      "2.2 Set operations"
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#examples-of-interval-data",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#examples-of-interval-data",
-    "title": "1.3 Four levels of measurement",
-    "section": "Examples of interval data",
-    "text": "Examples of interval data\n\nTemperature in Fahrenheit (70°F) or Celsius (20°C)\nCalendar year\nGPS coordinates (42.3185, -83.2327)\nGPS heading (90°)",
+    "objectID": "lecture-slides/ch02/02-set-operations.html#venn-diagram-2",
+    "href": "lecture-slides/ch02/02-set-operations.html#venn-diagram-2",
+    "title": "2.2 Set operations",
+    "section": "Venn diagram",
+    "text": "Venn diagram\n\\[ A \\subseteq B \\]\n\n\n\n\n  \n\n  \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)",
     "crumbs": [
       "Home",
       "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
+      "Chapter 2. Probability",
+      "2.2 Set operations"
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#implications-without-a-genuine-zero",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#implications-without-a-genuine-zero",
-    "title": "1.3 Four levels of measurement",
-    "section": "Implications without a genuine zero",
-    "text": "Implications without a genuine zero\nWe can talk about ratios with ratio measures (duh!)\n\nTom drinks ☕☕☕. Kate drinks ☕.\n\nTom drink ☕☕ more coffee than Kate.\nTom drink 3 times as much coffee as Kate.\n\nToday is 40°F. Yesterday was 20°F.\n\nToday is 20°F warmer than yesterday.\nThe average temp of the two days is 30°F.\nToday is twice as warm as yesterday.",
+    "objectID": "lecture-slides/ch02/01-sample-space-events.html#sample-space",
+    "href": "lecture-slides/ch02/01-sample-space-events.html#sample-space",
+    "title": "2.1 Sample space, events",
+    "section": "Sample space",
+    "text": "Sample space\n\nProbability starts with a sample space, which is a set that describes all possible outcomes in an experiment.\n\n\nIt must be collectively exhaustive & mutually exclusive.\n\nFlip a coin once 🪙 \\[\\Omega = \\{\\text{heads (H), tails (T)}\\}\\]\nFlip a coin twice 🪙 🪙\n\\[\\Omega = \\{(\\text{H, H}), (\\text{H, T}), (\\text{T, H}), (\\text{T, T})\\}\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
+      "Chapter 2. Probability",
+      "2.1 Sample space, events"
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#implications-without-a-genuine-zero-1",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#implications-without-a-genuine-zero-1",
-    "title": "1.3 Four levels of measurement",
-    "section": "Implications without a genuine zero",
-    "text": "Implications without a genuine zero\n\nWith interval data\n\nwe can calculate the difference (\\(-\\)).\nwe can not calculate the ratio (\\(\\div\\)).\n\nWith ratio data we can carry out most calculations.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon-2",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon-2",
-    "title": "1.3 Four levels of measurement",
-    "section": "Tokyo Olympics men’s marathon",
-    "text": "Tokyo Olympics men’s marathon\n\nWhat information are ratio data?",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#qualitative-and-quantitative-data",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#qualitative-and-quantitative-data",
-    "title": "1.3 Four levels of measurement",
-    "section": "Qualitative and quantitative data",
-    "text": "Qualitative and quantitative data",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#population",
-    "href": "lecture-slides/ch01/02-population-sample-variable.html#population",
-    "title": "1.2 Population, sample, and variable",
-    "section": "Population",
-    "text": "Population\n\nDefinition: A collection of objects of interest in a study\nStudying who will win an upcoming mayoral election\n\nPopulation: Everyone who are planning to vote\n\nStudying the defect rate of a cellphone screen from a manufacturer\n\nPopulation: All the cellphone screens made by the manufacturer",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.2 Population, sample, and variable"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#sample",
-    "href": "lecture-slides/ch01/02-population-sample-variable.html#sample",
-    "title": "1.2 Population, sample, and variable",
-    "section": "Sample",
-    "text": "Sample\n\nDefinition: A subset of the population selected by a defined procedure\nStudying who will win an upcoming mayoral election\n\nSample: An telephone poll of 500 randomly selected potential voters\n\nStudying the defect rate of a cellphone screen from a manufacturer\n\nSample: 200 randomly selected screens for inspection",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.2 Population, sample, and variable"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#variable",
-    "href": "lecture-slides/ch01/02-population-sample-variable.html#variable",
-    "title": "1.2 Population, sample, and variable",
-    "section": "Variable",
-    "text": "Variable\n\nDefinition: A characteristic of interest for the elements\nHouses\n\nsize, # of bedrooms, year built, school district, …\n\nPatients\n\nage, weight, blood sugar level, …\n\nUniversities\n\ntuition, enrollment, graduation rate, …",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.2 Population, sample, and variable"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#discrete-variables",
-    "href": "lecture-slides/ch01/02-population-sample-variable.html#discrete-variables",
-    "title": "1.2 Population, sample, and variable",
-    "section": "Discrete variables",
-    "text": "Discrete variables\nThe variable takes finite or countably infinite values.\n\nToss a coin four times, the number of heads you get\nThe attendance to a basketball game\nThe number of orders that an online shop receives in a day",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.2 Population, sample, and variable"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#continuous-variables",
-    "href": "lecture-slides/ch01/02-population-sample-variable.html#continuous-variables",
-    "title": "1.2 Population, sample, and variable",
-    "section": "Continuous variables",
-    "text": "Continuous variables\nThe variable takes infinitely many, uncountable values.\n\nThe water level of dam\nThe speed of riding a bicycle\nThe time when an order arrives at a shop\n\n\nIf it can take on two particular real values, it can also take on all real values between them.\n\n\n\nIf you can count it, it is discrete.\nIf you need to measure it, it is continuous.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.2 Population, sample, and variable"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#univariate-vs.-multivariate",
-    "href": "lecture-slides/ch01/02-population-sample-variable.html#univariate-vs.-multivariate",
-    "title": "1.2 Population, sample, and variable",
-    "section": "Univariate vs. multivariate",
-    "text": "Univariate vs. multivariate\nUnivariate: A single variable\n\nBattery life of a cellphone model\nBlood sugar level of diabetic patients\n\n\nThis course focuses mostly on a single variable (except for Chapter 5. Joint Distributions).",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.2 Population, sample, and variable"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#multivariate",
-    "href": "lecture-slides/ch01/02-population-sample-variable.html#multivariate",
-    "title": "1.2 Population, sample, and variable",
-    "section": "Multivariate",
-    "text": "Multivariate\nStudying the relationship among two or more variables",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.2 Population, sample, and variable"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#section-1",
-    "href": "lecture-slides/ch01/02-population-sample-variable.html#section-1",
-    "title": "1.2 Population, sample, and variable",
+    "objectID": "lecture-slides/ch02/01-sample-space-events.html#section",
+    "href": "lecture-slides/ch02/01-sample-space-events.html#section",
+    "title": "2.1 Sample space, events",
     "section": "",
-    "text": "IMSE 440 Applied Statistical Models in Engineering\nOffered in Winter semesters",
+    "text": "Roll a six-sided die once 🎲 \\[\\Omega = \\{ ⚀, ⚁, ⚂, ⚃, ⚄, ⚅ \\}\\]\nRoll a six-sided die twice 🎲 🎲 \\[\n  \\begin{aligned}\n  \\Omega = \\{&⚀⚀, ⚀⚁, ⚀⚂, ⚀⚃, ⚀⚄, ⚀⚅, \\\\\n              &⚁⚀, ⚁⚁, ⚁⚂, ⚁⚃, ⚁⚄, ⚁⚅, \\\\\n              &⚂⚀, ⚂⚁, ⚂⚂, ⚂⚃, ⚂⚄, ⚂⚅, \\\\\n              &⚃⚀, ⚃⚁, ⚃⚂, ⚃⚃, ⚃⚄, ⚃⚅, \\\\\n              &⚄⚀, ⚄⚁, ⚄⚂, ⚄⚃, ⚄⚄, ⚄⚅, \\\\\n              &⚅⚀, ⚅⚁, ⚅⚂, ⚅⚃, ⚅⚄, ⚅⚅ \\}\n  \\end{aligned}\n  \\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.1 Sample space, events"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/01-sample-space-events.html#exercise",
+    "href": "lecture-slides/ch02/01-sample-space-events.html#exercise",
+    "title": "2.1 Sample space, events",
+    "section": "Exercise",
+    "text": "Exercise\nWe bet on the total from a roll of two dice 🎲 🎲\nWhat is the sample space?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.1 Sample space, events"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/01-sample-space-events.html#event",
+    "href": "lecture-slides/ch02/01-sample-space-events.html#event",
+    "title": "2.1 Sample space, events",
+    "section": "Event",
+    "text": "Event\nA collection of outcomes in the sample space\nOr simply, a subset of the sample space.\n\nEvent A: Roll a die 🎲, it lands on an odd number.\n\n\n\\[A = \\{ ⚀, ⚂, ⚄ \\}\\]\n\nEvent B: Roll two dice 🎲 🎲, the total is under 7.\n\n\n\n\\[B = \\{ 2, 3, 4, 5, 6\\}\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.1 Sample space, events"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/01-sample-space-events.html#event-1",
+    "href": "lecture-slides/ch02/01-sample-space-events.html#event-1",
+    "title": "2.1 Sample space, events",
+    "section": "Event",
+    "text": "Event\n\nEvent C: Making at least one basketball free throw out of two \\[C=\\{(\\text{hit, hit}), (\\text{hit, miss}), (\\text{miss, hit})\\}\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.1 Sample space, events"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/01-sample-space-events.html#simple-compound-event",
+    "href": "lecture-slides/ch02/01-sample-space-events.html#simple-compound-event",
+    "title": "2.1 Sample space, events",
+    "section": "Simple & compound event",
+    "text": "Simple & compound event\nA simple event consists of a single outcome.\nA compound event consists of multiple outcomes.\n\nRoll a die 🎲, it lands on an odd number. \\[\\{ ⚀, ⚂, ⚄ \\}\\]\nRoll two dice 🎲🎲 and get a double. \\[\\{(⚀,⚀), (⚁, ⚁), (⚂, ⚂), (⚃, ⚃), (⚄, ⚄), (⚅, ⚅) \\}\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.1 Sample space, events"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/01-sample-space-events.html#simple-compound-event-1",
+    "href": "lecture-slides/ch02/01-sample-space-events.html#simple-compound-event-1",
+    "title": "2.1 Sample space, events",
+    "section": "Simple & compound event",
+    "text": "Simple & compound event\n\nRoll two dice 🎲 🎲, the total is 12. \\[\\{ (⚅, ⚅) \\}\\]\nA basketball player makes both free throws \\[\\{(\\text{hit, hit})\\}\\]\nMaking at least one free throw \\[\\{(\\text{hit, hit}), (\\text{hit, miss}), (\\text{miss, hit})\\}\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.1 Sample space, events"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/04-graphical-integrity.html#the-principle-of-proportional-ink",
+    "href": "lecture-slides/ch01/04-graphical-integrity.html#the-principle-of-proportional-ink",
+    "title": "1.4 Graphical integrity",
+    "section": "The Principle of Proportional Ink",
+    "text": "The Principle of Proportional Ink\n\nThe representation of numbers, as physically measured on the surface of the graphic itself (i.e., the amount of ink used),\nshould be directly proportional to the numerical quantities represented.",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "1.2 Population, sample, and variable"
+      "1.4 Graphical integrity"
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/01-course-intro.html#what-is-probability",
-    "href": "lecture-slides/ch01/01-course-intro.html#what-is-probability",
-    "title": "1.1 Course introduction",
-    "section": "What is probability?",
-    "text": "What is probability?\n\n\nSource: Merriam-Webster",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.1 Course introduction"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/01-course-intro.html#pierre-simon-laplace",
-    "href": "lecture-slides/ch01/01-course-intro.html#pierre-simon-laplace",
-    "title": "1.1 Course introduction",
-    "section": "Pierre-Simon Laplace",
-    "text": "Pierre-Simon Laplace",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.1 Course introduction"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/01-course-intro.html#which-one-is-more-likely",
-    "href": "lecture-slides/ch01/01-course-intro.html#which-one-is-more-likely",
-    "title": "1.1 Course introduction",
-    "section": "Which one is more likely?",
-    "text": "Which one is more likely?\n\n\nRoll one (six-sided) die 🎲\n\nGetting an even number\nGetting an odd number\n\n\n\n\nRoll two dice 🎲 🎲\n\nGetting a sum of 7\nGetting a sum of 12\n\n\nRoll three dice 🎲 🎲 🎲\n\nGetting a sum of 11\nGetting a sum of 12",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.1 Course introduction"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/01-course-intro.html#section",
-    "href": "lecture-slides/ch01/01-course-intro.html#section",
-    "title": "1.1 Course introduction",
+    "objectID": "lecture-slides/ch01/04-graphical-integrity.html#section-5",
+    "href": "lecture-slides/ch01/04-graphical-integrity.html#section-5",
+    "title": "1.4 Graphical integrity",
     "section": "",
-    "text": "“Probability is common sense reduced to calculation.”\n\n\nPierre-Simon Laplace",
+    "text": "Friends don’t let friends make 3D pie charts.",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "1.1 Course introduction"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/01-course-intro.html#what-is-statistics",
-    "href": "lecture-slides/ch01/01-course-intro.html#what-is-statistics",
-    "title": "1.1 Course introduction",
-    "section": "What is statistics?",
-    "text": "What is statistics?\n\nThe science of collecting, analyzing, presenting, and interpreting data.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.1 Course introduction"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/01-course-intro.html#airline-travelers-club",
-    "href": "lecture-slides/ch01/01-course-intro.html#airline-travelers-club",
-    "title": "1.1 Course introduction",
-    "section": "Airline travelers’ club",
-    "text": "Airline travelers’ club\n\nAn airline offers an executive club and claim that 10% of its customers would qualify for the membership.\nYou suspect it is actually less than 10%.\nYou randomly selected 1000 customers, and found 91 of them would qualify.\nIs the airline’s premise correct?",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.1 Course introduction"
-    ]
-  },
-  {
-    "objectID": "syllabus.html",
-    "href": "syllabus.html",
-    "title": "Syllabus",
-    "section": "",
-    "text": "Fall 2025 - 3 Credit Hours"
-  },
-  {
-    "objectID": "syllabus.html#food-pantry",
-    "href": "syllabus.html#food-pantry",
-    "title": "Syllabus",
-    "section": "Food pantry",
-    "text": "Food pantry\nThe pantry exists to support individuals on their journey as they work toward achieving their goals. We are committed to increasing access to food as a key to success, by assisting any student in need! If you need access or have questions, please contact the Office of Student Life by phone at 313-593-5390, by email at umdearbornpantry@umich.edu."
-  },
-  {
-    "objectID": "syllabus.html#university-wide-policies-statements",
-    "href": "syllabus.html#university-wide-policies-statements",
-    "title": "Syllabus",
-    "section": "University-wide policies & statements",
-    "text": "University-wide policies & statements\nPlease see the Course Policies menu on Canvas for information on the following topics. To find the Course Policies menu on Canvas, log into any course in Canvas, and then on the blue ribbon on the far left scroll down to Course Policies and click on it. This opens a white ribbon with individual links to UM-Dearborn websites on the following topics:\n\nUniversity Attendance Policy\nAcademic Integrity Policy\nCounseling\nDisability and Accessibility Services\nSafety Statement\nHarassment, Sexual Violence, Bias, and Discrimination"
-  },
-  {
-    "objectID": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet",
-    "href": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet",
-    "title": "1.7 Data visualization",
-    "section": "Anscombe’s quartet",
-    "text": "Anscombe’s quartet",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.7 Data visualization"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet-1",
-    "href": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet-1",
-    "title": "1.7 Data visualization",
-    "section": "Anscombe’s quartet",
-    "text": "Anscombe’s quartet\nAll four data sets share the same following statistics:",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.7 Data visualization"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet-2",
-    "href": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet-2",
-    "title": "1.7 Data visualization",
-    "section": "Anscombe’s quartet",
-    "text": "Anscombe’s quartet",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.7 Data visualization"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/07-data-visualization.html#heights-in-feet-of-216-volcanoes",
-    "href": "lecture-slides/ch01/07-data-visualization.html#heights-in-feet-of-216-volcanoes",
-    "title": "1.7 Data visualization",
-    "section": "Heights (in feet) of 216 volcanoes",
-    "text": "Heights (in feet) of 216 volcanoes\n\n\\[19882, 19728, 19335, 19287, \\cdots, 617, 555, 529, 242\\]\nvolcano-heights.csv",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.7 Data visualization"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/07-data-visualization.html#histogram",
-    "href": "lecture-slides/ch01/07-data-visualization.html#histogram",
-    "title": "1.7 Data visualization",
-    "section": "Histogram",
-    "text": "Histogram\n\n\nCount: The number of data points in a bin",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.7 Data visualization"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/07-data-visualization.html#histogram-1",
-    "href": "lecture-slides/ch01/07-data-visualization.html#histogram-1",
-    "title": "1.7 Data visualization",
-    "section": "Histogram",
-    "text": "Histogram\n\n\n\\[\\text{percent (or relative frequency)}=\\frac{\\text{frequency}}{\\text{total # of data points}}\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.7 Data visualization"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/07-data-visualization.html#plotting-with-python",
-    "href": "lecture-slides/ch01/07-data-visualization.html#plotting-with-python",
-    "title": "1.7 Data visualization",
-    "section": "Plotting with Python",
-    "text": "Plotting with Python\nGo to Google Colab and sign in. Open a new notebook.\nimport numpy\nimport pandas\n\nurl = \"https://imse317.github.io/lecture-slides/ch01/data/bank.csv\"\nbank = pandas.read_csv(url)\nbank.head()\n\nimport seaborn.objects as so\n(\n    so.Plot(bank, x='age')\n    .add(so.Bars(), so.Hist(binrange=(0, 100), binwidth=5, stat='percent'))\n)",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.7 Data visualization"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread",
-    "title": "1.6 Measures of variability",
-    "section": "Measures of variability (or spread)",
-    "text": "Measures of variability (or spread)\n\n\nThe measures of center gives only partial information about the data.\nDifferent data may have similar measures of center yet differ from one another in other important ways.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-1",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-1",
-    "title": "1.6 Measures of variability",
-    "section": "Measures of variability (or spread)",
-    "text": "Measures of variability (or spread)\n\nHow about using the range to measure the variability?\n\\[ \\text{range} = \\text{maximum value} - \\text{minimum value}\\]\n\nRange is sensitive to outliers.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-2",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-2",
-    "title": "1.6 Measures of variability",
-    "section": "Measures of variability (or spread)",
-    "text": "Measures of variability (or spread)\n\n\nInterquartile range (IQR)\n\\[ \\text{IQR} = \\text{Third quartile} - \\text{First quartile}\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-3",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-3",
-    "title": "1.6 Measures of variability",
-    "section": "Measures of variability (or spread)",
-    "text": "Measures of variability (or spread)\nHow about measuring the deviations from the sample mean?\n\n\n\\[x_1-\\bar{x}, \\;x_2-\\bar{x}, \\;\\cdots, \\;x_n-\\bar{x}\\]\nThen, how about using the average deviation as a metric?\n\n\n\\[\\frac{1}{n}\\big[(x_1-\\bar{x}) + (x_2-\\bar{x}) + \\cdots + (x_n-\\bar{x})\\big]\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#section",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#section",
-    "title": "1.6 Measures of variability",
-    "section": "",
-    "text": "If we cannot use the average deviation as a metric for variability, what can we do then?\n\nOne solution is to use the absolute deviations. \\[\\frac{1}{n}\\bigg[|x_1-\\bar{x}| + |x_2-\\bar{x}| + \\cdots + |x_n-\\bar{x}|\\bigg]\\]\nHowever, absolute values would lead to a number of mathematical difficulties later on.\nThe squared deviations is the preferred approach. \\[(x_1-\\bar{x})^2, \\;(x_2-\\bar{x})^2, \\;\\cdots, \\;(x_n-\\bar{x})^2\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#sample-variance",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#sample-variance",
-    "title": "1.6 Measures of variability",
-    "section": "Sample variance",
-    "text": "Sample variance\n\\[\\begin{aligned}\ns^2 &= \\frac{(x_1-\\bar{x})^2 + (x_2-\\bar{x})^2 + \\cdots + (x_n-\\bar{x})^2}{n-1} \\\\\\\n\\\\\\\n&= \\frac{\\displaystyle\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}\n\\end{aligned}\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#why-divided-by-n-1-instead-of-n",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#why-divided-by-n-1-instead-of-n",
-    "title": "1.6 Measures of variability",
-    "section": "Why divided by \\((n-1)\\) instead of \\(n\\)?",
-    "text": "Why divided by \\((n-1)\\) instead of \\(n\\)?\n\nDegree of freedom: The number of values in a calculation that are free to vary.\nPick any three numbers and calculate the mean.\nNow we add some constraints:\n\nThe numbers have to add up to 20.\nThe first two numbers have to add up to 10.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#section-1",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#section-1",
-    "title": "1.6 Measures of variability",
-    "section": "",
-    "text": "\\[s^2 = \\frac{(x_1-\\bar{x})^2 + (x_2-\\bar{x})^2 + \\cdots + (x_n-\\bar{x})^2}{n-1}\\]\nAre there any constraints when we calculate the sample variance?\n\nExample:\n\n\n\n\\(x_i\\)\n\\(x_i-\\bar{x}\\)\n\\((x_i-\\bar{x})^2\\)\n\n\n\n\n\\(9\\)\n\n\n\n\n\\(4\\)\n\n\n\n\n\\(5\\)",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#section-2",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#section-2",
-    "title": "1.6 Measures of variability",
-    "section": "",
-    "text": "Heights (in feet) of 216 volcanoes:\n\\[19882, 19728, 19335, 19287, \\cdots, 617, 555, 529, 242\\]\n\nSample mean:\n\\[\\bar{x}=7047.6 \\text{ feet}\\]\n\n\nSample variance:\n\\[s^2 = \\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}=18,507,834 \\text{ feet}^2\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#section-3",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#section-3",
-    "title": "1.6 Measures of variability",
-    "section": "",
-    "text": "\\[s^2 = \\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}=18,507,834 \\text{ feet}^2\\]\nThe sample standard deviation \\(s\\), is given by\n\\[ s = \\sqrt{s^2} = \\sqrt{\\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}}=4302.1 \\text{ (ft})\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#property-i",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#property-i",
-    "title": "1.6 Measures of variability",
-    "section": "Property I",
-    "text": "Property I\n\\(x_1, x_2, \\cdots, x_n\\) are sample data. \\(c\\) is any constant.\n\\[\\text{If }\\; y_1=x_1+c, \\;y_2=x_2+c, \\;\\cdots, \\;y_n=x_n+c\\]\n\\[\\begin{aligned}\n\\text{then }\\; s_y^2&=s_x^2 \\\\\\\n(\\text{or }s_y&=s_x)\n\\end{aligned}\\]\n\nIntuition: Adding a constant to the data shifts the distribution right or left without changing its shape, and thus its spread.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#property-ii",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#property-ii",
-    "title": "1.6 Measures of variability",
-    "section": "Property II",
-    "text": "Property II\n\\(x_1, x_2, \\cdots, x_n\\) are sample data and \\(c\\) is any constant.\n\\[\\text{If }\\; y_1=cx_1, \\;y_2=cx_2, \\;\\cdots, \\;y_n=cx_n\\]\n\\[\\begin{aligned}\n\\text{then } \\; s_y^2&=c^2s_x^2 \\\\\\\n(\\text{or }s_y&=cs_x)\n\\end{aligned}\\]\n\nIntuition: Multiplying a constant to the data changes its shape, and thus its spread.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#descriptive-statistics-with-python",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#descriptive-statistics-with-python",
-    "title": "1.6 Measures of variability",
-    "section": "Descriptive statistics with Python",
-    "text": "Descriptive statistics with Python\nGo to Google Colab and sign in. Open a new notebook.\nages = [12, 34, 14, 5, 44, 28, 22, 19, 36, 25]\n\nmean = sum(ages) / len(ages)\n\nsquared_dev = [(x-mean)**2 for x in ages]\n\nvar = sum(squared_dev) / (len(ages) - 1)\nprint(var)\n\nprint(var**0.5)\n\nimport statistics\nprint(statistics.variance(ages))\nprint(statistics.stdev(ages))",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#descriptive-statistics-with-python-1",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#descriptive-statistics-with-python-1",
-    "title": "1.6 Measures of variability",
-    "section": "Descriptive statistics with Python",
-    "text": "Descriptive statistics with Python\nWe use the pandas library.\nimport pandas\nurl = \"https://imse317.github.io/lecture-slides/ch01/data/bank.csv\"\nbank = pandas.read_csv(url)\nbank.head()\n\nprint(bank[\"age\"].var())\nprint(bank[\"age\"].std())",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
+      "1.4 Graphical integrity"
     ]
   },
   {
@@ -931,120 +520,700 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/04-graphical-integrity.html#the-principle-of-proportional-ink",
-    "href": "lecture-slides/ch01/04-graphical-integrity.html#the-principle-of-proportional-ink",
-    "title": "1.4 Graphical integrity",
-    "section": "The Principle of Proportional Ink",
-    "text": "The Principle of Proportional Ink\n\nThe representation of numbers, as physically measured on the surface of the graphic itself (i.e., the amount of ink used),\nshould be directly proportional to the numerical quantities represented.",
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread",
+    "title": "1.6 Measures of variability",
+    "section": "Measures of variability (or spread)",
+    "text": "Measures of variability (or spread)\n\n\nThe measures of center gives only partial information about the data.\nDifferent data may have similar measures of center yet differ from one another in other important ways.",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "1.4 Graphical integrity"
+      "1.6 Measures of variability"
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/04-graphical-integrity.html#section-5",
-    "href": "lecture-slides/ch01/04-graphical-integrity.html#section-5",
-    "title": "1.4 Graphical integrity",
-    "section": "",
-    "text": "Friends don’t let friends make 3D pie charts.",
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-1",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-1",
+    "title": "1.6 Measures of variability",
+    "section": "Measures of variability (or spread)",
+    "text": "Measures of variability (or spread)\n\nHow about using the range to measure the variability?\n\\[ \\text{range} = \\text{maximum value} - \\text{minimum value}\\]\n\nRange is sensitive to outliers.",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "1.4 Graphical integrity"
+      "1.6 Measures of variability"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/01-sample-space-events.html#sample-space",
-    "href": "lecture-slides/ch02/01-sample-space-events.html#sample-space",
-    "title": "2.1 Sample space, events",
-    "section": "Sample space",
-    "text": "Sample space\n\nProbability starts with a sample space, which is a set that describes all possible outcomes in an experiment.\n\n\nIt must be collectively exhaustive & mutually exclusive.\n\nFlip a coin once 🪙 \\[\\Omega = \\{\\text{heads (H), tails (T)}\\}\\]\nFlip a coin twice 🪙 🪙\n\\[\\Omega = \\{(\\text{H, H}), (\\text{H, T}), (\\text{T, H}), (\\text{T, T})\\}\\]",
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-2",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-2",
+    "title": "1.6 Measures of variability",
+    "section": "Measures of variability (or spread)",
+    "text": "Measures of variability (or spread)\n\n\nInterquartile range (IQR)\n\\[ \\text{IQR} = \\text{Third quartile} - \\text{First quartile}\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
-      "Chapter 2. Probability",
-      "2.1 Sample space, events"
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/01-sample-space-events.html#section",
-    "href": "lecture-slides/ch02/01-sample-space-events.html#section",
-    "title": "2.1 Sample space, events",
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-3",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-3",
+    "title": "1.6 Measures of variability",
+    "section": "Measures of variability (or spread)",
+    "text": "Measures of variability (or spread)\nHow about measuring the deviations from the sample mean?\n\n\n\\[x_1-\\bar{x}, \\;x_2-\\bar{x}, \\;\\cdots, \\;x_n-\\bar{x}\\]\nThen, how about using the average deviation as a metric?\n\n\n\\[\\frac{1}{n}\\big[(x_1-\\bar{x}) + (x_2-\\bar{x}) + \\cdots + (x_n-\\bar{x})\\big]\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#section",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#section",
+    "title": "1.6 Measures of variability",
     "section": "",
-    "text": "Roll a six-sided die once 🎲 \\[\\Omega = \\{ ⚀, ⚁, ⚂, ⚃, ⚄, ⚅ \\}\\]\nRoll a six-sided die twice 🎲 🎲 \\[\n  \\begin{aligned}\n  \\Omega = \\{&⚀⚀, ⚀⚁, ⚀⚂, ⚀⚃, ⚀⚄, ⚀⚅, \\\\\n              &⚁⚀, ⚁⚁, ⚁⚂, ⚁⚃, ⚁⚄, ⚁⚅, \\\\\n              &⚂⚀, ⚂⚁, ⚂⚂, ⚂⚃, ⚂⚄, ⚂⚅, \\\\\n              &⚃⚀, ⚃⚁, ⚃⚂, ⚃⚃, ⚃⚄, ⚃⚅, \\\\\n              &⚄⚀, ⚄⚁, ⚄⚂, ⚄⚃, ⚄⚄, ⚄⚅, \\\\\n              &⚅⚀, ⚅⚁, ⚅⚂, ⚅⚃, ⚅⚄, ⚅⚅ \\}\n  \\end{aligned}\n  \\]",
+    "text": "If we cannot use the average deviation as a metric for variability, what can we do then?\n\nOne solution is to use the absolute deviations. \\[\\frac{1}{n}\\bigg[|x_1-\\bar{x}| + |x_2-\\bar{x}| + \\cdots + |x_n-\\bar{x}|\\bigg]\\]\nHowever, absolute values would lead to a number of mathematical difficulties later on.\nThe squared deviations is the preferred approach. \\[(x_1-\\bar{x})^2, \\;(x_2-\\bar{x})^2, \\;\\cdots, \\;(x_n-\\bar{x})^2\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
-      "Chapter 2. Probability",
-      "2.1 Sample space, events"
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/01-sample-space-events.html#exercise",
-    "href": "lecture-slides/ch02/01-sample-space-events.html#exercise",
-    "title": "2.1 Sample space, events",
-    "section": "Exercise",
-    "text": "Exercise\nWe bet on the total from a roll of two dice 🎲 🎲\nWhat is the sample space?",
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#sample-variance",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#sample-variance",
+    "title": "1.6 Measures of variability",
+    "section": "Sample variance",
+    "text": "Sample variance\n\\[\\begin{aligned}\ns^2 &= \\frac{(x_1-\\bar{x})^2 + (x_2-\\bar{x})^2 + \\cdots + (x_n-\\bar{x})^2}{n-1} \\\\\\\n\\\\\\\n&= \\frac{\\displaystyle\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}\n\\end{aligned}\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
-      "Chapter 2. Probability",
-      "2.1 Sample space, events"
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/01-sample-space-events.html#event",
-    "href": "lecture-slides/ch02/01-sample-space-events.html#event",
-    "title": "2.1 Sample space, events",
-    "section": "Event",
-    "text": "Event\nA collection of outcomes in the sample space\nOr simply, a subset of the sample space.\n\nEvent A: Roll a die 🎲, it lands on an odd number.\n\n\n\\[A = \\{ ⚀, ⚂, ⚄ \\}\\]\n\nEvent B: Roll two dice 🎲 🎲, the total is under 7.\n\n\n\n\\[B = \\{ 2, 3, 4, 5, 6\\}\\]",
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#why-divided-by-n-1-instead-of-n",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#why-divided-by-n-1-instead-of-n",
+    "title": "1.6 Measures of variability",
+    "section": "Why divided by \\((n-1)\\) instead of \\(n\\)?",
+    "text": "Why divided by \\((n-1)\\) instead of \\(n\\)?\n\nDegree of freedom: The number of values in a calculation that are free to vary.\nPick any three numbers and calculate the mean.\nNow we add some constraints:\n\nThe numbers have to add up to 20.\nThe first two numbers have to add up to 10.",
     "crumbs": [
       "Home",
       "Lecture slides",
-      "Chapter 2. Probability",
-      "2.1 Sample space, events"
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/01-sample-space-events.html#event-1",
-    "href": "lecture-slides/ch02/01-sample-space-events.html#event-1",
-    "title": "2.1 Sample space, events",
-    "section": "Event",
-    "text": "Event\n\nEvent C: Making at least one basketball free throw out of two \\[C=\\{(\\text{hit, hit}), (\\text{hit, miss}), (\\text{miss, hit})\\}\\]",
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#section-1",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#section-1",
+    "title": "1.6 Measures of variability",
+    "section": "",
+    "text": "\\[s^2 = \\frac{(x_1-\\bar{x})^2 + (x_2-\\bar{x})^2 + \\cdots + (x_n-\\bar{x})^2}{n-1}\\]\nAre there any constraints when we calculate the sample variance?\n\nExample:\n\n\n\n\\(x_i\\)\n\\(x_i-\\bar{x}\\)\n\\((x_i-\\bar{x})^2\\)\n\n\n\n\n\\(9\\)\n\n\n\n\n\\(4\\)\n\n\n\n\n\\(5\\)",
     "crumbs": [
       "Home",
       "Lecture slides",
-      "Chapter 2. Probability",
-      "2.1 Sample space, events"
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/01-sample-space-events.html#simple-compound-event",
-    "href": "lecture-slides/ch02/01-sample-space-events.html#simple-compound-event",
-    "title": "2.1 Sample space, events",
-    "section": "Simple & compound event",
-    "text": "Simple & compound event\nA simple event consists of a single outcome.\nA compound event consists of multiple outcomes.\n\nRoll a die 🎲, it lands on an odd number. \\[\\{ ⚀, ⚂, ⚄ \\}\\]\nRoll two dice 🎲🎲 and get a double. \\[\\{(⚀,⚀), (⚁, ⚁), (⚂, ⚂), (⚃, ⚃), (⚄, ⚄), (⚅, ⚅) \\}\\]",
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#section-2",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#section-2",
+    "title": "1.6 Measures of variability",
+    "section": "",
+    "text": "Heights (in feet) of 216 volcanoes:\n\\[19882, 19728, 19335, 19287, \\cdots, 617, 555, 529, 242\\]\n\nSample mean:\n\\[\\bar{x}=7047.6 \\text{ feet}\\]\n\n\nSample variance:\n\\[s^2 = \\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}=18,507,834 \\text{ feet}^2\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
-      "Chapter 2. Probability",
-      "2.1 Sample space, events"
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/01-sample-space-events.html#simple-compound-event-1",
-    "href": "lecture-slides/ch02/01-sample-space-events.html#simple-compound-event-1",
-    "title": "2.1 Sample space, events",
-    "section": "Simple & compound event",
-    "text": "Simple & compound event\n\nRoll two dice 🎲 🎲, the total is 12. \\[\\{ (⚅, ⚅) \\}\\]\nA basketball player makes both free throws \\[\\{(\\text{hit, hit})\\}\\]\nMaking at least one free throw \\[\\{(\\text{hit, hit}), (\\text{hit, miss}), (\\text{miss, hit})\\}\\]",
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#section-3",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#section-3",
+    "title": "1.6 Measures of variability",
+    "section": "",
+    "text": "\\[s^2 = \\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}=18,507,834 \\text{ feet}^2\\]\nThe sample standard deviation \\(s\\), is given by\n\\[ s = \\sqrt{s^2} = \\sqrt{\\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}}=4302.1 \\text{ (ft})\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
-      "Chapter 2. Probability",
-      "2.1 Sample space, events"
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#property-i",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#property-i",
+    "title": "1.6 Measures of variability",
+    "section": "Property I",
+    "text": "Property I\n\\(x_1, x_2, \\cdots, x_n\\) are sample data. \\(c\\) is any constant.\n\\[\\text{If }\\; y_1=x_1+c, \\;y_2=x_2+c, \\;\\cdots, \\;y_n=x_n+c\\]\n\\[\\begin{aligned}\n\\text{then }\\; s_y^2&=s_x^2 \\\\\\\n(\\text{or }s_y&=s_x)\n\\end{aligned}\\]\n\nIntuition: Adding a constant to the data shifts the distribution right or left without changing its shape, and thus its spread.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#property-ii",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#property-ii",
+    "title": "1.6 Measures of variability",
+    "section": "Property II",
+    "text": "Property II\n\\(x_1, x_2, \\cdots, x_n\\) are sample data and \\(c\\) is any constant.\n\\[\\text{If }\\; y_1=cx_1, \\;y_2=cx_2, \\;\\cdots, \\;y_n=cx_n\\]\n\\[\\begin{aligned}\n\\text{then } \\; s_y^2&=c^2s_x^2 \\\\\\\n(\\text{or }s_y&=cs_x)\n\\end{aligned}\\]\n\nIntuition: Multiplying a constant to the data changes its shape, and thus its spread.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#descriptive-statistics-with-python",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#descriptive-statistics-with-python",
+    "title": "1.6 Measures of variability",
+    "section": "Descriptive statistics with Python",
+    "text": "Descriptive statistics with Python\nGo to Google Colab and sign in. Open a new notebook.\nages = [12, 34, 14, 5, 44, 28, 22, 19, 36, 25]\n\nmean = sum(ages) / len(ages)\n\nsquared_dev = [(x-mean)**2 for x in ages]\n\nvar = sum(squared_dev) / (len(ages) - 1)\nprint(var)\n\nprint(var**0.5)\n\nimport statistics\nprint(statistics.variance(ages))\nprint(statistics.stdev(ages))",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#descriptive-statistics-with-python-1",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#descriptive-statistics-with-python-1",
+    "title": "1.6 Measures of variability",
+    "section": "Descriptive statistics with Python",
+    "text": "Descriptive statistics with Python\nWe use the pandas library.\nimport pandas\nurl = \"https://imse317.github.io/lecture-slides/ch01/data/bank.csv\"\nbank = pandas.read_csv(url)\nbank.head()\n\nprint(bank[\"age\"].var())\nprint(bank[\"age\"].std())",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet",
+    "href": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet",
+    "title": "1.7 Data visualization",
+    "section": "Anscombe’s quartet",
+    "text": "Anscombe’s quartet",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.7 Data visualization"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet-1",
+    "href": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet-1",
+    "title": "1.7 Data visualization",
+    "section": "Anscombe’s quartet",
+    "text": "Anscombe’s quartet\nAll four data sets share the same following statistics:",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.7 Data visualization"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet-2",
+    "href": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet-2",
+    "title": "1.7 Data visualization",
+    "section": "Anscombe’s quartet",
+    "text": "Anscombe’s quartet",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.7 Data visualization"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/07-data-visualization.html#heights-in-feet-of-216-volcanoes",
+    "href": "lecture-slides/ch01/07-data-visualization.html#heights-in-feet-of-216-volcanoes",
+    "title": "1.7 Data visualization",
+    "section": "Heights (in feet) of 216 volcanoes",
+    "text": "Heights (in feet) of 216 volcanoes\n\n\\[19882, 19728, 19335, 19287, \\cdots, 617, 555, 529, 242\\]\nvolcano-heights.csv",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.7 Data visualization"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/07-data-visualization.html#histogram",
+    "href": "lecture-slides/ch01/07-data-visualization.html#histogram",
+    "title": "1.7 Data visualization",
+    "section": "Histogram",
+    "text": "Histogram\n\n\nCount: The number of data points in a bin",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.7 Data visualization"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/07-data-visualization.html#histogram-1",
+    "href": "lecture-slides/ch01/07-data-visualization.html#histogram-1",
+    "title": "1.7 Data visualization",
+    "section": "Histogram",
+    "text": "Histogram\n\n\n\\[\\text{percent (or relative frequency)}=\\frac{\\text{frequency}}{\\text{total # of data points}}\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.7 Data visualization"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/07-data-visualization.html#plotting-with-python",
+    "href": "lecture-slides/ch01/07-data-visualization.html#plotting-with-python",
+    "title": "1.7 Data visualization",
+    "section": "Plotting with Python",
+    "text": "Plotting with Python\nGo to Google Colab and sign in. Open a new notebook.\nimport numpy\nimport pandas\n\nurl = \"https://imse317.github.io/lecture-slides/ch01/data/bank.csv\"\nbank = pandas.read_csv(url)\nbank.head()\n\nimport seaborn.objects as so\n(\n    so.Plot(bank, x='age')\n    .add(so.Bars(), so.Hist(binrange=(0, 100), binwidth=5, stat='percent'))\n)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.7 Data visualization"
+    ]
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Fall 2025 - 3 Credit Hours"
+  },
+  {
+    "objectID": "syllabus.html#food-pantry",
+    "href": "syllabus.html#food-pantry",
+    "title": "Syllabus",
+    "section": "Food pantry",
+    "text": "Food pantry\nThe pantry exists to support individuals on their journey as they work toward achieving their goals. We are committed to increasing access to food as a key to success, by assisting any student in need! If you need access or have questions, please contact the Office of Student Life by phone at 313-593-5390, by email at umdearbornpantry@umich.edu."
+  },
+  {
+    "objectID": "syllabus.html#university-wide-policies-statements",
+    "href": "syllabus.html#university-wide-policies-statements",
+    "title": "Syllabus",
+    "section": "University-wide policies & statements",
+    "text": "University-wide policies & statements\nPlease see the Course Policies menu on Canvas for information on the following topics. To find the Course Policies menu on Canvas, log into any course in Canvas, and then on the blue ribbon on the far left scroll down to Course Policies and click on it. This opens a white ribbon with individual links to UM-Dearborn websites on the following topics:\n\nUniversity Attendance Policy\nAcademic Integrity Policy\nCounseling\nDisability and Accessibility Services\nSafety Statement\nHarassment, Sexual Violence, Bias, and Discrimination"
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#what-is-probability",
+    "href": "lecture-slides/ch01/01-course-intro.html#what-is-probability",
+    "title": "1.1 Course introduction",
+    "section": "What is probability?",
+    "text": "What is probability?\n\n\nSource: Merriam-Webster",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.1 Course introduction"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#pierre-simon-laplace",
+    "href": "lecture-slides/ch01/01-course-intro.html#pierre-simon-laplace",
+    "title": "1.1 Course introduction",
+    "section": "Pierre-Simon Laplace",
+    "text": "Pierre-Simon Laplace",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.1 Course introduction"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#which-one-is-more-likely",
+    "href": "lecture-slides/ch01/01-course-intro.html#which-one-is-more-likely",
+    "title": "1.1 Course introduction",
+    "section": "Which one is more likely?",
+    "text": "Which one is more likely?\n\n\nRoll one (six-sided) die 🎲\n\nGetting an even number\nGetting an odd number\n\n\n\n\nRoll two dice 🎲 🎲\n\nGetting a sum of 7\nGetting a sum of 12\n\n\nRoll three dice 🎲 🎲 🎲\n\nGetting a sum of 11\nGetting a sum of 12",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.1 Course introduction"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#section",
+    "href": "lecture-slides/ch01/01-course-intro.html#section",
+    "title": "1.1 Course introduction",
+    "section": "",
+    "text": "“Probability is common sense reduced to calculation.”\n\n\nPierre-Simon Laplace",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.1 Course introduction"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#what-is-statistics",
+    "href": "lecture-slides/ch01/01-course-intro.html#what-is-statistics",
+    "title": "1.1 Course introduction",
+    "section": "What is statistics?",
+    "text": "What is statistics?\n\nThe science of collecting, analyzing, presenting, and interpreting data.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.1 Course introduction"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#airline-travelers-club",
+    "href": "lecture-slides/ch01/01-course-intro.html#airline-travelers-club",
+    "title": "1.1 Course introduction",
+    "section": "Airline travelers’ club",
+    "text": "Airline travelers’ club\n\nAn airline offers an executive club and claim that 10% of its customers would qualify for the membership.\nYou suspect it is actually less than 10%.\nYou randomly selected 1000 customers, and found 91 of them would qualify.\nIs the airline’s premise correct?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.1 Course introduction"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#population",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#population",
+    "title": "1.2 Population, sample, and variable",
+    "section": "Population",
+    "text": "Population\n\nDefinition: A collection of objects of interest in a study\nStudying who will win an upcoming mayoral election\n\nPopulation: Everyone who are planning to vote\n\nStudying the defect rate of a cellphone screen from a manufacturer\n\nPopulation: All the cellphone screens made by the manufacturer",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.2 Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#sample",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#sample",
+    "title": "1.2 Population, sample, and variable",
+    "section": "Sample",
+    "text": "Sample\n\nDefinition: A subset of the population selected by a defined procedure\nStudying who will win an upcoming mayoral election\n\nSample: An telephone poll of 500 randomly selected potential voters\n\nStudying the defect rate of a cellphone screen from a manufacturer\n\nSample: 200 randomly selected screens for inspection",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.2 Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#variable",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#variable",
+    "title": "1.2 Population, sample, and variable",
+    "section": "Variable",
+    "text": "Variable\n\nDefinition: A characteristic of interest for the elements\nHouses\n\nsize, # of bedrooms, year built, school district, …\n\nPatients\n\nage, weight, blood sugar level, …\n\nUniversities\n\ntuition, enrollment, graduation rate, …",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.2 Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#discrete-variables",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#discrete-variables",
+    "title": "1.2 Population, sample, and variable",
+    "section": "Discrete variables",
+    "text": "Discrete variables\nThe variable takes finite or countably infinite values.\n\nToss a coin four times, the number of heads you get\nThe attendance to a basketball game\nThe number of orders that an online shop receives in a day",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.2 Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#continuous-variables",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#continuous-variables",
+    "title": "1.2 Population, sample, and variable",
+    "section": "Continuous variables",
+    "text": "Continuous variables\nThe variable takes infinitely many, uncountable values.\n\nThe water level of dam\nThe speed of riding a bicycle\nThe time when an order arrives at a shop\n\n\nIf it can take on two particular real values, it can also take on all real values between them.\n\n\n\nIf you can count it, it is discrete.\nIf you need to measure it, it is continuous.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.2 Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#univariate-vs.-multivariate",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#univariate-vs.-multivariate",
+    "title": "1.2 Population, sample, and variable",
+    "section": "Univariate vs. multivariate",
+    "text": "Univariate vs. multivariate\nUnivariate: A single variable\n\nBattery life of a cellphone model\nBlood sugar level of diabetic patients\n\n\nThis course focuses mostly on a single variable (except for Chapter 5. Joint Distributions).",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.2 Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#multivariate",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#multivariate",
+    "title": "1.2 Population, sample, and variable",
+    "section": "Multivariate",
+    "text": "Multivariate\nStudying the relationship among two or more variables",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.2 Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#section-1",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#section-1",
+    "title": "1.2 Population, sample, and variable",
+    "section": "",
+    "text": "IMSE 440 Applied Statistical Models in Engineering\nOffered in Winter semesters",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.2 Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#four-levels-of-measurement",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#four-levels-of-measurement",
+    "title": "1.3 Four levels of measurement",
+    "section": "Four levels of measurement",
+    "text": "Four levels of measurement",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#why-do-we-care",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#why-do-we-care",
+    "title": "1.3 Four levels of measurement",
+    "section": "Why do we care?",
+    "text": "Why do we care?\nThe level dictates what we can do with the data.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#nominal-or-categorical-data",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#nominal-or-categorical-data",
+    "title": "1.3 Four levels of measurement",
+    "section": "Nominal (or categorical) data",
+    "text": "Nominal (or categorical) data\nWhen numbers are not numbers\n\nThey act like names or labels.\nCan not be put into order.\n\n\nExamples\n\nCountry code: 1 (USA), 44 (UK), 81 (Japan), …\nSocial security numbers\nYour UMID\nMarital status: single, married, divorced, …",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon",
+    "title": "1.3 Four levels of measurement",
+    "section": "Tokyo Olympics men’s marathon",
+    "text": "Tokyo Olympics men’s marathon\n\nWhat information are nominal data?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#nominal-or-categorical-data-1",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#nominal-or-categorical-data-1",
+    "title": "1.3 Four levels of measurement",
+    "section": "Nominal (or categorical) data",
+    "text": "Nominal (or categorical) data\nImplications\n\nThey can not be compared (e.g., \\(&gt;, &lt;\\))\nWe can not carry out any calculations (\\(+,  −,  ×, \\div\\))\nThe only math operations that can be done are \\(=, \\neq\\)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#ordinal-data",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#ordinal-data",
+    "title": "1.3 Four levels of measurement",
+    "section": "Ordinal data",
+    "text": "Ordinal data\nWhen numbers are almost numbers\n\nThey go into order.\nBut that’s about it.\nThey don’t tell us about the distance between two numbers.\nAirline cabin classes\n\n1: first class, 2: business, 3: premium economy, 4: economy\n\nHotel ratings (1-5 stars)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon-1",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon-1",
+    "title": "1.3 Four levels of measurement",
+    "section": "Tokyo Olympics men’s marathon",
+    "text": "Tokyo Olympics men’s marathon\n\nWhat information are ordinal data?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#ordinal-data-1",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#ordinal-data-1",
+    "title": "1.3 Four levels of measurement",
+    "section": "Ordinal data",
+    "text": "Ordinal data\nImplications\n\nOrdinal numbers can be compared (e.g., \\(&gt;,  &lt;\\))\nHowever, we can not carry out calculations for differences or magnitudes (\\(−, \\div\\))",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#interval-ratio-data",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#interval-ratio-data",
+    "title": "1.3 Four levels of measurement",
+    "section": "Interval & ratio data",
+    "text": "Interval & ratio data\nWhen numbers are really numbers\n\nNot only can be put to order\nThe distance between them tell us something.\nTom drinks 3 cups of coffee. Kate drinks 1 cup.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#ratio-data",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#ratio-data",
+    "title": "1.3 Four levels of measurement",
+    "section": "Ratio data",
+    "text": "Ratio data\nRatio data have a genuine1, non-arbitrary zero point.\n\nI have zero dollars.\n\nabsence of money\n\nI walk at a speed of 0 mph\n\nno movement\n\n\nA “genuine” zero means there is none of the thing being measured.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#examples-of-ratio-data",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#examples-of-ratio-data",
+    "title": "1.3 Four levels of measurement",
+    "section": "Examples of ratio data",
+    "text": "Examples of ratio data\n\nLength (100 meters)\nWeight (50 lbs)\nSize (800 square feet)\nSpeed (20 mph)\nTime duration (5 hours)\n\n\nThe majority of scientific measures are ratio measures.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#interval-data",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#interval-data",
+    "title": "1.3 Four levels of measurement",
+    "section": "Interval data",
+    "text": "Interval data\nInterval data have an arbitrary zero point.\nZero does not mean there is none of the things being measured.\n\nWhat is the temperature for 0°C?\n\n0°C does not mean there is no warmth.\n\nCalendar year 2025. What does year 0 mean?\n\nYear 0 does not mean it’s the beginning of time.\n\nWhat is longitude (geographic coordinate) of 0°?\n\nPrime meridian",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#examples-of-interval-data",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#examples-of-interval-data",
+    "title": "1.3 Four levels of measurement",
+    "section": "Examples of interval data",
+    "text": "Examples of interval data\n\nTemperature in Fahrenheit (70°F) or Celsius (20°C)\nCalendar year\nGPS coordinates (42.3185, -83.2327)\nGPS heading (90°)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#implications-without-a-genuine-zero",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#implications-without-a-genuine-zero",
+    "title": "1.3 Four levels of measurement",
+    "section": "Implications without a genuine zero",
+    "text": "Implications without a genuine zero\nWe can talk about ratios with ratio measures (duh!)\n\nTom drinks ☕☕☕. Kate drinks ☕.\n\nTom drink ☕☕ more coffee than Kate.\nTom drink 3 times as much coffee as Kate.\n\nToday is 40°F. Yesterday was 20°F.\n\nToday is 20°F warmer than yesterday.\nThe average temp of the two days is 30°F.\nToday is twice as warm as yesterday.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#implications-without-a-genuine-zero-1",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#implications-without-a-genuine-zero-1",
+    "title": "1.3 Four levels of measurement",
+    "section": "Implications without a genuine zero",
+    "text": "Implications without a genuine zero\n\nWith interval data\n\nwe can calculate the difference (\\(-\\)).\nwe can not calculate the ratio (\\(\\div\\)).\n\nWith ratio data we can carry out most calculations.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon-2",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon-2",
+    "title": "1.3 Four levels of measurement",
+    "section": "Tokyo Olympics men’s marathon",
+    "text": "Tokyo Olympics men’s marathon\n\nWhat information are ratio data?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#qualitative-and-quantitative-data",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#qualitative-and-quantitative-data",
+    "title": "1.3 Four levels of measurement",
+    "section": "Qualitative and quantitative data",
+    "text": "Qualitative and quantitative data",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
     ]
   }
 ]
