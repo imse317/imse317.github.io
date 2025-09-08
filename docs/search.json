@@ -221,105 +221,6 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/01-course-intro.html#what-is-probability",
-    "href": "lecture-slides/ch01/01-course-intro.html#what-is-probability",
-    "title": "1.1 Course introduction",
-    "section": "What is probability?",
-    "text": "What is probability?\n\n\nSource: Merriam-Webster",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.1 Course introduction"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/01-course-intro.html#pierre-simon-laplace",
-    "href": "lecture-slides/ch01/01-course-intro.html#pierre-simon-laplace",
-    "title": "1.1 Course introduction",
-    "section": "Pierre-Simon Laplace",
-    "text": "Pierre-Simon Laplace",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.1 Course introduction"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/01-course-intro.html#which-one-is-more-likely",
-    "href": "lecture-slides/ch01/01-course-intro.html#which-one-is-more-likely",
-    "title": "1.1 Course introduction",
-    "section": "Which one is more likely?",
-    "text": "Which one is more likely?\n\n\nRoll one (six-sided) die 🎲\n\nGetting an even number\nGetting an odd number\n\n\n\n\nRoll two dice 🎲 🎲\n\nGetting a sum of 7\nGetting a sum of 12\n\n\nRoll three dice 🎲 🎲 🎲\n\nGetting a sum of 11\nGetting a sum of 12",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.1 Course introduction"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/01-course-intro.html#section",
-    "href": "lecture-slides/ch01/01-course-intro.html#section",
-    "title": "1.1 Course introduction",
-    "section": "",
-    "text": "“Probability is common sense reduced to calculation.”\n\n\nPierre-Simon Laplace",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.1 Course introduction"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/01-course-intro.html#what-is-statistics",
-    "href": "lecture-slides/ch01/01-course-intro.html#what-is-statistics",
-    "title": "1.1 Course introduction",
-    "section": "What is statistics?",
-    "text": "What is statistics?\n\nThe science of collecting, analyzing, presenting, and interpreting data.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.1 Course introduction"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/01-course-intro.html#airline-travelers-club",
-    "href": "lecture-slides/ch01/01-course-intro.html#airline-travelers-club",
-    "title": "1.1 Course introduction",
-    "section": "Airline travelers’ club",
-    "text": "Airline travelers’ club\n\nAn airline offers an executive club and claim that 10% of its customers would qualify for the membership.\nYou suspect it is actually less than 10%.\nYou randomly selected 1000 customers, and found 91 of them would qualify.\nIs the airline’s premise correct?",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.1 Course introduction"
-    ]
-  },
-  {
-    "objectID": "syllabus.html",
-    "href": "syllabus.html",
-    "title": "Syllabus",
-    "section": "",
-    "text": "Fall 2025 - 3 Credit Hours"
-  },
-  {
-    "objectID": "syllabus.html#food-pantry",
-    "href": "syllabus.html#food-pantry",
-    "title": "Syllabus",
-    "section": "Food pantry",
-    "text": "Food pantry\nThe pantry exists to support individuals on their journey as they work toward achieving their goals. We are committed to increasing access to food as a key to success, by assisting any student in need! If you need access or have questions, please contact the Office of Student Life by phone at 313-593-5390, by email at umdearbornpantry@umich.edu."
-  },
-  {
-    "objectID": "syllabus.html#university-wide-policies-statements",
-    "href": "syllabus.html#university-wide-policies-statements",
-    "title": "Syllabus",
-    "section": "University-wide policies & statements",
-    "text": "University-wide policies & statements\nPlease see the Course Policies menu on Canvas for information on the following topics. To find the Course Policies menu on Canvas, log into any course in Canvas, and then on the blue ribbon on the far left scroll down to Course Policies and click on it. This opens a white ribbon with individual links to UM-Dearborn websites on the following topics:\n\nUniversity Attendance Policy\nAcademic Integrity Policy\nCounseling\nDisability and Accessibility Services\nSafety Statement\nHarassment, Sexual Violence, Bias, and Discrimination"
-  },
-  {
     "objectID": "lecture-slides/ch01/02-population-sample-variable.html#population",
     "href": "lecture-slides/ch01/02-population-sample-variable.html#population",
     "title": "1.2 Population, sample, and variable",
@@ -421,6 +322,378 @@
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
       "1.2 Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#what-is-probability",
+    "href": "lecture-slides/ch01/01-course-intro.html#what-is-probability",
+    "title": "1.1 Course introduction",
+    "section": "What is probability?",
+    "text": "What is probability?\n\n\nSource: Merriam-Webster",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.1 Course introduction"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#pierre-simon-laplace",
+    "href": "lecture-slides/ch01/01-course-intro.html#pierre-simon-laplace",
+    "title": "1.1 Course introduction",
+    "section": "Pierre-Simon Laplace",
+    "text": "Pierre-Simon Laplace",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.1 Course introduction"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#which-one-is-more-likely",
+    "href": "lecture-slides/ch01/01-course-intro.html#which-one-is-more-likely",
+    "title": "1.1 Course introduction",
+    "section": "Which one is more likely?",
+    "text": "Which one is more likely?\n\n\nRoll one (six-sided) die 🎲\n\nGetting an even number\nGetting an odd number\n\n\n\n\nRoll two dice 🎲 🎲\n\nGetting a sum of 7\nGetting a sum of 12\n\n\nRoll three dice 🎲 🎲 🎲\n\nGetting a sum of 11\nGetting a sum of 12",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.1 Course introduction"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#section",
+    "href": "lecture-slides/ch01/01-course-intro.html#section",
+    "title": "1.1 Course introduction",
+    "section": "",
+    "text": "“Probability is common sense reduced to calculation.”\n\n\nPierre-Simon Laplace",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.1 Course introduction"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#what-is-statistics",
+    "href": "lecture-slides/ch01/01-course-intro.html#what-is-statistics",
+    "title": "1.1 Course introduction",
+    "section": "What is statistics?",
+    "text": "What is statistics?\n\nThe science of collecting, analyzing, presenting, and interpreting data.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.1 Course introduction"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#airline-travelers-club",
+    "href": "lecture-slides/ch01/01-course-intro.html#airline-travelers-club",
+    "title": "1.1 Course introduction",
+    "section": "Airline travelers’ club",
+    "text": "Airline travelers’ club\n\nAn airline offers an executive club and claim that 10% of its customers would qualify for the membership.\nYou suspect it is actually less than 10%.\nYou randomly selected 1000 customers, and found 91 of them would qualify.\nIs the airline’s premise correct?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.1 Course introduction"
+    ]
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Fall 2025 - 3 Credit Hours"
+  },
+  {
+    "objectID": "syllabus.html#food-pantry",
+    "href": "syllabus.html#food-pantry",
+    "title": "Syllabus",
+    "section": "Food pantry",
+    "text": "Food pantry\nThe pantry exists to support individuals on their journey as they work toward achieving their goals. We are committed to increasing access to food as a key to success, by assisting any student in need! If you need access or have questions, please contact the Office of Student Life by phone at 313-593-5390, by email at umdearbornpantry@umich.edu."
+  },
+  {
+    "objectID": "syllabus.html#university-wide-policies-statements",
+    "href": "syllabus.html#university-wide-policies-statements",
+    "title": "Syllabus",
+    "section": "University-wide policies & statements",
+    "text": "University-wide policies & statements\nPlease see the Course Policies menu on Canvas for information on the following topics. To find the Course Policies menu on Canvas, log into any course in Canvas, and then on the blue ribbon on the far left scroll down to Course Policies and click on it. This opens a white ribbon with individual links to UM-Dearborn websites on the following topics:\n\nUniversity Attendance Policy\nAcademic Integrity Policy\nCounseling\nDisability and Accessibility Services\nSafety Statement\nHarassment, Sexual Violence, Bias, and Discrimination"
+  },
+  {
+    "objectID": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet",
+    "href": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet",
+    "title": "1.7 Data visualization",
+    "section": "Anscombe’s quartet",
+    "text": "Anscombe’s quartet",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.7 Data visualization"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet-1",
+    "href": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet-1",
+    "title": "1.7 Data visualization",
+    "section": "Anscombe’s quartet",
+    "text": "Anscombe’s quartet\nAll four data sets share the same following statistics:",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.7 Data visualization"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet-2",
+    "href": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet-2",
+    "title": "1.7 Data visualization",
+    "section": "Anscombe’s quartet",
+    "text": "Anscombe’s quartet",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.7 Data visualization"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/07-data-visualization.html#heights-in-feet-of-216-volcanoes",
+    "href": "lecture-slides/ch01/07-data-visualization.html#heights-in-feet-of-216-volcanoes",
+    "title": "1.7 Data visualization",
+    "section": "Heights (in feet) of 216 volcanoes",
+    "text": "Heights (in feet) of 216 volcanoes\n\n\\[19882, 19728, 19335, 19287, \\cdots, 617, 555, 529, 242\\]\nvolcano-heights.csv",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.7 Data visualization"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/07-data-visualization.html#histogram",
+    "href": "lecture-slides/ch01/07-data-visualization.html#histogram",
+    "title": "1.7 Data visualization",
+    "section": "Histogram",
+    "text": "Histogram\n\n\nCount: The number of data points in a bin",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.7 Data visualization"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/07-data-visualization.html#histogram-1",
+    "href": "lecture-slides/ch01/07-data-visualization.html#histogram-1",
+    "title": "1.7 Data visualization",
+    "section": "Histogram",
+    "text": "Histogram\n\n\n\\[\\text{percent (or relative frequency)}=\\frac{\\text{frequency}}{\\text{total # of data points}}\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.7 Data visualization"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/07-data-visualization.html#plotting-with-python",
+    "href": "lecture-slides/ch01/07-data-visualization.html#plotting-with-python",
+    "title": "1.7 Data visualization",
+    "section": "Plotting with Python",
+    "text": "Plotting with Python\nGo to Google Colab and sign in. Open a new notebook.\nimport numpy\nimport pandas\n\nurl = \"https://imse317.github.io/lecture-slides/ch01/data/bank.csv\"\nbank = pandas.read_csv(url)\nbank.head()\n\nimport seaborn.objects as so\n(\n    so.Plot(bank, x='age')\n    .add(so.Bars(), so.Hist(binrange=(0, 100), binwidth=5, stat='percent'))\n)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.7 Data visualization"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread",
+    "title": "1.6 Measures of variability",
+    "section": "Measures of variability (or spread)",
+    "text": "Measures of variability (or spread)\n\n\nThe measures of center gives only partial information about the data.\nDifferent data may have similar measures of center yet differ from one another in other important ways.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-1",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-1",
+    "title": "1.6 Measures of variability",
+    "section": "Measures of variability (or spread)",
+    "text": "Measures of variability (or spread)\n\nHow about using the range to measure the variability?\n\\[ \\text{range} = \\text{maximum value} - \\text{minimum value}\\]\n\nRange is sensitive to outliers.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-2",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-2",
+    "title": "1.6 Measures of variability",
+    "section": "Measures of variability (or spread)",
+    "text": "Measures of variability (or spread)\n\n\nInterquartile range (IQR)\n\\[ \\text{IQR} = \\text{Third quartile} - \\text{First quartile}\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-3",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-3",
+    "title": "1.6 Measures of variability",
+    "section": "Measures of variability (or spread)",
+    "text": "Measures of variability (or spread)\nHow about measuring the deviations from the sample mean?\n\n\n\\[x_1-\\bar{x}, \\;x_2-\\bar{x}, \\;\\cdots, \\;x_n-\\bar{x}\\]\nThen, how about using the average deviation as a metric?\n\n\n\\[\\frac{1}{n}\\big[(x_1-\\bar{x}) + (x_2-\\bar{x}) + \\cdots + (x_n-\\bar{x})\\big]\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#section",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#section",
+    "title": "1.6 Measures of variability",
+    "section": "",
+    "text": "If we cannot use the average deviation as a metric for variability, what can we do then?\n\nOne solution is to use the absolute deviations. \\[\\frac{1}{n}\\bigg[|x_1-\\bar{x}| + |x_2-\\bar{x}| + \\cdots + |x_n-\\bar{x}|\\bigg]\\]\nHowever, absolute values would lead to a number of mathematical difficulties later on.\nThe squared deviations is the preferred approach. \\[(x_1-\\bar{x})^2, \\;(x_2-\\bar{x})^2, \\;\\cdots, \\;(x_n-\\bar{x})^2\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#sample-variance",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#sample-variance",
+    "title": "1.6 Measures of variability",
+    "section": "Sample variance",
+    "text": "Sample variance\n\\[\\begin{aligned}\ns^2 &= \\frac{(x_1-\\bar{x})^2 + (x_2-\\bar{x})^2 + \\cdots + (x_n-\\bar{x})^2}{n-1} \\\\\\\n\\\\\\\n&= \\frac{\\displaystyle\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}\n\\end{aligned}\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#why-divided-by-n-1-instead-of-n",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#why-divided-by-n-1-instead-of-n",
+    "title": "1.6 Measures of variability",
+    "section": "Why divided by \\((n-1)\\) instead of \\(n\\)?",
+    "text": "Why divided by \\((n-1)\\) instead of \\(n\\)?\n\nDegree of freedom: The number of values in a calculation that are free to vary.\nPick any three numbers and calculate the mean.\nNow we add some constraints:\n\nThe numbers have to add up to 20.\nThe first two numbers have to add up to 10.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#section-1",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#section-1",
+    "title": "1.6 Measures of variability",
+    "section": "",
+    "text": "\\[s^2 = \\frac{(x_1-\\bar{x})^2 + (x_2-\\bar{x})^2 + \\cdots + (x_n-\\bar{x})^2}{n-1}\\]\nAre there any constraints when we calculate the sample variance?\n\nExample:\n\n\n\n\\(x_i\\)\n\\(x_i-\\bar{x}\\)\n\\((x_i-\\bar{x})^2\\)\n\n\n\n\n\\(9\\)\n\n\n\n\n\\(4\\)\n\n\n\n\n\\(5\\)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#section-2",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#section-2",
+    "title": "1.6 Measures of variability",
+    "section": "",
+    "text": "Heights (in feet) of 216 volcanoes:\n\\[19882, 19728, 19335, 19287, \\cdots, 617, 555, 529, 242\\]\n\nSample mean:\n\\[\\bar{x}=7047.6 \\text{ feet}\\]\n\n\nSample variance:\n\\[s^2 = \\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}=18,507,834 \\text{ feet}^2\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#section-3",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#section-3",
+    "title": "1.6 Measures of variability",
+    "section": "",
+    "text": "\\[s^2 = \\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}=18,507,834 \\text{ feet}^2\\]\nThe sample standard deviation \\(s\\), is given by\n\\[ s = \\sqrt{s^2} = \\sqrt{\\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}}=4302.1 \\text{ (ft})\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#property-i",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#property-i",
+    "title": "1.6 Measures of variability",
+    "section": "Property I",
+    "text": "Property I\n\\(x_1, x_2, \\cdots, x_n\\) are sample data. \\(c\\) is any constant.\n\\[\\text{If }\\; y_1=x_1+c, \\;y_2=x_2+c, \\;\\cdots, \\;y_n=x_n+c\\]\n\\[\\begin{aligned}\n\\text{then }\\; s_y^2&=s_x^2 \\\\\\\n(\\text{or }s_y&=s_x)\n\\end{aligned}\\]\n\nIntuition: Adding a constant to the data shifts the distribution right or left without changing its shape, and thus its spread.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#property-ii",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#property-ii",
+    "title": "1.6 Measures of variability",
+    "section": "Property II",
+    "text": "Property II\n\\(x_1, x_2, \\cdots, x_n\\) are sample data and \\(c\\) is any constant.\n\\[\\text{If }\\; y_1=cx_1, \\;y_2=cx_2, \\;\\cdots, \\;y_n=cx_n\\]\n\\[\\begin{aligned}\n\\text{then } \\; s_y^2&=c^2s_x^2 \\\\\\\n(\\text{or }s_y&=cs_x)\n\\end{aligned}\\]\n\nIntuition: Multiplying a constant to the data changes its shape, and thus its spread.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#descriptive-statistics-with-python",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#descriptive-statistics-with-python",
+    "title": "1.6 Measures of variability",
+    "section": "Descriptive statistics with Python",
+    "text": "Descriptive statistics with Python\nGo to Google Colab and sign in. Open a new notebook.\nages = [12, 34, 14, 5, 44, 28, 22, 19, 36, 25]\n\nmean = sum(ages) / len(ages)\n\nsquared_dev = [(x-mean)**2 for x in ages]\n\nvar = sum(squared_dev) / (len(ages) - 1)\nprint(var)\n\nprint(var**0.5)\n\nimport statistics\nprint(statistics.variance(ages))\nprint(statistics.stdev(ages))",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#descriptive-statistics-with-python-1",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#descriptive-statistics-with-python-1",
+    "title": "1.6 Measures of variability",
+    "section": "Descriptive statistics with Python",
+    "text": "Descriptive statistics with Python\nWe use the pandas library.\nimport pandas\nurl = \"https://imse317.github.io/lecture-slides/ch01/data/bank.csv\"\nbank = pandas.read_csv(url)\nbank.head()\n\nprint(bank[\"age\"].var())\nprint(bank[\"age\"].std())",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
     ]
   },
   {
@@ -636,7 +909,7 @@
     "href": "lecture-slides/ch01/05-measures-of-location.html#descriptive-statistics-with-python",
     "title": "1.5 Measures of location",
     "section": "Descriptive statistics with Python",
-    "text": "Descriptive statistics with Python\nGo to Google Colab and sign in. Open a new notebook.\nWe use the NumPy library.\n\nimport numpy\n\nages = [12, 34, 14, 5, 44, 28, 22, 19, 36, 25]\n\nprint(numpy.mean(ages))\nprint(numpy.median(ages))\nprint(numpy.quantile(ages, 0.5))",
+    "text": "Descriptive statistics with Python\nGo to Google Colab and sign in. Open a new notebook.\n\n\nages = [12, 34, 14, 5, 44, 28, 22, 19, 36, 25]\n\nprint(sum(ages)/len(ages))\n\nimport statistics\nprint(statistics.mean(ages))\nprint(statistics.median(ages))\nprint(statistics.quantiles(ages))",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -681,6 +954,97 @@
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
       "1.4 Graphical integrity"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/01-sample-space-events.html#sample-space",
+    "href": "lecture-slides/ch02/01-sample-space-events.html#sample-space",
+    "title": "2.1 Sample space, events",
+    "section": "Sample space",
+    "text": "Sample space\n\nProbability starts with a sample space, which is a set that describes all possible outcomes in an experiment.\n\n\nIt must be collectively exhaustive & mutually exclusive.\n\nFlip a coin once 🪙 \\[\\Omega = \\{\\text{heads (H), tails (T)}\\}\\]\nFlip a coin twice 🪙 🪙\n\\[\\Omega = \\{(\\text{H, H}), (\\text{H, T}), (\\text{T, H}), (\\text{T, T})\\}\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.1 Sample space, events"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/01-sample-space-events.html#section",
+    "href": "lecture-slides/ch02/01-sample-space-events.html#section",
+    "title": "2.1 Sample space, events",
+    "section": "",
+    "text": "Roll a six-sided die once 🎲 \\[\\Omega = \\{ ⚀, ⚁, ⚂, ⚃, ⚄, ⚅ \\}\\]\nRoll a six-sided die twice 🎲 🎲 \\[\n  \\begin{aligned}\n  \\Omega = \\{&⚀⚀, ⚀⚁, ⚀⚂, ⚀⚃, ⚀⚄, ⚀⚅, \\\\\n              &⚁⚀, ⚁⚁, ⚁⚂, ⚁⚃, ⚁⚄, ⚁⚅, \\\\\n              &⚂⚀, ⚂⚁, ⚂⚂, ⚂⚃, ⚂⚄, ⚂⚅, \\\\\n              &⚃⚀, ⚃⚁, ⚃⚂, ⚃⚃, ⚃⚄, ⚃⚅, \\\\\n              &⚄⚀, ⚄⚁, ⚄⚂, ⚄⚃, ⚄⚄, ⚄⚅, \\\\\n              &⚅⚀, ⚅⚁, ⚅⚂, ⚅⚃, ⚅⚄, ⚅⚅ \\}\n  \\end{aligned}\n  \\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.1 Sample space, events"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/01-sample-space-events.html#exercise",
+    "href": "lecture-slides/ch02/01-sample-space-events.html#exercise",
+    "title": "2.1 Sample space, events",
+    "section": "Exercise",
+    "text": "Exercise\nWe bet on the total from a roll of two dice 🎲 🎲\nWhat is the sample space?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.1 Sample space, events"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/01-sample-space-events.html#event",
+    "href": "lecture-slides/ch02/01-sample-space-events.html#event",
+    "title": "2.1 Sample space, events",
+    "section": "Event",
+    "text": "Event\nA collection of outcomes in the sample space\nOr simply, a subset of the sample space.\n\nEvent A: Roll a die 🎲, it lands on an odd number.\n\n\n\\[A = \\{ ⚀, ⚂, ⚄ \\}\\]\n\nEvent B: Roll two dice 🎲 🎲, the total is under 7.\n\n\n\n\\[B = \\{ 2, 3, 4, 5, 6\\}\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.1 Sample space, events"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/01-sample-space-events.html#event-1",
+    "href": "lecture-slides/ch02/01-sample-space-events.html#event-1",
+    "title": "2.1 Sample space, events",
+    "section": "Event",
+    "text": "Event\n\nEvent C: Making at least one basketball free throw out of two \\[C=\\{(\\text{hit, hit}), (\\text{hit, miss}), (\\text{miss, hit})\\}\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.1 Sample space, events"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/01-sample-space-events.html#simple-compound-event",
+    "href": "lecture-slides/ch02/01-sample-space-events.html#simple-compound-event",
+    "title": "2.1 Sample space, events",
+    "section": "Simple & compound event",
+    "text": "Simple & compound event\nA simple event consists of a single outcome.\nA compound event consists of multiple outcomes.\n\nRoll a die 🎲, it lands on an odd number. \\[\\{ ⚀, ⚂, ⚄ \\}\\]\nRoll two dice 🎲🎲 and get a double. \\[\\{(⚀,⚀), (⚁, ⚁), (⚂, ⚂), (⚃, ⚃), (⚄, ⚄), (⚅, ⚅) \\}\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.1 Sample space, events"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/01-sample-space-events.html#simple-compound-event-1",
+    "href": "lecture-slides/ch02/01-sample-space-events.html#simple-compound-event-1",
+    "title": "2.1 Sample space, events",
+    "section": "Simple & compound event",
+    "text": "Simple & compound event\n\nRoll two dice 🎲 🎲, the total is 12. \\[\\{ (⚅, ⚅) \\}\\]\nA basketball player makes both free throws \\[\\{(\\text{hit, hit})\\}\\]\nMaking at least one free throw \\[\\{(\\text{hit, hit}), (\\text{hit, miss}), (\\text{miss, hit})\\}\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.1 Sample space, events"
     ]
   }
 ]

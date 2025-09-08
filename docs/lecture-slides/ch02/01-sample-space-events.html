@@ -10,7 +10,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.40">
 
-  <title>IMSE 317 – 1.5 Measures of location</title>
+  <title>IMSE 317 – 2.1 Sample space, events</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,71 +28,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-bbe7401fe57d4b791b917637bb662036.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -192,291 +127,90 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">1.5 Measures of location</h1>
+  <h1 class="title">2.1 Sample space, events</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="heights-in-feet-of-216-volcanoes" class="slide level2">
-<h2>Heights (in feet) of 216 volcanoes</h2>
-<p><br></p>
-<p><span class="math display">\[19882, 19728, 19335, 19287, \cdots, 617, 555, 529, 242\]</span></p>
-<p><a href="data/volcano-heights.csv">volcano-heights.csv</a></p>
+<section id="sample-space" class="slide level2">
+<h2>Sample space</h2>
 <div class="fragment">
-<p><br></p>
-<p>What is the <em>typical</em> height of a volcano?</p>
+<p>Probability starts with a sample space, which is a set that describes <strong>all possible outcomes in an experiment</strong>.</p>
 </div>
-</section>
-<section id="descriptive-statistics" class="slide level2">
-<h2>Descriptive statistics</h2>
-<p>Describe &amp; summarize important features of the data.</p>
+<div class="fragment">
+<p>It must be <a href="https://en.wikipedia.org/wiki/Collectively_exhaustive_events">collectively exhaustive</a> &amp; <a href="https://en.wikipedia.org/wiki/Mutual_exclusivity">mutually exclusive</a>.</p>
 <ul>
-<li class="fragment">Numerical methods
-<ul>
-<li class="fragment">Measures of <strong>location</strong> (i.e., center)</li>
-<li class="fragment">Measures of <strong>variability</strong> (i.e., spread)</li>
-</ul></li>
-<li class="fragment">Graphical methods
-<ul>
-<li class="fragment">Histogram</li>
-<li class="fragment">Boxplot</li>
-</ul></li>
+<li class="fragment"><p>Flip a coin once 🪙 <span class="math display">\[\Omega = \{\text{heads (H), tails (T)}\}\]</span></p></li>
+<li class="fragment"><p>Flip a coin twice 🪙 🪙</p>
+<p><span class="math display">\[\Omega = \{(\text{H, H}), (\text{H, T}), (\text{T, H}), (\text{T, T})\}\]</span></p></li>
 </ul>
-</section>
-<section id="measures-of-location" class="slide level2">
-<h2>Measures of location</h2>
-<ul>
-<li class="fragment">Sample mean</li>
-<li class="fragment">Sample median</li>
-<li class="fragment">Quartile/percentile</li>
-<li class="fragment">Trimmed mean</li>
-<li class="fragment">Boxplot</li>
-</ul>
-</section>
-<section id="sample-mean" class="slide level2">
-<h2>Sample mean</h2>
-<p>For a given set of <span class="math inline">\(n\)</span> numbers</p>
-<p><span class="math display">\[x_1, x_2, \cdots, x_n\]</span></p>
-<div class="fragment">
-<p>the sample mean <span class="math inline">\(\bar{x}\)</span> is given by</p>
-<p><span class="math display">\[\bar{x} = \frac{1}{n}(x_1 + x_2 + \cdots + x_n)\]</span></p>
-</div>
-<div class="fragment">
-<p>We often use the shorthand sigma notation</p>
-<p><span class="math display">\[\bar{x} = \frac{1}{n}\sum_{i=1}^n x_i\]</span></p>
-</div>
-</section>
-<section id="sample-mean-1" class="slide level2">
-<h2>Sample mean</h2>
-<p><span class="math display">\[12, 34, 14, 5, 44, 28, 22, 19, 36, 25\]</span></p>
-<div class="fragment">
-<p><span class="math display">\[\bar{x} = \frac{1}{10}(12 + 34 + \cdots + 25)=23.9\]</span></p>
-</div>
-<div class="fragment">
-<p><img data-src="images/sample-mean.png"></p>
-<p>Interpretation: the <strong>center of gravity</strong> for a series of weights positioned at the specified values in a dot plot.</p>
 </div>
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
 <ul>
-<li class="fragment">In a startup company of 10 people</li>
-<li class="fragment">9 employees earn a salary of <strong>$50k</strong> a year each</li>
-<li class="fragment">The CEO earns <strong>$550k</strong> a year</li>
+<li class="fragment">Roll a six-sided die once 🎲 <span class="math display">\[\Omega = \{ ⚀, ⚁, ⚂, ⚃, ⚄, ⚅ \}\]</span></li>
+<li class="fragment">Roll a six-sided die twice 🎲 🎲 <span class="math display">\[
+  \begin{aligned}
+  \Omega = \{&amp;⚀⚀, ⚀⚁, ⚀⚂, ⚀⚃, ⚀⚄, ⚀⚅, \\
+              &amp;⚁⚀, ⚁⚁, ⚁⚂, ⚁⚃, ⚁⚄, ⚁⚅, \\
+              &amp;⚂⚀, ⚂⚁, ⚂⚂, ⚂⚃, ⚂⚄, ⚂⚅, \\
+              &amp;⚃⚀, ⚃⚁, ⚃⚂, ⚃⚃, ⚃⚄, ⚃⚅, \\
+              &amp;⚄⚀, ⚄⚁, ⚄⚂, ⚄⚃, ⚄⚄, ⚄⚅, \\
+              &amp;⚅⚀, ⚅⚁, ⚅⚂, ⚅⚃, ⚅⚄, ⚅⚅ \}
+  \end{aligned}
+  \]</span></li>
 </ul>
-<div class="fragment">
-<p><span class="math display">\[50, 50, 50, 50, 50, 50, 50, 50, 50, 550\]</span></p>
-</div>
-<div class="fragment">
-<p><span class="math display">\[\bar{x} = \frac{1}{10}(50\times9 + 550\times1)=100\]</span></p>
-<ul>
-<li class="fragment">One may argue that $100k is not a “typical” value.</li>
-</ul>
-</div>
-</section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-<p><span class="math display">\[50, 50, 50, 50, 50, 50, 50, 50, 50, 550\]</span></p>
-<p><br></p>
-<p>Sample mean is sensitive to the presence of outliers<sup>1</sup>, especially for small data sets.</p>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>data points that lie at an abnormal distance from the rest.</p></li></ol></aside></section>
-<section id="sample-median" class="slide level2">
-<h2>Sample median</h2>
-<p>The median, <span class="math inline">\(\tilde{x}\)</span> (reads x tilde), is the <strong>middle</strong> value in a set of data that is arranged in order.</p>
-<p>If the sample size <span class="math inline">\(n\)</span> is an even number, there are two middle values.</p>
-<p><span class="math display">\[1, 3, 4, 6, 8, 9\]</span></p>
-<p><span class="math inline">\(\tilde{x}\)</span> is the average of the two.</p>
 </section>
 <section id="exercise" class="slide level2">
 <h2>Exercise</h2>
-<p>Data set:</p>
-<p><span class="math display">\[12, 34, 14, 5, 44, 28, 22, 19, 36, 25\]</span></p>
-<div class="fragment">
-<p>Sort the data to order:</p>
-<p><span class="math display">\[5, 12, 14, 19, 22, 25, 28, 34, 36, 44\]</span></p>
-</div>
-<div class="fragment">
-<p><span class="math display">\[\tilde{x} = \frac{1}{2}(22+25)=23.5\]</span></p>
-</div>
-<div class="fragment">
-<p>Interpretation: half of the data are smaller than 23.5, half are larger than 23.5.</p>
-</div>
-</section>
-<section id="the-earlier-startup-company-example" class="slide level2">
-<h2>The earlier startup company example</h2>
-<p><span class="math display">\[50, 50, 50, 50, 50, 50, 50, 50, 50, 550\]</span></p>
-<div class="fragment">
-<p><span class="math display">\[\tilde{x} = \frac{1}{2}(50 + 50)=50\]</span></p>
+<p>We bet on the total from a roll of two dice 🎲 🎲</p>
+<p>What is the sample space?</p>
+
+<img data-src="images/2dice.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="event" class="slide level2">
+<h2>Event</h2>
+<p>A collection of outcomes in the sample space</p>
+<p>Or simply, a <strong>subset</strong> of the sample space.</p>
 <ul>
-<li class="fragment">The median of $50k is arguably more “typical”.</li>
-<li class="fragment">The median is less sensitive to outliers.</li>
+<li class="fragment">Event A: Roll a die 🎲, it lands on an odd number.</li>
+</ul>
+<div class="fragment">
+<p><span class="math display">\[A = \{ ⚀, ⚂, ⚄ \}\]</span></p>
+<ul>
+<li class="fragment">Event B: Roll two dice 🎲 🎲, the total is under 7.</li>
 </ul>
 </div>
+<div class="fragment">
+<p><span class="math display">\[B = \{ 2, 3, 4, 5, 6\}\]</span></p>
+</div>
 </section>
-<section id="quartiles-percentiles" class="slide level2">
-<h2>Quartiles &amp; percentiles</h2>
+<section id="event-1" class="slide level2">
+<h2>Event</h2>
 <ul>
-<li class="fragment">First quartile (25th percentile)
-<ul>
-<li class="fragment">Separating the bottom 25% data from the top 75%</li>
-<li class="fragment">The middle value between the smallest and median.</li>
-</ul></li>
-<li class="fragment">Second quartile (50th percentile, or simply, the median)
-<ul>
-<li class="fragment">Separating the bottom 50% data from the top 50%</li>
-</ul></li>
-<li class="fragment">Third quartile (75th percentile)
-<ul>
-<li class="fragment">Separating the bottom 75% data from the top 25%</li>
-<li class="fragment">The middle value between the median and largest.</li>
-</ul></li>
+<li class="fragment">Event C: Making at least one basketball free throw out of two <span class="math display">\[C=\{(\text{hit, hit}), (\text{hit, miss}), (\text{miss, hit})\}\]</span></li>
 </ul>
 </section>
-<section id="xtext-th-percentile" class="slide level2">
-<h2><span class="math inline">\(x\text{-th}\)</span> percentile</h2>
-<p>The value below which <span class="math inline">\(x\%\)</span> of the data will be found.</p>
-<div class="fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/99percent-signs.png" class="quarto-figure quarto-figure-center" width="600"></p>
-</figure>
-</div>
-<p><a href="https://en.wikipedia.org/wiki/We_are_the_99%25">Image source</a></p>
-</div>
-</section>
-<section>
-<section id="section-2" class="title-slide slide level1 center">
-<h1></h1>
-<p><span class="math display">\[\text{Percentile} = \frac{r-0.5}{n}\times100\]</span></p>
-<table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><span class="math inline">\(\text{Rank }(r)\)</span></th>
-<th style="text-align: center;">&nbsp;&nbsp;<span class="math inline">\(x_i\)</span>&nbsp;&nbsp;</th>
-<th style="text-align: center;">&nbsp;<span class="math inline">\(\text{Percentile}\)</span>&nbsp;</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(5\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(5\text{th}\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(12\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(15\text{th}\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(3\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(14\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(25\text{th}\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\cdots\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\cdots\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\cdots\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(8\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(34\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(75\text{th}\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(9\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(36\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(85\text{th}\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(10\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(44\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(95\text{th}\)</span></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="trimmed-mean" class="slide level2">
-<h2>Trimmed mean</h2>
-<p>The mean after discarding the smallest &amp; largest <span class="math inline">\(\alpha\%\)</span> of the data</p>
-<div class="fragment">
-<p>Dive scores from 7 judges:</p>
-<p><span class="math display">\[4, 6, 6, 6, 7, 7, 8\]</span></p>
-</div>
-<div class="fragment">
-<p>The lowest and highest scores are eliminated.</p>
-<p><span class="math display">\[6, 6, 6, 7, 7\]</span></p>
-</div>
-<div class="fragment">
-<p>The remaining scores are totaled.</p>
-<p><span class="math display">\[6+6+6+7+7=32\]</span></p>
-</div>
-</section>
-<section id="trimmed-mean-1" class="slide level2">
-<h2>Trimmed mean</h2>
-<p>Typically <span class="math inline">\(\alpha\%\)</span> is between 5 to 25%.</p>
-<p>When discarding the bottom 25% and top 25%, it is called the <strong>interquartile mean</strong>.</p>
-<div class="fragment">
-<p><br></p>
-<p>The sample mean and median can be considered as two special cases of trimmed mean.</p>
+<section id="simple-compound-event" class="slide level2">
+<h2>Simple &amp; compound event</h2>
+<p>A simple event consists of a <strong>single</strong> outcome.</p>
+<p>A compound event consists of <strong>multiple</strong> outcomes.</p>
 <ul>
-<li class="fragment"><span class="math inline">\(\alpha\%=0\%\)</span>
-<ul>
-<li class="fragment">Discard no data: mean</li>
-</ul></li>
-<li class="fragment"><span class="math inline">\(\alpha\%=50\%\)</span>
-<ul>
-<li class="fragment">Discard all but the middle number(s): median</li>
-</ul></li>
+<li class="fragment"><p>Roll a die 🎲, it lands on an odd number. <span class="math display">\[\{ ⚀, ⚂, ⚄ \}\]</span></p></li>
+<li class="fragment"><p>Roll two dice 🎲🎲 and get a double. <span class="math display">\[\{(⚀,⚀), (⚁, ⚁), (⚂, ⚂), (⚃, ⚃), (⚄, ⚄), (⚅, ⚅) \}\]</span></p></li>
 </ul>
-</div>
 </section>
-<section id="a-simple-boxplot" class="slide level2">
-<h2>A simple boxplot</h2>
-<p><br> <img data-src="images/boxplot.png"></p>
+<section id="simple-compound-event-1" class="slide level2">
+<h2>Simple &amp; compound event</h2>
+<ul>
+<li class="fragment"><p>Roll two dice 🎲 🎲, the total is 12. <span class="math display">\[\{ (⚅, ⚅) \}\]</span></p></li>
+<li class="fragment"><p>A basketball player makes both free throws <span class="math display">\[\{(\text{hit, hit})\}\]</span></p></li>
+<li class="fragment"><p>Making at least one free throw <span class="math display">\[\{(\text{hit, hit}), (\text{hit, miss}), (\text{miss, hit})\}\]</span></p></li>
+</ul>
+
+
 </section>
-<section id="how-much-space-does-drivers-give-to-cyclists-when-passing" class="slide level2">
-<h2>How much space does drivers give to cyclists when passing?</h2>
-
-<img data-src="images/overtaking.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="descriptive-statistics-with-python" class="slide level2">
-<h2>Descriptive statistics with Python</h2>
-<p>Go to <a href="https://colab.research.google.com/">Google Colab</a> and sign in. Open a new notebook.</p>
-<!-- We use the [NumPy](https://numpy.org){preview-link="true"} library. -->
-<p><br></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>ages <span class="op">=</span> [<span class="dv">12</span>, <span class="dv">34</span>, <span class="dv">14</span>, <span class="dv">5</span>, <span class="dv">44</span>, <span class="dv">28</span>, <span class="dv">22</span>, <span class="dv">19</span>, <span class="dv">36</span>, <span class="dv">25</span>]</span>
-<span id="cb1-2"><a></a></span>
-<span id="cb1-3"><a></a><span class="bu">print</span>(<span class="bu">sum</span>(ages)<span class="op">/</span><span class="bu">len</span>(ages))</span>
-<span id="cb1-4"><a></a></span>
-<span id="cb1-5"><a></a><span class="im">import</span> statistics</span>
-<span id="cb1-6"><a></a><span class="bu">print</span>(statistics.mean(ages))</span>
-<span id="cb1-7"><a></a><span class="bu">print</span>(statistics.median(ages))</span>
-<span id="cb1-8"><a></a><span class="bu">print</span>(statistics.quantiles(ages))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="descriptive-statistics-with-python-1" class="slide level2">
-<h2>Descriptive statistics with Python</h2>
-<p>We use the <a href="https://pandas.pydata.org" data-preview-link="true">pandas</a> library.</p>
-<p><br></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="im">import</span> pandas</span>
-<span id="cb2-2"><a></a>url <span class="op">=</span> <span class="st">"https://imse317.github.io/lecture-slides/ch01/data/bank.csv"</span></span>
-<span id="cb2-3"><a></a>bank <span class="op">=</span> pandas.read_csv(url)</span>
-<span id="cb2-4"><a></a>bank.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br></p>
-<div class="fragment">
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>bank.describe()</span>
-<span id="cb3-2"><a></a>bank[<span class="st">'age'</span>].mean()</span>
-<span id="cb3-3"><a></a>bank[<span class="st">'age'</span>].median()</span>
-<span id="cb3-4"><a></a>bank[<span class="st">'age'</span>].quantile(<span class="fl">0.99</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-
-</div>
-</section></section>
-
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
