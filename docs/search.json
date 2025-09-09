@@ -342,7 +342,7 @@
     "href": "lecture-slides/ch02/03-probability-axioms.html#a-more-general-form-of-the-additivity",
     "title": "2.3 Probability axioms",
     "section": "A more general form of the additivity",
-    "text": "A more general form of the additivity\nIf \\(A_1, A_2, A_3, \\cdots\\) is an infinite collection of disjoint events, then\n\\[ \\text{P}(A_1 \\cup A_2 \\cup A_3 \\cup \\cdots) = \\text{P}(A_1) + \\text{P}(A_2) + \\text{P}(A_3) + \\cdots\\]",
+    "text": "A more general form of the additivity\n\nIf \\(A_1, A_2, A_3, \\cdots\\) is an infinite collection of disjoint events, then\n\\[ \\text{P}(A_1 \\cup A_2 \\cup A_3 \\cup \\cdots) = \\text{P}(A_1) + \\text{P}(A_2) + \\text{P}(A_3) + \\cdots\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -355,7 +355,7 @@
     "href": "lecture-slides/ch02/03-probability-axioms.html#discussion",
     "title": "2.3 Probability axioms",
     "section": "Discussion",
-    "text": "Discussion\nRecall the non-negativity axiom:\n\\[\\text{P}(A)\\geq0,\\; \\text{for any event $A$}\\]\n\nDo we need to also add the following as an axiom?\n\\[\\text{P}(A) \\leq 1, \\;\\text{for any event } A\\]",
+    "text": "Discussion\nRecall the non-negativity axiom:\n\\[\\text{P}(A)\\geq0,\\; \\text{for any event $A$}\\]\n\n\nDo we need to also add the following as an axiom?\n\\[\\text{P}(A) \\leq 1, \\;\\text{for any event } A\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -1364,20 +1364,7 @@
     "href": "lecture-slides/ch02/01-sample-space-events.html#sample-space",
     "title": "2.1 Sample space, events",
     "section": "Sample space",
-    "text": "Sample space\n\nProbability starts with a sample space, which is a set that describes all possible outcomes in an experiment.\n\n\nIt must be collectively exhaustive & mutually exclusive.\n\nFlip a coin once 🪙 \\[\\Omega = \\{\\text{heads (H), tails (T)}\\}\\]\nFlip a coin twice 🪙 🪙\n\\[\\Omega = \\{(\\text{H, H}), (\\text{H, T}), (\\text{T, H}), (\\text{T, T})\\}\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.1 Sample space, events"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/01-sample-space-events.html#section",
-    "href": "lecture-slides/ch02/01-sample-space-events.html#section",
-    "title": "2.1 Sample space, events",
-    "section": "",
-    "text": "Roll a six-sided die once 🎲 \\[\\Omega = \\{ ⚀, ⚁, ⚂, ⚃, ⚄, ⚅ \\}\\]\nRoll a six-sided die twice 🎲 🎲 \\[\n  \\begin{aligned}\n  \\Omega = \\{&⚀⚀, ⚀⚁, ⚀⚂, ⚀⚃, ⚀⚄, ⚀⚅, \\\\\n              &⚁⚀, ⚁⚁, ⚁⚂, ⚁⚃, ⚁⚄, ⚁⚅, \\\\\n              &⚂⚀, ⚂⚁, ⚂⚂, ⚂⚃, ⚂⚄, ⚂⚅, \\\\\n              &⚃⚀, ⚃⚁, ⚃⚂, ⚃⚃, ⚃⚄, ⚃⚅, \\\\\n              &⚄⚀, ⚄⚁, ⚄⚂, ⚄⚃, ⚄⚄, ⚄⚅, \\\\\n              &⚅⚀, ⚅⚁, ⚅⚂, ⚅⚃, ⚅⚄, ⚅⚅ \\}\n  \\end{aligned}\n  \\]",
+    "text": "Sample space\n\nProbability starts with a sample space, which is a set that describes all possible outcomes in an experiment.\n\n\nIt must be collectively exhaustive & mutually exclusive.\n\nFlip a coin once 🪙\n\n\n\n\\[\\Omega = \\{\\text{heads (H), tails (T)}\\}\\]\n\nFlip a coin twice 🪙 🪙\n\n\n\n\\[\\Omega = \\{(\\text{H, H}), (\\text{H, T}), (\\text{T, H}), (\\text{T, T})\\}\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -1429,7 +1416,7 @@
     "href": "lecture-slides/ch02/01-sample-space-events.html#simple-compound-event",
     "title": "2.1 Sample space, events",
     "section": "Simple & compound event",
-    "text": "Simple & compound event\nA simple event consists of a single outcome.\nA compound event consists of multiple outcomes.\n\nRoll a die 🎲, it lands on an odd number. \\[\\{ ⚀, ⚂, ⚄ \\}\\]\nRoll two dice 🎲🎲 and get a double. \\[\\{(⚀,⚀), (⚁, ⚁), (⚂, ⚂), (⚃, ⚃), (⚄, ⚄), (⚅, ⚅) \\}\\]",
+    "text": "Simple & compound event\nA simple event consists of a single outcome.\nA compound event consists of multiple outcomes.\n\nRoll a die 🎲, it lands on an odd number.\n\n\n\\[\\{ ⚀, ⚂, ⚄ \\}\\]\n\nRoll two dice 🎲 🎲 and get a double.\n\n\n\n\\[\\{(⚀,⚀), (⚁, ⚁), (⚂, ⚂), (⚃, ⚃), (⚄, ⚄), (⚅, ⚅) \\}\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -1438,11 +1425,11 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/01-sample-space-events.html#simple-compound-event-1",
-    "href": "lecture-slides/ch02/01-sample-space-events.html#simple-compound-event-1",
+    "objectID": "lecture-slides/ch02/01-sample-space-events.html#section-1",
+    "href": "lecture-slides/ch02/01-sample-space-events.html#section-1",
     "title": "2.1 Sample space, events",
-    "section": "Simple & compound event",
-    "text": "Simple & compound event\n\nRoll two dice 🎲 🎲, the total is 12. \\[\\{ (⚅, ⚅) \\}\\]\nA basketball player makes both free throws \\[\\{(\\text{hit, hit})\\}\\]\nMaking at least one free throw \\[\\{(\\text{hit, hit}), (\\text{hit, miss}), (\\text{miss, hit})\\}\\]",
+    "section": "",
+    "text": "Roll two dice 🎲 🎲, the total is 12.\n\n\n\\[\\{ (⚅, ⚅) \\}\\]\n\nA basketball player makes both free throws\n\n\n\n\\[\\{(\\text{hit, hit})\\}\\]\n\nMaking at least one free throw\n\n\n\n\\[\\{(\\text{hit, hit}), (\\text{hit, miss}), (\\text{miss, hit})\\}\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -1663,7 +1650,7 @@
     "href": "lecture-slides/ch02/02-set-operations.html#union-of-two-events-a-and-b",
     "title": "2.2 Set operations",
     "section": "Union of two events A and B",
-    "text": "Union of two events A and B\nThe event consisting of all outcomes that are in either A or B.\nNotation: \\(A \\cup B\\)  (Reads: A union B)\n\nRoll a six-sided die 🎲\n\\[\n\\begin{aligned}\nA &= \\{ 5, 6 \\} \\\\\n\\\\\nB &= \\{ 1, 3, 5 \\} \\\\\n\\\\\nA \\cup B &= \\\\\n\\end{aligned}\n\\]",
+    "text": "Union of two events A and B\n\nThe event consisting of all outcomes that are in either A or B.\n\n\nNotation: \\(A \\cup B\\)  (Reads: A union B)\n\n\nRoll a six-sided die 🎲\n\\[\n\\begin{aligned}\nA &= \\{ 5, 6 \\} \\\\\n\\\\\nB &= \\{ 1, 3, 5 \\} \\\\\n\\\\\nA \\cup B &= \\\\\n\\end{aligned}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -1676,7 +1663,7 @@
     "href": "lecture-slides/ch02/02-set-operations.html#intersection-of-two-events-a-and-b",
     "title": "2.2 Set operations",
     "section": "Intersection of two events A and B",
-    "text": "Intersection of two events A and B\nThe event consisting of all outcomes that are in both A and B.\nNotation: \\(A \\cap B\\)  (Reads: A intersect B)\n\nRoll a six-sided die 🎲\n\\[\n\\begin{aligned}\nA &= \\{ 5, 6 \\} \\\\\n\\\\\nB &= \\{ 1, 3, 5 \\} \\\\\n\\\\\nA \\cap B &=\n\\end{aligned}\n\\]",
+    "text": "Intersection of two events A and B\n\nThe event consisting of all outcomes that are in both A and B.\n\n\nNotation: \\(A \\cap B\\)  (Reads: A intersect B)\n\n\nRoll a six-sided die 🎲\n\\[\n\\begin{aligned}\nA &= \\{ 5, 6 \\} \\\\\n\\\\\nB &= \\{ 1, 3, 5 \\} \\\\\n\\\\\nA \\cap B &=\n\\end{aligned}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -1741,7 +1728,7 @@
     "href": "lecture-slides/ch02/02-set-operations.html#complement-of-an-event-a",
     "title": "2.2 Set operations",
     "section": "Complement of an event A",
-    "text": "Complement of an event A\nThe set of all outcomes in \\(\\Omega\\) that are not in A.\nNotation: \\(A^c\\)  (Reads: A complement)\n\nBy definition,\n\\[A \\cap A^c = \\Phi\\]\n\n\n\\[A \\cup A^c = \\Omega\\]\n\n\nRoll a six-sided die 🎲\n\\[\n\\begin{aligned}\nA &= \\{ 5, 6 \\} \\\\\nA^c &= \\\\\n\\end{aligned}\n\\]",
+    "text": "Complement of an event A\n\nThe set of all outcomes in \\(\\Omega\\) that are not in A.\n\n\nNotation: \\(A^c\\)  (Reads: A complement)\n\n\nBy definition,\n\\[A \\cap A^c = \\Phi\\]\n\n\n\\[A \\cup A^c = \\Omega\\]\n\n\nRoll a six-sided die 🎲\n\\[\n\\begin{aligned}\nA &= \\{ 5, 6 \\} \\\\\nA^c &= \\\\\n\\end{aligned}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -1754,7 +1741,7 @@
     "href": "lecture-slides/ch02/02-set-operations.html#subset",
     "title": "2.2 Set operations",
     "section": "Subset",
-    "text": "Subset\nAn event A is a subset of an event B if all outcomes in A are also outcomes in B.\nNotation: \\(A \\subseteq B\\)\n\nRoll a six-sided die 🎲\n\\[\n\\begin{aligned}\nA &= \\{ 1, 3, 5\\} \\text{ (odd numbers)} \\\\\n\\\\\nB &= \\{ 1, 2, 3, 4, 5 \\} \\text{ (less than 6)} \\\\\n\\\\\nA &\\subseteq B \\\\\n\\end{aligned}\n\\]",
+    "text": "Subset\n\nAn event A is a subset of an event B if all outcomes in A are also outcomes in B.\n\n\nNotation: \\(A \\subseteq B\\)\n\n\nRoll a six-sided die 🎲\n\\[\n\\begin{aligned}\nA &= \\{ 1, 3, 5\\} \\text{ (odd numbers)} \\\\\n\\\\\nB &= \\{ 1, 2, 3, 4, 5 \\} \\text{ (less than 6)} \\\\\n\\\\\nA &\\subseteq B \\\\\n\\end{aligned}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
