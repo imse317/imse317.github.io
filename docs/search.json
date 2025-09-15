@@ -69,7 +69,7 @@
     "href": "lecture-slides/ch02/04-product-rule.html#section-1",
     "title": "2.4 Product rule",
     "section": "",
-    "text": "Draw a card from a well-shuffled deck of 52 cards.\nWhat is the chance to draw a spade?\n\n\n\n\n\n\n\\[\n\\text{P}(\\text{Aces}) = \\text{P}(\\text{spades}) = \\text{P}(\\{🂡, 🂢, \\cdots, 🂮\\})= \\frac{13}{52}= \\frac{1}{4}\n\\]",
+    "text": "Draw a card from a well-shuffled deck of 52 cards.\nWhat is the chance to draw a spade?\n\n\n\n\n\n\n\\[\n\\text{P}(\\text{spades}) = \\text{P}(\\{🂡, 🂢, \\cdots, 🂮\\})= \\frac{13}{52}= \\frac{1}{4}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
