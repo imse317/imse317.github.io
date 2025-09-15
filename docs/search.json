@@ -654,7 +654,7 @@
     "href": "lecture-slides/ch01/05-measures-of-location.html#descriptive-statistics-with-python-1",
     "title": "1.5 Measures of location",
     "section": "Descriptive statistics with Python",
-    "text": "Descriptive statistics with Python\nWe use the pandas library.\n\nimport pandas\nurl = \"https://imse317.github.io/lecture-slides/ch01/data/bank.csv\"\nbank = pandas.read_csv(url)\nbank.head()\n\n\nbank.describe()\nbank['age'].mean()\nbank['age'].median()\nbank['age'].quantile(0.99)",
+    "text": "Descriptive statistics with Python\nbank.csv\n\nWe use the pandas library.\n\nimport pandas\nurl = \"https://imse317.github.io/lecture-slides/ch01/data/bank.csv\"\nbank = pandas.read_csv(url)\nbank.head()\n\n\n\nbank.describe()\nbank['age'].mean()\nbank['age'].median()\nbank['age'].quantile(0.99)",
     "crumbs": [
       "Home",
       "Lecture slides",
