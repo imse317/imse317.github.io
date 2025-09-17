@@ -221,6 +221,19 @@
     ]
   },
   {
+    "objectID": "lecture-slides/ch02/05-permutation.html#python-implementation",
+    "href": "lecture-slides/ch02/05-permutation.html#python-implementation",
+    "title": "2.5 Permutation",
+    "section": "Python implementation",
+    "text": "Python implementation\n\n# Method 1: Import the entire module\nimport math\n\nprint(math.factorial(8))\n\n# Method 2: Import a function from the module\nfrom math import factorial\n\nprint(factorial(8))",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.5 Permutation"
+    ]
+  },
+  {
     "objectID": "lecture-slides/ch02/05-permutation.html#section-5",
     "href": "lecture-slides/ch02/05-permutation.html#section-5",
     "title": "2.5 Permutation",
