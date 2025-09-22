@@ -169,276 +169,1064 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/05-permutation.html#section-2",
-    "href": "lecture-slides/ch02/05-permutation.html#section-2",
-    "title": "2.5 Permutation",
+    "objectID": "lecture-slides/ch02/07-conditional-probability.html#section",
+    "href": "lecture-slides/ch02/07-conditional-probability.html#section",
+    "title": "2.7 Conditional probability",
     "section": "",
-    "text": "How many possible ways to rank 2 teams A and B?\nAssume there are no ties.",
+    "text": "Roll a die 🎲\nWhat is the probability the number is less than 4?\n\n\n\n\n\n\n\n\nWithout seeing it, we were told it landed on an odd number.\nWith this new information, how should we adjust our belief that the number is less than 4?",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.5 Permutation"
+      "2.7 Conditional probability"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/05-permutation.html#section-3",
-    "href": "lecture-slides/ch02/05-permutation.html#section-3",
-    "title": "2.5 Permutation",
+    "objectID": "lecture-slides/ch02/07-conditional-probability.html#section-1",
+    "href": "lecture-slides/ch02/07-conditional-probability.html#section-1",
+    "title": "2.7 Conditional probability",
     "section": "",
-    "text": "How many possible ways to rank 3 teams A, B, and C?\nAssume there are no ties.",
+    "text": "For any event \\(A\\), we have our initial belief of how likely it would occur. \\(\\rightarrow\\text{P}(A)\\)\n\nNow, we learned that another event \\(B\\) has occurred.\nWith this new information, how should we adjust our belief on how likely event \\(A\\) would occur?\n\n\n\\[\\text{Conditional probability:}\\;\\;\\text{P}(A \\mid B)\\]\n\n\n\n\n  \n    \n    \n    \n  \n\n  \n  \n  \n\n  \n    \n    \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.5 Permutation"
+      "2.7 Conditional probability"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/05-permutation.html#permutation",
-    "href": "lecture-slides/ch02/05-permutation.html#permutation",
-    "title": "2.5 Permutation",
-    "section": "Permutation",
-    "text": "Permutation\n\nAn ordering of distinguishable objects\n\n\n\n\\[\n\\begin{aligned}\n\\text{Permutations of }n &= n \\times (n-1) \\times (n-2) \\times \\cdots \\times 2 \\times 1 \\\\\n\\\\\n&=n! \\\\\n\\end{aligned}\n\\]",
+    "objectID": "lecture-slides/ch02/07-conditional-probability.html#conditional-probability",
+    "href": "lecture-slides/ch02/07-conditional-probability.html#conditional-probability",
+    "title": "2.7 Conditional probability",
+    "section": "Conditional probability",
+    "text": "Conditional probability\n For any two events \\(A\\) and \\(B\\), where \\(\\text{P}(B)&gt;0\\),\nthe conditional probability \\(\\text{P}(A \\mid B)\\) is defined as\n \\[\\large{\\text{P}(A \\mid B)=\\frac{\\text{P}(A \\cap B)}{\\text{P}(B)}}\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.5 Permutation"
+      "2.7 Conditional probability"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/05-permutation.html#section-4",
-    "href": "lecture-slides/ch02/05-permutation.html#section-4",
-    "title": "2.5 Permutation",
-    "section": "",
-    "text": "In a track race with 8 athletes, how many results are possible? (Assume no ties.)\n\n\n\n\n\nImage source\n\n\\[8! = 8 \\times 7 \\times \\cdots \\times 2 \\times 1 = 40,320\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.5 Permutation"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/05-permutation.html#python-implementation",
-    "href": "lecture-slides/ch02/05-permutation.html#python-implementation",
-    "title": "2.5 Permutation",
-    "section": "Python implementation",
-    "text": "Python implementation\n\n# Method 1: Import the entire module\nimport math\n\nprint(math.factorial(8))\n\n# Method 2: Import a function from the module\nfrom math import factorial\n\nprint(factorial(8))",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.5 Permutation"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/05-permutation.html#section-5",
-    "href": "lecture-slides/ch02/05-permutation.html#section-5",
-    "title": "2.5 Permutation",
-    "section": "",
-    "text": "How many podium (i.e., top three) results are possible? (Assume no ties.)\n\n\n\n\n\n\n\\[8 \\times 7 \\times 6 = 336\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.5 Permutation"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/05-permutation.html#k-permutations-of-n-objects",
-    "href": "lecture-slides/ch02/05-permutation.html#k-permutations-of-n-objects",
-    "title": "2.5 Permutation",
-    "section": "\\(k\\)-permutations of \\(n\\) objects",
-    "text": "\\(k\\)-permutations of \\(n\\) objects",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.5 Permutation"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/05-permutation.html#k-permutations-of-n-objects-1",
-    "href": "lecture-slides/ch02/05-permutation.html#k-permutations-of-n-objects-1",
-    "title": "2.5 Permutation",
-    "section": "\\(k\\)-permutations of \\(n\\) objects",
-    "text": "\\(k\\)-permutations of \\(n\\) objects\n\n\\[ n \\times (n-1) \\times (n-2) \\times \\cdots \\times (n-k+1) \\]\n\n\\[\n\\begin{aligned}\n&n \\times (n-1) \\times (n-2) \\times \\cdots \\times (n-k+1) \\\\\n\\\\\n=& \\frac{n \\times (n-1) \\times (n-2) \\times \\cdots \\times (n-k+1)}{1} \\\\\n\\\\\n=& \\frac{n \\times (n-1) \\times (n-2) \\times \\cdots \\times (n-k+1) \\times (n-k) \\times (n-k-1) \\times \\cdots \\times 2 \\times 1}{(n-k) \\times (n-k-1) \\times \\cdots \\times 2 \\times 1} \\\\\n\\\\\n=& \\frac{n!}{(n-k)!} \\\\\n\\end{aligned}\n\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.5 Permutation"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/05-permutation.html#section-6",
-    "href": "lecture-slides/ch02/05-permutation.html#section-6",
-    "title": "2.5 Permutation",
-    "section": "",
-    "text": "\\(0!=1\\)\n\n\n\n\n\n\n\n\n\\(a^0=1\\)",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.5 Permutation"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/05-permutation.html#exercise",
-    "href": "lecture-slides/ch02/05-permutation.html#exercise",
-    "title": "2.5 Permutation",
+    "objectID": "lecture-slides/ch02/07-conditional-probability.html#exercise",
+    "href": "lecture-slides/ch02/07-conditional-probability.html#exercise",
+    "title": "2.7 Conditional probability",
     "section": "Exercise",
-    "text": "Exercise\nSuppose your music collection include\n\n\\(n_1\\) pop songs\n\\(n_2\\) rock songs\n\\(n_3\\) country songs\n\n\nIn how many ways can you arrange your music, so that each genre is contiguous?",
+    "text": "Exercise\nToss two coins 🪙 🪙\nWithout seeing it, we were told that one landed on heads.\nWhat is the probability the other landed on tails?",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.5 Permutation"
+      "2.7 Conditional probability"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/05-permutation.html#exercise-contd",
-    "href": "lecture-slides/ch02/05-permutation.html#exercise-contd",
-    "title": "2.5 Permutation",
-    "section": "Exercise (cont’d)",
-    "text": "Exercise (cont’d)\n\n\nNow you are making a playlist.\nYou pick \\(k_i\\) out of the \\(n_i\\) songs of genre \\(i\\;(= 1, 2, 3)\\), where \\(k_i = 0, 1, \\cdots, n_i\\).\nHow many playlists are possible, so that each genre is contiguous?",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.5 Permutation"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/03-probability-axioms.html#probability-of-an-event",
-    "href": "lecture-slides/ch02/03-probability-axioms.html#probability-of-an-event",
-    "title": "2.3 Probability axioms",
-    "section": "Probability of an event",
-    "text": "Probability of an event\n\nA number that encodes our knowledge or belief about the collective “likelihood” of the elements of the event.\n\n\n\\(\\text{P}(A)\\): the probability of event \\(A\\).",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.3 Probability axioms"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/03-probability-axioms.html#probability",
-    "href": "lecture-slides/ch02/03-probability-axioms.html#probability",
-    "title": "2.3 Probability axioms",
-    "section": "Probability",
-    "text": "Probability\nRoll a fair die 🎲. Which of the two would you bet on?\n\nIt lands on an even number\nIt lands on an odd number\n\n\nRoll two dice 🎲 🎲. Which of the two would you bet on?\n\nTotal of 7\nTotal of 12",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.3 Probability axioms"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/03-probability-axioms.html#probability-axioms",
-    "href": "lecture-slides/ch02/03-probability-axioms.html#probability-axioms",
-    "title": "2.3 Probability axioms",
-    "section": "Probability axioms",
-    "text": "Probability axioms\n\nNon-negativity \\[\\text{P}(A)\\geq0,\\; \\text{for any event $A$}\\]\nNormalization \\[ \\text{P}(\\Omega)=1\\]\nAdditivity \\[ \\text{If } A \\cap B = \\Phi, \\text{ then } \\text{P}(A \\cup B) = \\text{P}(A) + \\text{P}(B)\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.3 Probability axioms"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/03-probability-axioms.html#a-more-general-form-of-the-additivity",
-    "href": "lecture-slides/ch02/03-probability-axioms.html#a-more-general-form-of-the-additivity",
-    "title": "2.3 Probability axioms",
-    "section": "A more general form of the additivity",
-    "text": "A more general form of the additivity\n\nIf \\(A_1, A_2, A_3, \\cdots\\) is an infinite collection of disjoint events, then\n\\[ \\text{P}(A_1 \\cup A_2 \\cup A_3 \\cup \\cdots) = \\text{P}(A_1) + \\text{P}(A_2) + \\text{P}(A_3) + \\cdots\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.3 Probability axioms"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/03-probability-axioms.html#discussion",
-    "href": "lecture-slides/ch02/03-probability-axioms.html#discussion",
-    "title": "2.3 Probability axioms",
-    "section": "Discussion",
-    "text": "Discussion\nRecall the non-negativity axiom:\n\\[\\text{P}(A)\\geq0,\\; \\text{for any event $A$}\\]\n\n\nDo we need to also add the following as an axiom?\n\\[\\text{P}(A) \\leq 1, \\;\\text{for any event } A\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.3 Probability axioms"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/03-probability-axioms.html#proposition",
-    "href": "lecture-slides/ch02/03-probability-axioms.html#proposition",
-    "title": "2.3 Probability axioms",
-    "section": "Proposition",
-    "text": "Proposition\n\\[\\text{P}(A) + \\text{P}(A^c) = 1, \\;\\text{for any event } A\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.3 Probability axioms"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/03-probability-axioms.html#proposition-1",
-    "href": "lecture-slides/ch02/03-probability-axioms.html#proposition-1",
-    "title": "2.3 Probability axioms",
-    "section": "Proposition",
-    "text": "Proposition\n\\[ \\text{P}(A \\cup B) = \\text{P}(A) + \\text{P}(B) - \\text{P}(A \\cap B), \\]\n\\[\\text{for any events $A$ and $B$}\\]\n\n\n\n\n  \n    \n    \n    \n  \n\n  \n  \n  \n\n  \n    \n    \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)\n\n\n\n\n\n  \n  \n\n  \n    \n    \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)\n\n\n\n\n\n  \n  \n  \n\n  \n    \n    \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.3 Probability axioms"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/03-probability-axioms.html#exercise",
-    "href": "lecture-slides/ch02/03-probability-axioms.html#exercise",
-    "title": "2.3 Probability axioms",
+    "objectID": "lecture-slides/ch02/07-conditional-probability.html#exercise-1",
+    "href": "lecture-slides/ch02/07-conditional-probability.html#exercise-1",
+    "title": "2.7 Conditional probability",
     "section": "Exercise",
-    "text": "Exercise\nAssumptions\n\n75% of the students use Instagram\n35% use LinkedIn\n25% use both\n\n\nWe randomly select a student. What is the probability that\n\nthey use neither?\nthey use one but not the other?\n\nExclusive or (XOR)",
+    "text": "Exercise\nRoll two dice 🎲 🎲\n\nWhat is the probability that doubles are rolled?\nWe were told that the sum is 4 or less.\nNow what is the probability that doubles are rolled?",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.3 Probability axioms"
+      "2.7 Conditional probability"
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/04-graphical-integrity.html#the-principle-of-proportional-ink",
-    "href": "lecture-slides/ch01/04-graphical-integrity.html#the-principle-of-proportional-ink",
-    "title": "1.4 Graphical integrity",
-    "section": "The Principle of Proportional Ink",
-    "text": "The Principle of Proportional Ink\n\nThe representation of numbers, as physically measured on the surface of the graphic itself (i.e., the amount of ink used),\nshould be directly proportional to the numerical quantities represented.",
+    "objectID": "lecture-slides/ch02/07-conditional-probability.html#exercise---simplify-textpa-mid-b",
+    "href": "lecture-slides/ch02/07-conditional-probability.html#exercise---simplify-textpa-mid-b",
+    "title": "2.7 Conditional probability",
+    "section": "Exercise - Simplify \\(\\text{P}(A \\mid B)\\)",
+    "text": "Exercise - Simplify \\(\\text{P}(A \\mid B)\\)\n\n\\(A\\) and \\(B\\) are disjoint\n\n\n\n\\(A \\subset B\\)\n\n\n\n\\(B \\subset A\\)\n\n\n\n\\(A=B\\)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.7 Conditional probability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/06-combination.html#section",
+    "href": "lecture-slides/ch02/06-combination.html#section",
+    "title": "2.6 Combination",
+    "section": "",
+    "text": "How many ways to choose 2 students from 5 to volunteer this weekend?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.6 Combination"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/06-combination.html#combinations---an-unordered-subset",
+    "href": "lecture-slides/ch02/06-combination.html#combinations---an-unordered-subset",
+    "title": "2.6 Combination",
+    "section": "Combinations - an unordered subset",
+    "text": "Combinations - an unordered subset\nHow many ways to choose 3 students from 40 to form a committee.\n\nHow many ordered list of 3 students can be formed?\nHow many ways to order each chosen 3 students?\n\n\n\n\n\n\n\n\n\nHow many ordered list of 3 students can be formed? \\[3\\text{-permutations of }40=\\frac{40!}{(40-3)!}=59,280\\]\nHow many ways to order each chosen 3 students? \\[\\text{Permutations of }3=3!=6\\]\n\nThey are: (A-B-C), (A-C-B), (B-A-C), (B-C-A), (C-A-B), (C-B-A)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.6 Combination"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/06-combination.html#combinations---an-unordered-subset-1",
+    "href": "lecture-slides/ch02/06-combination.html#combinations---an-unordered-subset-1",
+    "title": "2.6 Combination",
+    "section": "Combinations - an unordered subset",
+    "text": "Combinations - an unordered subset\nHow many ways to choose 3 students from 40 to form a committee.\n\n\\[\\begin{aligned}\n\\text{number of unordered list}&=\\frac{3\\text{-permutations of }40}{\\text{permutations of }3} \\\\\n\\\\\n&=\\frac{40!}{3!(40-3)!} \\\\\n\\\\\n&=9,880\n\\end{aligned}\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.6 Combination"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/06-combination.html#general-formula-for-combinations",
+    "href": "lecture-slides/ch02/06-combination.html#general-formula-for-combinations",
+    "title": "2.6 Combination",
+    "section": "General formula for combinations",
+    "text": "General formula for combinations\n The number of ways of choosing \\(k\\) objects out of \\(n\\) is\n\n\\[\\begin{aligned}\n{n \\choose k}&=\\frac{k\\text{-permutations of }n}{\\text{permutations of }k} \\\\\n\\\\\n&=\\frac{n!}{k!(n-k)!} \\\\\n\\end{aligned}\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.6 Combination"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/06-combination.html#permutation-vs.-combination",
+    "href": "lecture-slides/ch02/06-combination.html#permutation-vs.-combination",
+    "title": "2.6 Combination",
+    "section": "Permutation vs. combination",
+    "text": "Permutation vs. combination\n2-permutations of 4 letters A, B, C, and D\n\\[\\frac{4!}{(4-2)!}=12\\]\nAB BA AC CA AD DA BC CB BD DB CD DC\n\nAB    AC    AD    BC    BD    CD\nCombinations of choosing 2 letters from 4\n\\[{4 \\choose 2}=\\frac{4!}{2!(4-2)!}=6\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.6 Combination"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/06-combination.html#properties",
+    "href": "lecture-slides/ch02/06-combination.html#properties",
+    "title": "2.6 Combination",
+    "section": "Properties",
+    "text": "Properties\n\\[{n \\choose k}={n \\choose n-k}\\]\n\n\\[{5 \\choose 3}={5 \\choose 5-3}\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.6 Combination"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/06-combination.html#section-1",
+    "href": "lecture-slides/ch02/06-combination.html#section-1",
+    "title": "2.6 Combination",
+    "section": "",
+    "text": "\\[{n \\choose k}={n \\choose n-k}\\]\nProof:",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.6 Combination"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/06-combination.html#exercise",
+    "href": "lecture-slides/ch02/06-combination.html#exercise",
+    "title": "2.6 Combination",
+    "section": "Exercise",
+    "text": "Exercise\nIn a round-robin tennis tournament with \\(n\\) players, each player meets every other player exact once.\nHow many games need to be played in total?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.6 Combination"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/06-combination.html#powerball",
+    "href": "lecture-slides/ch02/06-combination.html#powerball",
+    "title": "2.6 Combination",
+    "section": "Powerball",
+    "text": "Powerball\n\n\n\n\n\n\nDraw five numbers from a pool of 69 white balls and one number from a pool of 26 Powerballs.\nTo win a jackpot one needs to match all five white balls plus the power ball.\nWhat is the winning chance if you buy a single ticket?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.6 Combination"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/06-combination.html#exercise-1",
+    "href": "lecture-slides/ch02/06-combination.html#exercise-1",
+    "title": "2.6 Combination",
+    "section": "Exercise",
+    "text": "Exercise\nToss a fair coin \\(n\\) times.\nWhat is the chance there are \\(k\\; (= 0, 1, \\cdots, n)\\) heads?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.6 Combination"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/06-combination.html#exercise-2",
+    "href": "lecture-slides/ch02/06-combination.html#exercise-2",
+    "title": "2.6 Combination",
+    "section": "Exercise",
+    "text": "Exercise\n\n\nA jar contains \\(m\\) maize and \\(n\\) blue balls.\nTwo balls are drawn randomly from the jar.\nWhat is the chance that the balls are of the same color?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.6 Combination"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/06-combination.html#exercise-3",
+    "href": "lecture-slides/ch02/06-combination.html#exercise-3",
+    "title": "2.6 Combination",
+    "section": "Exercise",
+    "text": "Exercise\nDraw 7 cards from a well-shuffled 52-card deck.\nFind the probability that\n\nthe 7 cards include exact 3 aces\nthe 7 cards include exact 2 kings\nthe 7 cards include exact 3 aces or exact 2 kings",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.6 Combination"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/06-combination.html#birthday-problem",
+    "href": "lecture-slides/ch02/06-combination.html#birthday-problem",
+    "title": "2.6 Combination",
+    "section": "Birthday problem",
+    "text": "Birthday problem\n\n\n\n\n\nHow many people would it take to have a 50-50 chance that at least two of them share the same birthday?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.6 Combination"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/06-combination.html#birthday-problem-1",
+    "href": "lecture-slides/ch02/06-combination.html#birthday-problem-1",
+    "title": "2.6 Combination",
+    "section": "Birthday problem",
+    "text": "Birthday problem\nAnother way to describe it:\nThere are \\(n\\) people at a party.\nHow likely at least two of them share their birthday?\n\nAssumptions\n\nEveryone has an equal probability of being born on any day in the year, independent of everyone else.\nIgnore February 29th from leap years.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.6 Combination"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/06-combination.html#section-2",
+    "href": "lecture-slides/ch02/06-combination.html#section-2",
+    "title": "2.6 Combination",
+    "section": "",
+    "text": "\\[\n\\text{P(sharing birthday)}=1-\\frac{365!}{(365-n)!\\cdot 365^n}\n\\]\n\nGo to Google Colab, sign in, and open a new notebook.\nfrom math import factorial\n\nn = 40  # number of people at a party\n\np = 1 - factorial(365) / factorial(365-n) / (365**n)\n\nprint(p)\n\n\n Birthday attack",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.6 Combination"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/06-combination.html#birthday-problem-2",
+    "href": "lecture-slides/ch02/06-combination.html#birthday-problem-2",
+    "title": "2.6 Combination",
+    "section": "Birthday problem",
+    "text": "Birthday problem\n\nYou walked into a party with \\(n\\) people.\nHow likely someone shares the birthday with you?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.6 Combination"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/01-sample-space-events.html#sample-space",
+    "href": "lecture-slides/ch02/01-sample-space-events.html#sample-space",
+    "title": "2.1 Sample space, events",
+    "section": "Sample space",
+    "text": "Sample space\n\nProbability starts with a sample space, which is a set that describes all possible outcomes in an experiment.\n\n\nIt must be collectively exhaustive & mutually exclusive.\n\nFlip a coin once 🪙\n\n\n\n\\[\\Omega = \\{\\text{heads (H), tails (T)}\\}\\]\n\nFlip a coin twice 🪙 🪙\n\n\n\n\\[\\Omega = \\{(\\text{H, H}), (\\text{H, T}), (\\text{T, H}), (\\text{T, T})\\}\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.1 Sample space, events"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/01-sample-space-events.html#exercise",
+    "href": "lecture-slides/ch02/01-sample-space-events.html#exercise",
+    "title": "2.1 Sample space, events",
+    "section": "Exercise",
+    "text": "Exercise\nWe bet on the total from a roll of two dice 🎲 🎲\nWhat is the sample space?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.1 Sample space, events"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/01-sample-space-events.html#event",
+    "href": "lecture-slides/ch02/01-sample-space-events.html#event",
+    "title": "2.1 Sample space, events",
+    "section": "Event",
+    "text": "Event\nA collection of outcomes in the sample space\nOr simply, a subset of the sample space.\n\nEvent A: Roll a die 🎲, it lands on an odd number.\n\n\n\\[A = \\{ ⚀, ⚂, ⚄ \\}\\]\n\nEvent B: Roll two dice 🎲 🎲, the total is under 7.\n\n\n\n\\[B = \\{ 2, 3, 4, 5, 6\\}\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.1 Sample space, events"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/01-sample-space-events.html#event-1",
+    "href": "lecture-slides/ch02/01-sample-space-events.html#event-1",
+    "title": "2.1 Sample space, events",
+    "section": "Event",
+    "text": "Event\n\nEvent C: Making at least one basketball free throw out of two \\[C=\\{(\\text{hit, hit}), (\\text{hit, miss}), (\\text{miss, hit})\\}\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.1 Sample space, events"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/01-sample-space-events.html#simple-compound-event",
+    "href": "lecture-slides/ch02/01-sample-space-events.html#simple-compound-event",
+    "title": "2.1 Sample space, events",
+    "section": "Simple & compound event",
+    "text": "Simple & compound event\nA simple event consists of a single outcome.\nA compound event consists of multiple outcomes.\n\nRoll a die 🎲, it lands on an odd number.\n\n\n\\[\\{ ⚀, ⚂, ⚄ \\}\\]\n\nRoll two dice 🎲 🎲 and get a double.\n\n\n\n\\[\\{(⚀,⚀), (⚁, ⚁), (⚂, ⚂), (⚃, ⚃), (⚄, ⚄), (⚅, ⚅) \\}\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.1 Sample space, events"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/01-sample-space-events.html#section-1",
+    "href": "lecture-slides/ch02/01-sample-space-events.html#section-1",
+    "title": "2.1 Sample space, events",
+    "section": "",
+    "text": "Roll two dice 🎲 🎲, the total is 12.\n\n\n\\[\\{ (⚅, ⚅) \\}\\]\n\nA basketball player makes both free throws\n\n\n\n\\[\\{(\\text{hit, hit})\\}\\]\n\nMaking at least one free throw\n\n\n\n\\[\\{(\\text{hit, hit}), (\\text{hit, miss}), (\\text{miss, hit})\\}\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.1 Sample space, events"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#four-levels-of-measurement",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#four-levels-of-measurement",
+    "title": "1.3 Four levels of measurement",
+    "section": "Four levels of measurement",
+    "text": "Four levels of measurement",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "1.4 Graphical integrity"
+      "1.3 Four levels of measurement"
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/04-graphical-integrity.html#section-5",
-    "href": "lecture-slides/ch01/04-graphical-integrity.html#section-5",
-    "title": "1.4 Graphical integrity",
-    "section": "",
-    "text": "Friends don’t let friends make 3D pie charts.",
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#why-do-we-care",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#why-do-we-care",
+    "title": "1.3 Four levels of measurement",
+    "section": "Why do we care?",
+    "text": "Why do we care?\nThe level dictates what we can do with the data.",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "1.4 Graphical integrity"
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#nominal-or-categorical-data",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#nominal-or-categorical-data",
+    "title": "1.3 Four levels of measurement",
+    "section": "Nominal (or categorical) data",
+    "text": "Nominal (or categorical) data\nWhen numbers are not numbers\n\nThey act like names or labels.\nCan not be put into order.\n\n\nExamples\n\nCountry code: 1 (USA), 44 (UK), 81 (Japan), …\nSocial security numbers\nYour UMID\nMarital status: single, married, divorced, …",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon",
+    "title": "1.3 Four levels of measurement",
+    "section": "Tokyo Olympics men’s marathon",
+    "text": "Tokyo Olympics men’s marathon\n\nWhat information are nominal data?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#nominal-or-categorical-data-1",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#nominal-or-categorical-data-1",
+    "title": "1.3 Four levels of measurement",
+    "section": "Nominal (or categorical) data",
+    "text": "Nominal (or categorical) data\nImplications\n\nThey can not be compared (e.g., \\(&gt;, &lt;\\))\nWe can not carry out any calculations (\\(+,  −,  ×, \\div\\))\nThe only math operations that can be done are \\(=, \\neq\\)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#ordinal-data",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#ordinal-data",
+    "title": "1.3 Four levels of measurement",
+    "section": "Ordinal data",
+    "text": "Ordinal data\nWhen numbers are almost numbers\n\nThey go into order.\nBut that’s about it.\nThey don’t tell us about the distance between two numbers.\nAirline cabin classes\n\n1: first class, 2: business, 3: premium economy, 4: economy\n\nHotel ratings (1-5 stars)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon-1",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon-1",
+    "title": "1.3 Four levels of measurement",
+    "section": "Tokyo Olympics men’s marathon",
+    "text": "Tokyo Olympics men’s marathon\n\nWhat information are ordinal data?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#ordinal-data-1",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#ordinal-data-1",
+    "title": "1.3 Four levels of measurement",
+    "section": "Ordinal data",
+    "text": "Ordinal data\nImplications\n\nOrdinal numbers can be compared (e.g., \\(&gt;,  &lt;\\))\nHowever, we can not carry out calculations for differences or magnitudes (\\(−, \\div\\))",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#interval-ratio-data",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#interval-ratio-data",
+    "title": "1.3 Four levels of measurement",
+    "section": "Interval & ratio data",
+    "text": "Interval & ratio data\nWhen numbers are really numbers\n\nNot only can be put to order\nThe distance between them tell us something.\nTom drinks 3 cups of coffee. Kate drinks 1 cup.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#ratio-data",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#ratio-data",
+    "title": "1.3 Four levels of measurement",
+    "section": "Ratio data",
+    "text": "Ratio data\nRatio data have a genuine1, non-arbitrary zero point.\n\nI have zero dollars.\n\nabsence of money\n\nI walk at a speed of 0 mph\n\nno movement\n\n\nA “genuine” zero means there is none of the thing being measured.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#examples-of-ratio-data",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#examples-of-ratio-data",
+    "title": "1.3 Four levels of measurement",
+    "section": "Examples of ratio data",
+    "text": "Examples of ratio data\n\nLength (100 meters)\nWeight (50 lbs)\nSize (800 square feet)\nSpeed (20 mph)\nTime duration (5 hours)\n\n\nThe majority of scientific measures are ratio measures.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#interval-data",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#interval-data",
+    "title": "1.3 Four levels of measurement",
+    "section": "Interval data",
+    "text": "Interval data\nInterval data have an arbitrary zero point.\nZero does not mean there is none of the things being measured.\n\nWhat is the temperature for 0°C?\n\n0°C does not mean there is no warmth.\n\nCalendar year 2025. What does year 0 mean?\n\nYear 0 does not mean it’s the beginning of time.\n\nWhat is longitude (geographic coordinate) of 0°?\n\nPrime meridian",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#examples-of-interval-data",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#examples-of-interval-data",
+    "title": "1.3 Four levels of measurement",
+    "section": "Examples of interval data",
+    "text": "Examples of interval data\n\nTemperature in Fahrenheit (70°F) or Celsius (20°C)\nCalendar year\nGPS coordinates (42.3185, -83.2327)\nGPS heading (90°)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#implications-without-a-genuine-zero",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#implications-without-a-genuine-zero",
+    "title": "1.3 Four levels of measurement",
+    "section": "Implications without a genuine zero",
+    "text": "Implications without a genuine zero\nWe can talk about ratios with ratio measures (duh!)\n\nTom drinks ☕☕☕. Kate drinks ☕.\n\nTom drink ☕☕ more coffee than Kate.\nTom drink 3 times as much coffee as Kate.\n\nToday is 40°F. Yesterday was 20°F.\n\nToday is 20°F warmer than yesterday.\nThe average temp of the two days is 30°F.\nToday is twice as warm as yesterday.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#implications-without-a-genuine-zero-1",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#implications-without-a-genuine-zero-1",
+    "title": "1.3 Four levels of measurement",
+    "section": "Implications without a genuine zero",
+    "text": "Implications without a genuine zero\n\nWith interval data\n\nwe can calculate the difference (\\(-\\)).\nwe can not calculate the ratio (\\(\\div\\)).\n\nWith ratio data we can carry out most calculations.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon-2",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon-2",
+    "title": "1.3 Four levels of measurement",
+    "section": "Tokyo Olympics men’s marathon",
+    "text": "Tokyo Olympics men’s marathon\n\nWhat information are ratio data?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#qualitative-and-quantitative-data",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#qualitative-and-quantitative-data",
+    "title": "1.3 Four levels of measurement",
+    "section": "Qualitative and quantitative data",
+    "text": "Qualitative and quantitative data",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#population",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#population",
+    "title": "1.2 Population, sample, and variable",
+    "section": "Population",
+    "text": "Population\n\nDefinition: A collection of objects of interest in a study\nStudying who will win an upcoming mayoral election\n\nPopulation: Everyone who are planning to vote\n\nStudying the defect rate of a cellphone screen from a manufacturer\n\nPopulation: All the cellphone screens made by the manufacturer",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.2 Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#sample",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#sample",
+    "title": "1.2 Population, sample, and variable",
+    "section": "Sample",
+    "text": "Sample\n\nDefinition: A subset of the population selected by a defined procedure\nStudying who will win an upcoming mayoral election\n\nSample: An telephone poll of 500 randomly selected potential voters\n\nStudying the defect rate of a cellphone screen from a manufacturer\n\nSample: 200 randomly selected screens for inspection",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.2 Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#variable",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#variable",
+    "title": "1.2 Population, sample, and variable",
+    "section": "Variable",
+    "text": "Variable\n\nDefinition: A characteristic of interest for the elements\nHouses\n\nsize, # of bedrooms, year built, school district, …\n\nPatients\n\nage, weight, blood sugar level, …\n\nUniversities\n\ntuition, enrollment, graduation rate, …",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.2 Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#discrete-variables",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#discrete-variables",
+    "title": "1.2 Population, sample, and variable",
+    "section": "Discrete variables",
+    "text": "Discrete variables\nThe variable takes finite or countably infinite values.\n\nToss a coin four times, the number of heads you get\nThe attendance to a basketball game\nThe number of orders that an online shop receives in a day",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.2 Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#continuous-variables",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#continuous-variables",
+    "title": "1.2 Population, sample, and variable",
+    "section": "Continuous variables",
+    "text": "Continuous variables\nThe variable takes infinitely many, uncountable values.\n\nThe water level of dam\nThe speed of riding a bicycle\nThe time when an order arrives at a shop\n\n\nIf it can take on two particular real values, it can also take on all real values between them.\n\n\n\nIf you can count it, it is discrete.\nIf you need to measure it, it is continuous.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.2 Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#univariate-vs.-multivariate",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#univariate-vs.-multivariate",
+    "title": "1.2 Population, sample, and variable",
+    "section": "Univariate vs. multivariate",
+    "text": "Univariate vs. multivariate\nUnivariate: A single variable\n\nBattery life of a cellphone model\nBlood sugar level of diabetic patients\n\n\nThis course focuses mostly on a single variable (except for Chapter 5. Joint Distributions).",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.2 Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#multivariate",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#multivariate",
+    "title": "1.2 Population, sample, and variable",
+    "section": "Multivariate",
+    "text": "Multivariate\nStudying the relationship among two or more variables",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.2 Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#section-1",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#section-1",
+    "title": "1.2 Population, sample, and variable",
+    "section": "",
+    "text": "IMSE 440 Applied Statistical Models in Engineering\nOffered in Winter semesters",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.2 Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#what-is-probability",
+    "href": "lecture-slides/ch01/01-course-intro.html#what-is-probability",
+    "title": "1.1 Course introduction",
+    "section": "What is probability?",
+    "text": "What is probability?\n\n\nSource: Merriam-Webster",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.1 Course introduction"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#pierre-simon-laplace",
+    "href": "lecture-slides/ch01/01-course-intro.html#pierre-simon-laplace",
+    "title": "1.1 Course introduction",
+    "section": "Pierre-Simon Laplace",
+    "text": "Pierre-Simon Laplace",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.1 Course introduction"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#which-one-is-more-likely",
+    "href": "lecture-slides/ch01/01-course-intro.html#which-one-is-more-likely",
+    "title": "1.1 Course introduction",
+    "section": "Which one is more likely?",
+    "text": "Which one is more likely?\n\n\nRoll one (six-sided) die 🎲\n\nGetting an even number\nGetting an odd number\n\n\n\n\nRoll two dice 🎲 🎲\n\nGetting a sum of 7\nGetting a sum of 12\n\n\nRoll three dice 🎲 🎲 🎲\n\nGetting a sum of 11\nGetting a sum of 12",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.1 Course introduction"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#section",
+    "href": "lecture-slides/ch01/01-course-intro.html#section",
+    "title": "1.1 Course introduction",
+    "section": "",
+    "text": "“Probability is common sense reduced to calculation.”\n\n\nPierre-Simon Laplace",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.1 Course introduction"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#what-is-statistics",
+    "href": "lecture-slides/ch01/01-course-intro.html#what-is-statistics",
+    "title": "1.1 Course introduction",
+    "section": "What is statistics?",
+    "text": "What is statistics?\n\nThe science of collecting, analyzing, presenting, and interpreting data.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.1 Course introduction"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#airline-travelers-club",
+    "href": "lecture-slides/ch01/01-course-intro.html#airline-travelers-club",
+    "title": "1.1 Course introduction",
+    "section": "Airline travelers’ club",
+    "text": "Airline travelers’ club\n\nAn airline offers an executive club and claim that 10% of its customers would qualify for the membership.\nYou suspect it is actually less than 10%.\nYou randomly selected 1000 customers, and found 91 of them would qualify.\nIs the airline’s premise correct?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.1 Course introduction"
+    ]
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Fall 2025 - 3 Credit Hours"
+  },
+  {
+    "objectID": "syllabus.html#food-pantry",
+    "href": "syllabus.html#food-pantry",
+    "title": "Syllabus",
+    "section": "Food pantry",
+    "text": "Food pantry\nThe pantry exists to support individuals on their journey as they work toward achieving their goals. We are committed to increasing access to food as a key to success, by assisting any student in need! If you need access or have questions, please contact the Office of Student Life by phone at 313-593-5390, by email at umdearbornpantry@umich.edu."
+  },
+  {
+    "objectID": "syllabus.html#university-wide-policies-statements",
+    "href": "syllabus.html#university-wide-policies-statements",
+    "title": "Syllabus",
+    "section": "University-wide policies & statements",
+    "text": "University-wide policies & statements\nPlease see the Course Policies menu on Canvas for information on the following topics. To find the Course Policies menu on Canvas, log into any course in Canvas, and then on the blue ribbon on the far left scroll down to Course Policies and click on it. This opens a white ribbon with individual links to UM-Dearborn websites on the following topics:\n\nUniversity Attendance Policy\nAcademic Integrity Policy\nCounseling\nDisability and Accessibility Services\nSafety Statement\nHarassment, Sexual Violence, Bias, and Discrimination"
+  },
+  {
+    "objectID": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet",
+    "href": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet",
+    "title": "1.7 Data visualization",
+    "section": "Anscombe’s quartet",
+    "text": "Anscombe’s quartet",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.7 Data visualization"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet-1",
+    "href": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet-1",
+    "title": "1.7 Data visualization",
+    "section": "Anscombe’s quartet",
+    "text": "Anscombe’s quartet\nAll four data sets share the same following statistics:",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.7 Data visualization"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet-2",
+    "href": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet-2",
+    "title": "1.7 Data visualization",
+    "section": "Anscombe’s quartet",
+    "text": "Anscombe’s quartet",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.7 Data visualization"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/07-data-visualization.html#heights-in-feet-of-216-volcanoes",
+    "href": "lecture-slides/ch01/07-data-visualization.html#heights-in-feet-of-216-volcanoes",
+    "title": "1.7 Data visualization",
+    "section": "Heights (in feet) of 216 volcanoes",
+    "text": "Heights (in feet) of 216 volcanoes\n\n\\[19882, 19728, 19335, 19287, \\cdots, 617, 555, 529, 242\\]\nvolcano-heights.csv",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.7 Data visualization"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/07-data-visualization.html#histogram",
+    "href": "lecture-slides/ch01/07-data-visualization.html#histogram",
+    "title": "1.7 Data visualization",
+    "section": "Histogram",
+    "text": "Histogram\n\n\nCount: The number of data points in a bin",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.7 Data visualization"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/07-data-visualization.html#histogram-1",
+    "href": "lecture-slides/ch01/07-data-visualization.html#histogram-1",
+    "title": "1.7 Data visualization",
+    "section": "Histogram",
+    "text": "Histogram\n\n\n\\[\\text{percent (or relative frequency)}=\\frac{\\text{frequency}}{\\text{total # of data points}}\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.7 Data visualization"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/07-data-visualization.html#plotting-with-python",
+    "href": "lecture-slides/ch01/07-data-visualization.html#plotting-with-python",
+    "title": "1.7 Data visualization",
+    "section": "Plotting with Python",
+    "text": "Plotting with Python\nGo to Google Colab and sign in. Open a new notebook.\nimport numpy\nimport pandas\n\nurl = \"https://imse317.github.io/lecture-slides/ch01/data/bank.csv\"\nbank = pandas.read_csv(url)\nbank.head()\n\nimport seaborn.objects as so\n(\n    so.Plot(bank, x='age')\n    .add(so.Bars(), so.Hist(binrange=(0, 100), binwidth=5, stat='percent'))\n)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.7 Data visualization"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread",
+    "title": "1.6 Measures of variability",
+    "section": "Measures of variability (or spread)",
+    "text": "Measures of variability (or spread)\n\n\nThe measures of center gives only partial information about the data.\nDifferent data may have similar measures of center yet differ from one another in other important ways.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-1",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-1",
+    "title": "1.6 Measures of variability",
+    "section": "Measures of variability (or spread)",
+    "text": "Measures of variability (or spread)\n\nHow about using the range to measure the variability?\n\\[ \\text{range} = \\text{maximum value} - \\text{minimum value}\\]\n\nRange is sensitive to outliers.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-2",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-2",
+    "title": "1.6 Measures of variability",
+    "section": "Measures of variability (or spread)",
+    "text": "Measures of variability (or spread)\n\n\nInterquartile range (IQR)\n\\[ \\text{IQR} = \\text{Third quartile} - \\text{First quartile}\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-3",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-3",
+    "title": "1.6 Measures of variability",
+    "section": "Measures of variability (or spread)",
+    "text": "Measures of variability (or spread)\nHow about measuring the deviations from the sample mean?\n\n\n\\[x_1-\\bar{x}, \\;x_2-\\bar{x}, \\;\\cdots, \\;x_n-\\bar{x}\\]\nThen, how about using the average deviation as a metric?\n\n\n\\[\\frac{1}{n}\\big[(x_1-\\bar{x}) + (x_2-\\bar{x}) + \\cdots + (x_n-\\bar{x})\\big]\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#section",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#section",
+    "title": "1.6 Measures of variability",
+    "section": "",
+    "text": "If we cannot use the average deviation as a metric for variability, what can we do then?\n\nOne solution is to use the absolute deviations. \\[\\frac{1}{n}\\bigg[|x_1-\\bar{x}| + |x_2-\\bar{x}| + \\cdots + |x_n-\\bar{x}|\\bigg]\\]\nHowever, absolute values would lead to a number of mathematical difficulties later on.\nThe squared deviations is the preferred approach. \\[(x_1-\\bar{x})^2, \\;(x_2-\\bar{x})^2, \\;\\cdots, \\;(x_n-\\bar{x})^2\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#sample-variance",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#sample-variance",
+    "title": "1.6 Measures of variability",
+    "section": "Sample variance",
+    "text": "Sample variance\n\\[\\begin{aligned}\ns^2 &= \\frac{(x_1-\\bar{x})^2 + (x_2-\\bar{x})^2 + \\cdots + (x_n-\\bar{x})^2}{n-1} \\\\\\\n\\\\\\\n&= \\frac{\\displaystyle\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}\n\\end{aligned}\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#why-divided-by-n-1-instead-of-n",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#why-divided-by-n-1-instead-of-n",
+    "title": "1.6 Measures of variability",
+    "section": "Why divided by \\((n-1)\\) instead of \\(n\\)?",
+    "text": "Why divided by \\((n-1)\\) instead of \\(n\\)?\n\nDegree of freedom: The number of values in a calculation that are free to vary.\nPick any three numbers and calculate the mean.\nNow we add some constraints:\n\nThe numbers have to add up to 20.\nThe first two numbers have to add up to 10.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#section-1",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#section-1",
+    "title": "1.6 Measures of variability",
+    "section": "",
+    "text": "\\[s^2 = \\frac{(x_1-\\bar{x})^2 + (x_2-\\bar{x})^2 + \\cdots + (x_n-\\bar{x})^2}{n-1}\\]\nAre there any constraints when we calculate the sample variance?\n\nExample:\n\n\n\n\\(x_i\\)\n\\(x_i-\\bar{x}\\)\n\\((x_i-\\bar{x})^2\\)\n\n\n\n\n\\(9\\)\n\n\n\n\n\\(4\\)\n\n\n\n\n\\(5\\)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#section-2",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#section-2",
+    "title": "1.6 Measures of variability",
+    "section": "",
+    "text": "Heights (in feet) of 216 volcanoes:\n\\[19882, 19728, 19335, 19287, \\cdots, 617, 555, 529, 242\\]\n\nSample mean:\n\\[\\bar{x}=7047.6 \\text{ feet}\\]\n\n\nSample variance:\n\\[s^2 = \\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}=18,507,834 \\text{ feet}^2\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#section-3",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#section-3",
+    "title": "1.6 Measures of variability",
+    "section": "",
+    "text": "\\[s^2 = \\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}=18,507,834 \\text{ feet}^2\\]\nThe sample standard deviation \\(s\\), is given by\n\\[ s = \\sqrt{s^2} = \\sqrt{\\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}}=4302.1 \\text{ (ft})\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#property-i",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#property-i",
+    "title": "1.6 Measures of variability",
+    "section": "Property I",
+    "text": "Property I\n\\(x_1, x_2, \\cdots, x_n\\) are sample data. \\(c\\) is any constant.\n\\[\\text{If }\\; y_1=x_1+c, \\;y_2=x_2+c, \\;\\cdots, \\;y_n=x_n+c\\]\n\\[\\begin{aligned}\n\\text{then }\\; s_y^2&=s_x^2 \\\\\\\n(\\text{or }s_y&=s_x)\n\\end{aligned}\\]\n\nIntuition: Adding a constant to the data shifts the distribution right or left without changing its shape, and thus its spread.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#property-ii",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#property-ii",
+    "title": "1.6 Measures of variability",
+    "section": "Property II",
+    "text": "Property II\n\\(x_1, x_2, \\cdots, x_n\\) are sample data and \\(c\\) is any constant.\n\\[\\text{If }\\; y_1=cx_1, \\;y_2=cx_2, \\;\\cdots, \\;y_n=cx_n\\]\n\\[\\begin{aligned}\n\\text{then } \\; s_y^2&=c^2s_x^2 \\\\\\\n(\\text{or }s_y&=cs_x)\n\\end{aligned}\\]\n\nIntuition: Multiplying a constant to the data changes its shape, and thus its spread.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#descriptive-statistics-with-python",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#descriptive-statistics-with-python",
+    "title": "1.6 Measures of variability",
+    "section": "Descriptive statistics with Python",
+    "text": "Descriptive statistics with Python\nGo to Google Colab and sign in. Open a new notebook.\nages = [12, 34, 14, 5, 44, 28, 22, 19, 36, 25]\n\nmean = sum(ages) / len(ages)\n\nsquared_dev = [(x-mean)**2 for x in ages]\n\nvar = sum(squared_dev) / (len(ages) - 1)\nprint(var)\n\nprint(var**0.5)\n\nimport statistics\nprint(statistics.variance(ages))\nprint(statistics.stdev(ages))",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#descriptive-statistics-with-python-1",
+    "href": "lecture-slides/ch01/06-measures-of-variability.html#descriptive-statistics-with-python-1",
+    "title": "1.6 Measures of variability",
+    "section": "Descriptive statistics with Python",
+    "text": "Descriptive statistics with Python\nWe use the pandas library.\nimport pandas\nurl = \"https://imse317.github.io/lecture-slides/ch01/data/bank.csv\"\nbank = pandas.read_csv(url)\nbank.head()\n\nprint(bank[\"age\"].var())\nprint(bank[\"age\"].std())",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.6 Measures of variability"
     ]
   },
   {
@@ -676,986 +1464,276 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread",
-    "title": "1.6 Measures of variability",
-    "section": "Measures of variability (or spread)",
-    "text": "Measures of variability (or spread)\n\n\nThe measures of center gives only partial information about the data.\nDifferent data may have similar measures of center yet differ from one another in other important ways.",
+    "objectID": "lecture-slides/ch01/04-graphical-integrity.html#the-principle-of-proportional-ink",
+    "href": "lecture-slides/ch01/04-graphical-integrity.html#the-principle-of-proportional-ink",
+    "title": "1.4 Graphical integrity",
+    "section": "The Principle of Proportional Ink",
+    "text": "The Principle of Proportional Ink\n\nThe representation of numbers, as physically measured on the surface of the graphic itself (i.e., the amount of ink used),\nshould be directly proportional to the numerical quantities represented.",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
+      "1.4 Graphical integrity"
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-1",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-1",
-    "title": "1.6 Measures of variability",
-    "section": "Measures of variability (or spread)",
-    "text": "Measures of variability (or spread)\n\nHow about using the range to measure the variability?\n\\[ \\text{range} = \\text{maximum value} - \\text{minimum value}\\]\n\nRange is sensitive to outliers.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-2",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-2",
-    "title": "1.6 Measures of variability",
-    "section": "Measures of variability (or spread)",
-    "text": "Measures of variability (or spread)\n\n\nInterquartile range (IQR)\n\\[ \\text{IQR} = \\text{Third quartile} - \\text{First quartile}\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-3",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#measures-of-variability-or-spread-3",
-    "title": "1.6 Measures of variability",
-    "section": "Measures of variability (or spread)",
-    "text": "Measures of variability (or spread)\nHow about measuring the deviations from the sample mean?\n\n\n\\[x_1-\\bar{x}, \\;x_2-\\bar{x}, \\;\\cdots, \\;x_n-\\bar{x}\\]\nThen, how about using the average deviation as a metric?\n\n\n\\[\\frac{1}{n}\\big[(x_1-\\bar{x}) + (x_2-\\bar{x}) + \\cdots + (x_n-\\bar{x})\\big]\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#section",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#section",
-    "title": "1.6 Measures of variability",
+    "objectID": "lecture-slides/ch01/04-graphical-integrity.html#section-5",
+    "href": "lecture-slides/ch01/04-graphical-integrity.html#section-5",
+    "title": "1.4 Graphical integrity",
     "section": "",
-    "text": "If we cannot use the average deviation as a metric for variability, what can we do then?\n\nOne solution is to use the absolute deviations. \\[\\frac{1}{n}\\bigg[|x_1-\\bar{x}| + |x_2-\\bar{x}| + \\cdots + |x_n-\\bar{x}|\\bigg]\\]\nHowever, absolute values would lead to a number of mathematical difficulties later on.\nThe squared deviations is the preferred approach. \\[(x_1-\\bar{x})^2, \\;(x_2-\\bar{x})^2, \\;\\cdots, \\;(x_n-\\bar{x})^2\\]",
+    "text": "Friends don’t let friends make 3D pie charts.",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
+      "1.4 Graphical integrity"
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#sample-variance",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#sample-variance",
-    "title": "1.6 Measures of variability",
-    "section": "Sample variance",
-    "text": "Sample variance\n\\[\\begin{aligned}\ns^2 &= \\frac{(x_1-\\bar{x})^2 + (x_2-\\bar{x})^2 + \\cdots + (x_n-\\bar{x})^2}{n-1} \\\\\\\n\\\\\\\n&= \\frac{\\displaystyle\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}\n\\end{aligned}\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#why-divided-by-n-1-instead-of-n",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#why-divided-by-n-1-instead-of-n",
-    "title": "1.6 Measures of variability",
-    "section": "Why divided by \\((n-1)\\) instead of \\(n\\)?",
-    "text": "Why divided by \\((n-1)\\) instead of \\(n\\)?\n\nDegree of freedom: The number of values in a calculation that are free to vary.\nPick any three numbers and calculate the mean.\nNow we add some constraints:\n\nThe numbers have to add up to 20.\nThe first two numbers have to add up to 10.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#section-1",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#section-1",
-    "title": "1.6 Measures of variability",
-    "section": "",
-    "text": "\\[s^2 = \\frac{(x_1-\\bar{x})^2 + (x_2-\\bar{x})^2 + \\cdots + (x_n-\\bar{x})^2}{n-1}\\]\nAre there any constraints when we calculate the sample variance?\n\nExample:\n\n\n\n\\(x_i\\)\n\\(x_i-\\bar{x}\\)\n\\((x_i-\\bar{x})^2\\)\n\n\n\n\n\\(9\\)\n\n\n\n\n\\(4\\)\n\n\n\n\n\\(5\\)",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#section-2",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#section-2",
-    "title": "1.6 Measures of variability",
-    "section": "",
-    "text": "Heights (in feet) of 216 volcanoes:\n\\[19882, 19728, 19335, 19287, \\cdots, 617, 555, 529, 242\\]\n\nSample mean:\n\\[\\bar{x}=7047.6 \\text{ feet}\\]\n\n\nSample variance:\n\\[s^2 = \\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}=18,507,834 \\text{ feet}^2\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#section-3",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#section-3",
-    "title": "1.6 Measures of variability",
-    "section": "",
-    "text": "\\[s^2 = \\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}=18,507,834 \\text{ feet}^2\\]\nThe sample standard deviation \\(s\\), is given by\n\\[ s = \\sqrt{s^2} = \\sqrt{\\frac{\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}}=4302.1 \\text{ (ft})\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#property-i",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#property-i",
-    "title": "1.6 Measures of variability",
-    "section": "Property I",
-    "text": "Property I\n\\(x_1, x_2, \\cdots, x_n\\) are sample data. \\(c\\) is any constant.\n\\[\\text{If }\\; y_1=x_1+c, \\;y_2=x_2+c, \\;\\cdots, \\;y_n=x_n+c\\]\n\\[\\begin{aligned}\n\\text{then }\\; s_y^2&=s_x^2 \\\\\\\n(\\text{or }s_y&=s_x)\n\\end{aligned}\\]\n\nIntuition: Adding a constant to the data shifts the distribution right or left without changing its shape, and thus its spread.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#property-ii",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#property-ii",
-    "title": "1.6 Measures of variability",
-    "section": "Property II",
-    "text": "Property II\n\\(x_1, x_2, \\cdots, x_n\\) are sample data and \\(c\\) is any constant.\n\\[\\text{If }\\; y_1=cx_1, \\;y_2=cx_2, \\;\\cdots, \\;y_n=cx_n\\]\n\\[\\begin{aligned}\n\\text{then } \\; s_y^2&=c^2s_x^2 \\\\\\\n(\\text{or }s_y&=cs_x)\n\\end{aligned}\\]\n\nIntuition: Multiplying a constant to the data changes its shape, and thus its spread.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#descriptive-statistics-with-python",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#descriptive-statistics-with-python",
-    "title": "1.6 Measures of variability",
-    "section": "Descriptive statistics with Python",
-    "text": "Descriptive statistics with Python\nGo to Google Colab and sign in. Open a new notebook.\nages = [12, 34, 14, 5, 44, 28, 22, 19, 36, 25]\n\nmean = sum(ages) / len(ages)\n\nsquared_dev = [(x-mean)**2 for x in ages]\n\nvar = sum(squared_dev) / (len(ages) - 1)\nprint(var)\n\nprint(var**0.5)\n\nimport statistics\nprint(statistics.variance(ages))\nprint(statistics.stdev(ages))",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/06-measures-of-variability.html#descriptive-statistics-with-python-1",
-    "href": "lecture-slides/ch01/06-measures-of-variability.html#descriptive-statistics-with-python-1",
-    "title": "1.6 Measures of variability",
-    "section": "Descriptive statistics with Python",
-    "text": "Descriptive statistics with Python\nWe use the pandas library.\nimport pandas\nurl = \"https://imse317.github.io/lecture-slides/ch01/data/bank.csv\"\nbank = pandas.read_csv(url)\nbank.head()\n\nprint(bank[\"age\"].var())\nprint(bank[\"age\"].std())",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.6 Measures of variability"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet",
-    "href": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet",
-    "title": "1.7 Data visualization",
-    "section": "Anscombe’s quartet",
-    "text": "Anscombe’s quartet",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.7 Data visualization"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet-1",
-    "href": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet-1",
-    "title": "1.7 Data visualization",
-    "section": "Anscombe’s quartet",
-    "text": "Anscombe’s quartet\nAll four data sets share the same following statistics:",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.7 Data visualization"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet-2",
-    "href": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet-2",
-    "title": "1.7 Data visualization",
-    "section": "Anscombe’s quartet",
-    "text": "Anscombe’s quartet",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.7 Data visualization"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/07-data-visualization.html#heights-in-feet-of-216-volcanoes",
-    "href": "lecture-slides/ch01/07-data-visualization.html#heights-in-feet-of-216-volcanoes",
-    "title": "1.7 Data visualization",
-    "section": "Heights (in feet) of 216 volcanoes",
-    "text": "Heights (in feet) of 216 volcanoes\n\n\\[19882, 19728, 19335, 19287, \\cdots, 617, 555, 529, 242\\]\nvolcano-heights.csv",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.7 Data visualization"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/07-data-visualization.html#histogram",
-    "href": "lecture-slides/ch01/07-data-visualization.html#histogram",
-    "title": "1.7 Data visualization",
-    "section": "Histogram",
-    "text": "Histogram\n\n\nCount: The number of data points in a bin",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.7 Data visualization"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/07-data-visualization.html#histogram-1",
-    "href": "lecture-slides/ch01/07-data-visualization.html#histogram-1",
-    "title": "1.7 Data visualization",
-    "section": "Histogram",
-    "text": "Histogram\n\n\n\\[\\text{percent (or relative frequency)}=\\frac{\\text{frequency}}{\\text{total # of data points}}\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.7 Data visualization"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/07-data-visualization.html#plotting-with-python",
-    "href": "lecture-slides/ch01/07-data-visualization.html#plotting-with-python",
-    "title": "1.7 Data visualization",
-    "section": "Plotting with Python",
-    "text": "Plotting with Python\nGo to Google Colab and sign in. Open a new notebook.\nimport numpy\nimport pandas\n\nurl = \"https://imse317.github.io/lecture-slides/ch01/data/bank.csv\"\nbank = pandas.read_csv(url)\nbank.head()\n\nimport seaborn.objects as so\n(\n    so.Plot(bank, x='age')\n    .add(so.Bars(), so.Hist(binrange=(0, 100), binwidth=5, stat='percent'))\n)",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.7 Data visualization"
-    ]
-  },
-  {
-    "objectID": "syllabus.html",
-    "href": "syllabus.html",
-    "title": "Syllabus",
-    "section": "",
-    "text": "Fall 2025 - 3 Credit Hours"
-  },
-  {
-    "objectID": "syllabus.html#food-pantry",
-    "href": "syllabus.html#food-pantry",
-    "title": "Syllabus",
-    "section": "Food pantry",
-    "text": "Food pantry\nThe pantry exists to support individuals on their journey as they work toward achieving their goals. We are committed to increasing access to food as a key to success, by assisting any student in need! If you need access or have questions, please contact the Office of Student Life by phone at 313-593-5390, by email at umdearbornpantry@umich.edu."
-  },
-  {
-    "objectID": "syllabus.html#university-wide-policies-statements",
-    "href": "syllabus.html#university-wide-policies-statements",
-    "title": "Syllabus",
-    "section": "University-wide policies & statements",
-    "text": "University-wide policies & statements\nPlease see the Course Policies menu on Canvas for information on the following topics. To find the Course Policies menu on Canvas, log into any course in Canvas, and then on the blue ribbon on the far left scroll down to Course Policies and click on it. This opens a white ribbon with individual links to UM-Dearborn websites on the following topics:\n\nUniversity Attendance Policy\nAcademic Integrity Policy\nCounseling\nDisability and Accessibility Services\nSafety Statement\nHarassment, Sexual Violence, Bias, and Discrimination"
-  },
-  {
-    "objectID": "lecture-slides/ch01/01-course-intro.html#what-is-probability",
-    "href": "lecture-slides/ch01/01-course-intro.html#what-is-probability",
-    "title": "1.1 Course introduction",
-    "section": "What is probability?",
-    "text": "What is probability?\n\n\nSource: Merriam-Webster",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.1 Course introduction"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/01-course-intro.html#pierre-simon-laplace",
-    "href": "lecture-slides/ch01/01-course-intro.html#pierre-simon-laplace",
-    "title": "1.1 Course introduction",
-    "section": "Pierre-Simon Laplace",
-    "text": "Pierre-Simon Laplace",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.1 Course introduction"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/01-course-intro.html#which-one-is-more-likely",
-    "href": "lecture-slides/ch01/01-course-intro.html#which-one-is-more-likely",
-    "title": "1.1 Course introduction",
-    "section": "Which one is more likely?",
-    "text": "Which one is more likely?\n\n\nRoll one (six-sided) die 🎲\n\nGetting an even number\nGetting an odd number\n\n\n\n\nRoll two dice 🎲 🎲\n\nGetting a sum of 7\nGetting a sum of 12\n\n\nRoll three dice 🎲 🎲 🎲\n\nGetting a sum of 11\nGetting a sum of 12",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.1 Course introduction"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/01-course-intro.html#section",
-    "href": "lecture-slides/ch01/01-course-intro.html#section",
-    "title": "1.1 Course introduction",
-    "section": "",
-    "text": "“Probability is common sense reduced to calculation.”\n\n\nPierre-Simon Laplace",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.1 Course introduction"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/01-course-intro.html#what-is-statistics",
-    "href": "lecture-slides/ch01/01-course-intro.html#what-is-statistics",
-    "title": "1.1 Course introduction",
-    "section": "What is statistics?",
-    "text": "What is statistics?\n\nThe science of collecting, analyzing, presenting, and interpreting data.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.1 Course introduction"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/01-course-intro.html#airline-travelers-club",
-    "href": "lecture-slides/ch01/01-course-intro.html#airline-travelers-club",
-    "title": "1.1 Course introduction",
-    "section": "Airline travelers’ club",
-    "text": "Airline travelers’ club\n\nAn airline offers an executive club and claim that 10% of its customers would qualify for the membership.\nYou suspect it is actually less than 10%.\nYou randomly selected 1000 customers, and found 91 of them would qualify.\nIs the airline’s premise correct?",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.1 Course introduction"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#population",
-    "href": "lecture-slides/ch01/02-population-sample-variable.html#population",
-    "title": "1.2 Population, sample, and variable",
-    "section": "Population",
-    "text": "Population\n\nDefinition: A collection of objects of interest in a study\nStudying who will win an upcoming mayoral election\n\nPopulation: Everyone who are planning to vote\n\nStudying the defect rate of a cellphone screen from a manufacturer\n\nPopulation: All the cellphone screens made by the manufacturer",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.2 Population, sample, and variable"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#sample",
-    "href": "lecture-slides/ch01/02-population-sample-variable.html#sample",
-    "title": "1.2 Population, sample, and variable",
-    "section": "Sample",
-    "text": "Sample\n\nDefinition: A subset of the population selected by a defined procedure\nStudying who will win an upcoming mayoral election\n\nSample: An telephone poll of 500 randomly selected potential voters\n\nStudying the defect rate of a cellphone screen from a manufacturer\n\nSample: 200 randomly selected screens for inspection",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.2 Population, sample, and variable"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#variable",
-    "href": "lecture-slides/ch01/02-population-sample-variable.html#variable",
-    "title": "1.2 Population, sample, and variable",
-    "section": "Variable",
-    "text": "Variable\n\nDefinition: A characteristic of interest for the elements\nHouses\n\nsize, # of bedrooms, year built, school district, …\n\nPatients\n\nage, weight, blood sugar level, …\n\nUniversities\n\ntuition, enrollment, graduation rate, …",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.2 Population, sample, and variable"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#discrete-variables",
-    "href": "lecture-slides/ch01/02-population-sample-variable.html#discrete-variables",
-    "title": "1.2 Population, sample, and variable",
-    "section": "Discrete variables",
-    "text": "Discrete variables\nThe variable takes finite or countably infinite values.\n\nToss a coin four times, the number of heads you get\nThe attendance to a basketball game\nThe number of orders that an online shop receives in a day",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.2 Population, sample, and variable"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#continuous-variables",
-    "href": "lecture-slides/ch01/02-population-sample-variable.html#continuous-variables",
-    "title": "1.2 Population, sample, and variable",
-    "section": "Continuous variables",
-    "text": "Continuous variables\nThe variable takes infinitely many, uncountable values.\n\nThe water level of dam\nThe speed of riding a bicycle\nThe time when an order arrives at a shop\n\n\nIf it can take on two particular real values, it can also take on all real values between them.\n\n\n\nIf you can count it, it is discrete.\nIf you need to measure it, it is continuous.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.2 Population, sample, and variable"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#univariate-vs.-multivariate",
-    "href": "lecture-slides/ch01/02-population-sample-variable.html#univariate-vs.-multivariate",
-    "title": "1.2 Population, sample, and variable",
-    "section": "Univariate vs. multivariate",
-    "text": "Univariate vs. multivariate\nUnivariate: A single variable\n\nBattery life of a cellphone model\nBlood sugar level of diabetic patients\n\n\nThis course focuses mostly on a single variable (except for Chapter 5. Joint Distributions).",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.2 Population, sample, and variable"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#multivariate",
-    "href": "lecture-slides/ch01/02-population-sample-variable.html#multivariate",
-    "title": "1.2 Population, sample, and variable",
-    "section": "Multivariate",
-    "text": "Multivariate\nStudying the relationship among two or more variables",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.2 Population, sample, and variable"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#section-1",
-    "href": "lecture-slides/ch01/02-population-sample-variable.html#section-1",
-    "title": "1.2 Population, sample, and variable",
-    "section": "",
-    "text": "IMSE 440 Applied Statistical Models in Engineering\nOffered in Winter semesters",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.2 Population, sample, and variable"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#four-levels-of-measurement",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#four-levels-of-measurement",
-    "title": "1.3 Four levels of measurement",
-    "section": "Four levels of measurement",
-    "text": "Four levels of measurement",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#why-do-we-care",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#why-do-we-care",
-    "title": "1.3 Four levels of measurement",
-    "section": "Why do we care?",
-    "text": "Why do we care?\nThe level dictates what we can do with the data.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#nominal-or-categorical-data",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#nominal-or-categorical-data",
-    "title": "1.3 Four levels of measurement",
-    "section": "Nominal (or categorical) data",
-    "text": "Nominal (or categorical) data\nWhen numbers are not numbers\n\nThey act like names or labels.\nCan not be put into order.\n\n\nExamples\n\nCountry code: 1 (USA), 44 (UK), 81 (Japan), …\nSocial security numbers\nYour UMID\nMarital status: single, married, divorced, …",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon",
-    "title": "1.3 Four levels of measurement",
-    "section": "Tokyo Olympics men’s marathon",
-    "text": "Tokyo Olympics men’s marathon\n\nWhat information are nominal data?",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#nominal-or-categorical-data-1",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#nominal-or-categorical-data-1",
-    "title": "1.3 Four levels of measurement",
-    "section": "Nominal (or categorical) data",
-    "text": "Nominal (or categorical) data\nImplications\n\nThey can not be compared (e.g., \\(&gt;, &lt;\\))\nWe can not carry out any calculations (\\(+,  −,  ×, \\div\\))\nThe only math operations that can be done are \\(=, \\neq\\)",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#ordinal-data",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#ordinal-data",
-    "title": "1.3 Four levels of measurement",
-    "section": "Ordinal data",
-    "text": "Ordinal data\nWhen numbers are almost numbers\n\nThey go into order.\nBut that’s about it.\nThey don’t tell us about the distance between two numbers.\nAirline cabin classes\n\n1: first class, 2: business, 3: premium economy, 4: economy\n\nHotel ratings (1-5 stars)",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon-1",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon-1",
-    "title": "1.3 Four levels of measurement",
-    "section": "Tokyo Olympics men’s marathon",
-    "text": "Tokyo Olympics men’s marathon\n\nWhat information are ordinal data?",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#ordinal-data-1",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#ordinal-data-1",
-    "title": "1.3 Four levels of measurement",
-    "section": "Ordinal data",
-    "text": "Ordinal data\nImplications\n\nOrdinal numbers can be compared (e.g., \\(&gt;,  &lt;\\))\nHowever, we can not carry out calculations for differences or magnitudes (\\(−, \\div\\))",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#interval-ratio-data",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#interval-ratio-data",
-    "title": "1.3 Four levels of measurement",
-    "section": "Interval & ratio data",
-    "text": "Interval & ratio data\nWhen numbers are really numbers\n\nNot only can be put to order\nThe distance between them tell us something.\nTom drinks 3 cups of coffee. Kate drinks 1 cup.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#ratio-data",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#ratio-data",
-    "title": "1.3 Four levels of measurement",
-    "section": "Ratio data",
-    "text": "Ratio data\nRatio data have a genuine1, non-arbitrary zero point.\n\nI have zero dollars.\n\nabsence of money\n\nI walk at a speed of 0 mph\n\nno movement\n\n\nA “genuine” zero means there is none of the thing being measured.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#examples-of-ratio-data",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#examples-of-ratio-data",
-    "title": "1.3 Four levels of measurement",
-    "section": "Examples of ratio data",
-    "text": "Examples of ratio data\n\nLength (100 meters)\nWeight (50 lbs)\nSize (800 square feet)\nSpeed (20 mph)\nTime duration (5 hours)\n\n\nThe majority of scientific measures are ratio measures.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#interval-data",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#interval-data",
-    "title": "1.3 Four levels of measurement",
-    "section": "Interval data",
-    "text": "Interval data\nInterval data have an arbitrary zero point.\nZero does not mean there is none of the things being measured.\n\nWhat is the temperature for 0°C?\n\n0°C does not mean there is no warmth.\n\nCalendar year 2025. What does year 0 mean?\n\nYear 0 does not mean it’s the beginning of time.\n\nWhat is longitude (geographic coordinate) of 0°?\n\nPrime meridian",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#examples-of-interval-data",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#examples-of-interval-data",
-    "title": "1.3 Four levels of measurement",
-    "section": "Examples of interval data",
-    "text": "Examples of interval data\n\nTemperature in Fahrenheit (70°F) or Celsius (20°C)\nCalendar year\nGPS coordinates (42.3185, -83.2327)\nGPS heading (90°)",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#implications-without-a-genuine-zero",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#implications-without-a-genuine-zero",
-    "title": "1.3 Four levels of measurement",
-    "section": "Implications without a genuine zero",
-    "text": "Implications without a genuine zero\nWe can talk about ratios with ratio measures (duh!)\n\nTom drinks ☕☕☕. Kate drinks ☕.\n\nTom drink ☕☕ more coffee than Kate.\nTom drink 3 times as much coffee as Kate.\n\nToday is 40°F. Yesterday was 20°F.\n\nToday is 20°F warmer than yesterday.\nThe average temp of the two days is 30°F.\nToday is twice as warm as yesterday.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#implications-without-a-genuine-zero-1",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#implications-without-a-genuine-zero-1",
-    "title": "1.3 Four levels of measurement",
-    "section": "Implications without a genuine zero",
-    "text": "Implications without a genuine zero\n\nWith interval data\n\nwe can calculate the difference (\\(-\\)).\nwe can not calculate the ratio (\\(\\div\\)).\n\nWith ratio data we can carry out most calculations.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon-2",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#tokyo-olympics-mens-marathon-2",
-    "title": "1.3 Four levels of measurement",
-    "section": "Tokyo Olympics men’s marathon",
-    "text": "Tokyo Olympics men’s marathon\n\nWhat information are ratio data?",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#qualitative-and-quantitative-data",
-    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#qualitative-and-quantitative-data",
-    "title": "1.3 Four levels of measurement",
-    "section": "Qualitative and quantitative data",
-    "text": "Qualitative and quantitative data",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.3 Four levels of measurement"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/01-sample-space-events.html#sample-space",
-    "href": "lecture-slides/ch02/01-sample-space-events.html#sample-space",
-    "title": "2.1 Sample space, events",
-    "section": "Sample space",
-    "text": "Sample space\n\nProbability starts with a sample space, which is a set that describes all possible outcomes in an experiment.\n\n\nIt must be collectively exhaustive & mutually exclusive.\n\nFlip a coin once 🪙\n\n\n\n\\[\\Omega = \\{\\text{heads (H), tails (T)}\\}\\]\n\nFlip a coin twice 🪙 🪙\n\n\n\n\\[\\Omega = \\{(\\text{H, H}), (\\text{H, T}), (\\text{T, H}), (\\text{T, T})\\}\\]",
+    "objectID": "lecture-slides/ch02/03-probability-axioms.html#probability-of-an-event",
+    "href": "lecture-slides/ch02/03-probability-axioms.html#probability-of-an-event",
+    "title": "2.3 Probability axioms",
+    "section": "Probability of an event",
+    "text": "Probability of an event\n\nA number that encodes our knowledge or belief about the collective “likelihood” of the elements of the event.\n\n\n\\(\\text{P}(A)\\): the probability of event \\(A\\).",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.1 Sample space, events"
+      "2.3 Probability axioms"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/01-sample-space-events.html#exercise",
-    "href": "lecture-slides/ch02/01-sample-space-events.html#exercise",
-    "title": "2.1 Sample space, events",
+    "objectID": "lecture-slides/ch02/03-probability-axioms.html#probability",
+    "href": "lecture-slides/ch02/03-probability-axioms.html#probability",
+    "title": "2.3 Probability axioms",
+    "section": "Probability",
+    "text": "Probability\nRoll a fair die 🎲. Which of the two would you bet on?\n\nIt lands on an even number\nIt lands on an odd number\n\n\nRoll two dice 🎲 🎲. Which of the two would you bet on?\n\nTotal of 7\nTotal of 12",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.3 Probability axioms"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/03-probability-axioms.html#probability-axioms",
+    "href": "lecture-slides/ch02/03-probability-axioms.html#probability-axioms",
+    "title": "2.3 Probability axioms",
+    "section": "Probability axioms",
+    "text": "Probability axioms\n\nNon-negativity \\[\\text{P}(A)\\geq0,\\; \\text{for any event $A$}\\]\nNormalization \\[ \\text{P}(\\Omega)=1\\]\nAdditivity \\[ \\text{If } A \\cap B = \\Phi, \\text{ then } \\text{P}(A \\cup B) = \\text{P}(A) + \\text{P}(B)\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.3 Probability axioms"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/03-probability-axioms.html#a-more-general-form-of-the-additivity",
+    "href": "lecture-slides/ch02/03-probability-axioms.html#a-more-general-form-of-the-additivity",
+    "title": "2.3 Probability axioms",
+    "section": "A more general form of the additivity",
+    "text": "A more general form of the additivity\n\nIf \\(A_1, A_2, A_3, \\cdots\\) is an infinite collection of disjoint events, then\n\\[ \\text{P}(A_1 \\cup A_2 \\cup A_3 \\cup \\cdots) = \\text{P}(A_1) + \\text{P}(A_2) + \\text{P}(A_3) + \\cdots\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.3 Probability axioms"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/03-probability-axioms.html#discussion",
+    "href": "lecture-slides/ch02/03-probability-axioms.html#discussion",
+    "title": "2.3 Probability axioms",
+    "section": "Discussion",
+    "text": "Discussion\nRecall the non-negativity axiom:\n\\[\\text{P}(A)\\geq0,\\; \\text{for any event $A$}\\]\n\n\nDo we need to also add the following as an axiom?\n\\[\\text{P}(A) \\leq 1, \\;\\text{for any event } A\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.3 Probability axioms"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/03-probability-axioms.html#proposition",
+    "href": "lecture-slides/ch02/03-probability-axioms.html#proposition",
+    "title": "2.3 Probability axioms",
+    "section": "Proposition",
+    "text": "Proposition\n\\[\\text{P}(A) + \\text{P}(A^c) = 1, \\;\\text{for any event } A\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.3 Probability axioms"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/03-probability-axioms.html#proposition-1",
+    "href": "lecture-slides/ch02/03-probability-axioms.html#proposition-1",
+    "title": "2.3 Probability axioms",
+    "section": "Proposition",
+    "text": "Proposition\n\\[ \\text{P}(A \\cup B) = \\text{P}(A) + \\text{P}(B) - \\text{P}(A \\cap B), \\]\n\\[\\text{for any events $A$ and $B$}\\]\n\n\n\n\n  \n    \n    \n    \n  \n\n  \n  \n  \n\n  \n    \n    \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)\n\n\n\n\n\n  \n  \n\n  \n    \n    \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)\n\n\n\n\n\n  \n  \n  \n\n  \n    \n    \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.3 Probability axioms"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/03-probability-axioms.html#exercise",
+    "href": "lecture-slides/ch02/03-probability-axioms.html#exercise",
+    "title": "2.3 Probability axioms",
     "section": "Exercise",
-    "text": "Exercise\nWe bet on the total from a roll of two dice 🎲 🎲\nWhat is the sample space?",
+    "text": "Exercise\nAssumptions\n\n75% of the students use Instagram\n35% use LinkedIn\n25% use both\n\n\nWe randomly select a student. What is the probability that\n\nthey use neither?\nthey use one but not the other?\n\nExclusive or (XOR)",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.1 Sample space, events"
+      "2.3 Probability axioms"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/01-sample-space-events.html#event",
-    "href": "lecture-slides/ch02/01-sample-space-events.html#event",
-    "title": "2.1 Sample space, events",
-    "section": "Event",
-    "text": "Event\nA collection of outcomes in the sample space\nOr simply, a subset of the sample space.\n\nEvent A: Roll a die 🎲, it lands on an odd number.\n\n\n\\[A = \\{ ⚀, ⚂, ⚄ \\}\\]\n\nEvent B: Roll two dice 🎲 🎲, the total is under 7.\n\n\n\n\\[B = \\{ 2, 3, 4, 5, 6\\}\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.1 Sample space, events"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/01-sample-space-events.html#event-1",
-    "href": "lecture-slides/ch02/01-sample-space-events.html#event-1",
-    "title": "2.1 Sample space, events",
-    "section": "Event",
-    "text": "Event\n\nEvent C: Making at least one basketball free throw out of two \\[C=\\{(\\text{hit, hit}), (\\text{hit, miss}), (\\text{miss, hit})\\}\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.1 Sample space, events"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/01-sample-space-events.html#simple-compound-event",
-    "href": "lecture-slides/ch02/01-sample-space-events.html#simple-compound-event",
-    "title": "2.1 Sample space, events",
-    "section": "Simple & compound event",
-    "text": "Simple & compound event\nA simple event consists of a single outcome.\nA compound event consists of multiple outcomes.\n\nRoll a die 🎲, it lands on an odd number.\n\n\n\\[\\{ ⚀, ⚂, ⚄ \\}\\]\n\nRoll two dice 🎲 🎲 and get a double.\n\n\n\n\\[\\{(⚀,⚀), (⚁, ⚁), (⚂, ⚂), (⚃, ⚃), (⚄, ⚄), (⚅, ⚅) \\}\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.1 Sample space, events"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/01-sample-space-events.html#section-1",
-    "href": "lecture-slides/ch02/01-sample-space-events.html#section-1",
-    "title": "2.1 Sample space, events",
+    "objectID": "lecture-slides/ch02/05-permutation.html#section-2",
+    "href": "lecture-slides/ch02/05-permutation.html#section-2",
+    "title": "2.5 Permutation",
     "section": "",
-    "text": "Roll two dice 🎲 🎲, the total is 12.\n\n\n\\[\\{ (⚅, ⚅) \\}\\]\n\nA basketball player makes both free throws\n\n\n\n\\[\\{(\\text{hit, hit})\\}\\]\n\nMaking at least one free throw\n\n\n\n\\[\\{(\\text{hit, hit}), (\\text{hit, miss}), (\\text{miss, hit})\\}\\]",
+    "text": "How many possible ways to rank 2 teams A and B?\nAssume there are no ties.",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.1 Sample space, events"
+      "2.5 Permutation"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/06-combination.html#section",
-    "href": "lecture-slides/ch02/06-combination.html#section",
-    "title": "2.6 Combination",
+    "objectID": "lecture-slides/ch02/05-permutation.html#section-3",
+    "href": "lecture-slides/ch02/05-permutation.html#section-3",
+    "title": "2.5 Permutation",
     "section": "",
-    "text": "How many ways to choose 2 students from 5 to volunteer this weekend?",
+    "text": "How many possible ways to rank 3 teams A, B, and C?\nAssume there are no ties.",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.6 Combination"
+      "2.5 Permutation"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/06-combination.html#combinations---an-unordered-subset",
-    "href": "lecture-slides/ch02/06-combination.html#combinations---an-unordered-subset",
-    "title": "2.6 Combination",
-    "section": "Combinations - an unordered subset",
-    "text": "Combinations - an unordered subset\nHow many ways to choose 3 students from 40 to form a committee.\n\nHow many ordered list of 3 students can be formed?\nHow many ways to order each chosen 3 students?\n\n\n\n\n\n\n\n\n\nHow many ordered list of 3 students can be formed? \\[3\\text{-permutations of }40=\\frac{40!}{(40-3)!}=59,280\\]\nHow many ways to order each chosen 3 students? \\[\\text{Permutations of }3=3!=6\\]\n\nThey are: (A-B-C), (A-C-B), (B-A-C), (B-C-A), (C-A-B), (C-B-A)",
+    "objectID": "lecture-slides/ch02/05-permutation.html#permutation",
+    "href": "lecture-slides/ch02/05-permutation.html#permutation",
+    "title": "2.5 Permutation",
+    "section": "Permutation",
+    "text": "Permutation\n\nAn ordering of distinguishable objects\n\n\n\n\\[\n\\begin{aligned}\n\\text{Permutations of }n &= n \\times (n-1) \\times (n-2) \\times \\cdots \\times 2 \\times 1 \\\\\n\\\\\n&=n! \\\\\n\\end{aligned}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.6 Combination"
+      "2.5 Permutation"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/06-combination.html#combinations---an-unordered-subset-1",
-    "href": "lecture-slides/ch02/06-combination.html#combinations---an-unordered-subset-1",
-    "title": "2.6 Combination",
-    "section": "Combinations - an unordered subset",
-    "text": "Combinations - an unordered subset\nHow many ways to choose 3 students from 40 to form a committee.\n\n\\[\\begin{aligned}\n\\text{number of unordered list}&=\\frac{3\\text{-permutations of }40}{\\text{permutations of }3} \\\\\n\\\\\n&=\\frac{40!}{3!(40-3)!} \\\\\n\\\\\n&=9,880\n\\end{aligned}\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.6 Combination"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/06-combination.html#general-formula-for-combinations",
-    "href": "lecture-slides/ch02/06-combination.html#general-formula-for-combinations",
-    "title": "2.6 Combination",
-    "section": "General formula for combinations",
-    "text": "General formula for combinations\n The number of ways of choosing \\(k\\) objects out of \\(n\\) is\n\n\\[\\begin{aligned}\n{n \\choose k}&=\\frac{k\\text{-permutations of }n}{\\text{permutations of }k} \\\\\n\\\\\n&=\\frac{n!}{k!(n-k)!} \\\\\n\\end{aligned}\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.6 Combination"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/06-combination.html#permutation-vs.-combination",
-    "href": "lecture-slides/ch02/06-combination.html#permutation-vs.-combination",
-    "title": "2.6 Combination",
-    "section": "Permutation vs. combination",
-    "text": "Permutation vs. combination\n2-permutations of 4 letters A, B, C, and D\n\\[\\frac{4!}{(4-2)!}=12\\]\nAB BA AC CA AD DA BC CB BD DB CD DC\n\nAB    AC    AD    BC    BD    CD\nCombinations of choosing 2 letters from 4\n\\[{4 \\choose 2}=\\frac{4!}{2!(4-2)!}=6\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.6 Combination"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/06-combination.html#properties",
-    "href": "lecture-slides/ch02/06-combination.html#properties",
-    "title": "2.6 Combination",
-    "section": "Properties",
-    "text": "Properties\n\\[{n \\choose k}={n \\choose n-k}\\]\n\n\\[{5 \\choose 3}={5 \\choose 5-3}\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.6 Combination"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/06-combination.html#section-1",
-    "href": "lecture-slides/ch02/06-combination.html#section-1",
-    "title": "2.6 Combination",
+    "objectID": "lecture-slides/ch02/05-permutation.html#section-4",
+    "href": "lecture-slides/ch02/05-permutation.html#section-4",
+    "title": "2.5 Permutation",
     "section": "",
-    "text": "\\[{n \\choose k}={n \\choose n-k}\\]\nProof:",
+    "text": "In a track race with 8 athletes, how many results are possible? (Assume no ties.)\n\n\n\n\n\nImage source\n\n\\[8! = 8 \\times 7 \\times \\cdots \\times 2 \\times 1 = 40,320\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.6 Combination"
+      "2.5 Permutation"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/06-combination.html#exercise",
-    "href": "lecture-slides/ch02/06-combination.html#exercise",
-    "title": "2.6 Combination",
-    "section": "Exercise",
-    "text": "Exercise\n\nIn a round-robin tennis tournament with \\(n\\) players, each player meets every other player exact once.\nHow many games need to be played in total?",
+    "objectID": "lecture-slides/ch02/05-permutation.html#python-implementation",
+    "href": "lecture-slides/ch02/05-permutation.html#python-implementation",
+    "title": "2.5 Permutation",
+    "section": "Python implementation",
+    "text": "Python implementation\n\n# Method 1: Import the entire module\nimport math\n\nprint(math.factorial(8))\n\n# Method 2: Import a function from the module\nfrom math import factorial\n\nprint(factorial(8))",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.6 Combination"
+      "2.5 Permutation"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/06-combination.html#powerball",
-    "href": "lecture-slides/ch02/06-combination.html#powerball",
-    "title": "2.6 Combination",
-    "section": "Powerball",
-    "text": "Powerball\n\n\n\n\n\n\nDraw five numbers from a pool of 69 white balls and one number from a pool of 26 Powerballs.\nTo win a jackpot one needs to match all five white balls plus the power ball.\nWhat is the winning chance if you buy a single ticket?",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.6 Combination"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/06-combination.html#exercise-1",
-    "href": "lecture-slides/ch02/06-combination.html#exercise-1",
-    "title": "2.6 Combination",
-    "section": "Exercise",
-    "text": "Exercise\nToss a fair coin \\(n\\) times.\nWhat is the chance there are \\(k\\; (= 0, 1, \\cdots, n)\\) heads?",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.6 Combination"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/06-combination.html#exercise-2",
-    "href": "lecture-slides/ch02/06-combination.html#exercise-2",
-    "title": "2.6 Combination",
-    "section": "Exercise",
-    "text": "Exercise\n\nA jar contains \\(m\\) maize and \\(n\\) blue balls.\nTwo balls are drawn randomly from the jar.\nWhat is the chance that the balls are of the same color?",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.6 Combination"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/06-combination.html#exercise-3",
-    "href": "lecture-slides/ch02/06-combination.html#exercise-3",
-    "title": "2.6 Combination",
-    "section": "Exercise",
-    "text": "Exercise\nDraw 7 cards from a well-shuffled 52-card deck.\nFind the probability that\n\nthe 7 cards include exact 3 aces\nthe 7 cards include exact 2 kings\nthe 7 cards include exact 3 aces or exact 2 kings",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.6 Combination"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/06-combination.html#birthday-problem",
-    "href": "lecture-slides/ch02/06-combination.html#birthday-problem",
-    "title": "2.6 Combination",
-    "section": "Birthday problem",
-    "text": "Birthday problem\n\n\n\n\n\nHow many people would it take to have a 50-50 chance that at least two of them share the same birthday?",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.6 Combination"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/06-combination.html#birthday-problem-1",
-    "href": "lecture-slides/ch02/06-combination.html#birthday-problem-1",
-    "title": "2.6 Combination",
-    "section": "Birthday problem",
-    "text": "Birthday problem\nAnother way to describe it:\nThere are \\(n\\) people at a party.\nHow likely at least two of them share their birthday?\n\nAssumptions\n\nEveryone has an equal probability of being born on any day in the year, independent of everyone else.\nIgnore February 29th from leap years.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.6 Combination"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/06-combination.html#section-2",
-    "href": "lecture-slides/ch02/06-combination.html#section-2",
-    "title": "2.6 Combination",
+    "objectID": "lecture-slides/ch02/05-permutation.html#section-5",
+    "href": "lecture-slides/ch02/05-permutation.html#section-5",
+    "title": "2.5 Permutation",
     "section": "",
-    "text": "\\[\n\\text{P(sharing birthday)}=1-\\frac{365!}{(365-n)!\\cdot 365^n}\n\\]\n\nGo to Google Colab, sign in, and open a new notebook.\nfrom math import factorial\n\nn = 40  # number of people at a party\n\np = 1 - factorial(365) / factorial(365-n) / (365**n)\n\nprint(p)\n\n\n Birthday attack",
+    "text": "How many podium (i.e., top three) results are possible? (Assume no ties.)\n\n\n\n\n\n\n\\[8 \\times 7 \\times 6 = 336\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.6 Combination"
+      "2.5 Permutation"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/06-combination.html#birthday-problem-2",
-    "href": "lecture-slides/ch02/06-combination.html#birthday-problem-2",
-    "title": "2.6 Combination",
-    "section": "Birthday problem",
-    "text": "Birthday problem\n\nYou walked into a party with \\(n\\) people.\nHow likely someone shares the birthday with you?",
+    "objectID": "lecture-slides/ch02/05-permutation.html#k-permutations-of-n-objects",
+    "href": "lecture-slides/ch02/05-permutation.html#k-permutations-of-n-objects",
+    "title": "2.5 Permutation",
+    "section": "\\(k\\)-permutations of \\(n\\) objects",
+    "text": "\\(k\\)-permutations of \\(n\\) objects",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.6 Combination"
+      "2.5 Permutation"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/05-permutation.html#k-permutations-of-n-objects-1",
+    "href": "lecture-slides/ch02/05-permutation.html#k-permutations-of-n-objects-1",
+    "title": "2.5 Permutation",
+    "section": "\\(k\\)-permutations of \\(n\\) objects",
+    "text": "\\(k\\)-permutations of \\(n\\) objects\n\n\\[ n \\times (n-1) \\times (n-2) \\times \\cdots \\times (n-k+1) \\]\n\n\\[\n\\begin{aligned}\n&n \\times (n-1) \\times (n-2) \\times \\cdots \\times (n-k+1) \\\\\n\\\\\n=& \\frac{n \\times (n-1) \\times (n-2) \\times \\cdots \\times (n-k+1)}{1} \\\\\n\\\\\n=& \\frac{n \\times (n-1) \\times (n-2) \\times \\cdots \\times (n-k+1) \\times (n-k) \\times (n-k-1) \\times \\cdots \\times 2 \\times 1}{(n-k) \\times (n-k-1) \\times \\cdots \\times 2 \\times 1} \\\\\n\\\\\n=& \\frac{n!}{(n-k)!} \\\\\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.5 Permutation"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/05-permutation.html#section-6",
+    "href": "lecture-slides/ch02/05-permutation.html#section-6",
+    "title": "2.5 Permutation",
+    "section": "",
+    "text": "\\(0!=1\\)\n\n\n\n\n\n\n\n\n\\(a^0=1\\)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.5 Permutation"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/05-permutation.html#exercise",
+    "href": "lecture-slides/ch02/05-permutation.html#exercise",
+    "title": "2.5 Permutation",
+    "section": "Exercise",
+    "text": "Exercise\nSuppose your music collection include\n\n\\(n_1\\) pop songs\n\\(n_2\\) rock songs\n\\(n_3\\) country songs\n\n\nIn how many ways can you arrange your music, so that each genre is contiguous?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.5 Permutation"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/05-permutation.html#exercise-contd",
+    "href": "lecture-slides/ch02/05-permutation.html#exercise-contd",
+    "title": "2.5 Permutation",
+    "section": "Exercise (cont’d)",
+    "text": "Exercise (cont’d)\n\n\nNow you are making a playlist.\nYou pick \\(k_i\\) out of the \\(n_i\\) songs of genre \\(i\\;(= 1, 2, 3)\\), where \\(k_i = 0, 1, \\cdots, n_i\\).\nHow many playlists are possible, so that each genre is contiguous?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.5 Permutation"
     ]
   },
   {
