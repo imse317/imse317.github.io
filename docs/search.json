@@ -1,249 +1,405 @@
 [
   {
-    "objectID": "lecture-slides/ch02/04-product-rule.html#discrete-probability-law",
-    "href": "lecture-slides/ch02/04-product-rule.html#discrete-probability-law",
-    "title": "2.4 Product rule",
-    "section": "Discrete probability law",
-    "text": "Discrete probability law\n\nIf the sample space \\(\\Omega\\) consists of a finite number of possible outcomes,\nthen the probability of any event \\(\\{s_1, s_2, \\cdots, s_k \\}\\)\nis the sum of the probabilities of its elements.\n\n\n\\[\\text{P}(\\{s_1, s_2, \\cdots, s_k \\}) = \\text{P}(s_1) + \\text{P}(s_2) + \\cdots + \\text{P}(s_k) \\]",
+    "objectID": "lecture-slides/ch02/10-bayes.html#bayes-rule",
+    "href": "lecture-slides/ch02/10-bayes.html#bayes-rule",
+    "title": "2.10 Bayes’ rule",
+    "section": "Bayes’ rule",
+    "text": "Bayes’ rule\nLet \\(A_1, A_2, \\cdots, A_n\\) form a partition of sample space \\(\\Omega\\).\nThen, for any event \\(B\\) such that \\(\\text{P}(B)&gt;0\\), we have\n\\[\n\\text{P}(A_i \\mid B) = \\frac{\\text{P}(A_i) \\cdot \\text{P}(B \\mid A_i)}{\\text{P}(B)}\n\\]\n\\[\\text{where}\\]\n\\[\n\\small{\\text{P}(B) = \\text{P}(A_1) \\cdot \\text{P}(B | A_1) + \\text{P}(A_2) \\cdot \\text{P}(B | A_2) +  \\cdots + \\text{P}(A_n) \\cdot \\text{P}(B | A_n)}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.4 Product rule"
+      "2.10 Bayes' rule"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/04-product-rule.html#discrete-uniform-probability-law",
-    "href": "lecture-slides/ch02/04-product-rule.html#discrete-uniform-probability-law",
-    "title": "2.4 Product rule",
-    "section": "Discrete uniform probability law",
-    "text": "Discrete uniform probability law\nIf all outcomes in the sample space \\(\\Omega\\) are equally likely,\nthen the probability of any event A is given by:\n\\[ \\text{P}(A) = \\frac{\\text{number of outcomes in } A}{\\text{number of outcomes in } \\Omega} \\]\n\n\nFor convenience, we use \\(|A|\\) to denote the number of elements in set \\(A\\) (termed the cardinality of set \\(A\\))\n\\[ \\text{P}(A) = \\frac{|A|}{|\\Omega|} \\]",
+    "objectID": "lecture-slides/ch02/10-bayes.html#the-false-positive-puzzle",
+    "href": "lecture-slides/ch02/10-bayes.html#the-false-positive-puzzle",
+    "title": "2.10 Bayes’ rule",
+    "section": "The false positive puzzle",
+    "text": "The false positive puzzle\n\n1 in 1,000 people is afflicted with a rare disease for which a diagnostic test has been developed.\nWhen an individual has the disease, it would test positive (i.e., state disease present) 99% of the time.\nWhen an individual does not have the disease, it would test negative 98% of the time.\nA person just tested positive.\nWhat is the chance this person has the disease?",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.4 Product rule"
+      "2.10 Bayes' rule"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/04-product-rule.html#equally-likely-outcomes",
-    "href": "lecture-slides/ch02/04-product-rule.html#equally-likely-outcomes",
-    "title": "2.4 Product rule",
-    "section": "Equally likely outcomes",
-    "text": "Equally likely outcomes\nIn many experiments, it is reasonable to assume equal probabilities to all simple events.\n\n\nRoll a fair six-sided die 🎲\n\\[ \\text{P}(⚀) = \\text{P}(⚁) = \\text{P}(⚂) = \\text{P}(⚃) = \\text{P}(⚄) = \\text{P}(⚅) = \\frac{1}{6} \\]\n\n\n\\[\\text{P}(\\text{odd number})=\\text{P}\\big(\\{⚀, ⚂, ⚄\\}\\big)=\\frac{3}{6}\\]",
+    "objectID": "lecture-slides/ch02/10-bayes.html#signal-detection-theory",
+    "href": "lecture-slides/ch02/10-bayes.html#signal-detection-theory",
+    "title": "2.10 Bayes’ rule",
+    "section": "Signal detection theory",
+    "text": "Signal detection theory\n\n\n\n\n\nTest positive\nTest negative\n\n\n\n\nTarget present\nTrue positive\\(a\\)\nFalse negative\\(b\\)\n\n\nTarget absent\nFalse positive\\(c\\)\nTrue negative\\(d\\)",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.4 Product rule"
+      "2.10 Bayes' rule"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/04-product-rule.html#roll-two-dice",
-    "href": "lecture-slides/ch02/04-product-rule.html#roll-two-dice",
-    "title": "2.4 Product rule",
-    "section": "Roll two dice 🎲 🎲",
-    "text": "Roll two dice 🎲 🎲\n\nWhat is the probability to roll a double?\nWhat is the probability that the total is over 7?",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.4 Product rule"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/04-product-rule.html#section",
-    "href": "lecture-slides/ch02/04-product-rule.html#section",
-    "title": "2.4 Product rule",
+    "objectID": "lecture-slides/ch02/10-bayes.html#section-2",
+    "href": "lecture-slides/ch02/10-bayes.html#section-2",
+    "title": "2.10 Bayes’ rule",
     "section": "",
-    "text": "Draw a card from a well-shuffled deck of 52 cards.\nWhat is the chance to draw an ace?\n\n\n\n\n\n\n\\[\n\\text{P}(\\text{Aces}) = \\text{P}(\\{🃑, 🃁, 🂱, 🂡\\}) = \\frac{4}{52}= \\frac{1}{13}\n\\]",
+    "text": "Let’s define the following events\n\n\\(A\\): Someone has the disease.\n\\(A^c\\): Someone does not have the disease.\n\\(B\\): Someone tested positive.\n\\(B^c\\): Someone tested negative.\n\n\nA person just tested positive.\nWhat is the chance this person has the disease?",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.4 Product rule"
+      "2.10 Bayes' rule"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/04-product-rule.html#section-1",
-    "href": "lecture-slides/ch02/04-product-rule.html#section-1",
-    "title": "2.4 Product rule",
+    "objectID": "lecture-slides/ch02/10-bayes.html#exercise",
+    "href": "lecture-slides/ch02/10-bayes.html#exercise",
+    "title": "2.10 Bayes’ rule",
+    "section": "Exercise",
+    "text": "Exercise\n\nWe were given three coins.\n\nOne is regular.\nOne has heads in both faces.\nOne has tails in both faces.\n\nWithout looking at it, we chose a coin at random and tossed it. It landed on heads.\nWhat is the probability that the opposite is tails?\n\n\n\nLet’s define the following events\n\n\\(A_1\\): regular coin is chosen\n\\(A_2\\): two-headed coin is chosen\n\\(A_3\\): two-tailed coin is chosen\n\\(B\\): coin landed on heads",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.10 Bayes' rule"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/11-independence.html#section-2",
+    "href": "lecture-slides/ch02/11-independence.html#section-2",
+    "title": "2.11 Independence",
     "section": "",
-    "text": "Draw a card from a well-shuffled deck of 52 cards.\nWhat is the chance to draw a spade?\n\n\n\n\n\n\n\\[\n\\text{P}(\\text{spades}) = \\text{P}(\\{🂡, 🂢, \\cdots, 🂮\\})= \\frac{13}{52}= \\frac{1}{4}\n\\]",
+    "text": "Event \\(A\\) is independent of event \\(B\\) if\n\\[\n\\text{P}(A \\mid B)=\\text{P}(A)\n\\]\n\nBy the definition of conditional probability,\n\\[\n\\text{P}(A \\mid B) = \\frac{\\text{P}(A \\cap B)}{\\text{P}(B)}\n\\]\n\n\nFrom the two equation above, we have\n\\[\n\\text{P}(A) = \\frac{\\text{P}(A \\cap B)}{\\text{P}(B)}\n\\]\n\n\n\\[\n\\text{P}(A \\cap B) = \\text{P}(A) \\cdot \\text{P}(B)\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.4 Product rule"
+      "2.11 Independence"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/04-product-rule.html#section-2",
-    "href": "lecture-slides/ch02/04-product-rule.html#section-2",
-    "title": "2.4 Product rule",
+    "objectID": "lecture-slides/ch02/11-independence.html#exercise",
+    "href": "lecture-slides/ch02/11-independence.html#exercise",
+    "title": "2.11 Independence",
+    "section": "Exercise",
+    "text": "Exercise\n\nRoll a die twice 🎲 🎲\n\n\\(A\\): the first roll lands on \\(3\\).\n\\(B\\): the second roll lands on \\(4\\).\n\nAre \\(A\\) and \\(B\\) independent?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.11 Independence"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/11-independence.html#properties-of-independence",
+    "href": "lecture-slides/ch02/11-independence.html#properties-of-independence",
+    "title": "2.11 Independence",
+    "section": "Properties of independence",
+    "text": "Properties of independence\nIf \\(A\\) and \\(B\\) are independent, so are \\(A\\) and \\(B^c\\).\n\nIntuitively, if knowing that \\(B\\) has occurred does not provide any new information on how likely \\(A\\) occurs,\n\\[\n\\text{P}(A \\mid B)=\\text{P}(A)\n\\]\nthen knowing that the complement of \\(B\\) has occurred should also provide no information on how likely \\(A\\) occurs.\n\\[\n\\text{P}(A \\mid B^c)=\\text{P}(A)\n\\]\nSee comment for proof.\n\nProof:\n\\[\n\\begin{aligned}\n\\text{P}(A \\cap B^c) =& \\text{P}(A) - P(A \\cap B) \\\\\n\\\\\n=& \\text{P}(A) - \\text{P}(A) \\cdot \\text{P}(B) \\\\\n\\\\\n=& \\text{P}(A) \\cdot (1- \\text{P}(B)) \\\\\n\\\\\n=&\\text{P}(A) \\cdot \\text{P}(B)\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.11 Independence"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/11-independence.html#are-two-disjoint-events-independent",
+    "href": "lecture-slides/ch02/11-independence.html#are-two-disjoint-events-independent",
+    "title": "2.11 Independence",
+    "section": "Are two disjoint events independent?",
+    "text": "Are two disjoint events independent?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.11 Independence"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/11-independence.html#independence-of-three-events",
+    "href": "lecture-slides/ch02/11-independence.html#independence-of-three-events",
+    "title": "2.11 Independence",
+    "section": "Independence of three events",
+    "text": "Independence of three events\n\nThree events \\(A\\), \\(B\\), and \\(C\\)\n\n\\(A\\) and \\(B\\) are independent.\n\\(B\\) and \\(C\\) are independent.\n\n\nAre \\(A\\) and \\(C\\) independent?\n\n\nNo. Counterexample:\nLet \\(A\\) and \\(B\\) be two independent events, and \\(C = A^c\\),\nThen \\(B\\) and \\(C\\) (which is \\(A^c\\)) are independent.\nHowever, \\(A\\) and \\(C\\) (which is \\(A^c\\)) are disjoint and thus not independent.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.11 Independence"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/11-independence.html#section-3",
+    "href": "lecture-slides/ch02/11-independence.html#section-3",
+    "title": "2.11 Independence",
     "section": "",
-    "text": "Roll a die twice. How many pairs of numbers are possible?",
+    "text": "We say events \\(A\\), \\(B\\), and \\(C\\) are pairwise independent if\n\n\\(A\\) and \\(B\\) are independent.    \\(\\text{P}(A \\cap B)=\\text{P}(A)\\cdot\\text{P}(B)\\)\n\\(B\\) and \\(C\\) are independent.    \\(\\text{P}(B \\cap C)=\\text{P}(B)\\cdot\\text{P}(C)\\)\n\\(C\\) and \\(A\\) are independent.    \\(\\text{P}(C \\cap A)=\\text{P}(C)\\cdot\\text{P}(A)\\)\n\n\nHow about\n\\[\n\\text{P}(A \\cap B \\cap C) \\stackrel{?}{=} \\text{P}(A)\\cdot\\text{P}(B)\\cdot\\text{P}(C)\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.4 Product rule"
+      "2.11 Independence"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/04-product-rule.html#the-product-rule",
-    "href": "lecture-slides/ch02/04-product-rule.html#the-product-rule",
-    "title": "2.4 Product rule",
-    "section": "The product rule",
-    "text": "The product rule\n\n\nSuppose that\n\nthere are \\(\\color{red}{n_1}\\) possible results at the first stage\nfor every possible result at the first stage, there are \\(\\color{green}{n_2}\\) possible results at the second stage\n\n\n\nThen the total number of possible results is \\(\\color{red}{n_1} \\times \\color{green}{n_2}\\)\n\n\nThe product rule is sometimes also called the multiplication principle.",
+    "objectID": "lecture-slides/ch02/11-independence.html#example-toss-a-coin-twice",
+    "href": "lecture-slides/ch02/11-independence.html#example-toss-a-coin-twice",
+    "title": "2.11 Independence",
+    "section": "Example: Toss a coin twice",
+    "text": "Example: Toss a coin twice\n\n\\(A\\): first toss is a heads.\n\\(B\\): second toss is a heads.\n\\(C\\): different results from the two tosses.\n\n\nPairwise independence does not imply (mutual) independence.",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.4 Product rule"
+      "2.11 Independence"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/04-product-rule.html#the-product-rule-four-stages",
-    "href": "lecture-slides/ch02/04-product-rule.html#the-product-rule-four-stages",
-    "title": "2.4 Product rule",
-    "section": "The product rule: four stages",
-    "text": "The product rule: four stages",
+    "objectID": "lecture-slides/ch02/11-independence.html#independence-of-three-events-1",
+    "href": "lecture-slides/ch02/11-independence.html#independence-of-three-events-1",
+    "title": "2.11 Independence",
+    "section": "Independence of three events",
+    "text": "Independence of three events\nEvent \\(A\\), \\(B\\), and \\(C\\) are (mutually) independent if\n\\[\n\\begin{aligned}\n\\text{P}(A \\cap B) &= \\text{P}(A)\\cdot\\text{P}(B) \\\\\n\\\\\n\\text{P}(B \\cap C) &= \\text{P}(B)\\cdot\\text{P}(C) \\\\\n\\\\\n\\text{P}(C \\cap A) &= \\text{P}(C)\\cdot\\text{P}(A) \\\\\n\\\\\n\\text{P}(A \\cap B \\cap C) &= \\text{P}(A)\\cdot\\text{P}(B)\\cdot\\text{P}(C) \\\\\n\\end{aligned}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.4 Product rule"
+      "2.11 Independence"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/04-product-rule.html#general-form-of-the-product-rule-with-r-stages",
-    "href": "lecture-slides/ch02/04-product-rule.html#general-form-of-the-product-rule-with-r-stages",
-    "title": "2.4 Product rule",
-    "section": "General form of the product rule with \\(r\\)-stages",
-    "text": "General form of the product rule with \\(r\\)-stages\n\n\nIf for any sequence of possible results at the first \\((i-1)\\) stages, there are \\(n_i\\) possible results at the \\(i\\)-th stage\n\n\nthen the total number of possible results in a \\(r\\)-stage process is\n\\[n_1 \\times n_2 \\times \\cdots \\times n_r\\]",
+    "objectID": "lecture-slides/ch02/11-independence.html#independence-of-four-events",
+    "href": "lecture-slides/ch02/11-independence.html#independence-of-four-events",
+    "title": "2.11 Independence",
+    "section": "Independence of four events",
+    "text": "Independence of four events\n\\[\n\\begin{aligned}\n\\text{P}(A \\cap B) &= \\text{P}(A)\\cdot\\text{P}(B) \\\\\n\\text{P}(B \\cap C) &= \\text{P}(B)\\cdot\\text{P}(C) \\\\\n\\text{P}(C \\cap D) &= \\text{P}(C)\\cdot\\text{P}(D) \\\\\n\\text{P}(D \\cap A) &= \\text{P}(D)\\cdot\\text{P}(A) \\\\\n\\text{P}(A \\cap B \\cap C) &= \\text{P}(A)\\cdot\\text{P}(B)\\cdot\\text{P}(C) \\\\\n\\text{P}(A \\cap B \\cap D) &= \\text{P}(A)\\cdot\\text{P}(B)\\cdot\\text{P}(D) \\\\\n\\text{P}(A \\cap C \\cap D) &= \\text{P}(A)\\cdot\\text{P}(C)\\cdot\\text{P}(D) \\\\\n\\text{P}(B \\cap C \\cap D) &= \\text{P}(B)\\cdot\\text{P}(C)\\cdot\\text{P}(D) \\\\\n\\text{P}(A \\cap B \\cap C \\cap D) &= \\text{P}(A)\\cdot\\text{P}(B)\\cdot\\text{P}(C)\\cdot\\text{P}(D) \\\\\n\\end{aligned}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.4 Product rule"
+      "2.11 Independence"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/04-product-rule.html#exercise",
-    "href": "lecture-slides/ch02/04-product-rule.html#exercise",
-    "title": "2.4 Product rule",
-    "section": "Exercise",
-    "text": "Exercise\nHow many iPad Pro variants does Apple need to make?\n\nScreen size: 11-inch, 13-inch\nColor: Space gray, Silver\nStorage: 256GB, 512GB, 1TB, 2TB\nDisplay glass: Standard, Nano-texture\nConnectivity: Wi-Fi, Wi-Fi + Cellular\n\n\nCurse of dimensionality",
+    "objectID": "lecture-slides/ch02/11-independence.html#independence-of-n-events",
+    "href": "lecture-slides/ch02/11-independence.html#independence-of-n-events",
+    "title": "2.11 Independence",
+    "section": "Independence of \\(n\\) events",
+    "text": "Independence of \\(n\\) events\nEvents \\(A_1, A_2, \\cdots, A_n\\) are (mutually) independent if\n\\[\n\\text{P}\\bigg(\\bigcap_{i \\in S} A_i\\bigg)=\\prod_{i \\in S} \\text{P}(A_i)\n\\]\nfor every subset \\(S\\) of \\(\\{1, 2, \\cdots, n\\}\\).",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.4 Product rule"
+      "2.11 Independence"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/04-product-rule.html#exercise-1",
-    "href": "lecture-slides/ch02/04-product-rule.html#exercise-1",
-    "title": "2.4 Product rule",
-    "section": "Exercise",
-    "text": "Exercise\nHow many unique MI license plate numbers are there?\n\n\nRules\n\n7 characters\nOnly uppercase letters (A-Z) and numbers (0-9)\nLetter O is not allowed.\nSpaces are allowed and counted as characters.",
+    "objectID": "lecture-slides/ch02/11-independence.html#example---network-connectivity",
+    "href": "lecture-slides/ch02/11-independence.html#example---network-connectivity",
+    "title": "2.11 Independence",
+    "section": "Example - Network connectivity",
+    "text": "Example - Network connectivity\n\nA computer network connects two nodes A and B through 3 components that are connected in series. \nThe component failures are independent of each other.\n\\(p_i\\) is the probability that component \\(i\\) is operational (\\(i=1, 2, 3\\)).\nWhat is the probability that the A-B connection is up?",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.4 Product rule"
+      "2.11 Independence"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/04-product-rule.html#exercise-2",
-    "href": "lecture-slides/ch02/04-product-rule.html#exercise-2",
-    "title": "2.4 Product rule",
-    "section": "Exercise",
-    "text": "Exercise\n\nHow many subsets does a \\(n\\)-element set have?\n\\[ \\{s_1, s_2, \\cdots, s_n\\} \\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.4 Product rule"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/07-conditional-probability.html#section",
-    "href": "lecture-slides/ch02/07-conditional-probability.html#section",
-    "title": "2.7 Conditional probability",
+    "objectID": "lecture-slides/ch02/11-independence.html#section-4",
+    "href": "lecture-slides/ch02/11-independence.html#section-4",
+    "title": "2.11 Independence",
     "section": "",
-    "text": "Roll a die 🎲\nWhat is the probability the number is less than 4?\n\n\n\n\n\n\n\n\nWithout seeing it, we were told it landed on an odd number.\nWith this new information, how should we adjust our belief that the number is less than 4?",
+    "text": "Now, the two nodes A and B through 3 components are connected in parallel.\n\n\n\n\n\n\n\n\nWhat is the probability that the A-B connection is up?",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.7 Conditional probability"
+      "2.11 Independence"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/07-conditional-probability.html#section-1",
-    "href": "lecture-slides/ch02/07-conditional-probability.html#section-1",
-    "title": "2.7 Conditional probability",
+    "objectID": "lecture-slides/ch02/11-independence.html#section-5",
+    "href": "lecture-slides/ch02/11-independence.html#section-5",
+    "title": "2.11 Independence",
     "section": "",
-    "text": "For any event \\(A\\), we have our initial belief of how likely it would occur. \\(\\rightarrow\\text{P}(A)\\)\n\nNow, we learned that another event \\(B\\) has occurred.\nWith this new information, how should we adjust our belief on how likely event \\(A\\) would occur?\n\n\n\\[\\text{Conditional probability:}\\;\\;\\text{P}(A \\mid B)\\]\n\n\n\n\n  \n    \n    \n    \n  \n\n  \n  \n  \n\n  \n    \n    \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)",
+    "text": "How about the following configuration?\n\n\n\n\n\n\n\n\nThe component failures are independent of each other.\n\\(p_i\\): probability that \\(i\\) is operational (\\(i=1, 2, \\cdots, 6\\)).",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.7 Conditional probability"
+      "2.11 Independence"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/07-conditional-probability.html#conditional-probability",
-    "href": "lecture-slides/ch02/07-conditional-probability.html#conditional-probability",
-    "title": "2.7 Conditional probability",
-    "section": "Conditional probability",
-    "text": "Conditional probability\n For any two events \\(A\\) and \\(B\\), where \\(\\text{P}(B)&gt;0\\),\nthe conditional probability \\(\\text{P}(A \\mid B)\\) is defined as\n \\[\\large{\\text{P}(A \\mid B)=\\frac{\\text{P}(A \\cap B)}{\\text{P}(B)}}\\]",
+    "objectID": "lecture-slides/ch02/02-set-operations.html#union-of-two-events-a-and-b",
+    "href": "lecture-slides/ch02/02-set-operations.html#union-of-two-events-a-and-b",
+    "title": "2.2 Set operations",
+    "section": "Union of two events A and B",
+    "text": "Union of two events A and B\n\nThe event consisting of all outcomes that are in either A or B.\n\n\nNotation: \\(A \\cup B\\)  (Reads: A union B)\n\n\nRoll a six-sided die 🎲\n\\[\n\\begin{aligned}\nA &= \\{ 5, 6 \\} \\\\\n\\\\\nB &= \\{ 1, 3, 5 \\} \\\\\n\\\\\nA \\cup B &= \\\\\n\\end{aligned}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.7 Conditional probability"
+      "2.2 Set operations"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/07-conditional-probability.html#exercise",
-    "href": "lecture-slides/ch02/07-conditional-probability.html#exercise",
-    "title": "2.7 Conditional probability",
-    "section": "Exercise",
-    "text": "Exercise\nToss two coins 🪙 🪙\nWithout seeing it, we were told that one landed on heads.\nWhat is the probability the other landed on tails?",
+    "objectID": "lecture-slides/ch02/02-set-operations.html#intersection-of-two-events-a-and-b",
+    "href": "lecture-slides/ch02/02-set-operations.html#intersection-of-two-events-a-and-b",
+    "title": "2.2 Set operations",
+    "section": "Intersection of two events A and B",
+    "text": "Intersection of two events A and B\n\nThe event consisting of all outcomes that are in both A and B.\n\n\nNotation: \\(A \\cap B\\)  (Reads: A intersect B)\n\n\nRoll a six-sided die 🎲\n\\[\n\\begin{aligned}\nA &= \\{ 5, 6 \\} \\\\\n\\\\\nB &= \\{ 1, 3, 5 \\} \\\\\n\\\\\nA \\cap B &=\n\\end{aligned}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.7 Conditional probability"
+      "2.2 Set operations"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/07-conditional-probability.html#exercise-1",
-    "href": "lecture-slides/ch02/07-conditional-probability.html#exercise-1",
-    "title": "2.7 Conditional probability",
-    "section": "Exercise",
-    "text": "Exercise\nRoll two dice 🎲 🎲\n\nWhat is the probability that doubles are rolled?\nWe were told that the sum is 4 or less.\nNow what is the probability that doubles are rolled?",
+    "objectID": "lecture-slides/ch02/02-set-operations.html#commutative-property",
+    "href": "lecture-slides/ch02/02-set-operations.html#commutative-property",
+    "title": "2.2 Set operations",
+    "section": "Commutative property",
+    "text": "Commutative property\n\n\\[ a + b = b + a \\]\n\n\n\\[ a \\times b = b \\times a \\]\n\n\n \\[ A \\cup B = B \\cup A \\]\n\n\n\\[ A \\cap B = B \\cap A \\]",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.7 Conditional probability"
+      "2.2 Set operations"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/07-conditional-probability.html#exercise---simplify-textpa-mid-b",
-    "href": "lecture-slides/ch02/07-conditional-probability.html#exercise---simplify-textpa-mid-b",
-    "title": "2.7 Conditional probability",
-    "section": "Exercise - Simplify \\(\\text{P}(A \\mid B)\\)",
-    "text": "Exercise - Simplify \\(\\text{P}(A \\mid B)\\)\n\n\\(A\\) and \\(B\\) are disjoint\n\n\n\n\\(A \\subset B\\)\n\n\n\n\\(B \\subset A\\)\n\n\n\n\\(A=B\\)",
+    "objectID": "lecture-slides/ch02/02-set-operations.html#associative-property",
+    "href": "lecture-slides/ch02/02-set-operations.html#associative-property",
+    "title": "2.2 Set operations",
+    "section": "Associative property",
+    "text": "Associative property\n\n\\[ (a + b) + c = a + (b + c) \\]\n\n\n\\[ (a \\times b) \\times c = a \\times (b \\times c) \\]\n\n\n \\[ (A \\cup B) \\cup C = A \\cup (B \\cup C) \\]\n\n\n\\[ (A \\cap B) \\cap C = A \\cap (B \\cap C) \\]",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.7 Conditional probability"
+      "2.2 Set operations"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/02-set-operations.html#distributive-property",
+    "href": "lecture-slides/ch02/02-set-operations.html#distributive-property",
+    "title": "2.2 Set operations",
+    "section": "Distributive property",
+    "text": "Distributive property\n\n\\[ (a + b) \\times c = (a \\times c) + (b \\times c) \\]\n\n\n \\[ (A \\cup B) \\cap C = (A \\cap C) \\cup (B \\cap C) \\]\n\n\n\\[ (A \\cap B) \\cup C = (A \\cup C) \\cap (B \\cup C) \\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.2 Set operations"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/02-set-operations.html#mutually-exclusive-events",
+    "href": "lecture-slides/ch02/02-set-operations.html#mutually-exclusive-events",
+    "title": "2.2 Set operations",
+    "section": "Mutually exclusive events",
+    "text": "Mutually exclusive events\nNull event \\(\\Phi\\): the event consisting of no outcomes.\n\n\\(A\\) and \\(B\\) are mutually exclusive (or disjoint) events if they do not share any outcome, or simply\n\\[A \\cap B=\\Phi\\]\n\n\nRoll a six-sided die 🎲\n\\[\n\\begin{aligned}\nA &= \\{ 1, 3, 5\\} \\text{ (odd numbers)} \\\\\nB &= \\{ 2, 4, 6 \\} \\text{ (even numbers)} \\\\\nA \\cap B &= \\Phi \\\\\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.2 Set operations"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/02-set-operations.html#complement-of-an-event-a",
+    "href": "lecture-slides/ch02/02-set-operations.html#complement-of-an-event-a",
+    "title": "2.2 Set operations",
+    "section": "Complement of an event A",
+    "text": "Complement of an event A\n\nThe set of all outcomes in \\(\\Omega\\) that are not in A.\n\n\nNotation: \\(A^c\\)  (Reads: A complement)\n\n\nBy definition,\n\\[A \\cap A^c = \\Phi\\]\n\n\n\\[A \\cup A^c = \\Omega\\]\n\n\nRoll a six-sided die 🎲\n\\[\n\\begin{aligned}\nA &= \\{ 5, 6 \\} \\\\\nA^c &= \\\\\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.2 Set operations"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/02-set-operations.html#subset",
+    "href": "lecture-slides/ch02/02-set-operations.html#subset",
+    "title": "2.2 Set operations",
+    "section": "Subset",
+    "text": "Subset\n\nAn event A is a subset of an event B if all outcomes in A are also outcomes in B.\n\n\nNotation: \\(A \\subseteq B\\)\n\n\nRoll a six-sided die 🎲\n\\[\n\\begin{aligned}\nA &= \\{ 1, 3, 5\\} \\text{ (odd numbers)} \\\\\n\\\\\nB &= \\{ 1, 2, 3, 4, 5 \\} \\text{ (less than 6)} \\\\\n\\\\\nA &\\subseteq B \\\\\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.2 Set operations"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/02-set-operations.html#venn-diagram",
+    "href": "lecture-slides/ch02/02-set-operations.html#venn-diagram",
+    "title": "2.2 Set operations",
+    "section": "Venn diagram",
+    "text": "Venn diagram\nWhat is the red region in each Venn diagram?\n\n\n\n    \n    \n    \n    \n  \n\n    \n    \n  \n    \n      \n      \n    \n  \n    \\(A\\)\n    \\(B\\)\n    \\(\\Omega\\)\n  \n\n\n  \n  \n\n    \n  \n\n  \n    \n    \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)\n\n\n\n\n \n    \n    \n  \n    \n      \n      \n    \n  \n    \\(A\\)\n    \\(B\\)\n    \\(\\Omega\\)\n  \n\n\n\n \n    \n    \n    \n  \n    \n      \n      \n    \n  \n    \\(A\\)\n    \\(B\\)\n    \\(\\Omega\\)\n  \n\n\n\n\n  \n    \n      \n      \n    \n  \n\n  \n  \n\n  \n    \n    \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)\n\n\n\n\n \n    \n    \n    \n  \n    \n      \n      \n    \n  \n    \\(A\\)\n    \\(B\\)\n    \\(\\Omega\\)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.2 Set operations"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/02-set-operations.html#de-morgans-laws-i",
+    "href": "lecture-slides/ch02/02-set-operations.html#de-morgans-laws-i",
+    "title": "2.2 Set operations",
+    "section": "De Morgan’s laws (I)",
+    "text": "De Morgan’s laws (I)\n\n \n    \n    \n    \n  \n    \n      \n      \n    \n  \n    \\(A\\)\n    \\(B\\)\n    \\(\\Omega\\)\n \n\n \n \n  \n  \n\n  \n    \n    \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)\n\n\n\n\n  \n  \n\n  \n    \n    \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)\n\n\n\\[ (A \\cup B)^c = A^c \\cap B^c \\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.2 Set operations"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/02-set-operations.html#de-morgans-laws-ii",
+    "href": "lecture-slides/ch02/02-set-operations.html#de-morgans-laws-ii",
+    "title": "2.2 Set operations",
+    "section": "De Morgan’s laws (II)",
+    "text": "De Morgan’s laws (II)\n\n\n  \n    \n      \n      \n    \n  \n\n  \n  \n  \n\n  \n    \n    \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)\n\n\n\n \n    \n    \n  \n    \n      \n      \n    \n  \n    \\(A\\)\n    \\(B\\)\n    \\(\\Omega\\)\n  \n\n\n \n    \n    \n  \n    \n      \n      \n    \n  \n    \\(A\\)\n    \\(B\\)\n    \\(\\Omega\\)\n  \n\\[ (A \\cap B)^c = A^c \\cup B^c \\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.2 Set operations"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/02-set-operations.html#venn-diagram-1",
+    "href": "lecture-slides/ch02/02-set-operations.html#venn-diagram-1",
+    "title": "2.2 Set operations",
+    "section": "Venn diagram",
+    "text": "Venn diagram\n\\[ A \\cap B = \\Phi \\]\n\n\n\n\n  \n  \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.2 Set operations"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/02-set-operations.html#venn-diagram-2",
+    "href": "lecture-slides/ch02/02-set-operations.html#venn-diagram-2",
+    "title": "2.2 Set operations",
+    "section": "Venn diagram",
+    "text": "Venn diagram\n\\[ A \\subseteq B \\]\n\n\n\n\n  \n\n  \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.2 Set operations"
     ]
   },
   {
@@ -317,19 +473,6 @@
     "title": "2.6 Combination",
     "section": "Properties",
     "text": "Properties\n\\[{n \\choose k}={n \\choose n-k}\\]\n\n\\[{5 \\choose 3}={5 \\choose 5-3}\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.6 Combination"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/06-combination.html#section-1",
-    "href": "lecture-slides/ch02/06-combination.html#section-1",
-    "title": "2.6 Combination",
-    "section": "",
-    "text": "\\[{n \\choose k}={n \\choose n-k}\\]\nProof:",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -429,11 +572,11 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/06-combination.html#section-2",
-    "href": "lecture-slides/ch02/06-combination.html#section-2",
+    "objectID": "lecture-slides/ch02/06-combination.html#section-3",
+    "href": "lecture-slides/ch02/06-combination.html#section-3",
     "title": "2.6 Combination",
     "section": "",
-    "text": "\\[\n\\text{P(sharing birthday)}=1-\\frac{365!}{(365-n)!\\cdot 365^n}\n\\]\n\nGo to Google Colab, sign in, and open a new notebook.\nfrom math import factorial\n\nn = 40  # number of people at a party\n\np = 1 - factorial(365) / factorial(365-n) / (365**n)\n\nprint(p)\n\n\n Birthday attack",
+    "text": "\\[\n\\text{P(sharing birthday)}=1-\\frac{365!}{(365-n)!\\cdot 365^n}\n\\]\n\nfrom math import factorial\n\nn = 40  # number of people at a party\n\np = 1 - factorial(365) / factorial(365-n) / (365**n)\n\nprint(p)\n\n\n Birthday attack",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -1737,172 +1880,432 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/02-set-operations.html#union-of-two-events-a-and-b",
-    "href": "lecture-slides/ch02/02-set-operations.html#union-of-two-events-a-and-b",
-    "title": "2.2 Set operations",
-    "section": "Union of two events A and B",
-    "text": "Union of two events A and B\n\nThe event consisting of all outcomes that are in either A or B.\n\n\nNotation: \\(A \\cup B\\)  (Reads: A union B)\n\n\nRoll a six-sided die 🎲\n\\[\n\\begin{aligned}\nA &= \\{ 5, 6 \\} \\\\\n\\\\\nB &= \\{ 1, 3, 5 \\} \\\\\n\\\\\nA \\cup B &= \\\\\n\\end{aligned}\n\\]",
+    "objectID": "lecture-slides/ch02/08-multiplication-rule.html#multiplication-rule-for-three-events",
+    "href": "lecture-slides/ch02/08-multiplication-rule.html#multiplication-rule-for-three-events",
+    "title": "2.8 Multiplication rule",
+    "section": "Multiplication rule for three events",
+    "text": "Multiplication rule for three events\n\\[\n\\text{P}(A \\cap B  \\cap C)=\\text{P}(A) \\cdot \\text{P}(B \\mid A) \\cdot \\text{P}(C \\mid A \\cap B)\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.2 Set operations"
+      "2.8 Multiplication rule"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/02-set-operations.html#intersection-of-two-events-a-and-b",
-    "href": "lecture-slides/ch02/02-set-operations.html#intersection-of-two-events-a-and-b",
-    "title": "2.2 Set operations",
-    "section": "Intersection of two events A and B",
-    "text": "Intersection of two events A and B\n\nThe event consisting of all outcomes that are in both A and B.\n\n\nNotation: \\(A \\cap B\\)  (Reads: A intersect B)\n\n\nRoll a six-sided die 🎲\n\\[\n\\begin{aligned}\nA &= \\{ 5, 6 \\} \\\\\n\\\\\nB &= \\{ 1, 3, 5 \\} \\\\\n\\\\\nA \\cap B &=\n\\end{aligned}\n\\]",
+    "objectID": "lecture-slides/ch02/08-multiplication-rule.html#general-form-of-multiplication-rule",
+    "href": "lecture-slides/ch02/08-multiplication-rule.html#general-form-of-multiplication-rule",
+    "title": "2.8 Multiplication rule",
+    "section": "General form of multiplication rule",
+    "text": "General form of multiplication rule\nFor any \\(n\\) events \\(A_1, A_2, \\cdots, A_n\\) with positive probability, we have\n\\[\n\\begin{aligned}\n\\text{P}(A_1 \\cap A_2  \\cap \\cdots \\cap A_n)=& \\; \\text{P}(A_1) \\cdot \\\\\n&\\; \\text{P}(A_2 \\mid A_1) \\cdot \\\\\n&\\; \\text{P}(A_3 \\mid A_1 \\cap A_2) \\cdot \\\\\n&\\; \\cdots \\\\\n&\\; \\text{P}(A_n \\mid A_1 \\cap A_2  \\cap \\cdots \\cap A_{n-1}) \\\\\n\\end{aligned}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.2 Set operations"
+      "2.8 Multiplication rule"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/02-set-operations.html#commutative-property",
-    "href": "lecture-slides/ch02/02-set-operations.html#commutative-property",
-    "title": "2.2 Set operations",
-    "section": "Commutative property",
-    "text": "Commutative property\n\n\\[ a + b = b + a \\]\n\n\n\\[ a \\times b = b \\times a \\]\n\n\n \\[ A \\cup B = B \\cup A \\]\n\n\n\\[ A \\cap B = B \\cap A \\]",
+    "objectID": "lecture-slides/ch02/08-multiplication-rule.html#exercise",
+    "href": "lecture-slides/ch02/08-multiplication-rule.html#exercise",
+    "title": "2.8 Multiplication rule",
+    "section": "Exercise",
+    "text": "Exercise\nWe deal from a well-shuffled 52-card deck.\nWhat is the chance none of the first 3 cards is a heart?\n\nCan you solve it using\n\ncombinatorics?\nmultiplication rule?",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.2 Set operations"
+      "2.8 Multiplication rule"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/02-set-operations.html#associative-property",
-    "href": "lecture-slides/ch02/02-set-operations.html#associative-property",
-    "title": "2.2 Set operations",
-    "section": "Associative property",
-    "text": "Associative property\n\n\\[ (a + b) + c = a + (b + c) \\]\n\n\n\\[ (a \\times b) \\times c = a \\times (b \\times c) \\]\n\n\n \\[ (A \\cup B) \\cup C = A \\cup (B \\cup C) \\]\n\n\n\\[ (A \\cap B) \\cap C = A \\cap (B \\cap C) \\]",
+    "objectID": "lecture-slides/ch02/07-conditional-probability.html#section",
+    "href": "lecture-slides/ch02/07-conditional-probability.html#section",
+    "title": "2.7 Conditional probability",
+    "section": "",
+    "text": "Roll a die 🎲\nWhat is the probability the number is less than 4?\n\n\n\n\n\n\n\n\nWithout seeing it, we were told it landed on an odd number.\nWith this new information, how should we adjust our belief that the number is less than 4?",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.2 Set operations"
+      "2.7 Conditional probability"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/02-set-operations.html#distributive-property",
-    "href": "lecture-slides/ch02/02-set-operations.html#distributive-property",
-    "title": "2.2 Set operations",
-    "section": "Distributive property",
-    "text": "Distributive property\n\n\\[ (a + b) \\times c = (a \\times c) + (b \\times c) \\]\n\n\n \\[ (A \\cup B) \\cap C = (A \\cap C) \\cup (B \\cap C) \\]\n\n\n\\[ (A \\cap B) \\cup C = (A \\cup C) \\cap (B \\cup C) \\]",
+    "objectID": "lecture-slides/ch02/07-conditional-probability.html#section-1",
+    "href": "lecture-slides/ch02/07-conditional-probability.html#section-1",
+    "title": "2.7 Conditional probability",
+    "section": "",
+    "text": "For any event \\(A\\), we have our initial belief of how likely it would occur. \\(\\rightarrow\\text{P}(A)\\)\n\nNow, we learned that another event \\(B\\) has occurred.\nWith this new information, how should we adjust our belief on how likely event \\(A\\) would occur?\n\n\n\\[\\text{Conditional probability:}\\;\\;\\text{P}(A \\mid B)\\]\n\n\n\n\n  \n    \n    \n    \n  \n\n  \n  \n  \n\n  \n    \n    \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.2 Set operations"
+      "2.7 Conditional probability"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/02-set-operations.html#mutually-exclusive-events",
-    "href": "lecture-slides/ch02/02-set-operations.html#mutually-exclusive-events",
-    "title": "2.2 Set operations",
-    "section": "Mutually exclusive events",
-    "text": "Mutually exclusive events\nNull event \\(\\Phi\\): the event consisting of no outcomes.\n\n\\(A\\) and \\(B\\) are mutually exclusive (or disjoint) events if they do not share any outcome, or simply\n\\[A \\cap B=\\Phi\\]\n\n\nRoll a six-sided die 🎲\n\\[\n\\begin{aligned}\nA &= \\{ 1, 3, 5\\} \\text{ (odd numbers)} \\\\\nB &= \\{ 2, 4, 6 \\} \\text{ (even numbers)} \\\\\nA \\cap B &= \\Phi \\\\\n\\end{aligned}\n\\]",
+    "objectID": "lecture-slides/ch02/07-conditional-probability.html#conditional-probability",
+    "href": "lecture-slides/ch02/07-conditional-probability.html#conditional-probability",
+    "title": "2.7 Conditional probability",
+    "section": "Conditional probability",
+    "text": "Conditional probability\n For any two events \\(A\\) and \\(B\\), where \\(\\text{P}(B)&gt;0\\),\nthe conditional probability \\(\\text{P}(A \\mid B)\\) is defined as\n \\[\\large{\\text{P}(A \\mid B)=\\frac{\\text{P}(A \\cap B)}{\\text{P}(B)}}\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.2 Set operations"
+      "2.7 Conditional probability"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/02-set-operations.html#complement-of-an-event-a",
-    "href": "lecture-slides/ch02/02-set-operations.html#complement-of-an-event-a",
-    "title": "2.2 Set operations",
-    "section": "Complement of an event A",
-    "text": "Complement of an event A\n\nThe set of all outcomes in \\(\\Omega\\) that are not in A.\n\n\nNotation: \\(A^c\\)  (Reads: A complement)\n\n\nBy definition,\n\\[A \\cap A^c = \\Phi\\]\n\n\n\\[A \\cup A^c = \\Omega\\]\n\n\nRoll a six-sided die 🎲\n\\[\n\\begin{aligned}\nA &= \\{ 5, 6 \\} \\\\\nA^c &= \\\\\n\\end{aligned}\n\\]",
+    "objectID": "lecture-slides/ch02/07-conditional-probability.html#exercise",
+    "href": "lecture-slides/ch02/07-conditional-probability.html#exercise",
+    "title": "2.7 Conditional probability",
+    "section": "Exercise",
+    "text": "Exercise\nToss two coins 🪙 🪙\nWithout seeing it, we were told that one landed on heads.\nWhat is the probability the other landed on tails?",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.2 Set operations"
+      "2.7 Conditional probability"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/02-set-operations.html#subset",
-    "href": "lecture-slides/ch02/02-set-operations.html#subset",
-    "title": "2.2 Set operations",
-    "section": "Subset",
-    "text": "Subset\n\nAn event A is a subset of an event B if all outcomes in A are also outcomes in B.\n\n\nNotation: \\(A \\subseteq B\\)\n\n\nRoll a six-sided die 🎲\n\\[\n\\begin{aligned}\nA &= \\{ 1, 3, 5\\} \\text{ (odd numbers)} \\\\\n\\\\\nB &= \\{ 1, 2, 3, 4, 5 \\} \\text{ (less than 6)} \\\\\n\\\\\nA &\\subseteq B \\\\\n\\end{aligned}\n\\]",
+    "objectID": "lecture-slides/ch02/07-conditional-probability.html#exercise-1",
+    "href": "lecture-slides/ch02/07-conditional-probability.html#exercise-1",
+    "title": "2.7 Conditional probability",
+    "section": "Exercise",
+    "text": "Exercise\nRoll two dice 🎲 🎲\n\nWhat is the probability that doubles are rolled?\nWe were told that the sum is 4 or less.\nNow what is the probability that doubles are rolled?",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.2 Set operations"
+      "2.7 Conditional probability"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/02-set-operations.html#venn-diagram",
-    "href": "lecture-slides/ch02/02-set-operations.html#venn-diagram",
-    "title": "2.2 Set operations",
-    "section": "Venn diagram",
-    "text": "Venn diagram\nWhat is the red region in each Venn diagram?\n\n\n\n    \n    \n    \n    \n  \n\n    \n    \n  \n    \n      \n      \n    \n  \n    \\(A\\)\n    \\(B\\)\n    \\(\\Omega\\)\n  \n\n\n  \n  \n\n    \n  \n\n  \n    \n    \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)\n\n\n\n\n \n    \n    \n  \n    \n      \n      \n    \n  \n    \\(A\\)\n    \\(B\\)\n    \\(\\Omega\\)\n  \n\n\n\n \n    \n    \n    \n  \n    \n      \n      \n    \n  \n    \\(A\\)\n    \\(B\\)\n    \\(\\Omega\\)\n  \n\n\n\n\n  \n    \n      \n      \n    \n  \n\n  \n  \n\n  \n    \n    \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)\n\n\n\n\n \n    \n    \n    \n  \n    \n      \n      \n    \n  \n    \\(A\\)\n    \\(B\\)\n    \\(\\Omega\\)",
+    "objectID": "lecture-slides/ch02/07-conditional-probability.html#exercise---simplify-textpa-mid-b",
+    "href": "lecture-slides/ch02/07-conditional-probability.html#exercise---simplify-textpa-mid-b",
+    "title": "2.7 Conditional probability",
+    "section": "Exercise - Simplify \\(\\text{P}(A \\mid B)\\)",
+    "text": "Exercise - Simplify \\(\\text{P}(A \\mid B)\\)\n\n\\(A\\) and \\(B\\) are disjoint\n\n\n\n\\(A \\subset B\\)\n\n\n\n\\(B \\subset A\\)\n\n\n\n\\(A=B\\)",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.2 Set operations"
+      "2.7 Conditional probability"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/02-set-operations.html#de-morgans-laws-i",
-    "href": "lecture-slides/ch02/02-set-operations.html#de-morgans-laws-i",
-    "title": "2.2 Set operations",
-    "section": "De Morgan’s laws (I)",
-    "text": "De Morgan’s laws (I)\n\n \n    \n    \n    \n  \n    \n      \n      \n    \n  \n    \\(A\\)\n    \\(B\\)\n    \\(\\Omega\\)\n \n\n \n \n  \n  \n\n  \n    \n    \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)\n\n\n\n\n  \n  \n\n  \n    \n    \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)\n\n\n\\[ (A \\cup B)^c = A^c \\cap B^c \\]",
+    "objectID": "lecture-slides/ch02/04-product-rule.html#discrete-probability-law",
+    "href": "lecture-slides/ch02/04-product-rule.html#discrete-probability-law",
+    "title": "2.4 Product rule",
+    "section": "Discrete probability law",
+    "text": "Discrete probability law\n\nIf the sample space \\(\\Omega\\) consists of a finite number of possible outcomes,\nthen the probability of any event \\(\\{s_1, s_2, \\cdots, s_k \\}\\)\nis the sum of the probabilities of its elements.\n\n\n\\[\\text{P}(\\{s_1, s_2, \\cdots, s_k \\}) = \\text{P}(s_1) + \\text{P}(s_2) + \\cdots + \\text{P}(s_k) \\]",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.2 Set operations"
+      "2.4 Product rule"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/02-set-operations.html#de-morgans-laws-ii",
-    "href": "lecture-slides/ch02/02-set-operations.html#de-morgans-laws-ii",
-    "title": "2.2 Set operations",
-    "section": "De Morgan’s laws (II)",
-    "text": "De Morgan’s laws (II)\n\n\n  \n    \n      \n      \n    \n  \n\n  \n  \n  \n\n  \n    \n    \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)\n\n\n\n \n    \n    \n  \n    \n      \n      \n    \n  \n    \\(A\\)\n    \\(B\\)\n    \\(\\Omega\\)\n  \n\n\n \n    \n    \n  \n    \n      \n      \n    \n  \n    \\(A\\)\n    \\(B\\)\n    \\(\\Omega\\)\n  \n\\[ (A \\cap B)^c = A^c \\cup B^c \\]",
+    "objectID": "lecture-slides/ch02/04-product-rule.html#discrete-uniform-probability-law",
+    "href": "lecture-slides/ch02/04-product-rule.html#discrete-uniform-probability-law",
+    "title": "2.4 Product rule",
+    "section": "Discrete uniform probability law",
+    "text": "Discrete uniform probability law\nIf all outcomes in the sample space \\(\\Omega\\) are equally likely,\nthen the probability of any event A is given by:\n\\[ \\text{P}(A) = \\frac{\\text{number of outcomes in } A}{\\text{number of outcomes in } \\Omega} \\]\n\n\nFor convenience, we use \\(|A|\\) to denote the number of elements in set \\(A\\) (termed the cardinality of set \\(A\\))\n\\[ \\text{P}(A) = \\frac{|A|}{|\\Omega|} \\]",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.2 Set operations"
+      "2.4 Product rule"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/02-set-operations.html#venn-diagram-1",
-    "href": "lecture-slides/ch02/02-set-operations.html#venn-diagram-1",
-    "title": "2.2 Set operations",
-    "section": "Venn diagram",
-    "text": "Venn diagram\n\\[ A \\cap B = \\Phi \\]\n\n\n\n\n  \n  \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)",
+    "objectID": "lecture-slides/ch02/04-product-rule.html#equally-likely-outcomes",
+    "href": "lecture-slides/ch02/04-product-rule.html#equally-likely-outcomes",
+    "title": "2.4 Product rule",
+    "section": "Equally likely outcomes",
+    "text": "Equally likely outcomes\nIn many experiments, it is reasonable to assume equal probabilities to all simple events.\n\n\nRoll a fair six-sided die 🎲\n\\[ \\text{P}(⚀) = \\text{P}(⚁) = \\text{P}(⚂) = \\text{P}(⚃) = \\text{P}(⚄) = \\text{P}(⚅) = \\frac{1}{6} \\]\n\n\n\\[\\text{P}(\\text{odd number})=\\text{P}\\big(\\{⚀, ⚂, ⚄\\}\\big)=\\frac{3}{6}\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.2 Set operations"
+      "2.4 Product rule"
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/02-set-operations.html#venn-diagram-2",
-    "href": "lecture-slides/ch02/02-set-operations.html#venn-diagram-2",
-    "title": "2.2 Set operations",
-    "section": "Venn diagram",
-    "text": "Venn diagram\n\\[ A \\subseteq B \\]\n\n\n\n\n  \n\n  \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)",
+    "objectID": "lecture-slides/ch02/04-product-rule.html#roll-two-dice",
+    "href": "lecture-slides/ch02/04-product-rule.html#roll-two-dice",
+    "title": "2.4 Product rule",
+    "section": "Roll two dice 🎲 🎲",
+    "text": "Roll two dice 🎲 🎲\n\nWhat is the probability to roll a double?\nWhat is the probability that the total is over 7?",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 2. Probability",
-      "2.2 Set operations"
+      "2.4 Product rule"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/04-product-rule.html#section",
+    "href": "lecture-slides/ch02/04-product-rule.html#section",
+    "title": "2.4 Product rule",
+    "section": "",
+    "text": "Draw a card from a well-shuffled deck of 52 cards.\nWhat is the chance to draw an ace?\n\n\n\n\n\n\n\\[\n\\text{P}(\\text{Aces}) = \\text{P}(\\{🃑, 🃁, 🂱, 🂡\\}) = \\frac{4}{52}= \\frac{1}{13}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.4 Product rule"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/04-product-rule.html#section-1",
+    "href": "lecture-slides/ch02/04-product-rule.html#section-1",
+    "title": "2.4 Product rule",
+    "section": "",
+    "text": "Draw a card from a well-shuffled deck of 52 cards.\nWhat is the chance to draw a spade?\n\n\n\n\n\n\n\\[\n\\text{P}(\\text{spades}) = \\text{P}(\\{🂡, 🂢, \\cdots, 🂮\\})= \\frac{13}{52}= \\frac{1}{4}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.4 Product rule"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/04-product-rule.html#section-2",
+    "href": "lecture-slides/ch02/04-product-rule.html#section-2",
+    "title": "2.4 Product rule",
+    "section": "",
+    "text": "Roll a die twice. How many pairs of numbers are possible?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.4 Product rule"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/04-product-rule.html#the-product-rule",
+    "href": "lecture-slides/ch02/04-product-rule.html#the-product-rule",
+    "title": "2.4 Product rule",
+    "section": "The product rule",
+    "text": "The product rule\n\n\nSuppose that\n\nthere are \\(\\color{red}{n_1}\\) possible results at the first stage\nfor every possible result at the first stage, there are \\(\\color{green}{n_2}\\) possible results at the second stage\n\n\n\nThen the total number of possible results is \\(\\color{red}{n_1} \\times \\color{green}{n_2}\\)\n\n\nThe product rule is sometimes also called the multiplication principle.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.4 Product rule"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/04-product-rule.html#the-product-rule-four-stages",
+    "href": "lecture-slides/ch02/04-product-rule.html#the-product-rule-four-stages",
+    "title": "2.4 Product rule",
+    "section": "The product rule: four stages",
+    "text": "The product rule: four stages",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.4 Product rule"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/04-product-rule.html#general-form-of-the-product-rule-with-r-stages",
+    "href": "lecture-slides/ch02/04-product-rule.html#general-form-of-the-product-rule-with-r-stages",
+    "title": "2.4 Product rule",
+    "section": "General form of the product rule with \\(r\\)-stages",
+    "text": "General form of the product rule with \\(r\\)-stages\n\n\nIf for any sequence of possible results at the first \\((i-1)\\) stages, there are \\(n_i\\) possible results at the \\(i\\)-th stage\n\n\nthen the total number of possible results in a \\(r\\)-stage process is\n\\[n_1 \\times n_2 \\times \\cdots \\times n_r\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.4 Product rule"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/04-product-rule.html#exercise",
+    "href": "lecture-slides/ch02/04-product-rule.html#exercise",
+    "title": "2.4 Product rule",
+    "section": "Exercise",
+    "text": "Exercise\nHow many iPad Pro variants does Apple need to make?\n\nScreen size: 11-inch, 13-inch\nColor: Space gray, Silver\nStorage: 256GB, 512GB, 1TB, 2TB\nDisplay glass: Standard, Nano-texture\nConnectivity: Wi-Fi, Wi-Fi + Cellular\n\n\nCurse of dimensionality",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.4 Product rule"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/04-product-rule.html#exercise-1",
+    "href": "lecture-slides/ch02/04-product-rule.html#exercise-1",
+    "title": "2.4 Product rule",
+    "section": "Exercise",
+    "text": "Exercise\nHow many unique MI license plate numbers are there?\n\n\nRules\n\n7 characters\nOnly uppercase letters (A-Z) and numbers (0-9)\nLetter O is not allowed.\nSpaces are allowed and counted as characters.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.4 Product rule"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/04-product-rule.html#exercise-2",
+    "href": "lecture-slides/ch02/04-product-rule.html#exercise-2",
+    "title": "2.4 Product rule",
+    "section": "Exercise",
+    "text": "Exercise\n\nHow many subsets does a \\(n\\)-element set have?\n\\[ \\{s_1, s_2, \\cdots, s_n\\} \\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.4 Product rule"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/09-total-probability-theorem.html#section",
+    "href": "lecture-slides/ch02/09-total-probability-theorem.html#section",
+    "title": "2.9 Total probability theorem",
+    "section": "",
+    "text": "If a collection of events are\n\ndisjoint (i.e., mutually exclusive)\ntheir union is \\(\\Omega\\) (i.e., collectively exhaustive)\n\n\nthen this collection of events is called a partition of \\(\\Omega\\).\n\n\nThis means any outcome in an experiment is included in one and exactly one of the partitioning events.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.9 Total probability theorem"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/09-total-probability-theorem.html#partition-of-sample-space-omega",
+    "href": "lecture-slides/ch02/09-total-probability-theorem.html#partition-of-sample-space-omega",
+    "title": "2.9 Total probability theorem",
+    "section": "Partition of sample space \\(\\Omega\\)",
+    "text": "Partition of sample space \\(\\Omega\\)\n\n\n\n\n\n\n\\(A\\) and \\(A^c\\) always form a partition of sample space \\(\\Omega\\).",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.9 Total probability theorem"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/09-total-probability-theorem.html#total-probability-theorem",
+    "href": "lecture-slides/ch02/09-total-probability-theorem.html#total-probability-theorem",
+    "title": "2.9 Total probability theorem",
+    "section": "Total probability theorem",
+    "text": "Total probability theorem\nLet \\(A_1, A_2, \\cdots, A_n\\) form a partition of sample space \\(\\Omega\\).\n\n\n\n\n\nThen, for any event \\(B\\), we have\n\\[\nB = (A_1 \\cap B) \\cup (A_2 \\cap B) \\cup \\cdots \\cup (A_n \\cap B)\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.9 Total probability theorem"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/09-total-probability-theorem.html#exercise",
+    "href": "lecture-slides/ch02/09-total-probability-theorem.html#exercise",
+    "title": "2.9 Total probability theorem",
+    "section": "Exercise",
+    "text": "Exercise\n\nYour academic department offers\n\n8 lower level courses \\(L_1, L_2, \\cdots, L_8\\)\n10 higher level courses \\(H_1, H_2, \\cdots, H_{10}\\)\n\nA valid curriculum consists of\n\n4 lower level courses\n3 higher level courses\n\nHow many different curricula are possible?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.9 Total probability theorem"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/09-total-probability-theorem.html#exercise-contd",
+    "href": "lecture-slides/ch02/09-total-probability-theorem.html#exercise-contd",
+    "title": "2.9 Total probability theorem",
+    "section": "Exercise (cont’d)",
+    "text": "Exercise (cont’d)\n\n\nYour academic department offers\n\n8 lower level courses \\(L_1, L_2, \\cdots, L_8\\)\n10 higher level courses \\(H_1, H_2, \\cdots, H_{10}\\)\n\nA valid curriculum consists of\n\n4 lower level courses\n3 higher level courses\n\n\n\nIn fact, \\(H_1, H_2, \\cdots, H_5\\) have \\(L_1\\) as a prerequisite.\nNow how many different curricula are possible?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.9 Total probability theorem"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/09-total-probability-theorem.html#section-1",
+    "href": "lecture-slides/ch02/09-total-probability-theorem.html#section-1",
+    "title": "2.9 Total probability theorem",
+    "section": "",
+    "text": "\\[\n\\small{\n\\begin{aligned}\nB =\\;& (A_1 \\cap B) \\cup (A_2 \\cap B) \\cup \\cdots \\cup (A_n \\cap B) \\\\\n\\\\\n\\text{P}(B) =\\;& \\text{P}\\big((A_1 \\cap B) \\cup (A_2 \\cap B) \\cup \\cdots \\cup (A_n \\cap B)\\big)\\\\\n=\\;& \\text{P}(A_1 \\cap B) + \\text{P}(A_2 \\cap B) + \\cdots + \\text{P}(A_n \\cap B)\\\\\n=\\;& \\text{P}(A_1)\\text{P}(B \\mid A_1) + \\text{P}(A_2)\\text{P}(B \\mid A_2) + \\cdots + \\text{P}(A_n)\\text{P}(B \\mid A_n) \\\\\n\\end{aligned}\n}\n\\]\n\n\nDivide and conquer",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.9 Total probability theorem"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/09-total-probability-theorem.html#exercise-1",
+    "href": "lecture-slides/ch02/09-total-probability-theorem.html#exercise-1",
+    "title": "2.9 Total probability theorem",
+    "section": "Exercise",
+    "text": "Exercise\nYou enter a tennis tournament.\nYour probability of winning a game is\n\n0.3 against .green[half of] the (stronger) players\n0.5 against .green[a quarter of] the (similar-level) players\n0.6 against .green[a quarter of] the (weaker) players\n\n\nYou play a game against a randomly chosen opponent.\nWhat is the probability of you winning the game?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.9 Total probability theorem"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/09-total-probability-theorem.html#the-monty-hall-problem",
+    "href": "lecture-slides/ch02/09-total-probability-theorem.html#the-monty-hall-problem",
+    "title": "2.9 Total probability theorem",
+    "section": "The Monty Hall problem",
+    "text": "The Monty Hall problem",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.9 Total probability theorem"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/09-total-probability-theorem.html#the-monty-hall-problem-1",
+    "href": "lecture-slides/ch02/09-total-probability-theorem.html#the-monty-hall-problem-1",
+    "title": "2.9 Total probability theorem",
+    "section": "The Monty Hall problem",
+    "text": "The Monty Hall problem",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.9 Total probability theorem"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/09-total-probability-theorem.html#assumptions",
+    "href": "lecture-slides/ch02/09-total-probability-theorem.html#assumptions",
+    "title": "2.9 Total probability theorem",
+    "section": "Assumptions",
+    "text": "Assumptions\n\nMonty knows which room has the car.\nHe always opens one of the two unchosen doors that does not have the car.\nIf both unchosen doors do not have the car (i.e., your first choice is correct), Monty opens one of the two doors at random.\nYou want the car, not the goat 🐐.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.9 Total probability theorem"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/09-total-probability-theorem.html#drunk-monty",
+    "href": "lecture-slides/ch02/09-total-probability-theorem.html#drunk-monty",
+    "title": "2.9 Total probability theorem",
+    "section": "Drunk Monty",
+    "text": "Drunk Monty\n\nAssume one night Monty is drunk before the show.\nYou are playing the game and chose a door.\n\nMonty forgets which door has the car, and randomly opens an unchosen door.\nHe opens one of the unchosen doors, and luckily, there is no car behind it.\nNow, should you switch?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.9 Total probability theorem"
     ]
   }
 ]

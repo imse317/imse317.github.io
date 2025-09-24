@@ -10,7 +10,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.40">
 
-  <title>IMSE 317 – 2.6 Combination</title>
+  <title>IMSE 317 – 2.9 Total probability theorem</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,71 +28,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-bbe7401fe57d4b791b917637bb662036.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -192,7 +127,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">2.6 Combination</h1>
+  <h1 class="title">2.9 Total probability theorem</h1>
 
 <div class="quarto-title-authors">
 </div>
@@ -200,211 +135,176 @@
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
-<p>How many ways to choose 2 students from 5 to volunteer this weekend?</p>
-<div class="fragment">
-<p><br></p>
-<div style="text-align: center;">
+<!-- Partition of a sample space $\Omega$ -->
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/set-partitions-5choose2.svg" class="quarto-figure quarto-figure-center" height="400"></p>
+<p><img data-src="images/partition.png" class="quarto-figure quarto-figure-center" height="150"></p>
 </figure>
 </div>
-</div>
-</div>
-</section>
-<section id="combinations---an-unordered-subset" class="slide level2">
-<h2>Combinations - an unordered subset</h2>
-<p>How many ways to choose 3 students from 40 to form a committee.</p>
+<p>If a collection of events are</p>
 <ul>
-<li class="fragment">How many <strong>ordered</strong> list of 3 students can be formed?</li>
-<li class="fragment">How many ways to order each chosen 3 students?</li>
+<li class="fragment">disjoint (i.e., <a href="https://en.wikipedia.org/wiki/Mutual_exclusivity">mutually exclusive</a>)</li>
+<li class="fragment">their union is <span class="math inline">\(\Omega\)</span> (i.e., <a href="https://en.wikipedia.org/wiki/Collectively_exhaustive_events">collectively exhaustive</a>)</li>
 </ul>
 <div class="fragment">
+<p>then this collection of events is called a <strong>partition of <span class="math inline">\(\Omega\)</span></strong>.</p>
+</div>
+<div class="fragment">
+<p>This means any outcome in an experiment is included in one and exactly one of the partitioning events.</p>
+</div>
+</section>
+<section id="partition-of-sample-space-omega" class="slide level2">
+<h2>Partition of sample space <span class="math inline">\(\Omega\)</span></h2>
+<p><br></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/permutation-tree.png" class="quarto-figure quarto-figure-center" height="300"></p>
+<p><img data-src="images/venn-compliment.png" class="quarto-figure quarto-figure-center" height="300"></p>
 </figure>
 </div>
-<aside class="notes">
-<ul>
-<li><p>How many ordered list of 3 students can be formed? <span class="math display">\[3\text{-permutations of }40=\frac{40!}{(40-3)!}=59,280\]</span></p></li>
-<li><p>How many ways to order each chosen 3 students? <span class="math display">\[\text{Permutations of }3=3!=6\]</span></p></li>
-</ul>
-<p>They are: (A-B-C), (A-C-B), (B-A-C), (B-C-A), (C-A-B), (C-B-A)</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</div>
+<p><span class="math inline">\(A\)</span> and <span class="math inline">\(A^c\)</span> always form a partition of sample space <span class="math inline">\(\Omega\)</span>.</p>
 </section>
-<section id="combinations---an-unordered-subset-1" class="slide level2">
-<h2>Combinations - an unordered subset</h2>
-<p>How many ways to choose 3 students from 40 to form a committee.</p>
-<aside class="notes">
-<p><span class="math display">\[\begin{aligned}
-\text{number of unordered list}&amp;=\frac{3\text{-permutations of }40}{\text{permutations of }3} \\
-\\
-&amp;=\frac{40!}{3!(40-3)!} \\
-\\
-&amp;=9,880
-\end{aligned}\]</span></p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="general-formula-for-combinations" class="slide level2">
-<h2>General formula for combinations</h2>
-<p><br> The number of ways of choosing <span class="math inline">\(k\)</span> objects out of <span class="math inline">\(n\)</span> is</p>
-<p><br></p>
-<p><span class="math display">\[\begin{aligned}
-{n \choose k}&amp;=\frac{k\text{-permutations of }n}{\text{permutations of }k} \\
-\\
-&amp;=\frac{n!}{k!(n-k)!} \\
-\end{aligned}\]</span></p>
-</section>
-<section id="permutation-vs.-combination" class="slide level2">
-<h2>Permutation vs.&nbsp;combination</h2>
-<p>2-permutations of 4 letters A, B, C, and D</p>
-<p><span class="math display">\[\frac{4!}{(4-2)!}=12\]</span></p>
-<p><code>AB BA AC CA AD DA BC CB BD DB CD DC</code></p>
-<div class="fragment">
-<p><code>AB    AC    AD    BC    BD    CD</code></p>
-<p>Combinations of choosing 2 letters from 4</p>
-<p><span class="math display">\[{4 \choose 2}=\frac{4!}{2!(4-2)!}=6\]</span></p>
-</div>
-</section>
-<section id="properties" class="slide level2">
-<h2>Properties</h2>
-<p><span class="math display">\[{n \choose k}={n \choose n-k}\]</span></p>
-<div class="fragment">
-<p><span class="math display">\[{5 \choose 3}={5 \choose 5-3}\]</span></p>
-</div>
-</section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-<div style="text-align: center;">
+<section id="total-probability-theorem" class="slide level2">
+<h2>Total probability theorem</h2>
+<p>Let <span class="math inline">\(A_1, A_2, \cdots, A_n\)</span> form a partition of sample space <span class="math inline">\(\Omega\)</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/set-partitions-5choose3.svg" class="quarto-figure quarto-figure-center" height="500"></p>
+<p><img data-src="images/partition-4.png" class="quarto-figure quarto-figure-center" height="120"></p>
+</figure>
+</div>
+<p>Then, for any event <span class="math inline">\(B\)</span>, we have</p>
+<p><span class="math display">\[
+B = (A_1 \cap B) \cup (A_2 \cap B) \cup \cdots \cup (A_n \cap B)
+\]</span></p>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/partition-total-prob.png" class="quarto-figure quarto-figure-center" height="120"></p>
 </figure>
 </div>
 </div>
 </section>
 <section id="exercise" class="slide level2">
 <h2>Exercise</h2>
-<p>In a <a href="https://en.wikipedia.org/wiki/Round-robin_tournament">round-robin</a> tennis tournament with <span class="math inline">\(n\)</span> players, each player meets every other player exact once.</p>
-<p>How many games need to be played in total?</p>
+<ul>
+<li class="fragment">Your academic department offers
+<ul>
+<li class="fragment">8 lower level courses <span class="math inline">\(L_1, L_2, \cdots, L_8\)</span></li>
+<li class="fragment">10 higher level courses <span class="math inline">\(H_1, H_2, \cdots, H_{10}\)</span></li>
+</ul></li>
+<li class="fragment">A valid curriculum consists of
+<ul>
+<li class="fragment">4 lower level courses</li>
+<li class="fragment">3 higher level courses</li>
+</ul></li>
+<li class="fragment">How many different curricula are possible?</li>
+</ul>
 </section>
-<section id="powerball" class="slide level2">
-<h2><a href="https://en.wikipedia.org/wiki/Powerball">Powerball</a></h2>
+<section id="exercise-contd" class="slide level2">
+<h2>Exercise (cont’d)</h2>
+<div>
+<ul>
+<li>Your academic department offers
+<ul>
+<li>8 lower level courses <span class="math inline">\(L_1, L_2, \cdots, L_8\)</span></li>
+<li>10 higher level courses <span class="math inline">\(H_1, H_2, \cdots, H_{10}\)</span></li>
+</ul></li>
+<li>A valid curriculum consists of
+<ul>
+<li>4 lower level courses</li>
+<li>3 higher level courses</li>
+</ul></li>
+</ul>
+</div>
+<p>In fact, <span class="math inline">\(H_1, H_2, \cdots, H_5\)</span> have <span class="math inline">\(L_1\)</span> as a prerequisite.</p>
+<p>Now how many different curricula are possible?</p>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/powerball.png" class="quarto-figure quarto-figure-center" height="200"></p>
+<p><img data-src="images/partition-total-prob.png" class="quarto-figure quarto-figure-center" height="150"></p>
 </figure>
 </div>
-<ul>
-<li class="fragment">Draw five numbers from a pool of 69 white balls and one number from a pool of 26 Powerballs.</li>
-<li class="fragment">To win a jackpot one needs to match all five white balls plus the power ball.</li>
-<li class="fragment">What is the winning chance if you buy a single ticket?</li>
-</ul>
+<div class="fragment">
+<p><span class="math display">\[
+\small{
+\begin{aligned}
+B =\;&amp; (A_1 \cap B) \cup (A_2 \cap B) \cup \cdots \cup (A_n \cap B) \\
+\\
+\text{P}(B) =\;&amp; \text{P}\big((A_1 \cap B) \cup (A_2 \cap B) \cup \cdots \cup (A_n \cap B)\big)\\
+=\;&amp; \text{P}(A_1 \cap B) + \text{P}(A_2 \cap B) + \cdots + \text{P}(A_n \cap B)\\
+=\;&amp; \text{P}(A_1)\text{P}(B \mid A_1) + \text{P}(A_2)\text{P}(B \mid A_2) + \cdots + \text{P}(A_n)\text{P}(B \mid A_n) \\
+\end{aligned}
+}
+\]</span></p>
+</div>
+<div class="fragment">
+<p>Divide and conquer</p>
+</div>
 </section>
 <section>
 <section id="section-2" class="title-slide slide level1 center">
 <h1></h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">from</span> math <span class="im">import</span> comb</span>
-<span id="cb1-2"><a></a></span>
-<span id="cb1-3"><a></a>comb(<span class="dv">69</span>, <span class="dv">5</span>) <span class="op">*</span> comb(<span class="dv">26</span>, <span class="dv">1</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/tree-total-prob.png" class="quarto-figure quarto-figure-center" height="300"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/partition-total-prob.png" class="quarto-figure quarto-figure-center" height="200"></p>
+</figure>
+</div>
 </section>
 <section id="exercise-1" class="slide level2">
 <h2>Exercise</h2>
-<p>Toss a fair coin <span class="math inline">\(n\)</span> times.</p>
-<p>What is the chance there are <span class="math inline">\(k\; (= 0, 1, \cdots, n)\)</span> heads?</p>
-</section>
-<section id="exercise-2" class="slide level2">
-<h2>Exercise</h2>
-<div>
+<p>You enter a tennis tournament.</p>
+<p>Your probability of winning a game is</p>
 <ul>
-<li>A jar contains <span class="math inline">\(m\)</span> maize and <span class="math inline">\(n\)</span> blue balls.</li>
-<li>Two balls are drawn randomly from the jar.</li>
-<li>What is the chance that the balls are of the same color?</li>
+<li class="fragment">0.3 against .green[half of] the (stronger) players</li>
+<li class="fragment">0.5 against .green[a quarter of] the (similar-level) players</li>
+<li class="fragment">0.6 against .green[a quarter of] the (weaker) players</li>
 </ul>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/bag.png" class="quarto-figure quarto-figure-center" height="300"></p>
-</figure>
+<div class="fragment">
+<p>You play a game against a randomly chosen opponent.</p>
+<p>What is the probability of you winning the game?</p>
 </div>
 </section>
-<section id="exercise-3" class="slide level2">
-<h2>Exercise</h2>
-<p>Draw 7 cards from a well-shuffled 52-card deck.</p>
-<p>Find the probability that</p>
+<section id="the-monty-hall-problem" class="slide level2">
+<h2>The Monty Hall problem</h2>
+<div style="text-align: center;">
+<iframe width="750" height="500" src="https://www.youtube.com/embed/cXqDIFUB7YU" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</div>
+</section>
+<section id="the-monty-hall-problem-1" class="slide level2">
+<h2>The Monty Hall problem</h2>
+
+<img data-src="images/montyhall.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="assumptions" class="slide level2">
+<h2>Assumptions</h2>
 <ul>
-<li class="fragment">the 7 cards include <strong>exact 3 aces</strong></li>
-<li class="fragment">the 7 cards include <strong>exact 2 kings</strong></li>
-<li class="fragment">the 7 cards include <strong>exact 3 aces or exact 2 kings</strong></li>
+<li class="fragment">Monty knows which room has the car.</li>
+<li class="fragment">He always opens one of the two unchosen doors that does not have the car.</li>
+<li class="fragment">If both unchosen doors do not have the car (i.e., your first choice is correct), Monty opens one of the two doors at random.</li>
+<li class="fragment">You want the car, not the goat 🐐.</li>
 </ul>
-</section>
-<section id="birthday-problem" class="slide level2">
-<h2><a href="https://en.wikipedia.org/wiki/Birthday_problem">Birthday problem</a></h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/birthday.png" class="quarto-figure quarto-figure-center" height="400"></p>
-</figure>
-</div>
-<p>How many people would it take to have a 50-50 chance that at least two of them share the same birthday?</p>
-</section>
-<section id="birthday-problem-1" class="slide level2">
-<h2><a href="https://en.wikipedia.org/wiki/Birthday_problem">Birthday problem</a></h2>
-<p>Another way to describe it:</p>
-<p>There are <span class="math inline">\(n\)</span> people at a party.</p>
-<p>How likely at least two of them share their birthday?</p>
-<div class="fragment">
-<p>Assumptions</p>
+</section></section>
+<section>
+<section id="section-3" class="title-slide slide level1 center">
+<h1></h1>
+
+<img data-src="images/montyhall.png" class="r-stretch"></section>
+<section id="drunk-monty" class="slide level2">
+<h2>Drunk Monty</h2>
 <ul>
-<li class="fragment">Everyone has an equal probability of being born on any day in the year, independent of everyone else.</li>
-<li class="fragment">Ignore February 29th from leap years.</li>
+<li class="fragment">Assume one night Monty is drunk before the show.</li>
+<li class="fragment">You are playing the game and chose a door.<br>
+</li>
+<li class="fragment">Monty forgets which door has the car, and randomly opens an unchosen door.</li>
+<li class="fragment">He opens one of the unchosen doors, and luckily, there is no car behind it.</li>
+<li class="fragment">Now, should you switch?</li>
 </ul>
-</div>
-</section>
-<section id="section-3" class="slide level2">
-<h2></h2>
-<p><span class="math display">\[
-\text{P(sharing birthday)}=1-\frac{365!}{(365-n)!\cdot 365^n}
-\]</span></p>
-<div class="fragment">
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="im">from</span> math <span class="im">import</span> factorial</span>
-<span id="cb2-2"><a></a></span>
-<span id="cb2-3"><a></a>n <span class="op">=</span> <span class="dv">40</span>  <span class="co"># number of people at a party</span></span>
-<span id="cb2-4"><a></a></span>
-<span id="cb2-5"><a></a>p <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> factorial(<span class="dv">365</span>) <span class="op">/</span> factorial(<span class="dv">365</span><span class="op">-</span>n) <span class="op">/</span> (<span class="dv">365</span><span class="op">**</span>n)</span>
-<span id="cb2-6"><a></a></span>
-<span id="cb2-7"><a></a><span class="bu">print</span>(p)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<p><br> <a href="https://en.wikipedia.org/wiki/Birthday_attack">Birthday attack</a></p>
-</div>
-</section>
-<section id="birthday-problem-2" class="slide level2">
-<h2><a href="https://en.wikipedia.org/wiki/Birthday_problem">Birthday problem</a></h2>
-<p><br></p>
-<p>You walked into a party with <span class="math inline">\(n\)</span> people.</p>
-<p>How likely someone shares the birthday <strong>with you</strong>?</p>
 
 
 </section></section>
