@@ -2248,7 +2248,7 @@
     "href": "lecture-slides/ch02/09-total-probability-theorem.html#exercise-1",
     "title": "2.9 Total probability theorem",
     "section": "Exercise",
-    "text": "Exercise\nYou enter a tennis tournament.\nYour probability of winning a game is\n\n0.3 against .green[half of] the (stronger) players\n0.5 against .green[a quarter of] the (similar-level) players\n0.6 against .green[a quarter of] the (weaker) players\n\n\nYou play a game against a randomly chosen opponent.\nWhat is the probability of you winning the game?",
+    "text": "Exercise\nYou enter a tennis tournament.\nYour probability of winning a game is\n\n0.3 against half of the (stronger) players\n0.5 against a quarter of the (similar-level) players\n0.6 against a quarter of the (weaker) players\n\n\nYou play a game against a randomly chosen opponent.\nWhat is the probability of you winning the game?",
     "crumbs": [
       "Home",
       "Lecture slides",
