@@ -4,7 +4,7 @@
     "href": "lecture-slides/ch02/10-bayes.html#bayes-rule",
     "title": "2.10 Bayes’ rule",
     "section": "Bayes’ rule",
-    "text": "Bayes’ rule\nLet \\(A_1, A_2, \\cdots, A_n\\) form a partition of sample space \\(\\Omega\\).\nThen, for any event \\(B\\) such that \\(\\text{P}(B)&gt;0\\), we have\n\\[\n\\text{P}(A_i \\mid B) = \\frac{\\text{P}(A_i) \\cdot \\text{P}(B \\mid A_i)}{\\text{P}(B)}\n\\]\n\\[\\text{where}\\]\n\\[\n\\small{\\text{P}(B) = \\text{P}(A_1) \\cdot \\text{P}(B | A_1) + \\text{P}(A_2) \\cdot \\text{P}(B | A_2) +  \\cdots + \\text{P}(A_n) \\cdot \\text{P}(B | A_n)}\n\\]",
+    "text": "Bayes’ rule\nLet \\(A_1, A_2, \\cdots, A_n\\) form a partition of sample space \\(\\Omega\\).\nThen, for any event \\(B\\) such that \\(\\text{P}(B)&gt;0\\), we have\n\\[\n\\text{P}(A_i \\mid B) = \\frac{\\text{P}(A_i) \\cdot \\text{P}(B \\mid A_i)}{\\text{P}(B)}\n\\]\n\\[\\text{where}\\]\n\\[\n\\small{\\text{P}(B) = \\text{P}(A_1) \\cdot \\text{P}(B \\mid A_1) +  \\cdots + \\text{P}(A_n) \\cdot \\text{P}(B \\mid A_n)}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -2166,11 +2166,11 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/09-total-probability-theorem.html#section",
-    "href": "lecture-slides/ch02/09-total-probability-theorem.html#section",
+    "objectID": "lecture-slides/ch02/09-total-probability-theorem.html#partition-of-sample-space-omega",
+    "href": "lecture-slides/ch02/09-total-probability-theorem.html#partition-of-sample-space-omega",
     "title": "2.9 Total probability theorem",
-    "section": "",
-    "text": "If a collection of events are\n\ndisjoint (i.e., mutually exclusive)\ntheir union is \\(\\Omega\\) (i.e., collectively exhaustive)\n\n\nthen this collection of events is called a partition of \\(\\Omega\\).\n\n\nThis means any outcome in an experiment is included in one and exactly one of the partitioning events.",
+    "section": "Partition of sample space \\(\\Omega\\)",
+    "text": "Partition of sample space \\(\\Omega\\)\n\nIf a collection of events are\n\ndisjoint (i.e., mutually exclusive)\ntheir union is \\(\\Omega\\) (i.e., collectively exhaustive)\n\nthen this collection of events is called a partition of \\(\\Omega\\).\nThis means any outcome in an experiment is included in one and only one of the partitioning events.",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -2179,8 +2179,8 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/09-total-probability-theorem.html#partition-of-sample-space-omega",
-    "href": "lecture-slides/ch02/09-total-probability-theorem.html#partition-of-sample-space-omega",
+    "objectID": "lecture-slides/ch02/09-total-probability-theorem.html#partition-of-sample-space-omega-1",
+    "href": "lecture-slides/ch02/09-total-probability-theorem.html#partition-of-sample-space-omega-1",
     "title": "2.9 Total probability theorem",
     "section": "Partition of sample space \\(\\Omega\\)",
     "text": "Partition of sample space \\(\\Omega\\)\n\n\n\n\n\n\n\\(A\\) and \\(A^c\\) always form a partition of sample space \\(\\Omega\\).",
@@ -2231,8 +2231,8 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/09-total-probability-theorem.html#section-1",
-    "href": "lecture-slides/ch02/09-total-probability-theorem.html#section-1",
+    "objectID": "lecture-slides/ch02/09-total-probability-theorem.html#section",
+    "href": "lecture-slides/ch02/09-total-probability-theorem.html#section",
     "title": "2.9 Total probability theorem",
     "section": "",
     "text": "\\[\n\\small{\n\\begin{aligned}\nB =\\;& (A_1 \\cap B) \\cup (A_2 \\cap B) \\cup \\cdots \\cup (A_n \\cap B) \\\\\n\\\\\n\\text{P}(B) =\\;& \\text{P}\\big((A_1 \\cap B) \\cup (A_2 \\cap B) \\cup \\cdots \\cup (A_n \\cap B)\\big)\\\\\n=\\;& \\text{P}(A_1 \\cap B) + \\text{P}(A_2 \\cap B) + \\cdots + \\text{P}(A_n \\cap B)\\\\\n=\\;& \\text{P}(A_1)\\text{P}(B \\mid A_1) + \\text{P}(A_2)\\text{P}(B \\mid A_2) + \\cdots + \\text{P}(A_n)\\text{P}(B \\mid A_n) \\\\\n\\end{aligned}\n}\n\\]\n\n\nDivide and conquer",
@@ -2288,19 +2288,6 @@
     "title": "2.9 Total probability theorem",
     "section": "Assumptions",
     "text": "Assumptions\n\nMonty knows which room has the car.\nHe always opens one of the two unchosen doors that does not have the car.\nIf both unchosen doors do not have the car (i.e., your first choice is correct), Monty opens one of the two doors at random.\nYou want the car, not the goat 🐐.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.9 Total probability theorem"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/09-total-probability-theorem.html#drunk-monty",
-    "href": "lecture-slides/ch02/09-total-probability-theorem.html#drunk-monty",
-    "title": "2.9 Total probability theorem",
-    "section": "Drunk Monty",
-    "text": "Drunk Monty\n\nAssume one night Monty is drunk before the show.\nYou are playing the game and chose a door.\n\nMonty forgets which door has the car, and randomly opens an unchosen door.\nHe opens one of the unchosen doors, and luckily, there is no car behind it.\nNow, should you switch?",
     "crumbs": [
       "Home",
       "Lecture slides",
