@@ -10,7 +10,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.40">
 
-  <title>IMSE 317 – 2.9 Total probability theorem</title>
+  <title>IMSE 317 – 3.2 Probability mass function (PMF)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -127,173 +127,206 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">2.9 Total probability theorem</h1>
+  <h1 class="title">3.2 Probability mass function (PMF)</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="partition-of-sample-space-omega" class="slide level2">
-<h2>Partition of sample space <span class="math inline">\(\Omega\)</span></h2>
+<section id="some-notations" class="slide level2">
+<h2>Some notations</h2>
+<p>By convention, we use</p>
 <ul>
-<li class="fragment">If a collection of events are
-<ul>
-<li class="fragment">disjoint (i.e., <a href="https://en.wikipedia.org/wiki/Mutual_exclusivity">mutually exclusive</a>)</li>
-<li class="fragment">their union is <span class="math inline">\(\Omega\)</span> (i.e., <a href="https://en.wikipedia.org/wiki/Collectively_exhaustive_events">collectively exhaustive</a>)</li>
-</ul></li>
-<li class="fragment">then this collection of events is called a <strong>partition of <span class="math inline">\(\Omega\)</span></strong>.</li>
-<li class="fragment">This means any outcome in an experiment is included in <strong>one and only one</strong> of the partitioning events.</li>
+<li class="fragment">upper case letters (e.g., <span class="math inline">\(X\)</span>) to denote RV’s.</li>
+<li class="fragment">lower case letters (e.g., <span class="math inline">\(x\)</span>) to denote any specific value that a RV can take.</li>
 </ul>
 <div class="fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/partition.png" class="quarto-figure quarto-figure-center" height="150"></p>
-</figure>
-</div>
+<p><span class="math inline">\(X=x\)</span>: the event that RV <span class="math inline">\(X\)</span> takes value <span class="math inline">\(x\)</span>.</p>
 </div>
 </section>
-<section id="partition-of-sample-space-omega-1" class="slide level2">
-<h2>Partition of sample space <span class="math inline">\(\Omega\)</span></h2>
-<p><br></p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/venn-compliment.png" class="quarto-figure quarto-figure-center" height="300"></p>
-</figure>
-</div>
-<p><span class="math inline">\(A\)</span> and <span class="math inline">\(A^c\)</span> always form a partition of sample space <span class="math inline">\(\Omega\)</span>.</p>
-</section>
-<section id="total-probability-theorem" class="slide level2">
-<h2>Total probability theorem</h2>
-<p>Let <span class="math inline">\(A_1, A_2, \cdots, A_n\)</span> form a partition of sample space <span class="math inline">\(\Omega\)</span>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/partition-4.png" class="quarto-figure quarto-figure-center" height="120"></p>
-</figure>
-</div>
-<p>Then, for any event <span class="math inline">\(B\)</span>, we have</p>
+<section id="probability-mass-function-pmf" class="slide level2">
+<h2><a href="https://en.wikipedia.org/wiki/Probability_mass_function">Probability Mass Function (PMF)</a></h2>
+<p>The probability mass function of a discrete RV <span class="math inline">\(X\)</span> is defined by:</p>
 <p><span class="math display">\[
-B = (A_1 \cap B) \cup (A_2 \cap B) \cup \cdots \cup (A_n \cap B)
+\begin{aligned}
+p_X(x) =&amp; \; \text{P}(X=x) \\
+=&amp; \; \text{P}(\text{all outcomes in $\Omega$ that give rise to $X=x$)} \\
+\text{for all $x$.}&amp; \\
+\end{aligned}
+\]</span></p>
+
+<img data-src="images/pmf-def.png" class="r-stretch"></section>
+<section id="example" class="slide level2">
+<h2>Example</h2>
+<p><span class="math inline">\(X\)</span>: Roll a die and record the number</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/rv-dice.png" class="quarto-figure quarto-figure-center" height="200"></p>
+</figure>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+\begin{aligned}
+p_X(1) &amp;= \text{P}(X=1)= \text{P}(⚀)=1/6 \\
+p_X(2) &amp;= \text{P}(X=2)= \text{P}(⚁)=1/6 \\
+&amp;\cdots \\
+p_X(6) &amp;= \text{P}(X=6)= \text{P}(⚅)=1/6 \\
+\end{aligned}
+\]</span></p>
+</div>
+</section>
+<section id="example-contd" class="slide level2">
+<h2>Example (cont’d)</h2>
+<p>More compactly, we can write the PMF as</p>
+<p><span class="math display">\[p_X(x) =
+\begin{cases}
+    1/6, &amp; \text{if } x = 1, 2, \cdots, 6, \\
+    0,              &amp; \text{otherwise.}
+\end{cases}
 \]</span></p>
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/partition-total-prob.png" class="quarto-figure quarto-figure-center" height="120"></p>
+<p><img data-src="images/pmf-1die.png" class="quarto-figure quarto-figure-center" height="300"></p>
 </figure>
 </div>
+</div>
+</section>
+<section id="find-the-pmf-of-x" class="slide level2">
+<h2>Find the PMF of <span class="math inline">\(X\)</span></h2>
+<p><span class="math inline">\(X\)</span>: Toss a coin twice and record the number of heads.</p>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/samplespace-2tosses.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="find-the-pmf-of-x-1" class="slide level2">
+<h2>Find the PMF of <span class="math inline">\(X\)</span></h2>
+<p><span class="math inline">\(X\)</span>: Toss a coin twice and record the number of heads.</p>
+<p><span class="math display">\[p_X(x) =
+\begin{cases}
+    1/4, &amp; \text{if $x = 0$ or 2,} \\
+    1/2, &amp; \text{if $x = 1$,} \\
+    0,              &amp; \text{otherwise.}
+\end{cases}
+\]</span></p>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/pmf-binomial-n2.png" class="quarto-figure quarto-figure-center" height="300"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="find-the-pmf-of-x-2" class="slide level2">
+<h2>Find the PMF of <span class="math inline">\(X\)</span></h2>
+<p><span class="math inline">\(X\)</span>: Roll a pair of dice 🎲 🎲 and record the max roll.</p>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/samplespace-2dice.png" class="quarto-figure quarto-figure-center" height="500"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="find-the-pmf-of-x-3" class="slide level2">
+<h2>Find the PMF of <span class="math inline">\(X\)</span></h2>
+<p><span class="math inline">\(X\)</span>: Roll a pair of dice and record the maximum roll.</p>
+
+<img data-src="images/pmf-2dice-maxroll.png" class="r-stretch"></section>
+<section id="procedure-of-finding-the-pmf-of-a-rv" class="slide level2">
+<h2>Procedure of finding the PMF of a RV</h2>
+<p><span class="math display">\[
+\begin{aligned}
+p_X(x) =&amp; \; \text{P}(X=x) \\
+=&amp; \; \text{P}(\text{all outcomes in $\Omega$ that give rise to $X=x$}) \\
+\text{for all $x$.}&amp; \\
+\end{aligned}
+\]</span></p>
+<div class="fragment">
+<ol type="1">
+<li class="fragment">List all possible values of <span class="math inline">\(x\)</span> that the RV <span class="math inline">\(X\)</span> can take.</li>
+<li class="fragment">For each <span class="math inline">\(x\)</span>,
+<ul>
+<li class="fragment">collect all the possible outcomes that give rise to the event <span class="math inline">\(\{X=x\}\)</span></li>
+<li class="fragment">then add their probabilities to obtain <span class="math inline">\(p_X(x)\)</span></li>
+</ul></li>
+</ol>
+</div>
+</section>
+<section id="properties-of-pmf" class="slide level2">
+<h2>Properties of PMF</h2>
+<p>For any RV <span class="math inline">\(X\)</span></p>
+<p><span class="math display">\[p_X(x) \geq 0, \;\;\;\; \text{for any $x$.}\]</span></p>
+<div class="fragment">
+<p>For any RV <span class="math inline">\(X\)</span></p>
+<p><span class="math display">\[\sum_x p_X(x) = 1\]</span></p>
+<p><span class="math display">\[\text{where $x$ ranges over all possible values of $X$.}\]</span></p>
+</div>
+</section>
+<section id="functions-of-random-variables" class="slide level2">
+<h2>Functions of random variables</h2>
+
+<img data-src="images/function-rv-2.png" class="r-stretch"><div class="fragment">
+<p><span class="math display">\[\large{p_Y(y)=\sum_{\\{x|g(x)=y\\}}p_X(x)}\]</span></p>
 </div>
 </section>
 <section id="exercise" class="slide level2">
 <h2>Exercise</h2>
-<ul>
-<li class="fragment">Your academic department offers
-<ul>
-<li class="fragment">8 lower level courses <span class="math inline">\(L_1, L_2, \cdots, L_8\)</span></li>
-<li class="fragment">10 higher level courses <span class="math inline">\(H_1, H_2, \cdots, H_{10}\)</span></li>
-</ul></li>
-<li class="fragment">A valid curriculum consists of
-<ul>
-<li class="fragment">4 lower level courses</li>
-<li class="fragment">3 higher level courses</li>
-</ul></li>
-<li class="fragment">How many different curricula are possible?</li>
-</ul>
-</section>
-<section id="exercise-contd" class="slide level2">
-<h2>Exercise (cont’d)</h2>
-<div>
-<ul>
-<li>Your academic department offers
-<ul>
-<li>8 lower level courses <span class="math inline">\(L_1, L_2, \cdots, L_8\)</span></li>
-<li>10 higher level courses <span class="math inline">\(H_1, H_2, \cdots, H_{10}\)</span></li>
-</ul></li>
-<li>A valid curriculum consists of
-<ul>
-<li>4 lower level courses</li>
-<li>3 higher level courses</li>
-</ul></li>
-</ul>
+<p>RV <span class="math inline">\(X\)</span> has the following PMF:</p>
+<p><span class="math display">\[p_X(x) =
+\begin{cases}
+    1/5, &amp; \text{if $x = -2, -1, 0, 1, 2$,} \\
+    0,              &amp; \text{otherwise.}
+\end{cases}
+\]</span></p>
+<div class="fragment">
+<p>RV <span class="math inline">\(Y\)</span> is defined as</p>
+<p><span class="math display">\[Y=|X|\]</span></p>
+<p>What is the PMF of <span class="math inline">\(Y\)</span>?</p>
 </div>
-<p>In fact, <span class="math inline">\(H_1, H_2, \cdots, H_5\)</span> have <span class="math inline">\(L_1\)</span> as a prerequisite.</p>
-<p>Now how many different curricula are possible?</p>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
+<section id="section" class="title-slide slide level1 center">
+<h1></h1>
+<p><span class="math display">\[p_X(x) =
+\begin{cases}
+    1/5, &amp; \text{if $x = -2, -1, 0, 1, 2$,} \\
+    0,              &amp; \text{otherwise.}
+\end{cases}
+\]</span></p>
+<p><span class="math display">\[Y=|X|\]</span></p>
+<div class="fragment">
+<p><span class="math display">\[p_Y(y)=\sum_{\\{x|g(x)=y\\}}p_X(x)\]</span></p>
+</div>
+<div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/partition-total-prob.png" class="quarto-figure quarto-figure-center" height="150"></p>
+<p><img data-src="images/function-rv-3.png" class="quarto-figure quarto-figure-center" height="200"></p>
 </figure>
 </div>
-<div class="fragment">
-<p><span class="math display">\[
-\small{
-\begin{aligned}
-B =\;&amp; (A_1 \cap B) \cup (A_2 \cap B) \cup \cdots \cup (A_n \cap B) \\
-\\
-\text{P}(B) =\;&amp; \text{P}\big((A_1 \cap B) \cup (A_2 \cap B) \cup \cdots \cup (A_n \cap B)\big)\\
-=\;&amp; \text{P}(A_1 \cap B) + \text{P}(A_2 \cap B) + \cdots + \text{P}(A_n \cap B)\\
-=\;&amp; \text{P}(A_1)\text{P}(B \mid A_1) + \text{P}(A_2)\text{P}(B \mid A_2) + \cdots + \text{P}(A_n)\text{P}(B \mid A_n) \\
-\end{aligned}
-}
-\]</span></p>
-</div>
-<div class="fragment">
-<p>Divide and conquer</p>
-<!-- #
-
-![](images/tree-total-prob.png){fig-align="center" height="300"}
-
-![](images/partition-total-prob.png){fig-align="center" height="200"} -->
 </div>
 </section>
-<section id="exercise-1" class="slide level2">
-<h2>Exercise</h2>
-<p>You enter a tennis tournament.</p>
-<p>Your probability of winning a game is</p>
-<ul>
-<li class="fragment">0.3 against a stronger player (half of the field)</li>
-<li class="fragment">0.5 against a similar-level player (a quarter of the field)</li>
-<li class="fragment">0.6 against a weaker player (a quarter of the field)</li>
-</ul>
-<div class="fragment">
-<p>You play a game against a randomly chosen opponent.</p>
-<p>What is the probability of you winning the game?</p>
-</div>
-</section>
-<section id="the-monty-hall-problem" class="slide level2">
-<h2>The Monty Hall problem</h2>
 
-<img data-src="images/montyhall.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section>
 <section id="section-1" class="title-slide slide level1 center">
 <h1></h1>
-<div style="text-align: center;">
-<iframe width="750" height="500" src="https://www.youtube.com/embed/cXqDIFUB7YU" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/function-rv-3.png" class="quarto-figure quarto-figure-center" height="200"></p>
+</figure>
 </div>
+<p><span class="math display">\[p_Y(y) =
+\begin{cases}
+    2/5, &amp; \text{if $y = 1, 2$,} \\
+    1/5, &amp; \text{if $y = 0$,} \\
+    0,              &amp; \text{otherwise.}
+\end{cases}
+\]</span></p>
+
+
 </section>
-<section id="assumptions" class="slide level2">
-<h2>Assumptions</h2>
-<ul>
-<li class="fragment">Monty knows which room has the car.</li>
-<li class="fragment">He always opens one of the two unchosen doors that does not have the car.</li>
-<li class="fragment">If both unchosen doors do not have the car (i.e., your first choice is correct), Monty opens one of the two doors at random.</li>
-<li class="fragment">You want the car, not the goat 🐐.</li>
-</ul>
-</section></section>
-<section id="section-2" class="title-slide slide level1 center">
-<h1></h1>
-
-<!-- ## Drunk Monty
-
-- Assume one night Monty is drunk before the show. 
-- You are playing the game and chose a door.  
-- Monty forgets which door has the car, and randomly opens an unchosen door. 
-- He opens one of the unchosen doors, and luckily, there is no car behind it. 
-- Now, should you switch? -->
-
-
-<img data-src="images/montyhall.png" class="r-stretch"></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
