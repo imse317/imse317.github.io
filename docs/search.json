@@ -2528,5 +2528,18 @@
       "Chapter 2. Probability",
       "2.9 Total probability theorem"
     ]
+  },
+  {
+    "objectID": "lecture-slides/ch02/09-total-probability-theorem.html#simulating-a-single-game",
+    "href": "lecture-slides/ch02/09-total-probability-theorem.html#simulating-a-single-game",
+    "title": "2.9 Total probability theorem",
+    "section": "Simulating a single game",
+    "text": "Simulating a single game\ndef monty(switch=False):\n  # Generate a random door number that has the car\n  import random\n  car_door = random.randint(1, 3) \n\n  # Get keyboard input for a player's initial pick\n  init_pick = int(input('Which door would you pick?'))\n  \n  if switch:\n    if init_pick == car_door:\n      print(f'You lose! The car is behind door {car_door} but you switched.')\n    else:\n      print(f'You win! You switched to door {car_door} which has the car.')\n  else:\n    if init_pick == car_door:\n      print(f'You win! The car is indeed behind door {car_door}.')\n    else:\n      print(f'You lose! The car is behind door {car_door}')",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 2. Probability",
+      "2.9 Total probability theorem"
+    ]
   }
 ]
