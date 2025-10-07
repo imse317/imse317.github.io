@@ -10,7 +10,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.40">
 
-  <title>IMSE 317 – 3.1 Random variables</title>
+  <title>IMSE 317 – 3.3 Cumulative Distribution Function</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -127,110 +127,160 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">3.1 Random variables</h1>
+  <h1 class="title">3.3 Cumulative Distribution Function</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="random-variables-rvs" class="slide level2">
-<h2>Random variables (RVs)</h2>
-<p>For a given sample space <span class="math inline">\(\Omega\)</span> of some experiment, a random variable is defined as <strong>a function that assigns a number to each outcome</strong>.</p>
+<section id="cumulative-distribution-function-cdf" class="slide level2">
+<h2><a href="https://en.wikipedia.org/wiki/Cumulative_distribution_function">Cumulative Distribution Function (CDF)</a></h2>
+<p>The CDF of a RV <span class="math inline">\(X\)</span> is defined by</p>
+<p><span class="math display">\[F_X(x)=\text{P}(X \leq x), \;\text{for all $x$.}\]</span></p>
+<ul>
+<li class="fragment">It is the probability that the value of <span class="math inline">\(X\)</span> is <strong>at most</strong> <span class="math inline">\(x\)</span>.</li>
+<li class="fragment">Loosely speaking, the CDF accumulates the probability <strong>up to</strong> the value <span class="math inline">\(x\)</span>.</li>
+<li class="fragment">If RV <span class="math inline">\(X\)</span> is discrete, <span class="math display">\[F_X(x)=\text{P}(X \leq x)=\sum_{k \leq x} p_X(k)\]</span></li>
+</ul>
+</section>
+<section id="finding-cdf" class="slide level2">
+<h2>Finding CDF</h2>
+<ul>
+<li class="fragment"><span class="math inline">\(X\)</span>: Roll a die 🎲 and record the number</li>
+<li class="fragment">What is the CDF of <span class="math inline">\(X\)</span>?</li>
+</ul>
+<div class="fragment">
+<p><span class="math display">\[F_X(x)=\text{P}(X \leq x), \;\text{for all $x$.}\]</span></p>
+</div>
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/rv-def.png" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="images/pmf-roll1die.png" class="quarto-figure quarto-figure-center" height="250"></p>
 </figure>
 </div>
 </div>
 </section>
-<section id="example" class="slide level2">
-<h2>Example</h2>
-<p>Random variable <span class="math inline">\(X\)</span>:</p>
-<p>Roll a die 🎲 and record the roll.</p>
+<section>
+<section id="section" class="title-slide slide level1 center">
+<h1></h1>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/cdf-roll1die.png" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+<div class="fragment">
+<p>For discrete RVs the CDF <span class="math inline">\(F_X(x)\)</span> is a <strong>step function</strong> of <span class="math inline">\(x\)</span>.</p>
+</div>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/cdf-roll1die.png" class="quarto-figure quarto-figure-center" height="200"></p>
+</figure>
+</div>
+<p><span class="math display">\[
+\small{
+F_X(x) =
+\begin{cases}
+    0, &amp; \text{if $ x &lt; 1$,} \\
+    1/6, &amp; \text{if } 1 \leq x &lt; 2, \\
+    2/6, &amp; \text{if } 2 \leq x &lt; 3, \\
+    3/6, &amp; \text{if } 3 \leq x &lt; 4, \\
+    4/6, &amp; \text{if } 4 \leq x &lt; 5, \\
+    5/6, &amp; \text{if } 5 \leq x &lt; 6, \\
+    1,   &amp; \text{if } x \geq 6. \\
+\end{cases}
+}
+\]</span></p>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<ul>
+<li class="fragment"><span class="math inline">\(X\)</span>: Toss a coin twice and record the number of heads.</li>
+<li class="fragment">What is the CDF of <span class="math inline">\(X\)</span>?</li>
+</ul>
+<div class="fragment">
+<p><span class="math display">\[
+\small{
+p_X(x) =
+\begin{cases}
+    0.25, &amp; \text{if $x = 0$ or 2}, \\
+    0.5, &amp; \text{if $x = 1$,} \\
+    0,              &amp; \text{otherwise.}
+\end{cases}
+}
+\]</span></p>
+</div>
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/rv-dice.png" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="images/cdf-binomial-n2.png" class="quarto-figure quarto-figure-center" height="250"></p>
 </figure>
 </div>
 </div>
+<div class="fragment">
+<p><span class="math display">\[
+\small{
+F_X(x) =
+\begin{cases}
+    0, &amp; \text{if $x &lt; 0$,} \\
+    0.25, &amp; \text{if } 0 \leq x &lt; 1, \\
+    0.75, &amp; \text{if } 1 \leq x &lt; 2, \\
+    1,   &amp; \text{if } x \geq 2. \\
+\end{cases}
+}
+\]</span></p>
+</div>
 </section>
-<section id="example-1" class="slide level2">
-<h2>Example</h2>
-<p>Random variable <span class="math inline">\(X\)</span>:</p>
-<p>Roll a pair of dice 🎲 🎲 and record the maximum roll.</p>
+<section id="section-3" class="slide level2">
+<h2></h2>
+<p>If <span class="math inline">\(X\)</span> only takes integer values, its PMF can be obtained from CDF by <strong>differencing</strong>.</p>
+<p><span class="math display">\[
+\small{
+p_X(k)=\text{P}(X \leq k) - \text{P}(X \leq k-1) = F_X(k) - F_X(k-1)\\
+}
+\]</span></p>
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/rv-2dice.png" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="images/cdf-binomial-n2.png" class="quarto-figure quarto-figure-center" height="150"></p>
 </figure>
 </div>
 </div>
-</section>
-<section id="is-it-a-random-variable" class="slide level2">
-<h2>Is it a random variable?</h2>
-<p>Roll a pair of dice 🎲 🎲</p>
-<ul>
-<li class="fragment"><span class="math inline">\(X\)</span>: the sum of the two rolls</li>
-<li class="fragment"><span class="math inline">\(Y\)</span>: the number of doubles we get</li>
-<li class="fragment"><span class="math inline">\(Z\)</span>: the second roll raised to the square (e.g., <span class="math inline">\(3^2=9\)</span>)</li>
-<li class="fragment"><span class="math inline">\(W\)</span>: the sequence of two rolls (e.g., 5 followed by 3)</li>
-</ul>
-<aside class="notes">
-<p>The sequence of two rolls is .red[not] a random variable because it is not one number.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="discrete-random-variables" class="slide level2">
-<h2>Discrete random variables</h2>
-<p>The variable takes finite or countably infinite values.</p>
-<ul>
-<li class="fragment">Toss a coin 4 times, the number of heads</li>
-<li class="fragment">Roll a die 🎲 and record the number it lands on</li>
-<li class="fragment">The number of orders that a shop receives in a day</li>
-</ul>
-</section>
-<section id="continuous-random-variables" class="slide level2">
-<h2>Continuous random variables</h2>
-<p>The variable takes infinitely many, uncountable values.</p>
-<ul>
-<li class="fragment">The speed of riding a bicycle</li>
-<li class="fragment">The water level of a dam</li>
-<li class="fragment">The time when customers arrive at a shop</li>
-</ul>
 <div class="fragment">
-<p>Rule of thumb:</p>
-<ul>
-<li class="fragment">If you can <strong>count</strong> it, it is discrete.</li>
-<li class="fragment">If you need to <strong>measure</strong> it, it is continuous.</li>
-</ul>
+<p><span class="math display">\[
+\small{
+\begin{aligned}
+p_X(0)&amp;=F_X(0)-F_X(-1)=0.25-0=0.25 \\
+p_X(1)&amp;=F_X(1)-F_X(0)=0.75-0.25=0.5 \\
+p_X(2)&amp;=F_X(2)-F_X(1)=1-0.75=0.25 \\
+\end{aligned}
+}
+\]</span></p>
 </div>
 </section>
-<section id="functions-of-random-variables" class="slide level2">
-<h2>Functions of random variables</h2>
-<p><span class="math inline">\(Y\)</span> is a function of a random variable <span class="math inline">\(X\)</span></p>
-<p><span class="math display">\[Y=g(X)\]</span></p>
-<p>Is <span class="math inline">\(Y\)</span> a random variable?</p>
+<section id="properties-of-cdf" class="slide level2">
+<h2>Properties of CDF</h2>
+<p>A CDF is <strong>nondecreasing</strong>.</p>
+<p><span class="math display">\[
+% \begin{aligned}
+\text{If } a \leq b, \text{then } F_X(a) \leq F_X(b).
+% \\
+% \text{then } F_X(a) &amp;\leq F_X(b).
+% \end{aligned}
+\]</span></p>
 <div class="fragment">
+<p><span class="math inline">\(F_X(x)\)</span> tends to <span class="math inline">\(0\)</span> as <span class="math inline">\(x\rightarrow -\infty\)</span>, and to <span class="math inline">\(1\)</span> as <span class="math inline">\(x \rightarrow +\infty\)</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/function-rv-2.png" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="images/cdf-example.png" class="quarto-figure quarto-figure-center" height="300"></p>
 </figure>
 </div>
 
 
 </div>
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

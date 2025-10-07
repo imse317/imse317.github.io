@@ -190,7 +190,7 @@
 <p><span class="math display">\[
 \text{P}(A \mid B^c)=\text{P}(A)
 \]</span></p>
-<p>See comment for proof.</p>
+<!-- See comment for proof. -->
 <aside class="notes">
 <p>Proof:</p>
 <p><span class="math display">\[
@@ -201,7 +201,7 @@
 \\
 =&amp; \text{P}(A) \cdot (1- \text{P}(B)) \\
 \\
-=&amp;\text{P}(A) \cdot \text{P}(B)
+=&amp;\text{P}(A) \cdot \text{P}(B^c)
 \end{aligned}
 \]</span></p>
 <style type="text/css">
@@ -221,10 +221,18 @@
 <h2>Are two disjoint events independent?</h2>
 <div class="fragment">
 <p><br></p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/venn-A-disjoint-B.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
+<!-- ![](images/venn-A-disjoint-B.png){fig-align="center"} -->
+<div style="text-align: center;">
+<svg width="350" height="300" viewbox="-10 -10 300 300">
+
+  <rect x="0" y="0" width="300" height="180" fill="white" stroke="black" ,="" stroke-width="3"></rect>
+  <circle id="circle_a" cx="70" cy="90" r="50" fill="red" fill-opacity="0.4" stroke="black" ,="" stroke-width="3"></circle>
+  <circle id="circle_b" cx="210" cy="90" r="70" fill="green" fill-opacity="0.4" stroke="black" ,="" stroke-width="3"></circle>
+
+  <foreignobject x="90" y="70" width="40" height="40"><span style="font-size:20pt">\(A\)</span></foreignobject>
+  <foreignobject x="230" y="70" width="40" height="40"><span style="font-size:20pt">\(B\)</span></foreignobject>
+  <foreignobject x="45" y="0" width="40" height="40"><span style="font-size:20pt">\(\Omega\)</span></foreignobject>
+</svg>
 </div>
 </div>
 </section>
@@ -258,7 +266,7 @@
 </section>
 <section id="section-3" class="slide level2">
 <h2></h2>
-<p>We say events <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(C\)</span> are pairwise independent if</p>
+<p>We say events <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(C\)</span> are <strong>pairwise</strong> independent if</p>
 <ul>
 <li class="fragment"><span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent. &nbsp;&nbsp; <span class="math inline">\(\text{P}(A \cap B)=\text{P}(A)\cdot\text{P}(B)\)</span></li>
 <li class="fragment"><span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span> are independent. &nbsp;&nbsp; <span class="math inline">\(\text{P}(B \cap C)=\text{P}(B)\cdot\text{P}(C)\)</span></li>
@@ -271,13 +279,16 @@
 \]</span> <!-- $$\require{color}\colorbox{yellow}{$\text{P}(A \cap B \cap C) \stackrel{?}{=} \text{P}(A)\cdot\text{P}(B)\cdot\text{P}(C)$}$$ --></p>
 </div>
 </section>
-<section id="example-toss-a-coin-twice" class="slide level2">
-<h2>Example: Toss a coin twice</h2>
+<section id="toss-a-coin-twice" class="slide level2">
+<h2>Toss a coin twice</h2>
 <ul>
 <li class="fragment"><span class="math inline">\(A\)</span>: first toss is a heads.</li>
 <li class="fragment"><span class="math inline">\(B\)</span>: second toss is a heads.</li>
 <li class="fragment"><span class="math inline">\(C\)</span>: different results from the two tosses.</li>
 </ul>
+<div class="fragment">
+<p>Are these three events pairwise independent?</p>
+</div>
 <div class="fragment">
 <p>Pairwise independence does not imply (mutual) independence.</p>
 </div>
@@ -344,46 +355,33 @@
 <ul>
 <li class="fragment">What is the probability that the A-B connection is up?</li>
 </ul>
-</div>
-</section>
-<section id="section-5" class="slide level2">
-<h2></h2>
-<ul>
-<li class="fragment">How about the following configuration?</li>
-</ul>
-<div class="fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/network-mixed.png" class="quarto-figure quarto-figure-center" height="300"></p>
-</figure>
-</div>
-<ul>
-<li class="fragment">The component failures are independent of each other.</li>
-<li class="fragment"><span class="math inline">\(p_i\)</span>: probability that <span class="math inline">\(i\)</span> is operational (<span class="math inline">\(i=1, 2, \cdots, 6\)</span>).</li>
-</ul>
-<!-- ---
-# A system with $n$ identical components
+<!-- ##
 
-Each component is up with probability $p$, independent of other components. 
+- How about the following configuration?
 
-The system is up if at least $k$ out of the $n$ components are operational. 
+. . .
 
-What is the probability that the system is up? -->
-<!-- ---
+![](images/network-mixed.png){fig-align="center" height="300"}
+
+- The component failures are independent of each other.
+- $p_i$: probability that $i$ is operational ($i=1, 2, \cdots, 6$). -->
+<!-- ## A system with $n$ identical components
+
+- Each component is up with probability $p$, independent of other components. 
+- The system is up if at least $k$ out of the $n$ components are operational. 
+- What is the probability that the system is up?
+
+## 
 
 $A_i$: exact $i$ components are up. $(i=1, 2, \cdots, n)$
 
 $$
 \begin{aligned}
-&\text{P}(\text{at least $k$ components are up}) \\\
-\\\
-=\; &\text{P}(A_k \cup A_{k+1} \cup \cdots \cup A_n) \\\
-\\\
-=\;&\text{P}(A_k) + \text{P}(A_{k+1}) + \cdots + \text{P}(A_n) \\\
-\\\
-=\; &{n \choose k}p^k(1-p)^{n-k} + \cdots + {n \choose n}p^n(1-p)^{n-n} \\\
-\\\
-=\; &\sum_{i=k}^n {n \choose i}p^i(1-p)^{n-i} \\\
+&\text{P}(\text{at least $k$ components are up}) \\
+=&\text{P}(A_k \cup A_{k+1} \cup \cdots \cup A_n) \\
+=&\text{P}(A_k) + \text{P}(A_{k+1}) + \cdots + \text{P}(A_n) \\
+=&{n \choose k}p^k(1-p)^{n-k} + \cdots + {n \choose n}p^n(1-p)^{n-n} \\
+=&\sum_{i=k}^n {n \choose i}p^i(1-p)^{n-i} \\
 \end{aligned}
 $$ -->
 
