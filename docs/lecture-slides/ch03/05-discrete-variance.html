@@ -10,7 +10,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.40">
 
-  <title>IMSE 317 – 3.4 Expected value</title>
+  <title>IMSE 317 – 3.5 Variance</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -127,400 +127,85 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">3.4 Expected value</h1>
+  <h1 class="title">3.5 Variance</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="probability-mass-function-of-a-rv-x" class="slide level2">
-<h2>Probability mass function of a RV <span class="math inline">\(X\)</span></h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/pmf-example.png" class="quarto-figure quarto-figure-center" height="400"></p>
-</figure>
-</div>
-<div class="fragment">
-<p>What is a <strong>single representative</strong> value for <span class="math inline">\(X\)</span>?</p>
-</div>
-</section>
-<section id="expected-value" class="slide level2">
-<h2><a href="https://en.wikipedia.org/wiki/Expected_value">Expected value</a></h2>
-<p>The expected value of a discrete RV <span class="math inline">\(X\)</span> is defined by</p>
-<p><span class="math display">\[
-\text{E}[X]=\sum_x x \cdot p_X(x)
-\]</span></p>
-<div class="fragment">
-<p>It’s the <strong>probability-weighted average</strong> of all values of <span class="math inline">\(X\)</span>.</p>
-</div>
-<div class="fragment">
-<div class="columns">
-<div class="column" style="width:30%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/pmf-example.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div><div class="column" style="width:70%;">
-<p><br> It measures the <strong>center</strong> of the distribution.</p>
-</div></div>
-</div>
-</section>
-<section id="what-is-the-expected-value-of-x" class="slide level2">
-<h2>What is the expected value of <span class="math inline">\(X\)</span>?</h2>
-<p><span class="math display">\[
-\small{
-p_X(x) =
-\begin{cases}
-    0.15, &amp; \text{if $x = 1$,} \\
-    0.30, &amp; \text{if $x = 2$,} \\
-    0.10, &amp; \text{if $x = 3$,} \\
-    0.15, &amp; \text{if $x = 4$,} \\
-    0.25, &amp; \text{if $x = 5$,} \\
-    0.05, &amp; \text{if $x = 6$,} \\
-    0,              &amp; \text{otherwise.}
-\end{cases}
-}
-\]</span></p>
-<div class="fragment">
-<p><span class="math display">\[
-\small{
-\begin{aligned}
-\text{E}[X]=&amp;\; 1 \cdot p_X(1) + 2\cdot p_X(2) + \cdots + 5 \cdot p_X(5) + 6 \cdot p_X(6) \\
-=&amp;\; 1 \cdot 0.15 + 2 \cdot 0.30 + \cdots + 5 \cdot 0.25 + 6 \cdot 0.05 \\
-=&amp;\; 3.2 \\
-\end{aligned}
-}
-\]</span></p>
-</div>
-</section>
-<section id="section" class="slide level2">
-<h2></h2>
-<ul>
-<li class="fragment"><span class="math inline">\(X\)</span>: Roll a fair die 🎲 and record the number</li>
-<li class="fragment">What is the expected value of <span class="math inline">\(X\)</span>?</li>
-</ul>
-<div class="fragment">
-<p><span class="math display">\[
-\small{
-p_X(x) =
-\begin{cases}
-    1/6, &amp; \text{if } x = 1, 2, \cdots, 6, \\
-    0,              &amp; \text{otherwise.}
-\end{cases}
-}
-\]</span></p>
-</div>
-<div class="fragment">
-<p><br></p>
-<p><span class="math display">\[
-\begin{aligned}
-\text{E}[X]&amp;=1\cdot\frac{1}{6}+2\cdot\frac{1}{6}+3\cdot\frac{1}{6}+4\cdot\frac{1}{6}+5\cdot\frac{1}{6}+6\cdot\frac{1}{6} \\\
-&amp;=3.5
-\end{aligned}
-\]</span></p>
-</div>
-</section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-<p><span class="math display">\[
-\small{
-p_X(x) =
-\begin{cases}
-    1/6, &amp; \text{if } x = 1, 2, \cdots, 6, \\
-    0,              &amp; \text{otherwise.}
-\end{cases}
-}
-\]</span></p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/pmf-1die.png" class="quarto-figure quarto-figure-center" height="200"></p>
-</figure>
-</div>
-<p><span class="math display">\[
-\text{E}[X]=3.5
-\]</span></p>
-<div class="fragment">
-<p>If the PMF is symmetrical, <span class="math inline">\(\text{E}[X]\)</span> is at the middle point.</p>
-</div>
-</section>
-<section id="exercise" class="slide level2">
-<h2>Exercise</h2>
-<ul>
-<li class="fragment">A lottery ticket offers
-<ul>
-<li class="fragment">1 in 500 chance to win $1,000</li>
-<li class="fragment">1 in 10 chance to win $10</li>
-<li class="fragment">otherwise, you win nothing.</li>
-</ul></li>
-<li class="fragment">If the lottery ticket costs $2 each, should you buy it?</li>
-<li class="fragment"><span class="math inline">\(X\)</span>: The amount of money you win with one ticket.</li>
-<li class="fragment">What is the expected value of <span class="math inline">\(X\)</span>?</li>
-</ul>
-</section>
-<section id="extended-warranty" class="slide level2">
-<h2>Extended Warranty</h2>
-<p><br></p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/extended-warranty.png" class="quarto-figure quarto-figure-center" height="500"></p>
-</figure>
-</div>
-</section>
-<section id="extended-warranty-1" class="slide level2">
-<h2>Extended Warranty</h2>
-<ul>
-<li class="fragment">Assume during the coverage of the extended warranty, the laptop will break with the following probabilities:
-<ul>
-<li class="fragment">Zero times (65%), once (20%), twice (10%), 3 times (5%)</li>
-<li class="fragment">Each break would cost $200 to repair.</li>
-</ul></li>
-<li class="fragment">Should you buy this extended warranty?</li>
-<li class="fragment"><span class="math inline">\(X\)</span>: The amount of money you pay for repair without buying the warranty</li>
-<li class="fragment">What is the expected value of <span class="math inline">\(X\)</span>?</li>
-</ul>
-</section>
-<section id="section-2" class="slide level2">
-<h2></h2>
+<section class="slide level2">
 
-<img data-src="images/oral-roberts.png" class="quarto-figure quarto-figure-center r-stretch"><div class="fragment">
-<p>What is Osifo’s expected points at the free throw line?</p>
-<!-- ---
-# Expected value of .red[a function of a RV]
 
-Let $X$ be a discrete RV with PMF $p_X(x)$
-
-Let $Y=g(X)$
-
-Then, we have
-
-$$
-\begin{aligned}
-&\text{E}[Y]=\sum_y y\cdot\; p_Y(y) \;\;\;\; \color{gray}{\leftarrow\text{by def. of expected value}} \\\
-\\\
-&\text{where} \;\;\; p_Y(y)=\sum_{\\{x|g(x)=y\\}}p_X(x) \\\
-\end{aligned}
-$$ -->
-</div>
-</section>
-<section id="expected-value-of-a-function-of-a-rv" class="slide level2">
-<h2>Expected value of a function of a RV</h2>
-<p><span class="math display">\[
-\small{
-\text{PMF of a RV $X$: }
-p_X(x) =
-\begin{cases}
-    1/5, &amp; \text{if $x = -2, -1, 0, 1, 2$,} \\
-    0,              &amp; \text{otherwise.}
-\end{cases}
-}
-\]</span></p>
-<p>What is the expected value of <span class="math inline">\(Y=|X|\)</span>?</p>
-<div class="fragment">
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/function-rv-3.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div><div class="column" style="width:50%;">
-<p><span class="math display">\[
-\small{
-p_Y(y) =
-\begin{cases}
-    2/5, &amp; \text{if $y = 1, 2$,} \\
-    1/5, &amp; \text{if $y = 0$,} \\
-    0,              &amp; \text{otherwise.}
-\end{cases}
-}
-\]</span></p>
-</div></div>
-</div>
-</section>
-<section id="section-3" class="slide level2">
-<h2></h2>
-<p>Can we get <span class="math inline">\(\text{E}[Y]\)</span> directly using the PMF of <span class="math inline">\(X\)</span>, rather than having to first calculating the PMF of <span class="math inline">\(Y=|X|\)</span>?</p>
-<div class="fragment">
-<p><a href="https://en.wikipedia.org/wiki/Law_of_the_unconscious_statistician">Law Of The Unconscious Statistician (LOTUS)</a></p>
-<!-- $$\text{E}[g(X)]=\sum_x \big[g(x) \cdot p_X(x)\big] $$ -->
-<p><span class="math display">\[
-\text{E}[g(X)]=\sum_x \big[g(x) \cdot p_X(x)\big]
-\]</span></p>
+<img data-src="images/pmf-binomial-n100.png" class="quarto-figure quarto-figure-center r-stretch"><div class="fragment">
+<p>The expected value gives the <strong>center</strong> of an distribution.</p>
+<p><span class="math display">\[\text{E}[X]=50\]</span></p>
 </div>
 <div class="fragment">
-<!-- <br>
-
-.center[![:scale 70%](../images/function-rv-3.png)] -->
-<p><span class="math display">\[p_X(x) =
-\begin{cases}
-    1/5, &amp; \text{if $x = -2, -1, 0, 1, 2$,} \\
-    0,              &amp; \text{otherwise.}
-\end{cases}
-\]</span></p>
-<p><span class="math display">\[Y=|X|\]</span></p>
-<p>What is the expected value of <span class="math inline">\(Y\)</span>?</p>
+<p>How can we measure the <strong>spread</strong> of the distribution?</p>
 </div>
 </section>
-<section>
-<section id="section-4" class="title-slide slide level1 center">
-<h1></h1>
-<!-- ## Proof of LOTUS -->
+<section id="variance" class="slide level2">
+<h2><a href="https://en.wikipedia.org/wiki/Variance">Variance</a></h2>
+<p>The variance of a RV <span class="math inline">\(X\)</span>, denoted by <span class="math inline">\(\text{var}(X)\)</span> or <span class="math inline">\(\sigma_X^2\)</span>, is defined by</p>
 <p><span class="math display">\[
-\small{
-\begin{aligned}
-\text{E}[Y]&amp;=\sum_y \big[y \cdot p_Y(y)\big] \;\;\;\;\;\; \color{gray}{\leftarrow\text{by definition of expected value}} \\
-&amp;=\sum_y \bigg[y \cdot \sum_{\\{x|g(x)=y\\}}p_X(x)\bigg] \\
-&amp;=\sum_y \bigg[\sum_{\\{x|g(x)=y\\}} y \cdot p_X(x) \bigg] \\
-&amp;=\sum_y \bigg[\sum_{\\{x|g(x)=y\\}} g(x) \cdot p_X(x) \bigg]
-=\sum_x \big[g(x) \cdot p_X(x) \big] \\
-\end{aligned}
-}
+\text{var}(X)=\text{E}\bigg[\big(X-\text{E}[X]\big)^2\bigg]
 \]</span></p>
 </section>
-<section id="linearity-of-the-expected-value" class="slide level2">
-<h2>Linearity of the expected value</h2>
+<section id="how-to-compute-the-variance" class="slide level2">
+<h2>How to compute the variance</h2>
+<p><span class="math display">\[
+\text{var}(X)=\text{E}\bigg[\big(X-\text{E}[X]\big)^2\bigg]
+\]</span></p>
+<p><span class="math display">\[
+\text{Let }g(X)=\big(X-\text{E}[X]\big)^2
+\]</span></p>
+<p>By <a href="https://en.wikipedia.org/wiki/Law_of_the_unconscious_statistician">LOTUS</a>, the variance can be calculated as</p>
+<p><span class="math display">\[
+\text{var}(X)=\text{E}\big[g(X)\big]=\sum_x \bigg[\big(x-\text{E}[X]\big)^2 \cdot p_X(x) \bigg]
+\]</span></p>
+</section>
+<section id="standard-deviation" class="slide level2">
+<h2><a href="https://en.wikipedia.org/wiki/Standard_deviation">Standard deviation</a></h2>
+<p>The square root of the variance, denoted by <span class="math inline">\(\sigma_X\)</span>, is called the standard deviation.</p>
+<p><span class="math display">\[\sigma_X=\sqrt{\sigma_X^2}\]</span></p>
+</section>
+<section id="variance-of-a-linear-function-of-a-rv" class="slide level2">
+<h2>Variance of a linear function of a RV</h2>
 <p>For any given constants <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, we have</p>
 <p><span class="math display">\[
-\text{E}[aX+b]=a \text{E}[X] + b
+\text{var}(aX+b)=a^2 \text{var}(X)
 \]</span></p>
-<div class="fragment">
+</section>
+<section id="proof" class="slide level2">
+<h2>Proof</h2>
 <p><span class="math display">\[
 \begin{aligned}
-\text{Proof:} \;\;
-\text{E}[aX+b]&amp;=\sum_x \big[(ax+b) \cdot p_X(x)\big] \;\;\;\;\;  \color{gray}{\leftarrow\text{by LOTUS}} \\
-&amp;=\sum_x \big[ ax \cdot p_X(x) + b \cdot p_X(x)\big] \\
-&amp;=a\sum_x \big[x \cdot p_X(x) \big] + b \sum_x p_X(x) \\
-&amp;=a\text{E}[X]+b \\
+\text{var}(aX+b)&amp;=\sum_x (ax+b-\text{E}[aX+b])^2 \cdot p_X(x) \\
+&amp;=\sum_x (ax+b-(a\text{E}[X]+b))^2 \cdot p_X(x) \\
+&amp;=a^2\sum_x (x-\text{E}[X])^2 \cdot p_X(x) \\
+&amp;=a^2 \text{var}(X)
 \end{aligned}
 \]</span></p>
-</div>
 </section>
-<section id="linearity-of-the-expected-value-1" class="slide level2">
-<h2>Linearity of the expected value</h2>
-<!-- # One caution -->
-<p><br></p>
-<p><span class="math display">\[
-\text{E}[aX+b]=a \text{E}[X] + b
-\]</span></p>
-<p>That is, when <span class="math inline">\(g(X)\)</span> is a linear function, we have</p>
-<p><span class="math display">\[
-\text{E}\big[g(X)\big]=g\big(\text{E}[X]\big)
-\]</span></p>
+<section id="a-shortcut-for-finding-variance" class="slide level2">
+<h2>A shortcut for finding variance</h2>
+<p><span class="math display">\[\text{var}(X)=\text{E}[X^2]-\big(\text{E}[X]\big)^2\]</span></p>
 </section>
-<section id="section-5" class="slide level2">
-<h2></h2>
-<p><span class="math display">\[
-\text{E}\big[g(X)\big]=g\big(\text{E}[X]\big)
-\]</span></p>
-<p><span class="math display">\[
-\text{Celcius}=(\text{Farenheit}-32) \cdot \frac{5}{9}
-\]</span></p>
-<div class="fragment">
-<p>If we already know <span class="math inline">\(\text{E[Farenheit]}=41\)</span>, then</p>
-<p><span class="math display">\[
-\text{E[Celcius]}=(\text{E[Farenheit]}-32) \cdot \frac{5}{9}=(41-32) \cdot \frac{5}{9}=5
-\]</span></p>
-</div>
-<div class="fragment">
-<p>However, in general,</p>
-<p><span class="math display">\[
-\text{E}\big[g(X)\big] \neq g\big(\text{E}[X]\big)
-\]</span></p>
-</div>
-</section>
-<section id="example" class="slide level2">
-<h2>Example</h2>
-<ul>
-<li class="fragment">Sarah lives 2 miles away from the campus.</li>
-<li class="fragment">She walks to classes at 4 mph if the weather is good (assuming that is half of the time).</li>
-<li class="fragment">Otherwise, she cycles to classes at a speed of 20 mph.</li>
-<li class="fragment">What is the expected
-<ul>
-<li class="fragment">travel speed?</li>
-<li class="fragment">travel time?</li>
-</ul></li>
-</ul>
-</section>
-<section id="travel-speed-v" class="slide level2">
-<h2>Travel speed <span class="math inline">\(V\)</span></h2>
+<section id="proof-1" class="slide level2">
+<h2>Proof</h2>
 <p><span class="math display">\[
 \begin{aligned}
-p_V(v) &amp;=
-\begin{cases}
-    0.5, &amp; \text{if $v=4$ or 20 mph,} \\
-    0,   &amp; \text{otherwise.} \\
-\end{cases}
+&amp;\text{var}(X)\\
+=\;&amp;\sum_x (x-\text{E}[X])^2 \cdot p_X(x) \;\;\;\;\; \color{gray}{\leftarrow\text{by LOTUS}} \\
+=\;&amp;\sum_x (x^2-2x\text{E}[X]+(\text{E}[X])^2) \cdot p_X(x) \\
+=\;&amp;\sum_x x^2 \cdot p_X(x) -2\text{E}[X]\sum_x x \cdot p_X(x) + (\text{E}[X])^2\sum_x p_X(x) \\
+=\;&amp;\text{E}[X^2] -2(\text{E}[X])^2 + (\text{E}[X])^2 \\
+=\;&amp;\text{E}[X^2]-(\text{E}[X])^2 \\
 \end{aligned}
-\]</span></p>
-<div class="fragment">
-<p><span class="math display">\[ \text{E}[V] = 4 \cdot 0.5 + 20 \cdot 0.5 = 12 \text{ (mph)}
-\]</span></p>
-</div>
-</section>
-<section id="travel-time-t" class="slide level2">
-<h2>Travel time <span class="math inline">\(T\)</span></h2>
-<p><span class="math display">\[
-T=g(V)=\frac{\text{distance}}{V}=\frac{2}{V}
-\]</span></p>
-<div class="fragment">
-<p><span class="math display">\[
-\small{
-\begin{aligned}
-t &amp;=
-\begin{cases}
-2 / 4 =0.5, &amp; \text{if walking,} \\
-2 / 20 =0.1,   &amp; \text{if cycling.} \\
-\end{cases}
-\end{aligned}
-}
-\]</span></p>
-</div>
-<div class="fragment">
-<p><span class="math display">\[
-\small{
-\begin{aligned}
-p_T(t) &amp;=
-\begin{cases}
-    0.5, &amp; \text{if $t=0.1$ or 0.5 hours,} \\
-    0,   &amp; \text{otherwise.} \\
-\end{cases}
-\end{aligned}
-}
-\]</span></p>
-</div>
-</section>
-<section id="travel-time-t-contd" class="slide level2">
-<h2>Travel time <span class="math inline">\(T\)</span> (cont’d)</h2>
-<p><span class="math display">\[
-\small{
-\begin{aligned}
-p_T(t) &amp;=
-\begin{cases}
-    0.5, &amp; \text{if $t=0.1$ or 0.5 hours,} \\
-    0,   &amp; \text{otherwise.} \\
-\end{cases}
-\end{aligned}
-}
-\]</span></p>
-<div class="fragment">
-<p><span class="math display">\[
-\small{\color{gray}{\big(\text{E}\big[g(V)\big]=\big)} \;\; \text{E}[T] = 0.1 \cdot 0.5 + 0.5 \cdot 0.5 = 0.3 \text{ (hours)}}
-\]</span></p>
-</div>
-<div class="fragment">
-<p><span class="math display">\[
-\small{g\big(\text{E}[V]\big)=\frac{2}{\text{E}[V]}=\frac{2}{12}\approx0.167}
-\]</span></p>
-</div>
-<div class="fragment">
-<p><span class="math display">\[
-\small{\text{E}\big[g(V)\big] \neq g\big(\text{E}[V]\big)}
 \]</span></p>
 
 
-</div>
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
