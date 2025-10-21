@@ -1326,6 +1326,162 @@
     ]
   },
   {
+    "objectID": "lecture-slides/ch04/01-pdf.html#continuous-variables",
+    "href": "lecture-slides/ch04/01-pdf.html#continuous-variables",
+    "title": "4.1 Probability density function",
+    "section": "Continuous variables",
+    "text": "Continuous variables\n\nIt can take on infinitely many, uncountable values.\nIf it can take on two particular values, it can also take on all the values between them.\nExamples\n\nSpeed of riding a bicycle\nWater level of a dam\nCustomer arrival time at a store",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 4. Continuous random variables",
+      "4.1 Probability density function"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch04/01-pdf.html#continuous-random-variables",
+    "href": "lecture-slides/ch04/01-pdf.html#continuous-random-variables",
+    "title": "4.1 Probability density function",
+    "section": "Continuous random variables",
+    "text": "Continuous random variables\nA RV \\(X\\) is called continuous if there is a nonnegative function \\(f_X\\), such that for every subset \\(B\\) of the real line\n\n\n\n\n\nwe have\n\\[\n\\text{P}(X \\in B)=\\int_B f_X dx\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 4. Continuous random variables",
+      "4.1 Probability density function"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch04/01-pdf.html#section",
+    "href": "lecture-slides/ch04/01-pdf.html#section",
+    "title": "4.1 Probability density function",
+    "section": "",
+    "text": "In particular, for one interval \\([a, b]\\)\n\\[\n\\text{P}(a \\leq X \\leq b)=\\int_a^b f_X dx\n\\]\nThe probability is the definite integral of \\(f_X(x)\\) from \\(a\\) to \\(b\\).",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 4. Continuous random variables",
+      "4.1 Probability density function"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch04/01-pdf.html#probability-density-function",
+    "href": "lecture-slides/ch04/01-pdf.html#probability-density-function",
+    "title": "4.1 Probability density function",
+    "section": "Probability density function",
+    "text": "Probability density function\n\\[\n\\text{P}(a \\leq X \\leq b)=\\int_a^b f_X dx\n\\]\n\\(f_X\\) is called the probability density function (PDF) of \\(X\\).",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 4. Continuous random variables",
+      "4.1 Probability density function"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch04/01-pdf.html#section-1",
+    "href": "lecture-slides/ch04/01-pdf.html#section-1",
+    "title": "4.1 Probability density function",
+    "section": "",
+    "text": "For a discrete RV, \\(p_X\\) is called the probability mass function.\nWhy \\(f_X\\) is called the probability density function?\n\n\n\n\n\n\n\n\n\n\n\\[\n\\small{\\text{P}([x, x+\\delta])=\\int_x^{x+\\delta} f_X(t)dt \\approx f_X(x) \\cdot \\delta}\n\\]\n\\[\n\\small{f_X(x) \\approx \\frac{\\text{P}([x, x+\\delta])}{\\delta}}\n\\]\n\n\n\n\\(f_X\\) is the probability mass per unit length.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 4. Continuous random variables",
+      "4.1 Probability density function"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch04/01-pdf.html#properties-of-pdf",
+    "href": "lecture-slides/ch04/01-pdf.html#properties-of-pdf",
+    "title": "4.1 Probability density function",
+    "section": "Properties of PDF",
+    "text": "Properties of PDF\n\\[\n\\text{P}(a \\leq X \\leq b)=\\int_a^b f_X dx\n\\]\nNon-negativity:\n\nAs probability can not be negative, we have\n\\[\nf_X(x) \\geq 0, \\;\\; \\text{for all $x$.}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 4. Continuous random variables",
+      "4.1 Probability density function"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch04/01-pdf.html#properties-of-pdf-1",
+    "href": "lecture-slides/ch04/01-pdf.html#properties-of-pdf-1",
+    "title": "4.1 Probability density function",
+    "section": "Properties of PDF",
+    "text": "Properties of PDF\n\\[\n\\text{P}(a \\leq X \\leq b)=\\int_a^b f_X dx\n\\]\nSet \\(b=a\\), we have\n\\[\n\\begin{aligned}\n\\text{P}(a \\leq X \\leq a)&=\\int_a^a f_X dx=0 \\\\\n\\\\\n\\text{P}(X = a)&=0\n\\end{aligned}\n\\]\nThe prob. that a continuous RV takes any single value is 0.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 4. Continuous random variables",
+      "4.1 Probability density function"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch04/01-pdf.html#properties-of-pdf-2",
+    "href": "lecture-slides/ch04/01-pdf.html#properties-of-pdf-2",
+    "title": "4.1 Probability density function",
+    "section": "Properties of PDF",
+    "text": "Properties of PDF\n\\[\n\\text{P}(X = a)=0\n\\]\nImplication: Including or excluding the endpoints of an interval has no effect on its probability.\n\\[\n\\begin{aligned}\n\\text{P}(a \\leq X \\leq b)&=\\text{P}(a &lt; X \\leq b) \\\\\n\\\\\n&=\\text{P}(a \\leq X &lt; b) \\\\\n\\\\\n&=\\text{P}(a &lt; X &lt; b) \\\\\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 4. Continuous random variables",
+      "4.1 Probability density function"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch04/01-pdf.html#properties-of-pdf-3",
+    "href": "lecture-slides/ch04/01-pdf.html#properties-of-pdf-3",
+    "title": "4.1 Probability density function",
+    "section": "Properties of PDF",
+    "text": "Properties of PDF\nNormalization: For any discrete RV, we have \\(\\sum_{x} p_X(x) = 1\\)\n\nFor any continuous RV, we have \\[\n\\text{P}(-\\infty &lt; X &lt; +\\infty)=\\int_{-\\infty}^{+\\infty} f_X dx=1\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 4. Continuous random variables",
+      "4.1 Probability density function"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch04/01-pdf.html#common-derivatives",
+    "href": "lecture-slides/ch04/01-pdf.html#common-derivatives",
+    "title": "4.1 Probability density function",
+    "section": "Common derivatives",
+    "text": "Common derivatives\n\n\n\\[\n\\begin{aligned}\n\\frac{d}{dx}(c)&=0 \\\\\n\\\\\n\\frac{d}{dx}(kx)&=k \\\\\n\\\\\n\\frac{d}{dx}(x^n)&=nx^{n-1} \\\\\n\\end{aligned}\n\\]\n\n\\[\n\\begin{aligned}\n\\frac{d}{dx}(\\ln x)&=\\frac{1}{x} \\\\\n\\\\\n\\frac{d}{dx}(e^x)&=e^x \\\\\n\\\\\n\\frac{d}{dx}(a^x)&=a^x \\ln(a) \\\\\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 4. Continuous random variables",
+      "4.1 Probability density function"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch04/01-pdf.html#common-integrals",
+    "href": "lecture-slides/ch04/01-pdf.html#common-integrals",
+    "title": "4.1 Probability density function",
+    "section": "Common integrals",
+    "text": "Common integrals\n\n\n\\[\n\\small{\n\\begin{aligned}\n&\\int k\\;dx=kx+c \\\\\n\\\\\n&\\int x^n dx=\\frac{x^{n+1}}{n+1}+c, \\;\\;n \\neq -1 \\\\\n\\\\\n&\\int \\frac{1}{x}dx=\\ln |x|+c \\\\\n\\end{aligned}\n}\n\\]\n\n\\[\n\\small{\n\\begin{aligned}\n&\\int e^x dx=e^x+c \\\\\n\\\\\n&\\int a^x dx=\\frac{a^x}{\\ln a}+c \\\\\n\\end{aligned}\n}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 4. Continuous random variables",
+      "4.1 Probability density function"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch04/01-pdf.html#section-2",
+    "href": "lecture-slides/ch04/01-pdf.html#section-2",
+    "title": "4.1 Probability density function",
+    "section": "",
+    "text": "Chain rule\n\\[\n\\frac{d}{dx}\\bigg(f\\big(g(x)\\big)\\bigg)=f'\\big(g(x)\\big)\\cdot g'(x)\n\\]\n\nFundamental theorem of calculus\n\\[\n\\int_a^b f(x)dx=F(x)\\bigg|_a ^b=F(b)-F(a)\n\\]\n\\[\n\\text{where $F(x)$ is any antiderivative of $f(x)$.}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 4. Continuous random variables",
+      "4.1 Probability density function"
+    ]
+  },
+  {
     "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#four-levels-of-measurement",
     "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#four-levels-of-measurement",
     "title": "1.3 Four levels of measurement",
@@ -2280,6 +2436,162 @@
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
       "1.4 Graphical integrity"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch04/03-continuous-expectation-variance.html#expected-values",
+    "href": "lecture-slides/ch04/03-continuous-expectation-variance.html#expected-values",
+    "title": "4.3 Continuous expectation & variance",
+    "section": "Expected values",
+    "text": "Expected values\nThe expected value of a discrete RV \\(X\\) is defined by\n\\[\n\\text{E}[X]=\\sum_x x \\cdot p_X(x)\n\\]\n\nIn complete analogy, for a continuous RV \\(X\\),\n\\[\n\\text{E}[X]=\\int_{-\\infty}^{+\\infty} x \\cdot f_X(x) dx\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 4. Continuous random variables",
+      "4.3 Continuous expectation & variance"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch04/03-continuous-expectation-variance.html#lotus",
+    "href": "lecture-slides/ch04/03-continuous-expectation-variance.html#lotus",
+    "title": "4.3 Continuous expectation & variance",
+    "section": "LOTUS",
+    "text": "LOTUS\nLet \\(Y=g(X)\\) be a function of a discrete RV \\(X\\).\n\\[\n\\text{E}[Y]=\\text{E}\\big[g(X)\\big]=\\sum_x g(x) \\cdot p_X(x)\n\\]\n\nIn complete analogy, if \\(X\\) is continuous,\n\\[\n\\text{E}[Y]=\\text{E}\\big[g(X)\\big]=\\int_{-\\infty}^{+\\infty} g(x) \\cdot f_X(x) dx\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 4. Continuous random variables",
+      "4.3 Continuous expectation & variance"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch04/03-continuous-expectation-variance.html#linearity-of-the-expected-value",
+    "href": "lecture-slides/ch04/03-continuous-expectation-variance.html#linearity-of-the-expected-value",
+    "title": "4.3 Continuous expectation & variance",
+    "section": "Linearity of the expected value",
+    "text": "Linearity of the expected value\n\\[\n\\text{For any two constants $a$ and $b$,}\n\\]\n\\[\n\\text{E}[aX+b]= a \\text{E}[X] + b\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 4. Continuous random variables",
+      "4.3 Continuous expectation & variance"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch04/03-continuous-expectation-variance.html#section",
+    "href": "lecture-slides/ch04/03-continuous-expectation-variance.html#section",
+    "title": "4.3 Continuous expectation & variance",
+    "section": "",
+    "text": "Proof\n\\[\n\\begin{aligned}\n\\text{E}[aX+b]&=\\int_{-\\infty}^{+\\infty} (ax+b) f_X(x) dx \\;  \\color{gray}{\\leftarrow\\text{by LOTUS}} \\\\\n\\\\\n&=\\int_{-\\infty}^{+\\infty} ax f_X(x)dx + \\int_{-\\infty}^{+\\infty}b f_X(x) dx  \\\\\n\\\\\n&=a\\int_{-\\infty}^{+\\infty} x f_X(x)dx + b\\int_{-\\infty}^{+\\infty}f_X(x) dx  \\\\\n\\\\\n&=a \\text{E}[X] + b \\\\\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 4. Continuous random variables",
+      "4.3 Continuous expectation & variance"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch04/03-continuous-expectation-variance.html#variance",
+    "href": "lecture-slides/ch04/03-continuous-expectation-variance.html#variance",
+    "title": "4.3 Continuous expectation & variance",
+    "section": "Variance",
+    "text": "Variance\nThe variance of a RV \\(X\\) is always defined as\n\\[\n\\text{var}(X)=\\text{E}\\big[(X-\\text{E}[X])^2\\big]\n\\]\n\nBy applying LOTUS, it can be calculated as\n\\[\n\\text{var}(X)=\\int_{-\\infty}^{+\\infty} \\big(x-\\text{E}[X]\\big)^2 \\cdot f_X(x) dx\n\\]\n\n\nProperty\n\\[\n\\text{var}(X) \\geq 0, \\;\\;\\;\\; \\text{for any $X$.}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 4. Continuous random variables",
+      "4.3 Continuous expectation & variance"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch04/03-continuous-expectation-variance.html#section-1",
+    "href": "lecture-slides/ch04/03-continuous-expectation-variance.html#section-1",
+    "title": "4.3 Continuous expectation & variance",
+    "section": "",
+    "text": "The shortcut formula also holds for continuous RVs.\n\\[\n\\text{var}(X)=\\text{E}[X^2]-(\\text{E}[X])^2\n\\]\n\n\\[\n% \\small{\n\\begin{aligned}\n\\text{Proof:}\\;\\;\\;\\;\\text{var}(X)&=\\text{E}[(X-\\text{E}[X])^2] \\\\\n\\\\\n&=\\text{E}[X^2-2X\\cdot\\text{E}[X]+\\text{E}[X])^2] \\\\\n\\\\\n&=\\text{E}[X^2] -2\\text{E}[X]\\text{E}[X] + (\\text{E}[X])^2 \\\\\n\\\\\n&=\\text{E}[X^2]-(\\text{E}[X])^2\n\\end{aligned}\n% }\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 4. Continuous random variables",
+      "4.3 Continuous expectation & variance"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch04/03-continuous-expectation-variance.html#other-properties-of-variance",
+    "href": "lecture-slides/ch04/03-continuous-expectation-variance.html#other-properties-of-variance",
+    "title": "4.3 Continuous expectation & variance",
+    "section": "Other properties of variance",
+    "text": "Other properties of variance\n\\[\n\\text{For any two constants $a$ and $b$,}\n\\]\n\\[\n\\text{var}(aX+b)=a^2\\text{var}(X)\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 4. Continuous random variables",
+      "4.3 Continuous expectation & variance"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch04/02-continuous-cdf.html#section",
+    "href": "lecture-slides/ch04/02-continuous-cdf.html#section",
+    "title": "4.2 Continuous CDF",
+    "section": "",
+    "text": "A cumulative distribution function is always defined as\n\\[\nF_X(x)=\\text{P}(X \\leq x)\n\\]\n\n\\[\n\\text{If $X$ is discrete,} \\;\\;\\;\\; \\text{P}(X \\leq x)=\\sum_{k \\leq x}p_X(k)\n\\]\n\n\n\\[\n\\text{If $X$ is continuous,} \\;\\;\\;\\; \\text{P}(X \\leq x)=\\int_{-\\infty}^x f_X(t) dt\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 4. Continuous random variables",
+      "4.2 Continuous CDF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch04/02-continuous-cdf.html#section-1",
+    "href": "lecture-slides/ch04/02-continuous-cdf.html#section-1",
+    "title": "4.2 Continuous CDF",
+    "section": "",
+    "text": "\\[\n\\small{\nF_X(x)=\\text{P}(X \\leq x)=\\int_{-\\infty}^x f_X(t) dt\n}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\[\n\\small{0 &lt; F_X(x) &lt; 1,\\;\\; \\lim_{x\\rightarrow-\\infty}F_X(x)=0,\\;\\; \\lim_{x \\rightarrow +\\infty}F_X(x)=1}\n\\]\n\n\n\\[\n\\small{\\text{$F_X$ is non-decreasing.}}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 4. Continuous random variables",
+      "4.2 Continuous CDF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch04/02-continuous-cdf.html#calculate-probability-using-cdf",
+    "href": "lecture-slides/ch04/02-continuous-cdf.html#calculate-probability-using-cdf",
+    "title": "4.2 Continuous CDF",
+    "section": "Calculate probability using CDF",
+    "text": "Calculate probability using CDF\n\\[\n\\text{For any constant $a$,}\n\\]\n\\[\n\\text{P}(X&gt;a)=1-F_X(a)\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 4. Continuous random variables",
+      "4.2 Continuous CDF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch04/02-continuous-cdf.html#calculate-probability-using-cdf-1",
+    "href": "lecture-slides/ch04/02-continuous-cdf.html#calculate-probability-using-cdf-1",
+    "title": "4.2 Continuous CDF",
+    "section": "Calculate probability using CDF",
+    "text": "Calculate probability using CDF\n\\[\n\\text{For any two constants $a$ and $b$ with $a &lt; b$,}\n\\]\n\\[\n\\text{P}(a &lt; X &lt; b )=F_X(b)-F_X(a)\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 4. Continuous random variables",
+      "4.2 Continuous CDF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch04/02-continuous-cdf.html#relationship-between-pdf-cdf",
+    "href": "lecture-slides/ch04/02-continuous-cdf.html#relationship-between-pdf-cdf",
+    "title": "4.2 Continuous CDF",
+    "section": "Relationship between PDF & CDF",
+    "text": "Relationship between PDF & CDF\n\\[\nF_X(x)=\\int_{-\\infty}^x f_X(t) dt\n\\]\nThe CDF \\(F_X(x)\\) is the integral of the PDF \\(f_X(x)\\).\n\n\\[\nf_X(x)=\\frac{dF_X(x)}{dx}\n\\]\nThe PDF \\(f_X(x)\\) is the derivative of the CDF \\(F_X(x)\\).",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 4. Continuous random variables",
+      "4.2 Continuous CDF"
     ]
   },
   {
