@@ -238,32 +238,35 @@ p_X(k) =
 \]</span></p>
 </div>
 <div class="fragment">
-<p><img data-src="images/pmf-uniform.png" class="quarto-figure quarto-figure-center" height="200"> <img data-src="images/pmf-uniform-n.png" class="quarto-figure quarto-figure-center" height="200"></p>
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="images/pmf-uniform.png" class="quarto-figure quarto-figure-right" height="200"></p>
+</figure>
+</div>
+</div><div class="column">
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="images/pmf-uniform-n.png" class="quarto-figure quarto-figure-left" height="200"></p>
+</figure>
+</div>
+</div></div>
 </div>
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
 <p><span class="math display">\[
-\small{
-p_Y(k) =
-\begin{cases}
-    1/n, &amp; \text{if } y = 1, 2, \cdots, n, \\
-    0,           &amp; \text{otherwise.} \\
-\end{cases}
-}
-\]</span></p>
-<div class="fragment">
-<p><span class="math display">\[
 \small{\text{var}(Y)=\text{E}\big[Y^2\big]-\big(\text{E}[Y]\big)^2}
 \]</span></p>
-</div>
 <div class="fragment">
 <p><span class="math display">\[
 \small{
 \begin{aligned}
 \text{E}[Y]&amp;=\frac{n+1}{2} \\
 \text{E}\big[Y^2\big]&amp;=\sum_{k=1}^n \big(k^2 \frac{1}{n} \big)\\
-&amp;=\frac{1}{n}\sum_{k=1}^nk^2 =\frac{1}{6}(n+1)(2n+1) \\
+&amp;=\frac{1}{n}\color{gray}{\sum_{k=1}^nk^2} \;\;\;\;\; \color{gray}{\leftarrow\text{Square pyramidal number}}\\
+&amp;=\frac{1}{6}(n+1)(2n+1) \\
 \end{aligned}
 }
 \]</span></p>
@@ -271,7 +274,7 @@ p_Y(k) =
 </section>
 <section id="section-1" class="slide level2">
 <h2></h2>
-<p>Finally,</p>
+<p>Lastly,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \text{var}(Y)&amp;=\text{E}\big[Y^2\big]-\big(\text{E}[Y]\big)^2 \\

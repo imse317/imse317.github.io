@@ -230,26 +230,30 @@ You go to a party with $n$ other people.
 Let $X$ be the number of people who share the same birthday as you.
 
 Find the PMF of $X$.  -->
+<!-- ##
+
+:::: {.columns}
+::: {.column}
+$\text{bin}(\color{red}{20}, 0.5)$
+:::
+::: {.column}
+![](images/pmf-bin-n20-p50.png){height="150"}
+:::
+::::
+
+. . .
+
+:::: {.columns}
+::: {.column}
+$\text{bin}(\color{red}{100}, 0.5)$
+:::
+::: {.column}
+![](images/pmf-bin-n100-p50.png){height="150"}
+:::
+:::: -->
 </div>
 </section>
 <section id="section-2" class="slide level2">
-<h2></h2>
-<div class="columns">
-<div class="column">
-<p><span class="math inline">\(\text{bin}(\color{red}{20}, 0.5)\)</span></p>
-</div><div class="column">
-<p><img data-src="images/pmf-bin-n20-p50.png" height="150"></p>
-</div></div>
-<div class="fragment">
-<div class="columns">
-<div class="column">
-<p><span class="math inline">\(\text{bin}(\color{red}{100}, 0.5)\)</span></p>
-</div><div class="column">
-<p><img data-src="images/pmf-bin-n100-p50.png" height="150"></p>
-</div></div>
-</div>
-</section>
-<section id="section-3" class="slide level2">
 <h2></h2>
 <div class="columns">
 <div class="column">
@@ -274,7 +278,7 @@ Find the PMF of $X$.  -->
 </div></div>
 </div>
 </section>
-<section id="section-4" class="slide level2">
+<section id="section-3" class="slide level2">
 <h2></h2>
 <div class="columns">
 <div class="column">
@@ -316,28 +320,39 @@ $$\small{1+n+\frac{n(n-1)}{2}+\cdots+\frac{n(n-1)}{2}+n+1=2^n}$$
 
 We will need this property later when finding the expected value of binomial RV.  -->
 </section>
+<section id="galton-board" class="slide level2">
+<h2><a href="https://en.wikipedia.org/wiki/Bean_machine">Galton Board</a></h2>
+
+<img data-src="images/galton-board.png" class="quarto-figure quarto-figure-center r-stretch"></section></section>
+<section>
+<section id="section-4" class="title-slide slide level1 center">
+<h1></h1>
+<div style="text-align: center;">
+<iframe width="750" height="500" src="https://www.youtube.com/embed/gVwThfp_OUU" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</div>
+</section>
 <section id="expected-value" class="slide level2">
 <h2>Expected value</h2>
+<div class="fragment">
 <p><span class="math display">\[
 p_X(k)=\text{P}(X=k) ={n \choose k}p^k(1-p)^{n-k} \;\;\text{for } k=0, 1, 2, \cdots, n.
 \]</span></p>
+</div>
 <div class="fragment">
 <p><br></p>
 <p><span class="math display">\[
-\begin{aligned}
-\text{E}[X]&amp;=\sum_{k=0}^n k \cdot {n \choose k}p^k(1-p)^{n-k} \\
-\\
-&amp;=np \\
-\end{aligned}
+\text{E}[X]=\sum_{k=0}^n \bigg[k \cdot {n \choose k}p^k(1-p)^{n-k}\bigg]
 \]</span></p>
 <!-- .center[[Proof](#appendix_A)] -->
 </div>
 </section>
-<section id="a-shortcut-to-prove-textexnp" class="slide level2">
-<h2>A shortcut to prove <span class="math inline">\(\;\text{E}[X]=np\)</span></h2>
-<p>Consider a Bernoulli RV <span class="math inline">\(X\)</span></p>
+<section id="a-shortcut-to-find-the-expected-value-of-a-binomial-rv" class="slide level2">
+<h2>A shortcut to find the expected value of a binomial RV</h2>
+<!-- Consider $X \sim \text{Bernoulli}(p)$ -->
 <p><span class="math display">\[
 \small{
+X \sim \text{Bernoulli}(p), \;\;\;\;
 p_X(x) =
 \begin{cases}
     p, &amp; \text{if $x = 1$,} \\
@@ -345,14 +360,33 @@ p_X(x) =
 \end{cases}
 }
 \]</span></p>
+<p>A binomial RV is the sum of <span class="math inline">\(n\)</span> <a href="https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables">independent &amp; identically distributed (i.i.d.)</a> Bernoulli RVs.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/permutation-slots.png" class="quarto-figure quarto-figure-center" height="100"></p>
 </figure>
 </div>
-<p>A binomial RV is the sum of <span class="math inline">\(n\)</span> <a href="https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables">independent &amp; identically distributed (i.i.d.)</a> Bernoulli RVs.</p>
 <p><span class="math display">\[
 Y=X_1+X_2+\cdots+X_n
+\]</span></p>
+</section>
+<section id="section-5" class="slide level2">
+<h2></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/permutation-slots.png" class="quarto-figure quarto-figure-center" height="150"></p>
+</figure>
+</div>
+<p><span class="math display">\[
+\begin{aligned}
+X_i \text{'s are i.i.d.} &amp;\sim \text{Bernoulli}(p) \\
+\\
+Y&amp;=X_1+X_2+\cdots+X_n \\
+\\
+Y &amp;\sim \text{bin}(n, p) \\
+\\
+\text{E}[Y] &amp;= \text{E}[X_1+X_2+\cdots+X_n]
+\end{aligned}
 \]</span></p>
 </section>
 <section id="linearity-of-the-expected-value" class="slide level2">
@@ -375,93 +409,79 @@ Y=X_1+X_2+\cdots+X_n
 \]</span></p>
 </div>
 </section>
-<section id="a-shortcut-to-prove-textexnp-1" class="slide level2">
-<h2>A shortcut to prove <span class="math inline">\(\text{E}[X]=np\)</span></h2>
+<section id="section-6" class="slide level2">
+<h2></h2>
+<p>Lastly,</p>
 <p><span class="math display">\[
 \begin{aligned}
-X_i \text{'s are i.i.d.} &amp;\sim \text{Bernoulli}(p) \\
-Y&amp;=X_1+X_2+\cdots+X_n \\
-Y &amp;\sim \text{bin}(n, p) \\
-\\
 \text{E}[Y] &amp;= \text{E}[X_1+X_2+\cdots+X_n] \\
+\\
 &amp;=\text{E}[X_1] + \text{E}[X_2]+\cdots+\text{E}[X_n] \\
+\\
 &amp;=p + p+\cdots+p \\
+\\
 &amp;= np
 \end{aligned}
 \]</span></p>
 </section>
-<section id="section-5" class="slide level2">
+<section id="section-7" class="slide level2">
 <h2></h2>
 <p>If two RVs <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent, we have</p>
 <p><span class="math display">\[
 \text{var}(X+Y)=\text{var}(X) + \text{var}(Y)
 \]</span></p>
 <div class="fragment">
-<p>More generally,</p>
-<p>if <span class="math inline">\(n\)</span> RVs <span class="math inline">\(X_1, X_2, \cdots, X_n\)</span> are independent,</p>
+<p><br></p>
+<p>More generally, if <span class="math inline">\(n\)</span> RVs <span class="math inline">\(X_1, X_2, \cdots, X_n\)</span> are independent,</p>
 <p><span class="math display">\[
 \begin{aligned}
 &amp;\text{var}(X_1+X_2+\cdots+X_n) \\
-\\
 =\;&amp;\text{var}(X_1) + \text{var}(X_2)+\cdots+\text{var}(X_n) \\
 \end{aligned}
 \]</span></p>
 </div>
 </section>
-<section id="section-6" class="slide level2">
+<section id="section-8" class="slide level2">
 <h2></h2>
+<p>Lastly, we can computer the variance of a binomial RV <span class="math inline">\(Y\)</span> as</p>
 <p><span class="math display">\[
 \begin{aligned}
-Y &amp;\sim \text{bin}(n, p) \\
-X_i \text{'s are i.i.d.} &amp;\sim \text{Bernoulli}(p) \\
-Y&amp;=X_1+X_2+\cdots+X_n \\
-\\
 \text{var}(Y) &amp;= \text{var}(X_1+X_2+\cdots+X_n) \\
+\\
 &amp;=\text{var}(X_1) + \text{var}(X_2)+\cdots+\text{var}(X_n) \\
+\\
 &amp;=p(1-p) + p(1-p)+\cdots+p(1-p) \\
+\\
 &amp;= np(1-p)
 \end{aligned}
 \]</span></p>
-</section>
-<section id="galton-board" class="slide level2">
-<h2><a href="https://en.wikipedia.org/wiki/Bean_machine">Galton Board</a></h2>
+<!-- ## Appendix A
 
-<img data-src="images/galton-board.png" class="quarto-figure quarto-figure-center r-stretch"></section></section>
-<section>
-<section id="galton-board-demo" class="title-slide slide level1 center">
-<h1>Galton Board demo</h1>
-<div style="text-align: center;">
-<iframe width="750" height="500" src="https://www.youtube.com/embed/gVwThfp_OUU" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</div>
-</section>
-<section id="appendix-a" class="slide level2">
-<h2>Appendix A</h2>
-<p><span class="math display">\[
+$$
 \small{
 \begin{aligned}
-\text{E}[X]&amp;=\sum_{k=0}^n k {n \choose k}p^k(1-p)^{n-k} \\
-&amp;=0 {n \choose 0}p^0(1-p)^{n-0} + \sum_{k=1}^n k {n \choose k}p^k(1-p)^{n-k} \\
-&amp;=\sum_{k=1}^n k \frac{n!}{k!(n-k)!} p^k(1-p)^{n-k} \\
-&amp;=\sum_{k=1}^n k \frac{n \cdot (n-1)!}{k\cdot(k-1)!(n-k)!} p\cdot p^{k-1}(1-p)^{n-k} \\
+\text{E}[X]&=\sum_{k=0}^n k {n \choose k}p^k(1-p)^{n-k} \\
+&=0 {n \choose 0}p^0(1-p)^{n-0} + \sum_{k=1}^n k {n \choose k}p^k(1-p)^{n-k} \\
+&=\sum_{k=1}^n k \frac{n!}{k!(n-k)!} p^k(1-p)^{n-k} \\
+&=\sum_{k=1}^n k \frac{n \cdot (n-1)!}{k\cdot(k-1)!(n-k)!} p\cdot p^{k-1}(1-p)^{n-k} \\
 \end{aligned}
 }
-\]</span></p>
-</section>
-<section id="appendix-a-contd" class="slide level2">
-<h2>Appendix A (cont’d)</h2>
-<p><span class="math display">\[
+$$
+
+## Appendix A (cont'd)
+
+$$
 \small{
 \begin{aligned}
-&amp;=np\sum_{k=1}^n \frac{(n-1)!}{(k-1)!(n-k)!} p^{k-1}(1-p)^{n-k} \\
-&amp;=np\sum_{k=1}^n \frac{(n-1)!}{(k-1)!(n-k)!} p^{k-1}(1-p)^{n-k} \\
-&amp; \text{In the summation, let $k'=k-1$ and $n'=n-1$} \\
-&amp;=np\sum_{k'=0}^{n'} \frac{n'!}{k'!(n'-k')!} p^{k'}(1-p)^{n'-k'} \\
-&amp;=np \cdot 1 \;\;\;\color{gray}{\text{(Note inside the sigma it's the PMF of bin($n', p$))}} \\
-&amp;=np \\
+&=np\sum_{k=1}^n \frac{(n-1)!}{(k-1)!(n-k)!} p^{k-1}(1-p)^{n-k} \\
+&=np\sum_{k=1}^n \frac{(n-1)!}{(k-1)!(n-k)!} p^{k-1}(1-p)^{n-k} \\
+& \text{In the summation, let $k'=k-1$ and $n'=n-1$} \\
+&=np\sum_{k'=0}^{n'} \frac{n'!}{k'!(n'-k')!} p^{k'}(1-p)^{n'-k'} \\
+&=np \cdot 1 \;\;\;\color{gray}{\text{(Note inside the sigma it's the PMF of bin($n', p$))}} \\
+&=np \\
 \end{aligned}
 }
-\]</span></p>
+$$ -->
 
 
 </section></section>

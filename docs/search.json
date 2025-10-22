@@ -1239,7 +1239,7 @@
     "href": "lecture-slides/ch03/09-geometric.html#section-1",
     "title": "3.9 Geometric distribution",
     "section": "",
-    "text": "\\[\np_X(k)=\\text{P}(X=k)=(1-p)^{k-1}p, \\;\\;\\;\\;\\;\\;\\text{for } k=1, 2, \\cdots\n\\]\n\n\nIt can also be written as:\n\\[\n\\begin{aligned}\np_X(1)&=p \\\\\np_X(k)&=p_X(k-1)\\cdot(1-p),\\;\\;\\;\\;\\;\\;\\text{for } k=2, 3, \\cdots \\\\\n\\end{aligned}\n\\]\n\n\nWith a common ratio \\((1-p)\\), the PMF follows a geometric sequence, hence the name of the RV.",
+    "text": "\\[\np_X(k)=\\text{P}(X=k)=(1-p)^{k-1}p, \\;\\;\\;\\;\\;\\;\\text{for } k=1, 2, \\cdots\n\\]\n\n\nIt can also be written as:\n\\[\n\\begin{aligned}\np_X(1)&=p \\\\\np_X(k)&=p_X(k-1)\\cdot(1-p),\\;\\;\\;\\;\\;\\;\\text{for } k=2, 3, \\cdots \\\\\n\\end{aligned}\n\\]\n\n\nWith a common ratio of \\((1-p)\\), the PMF follows a geometric sequence, hence the name of the RV.",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -1313,11 +1313,11 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch03/09-geometric.html#proof",
-    "href": "lecture-slides/ch03/09-geometric.html#proof",
+    "objectID": "lecture-slides/ch03/09-geometric.html#section-3",
+    "href": "lecture-slides/ch03/09-geometric.html#section-3",
     "title": "3.9 Geometric distribution",
-    "section": "Proof",
-    "text": "Proof\n\\[\n\\small{\n\\begin{aligned}\n\\text{P}(X&gt;t+s|X&gt;t)&=\\frac{\\text{P}\\big((X&gt;t+s) \\cap (X&gt;t)\\big)}{\\text{P}(X&gt;t)} \\\\\n&=\\frac{\\text{P}(X&gt;t+s)}{\\text{P}(X&gt;t)} \\\\\n&=\\frac{(1-p)^{t+s}}{(1-p)^t} \\\\\n&=(1-p)^s \\\\\n&=\\text{P}(X&gt;s) \\\\\n\\end{aligned}\n}\n\\]",
+    "section": "",
+    "text": "\\[\n\\small{\n\\begin{aligned}\n\\text{P}(X&gt;t+s|X&gt;t)&=\\frac{\\text{P}\\big((X&gt;t+s) \\cap (X&gt;t)\\big)}{\\text{P}(X&gt;t)} \\\\\n\\\\\n&=\\frac{\\text{P}(X&gt;t+s)}{\\text{P}(X&gt;t)} \\\\\n\\\\\n&=\\frac{(1-p)^{t+s}}{(1-p)^t} \\\\\n\\\\\n&=(1-p)^s =\\text{P}(X&gt;s) \\\\\n\\end{aligned}\n}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -2651,7 +2651,7 @@
     "href": "lecture-slides/ch03/08-binomial.html#section-2",
     "title": "3.8 Binomial distribution",
     "section": "",
-    "text": "\\(\\text{bin}(\\color{red}{20}, 0.5)\\)\n\n\n\n\n\n\n\\(\\text{bin}(\\color{red}{100}, 0.5)\\)",
+    "text": "\\(\\text{bin}(20, \\color{red}{0.5})\\)\n\n\n\n\n\n\n\\(\\text{bin}(20, \\color{red}{0.2})\\)\n\n\n\n\n\n\n\n\\(\\text{bin}(20, \\color{red}{0.8})\\)",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -2664,98 +2664,7 @@
     "href": "lecture-slides/ch03/08-binomial.html#section-3",
     "title": "3.8 Binomial distribution",
     "section": "",
-    "text": "\\(\\text{bin}(20, \\color{red}{0.5})\\)\n\n\n\n\n\n\n\\(\\text{bin}(20, \\color{red}{0.2})\\)\n\n\n\n\n\n\n\n\\(\\text{bin}(20, \\color{red}{0.8})\\)",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 3. Discrete random variables",
-      "3.8 Binomial distribution"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch03/08-binomial.html#section-4",
-    "href": "lecture-slides/ch03/08-binomial.html#section-4",
-    "title": "3.8 Binomial distribution",
-    "section": "",
     "text": "\\(\\text{bin}(100, \\color{red}{0.5})\\)\n\n\n\n\n\n\n\\(\\text{bin}(100, \\color{red}{0.2})\\)\n\n\n\n\n\n\n\n\\(\\text{bin}(100, \\color{red}{0.8})\\)",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 3. Discrete random variables",
-      "3.8 Binomial distribution"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch03/08-binomial.html#expected-value",
-    "href": "lecture-slides/ch03/08-binomial.html#expected-value",
-    "title": "3.8 Binomial distribution",
-    "section": "Expected value",
-    "text": "Expected value\n\\[\np_X(k)=\\text{P}(X=k) ={n \\choose k}p^k(1-p)^{n-k} \\;\\;\\text{for } k=0, 1, 2, \\cdots, n.\n\\]\n\n\n\\[\n\\begin{aligned}\n\\text{E}[X]&=\\sum_{k=0}^n k \\cdot {n \\choose k}p^k(1-p)^{n-k} \\\\\n\\\\\n&=np \\\\\n\\end{aligned}\n\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 3. Discrete random variables",
-      "3.8 Binomial distribution"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch03/08-binomial.html#a-shortcut-to-prove-textexnp",
-    "href": "lecture-slides/ch03/08-binomial.html#a-shortcut-to-prove-textexnp",
-    "title": "3.8 Binomial distribution",
-    "section": "A shortcut to prove \\(\\;\\text{E}[X]=np\\)",
-    "text": "A shortcut to prove \\(\\;\\text{E}[X]=np\\)\nConsider a Bernoulli RV \\(X\\)\n\\[\n\\small{\np_X(x) =\n\\begin{cases}\n    p, & \\text{if $x = 1$,} \\\\\n    1-p, & \\text{if $x = 0$.} \\\\\n\\end{cases}\n}\n\\]\n\n\n\n\n\nA binomial RV is the sum of \\(n\\) independent & identically distributed (i.i.d.) Bernoulli RVs.\n\\[\nY=X_1+X_2+\\cdots+X_n\n\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 3. Discrete random variables",
-      "3.8 Binomial distribution"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch03/08-binomial.html#linearity-of-the-expected-value",
-    "href": "lecture-slides/ch03/08-binomial.html#linearity-of-the-expected-value",
-    "title": "3.8 Binomial distribution",
-    "section": "Linearity of the expected value",
-    "text": "Linearity of the expected value\nFor any given constants \\(a\\) and \\(b\\), we have\n\\[\n\\text{E}[aX+b]=a \\text{E}[X] + b\n\\]\n\nGiven any two random variables \\(X\\) and \\(Y\\), we have\n\\[\n\\text{E}[X+Y]=\\text{E}[X] + \\text{E}[Y]\n\\]\nNote it does not require \\(X\\) and \\(Y\\) to be independent.\n\n\nMore generally, given any \\(n\\) RVs \\(X_1, X_2, \\cdots, X_n\\)\n\\[\n\\text{E}[X_1+X_2+\\cdots+X_n] = \\text{E}[X_1] + \\text{E}[X_2]+\\cdots+\\text{E}[X_n]\n\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 3. Discrete random variables",
-      "3.8 Binomial distribution"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch03/08-binomial.html#a-shortcut-to-prove-textexnp-1",
-    "href": "lecture-slides/ch03/08-binomial.html#a-shortcut-to-prove-textexnp-1",
-    "title": "3.8 Binomial distribution",
-    "section": "A shortcut to prove \\(\\text{E}[X]=np\\)",
-    "text": "A shortcut to prove \\(\\text{E}[X]=np\\)\n\\[\n\\begin{aligned}\nX_i \\text{'s are i.i.d.} &\\sim \\text{Bernoulli}(p) \\\\\nY&=X_1+X_2+\\cdots+X_n \\\\\nY &\\sim \\text{bin}(n, p) \\\\\n\\\\\n\\text{E}[Y] &= \\text{E}[X_1+X_2+\\cdots+X_n] \\\\\n&=\\text{E}[X_1] + \\text{E}[X_2]+\\cdots+\\text{E}[X_n] \\\\\n&=p + p+\\cdots+p \\\\\n&= np\n\\end{aligned}\n\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 3. Discrete random variables",
-      "3.8 Binomial distribution"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch03/08-binomial.html#section-5",
-    "href": "lecture-slides/ch03/08-binomial.html#section-5",
-    "title": "3.8 Binomial distribution",
-    "section": "",
-    "text": "If two RVs \\(X\\) and \\(Y\\) are independent, we have\n\\[\n\\text{var}(X+Y)=\\text{var}(X) + \\text{var}(Y)\n\\]\n\nMore generally,\nif \\(n\\) RVs \\(X_1, X_2, \\cdots, X_n\\) are independent,\n\\[\n\\begin{aligned}\n&\\text{var}(X_1+X_2+\\cdots+X_n) \\\\\n\\\\\n=\\;&\\text{var}(X_1) + \\text{var}(X_2)+\\cdots+\\text{var}(X_n) \\\\\n\\end{aligned}\n\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 3. Discrete random variables",
-      "3.8 Binomial distribution"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch03/08-binomial.html#section-6",
-    "href": "lecture-slides/ch03/08-binomial.html#section-6",
-    "title": "3.8 Binomial distribution",
-    "section": "",
-    "text": "\\[\n\\begin{aligned}\nY &\\sim \\text{bin}(n, p) \\\\\nX_i \\text{'s are i.i.d.} &\\sim \\text{Bernoulli}(p) \\\\\nY&=X_1+X_2+\\cdots+X_n \\\\\n\\\\\n\\text{var}(Y) &= \\text{var}(X_1+X_2+\\cdots+X_n) \\\\\n&=\\text{var}(X_1) + \\text{var}(X_2)+\\cdots+\\text{var}(X_n) \\\\\n&=p(1-p) + p(1-p)+\\cdots+p(1-p) \\\\\n&= np(1-p)\n\\end{aligned}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -2777,11 +2686,11 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch03/08-binomial.html#appendix-a",
-    "href": "lecture-slides/ch03/08-binomial.html#appendix-a",
+    "objectID": "lecture-slides/ch03/08-binomial.html#expected-value",
+    "href": "lecture-slides/ch03/08-binomial.html#expected-value",
     "title": "3.8 Binomial distribution",
-    "section": "Appendix A",
-    "text": "Appendix A\n\\[\n\\small{\n\\begin{aligned}\n\\text{E}[X]&=\\sum_{k=0}^n k {n \\choose k}p^k(1-p)^{n-k} \\\\\n&=0 {n \\choose 0}p^0(1-p)^{n-0} + \\sum_{k=1}^n k {n \\choose k}p^k(1-p)^{n-k} \\\\\n&=\\sum_{k=1}^n k \\frac{n!}{k!(n-k)!} p^k(1-p)^{n-k} \\\\\n&=\\sum_{k=1}^n k \\frac{n \\cdot (n-1)!}{k\\cdot(k-1)!(n-k)!} p\\cdot p^{k-1}(1-p)^{n-k} \\\\\n\\end{aligned}\n}\n\\]",
+    "section": "Expected value",
+    "text": "Expected value\n\n\\[\np_X(k)=\\text{P}(X=k) ={n \\choose k}p^k(1-p)^{n-k} \\;\\;\\text{for } k=0, 1, 2, \\cdots, n.\n\\]\n\n\n\n\\[\n\\text{E}[X]=\\sum_{k=0}^n \\bigg[k \\cdot {n \\choose k}p^k(1-p)^{n-k}\\bigg]\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -2790,11 +2699,76 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch03/08-binomial.html#appendix-a-contd",
-    "href": "lecture-slides/ch03/08-binomial.html#appendix-a-contd",
+    "objectID": "lecture-slides/ch03/08-binomial.html#a-shortcut-to-find-the-expected-value-of-a-binomial-rv",
+    "href": "lecture-slides/ch03/08-binomial.html#a-shortcut-to-find-the-expected-value-of-a-binomial-rv",
     "title": "3.8 Binomial distribution",
-    "section": "Appendix A (cont’d)",
-    "text": "Appendix A (cont’d)\n\\[\n\\small{\n\\begin{aligned}\n&=np\\sum_{k=1}^n \\frac{(n-1)!}{(k-1)!(n-k)!} p^{k-1}(1-p)^{n-k} \\\\\n&=np\\sum_{k=1}^n \\frac{(n-1)!}{(k-1)!(n-k)!} p^{k-1}(1-p)^{n-k} \\\\\n& \\text{In the summation, let $k'=k-1$ and $n'=n-1$} \\\\\n&=np\\sum_{k'=0}^{n'} \\frac{n'!}{k'!(n'-k')!} p^{k'}(1-p)^{n'-k'} \\\\\n&=np \\cdot 1 \\;\\;\\;\\color{gray}{\\text{(Note inside the sigma it's the PMF of bin($n', p$))}} \\\\\n&=np \\\\\n\\end{aligned}\n}\n\\]",
+    "section": "A shortcut to find the expected value of a binomial RV",
+    "text": "A shortcut to find the expected value of a binomial RV\n\n\\[\n\\small{\nX \\sim \\text{Bernoulli}(p), \\;\\;\\;\\;\np_X(x) =\n\\begin{cases}\n    p, & \\text{if $x = 1$,} \\\\\n    1-p, & \\text{if $x = 0$.} \\\\\n\\end{cases}\n}\n\\]\nA binomial RV is the sum of \\(n\\) independent & identically distributed (i.i.d.) Bernoulli RVs.\n\n\n\n\n\n\\[\nY=X_1+X_2+\\cdots+X_n\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 3. Discrete random variables",
+      "3.8 Binomial distribution"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch03/08-binomial.html#section-5",
+    "href": "lecture-slides/ch03/08-binomial.html#section-5",
+    "title": "3.8 Binomial distribution",
+    "section": "",
+    "text": "\\[\n\\begin{aligned}\nX_i \\text{'s are i.i.d.} &\\sim \\text{Bernoulli}(p) \\\\\n\\\\\nY&=X_1+X_2+\\cdots+X_n \\\\\n\\\\\nY &\\sim \\text{bin}(n, p) \\\\\n\\\\\n\\text{E}[Y] &= \\text{E}[X_1+X_2+\\cdots+X_n]\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 3. Discrete random variables",
+      "3.8 Binomial distribution"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch03/08-binomial.html#linearity-of-the-expected-value",
+    "href": "lecture-slides/ch03/08-binomial.html#linearity-of-the-expected-value",
+    "title": "3.8 Binomial distribution",
+    "section": "Linearity of the expected value",
+    "text": "Linearity of the expected value\nFor any given constants \\(a\\) and \\(b\\), we have\n\\[\n\\text{E}[aX+b]=a \\text{E}[X] + b\n\\]\n\nGiven any two random variables \\(X\\) and \\(Y\\), we have\n\\[\n\\text{E}[X+Y]=\\text{E}[X] + \\text{E}[Y]\n\\]\nNote it does not require \\(X\\) and \\(Y\\) to be independent.\n\n\nMore generally, given any \\(n\\) RVs \\(X_1, X_2, \\cdots, X_n\\)\n\\[\n\\text{E}[X_1+X_2+\\cdots+X_n] = \\text{E}[X_1] + \\text{E}[X_2]+\\cdots+\\text{E}[X_n]\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 3. Discrete random variables",
+      "3.8 Binomial distribution"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch03/08-binomial.html#section-6",
+    "href": "lecture-slides/ch03/08-binomial.html#section-6",
+    "title": "3.8 Binomial distribution",
+    "section": "",
+    "text": "Lastly,\n\\[\n\\begin{aligned}\n\\text{E}[Y] &= \\text{E}[X_1+X_2+\\cdots+X_n] \\\\\n\\\\\n&=\\text{E}[X_1] + \\text{E}[X_2]+\\cdots+\\text{E}[X_n] \\\\\n\\\\\n&=p + p+\\cdots+p \\\\\n\\\\\n&= np\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 3. Discrete random variables",
+      "3.8 Binomial distribution"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch03/08-binomial.html#section-7",
+    "href": "lecture-slides/ch03/08-binomial.html#section-7",
+    "title": "3.8 Binomial distribution",
+    "section": "",
+    "text": "If two RVs \\(X\\) and \\(Y\\) are independent, we have\n\\[\n\\text{var}(X+Y)=\\text{var}(X) + \\text{var}(Y)\n\\]\n\n\nMore generally, if \\(n\\) RVs \\(X_1, X_2, \\cdots, X_n\\) are independent,\n\\[\n\\begin{aligned}\n&\\text{var}(X_1+X_2+\\cdots+X_n) \\\\\n=\\;&\\text{var}(X_1) + \\text{var}(X_2)+\\cdots+\\text{var}(X_n) \\\\\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 3. Discrete random variables",
+      "3.8 Binomial distribution"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch03/08-binomial.html#section-8",
+    "href": "lecture-slides/ch03/08-binomial.html#section-8",
+    "title": "3.8 Binomial distribution",
+    "section": "",
+    "text": "Lastly, we can computer the variance of a binomial RV \\(Y\\) as\n\\[\n\\begin{aligned}\n\\text{var}(Y) &= \\text{var}(X_1+X_2+\\cdots+X_n) \\\\\n\\\\\n&=\\text{var}(X_1) + \\text{var}(X_2)+\\cdots+\\text{var}(X_n) \\\\\n\\\\\n&=p(1-p) + p(1-p)+\\cdots+p(1-p) \\\\\n\\\\\n&= np(1-p)\n\\end{aligned}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -2963,7 +2937,7 @@
     "href": "lecture-slides/ch03/06-discrete-uniform.html#section",
     "title": "3.6 Uniform distribution",
     "section": "",
-    "text": "\\[\n\\small{\np_Y(k) =\n\\begin{cases}\n    1/n, & \\text{if } y = 1, 2, \\cdots, n, \\\\\n    0,           & \\text{otherwise.} \\\\\n\\end{cases}\n}\n\\]\n\n\\[\n\\small{\\text{var}(Y)=\\text{E}\\big[Y^2\\big]-\\big(\\text{E}[Y]\\big)^2}\n\\]\n\n\n\\[\n\\small{\n\\begin{aligned}\n\\text{E}[Y]&=\\frac{n+1}{2} \\\\\n\\text{E}\\big[Y^2\\big]&=\\sum_{k=1}^n \\big(k^2 \\frac{1}{n} \\big)\\\\\n&=\\frac{1}{n}\\sum_{k=1}^nk^2 =\\frac{1}{6}(n+1)(2n+1) \\\\\n\\end{aligned}\n}\n\\]",
+    "text": "\\[\n\\small{\\text{var}(Y)=\\text{E}\\big[Y^2\\big]-\\big(\\text{E}[Y]\\big)^2}\n\\]\n\n\\[\n\\small{\n\\begin{aligned}\n\\text{E}[Y]&=\\frac{n+1}{2} \\\\\n\\text{E}\\big[Y^2\\big]&=\\sum_{k=1}^n \\big(k^2 \\frac{1}{n} \\big)\\\\\n&=\\frac{1}{n}\\color{gray}{\\sum_{k=1}^nk^2} \\;\\;\\;\\;\\; \\color{gray}{\\leftarrow\\text{Square pyramidal number}}\\\\\n&=\\frac{1}{6}(n+1)(2n+1) \\\\\n\\end{aligned}\n}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -2976,7 +2950,7 @@
     "href": "lecture-slides/ch03/06-discrete-uniform.html#section-1",
     "title": "3.6 Uniform distribution",
     "section": "",
-    "text": "Finally,\n\\[\n\\begin{aligned}\n\\text{var}(Y)&=\\text{E}\\big[Y^2\\big]-\\big(\\text{E}[Y]\\big)^2 \\\\\n\\\\\n&=\\frac{1}{6}(n+1)(2n+1)-\\big(\\frac{n+1}{2}\\big)^2 \\\\\n\\\\\n&=\\frac{n^2-1}{12} \\\\\n\\end{aligned}\n\\]",
+    "text": "Lastly,\n\\[\n\\begin{aligned}\n\\text{var}(Y)&=\\text{E}\\big[Y^2\\big]-\\big(\\text{E}[Y]\\big)^2 \\\\\n\\\\\n&=\\frac{1}{6}(n+1)(2n+1)-\\big(\\frac{n+1}{2}\\big)^2 \\\\\n\\\\\n&=\\frac{n^2-1}{12} \\\\\n\\end{aligned}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
