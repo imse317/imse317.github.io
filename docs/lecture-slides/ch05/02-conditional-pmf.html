@@ -10,7 +10,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.40">
 
-  <title>IMSE 317 – 4.3 Continuous expectation &amp; variance</title>
+  <title>IMSE 317 – 5.2 Conditional PMF</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -127,113 +127,191 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">4.3 Continuous expectation &amp; variance</h1>
+  <h1 class="title">5.2 Conditional PMF</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="expected-value" class="slide level2">
-<h2>Expected value</h2>
-<p>The expected value of a <strong>discrete</strong> RV <span class="math inline">\(X\)</span> is defined by</p>
+<section id="conditional-pmf" class="slide level2">
+<h2>Conditional PMF</h2>
+<p>The conditional PMF of <span class="math inline">\(X\)</span> given <span class="math inline">\(Y=y\)</span> is defined by</p>
 <p><span class="math display">\[
-\text{E}[X]=\sum_x x \cdot p_X(x)
-\]</span></p>
-<div class="fragment">
-<p>In complete analogy, for a <strong>continuous</strong> RV <span class="math inline">\(X\)</span>,</p>
-<p><span class="math display">\[
-\text{E}[X]=\int_{-\infty}^{+\infty} x \cdot f_X(x) dx
-\]</span></p>
-</div>
-</section>
-<section id="lotus" class="slide level2">
-<h2><a href="https://en.wikipedia.org/wiki/Law_of_the_unconscious_statistician">LOTUS</a></h2>
-<p>Let <span class="math inline">\(g(X)\)</span> be a function of a discrete RV <span class="math inline">\(X\)</span>.</p>
-<p><span class="math display">\[
-\text{E}\big[g(X)\big]=\sum_x g(x) \cdot p_X(x)
-\]</span></p>
-<div class="fragment">
-<p>In complete analogy, if <span class="math inline">\(X\)</span> is continuous,</p>
-<p><span class="math display">\[
-\text{E}\big[g(X)\big]=\int_{-\infty}^{+\infty} g(x) \cdot f_X(x) dx
-\]</span></p>
-</div>
-</section>
-<section id="linearity-of-the-expected-value" class="slide level2">
-<h2>Linearity of the expected value</h2>
-<p><span class="math display">\[
-\text{For any two constants $a$ and $b$,}
-\]</span></p>
-<p><span class="math display">\[
-\text{E}[aX+b]= a \text{E}[X] + b
+\begin{aligned}
+p_{X \mid Y}(x \mid y)&amp;=\text{P}(X=x \mid Y=y) \\
+\\
+&amp;=\frac{\text{P}(X=x, Y=y)}{\text{P}(Y=y)} \\
+\\
+&amp;=\frac{p_{X, Y}(x, y)}{p_Y(y)} \\
+\end{aligned}
 \]</span></p>
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
-<p>Proof</p>
 <p><span class="math display">\[
-\begin{aligned}
-\text{E}[aX+b]&amp;=\int_{-\infty}^{+\infty} (ax+b) f_X(x) dx \;  \color{gray}{\leftarrow\text{by LOTUS}} \\
-\\
-&amp;=\int_{-\infty}^{+\infty} ax f_X(x)dx + \int_{-\infty}^{+\infty}b f_X(x) dx  \\
-\\
-&amp;=a\int_{-\infty}^{+\infty} x f_X(x)dx + b\int_{-\infty}^{+\infty}f_X(x) dx  \\
-\\
-&amp;=a \text{E}[X] + b \\
-\end{aligned}
+p_{X \mid Y}(x \mid y)=\frac{p_{X, Y}(x, y)}{p_Y(y)}
 \]</span></p>
-</section>
-<section id="variance" class="slide level2">
-<h2>Variance</h2>
-<p>The variance of a RV <span class="math inline">\(X\)</span> is always defined as</p>
-<p><span class="math display">\[
-\text{var}(X)=\text{E}\big[(X-\text{E}[X])^2\big]
-\]</span></p>
-<div class="fragment">
-<p>By applying LOTUS, it can be calculated as</p>
-<p><span class="math display">\[
-\text{var}(X)=\int_{-\infty}^{+\infty} \big(x-\text{E}[X]\big)^2 \cdot f_X(x) dx
-\]</span></p>
-</div>
-<div class="fragment">
-<p>Property</p>
-<p><span class="math display">\[
-\text{var}(X) \geq 0, \;\;\;\; \text{for any $X$.}
-\]</span></p>
-</div>
+
+<img data-src="images/pmf-conditional.png" class="quarto-figure quarto-figure-center r-stretch"><p><span class="math inline">\(p_{X \mid Y}(x \mid y)\)</span> has the same shape as <span class="math inline">\(p_{X, Y}(x, y)\)</span> at <span class="math inline">\(Y=y\)</span> except that it is divided by <span class="math inline">\(p_Y(y)\)</span> to enforce the normalization property.</p>
 </section>
 <section id="section-1" class="slide level2">
 <h2></h2>
-<p>The shortcut formula also holds for continuous RVs.</p>
 <p><span class="math display">\[
-\text{var}(X)=\text{E}[X^2]-(\text{E}[X])^2
+\begin{aligned}
+\sum_x p_{X \mid Y}(x \mid y)&amp;=\sum_x \frac{p_{X,Y}(x,y)}{p_Y(y)} \\
+\\
+&amp;=\frac{1}{p_Y(y)}  \sum_x p_{X,Y}(x,y) \\
+\\
+&amp;=\frac{1}{p_Y(y)} \; p_Y(y) \\
+\\
+&amp;=1 \\
+\end{aligned}
+\]</span></p>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<ul>
+<li class="fragment"><p><span class="math inline">\(X\)</span>: whether they are a current smoker</p></li>
+<li class="fragment"><p><span class="math inline">\(Y\)</span>: whether they will develop lung cancer at some point</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><span class="math inline">\(Y=0\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Y=1\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p_X(x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(X=0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(72\%\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(3\%\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(75\%\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(X=1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(20\%\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(5\%\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(25\%\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(p_Y(y)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(92\%\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(8\%\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(100\%\)</span></td>
+</tr>
+</tbody>
+</table></li>
+<li class="fragment"><p>If an individual developed lung cancer, what is the probability that they are a current smoker?</p></li>
+</ul>
+</section>
+<section id="section-3" class="slide level2">
+<h2></h2>
+<ul>
+<li class="fragment"><p><span class="math inline">\(X\)</span>: whether they are a current smoker</p></li>
+<li class="fragment"><p><span class="math inline">\(Y\)</span>: whether they will develop lung cancer at some point</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><span class="math inline">\(Y=0\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Y=1\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p_X(x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(X=0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(72\%\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(3\%\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(75\%\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(X=1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(20\%\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(5\%\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(25\%\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(p_Y(y)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(92\%\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(8\%\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(100\%\)</span></td>
+</tr>
+</tbody>
+</table></li>
+<li class="fragment"><p>If an individual is a current smoker, what is the probability that they will develop lung cancer?</p></li>
+</ul>
+</section>
+<section id="slice-view-of-conditional-pmf" class="slide level2">
+<h2>Slice view of conditional PMF</h2>
+<p><span class="math display">\[
+p_{X \mid Y}(x \mid y)=\frac{p_{X, Y}(x, y)}{p_Y(y)}
+\]</span></p>
+
+<img data-src="images/pmf-conditional-x.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="slice-view-of-conditional-pmf-1" class="slide level2">
+<h2>Slice view of conditional PMF</h2>
+<p><span class="math display">\[
+p_{Y \mid X}(y \mid x)=\frac{p_{X, Y}(x, y)}{p_X(x)}
+\]</span></p>
+
+<img data-src="images/pmf-conditional-y.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="section-4" class="slide level2">
+<h2></h2>
+<p><span class="math display">\[
+\begin{aligned}
+p_{X \mid Y}(x \mid y)&amp;=\frac{p_{X, Y}(x, y)}{p_Y(y)} \\
+p_{X, Y}(x, y) &amp;= p_Y(y) \cdot p_{X \mid Y}(x \mid y) \\
+\end{aligned}
 \]</span></p>
 <div class="fragment">
+<p>Similarly,</p>
 <p><span class="math display">\[
-% \small{
 \begin{aligned}
-\text{Proof:}\;\;\;\;\text{var}(X)&amp;=\text{E}[(X-\text{E}[X])^2] \\
-\\
-&amp;=\text{E}[X^2-2X\cdot\text{E}[X]+\text{E}[X])^2] \\
-\\
-&amp;=\text{E}[X^2] -2\text{E}[X]\text{E}[X] + (\text{E}[X])^2 \\
-\\
-&amp;=\text{E}[X^2]-(\text{E}[X])^2
+p_{Y \mid X}(y \mid x)&amp;=\frac{p_{X, Y}(x, y)}{p_X(x)} \\
+p_{X, Y}(x, y) &amp;= p_X(x) \cdot p_{Y \mid X}(y \mid x)\\
 \end{aligned}
-% }
 \]</span></p>
 </div>
+<div class="fragment">
+<p>We often can use this formula to calculate the joint PMF.</p>
+</div>
 </section>
-<section id="other-properties-of-variance" class="slide level2">
-<h2>Other properties of variance</h2>
+<section id="section-5" class="slide level2">
+<h2></h2>
 <p><span class="math display">\[
-\text{For any two constants $a$ and $b$,}
+\begin{aligned}
+p_{X, Y}(x, y) &amp;= p_X(x) \cdot p_{Y \mid X}(y \mid x) \\
+\\
+&amp;= p_Y(y) \cdot p_{X \mid Y}(x \mid y) \\
+\end{aligned}
 \]</span></p>
+<p>Does this look like something we have learned before?</p>
+<div class="fragment">
+<p><br></p>
+<p>This is the counterpart of the multiplication rule.</p>
 <p><span class="math display">\[
-\text{var}(aX+b)=a^2\text{var}(X)
+\begin{aligned}
+\text{P}(A \cap B) &amp;= \text{P}(A) \cdot \text{P}(B \mid A) \\
+\\
+&amp;= \text{P}(B) \cdot \text{P}(A \mid B) \\
+\end{aligned}
 \]</span></p>
+<!-- ---
+
+# Exercise
+
+Consider the rolls of 4 dice 🎲🎲🎲🎲 
+
+- Let $X$ be the number of 1's obtained.
+- Let $Y$ be the number of 2's obtained.
+
+What is the joint PMF of $X$ and $Y$? -->
 
 
+</div>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">

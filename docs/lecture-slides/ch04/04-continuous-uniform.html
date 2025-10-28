@@ -10,7 +10,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.40">
 
-  <title>IMSE 317 – 4.3 Continuous expectation &amp; variance</title>
+  <title>IMSE 317 – 4.4 Continuous uniform distribution</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -127,114 +127,127 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">4.3 Continuous expectation &amp; variance</h1>
+  <h1 class="title">4.4 Continuous uniform distribution</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="expected-value" class="slide level2">
-<h2>Expected value</h2>
-<p>The expected value of a <strong>discrete</strong> RV <span class="math inline">\(X\)</span> is defined by</p>
-<p><span class="math display">\[
-\text{E}[X]=\sum_x x \cdot p_X(x)
-\]</span></p>
+<section id="continuous-uniform-distribution" class="slide level2">
+<h2><a href="https://en.wikipedia.org/wiki/Continuous_uniform_distribution">Continuous uniform distribution</a></h2>
+<ul>
+<li class="fragment">The continuous counterpart of the discrete uniform RV.</li>
+<li class="fragment">A RV <span class="math inline">\(X\)</span> that takes values in an interval <span class="math inline">\([a, b]\)</span>.</li>
+<li class="fragment">Any two sub-intervals of the same length have the same probability.</li>
+</ul>
 <div class="fragment">
-<p>In complete analogy, for a <strong>continuous</strong> RV <span class="math inline">\(X\)</span>,</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/unif-def.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<p><span class="math display">\[X \sim \text{unif}(a, b)\]</span></p>
+</div>
+</section>
+<section id="uniform-distribution" class="slide level2">
+<h2>Uniform distribution</h2>
+<p>Any two values in the interval <span class="math inline">\([a, b]\)</span> have the same probability density.</p>
+
+<img data-src="images/pdf-unif.png" class="quarto-figure quarto-figure-center r-stretch"><div class="fragment">
+<p>Probability density function</p>
 <p><span class="math display">\[
-\text{E}[X]=\int_{-\infty}^{+\infty} x \cdot f_X(x) dx
+f_X(x) =
+\begin{cases}
+\frac{1}{b-a}, &amp; \text{if $a &lt; x &lt; b$}, \\
+0,              &amp; \text{otherwise.}
+\end{cases}
 \]</span></p>
 </div>
 </section>
-<section id="lotus" class="slide level2">
-<h2><a href="https://en.wikipedia.org/wiki/Law_of_the_unconscious_statistician">LOTUS</a></h2>
-<p>Let <span class="math inline">\(g(X)\)</span> be a function of a discrete RV <span class="math inline">\(X\)</span>.</p>
-<p><span class="math display">\[
-\text{E}\big[g(X)\big]=\sum_x g(x) \cdot p_X(x)
-\]</span></p>
-<div class="fragment">
-<p>In complete analogy, if <span class="math inline">\(X\)</span> is continuous,</p>
-<p><span class="math display">\[
-\text{E}\big[g(X)\big]=\int_{-\infty}^{+\infty} g(x) \cdot f_X(x) dx
-\]</span></p>
-</div>
-</section>
-<section id="linearity-of-the-expected-value" class="slide level2">
-<h2>Linearity of the expected value</h2>
-<p><span class="math display">\[
-\text{For any two constants $a$ and $b$,}
-\]</span></p>
-<p><span class="math display">\[
-\text{E}[aX+b]= a \text{E}[X] + b
-\]</span></p>
+<section>
+<section id="interactive-visualization" class="title-slide slide level1 center">
+<h1><a href="https://probstats.org/uniform.html">Interactive visualization</a></h1>
+
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
-<p>Proof</p>
-<p><span class="math display">\[
+
+<img data-src="images/cdf-unif.png" class="quarto-figure quarto-figure-center r-stretch"><p><span class="math display">\[
 \begin{aligned}
-\text{E}[aX+b]&amp;=\int_{-\infty}^{+\infty} (ax+b) f_X(x) dx \;  \color{gray}{\leftarrow\text{by LOTUS}} \\
+F_X(x)&amp;=\int_{-\infty}^x f_X(t) dt \\
 \\
-&amp;=\int_{-\infty}^{+\infty} ax f_X(x)dx + \int_{-\infty}^{+\infty}b f_X(x) dx  \\
-\\
-&amp;=a\int_{-\infty}^{+\infty} x f_X(x)dx + b\int_{-\infty}^{+\infty}f_X(x) dx  \\
-\\
-&amp;=a \text{E}[X] + b \\
+&amp;=
+\begin{cases}
+    0, &amp; \text{if $x \leq a$,} \\\
+    \frac{x-a}{b-a}, &amp; \text{if $a &lt; x &lt; b$,} \\
+    1,              &amp; \text{if $x \geq b$.} \\
+\end{cases}
 \end{aligned}
 \]</span></p>
 </section>
-<section id="variance" class="slide level2">
-<h2>Variance</h2>
-<p>The variance of a RV <span class="math inline">\(X\)</span> is always defined as</p>
+<section id="standard-uniform-rv" class="slide level2">
+<h2>Standard uniform RV</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
 <p><span class="math display">\[
-\text{var}(X)=\text{E}\big[(X-\text{E}[X])^2\big]
+U \sim \text{unif}(0, 1)
 \]</span></p>
-<div class="fragment">
-<p>By applying LOTUS, it can be calculated as</p>
-<p><span class="math display">\[
-\text{var}(X)=\int_{-\infty}^{+\infty} \big(x-\text{E}[X]\big)^2 \cdot f_X(x) dx
-\]</span></p>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="images/pdf-std-unif.png" class="quarto-figure quarto-figure-right" height="220"></p>
+</figure>
 </div>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="images/cdf-std-unif.png" class="quarto-figure quarto-figure-right" height="220"></p>
+</figure>
+</div>
+</div></div>
 <div class="fragment">
-<p>Property</p>
+<div class="columns">
+<div class="column">
 <p><span class="math display">\[
-\text{var}(X) \geq 0, \;\;\;\; \text{for any $X$.}
+\small{
+f_U(u) =
+\begin{cases}
+    1, &amp; \text{if $0 &lt; u &lt; 1$,} \\
+    0,              &amp; \text{otherwise.}
+\end{cases}
+}
 \]</span></p>
+</div><div class="column">
+<p><span class="math display">\[
+\small{
+F_U(u)=
+\begin{cases}
+    0, &amp; \text{if $u \leq 0$,} \\
+    u, &amp; \text{if $0 &lt; u &lt; 1$,} \\
+    1, &amp; \text{if $u \geq 1$.} \\
+\end{cases}
+}
+\]</span></p>
+</div></div>
 </div>
 </section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-<p>The shortcut formula also holds for continuous RVs.</p>
+<section id="expected-value-variance" class="slide level2">
+<h2>Expected value &amp; variance</h2>
+<p><br></p>
 <p><span class="math display">\[
-\text{var}(X)=\text{E}[X^2]-(\text{E}[X])^2
-\]</span></p>
-<div class="fragment">
-<p><span class="math display">\[
-% \small{
 \begin{aligned}
-\text{Proof:}\;\;\;\;\text{var}(X)&amp;=\text{E}[(X-\text{E}[X])^2] \\
+X &amp;\sim \text{unif}(a, b) \\
 \\
-&amp;=\text{E}[X^2-2X\cdot\text{E}[X]+\text{E}[X])^2] \\
+\text{E}[X] &amp;= \;? \\
 \\
-&amp;=\text{E}[X^2] -2\text{E}[X]\text{E}[X] + (\text{E}[X])^2 \\
-\\
-&amp;=\text{E}[X^2]-(\text{E}[X])^2
+\text{var}(X) &amp;= \;?
 \end{aligned}
-% }
-\]</span></p>
-</div>
-</section>
-<section id="other-properties-of-variance" class="slide level2">
-<h2>Other properties of variance</h2>
-<p><span class="math display">\[
-\text{For any two constants $a$ and $b$,}
-\]</span></p>
-<p><span class="math display">\[
-\text{var}(aX+b)=a^2\text{var}(X)
 \]</span></p>
 
 
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

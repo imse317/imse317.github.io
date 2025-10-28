@@ -10,7 +10,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.40">
 
-  <title>IMSE 317 – 4.3 Continuous expectation &amp; variance</title>
+  <title>IMSE 317 – 4.5 Exponential distribution</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -127,114 +127,398 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">4.3 Continuous expectation &amp; variance</h1>
+  <h1 class="title">4.5 Exponential distribution</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="expected-value" class="slide level2">
-<h2>Expected value</h2>
-<p>The expected value of a <strong>discrete</strong> RV <span class="math inline">\(X\)</span> is defined by</p>
-<p><span class="math display">\[
-\text{E}[X]=\sum_x x \cdot p_X(x)
-\]</span></p>
-<div class="fragment">
-<p>In complete analogy, for a <strong>continuous</strong> RV <span class="math inline">\(X\)</span>,</p>
-<p><span class="math display">\[
-\text{E}[X]=\int_{-\infty}^{+\infty} x \cdot f_X(x) dx
-\]</span></p>
-</div>
-</section>
-<section id="lotus" class="slide level2">
-<h2><a href="https://en.wikipedia.org/wiki/Law_of_the_unconscious_statistician">LOTUS</a></h2>
-<p>Let <span class="math inline">\(g(X)\)</span> be a function of a discrete RV <span class="math inline">\(X\)</span>.</p>
-<p><span class="math display">\[
-\text{E}\big[g(X)\big]=\sum_x g(x) \cdot p_X(x)
-\]</span></p>
-<div class="fragment">
-<p>In complete analogy, if <span class="math inline">\(X\)</span> is continuous,</p>
-<p><span class="math display">\[
-\text{E}\big[g(X)\big]=\int_{-\infty}^{+\infty} g(x) \cdot f_X(x) dx
-\]</span></p>
-</div>
-</section>
-<section id="linearity-of-the-expected-value" class="slide level2">
-<h2>Linearity of the expected value</h2>
-<p><span class="math display">\[
-\text{For any two constants $a$ and $b$,}
-\]</span></p>
-<p><span class="math display">\[
-\text{E}[aX+b]= a \text{E}[X] + b
-\]</span></p>
-</section>
 <section id="section" class="slide level2">
 <h2></h2>
-<p>Proof</p>
-<p><span class="math display">\[
-\begin{aligned}
-\text{E}[aX+b]&amp;=\int_{-\infty}^{+\infty} (ax+b) f_X(x) dx \;  \color{gray}{\leftarrow\text{by LOTUS}} \\
-\\
-&amp;=\int_{-\infty}^{+\infty} ax f_X(x)dx + \int_{-\infty}^{+\infty}b f_X(x) dx  \\
-\\
-&amp;=a\int_{-\infty}^{+\infty} x f_X(x)dx + b\int_{-\infty}^{+\infty}f_X(x) dx  \\
-\\
-&amp;=a \text{E}[X] + b \\
-\end{aligned}
-\]</span></p>
+<p><strong>Geometric</strong> RV: # of coin tosses needed to see the first heads</p>
+<div class="fragment">
+<p><span class="math display">\[\small{p_X(k)=(1-p)^{k-1}p, \;\;\;\;\text{for } k=1, 2, \cdots }\]</span></p>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/pmf-geo-p50.png" class="quarto-figure quarto-figure-center" height="200"></p>
+</figure>
+</div>
+<div class="columns">
+<div class="column" style="width:70%;">
+<p><strong>Exponential</strong>:</p>
+<p>the continuous counterpart of geometric</p>
+</div><div class="column" style="width:30%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/expo-cover.png" class="quarto-figure quarto-figure-center" height="180"></p>
+</figure>
+</div>
+</div></div>
+</div>
 </section>
-<section id="variance" class="slide level2">
-<h2>Variance</h2>
-<p>The variance of a RV <span class="math inline">\(X\)</span> is always defined as</p>
-<p><span class="math display">\[
-\text{var}(X)=\text{E}\big[(X-\text{E}[X])^2\big]
-\]</span></p>
-<div class="fragment">
-<p>By applying LOTUS, it can be calculated as</p>
-<p><span class="math display">\[
-\text{var}(X)=\int_{-\infty}^{+\infty} \big(x-\text{E}[X]\big)^2 \cdot f_X(x) dx
-\]</span></p>
-</div>
-<div class="fragment">
-<p>Property</p>
-<p><span class="math display">\[
-\text{var}(X) \geq 0, \;\;\;\; \text{for any $X$.}
-\]</span></p>
-</div>
+<section id="exponential-distribution" class="slide level2">
+<h2><a href="https://en.wikipedia.org/wiki/Exponential_distribution">Exponential distribution</a></h2>
+<p>It is commonly used to model <strong>the time between two successive events</strong> (termed “interarrival time”).</p>
+<ul>
+<li class="fragment">Customers arriving at a store</li>
+<li class="fragment">Phone calls coming in to a call center</li>
+<li class="fragment">“Survival time” (i.e., time to failure) of components</li>
+</ul>
 </section>
 <section id="section-1" class="slide level2">
 <h2></h2>
-<p>The shortcut formula also holds for continuous RVs.</p>
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="images/pmf-geo-p50.png" class="quarto-figure quarto-figure-right" height="250"></p>
+</figure>
+</div>
+</div><div class="column">
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="images/pdf-expo-08.png" class="quarto-figure quarto-figure-left" height="250"></p>
+</figure>
+</div>
+</div></div>
+<p>Probability density function</p>
 <p><span class="math display">\[
-\text{var}(X)=\text{E}[X^2]-(\text{E}[X])^2
+f_X(x) =
+\begin{cases}
+    ce^{-\lambda x}, &amp; \text{if $x \geq 0$,} \\
+    0,              &amp; \text{otherwise.}
+\end{cases}
+\]</span></p>
+<p>where <span class="math inline">\(\lambda\)</span> is the rate parameter (<span class="math inline">\(\lambda&gt;0\)</span>).</p>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<p><span class="math display">\[
+\small{
+f_X(x) =
+\begin{cases}
+    ce^{-\lambda x}, &amp; \text{if $x \geq 0$,} \\
+    0,              &amp; \text{otherwise}
+\end{cases}
+}
+\]</span></p>
+<p>The constant <span class="math inline">\(c\)</span> is to ensure the normalization property.</p>
+<div class="fragment">
+<p><span class="math display">\[
+\small{
+\begin{aligned}
+\int_{-\infty}^{+\infty}f_X(x)dx = \int_0^{+\infty}ce^{-\lambda x}dx
+&amp;=c\big(-\frac{1}{\lambda}\big)e^{-\lambda x}\bigg|_0^{+\infty} \\
+\\
+&amp;=-\frac{c}{\lambda}(0-1)\\
+\\
+&amp;=\frac{c}{\lambda} \color{red}{= 1} \\
+\end{aligned}
+}
+\]</span></p>
+<!-- Thus $c=\lambda$. -->
+</div>
+</section>
+<section id="exponential-pdf" class="slide level2">
+<h2>Exponential PDF</h2>
+<p><span class="math display">\[
+X \sim \text{expo}(\lambda)
+\]</span></p>
+<p><span class="math display">\[
+f_X(x) =
+\begin{cases}
+    \lambda e^{-\lambda x}, &amp; \text{if $x \geq 0$,} \\
+    0,              &amp; \text{otherwise.}
+\end{cases}
 \]</span></p>
 <div class="fragment">
 <p><span class="math display">\[
-% \small{
+f_X(0) = \lambda e^{-\lambda \cdot 0}=\lambda e^0 = \lambda \cdot 1 = \lambda
+\]</span></p>
+</div>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><img data-src="images/pdf-expo-04.png"></p>
+</div><div class="column" style="width:33%;">
+<p><img data-src="images/pdf-expo-08.png"></p>
+</div><div class="column" style="width:33%;">
+<p><img data-src="images/pdf-expo-16.png"></p>
+</div></div>
+</div>
+</section>
+<section>
+<section id="interactive-visualization" class="title-slide slide level1 center">
+<h1><a href="https://probstats.org/exponential.html">Interactive visualization</a></h1>
+
+</section>
+<section id="exponential-cdf" class="slide level2">
+<h2>Exponential CDF</h2>
+<p><span class="math display">\[
+\small{
+f_X(x) =
+\begin{cases}
+    \lambda e^{-\lambda x}, &amp; \text{if $x \geq 0$,} \\
+    0,              &amp; \text{otherwise.}
+\end{cases}
+}
+\]</span></p>
+<div class="fragment">
+<p><span class="math display">\[
+\small{
 \begin{aligned}
-\text{Proof:}\;\;\;\;\text{var}(X)&amp;=\text{E}[(X-\text{E}[X])^2] \\
-\\
-&amp;=\text{E}[X^2-2X\cdot\text{E}[X]+\text{E}[X])^2] \\
-\\
-&amp;=\text{E}[X^2] -2\text{E}[X]\text{E}[X] + (\text{E}[X])^2 \\
-\\
-&amp;=\text{E}[X^2]-(\text{E}[X])^2
+\text{If } x \leq 0, \;\;\;\; F_X(x)&amp;=\text{P}(X \leq x)=0 \\
+\text{If } x &gt; 0, \;\;\;\; F_X(x)&amp;=\int_0^{x}\lambda e^{-\lambda x}dx=-e^{-\lambda x}\bigg|_0^x=1-e^{-\lambda x}\
 \end{aligned}
-% }
+}
+\]</span></p>
+</div>
+<div class="fragment">
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="images/pdf-expo-lambda.png" class="quarto-figure quarto-figure-right" height="200"></p>
+</figure>
+</div>
+</div><div class="column">
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="images/cdf-expo.png" class="quarto-figure quarto-figure-left" height="200"></p>
+</figure>
+</div>
+</div></div>
+</div>
+</section>
+<section id="exponential-cdf-1" class="slide level2">
+<h2>Exponential CDF</h2>
+<p><span class="math display">\[
+\small{
+F_X(x) =
+\begin{cases}
+    0,                &amp; \text{if $x \leq 0$,} \\
+    1-e^{-\lambda x}, &amp; \text{if $x &gt; 0$}.
+\end{cases}
+}
+\]</span></p>
+<div class="fragment">
+<p><span class="math display">\[
+\small{
+\text{P}(X &gt; x) = 1-F_X(x)=1-\big(1-e^{-\lambda x}\big)=e^{-\lambda x}
+}
+\]</span></p>
+</div>
+<div class="fragment">
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="images/cdf-expo.png" class="quarto-figure quarto-figure-right" height="250"></p>
+</figure>
+</div>
+</div><div class="column">
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="images/cdf-expo-1minus.png" class="quarto-figure quarto-figure-left" height="250"></p>
+</figure>
+</div>
+</div></div>
+</div>
+</section>
+<section id="memoryless-property" class="slide level2">
+<h2>Memoryless property</h2>
+<ul>
+<li class="fragment">Assume time between phone calls is an exponential RV.</li>
+<li class="fragment">You have waited for 2 hours, and there was no phone call.</li>
+<li class="fragment">The prob. of having to wait for at least one more hour, is the same as the prob. of having to wait for at least one hour.</li>
+<li class="fragment">Every instant is like the beginning of a new random period, which has the same distribution regardless of how much time has already passed.</li>
+<li class="fragment">Geometric and exponential RVs are the only two RVs that have this memoryless property.</li>
+</ul>
+</section>
+<section id="memoryless-property-1" class="slide level2">
+<h2>Memoryless property</h2>
+<p>Given that <span class="math inline">\(X\)</span> has already exceeded <span class="math inline">\(t\)</span>, the probability of <span class="math inline">\(X\)</span> exceeding an additional <span class="math inline">\(s\)</span> is simply the same as the probability of <span class="math inline">\(X\)</span> exceeding <span class="math inline">\(s\)</span>.</p>
+<div class="fragment">
+<p><span class="math display">\[
+\text{P}(X&gt;t+s|X&gt;t)=\text{P}(X&gt;s)
+\]</span></p>
+<p><span class="math display">\[
+\text{for all nonnegative values $t$ and $s$}
+\]</span></p>
+<!-- .center[[Proof](#memoryless_appendix)] -->
+</div>
+<div class="fragment">
+<p>The past has no bearing on its future behavior.</p>
+</div>
+</section>
+<section id="section-3" class="slide level2">
+<h2></h2>
+<p><span class="math display">\[
+\small{
+\begin{aligned}
+\text{Proof:}\;\;\;\;\text{P}(X&gt;t+s|X&gt;t)&amp;=\frac{\text{P}\big((X&gt;t+s) \cap (X&gt;t)\big)}{\text{P}(X&gt;t)} \\
+\\
+&amp;=\frac{\text{P}(X&gt;t+s)}{\text{P}(X&gt;t)} \\
+\\
+&amp;=\frac{e^{-\lambda(t+s)}}{e^{-\lambda t}} \\
+\\
+&amp;=e^{-\lambda s} = \text{P}(X&gt;s) \\
+\end{aligned}
+}
+\]</span></p>
+</section>
+<section id="exercise" class="slide level2">
+<h2>Exercise</h2>
+<ul>
+<li class="fragment">Assume the time until you receive a new email is exponentially distributed with a rate of 12 emails a day.</li>
+<li class="fragment">Assume the time is currently at noon.</li>
+<li class="fragment">What is the probability of <!-- - getting an email within the next 2 hours? -->
+<ul>
+<li class="fragment">not getting any emails within the next 2 hours?</li>
+<li class="fragment">getting the first email between 4 PM and 6 PM? <!-- - not getting any emails --></li>
+</ul></li>
+<li class="fragment">Now it is 1 PM, and you have yet received any email.
+<ul>
+<li class="fragment">What is the probability of getting one in the next 2 hours?</li>
+</ul></li>
+</ul>
+</section>
+<section id="expected-value" class="slide level2">
+<h2>Expected value</h2>
+<p><span class="math display">\[
+X \sim \text{expo}(\lambda)
+\]</span></p>
+<p><span class="math display">\[
+f_X(x) =
+\begin{cases}
+    \lambda e^{-\lambda x}, &amp; \text{if $x \geq 0$,} \\
+    0,              &amp; \text{otherwise.}
+\end{cases}
+\]</span></p>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><span class="math display">\[
+\text{E}[X]=\frac{1}{\lambda}
+\]</span></p>
+</div><div class="column" style="width:80%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/pdf-expo-expectation.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div></div>
+</div>
+</section>
+<section id="section-4" class="slide level2">
+<h2></h2>
+<p><span class="math display">\[
+\small{
+\begin{aligned}
+\text{Proof:}\;\;\;\;\text{E}[X]&amp;=\int_0^{+\infty} x\lambda e^{-\lambda x} dx \;\;\;\;\;\;\;\; \color{gray}{\leftarrow\text{Integration by parts}} \\
+\\
+&amp;=x\big(-e^{-\lambda x}\big)\bigg|_0^{+\infty}-\int_0^{+\infty}1\cdot\big(-e^{-\lambda x}\big) dx \\
+\\
+&amp;=(0-0)+\int_0^{+\infty}e^{-\lambda x} dx \\
+&amp;=-\frac{1}{\lambda}e^{-\lambda x}\bigg|_0^{+\infty}
+=0-\big(-\frac{1}{\lambda}\big)\cdot 1 =\frac{1}{\lambda} \\
+\end{aligned}
+}
+\]</span></p>
+<!-- .center[[Proof](#expo_expectation_appendix) -->
+</section>
+<section id="variance" class="slide level2">
+<h2>Variance</h2>
+<p><span class="math display">\[
+X \sim \text{expo}(\lambda)
+\]</span></p>
+<p><span class="math display">\[
+\text{var}(X)=\sigma^2=\frac{1}{\lambda^2}
+\]</span></p>
+<!-- .center[[Proof](#expo_variance_appendix)] -->
+<div class="fragment">
+<p>Standard deviation: <span class="math display">\[
+\sigma =\sqrt{\sigma^2}=\frac{1}{\lambda}
 \]</span></p>
 </div>
 </section>
-<section id="other-properties-of-variance" class="slide level2">
-<h2>Other properties of variance</h2>
+<section id="section-5" class="slide level2">
+<h2></h2>
 <p><span class="math display">\[
-\text{For any two constants $a$ and $b$,}
+\small{
+\begin{aligned}
+\text{Proof:}\;\;\;\;\text{E}[X^2]&amp;=\int_0^{+\infty} x^2\lambda e^{-\lambda x} dx \;\; \color{gray}{\leftarrow\text{Integration by parts}} \\
+&amp;=x^2\big(-e^{-\lambda x}\big)\bigg|_0^{+\infty}-\int_0^{+\infty}2x\cdot\big(-e^{-\lambda x}\big) dx \\
+&amp;=(0-0)+2\int_0^{+\infty}xe^{-\lambda x} dx \\
+&amp;=\frac{2}{\lambda}\int_0^{+\infty}x\lambda e^{-\lambda x} dx \\
+&amp;=\frac{2}{\lambda}\cdot\text{E}[X]
+=\frac{2}{\lambda}\cdot\frac{1}{\lambda}=\frac{2}{\lambda^2} \\
+\end{aligned}
+}
 \]</span></p>
-<p><span class="math display">\[
-\text{var}(aX+b)=a^2\text{var}(X)
-\]</span></p>
-
-
 </section>
+<section id="section-6" class="slide level2">
+<h2></h2>
+<p>Apply the shortcut formula for calculating the variance.</p>
+<p><span class="math display">\[
+\small{
+\begin{aligned}
+\text{var}(X)&amp;=\text{E}[X^2]-\big(\text{E}[X]\big)^2 \\
+\\
+&amp;=\frac{2}{\lambda^2}-\big(\frac{1}{\lambda}\big)^2 \\
+\\
+&amp;=\frac{1}{\lambda^2}
+\end{aligned}
+}
+\]</span></p>
+</section>
+<section id="section-7" class="slide level2">
+<h2></h2>
+<p><span class="math display">\[
+\small{
+f_X(x) =
+\begin{cases}
+    \lambda e^{-\lambda x}, &amp; \text{if $x \geq 0$,} \\\
+    0,                      &amp; \text{otherwise.}
+\end{cases}
+}
+\]</span></p>
+<p><span class="math inline">\(\lambda\)</span> is the <strong>rate</strong> parameter (e.g, 2 emails per hour)</p>
+<div class="fragment">
+<p><span class="math display">\[
+\small{
+\text{E}[X]=\frac{1}{\lambda}; \;\; \text{var}(X)=\frac{1}{\lambda^2}
+}
+\]</span></p>
+</div>
+<div class="fragment">
+<p>We can replace <span class="math inline">\(\lambda\)</span> with <span class="math inline">\(1/\beta\)</span>.</p>
+<p><span class="math display">\[
+\small{
+f_X(x) =
+\begin{cases}
+    1/\beta \cdot e^{-\frac{x}{\beta}}, &amp; \text{if $x \geq 0$,} \\
+    0,                                  &amp; \text{otherwise.}
+\end{cases}
+}
+\]</span></p>
+<p><span class="math inline">\(\beta\)</span> is the mean parameter (e.g, 0.5 hours between emails)</p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+\small{
+\text{E}[X]=\beta; \;\; \text{var}(X)=\beta^2
+}
+\]</span></p>
+</div>
+<div class="fragment">
+<p>These are two “parameterizations” of the distribution.</p>
+
+
+</div>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
