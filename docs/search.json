@@ -1,249 +1,171 @@
 [
   {
-    "objectID": "lecture-slides/ch05/02-conditional-pmf.html#conditional-pmf",
-    "href": "lecture-slides/ch05/02-conditional-pmf.html#conditional-pmf",
-    "title": "5.2 Conditional PMF",
-    "section": "Conditional PMF",
-    "text": "Conditional PMF\nThe conditional PMF of \\(X\\) given \\(Y=y\\) is defined by\n\\[\n\\begin{aligned}\np_{X \\mid Y}(x \\mid y)&=\\text{P}(X=x \\mid Y=y) \\\\\n\\\\\n&=\\frac{\\text{P}(X=x, Y=y)}{\\text{P}(Y=y)} \\\\\n\\\\\n&=\\frac{p_{X, Y}(x, y)}{p_Y(y)} \\\\\n\\end{aligned}\n\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 5. Joint random variables",
-      "5.2 Conditional PMF"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch05/02-conditional-pmf.html#section",
-    "href": "lecture-slides/ch05/02-conditional-pmf.html#section",
-    "title": "5.2 Conditional PMF",
+    "objectID": "lecture-slides/ch05/03-discrete-independence.html#section",
+    "href": "lecture-slides/ch05/03-discrete-independence.html#section",
+    "title": "5.3 Discrete independence",
     "section": "",
-    "text": "\\[\np_{X \\mid Y}(x \\mid y)=\\frac{p_{X, Y}(x, y)}{p_Y(y)}\n\\]\n\n\\(p_{X \\mid Y}(x \\mid y)\\) has the same shape as \\(p_{X, Y}(x, y)\\) at \\(Y=y\\) except that it is divided by \\(p_Y(y)\\) to enforce the normalization property.",
+    "text": "Recall the definition of independence in Chapter 2.\nTwo events \\(A\\) and \\(B\\) are independent if\n\\[\n\\text{P}(A \\mid B)=\\text{P}(A)\n\\]\n\nBy the definition of the conditional probability,\n\\[\n\\text{P}(A \\mid B)=\\frac{\\text{P}(A \\cap B)}{\\text{P}(B)}\n\\]\nWe have\n\\[\n\\text{P}(A \\cap B) = \\text{P}(A) \\cdot \\text{P}(B), \\;\\; \\text{if $A$ and $B$ are independent.}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 5. Joint random variables",
-      "5.2 Conditional PMF"
+      "5.3 Discrete independence"
     ]
   },
   {
-    "objectID": "lecture-slides/ch05/02-conditional-pmf.html#section-1",
-    "href": "lecture-slides/ch05/02-conditional-pmf.html#section-1",
-    "title": "5.2 Conditional PMF",
+    "objectID": "lecture-slides/ch05/03-discrete-independence.html#section-1",
+    "href": "lecture-slides/ch05/03-discrete-independence.html#section-1",
+    "title": "5.3 Discrete independence",
     "section": "",
-    "text": "\\[\n\\begin{aligned}\n\\sum_x p_{X \\mid Y}(x \\mid y)&=\\sum_x \\frac{p_{X,Y}(x,y)}{p_Y(y)} \\\\\n\\\\\n&=\\frac{1}{p_Y(y)}  \\sum_x p_{X,Y}(x,y) \\\\\n\\\\\n&=\\frac{1}{p_Y(y)} \\; p_Y(y) \\\\\n\\\\\n&=1 \\\\\n\\end{aligned}\n\\]",
+    "text": "Two RVs \\(X\\) and \\(Y\\) are independent if\n\\[\np_{X \\mid Y}(x \\mid y)=p_X(x), \\;\\;\\; \\text{for all $x$ and $y$ with $p_Y(y)&gt;0$.}\n\\]\n\nKnowing \\(Y=y\\) does not affect our believe on how likely \\(X=x\\) occurs.\n\n\nBy the definition of the conditional PMF,\n\\[\np_{X \\mid Y}(x \\mid y)=\\frac{p_{X, Y}(x, y)}{p_Y(y)}\n\\]\n\n\n\\(X\\) and \\(Y\\) are independent if\n\\[\np_{X, Y}(x, y) = p_X(x) \\cdot p_{Y}(y), \\;\\; \\text{for all $x$ and $y$.}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 5. Joint random variables",
-      "5.2 Conditional PMF"
+      "5.3 Discrete independence"
     ]
   },
   {
-    "objectID": "lecture-slides/ch05/02-conditional-pmf.html#section-2",
-    "href": "lecture-slides/ch05/02-conditional-pmf.html#section-2",
-    "title": "5.2 Conditional PMF",
+    "objectID": "lecture-slides/ch05/03-discrete-independence.html#section-2",
+    "href": "lecture-slides/ch05/03-discrete-independence.html#section-2",
+    "title": "5.3 Discrete independence",
     "section": "",
-    "text": "\\(X\\): whether they are a current smoker\n\\(Y\\): whether they will develop lung cancer at some point\n\n\n\n\n\\(Y=0\\)\n\\(Y=1\\)\n\\(p_X(x)\\)\n\n\n\n\n\\(X=0\\)\n\\(72\\%\\)\n\\(3\\%\\)\n\\(75\\%\\)\n\n\n\\(X=1\\)\n\\(20\\%\\)\n\\(5\\%\\)\n\\(25\\%\\)\n\n\n\\(p_Y(y)\\)\n\\(92\\%\\)\n\\(8\\%\\)\n\\(100\\%\\)\n\n\n\nIf an individual developed lung cancer, what is the probability that they are a current smoker?",
+    "text": "\\(X\\) and \\(Y\\) are the rolls on two 4-sided dice\nAre \\(X\\) and \\(Y\\) independent?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(Y=1\\)\n\\(Y=2\\)\n\\(Y=3\\)\n\\(Y=4\\)\n\\(p_X(x)\\)\n\n\n\n\n\\(X=1\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{4}\\)\n\n\n\\(X=2\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{4}\\)\n\n\n\\(X=3\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{4}\\)\n\n\n\\(X=4\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{4}\\)\n\n\n\\(p_Y(y)\\)\n\\(\\frac{1}{4}\\)\n\\(\\frac{1}{4}\\)\n\\(\\frac{1}{4}\\)\n\\(\\frac{1}{4}\\)\n\\(\\frac{100}{100}\\)\n\n\n\n\n\nKnowing the 1st roll doesn’t give us any info about the 2nd roll.",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 5. Joint random variables",
-      "5.2 Conditional PMF"
+      "5.3 Discrete independence"
     ]
   },
   {
-    "objectID": "lecture-slides/ch05/02-conditional-pmf.html#section-3",
-    "href": "lecture-slides/ch05/02-conditional-pmf.html#section-3",
-    "title": "5.2 Conditional PMF",
+    "objectID": "lecture-slides/ch05/03-discrete-independence.html#section-3",
+    "href": "lecture-slides/ch05/03-discrete-independence.html#section-3",
+    "title": "5.3 Discrete independence",
     "section": "",
-    "text": "\\(X\\): whether they are a current smoker\n\\(Y\\): whether they will develop lung cancer at some point\n\n\n\n\n\\(Y=0\\)\n\\(Y=1\\)\n\\(p_X(x)\\)\n\n\n\n\n\\(X=0\\)\n\\(72\\%\\)\n\\(3\\%\\)\n\\(75\\%\\)\n\n\n\\(X=1\\)\n\\(20\\%\\)\n\\(5\\%\\)\n\\(25\\%\\)\n\n\n\\(p_Y(y)\\)\n\\(92\\%\\)\n\\(8\\%\\)\n\\(100\\%\\)\n\n\n\nIf an individual is a current smoker, what is the probability that they will develop lung cancer?",
+    "text": "\\(X\\) is the roll on the die #1, \\(T\\) is the sum of the two rolls.\nAre \\(X\\) and \\(T\\) independent?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(X \\setminus T\\)\n\\(2\\)\n\\(3\\)\n\\(4\\)\n\\(5\\)\n\\(6\\)\n\\(7\\)\n\\(8\\)\n\\(p_X(x)\\)\n\n\n\n\n\\(1\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(0\\)\n\\(0\\)\n\\(0\\)\n\\(\\frac{1}{4}\\)\n\n\n\\(2\\)\n\\(0\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(0\\)\n\\(0\\)\n\\(\\frac{1}{4}\\)\n\n\n\\(3\\)\n\\(0\\)\n\\(0\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(0\\)\n\\(\\frac{1}{4}\\)\n\n\n\\(4\\)\n\\(0\\)\n\\(0\\)\n\\(0\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{4}\\)\n\n\n\\(p_T(t)\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{2}{16}\\)\n\\(\\frac{3}{16}\\)\n\\(\\frac{4}{16}\\)\n\\(\\frac{3}{16}\\)\n\\(\\frac{2}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(1\\)\n\n\n\n\n\nKnowing the 1st roll gives us some info about the sum.",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 5. Joint random variables",
-      "5.2 Conditional PMF"
+      "5.3 Discrete independence"
     ]
   },
   {
-    "objectID": "lecture-slides/ch05/02-conditional-pmf.html#slice-view-of-conditional-pmf",
-    "href": "lecture-slides/ch05/02-conditional-pmf.html#slice-view-of-conditional-pmf",
-    "title": "5.2 Conditional PMF",
-    "section": "Slice view of conditional PMF",
-    "text": "Slice view of conditional PMF\n\\[\np_{X \\mid Y}(x \\mid y)=\\frac{p_{X, Y}(x, y)}{p_Y(y)}\n\\]",
+    "objectID": "lecture-slides/ch05/04-joint-pdf.html#probability-density-function-pdf",
+    "href": "lecture-slides/ch05/04-joint-pdf.html#probability-density-function-pdf",
+    "title": "5.4 Joint PDF",
+    "section": "Probability density function (PDF)",
+    "text": "Probability density function (PDF)\nA RV \\(X\\) is called continuous if there is a nonnegative function \\(f_X\\), such that\n\\[\n\\begin{aligned}\n&\\text{P}(X \\in B)=\\int_B f_X dx \\\\\n\\\\\n&\\text{for every subset $B$ of the real line.} \\\\\n\\end{aligned}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 5. Joint random variables",
-      "5.2 Conditional PMF"
+      "5.4 Joint PDF"
     ]
   },
   {
-    "objectID": "lecture-slides/ch05/02-conditional-pmf.html#slice-view-of-conditional-pmf-1",
-    "href": "lecture-slides/ch05/02-conditional-pmf.html#slice-view-of-conditional-pmf-1",
-    "title": "5.2 Conditional PMF",
-    "section": "Slice view of conditional PMF",
-    "text": "Slice view of conditional PMF\n\\[\np_{Y \\mid X}(y \\mid x)=\\frac{p_{X, Y}(x, y)}{p_X(x)}\n\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 5. Joint random variables",
-      "5.2 Conditional PMF"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch05/02-conditional-pmf.html#section-4",
-    "href": "lecture-slides/ch05/02-conditional-pmf.html#section-4",
-    "title": "5.2 Conditional PMF",
+    "objectID": "lecture-slides/ch05/04-joint-pdf.html#section",
+    "href": "lecture-slides/ch05/04-joint-pdf.html#section",
+    "title": "5.4 Joint PDF",
     "section": "",
-    "text": "\\[\n\\begin{aligned}\np_{X \\mid Y}(x \\mid y)&=\\frac{p_{X, Y}(x, y)}{p_Y(y)} \\\\\np_{X, Y}(x, y) &= p_Y(y) \\cdot p_{X \\mid Y}(x \\mid y) \\\\\n\\end{aligned}\n\\]\n\nSimilarly,\n\\[\n\\begin{aligned}\np_{Y \\mid X}(y \\mid x)&=\\frac{p_{X, Y}(x, y)}{p_X(x)} \\\\\np_{X, Y}(x, y) &= p_X(x) \\cdot p_{Y \\mid X}(y \\mid x)\\\\\n\\end{aligned}\n\\]\n\n\nWe often can use this formula to calculate the joint PMF.",
+    "text": "Consider two continuous RVs \\(X\\) and \\(Y\\) from the same experiment.\nThe joint PDF is a nonnegative function that satisfies\n\\[\n\\text{P}\\big((X, Y) \\in A\\big)=\\iint\\limits_{(x, y) \\in A} f_{X, Y}(x, y) dxdy\n\\]\nThe integration is carried over \\(A\\) on the 2-D plane.",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 5. Joint random variables",
-      "5.2 Conditional PMF"
+      "5.4 Joint PDF"
     ]
   },
   {
-    "objectID": "lecture-slides/ch05/02-conditional-pmf.html#section-5",
-    "href": "lecture-slides/ch05/02-conditional-pmf.html#section-5",
-    "title": "5.2 Conditional PMF",
+    "objectID": "lecture-slides/ch05/04-joint-pdf.html#section-1",
+    "href": "lecture-slides/ch05/04-joint-pdf.html#section-1",
+    "title": "5.4 Joint PDF",
     "section": "",
-    "text": "\\[\n\\begin{aligned}\np_{X, Y}(x, y) &= p_X(x) \\cdot p_{Y \\mid X}(y \\mid x) \\\\\n\\\\\n&= p_Y(y) \\cdot p_{X \\mid Y}(x \\mid y) \\\\\n\\end{aligned}\n\\]\nDoes this look like something we have learned before?\n\n\nThis is the counterpart of the multiplication rule.\n\\[\n\\begin{aligned}\n\\text{P}(A \\cap B) &= \\text{P}(A) \\cdot \\text{P}(B \\mid A) \\\\\n\\\\\n&= \\text{P}(B) \\cdot \\text{P}(A \\mid B) \\\\\n\\end{aligned}\n\\]",
+    "text": "\\[\n\\text{P}\\big((X, Y) \\in A\\big)=\\iint\\limits_{(x, y) \\in A} f_{X, Y}(x, y) dxdy\n\\]\n\n\n\n \\[\n\\text{Let } A=\\{(x, y) \\mid a &lt; x &lt; b, c &lt; y &lt; d\\}\n\\]\n\n\n\n\n\n\n\n\n\n\\[\n\\text{P}(a &lt; x &lt; b, \\; c &lt; y &lt; d)=\\int_c^d \\int_a^b f_{X, Y}(x, y)dxdy\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 5. Joint random variables",
-      "5.2 Conditional PMF"
+      "5.4 Joint PDF"
     ]
   },
   {
-    "objectID": "lecture-slides/ch05/01-joint-pmf.html#joint-pmf-visualization",
-    "href": "lecture-slides/ch05/01-joint-pmf.html#joint-pmf-visualization",
-    "title": "5.1 Joint PMF",
-    "section": "Joint PMF visualization",
-    "text": "Joint PMF visualization",
+    "objectID": "lecture-slides/ch05/04-joint-pdf.html#single-continuous-rv",
+    "href": "lecture-slides/ch05/04-joint-pdf.html#single-continuous-rv",
+    "title": "5.4 Joint PDF",
+    "section": "Single continuous RV",
+    "text": "Single continuous RV\n\\[\n\\text{P}(a &lt; X &lt; b)=\\int_a^b f_X dx\n\\]\nThe probability is the area under the density curve.",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 5. Joint random variables",
-      "5.1 Joint PMF"
+      "5.4 Joint PDF"
     ]
   },
   {
-    "objectID": "lecture-slides/ch05/01-joint-pmf.html#section",
-    "href": "lecture-slides/ch05/01-joint-pmf.html#section",
-    "title": "5.1 Joint PMF",
+    "objectID": "lecture-slides/ch05/04-joint-pdf.html#two-continuous-rvs",
+    "href": "lecture-slides/ch05/04-joint-pdf.html#two-continuous-rvs",
+    "title": "5.4 Joint PDF",
+    "section": "Two continuous RVs",
+    "text": "Two continuous RVs\n\\[\n\\text{P}(a &lt; x &lt; b, \\; c &lt; y &lt; d)=\\int_c^d \\int_a^b f_{X, Y}(x, y)dxdy\n\\]\n\n\n\n\n\nThe probability is the volume under the density surface.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 5. Joint random variables",
+      "5.4 Joint PDF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch05/04-joint-pdf.html#section-2",
+    "href": "lecture-slides/ch05/04-joint-pdf.html#section-2",
+    "title": "5.4 Joint PDF",
     "section": "",
-    "text": "We randomly sample an adult from the MI population.\n\n\\(X\\): whether they are a current smoker\n\\(Y\\): whether they will develop lung cancer at some point\n\nSuppose the joint PMF is as follows.\n\n\n\n\n\\(Y=0\\)\n\\(Y=1\\)\n\n\n\n\n\\(X=0\\)\n\\(72\\%\\)\n\\(3\\%\\)\n\n\n\\(X=1\\)\n\\(20\\%\\)\n\\(5\\%\\)\n\n\n\n\n\n\nAll number are fictional.",
+    "text": "\\[\n\\begin{aligned}\n&\\text{P}(a &lt; x &lt; a+\\delta, c &lt; y &lt; c+\\delta) \\\\\n\\\\\n=\\;&\\int_c^{c+\\delta} \\int_a^{a+\\delta} f_{X, Y}(x, y)dxdy \\\\\n\\\\\n\\approx \\;& f_{X, Y}(a, c) \\cdot \\delta ^2 \\\\\n\\end{aligned}\n\\]\n\\(f_{X, Y}(a, c)\\) is the probability per unit area in the vicinity of \\((a, c)\\).",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 5. Joint random variables",
-      "5.1 Joint PMF"
+      "5.4 Joint PDF"
     ]
   },
   {
-    "objectID": "lecture-slides/ch05/01-joint-pmf.html#non-negativity",
-    "href": "lecture-slides/ch05/01-joint-pmf.html#non-negativity",
-    "title": "5.1 Joint PMF",
-    "section": "Non-negativity",
-    "text": "Non-negativity\nPMF of a single discrete RV \\(X\\)\n\\[\np_X(x) \\geq 0, \\;\\; \\text{for all $x$.}\n\\]\n\nJoint PMF of two discrete RVs \\(X\\) and \\(Y\\)\n\\[\np_{X, Y}(x, y) \\geq 0, \\;\\;\\;\\; \\text{for all $x$ and $y$.}\n\\]",
+    "objectID": "lecture-slides/ch05/04-joint-pdf.html#visualization-of-joint-pdf",
+    "href": "lecture-slides/ch05/04-joint-pdf.html#visualization-of-joint-pdf",
+    "title": "5.4 Joint PDF",
+    "section": "Visualization of joint PDF",
+    "text": "Visualization of joint PDF",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 5. Joint random variables",
-      "5.1 Joint PMF"
+      "5.4 Joint PDF"
     ]
   },
   {
-    "objectID": "lecture-slides/ch05/01-joint-pmf.html#normalization-property",
-    "href": "lecture-slides/ch05/01-joint-pmf.html#normalization-property",
-    "title": "5.1 Joint PMF",
-    "section": "Normalization property",
-    "text": "Normalization property\n\nFor a single discrete RV \\(X\\), we have \\(\\sum_x p_X(x)=1\\).\nJoint PMF of two discrete RVs \\(X\\) and \\(Y\\) \\[\n  \\sum_x\\sum_y p_{X, Y}(x, y)=1\n  \\]\n\n\n\n\n\n\n\\(Y=0\\)\n\\(Y=1\\)\n\n\n\n\n\\(X=0\\)\n\\(72\\%\\)\n\\(3\\%\\)\n\n\n\\(X=1\\)\n\\(20\\%\\)\n\\(5\\%\\)",
+    "objectID": "lecture-slides/ch05/04-joint-pdf.html#the-normalization-property-1-d",
+    "href": "lecture-slides/ch05/04-joint-pdf.html#the-normalization-property-1-d",
+    "title": "5.4 Joint PDF",
+    "section": "The normalization property (1-D)",
+    "text": "The normalization property (1-D)\nFor a single continuous RV, we have \\(\\int_{-\\infty}^{+\\infty} f_X dx=1\\).\n\n\n\n\n\n\nThe total area under the density curve is 1.",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 5. Joint random variables",
-      "5.1 Joint PMF"
+      "5.4 Joint PDF"
     ]
   },
   {
-    "objectID": "lecture-slides/ch05/01-joint-pmf.html#cumulative-distribution-function",
-    "href": "lecture-slides/ch05/01-joint-pmf.html#cumulative-distribution-function",
-    "title": "5.1 Joint PMF",
-    "section": "Cumulative Distribution Function",
-    "text": "Cumulative Distribution Function\nThe CDF of a RV \\(X\\) is (always) defined by\n\\[\nF_X(x)=\\text{P}(X \\leq x), \\;\\; \\text{for all $x$.}\n\\]\n\nThe joint CDF of two RVs \\(X\\) and \\(Y\\) is defined by\n\\[\nF_{X, Y}(x, y)=\\text{P}(X \\leq x, Y \\leq y), \\;\\;\\;\\;\\;\\text{for all $x$ and $y$.}\n\\]\n\n\nJoint CDFs are generally harder to work with than joint PMFs.\nFor this reason, we will mainly stick with joint PMFs.",
+    "objectID": "lecture-slides/ch05/04-joint-pdf.html#the-normalization-property-2-d",
+    "href": "lecture-slides/ch05/04-joint-pdf.html#the-normalization-property-2-d",
+    "title": "5.4 Joint PDF",
+    "section": "The normalization property (2-D)",
+    "text": "The normalization property (2-D)\nFor two continuous RVs \\(X\\) and \\(Y\\), we have\n\\[\n\\small{\n\\int_{-\\infty}^{+\\infty} \\int_{-\\infty}^{+\\infty} f_{X, Y}(x, y) dxdy=1\n}\n\\]\n\n\n\n\n\n\nThe total volume under the density surface is 1.",
     "crumbs": [
       "Home",
       "Lecture slides",
       "Chapter 5. Joint random variables",
-      "5.1 Joint PMF"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch05/01-joint-pmf.html#calculate-probabilities-from-joint-pmf",
-    "href": "lecture-slides/ch05/01-joint-pmf.html#calculate-probabilities-from-joint-pmf",
-    "title": "5.1 Joint PMF",
-    "section": "Calculate probabilities from joint PMF",
-    "text": "Calculate probabilities from joint PMF\n\\(A\\): the set of all pairs \\((x, y)\\) that have a certain property.\n\\[\n\\text{P}\\big((X, Y) \\in A\\big)=\\sum_{(x, y) \\in A}p_{X, Y}(x, y)\n\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 5. Joint random variables",
-      "5.1 Joint PMF"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch05/01-joint-pmf.html#marginal-pmf",
-    "href": "lecture-slides/ch05/01-joint-pmf.html#marginal-pmf",
-    "title": "5.1 Joint PMF",
-    "section": "Marginal PMF",
-    "text": "Marginal PMF",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 5. Joint random variables",
-      "5.1 Joint PMF"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch05/01-joint-pmf.html#section-1",
-    "href": "lecture-slides/ch05/01-joint-pmf.html#section-1",
-    "title": "5.1 Joint PMF",
-    "section": "",
-    "text": "We can calculate the PMF of \\(X\\) using\n\\[\n\\small{\n  p_X(x)=\\text{P}(X=x)=\\sum_\\color{blue}{y} \\text{P}(X=x, Y=y) =\\sum_\\color{blue}{y} p_{X, Y}(x, y)\n}\n\\]\nWe refer to \\(p_X(x)\\) as the marginal PMF of \\(X\\).",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 5. Joint random variables",
-      "5.1 Joint PMF"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch05/01-joint-pmf.html#section-2",
-    "href": "lecture-slides/ch05/01-joint-pmf.html#section-2",
-    "title": "5.1 Joint PMF",
-    "section": "",
-    "text": "Similarly, we can calculate the PMF of \\(Y\\) using\n\\[\n\\small{\np_Y(y)=\\text{P}(Y=y)=\\sum_\\color{red}{x} \\text{P}(X=x, Y=y)=\\sum_\\color{red}{x} p_{X, Y}(x, y)\n}\n\\]\nWe refer to \\(p_Y(y)\\) as the marginal PMF of \\(Y\\).",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 5. Joint random variables",
-      "5.1 Joint PMF"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch05/01-joint-pmf.html#section-3",
-    "href": "lecture-slides/ch05/01-joint-pmf.html#section-3",
-    "title": "5.1 Joint PMF",
-    "section": "",
-    "text": "We randomly sample an adult from the MI population.\n\n\\(X\\): whether they are a current smoker\n\\(Y\\): whether they will develop lung cancer at some point\n\nSuppose the joint PMF is as follows.\n\n\n\n\n\\(Y=0\\)\n\\(Y=1\\)\n\n\n\n\n\\(X=0\\)\n\\(72\\%\\)\n\\(3\\%\\)\n\n\n\\(X=1\\)\n\\(20\\%\\)\n\\(5\\%\\)\n\n\n\n\n\n\n\n\nWhat are the marginal PMFs of \\(X\\) and \\(Y\\)?\n\n\n\n\n\nAll number are fictional.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 5. Joint random variables",
-      "5.1 Joint PMF"
+      "5.4 Joint PDF"
     ]
   },
   {
@@ -4477,6 +4399,253 @@
       "Lecture slides",
       "Chapter 2. Probability",
       "2.10 Bayes' rule"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch05/01-joint-pmf.html#joint-pmf-visualization",
+    "href": "lecture-slides/ch05/01-joint-pmf.html#joint-pmf-visualization",
+    "title": "5.1 Joint PMF",
+    "section": "Joint PMF visualization",
+    "text": "Joint PMF visualization",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 5. Joint random variables",
+      "5.1 Joint PMF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch05/01-joint-pmf.html#section",
+    "href": "lecture-slides/ch05/01-joint-pmf.html#section",
+    "title": "5.1 Joint PMF",
+    "section": "",
+    "text": "We randomly sample an adult from the MI population.\n\n\\(X\\): whether they are a current smoker\n\\(Y\\): whether they will develop lung cancer at some point\n\nSuppose the joint PMF is as follows.\n\n\n\n\n\\(Y=0\\)\n\\(Y=1\\)\n\n\n\n\n\\(X=0\\)\n\\(72\\%\\)\n\\(3\\%\\)\n\n\n\\(X=1\\)\n\\(20\\%\\)\n\\(5\\%\\)\n\n\n\n\n\n\nAll number are fictional.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 5. Joint random variables",
+      "5.1 Joint PMF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch05/01-joint-pmf.html#non-negativity",
+    "href": "lecture-slides/ch05/01-joint-pmf.html#non-negativity",
+    "title": "5.1 Joint PMF",
+    "section": "Non-negativity",
+    "text": "Non-negativity\nPMF of a single discrete RV \\(X\\)\n\\[\np_X(x) \\geq 0, \\;\\; \\text{for all $x$.}\n\\]\n\nJoint PMF of two discrete RVs \\(X\\) and \\(Y\\)\n\\[\np_{X, Y}(x, y) \\geq 0, \\;\\;\\;\\; \\text{for all $x$ and $y$.}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 5. Joint random variables",
+      "5.1 Joint PMF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch05/01-joint-pmf.html#normalization-property",
+    "href": "lecture-slides/ch05/01-joint-pmf.html#normalization-property",
+    "title": "5.1 Joint PMF",
+    "section": "Normalization property",
+    "text": "Normalization property\n\nFor a single discrete RV \\(X\\), we have \\(\\sum_x p_X(x)=1\\).\nJoint PMF of two discrete RVs \\(X\\) and \\(Y\\) \\[\n  \\sum_x\\sum_y p_{X, Y}(x, y)=1\n  \\]\n\n\n\n\n\n\n\\(Y=0\\)\n\\(Y=1\\)\n\n\n\n\n\\(X=0\\)\n\\(72\\%\\)\n\\(3\\%\\)\n\n\n\\(X=1\\)\n\\(20\\%\\)\n\\(5\\%\\)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 5. Joint random variables",
+      "5.1 Joint PMF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch05/01-joint-pmf.html#cumulative-distribution-function",
+    "href": "lecture-slides/ch05/01-joint-pmf.html#cumulative-distribution-function",
+    "title": "5.1 Joint PMF",
+    "section": "Cumulative Distribution Function",
+    "text": "Cumulative Distribution Function\nThe CDF of a RV \\(X\\) is (always) defined by\n\\[\nF_X(x)=\\text{P}(X \\leq x), \\;\\; \\text{for all $x$.}\n\\]\n\nThe joint CDF of two RVs \\(X\\) and \\(Y\\) is defined by\n\\[\nF_{X, Y}(x, y)=\\text{P}(X \\leq x, Y \\leq y), \\;\\;\\;\\;\\;\\text{for all $x$ and $y$.}\n\\]\n\n\nJoint CDFs are generally harder to work with than joint PMFs.\nFor this reason, we will mainly stick with joint PMFs.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 5. Joint random variables",
+      "5.1 Joint PMF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch05/01-joint-pmf.html#calculate-probabilities-from-joint-pmf",
+    "href": "lecture-slides/ch05/01-joint-pmf.html#calculate-probabilities-from-joint-pmf",
+    "title": "5.1 Joint PMF",
+    "section": "Calculate probabilities from joint PMF",
+    "text": "Calculate probabilities from joint PMF\n\\(A\\): the set of all pairs \\((x, y)\\) that have a certain property.\n\\[\n\\text{P}\\big((X, Y) \\in A\\big)=\\sum_{(x, y) \\in A}p_{X, Y}(x, y)\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 5. Joint random variables",
+      "5.1 Joint PMF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch05/01-joint-pmf.html#marginal-pmf",
+    "href": "lecture-slides/ch05/01-joint-pmf.html#marginal-pmf",
+    "title": "5.1 Joint PMF",
+    "section": "Marginal PMF",
+    "text": "Marginal PMF",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 5. Joint random variables",
+      "5.1 Joint PMF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch05/01-joint-pmf.html#section-1",
+    "href": "lecture-slides/ch05/01-joint-pmf.html#section-1",
+    "title": "5.1 Joint PMF",
+    "section": "",
+    "text": "We can calculate the PMF of \\(X\\) using\n\\[\n\\small{\n  p_X(x)=\\text{P}(X=x)=\\sum_\\color{blue}{y} \\text{P}(X=x, Y=y) =\\sum_\\color{blue}{y} p_{X, Y}(x, y)\n}\n\\]\nWe refer to \\(p_X(x)\\) as the marginal PMF of \\(X\\).",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 5. Joint random variables",
+      "5.1 Joint PMF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch05/01-joint-pmf.html#section-2",
+    "href": "lecture-slides/ch05/01-joint-pmf.html#section-2",
+    "title": "5.1 Joint PMF",
+    "section": "",
+    "text": "Similarly, we can calculate the PMF of \\(Y\\) using\n\\[\n\\small{\np_Y(y)=\\text{P}(Y=y)=\\sum_\\color{red}{x} \\text{P}(X=x, Y=y)=\\sum_\\color{red}{x} p_{X, Y}(x, y)\n}\n\\]\nWe refer to \\(p_Y(y)\\) as the marginal PMF of \\(Y\\).",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 5. Joint random variables",
+      "5.1 Joint PMF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch05/01-joint-pmf.html#section-3",
+    "href": "lecture-slides/ch05/01-joint-pmf.html#section-3",
+    "title": "5.1 Joint PMF",
+    "section": "",
+    "text": "We randomly sample an adult from the MI population.\n\n\\(X\\): whether they are a current smoker\n\\(Y\\): whether they will develop lung cancer at some point\n\nSuppose the joint PMF is as follows.\n\n\n\n\n\\(Y=0\\)\n\\(Y=1\\)\n\n\n\n\n\\(X=0\\)\n\\(72\\%\\)\n\\(3\\%\\)\n\n\n\\(X=1\\)\n\\(20\\%\\)\n\\(5\\%\\)\n\n\n\n\n\n\n\n\nWhat are the marginal PMFs of \\(X\\) and \\(Y\\)?\n\n\n\n\n\nAll number are fictional.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 5. Joint random variables",
+      "5.1 Joint PMF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch05/02-conditional-pmf.html#conditional-pmf",
+    "href": "lecture-slides/ch05/02-conditional-pmf.html#conditional-pmf",
+    "title": "5.2 Conditional PMF",
+    "section": "Conditional PMF",
+    "text": "Conditional PMF\nThe conditional PMF of \\(X\\) given \\(Y=y\\) is defined by\n\\[\n\\begin{aligned}\np_{X \\mid Y}(x \\mid y)&=\\text{P}(X=x \\mid Y=y) \\\\\n\\\\\n&=\\frac{\\text{P}(X=x, Y=y)}{\\text{P}(Y=y)} \\\\\n\\\\\n&=\\frac{p_{X, Y}(x, y)}{p_Y(y)} \\\\\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 5. Joint random variables",
+      "5.2 Conditional PMF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch05/02-conditional-pmf.html#section",
+    "href": "lecture-slides/ch05/02-conditional-pmf.html#section",
+    "title": "5.2 Conditional PMF",
+    "section": "",
+    "text": "\\[\np_{X \\mid Y}(x \\mid y)=\\frac{p_{X, Y}(x, y)}{p_Y(y)}\n\\]\n\n\\(p_{X \\mid Y}(x \\mid y)\\) has the same shape as \\(p_{X, Y}(x, y)\\) at \\(Y=y\\) except that it is divided by \\(p_Y(y)\\) to enforce the normalization property.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 5. Joint random variables",
+      "5.2 Conditional PMF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch05/02-conditional-pmf.html#section-1",
+    "href": "lecture-slides/ch05/02-conditional-pmf.html#section-1",
+    "title": "5.2 Conditional PMF",
+    "section": "",
+    "text": "\\[\n\\begin{aligned}\n\\sum_x p_{X \\mid Y}(x \\mid y)&=\\sum_x \\frac{p_{X,Y}(x,y)}{p_Y(y)} \\\\\n\\\\\n&=\\frac{1}{p_Y(y)}  \\sum_x p_{X,Y}(x,y) \\\\\n\\\\\n&=\\frac{1}{p_Y(y)} \\; p_Y(y) \\\\\n\\\\\n&=1 \\\\\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 5. Joint random variables",
+      "5.2 Conditional PMF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch05/02-conditional-pmf.html#section-2",
+    "href": "lecture-slides/ch05/02-conditional-pmf.html#section-2",
+    "title": "5.2 Conditional PMF",
+    "section": "",
+    "text": "\\(X\\): whether they are a current smoker\n\\(Y\\): whether they will develop lung cancer at some point\n\n\n\n\n\\(Y=0\\)\n\\(Y=1\\)\n\\(p_X(x)\\)\n\n\n\n\n\\(X=0\\)\n\\(72\\%\\)\n\\(3\\%\\)\n\\(75\\%\\)\n\n\n\\(X=1\\)\n\\(20\\%\\)\n\\(5\\%\\)\n\\(25\\%\\)\n\n\n\\(p_Y(y)\\)\n\\(92\\%\\)\n\\(8\\%\\)\n\\(100\\%\\)\n\n\n\nIf an individual developed lung cancer, what is the probability that they are a current smoker?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 5. Joint random variables",
+      "5.2 Conditional PMF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch05/02-conditional-pmf.html#section-3",
+    "href": "lecture-slides/ch05/02-conditional-pmf.html#section-3",
+    "title": "5.2 Conditional PMF",
+    "section": "",
+    "text": "\\(X\\): whether they are a current smoker\n\\(Y\\): whether they will develop lung cancer at some point\n\n\n\n\n\\(Y=0\\)\n\\(Y=1\\)\n\\(p_X(x)\\)\n\n\n\n\n\\(X=0\\)\n\\(72\\%\\)\n\\(3\\%\\)\n\\(75\\%\\)\n\n\n\\(X=1\\)\n\\(20\\%\\)\n\\(5\\%\\)\n\\(25\\%\\)\n\n\n\\(p_Y(y)\\)\n\\(92\\%\\)\n\\(8\\%\\)\n\\(100\\%\\)\n\n\n\nIf an individual is a current smoker, what is the probability that they will develop lung cancer?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 5. Joint random variables",
+      "5.2 Conditional PMF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch05/02-conditional-pmf.html#slice-view-of-conditional-pmf",
+    "href": "lecture-slides/ch05/02-conditional-pmf.html#slice-view-of-conditional-pmf",
+    "title": "5.2 Conditional PMF",
+    "section": "Slice view of conditional PMF",
+    "text": "Slice view of conditional PMF\n\\[\np_{X \\mid Y}(x \\mid y)=\\frac{p_{X, Y}(x, y)}{p_Y(y)}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 5. Joint random variables",
+      "5.2 Conditional PMF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch05/02-conditional-pmf.html#slice-view-of-conditional-pmf-1",
+    "href": "lecture-slides/ch05/02-conditional-pmf.html#slice-view-of-conditional-pmf-1",
+    "title": "5.2 Conditional PMF",
+    "section": "Slice view of conditional PMF",
+    "text": "Slice view of conditional PMF\n\\[\np_{Y \\mid X}(y \\mid x)=\\frac{p_{X, Y}(x, y)}{p_X(x)}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 5. Joint random variables",
+      "5.2 Conditional PMF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch05/02-conditional-pmf.html#section-4",
+    "href": "lecture-slides/ch05/02-conditional-pmf.html#section-4",
+    "title": "5.2 Conditional PMF",
+    "section": "",
+    "text": "\\[\n\\begin{aligned}\np_{X \\mid Y}(x \\mid y)&=\\frac{p_{X, Y}(x, y)}{p_Y(y)} \\\\\np_{X, Y}(x, y) &= p_Y(y) \\cdot p_{X \\mid Y}(x \\mid y) \\\\\n\\end{aligned}\n\\]\n\nSimilarly,\n\\[\n\\begin{aligned}\np_{Y \\mid X}(y \\mid x)&=\\frac{p_{X, Y}(x, y)}{p_X(x)} \\\\\np_{X, Y}(x, y) &= p_X(x) \\cdot p_{Y \\mid X}(y \\mid x)\\\\\n\\end{aligned}\n\\]\n\n\nWe often can use this formula to calculate the joint PMF.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 5. Joint random variables",
+      "5.2 Conditional PMF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch05/02-conditional-pmf.html#section-5",
+    "href": "lecture-slides/ch05/02-conditional-pmf.html#section-5",
+    "title": "5.2 Conditional PMF",
+    "section": "",
+    "text": "\\[\n\\begin{aligned}\np_{X, Y}(x, y) &= p_X(x) \\cdot p_{Y \\mid X}(y \\mid x) \\\\\n\\\\\n&= p_Y(y) \\cdot p_{X \\mid Y}(x \\mid y) \\\\\n\\end{aligned}\n\\]\nDoes this look like something we have learned before?\n\n\nThis is the counterpart of the multiplication rule.\n\\[\n\\begin{aligned}\n\\text{P}(A \\cap B) &= \\text{P}(A) \\cdot \\text{P}(B \\mid A) \\\\\n\\\\\n&= \\text{P}(B) \\cdot \\text{P}(A \\mid B) \\\\\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 5. Joint random variables",
+      "5.2 Conditional PMF"
     ]
   }
 ]
