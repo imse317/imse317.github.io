@@ -10,7 +10,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.40">
 
-  <title>IMSE 317 – 5.4 Joint PDF</title>
+  <title>IMSE 317 – 5.8 Covariance</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -127,134 +127,356 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">5.4 Joint PDF</h1>
+  <h1 class="title">5.8 Covariance</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="probability-density-function-pdf" class="slide level2">
-<h2>Probability density function (PDF)</h2>
-<p>A RV <span class="math inline">\(X\)</span> is called continuous if there is a nonnegative function <span class="math inline">\(f_X\)</span>, such that</p>
-<p><span class="math display">\[
-\begin{aligned}
-&amp;\text{P}(X \in B)=\int_B f_X dx \\
-\\
-&amp;\text{for every subset $B$ of the real line.} \\
-\end{aligned}
-\]</span></p>
+<section id="covariance" class="slide level2">
+<h2><a href="https://en.wikipedia.org/wiki/Covariance">Covariance</a></h2>
+<p>It measures the degree to which two RVs <strong>vary together</strong>.</p>
+<ul>
+<li class="fragment">People’s height &amp; weight</li>
+<li class="fragment">Houses: square footage &amp; market value</li>
+<li class="fragment">Advertising budget &amp; product sales</li>
+</ul>
+<!-- .center[![:scale 45%](../images/dist-to-bike-lane.png)] -->
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/tv-sales.png" class="quarto-figure quarto-figure-center" height="300"></p>
+</figure>
+</div>
+</div>
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
-<p>Consider two continuous RVs <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> from the same experiment.</p>
-<p>The <strong>joint PDF</strong> is a nonnegative function that satisfies</p>
+<p>The <strong>covariance</strong> between two RVs <span class="math inline">\(\color{red}{X}\)</span> and <span class="math inline">\(\color{blue}{Y}\)</span>:</p>
 <p><span class="math display">\[
-\text{P}\big((X, Y) \in A\big)=\iint\limits_{(x, y) \in A} f_{X, Y}(x, y) dxdy
-\]</span></p>
-<p>The integration is carried over <span class="math inline">\(A\)</span> on the 2-D plane.</p>
-
-<img data-src="images/joint-pdf.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-<p><span class="math display">\[
-\text{P}\big((X, Y) \in A\big)=\iint\limits_{(x, y) \in A} f_{X, Y}(x, y) dxdy
+\text{cov}(\color{red}{X}, \color{blue}{Y})\stackrel{\text{def}}{=}\text{E}\big[\big(\color{red}{X}-\text{E}[\color{red}{X}]\big)\cdot\big(\color{blue}{Y}-\text{E}[\color{blue}{Y}]\big)\big]
 \]</span></p>
 <div class="fragment">
 <div class="columns">
-<div class="column" style="width:70%;">
-<p><br> <span class="math display">\[
-\text{Let } A=\{(x, y) \mid a &lt; x &lt; b, c &lt; y &lt; d\}
-\]</span></p>
-</div><div class="column" style="width:30%;">
+<div class="column" style="width:33%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/joint-pdf-rectangle.png" class="quarto-figure quarto-figure-center" height="200"></p>
+<p><img data-src="images/cov-pos.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/cov-neg.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/cov-zero.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div></div>
 </div>
 <div class="fragment">
+<p>If <span class="math inline">\(\text{cov}(X, Y)=0\)</span>, we say <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are <strong>uncorrelated</strong>.</p>
+</div>
+</section>
+<section id="properties" class="slide level2">
+<h2>Properties</h2>
 <p><span class="math display">\[
-\text{P}(a &lt; x &lt; b, \; c &lt; y &lt; d)=\int_c^d \int_a^b f_{X, Y}(x, y)dxdy
+\text{cov}(X, X)=\text{var}(X)
+\]</span></p>
+<div class="fragment">
+<p>Proof</p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{cov}(X, X)&amp;=\text{E}\big[(X-\text{E}[X])(X-\text{E}[X])\big] \\
+\\
+&amp;=\text{E}\big[(X-\text{E}[X])^2\big] \\
+\\
+&amp;=\text{var}(X) \;\; \color{gray}{\leftarrow\text{by the definition of variance}}\\
+\end{aligned}
 \]</span></p>
 </div>
 </section>
-<section id="single-continuous-rv" class="slide level2">
-<h2>Single continuous RV</h2>
+<section id="commutative-property" class="slide level2">
+<h2>Commutative property</h2>
 <p><span class="math display">\[
-\text{P}(a &lt; X &lt; b)=\int_a^b f_X dx
+\text{cov}(X, Y)=\text{cov}(Y, X)
 \]</span></p>
-<p>The probability is the <strong>area under the density curve</strong>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/pdf-def.png" class="quarto-figure quarto-figure-center" height="300"></p>
-</figure>
+<div class="fragment">
+<p>Proof</p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{cov}(X, Y)&amp;=\text{E}\big[(X-\text{E}[X])(Y-\text{E}[Y])\big] \\
+\\
+&amp;=\text{E}\big[(Y-\text{E}[Y])(X-\text{E}[X])\big] \\
+\\
+&amp;=\text{cov}(Y, X) \\
+\end{aligned}
+\]</span></p>
 </div>
 </section>
-<section id="two-continuous-rvs" class="slide level2">
-<h2>Two continuous RVs</h2>
+<section id="a-shortcut-formula" class="slide level2">
+<h2>A shortcut formula</h2>
 <p><span class="math display">\[
-\text{P}(a &lt; x &lt; b, \; c &lt; y &lt; d)=\int_c^d \int_a^b f_{X, Y}(x, y)dxdy
+\text{cov}(X, Y)=\text{E}[XY]-\text{E}[X]\text{E}[Y]
 \]</span></p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/joint-pdf-3d-1.png" class="quarto-figure quarto-figure-center" height="250"></p>
-</figure>
+<div class="fragment">
+<p>Proof</p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{cov}(X, Y)&amp;=\text{E}\big[(X-\text{E}[X])(Y-\text{E}[Y])\big] \\
+&amp;=\text{E}\big[XY-\text{E}[X]Y-\text{E}[Y]X+\text{E}[X]\text{E}[Y]\big] \\
+&amp;=\text{E}[XY]-\text{E}[X]\text{E}[Y]-\text{E}[Y]\text{E}[X]+\text{E}[X]\text{E}[Y] \\
+&amp;=\text{E}[XY]-\text{E}[X]\text{E}[Y] \\
+\end{aligned}
+\]</span></p>
 </div>
-<p>The probability is the <strong>volume under the density surface</strong>.</p>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<p><span class="math inline">\(X\)</span>: whether they are a current smoker</p>
+<p><span class="math inline">\(Y\)</span>: whether they will develop lung cancer at some point</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><span class="math inline">\(Y=0\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Y=1\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p_X(x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(X=0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(72\%\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(3\%\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(75\%\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(X=1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(20\%\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(5\%\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(25\%\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(p_Y(y)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(92\%\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(8\%\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(100\%\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>What is the covariance between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>?</p>
+</section>
+<section id="properties-1" class="slide level2">
+<h2>Properties</h2>
+<p><span class="math display">\[
+\text{cov}(aX+b, Y)=a\cdot\text{cov}(X, Y),
+\]</span> <span class="math display">\[
+\text{for any constants $a$ and $b$.}
+\]</span></p>
+<div class="fragment">
+<p>Proof</p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{cov}(aX+b, Y)&amp;=\text{E}\big[(aX+b-\text{E}[aX+b])(Y-\text{E}[Y])\big] \\
+&amp;=\text{E}\big[(aX+b-a\text{E}[X]-b)(Y-\text{E}[Y])\big] \\
+&amp;=a\cdot\text{E}\big[(X-\text{E}[X])(Y-\text{E}[Y])\big] \\
+&amp;=a\cdot\text{cov}(X, Y) \\
+\end{aligned}
+\]</span></p>
+</div>
+</section>
+<section id="properties-2" class="slide level2">
+<h2>Properties</h2>
+<p><span class="math display">\[
+\text{cov}(aX+b, Y)=a\cdot\text{cov}(X, Y),
+\]</span> <span class="math display">\[
+\text{for any constants $a$ and $b$.}
+\]</span></p>
+<p>Similarly, we have</p>
+<p><span class="math display">\[
+\text{cov}(X, aY+b)=a\cdot\text{cov}(X, Y),
+\]</span> <span class="math display">\[
+\text{for any constants $a$ and $b$.}
+\]</span></p>
 </section>
 <section id="section-2" class="slide level2">
 <h2></h2>
-
-<img data-src="images/joint-pdf-3d-2.png" class="quarto-figure quarto-figure-center r-stretch"><p><span class="math display">\[
-\begin{aligned}
-&amp;\text{P}(a &lt; x &lt; a+\delta, c &lt; y &lt; c+\delta) \\
-\\
-=\;&amp;\int_c^{c+\delta} \int_a^{a+\delta} f_{X, Y}(x, y)dxdy \\
-\\
-\approx \;&amp; f_{X, Y}(a, c) \cdot \delta ^2 \\
-\end{aligned}
+<p>Assume we found the covariance between air temperature (in Fahrenheit) and humidity is 18.</p>
+<p><span class="math display">\[
+\text{cov}(\text{Fahrenheit, Humidity}) = 18
 \]</span></p>
-<p><span class="math inline">\(f_{X, Y}(a, c)\)</span> is the probability <strong>per unit area</strong> in the vicinity of <span class="math inline">\((a, c)\)</span>.</p>
-</section>
-<section id="visualization-of-joint-pdf" class="slide level2">
-<h2>Visualization of joint PDF</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/joint-pdf-normal.png" class="quarto-figure quarto-figure-center" height="500"></p>
-</figure>
-</div>
-</section>
-<section id="the-normalization-property-1-d" class="slide level2">
-<h2>The normalization property (1-D)</h2>
-<p>For a single continuous RV, we have <span class="math inline">\(\int_{-\infty}^{+\infty} f_X dx=1\)</span>.</p>
 <div class="fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/pdf-normalization.png" class="quarto-figure quarto-figure-center" height="300"></p>
-</figure>
+<p>What is the covariance if the temperature is in Celsius?</p>
+<p><span class="math display">\[
+\text{cov}(\text{Celsius, Humidity}) = ?
+\]</span></p>
 </div>
-<p>The total area under the density curve is 1.</p>
+<div class="fragment">
+<p><span class="math display">\[
+\text{Celsius} = \frac{5}{9} (\text{Fahrenheit} - 32)
+\]</span></p>
 </div>
 </section>
-<section id="the-normalization-property-2-d" class="slide level2">
-<h2>The normalization property (2-D)</h2>
-<p>For two continuous RVs <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, we have</p>
+<section id="distributive-property" class="slide level2">
+<h2>Distributive property</h2>
+<p><span class="math display">\[
+\text{cov}(X+Y, Z)=\text{cov}(X, Z)+\text{cov}(Y, Z)
+\]</span></p>
+<div class="fragment">
 <p><span class="math display">\[
 \small{
-\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} f_{X, Y}(x, y) dxdy=1
+\begin{aligned}
+&amp;\;\text{cov}(X+Y, Z) \\
+=&amp;\;\text{E}\big[(X+Y-\text{E}[X+Y])(Z-\text{E}[Z])\big] \;\;\; \color{gray}{\leftarrow\text{by def. of cov}} \\
+=&amp;\;\text{E}\big[(X-\text{E}[X]+Y-\text{E}[Y])(Z-\text{E}[Z])\big] \\
+=&amp;\;\text{E}\big[(X-\text{E}[X])(Z-\text{E}[Z])+(Y-\text{E}[Y])(Z-\text{E}[Z])\big] \\
+=&amp;\;\text{E}\big[(X-\text{E}[X])(Z-\text{E}[Z])\big]+\text{E}\big[(Y-\text{E}[Y])(Z-\text{E}[Z])\big] \\
+=&amp;\;\text{cov}(X, Z)+\text{cov}(Y, Z) \\
+\end{aligned}
 }
 \]</span></p>
+</div>
+</section>
+<section id="distributive-property-contd" class="slide level2">
+<h2>Distributive property (cont’d)</h2>
+<p>Similarly, we have</p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{cov}(X, Y+Z)=&amp;\;\text{cov}(X, Y)+\text{cov}(X, Z) \\
+\\
+\text{cov}(X+Y, Z+W)=&amp;\;\text{cov}(X, Z) + \\
+&amp;\; \text{cov}(Y, Z)+ \\
+&amp;\; \text{cov}(X, W)+ \\
+&amp;\; \text{cov}(Y, W) \\
+\end{aligned}
+\]</span></p>
+</section>
+<section id="properties-3" class="slide level2">
+<h2>Properties</h2>
+<p><span class="math display">\[
+\text{var}(X+Y)=\text{var}(X)+\text{var}(Y)+2\text{cov}(X, Y)
+\]</span></p>
 <div class="fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/joint-pdf-normal.png" class="quarto-figure quarto-figure-center" height="220"></p>
-</figure>
+<p>Proof</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp;\;\text{var}(X+Y) \\
+=&amp;\;\text{cov}(X+Y, X+Y) \\
+=&amp;\;\text{cov}(X, X) + \text{cov}(Y, X) + \text{cov}(X, Y) + \text{cov}(Y, Y) \\
+=&amp;\;\text{var}(X)+\text{var}(Y)+2\text{cov}(X, Y)
+\end{aligned}
+\]</span></p>
 </div>
-<p>The total volume under the density surface is 1.</p>
+</section>
+<section id="properties-4" class="slide level2">
+<h2>Properties</h2>
+<p><span class="math display">\[
+\begin{aligned}
+\text{var}(X+Y)&amp;=\text{var}(X)+\text{var}(Y)+2\text{cov}(X, Y) \\
+\\
+\text{var}(X-Y)&amp;=? \\
+\end{aligned}
+\]</span></p>
+<div class="fragment">
+<p>If we replace <span class="math inline">\(Y\)</span> with <span class="math inline">\(-Y\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{var}(X-Y)&amp;=\text{var}(X)+\text{var}(-Y)+2\text{cov}(X, -Y) \\
+&amp;=\text{var}(X)+(-1)^2\text{var}(Y)-2\text{cov}(X, Y) \\
+&amp;=\text{var}(X)+\text{var}(Y)-2\text{cov}(X, Y) \\
+\end{aligned}
+\]</span></p>
+</div>
+</section>
+<section id="section-3" class="slide level2">
+<h2></h2>
+<p>If two RVs <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent, <span class="math inline">\(\text{cov}(X, Y)=0\)</span>.</p>
+<div class="fragment">
+<p>Proof</p>
+<p><span class="math display">\[
+\text{cov}(X, Y)=\text{E}[XY]-\text{E}[X]\text{E}[Y]=0
+\]</span></p>
+<ul>
+<li class="fragment">Independent random variables are uncorrelated.</li>
+<li class="fragment">Are uncorrelated random variables independent?
+<ul>
+<li class="fragment">Not necessarily.</li>
+<li class="fragment">Correlation only measures the <strong>linear</strong> relationship.</li>
+<li class="fragment">Uncorrelated RVs may not be independent.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="section-4" class="slide level2">
+<h2></h2>
+<p><span class="math display">\[
+X \sim \text{N}(0, 1),\;\;\;\;\;\; Y =  X^2
+\]</span></p>
+<div class="fragment">
+<p><span class="math display">\[
+\begin{aligned}
+\text{cov}(X, Y)&amp;=\text{E}[XY]-\text{E}[X]\text{E}[Y] \\
+\\
+&amp;=\text{E}\big[X \cdot X^2\big] - 0 \cdot \text{E}\big[X^2\big] \\
+\\
+&amp;=\text{E}\big[X^3\big] \\
+\\
+&amp;=\int_{-\infty}^{+\infty} z^3(\frac{1}{\sqrt{2\pi}}e^{-\frac{z^2}{2}})dz = 0
+\end{aligned}
+\]</span></p>
+</div>
+</section>
+<section id="section-5" class="slide level2">
+<h2></h2>
+<p><span class="math display">\[
+X \sim \text{N}(0, 1),\;\;\;\;\;\; Y =  X^2
+\]</span></p>
+<p><span class="math display">\[
+\text{cov}(X, Y)=0
+\]</span></p>
+<ul>
+<li class="fragment"><span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are uncorrelated.</li>
+<li class="fragment">Are <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> independent?
+<ul>
+<li class="fragment">They are not independent.</li>
+<li class="fragment">In fact, knowing <span class="math inline">\(X\)</span> gives us complete information about <span class="math inline">\(Y\)</span>.</li>
+</ul></li>
+</ul>
+</section>
+<section id="uncorrelated-but-dependent" class="slide level2">
+<h2>Uncorrelated but dependent</h2>
+<p><span class="math display">\[
+X \sim \text{N}(0, 1), \;\;\;\;Y =  X^2, \;\;\;\;\text{cov}(X, Y)=0
+\]</span></p>
+
+<img data-src="images/uncorrelated-ind.png" class="quarto-figure quarto-figure-center r-stretch"><ul>
+<li class="fragment">Covariance is a measure of <strong>linear</strong> relationship.</li>
+<li class="fragment">Random variables can be dependent in nonlinear ways, and still have zero covariance.</li>
+</ul>
+</section>
+<section id="independence" class="slide level2">
+<h2>Independence</h2>
+<p>If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent, then</p>
+<p><span class="math display">\[
+\text{var}(X + Y)=\text{var}(X) + \text{var}(Y)
+\]</span></p>
+<p>Proof</p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{var}(X+Y)&amp;=\text{var}(X)+\text{var}(Y)+2\text{cov}(X, Y) \\
+\\
+&amp;=\text{var}(X)+\text{var}(Y)+2\cdot 0 \\
+\\
+&amp;=\text{var}(X)+\text{var}(Y) \\
+\end{aligned}
+\]</span></p>
 
 
-</div>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">

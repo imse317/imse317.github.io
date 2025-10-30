@@ -10,7 +10,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.40">
 
-  <title>IMSE 317 – 5.1 Joint PMF</title>
+  <title>IMSE 317 – 5.7 Joint expectation</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -127,236 +127,178 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">5.1 Joint PMF</h1>
+  <h1 class="title">5.7 Joint expectation</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section class="slide level2">
-
-<!-- ## Joint distribution – the discrete case -->
-<ul>
-<li class="fragment">Randomly select a person from a population.</li>
-<li class="fragment">Record their <strong>age</strong> and <strong># of credit cards</strong> they own.</li>
-</ul>
-<div class="fragment">
-<p>Two discrete RV <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> from the same experiment.</p>
-<p><span class="math inline">\((x, y)\)</span> is a pair of possible values of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>.</p>
-</div>
-<div class="fragment">
-<p>The <strong>joint PMF</strong> of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is defined as</p>
-<p><span class="math display">\[
-p_{X, Y}(x, y)=\text{P}\big(\{X=x\} \cap \{Y=y\}\big)
-\]</span></p>
-</div>
-<div class="fragment">
-<p>For simplicity, we often use the abbreviated notation.</p>
-<p><span class="math display">\[
-p_{X, Y}(x, y)=\text{P}(X=x, Y=y)
-\]</span></p>
-</div>
-</section>
-<section>
-<section id="pmf-visualization" class="title-slide slide level1 center">
-<h1>PMF visualization</h1>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/pmf-example.png" class="quarto-figure quarto-figure-center" height="450"></p>
-</figure>
-</div>
-</section>
-<section id="joint-pmf-visualization" class="slide level2">
-<h2>Joint PMF visualization</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/joint-pmf.png" class="quarto-figure quarto-figure-center" height="450"></p>
-</figure>
-</div>
-</section>
 <section id="section" class="slide level2">
 <h2></h2>
-<ul>
-<li class="fragment"><p>We randomly sample an adult from the MI population.</p>
-<ul>
-<li class="fragment"><span class="math inline">\(X\)</span>: whether they are a current smoker</li>
-<li class="fragment"><span class="math inline">\(Y\)</span>: whether they will develop lung cancer at some point</li>
-</ul></li>
-<li class="fragment"><p>Suppose the joint PMF is as follows.</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: center;"></th>
-<th style="text-align: center;"><span class="math inline">\(Y=0\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(Y=1\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(X=0\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(72\%\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(3\%\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(X=1\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(20\%\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(5\%\)</span></td>
-</tr>
-</tbody>
-</table></li>
-</ul>
-
-<aside><div>
-<p>All number are fictional.</p>
-</div></aside></section>
-<section id="non-negativity" class="slide level2">
-<h2>Non-negativity</h2>
-<p>PMF of a single discrete RV <span class="math inline">\(X\)</span></p>
+<p><a href="https://en.wikipedia.org/wiki/Law_of_the_unconscious_statistician">LOTUS (Law Of The Unconscious Statistician)</a></p>
+<p>1-D version</p>
 <p><span class="math display">\[
-p_X(x) \geq 0, \;\; \text{for all $x$.}
+\small{
+\begin{aligned}
+\text{E}\big[g(X)\big]=
+\begin{cases}
+    \displaystyle \sum_x g(x) \cdot p_X(x), &amp; \text{if $X$ is discrete,} \\
+     \int_{-\infty}^{+\infty} g(x) \cdot f_X(x) dx, &amp; \text{if $X$ is continuous.} \\
+\end{cases}
+\end{aligned}
+}
 \]</span></p>
 <div class="fragment">
-<p>Joint PMF of two discrete RVs <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span></p>
+<p>2-D version</p>
 <p><span class="math display">\[
-p_{X, Y}(x, y) \geq 0, \;\;\;\; \text{for all $x$ and $y$.}
+\small{
+\begin{aligned}
+\text{E}\big[g(X, Y)\big]=
+\begin{cases}
+    \displaystyle \sum_x \sum_y g(x, y) \cdot p_{X, Y}(x, y), &amp; \text{if discrete,} \\
+     \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} g(x, y) \cdot f_{X, Y}(x, y) dxdy, &amp; \text{if continuous.} \\
+\end{cases}
+\end{aligned}
+}
 \]</span></p>
 </div>
 </section>
-<section id="normalization-property" class="slide level2">
-<h2>Normalization property</h2>
-<ul>
-<li class="fragment">For a single discrete RV <span class="math inline">\(X\)</span>, we have <span class="math inline">\(\sum_x p_X(x)=1\)</span>.</li>
-<li class="fragment">Joint PMF of two discrete RVs <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> <span class="math display">\[
-  \sum_x\sum_y p_{X, Y}(x, y)=1
-  \]</span></li>
-</ul>
-<div class="fragment">
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: center;"></th>
-<th style="text-align: center;"><span class="math inline">\(Y=0\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(Y=1\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(X=0\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(72\%\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(3\%\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(X=1\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(20\%\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(5\%\)</span></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section id="cumulative-distribution-function" class="slide level2">
-<h2>Cumulative Distribution Function</h2>
-<p>The CDF of a RV <span class="math inline">\(X\)</span> is (always) defined by</p>
+<section id="properties" class="slide level2">
+<h2>Properties</h2>
+<p>If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent</p>
 <p><span class="math display">\[
-F_X(x)=\text{P}(X \leq x), \;\; \text{for all $x$.}
+\text{E}[X \cdot Y]=\text{E}[X] \cdot \text{E}[Y]
 \]</span></p>
 <div class="fragment">
-<p>The <strong>joint CDF</strong> of two RVs <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is defined by</p>
-<p><span class="math display">\[
-F_{X, Y}(x, y)=\text{P}(X \leq x, Y \leq y), \;\;\;\;\;\text{for all $x$ and $y$.}
-\]</span></p>
-</div>
-<div class="fragment">
-<p>Joint CDFs are generally harder to work with than joint PMFs.</p>
-<p>For this reason, we will mainly stick with joint <strong>PMFs</strong>.</p>
-</div>
-</section>
-<section id="calculate-probabilities-from-joint-pmf" class="slide level2">
-<h2>Calculate probabilities from joint PMF</h2>
-<p><span class="math inline">\(A\)</span>: the set of all pairs <span class="math inline">\((x, y)\)</span> that have a certain property.</p>
-<p><span class="math display">\[
-\text{P}\big((X, Y) \in A\big)=\sum_{(x, y) \in A}p_{X, Y}(x, y)
-\]</span></p>
-</section>
-<section id="marginal-pmf" class="slide level2">
-<h2>Marginal PMF</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/marginal-pmf-cover.png" class="quarto-figure quarto-figure-center" height="500"></p>
-</figure>
+<p>If two RVs are independent, the expected value of their product is the product of their own expected values.</p>
 </div>
 </section>
 <section id="section-1" class="slide level2">
 <h2></h2>
-<p>We can calculate the PMF of <span class="math inline">\(X\)</span> using</p>
 <p><span class="math display">\[
-\small{
-  p_X(x)=\text{P}(X=x)=\sum_\color{blue}{y} \text{P}(X=x, Y=y) =\sum_\color{blue}{y} p_{X, Y}(x, y)
-}
+\begin{aligned}
+\text{E}[XY] &amp;= \sum_x \sum_y xy p_{X, Y}(x, y) \;\;\;\;\;\;\;\; \color{gray}{\leftarrow\text{by 2-D LOTUS}}\\
+&amp;= \sum_x \sum_y xy p_{X}(x) p_{Y}(y) \;\;\;\;\;\; \color{gray}{\leftarrow\text{by independence}}\\
+&amp;= \sum_x \big (xp_{X}(x) \sum_y y p_{Y}(y)\big) \;\; \color{gray}{\leftarrow\text{factor out $xp_{X}(x)$}} \\
+&amp;= \sum_y y p_{Y}(y) \cdot \sum_x xp_{X}(x) \;\;\;\; \color{gray}{\leftarrow\text{factor out $\sum_y y p_{Y}(y)$}} \\
+&amp;= \text{E}[X] \cdot \text{E}[Y] \;\;\;\;\;\;\;\; \color{gray}{\leftarrow\text{by definition of expected value}} \\
+\end{aligned}
 \]</span></p>
-<p>We refer to <span class="math inline">\(p_X(x)\)</span> as the marginal PMF of <span class="math inline">\(X\)</span>.</p>
+<!-- ---
+If $X$ and $Y$ are independent
+
+$$\text{E}\bigg[\frac{X}{Y}\bigg] \stackrel{?}{=} \frac{\text{E}[X]}{\text{E}[Y]}$$
+
+.center[In general, .red[no], even when $X$ and $Y$ are independent!]
+
+.center[Counter example?]
+
+$$X = 1, Y \sim \text{discrete unif}\\{1, 2\\}$$
+
+.center[Don't assume a reciprocal expectation rule.] -->
+</section>
+<section id="linearity-of-expected-values" class="slide level2">
+<h2>Linearity of expected values</h2>
+<p>For any two RVs <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, we have</p>
+<p><span class="math display">\[
+\text{E}[X+Y]=\text{E}[X]+\text{E}[Y]
+\]</span></p>
+<p>Note this property does <strong>not</strong> require their independence.</p>
 <div class="fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/marginal-pmf.png" class="quarto-figure quarto-figure-center" height="300"></p>
-</figure>
-</div>
+<p>More generally, for any <span class="math inline">\(n\)</span> RVs <span class="math inline">\(X_1, X_2, \cdots, X_n\)</span>,</p>
+<p><span class="math display">\[
+\small{\text{E}[X_1+X_2+\cdots+X_n]=\text{E}[X_1]+\text{E}[X_2] + \cdots + \text{E}[X_n]}
+\]</span></p>
 </div>
 </section>
 <section id="section-2" class="slide level2">
 <h2></h2>
-<p>Similarly, we can calculate the PMF of <span class="math inline">\(Y\)</span> using</p>
 <p><span class="math display">\[
 \small{
-p_Y(y)=\text{P}(Y=y)=\sum_\color{red}{x} \text{P}(X=x, Y=y)=\sum_\color{red}{x} p_{X, Y}(x, y)
+\begin{aligned}
+\text{E}[X+Y]
+=&amp; \sum_x \sum_y (x+y) p_{X, Y}(x, y) \;\;\;\; \color{gray}{\leftarrow\text{by LOTUS}} \\
+=&amp; \sum_x \sum_y \big (xp_{X, Y}(x, y)+yp_{X, Y}(x, y) \big) \\
+=&amp; \sum_x \sum_y xp_{X, Y}(x, y)+ \sum_y \sum_x yp_{X, Y}(x, y) \\
+=&amp; \sum_x x\sum_y p_{X, Y}(x, y)+ \sum_y y\sum_x p_{X, Y}(x, y) \\
+=&amp; \sum_x xp_{X}(x)+ \sum_y yp_{Y}(y) \;\; \color{gray}{\leftarrow\text{by def. of marginal pmf}} \\
+=&amp;\text{E}[X] + \text{E}[Y] \hspace{2em} \color{gray}{\leftarrow\text{by def. of expected value}} \\
+\end{aligned}
 }
 \]</span></p>
-<p>We refer to <span class="math inline">\(p_Y(y)\)</span> as the <strong>marginal PMF</strong> of <span class="math inline">\(Y\)</span>.</p>
-<!-- .center[![:scale 60%](../images/marginal-pmf.png)] -->
+</section>
+<section id="properties-1" class="slide level2">
+<h2>Properties</h2>
+<p>If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent, then</p>
+<p><span class="math display">\[
+\text{var}(X + Y)=\text{var}(X) + \text{var}(Y)
+\]</span></p>
+<div class="fragment">
+<p>Generally, if <span class="math inline">\(n\)</span> RVs <span class="math inline">\(X_1, X_2, \cdots, X_n\)</span> are independent,</p>
+<p><span class="math display">\[
+\text{var}\bigg(\sum_{i=1}^n X_i\bigg)=\sum_{i=1}^n \text{var}(X_i)
+\]</span></p>
+</div>
 </section>
 <section id="section-3" class="slide level2">
 <h2></h2>
+<p><span class="math display">\[
+\begin{aligned}
+\text{var}(X + Y)&amp;=\text{E}\big[(X+Y)^2\big]-\big(\text{E}[X+Y]\big)^2 \\
+\\
+\text{E}\big[(X+Y)^2\big]&amp;=\text{E}[X^2+2XY+Y^2] \\
+\\
+&amp;=\text{E}[X^2]+2\text{E}[XY]+\text{E}[Y^2] \;\;\;\;\color{gray}{\leftarrow\text{by linearity}} \\
+\\
+&amp;=\text{E}[X^2]+2\text{E}[X]\text{E}[Y]+\text{E}[Y^2] \;\color{gray}{\leftarrow\text{by indepen.}} \\
+\end{aligned}
+\]</span></p>
+</section>
+<section id="section-4" class="slide level2">
+<h2></h2>
+<p><span class="math display">\[
+\begin{aligned}
+\big(\text{E}[X+Y]\big)^2&amp;=\big(\text{E}[X]+\text{E}[Y]\big)^2 \;\;\;\;\color{gray}{\leftarrow\text{by linearity}} \\
+\\
+&amp;=\big(\text{E}[X]\big)^2+2\text{E}[X]\text{E}[Y]+\big(\text{E}[Y]\big)^2 \\
+\\
+\text{var}(X + Y)&amp;=\text{E}\big[X^2\big]-\big(\text{E}[X]\big)^2 + \text{E}\big[Y^2\big] - \big(\text{E}[Y]\big)^2 \\
+\\
+&amp;=\text{var}(X) + \text{var}(Y) \\
+\end{aligned}
+\]</span></p>
+</section>
+<section id="the-hat-problem" class="slide level2">
+<h2>The Hat Problem</h2>
 <ul>
-<li class="fragment"><p>We randomly sample an adult from the MI population.</p>
+<li class="fragment">At a party <span class="math inline">\(n\)</span> people checks in their hats at the entrance.</li>
+<li class="fragment">When they leave, the attendant randomly picks out a hat for each of them.</li>
+<li class="fragment">How many people should we expect to <strong>get their own hat back</strong>?</li>
+</ul>
+</section>
+<section id="properties-2" class="slide level2">
+<h2>Properties</h2>
+<p>If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent, then</p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{var}(X + Y)&amp;=\text{var}(X) + \text{var}(Y) \\
+\\
+\text{var}(X - Y)&amp;=\;? \\
+\end{aligned}
+\]</span></p>
+<div class="fragment">
 <ul>
-<li class="fragment"><span class="math inline">\(X\)</span>: whether they are a current smoker</li>
-<li class="fragment"><span class="math inline">\(Y\)</span>: whether they will develop lung cancer at some point</li>
+<li class="fragment">Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> represent the rolls of two 6-sided dice.
+<ul>
+<li class="fragment">What is the range of <span class="math inline">\(X+Y\)</span>?</li>
+<li class="fragment">What is the range of <span class="math inline">\(X-Y\)</span>?</li>
 </ul></li>
-<li class="fragment"><p>Suppose the joint PMF is as follows.</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: center;"></th>
-<th style="text-align: center;"><span class="math inline">\(Y=0\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(Y=1\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(X=0\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(72\%\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(3\%\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(X=1\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(20\%\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(5\%\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-</tbody>
-</table></li>
-<li class="fragment"><p>What are the marginal PMFs of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>?</p></li>
+<li class="fragment"><span class="math inline">\(\text{var}(X - Y)=\text{var}(X) + \text{var}(Y)\)</span></li>
 </ul>
 
 
-
-<aside><div>
-<p>All number are fictional.</p>
-</div></aside></section></section>
+</div>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
