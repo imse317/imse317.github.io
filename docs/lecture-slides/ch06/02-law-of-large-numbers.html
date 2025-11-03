@@ -10,7 +10,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.40">
 
-  <title>IMSE 317 – 4.6 Normal distribution</title>
+  <title>IMSE 317 – 6.2 Law of large numbers</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,71 +28,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-bbe7401fe57d4b791b917637bb662036.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -192,379 +127,200 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">4.6 Normal distribution</h1>
+  <h1 class="title">6.2 Law of large numbers</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="normal-distribution" class="slide level2">
-<h2>Normal distribution</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="./images/pdf-normal.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div><div class="column" style="width:60%;">
-<p><br> Arguably the most important distribution</p>
-</div></div>
-<p>Central limit theorem: The sum of <em>many</em> i.i.d.<sup>1</sup> random variables approximately follows a normal distribution.</p>
-<!-- The sum of many (i.i.d.) RVs (could be ANY distribution) is approximately normal. -->
-<aside><ol class="aside-footnotes"><li id="fn1"><p>independent and identically distributed</p></li></ol></aside></section>
-<section id="standard-normal-distribution" class="slide level2">
-<h2>Standard normal distribution</h2>
-<p>A continuous RV <span class="math inline">\(Z\)</span> is standard normal if it has a PDF</p>
-<div class="columns">
-<div class="column">
-<p><br> <span class="math display">\[
-f_Z(z)=\frac{1}{\sqrt{2\pi}}e^{-\frac{z^2}{2}}
-\]</span></p>
-</div><div class="column">
-<div class="quarto-figure quarto-figure-left">
-<figure>
-<p><img data-src="./images/pdf-z.png" class="quarto-figure quarto-figure-left" height="250"></p>
-</figure>
-</div>
-</div></div>
-<div class="fragment">
-<p>The factor <span class="math inline">\(\frac{1}{\sqrt{2\pi}}\)</span> is to ensure the normalization property.</p>
-<!-- ---
-# .red[Standard normal] distribution
-
-$$f_Z(z)=\frac{1}{\sqrt{2\pi}}e^{-\frac{z^2}{2}}$$
-
-<br>
-.center[Where does the bell shape come from?]
-
-.center[
-![:scale 32%](../images/parabola.png)
-![:scale 32%](../images/exp.png)
-![:scale 32%](../images/pdf-z.png)
-] -->
+<section id="wisdom-of-the-crowd" class="slide level2">
+<h2><a href="https://en.wikipedia.org/wiki/Wisdom_of_the_crowd">Wisdom of the Crowd</a></h2>
+<div style="text-align: center;">
+<iframe width="750" height="500" src="https://www.youtube.com/embed/iOucwX7Z1HU?start=62" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
 </div>
 </section>
-<section id="normal-distribution-1" class="slide level2">
-<h2>Normal distribution</h2>
-<p>A continuous RV <span class="math inline">\(X\)</span> is normal if it has a PDF:</p>
+<section id="law-of-large-numbers-lln" class="slide level2">
+<h2><a href="https://en.wikipedia.org/wiki/Law_of_large_numbers">Law of Large Numbers (LLN)</a></h2>
+<p>Assume <span class="math inline">\(X_1, X_2, \cdots, X_n\)</span> are <a href="https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables">i.i.d.</a> (independent and identically distributed) RVs with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span>.</p>
 <p><span class="math display">\[
-f_X(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}
+\bar{X}_n \stackrel{\text{def}}{=} \frac{X_1+X_2+\cdots+X_n}{n}=\frac{1}{n}\sum_{i=1}^n X_i
 \]</span></p>
-<p><span class="math display">\[
-\text{where } \mu \text{ and } \sigma \text{ are its two parameters } (\sigma &gt;0).
-\]</span></p>
-<p><span class="math display">\[
-X \sim \text{N}(\mu, \sigma^2)
-\]</span></p>
+<div class="fragment">
+<p>Loosely speaking, the LLN states that with high probability, the sample mean <span class="math inline">\((\bar{X}_n)\)</span> of many i.i.d. random variables is very close to the true mean <span class="math inline">\((\mu)\)</span>.</p>
+</div>
+<div class="fragment">
+<p>Note <span class="math inline">\(\bar{X}\)</span> is not a number, but a random variable.</p>
+</div>
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
 <p><span class="math display">\[
-X \sim \text{N}(2, 1)
-\]</span></p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="./images/pdf-normal.png" class="quarto-figure quarto-figure-center" height="250"></p>
-</figure>
-</div>
-<ul>
-<li class="fragment">The PDF is symmetric around <span class="math inline">\(\mu\)</span>.</li>
-<li class="fragment">As <span class="math inline">\(X\)</span> gets further from <span class="math inline">\(\mu\)</span>, the PDF decreases rapidly.</li>
-<li class="fragment">The PDF is very close to 0 outside <span class="math inline">\(\mu \pm 3\sigma\)</span>.</li>
-</ul>
-</section>
-<section>
-<section id="interactive-visualization" class="title-slide slide level1 center">
-<h1><a href="https://probstats.org/normal.html">Interactive visualization</a></h1>
-
-</section>
-<section id="normal-distribution-2" class="slide level2">
-<h2>Normal distribution</h2>
-<p><span class="math display">\[
+\small{
 \begin{aligned}
-X &amp;\sim \text{N}(\mu, \sigma^2) \\
+\bar{X}_n&amp;=\frac{X_1+X_2+\cdots+X_n}{n} \\
 \\
-f_X(x)&amp;=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2} \\
+\text{E}[\bar{X}_n]&amp;=\frac{\text{E}[X_1]+\text{E}[X_2]+\cdots+\text{E}[X_n]}{n}=\frac{n\mu}{n}=\mu \\
 \\
-\text{E}[X]&amp;=\mu \\
-\\
-\text{var}(X)&amp;=\sigma^2 \\
+\text{var}(\bar{X}_n)&amp;=\frac{\text{var}(X_1)+\text{var}(X_2)+\cdots+\text{var}(X_n)}{n^2}=\frac{n\sigma^2}{n^2}=\frac{\sigma^2}{n} \\
 \end{aligned}
+}
 \]</span></p>
+<div class="fragment">
+<p>We apply the Chebyshev inequality and obtain</p>
+<p><span class="math display">\[
+\text{P}\big(|\bar{X}_n - \mu| \geq \epsilon \big) \leq \frac{\sigma^2}{n\epsilon^2}, \;\; \text{for all $\epsilon &gt; 0$.}
+\]</span></p>
+</div>
 </section>
 <section id="section-1" class="slide level2">
 <h2></h2>
-<p>First, we show that the expected value of a standard normal RV <span class="math inline">\(Z \sim \text{N}(0, 1)\)</span> is zero.</p>
 <p><span class="math display">\[
-\begin{aligned}
-f_Z(z)&amp;=\frac{1}{\sqrt{2\pi}}e^{-\frac{z^2}{2}} \\
-\\
-\text{E}[Z]&amp;=\int_{-\infty}^{+\infty}z(\frac{1}{\sqrt{2\pi}}e^{-\frac{z^2}{2}})dz=0 \\
-\end{aligned}
+\text{P}\big(|\bar{X}_n - \mu| \geq \epsilon \big) \leq \frac{\sigma^2}{n\epsilon^2}, \;\; \text{for all $\epsilon &gt; 0$.}
 \]</span></p>
-<p>The integration above is 0 as for any <a href="https://en.wikipedia.org/wiki/Even_and_odd_functions">odd function</a> <span class="math inline">\(g(x)\)</span> (i.e., <span class="math inline">\(g(-x)=-g(x)\)</span>), we have <span class="math inline">\(\int_{-a}^a g(x)dx=0\)</span>.</p>
+<p>For any fixed <span class="math inline">\(\epsilon\)</span>, the right-hand side of the inequality approaches to zero as <span class="math inline">\(n\)</span> increases.</p>
+</section>
+<section id="keep-flipping-a-fair-coin-many-times" class="slide level2">
+<h2>Keep flipping a fair coin many times</h2>
+<p>Mark a blue dot for heads, a red dot for tails</p>
+<!-- .center[Running proportion of heads (blue dots)] -->
+
+<img data-src="https://upload.wikimedia.org/wikipedia/commons/4/49/Lawoflargenumbersanimation2.gif" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="keep-flipping-a-fair-coin-many-times-1" class="slide level2">
+<h2>Keep flipping a fair coin many times</h2>
+
+<img data-src="images/lln-coin.png" class="quarto-figure quarto-figure-center r-stretch"><div class="fragment">
+<p>Let <span class="math inline">\(X_1, X_2, \cdots, X_n\)</span> be i.i.d. Bernoulli RV with <span class="math inline">\(p=0.5\)</span>.</p>
+<p><span class="math display">\[
+\mu = \text{E}[X_i] = 0.5, \;\;\;\;\;\;\bar{X}_n = \frac{1}{n}\sum_{i=1}^n X_i
+\]</span></p>
+<p>The proportion of heads (<span class="math inline">\(\bar{X}_n\)</span>) gets closer to 0.5 as <span class="math inline">\(n\)</span> increases.</p>
+</div>
+</section>
+<section id="the-weak-law-of-large-numbers" class="slide level2">
+<h2>The (weak) Law of Large Numbers</h2>
+<p><br></p>
+<p>Let <span class="math inline">\(X_1, X_2, \cdots, X_n\)</span> be i.i.d. RVs with mean <span class="math inline">\(\mu\)</span>.</p>
+<p><span class="math display">\[
+\lim_{n\rightarrow +\infty}\text{P}\big(|\bar{X}_n - \mu| &lt; \epsilon\big)=1, \;\; \text{for every $\epsilon &gt;0$}.
+\]</span></p>
+<div class="fragment">
+<p>We say the sequence <span class="math inline">\(\bar{X}_n\)</span> converges to <span class="math inline">\(\mu\)</span> in probability.</p>
+</div>
+</section>
+<section id="with-8-sequences-simulated-data" class="slide level2">
+<h2>With 8 sequences (simulated data)</h2>
+
+<img data-src="images/lln-coin-8runs.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="overlay-of-10-sequences" class="slide level2">
+<h2>Overlay of 10 sequences</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/lln-coin-overlay.png" class="quarto-figure quarto-figure-center" height="250"></p>
+</figure>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/lln-coin-overlay-1m.png" class="quarto-figure quarto-figure-center" height="250"></p>
+</figure>
+</div>
+</div>
 </section>
 <section id="section-2" class="slide level2">
 <h2></h2>
-<p>Let</p>
-<p><span class="math display">\[Z=\frac{X-\mu}{\sigma} \;\;\;\;(\text{or } X=\sigma Z+\mu)\]</span></p>
-<p>We have</p>
-<p><span class="math display">\[f_X(x)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}\]</span></p>
-<p><span class="math display">\[X \sim \text{N}(\mu, \sigma^2)\]</span></p>
-<p><span class="math display">\[\text{E}[X]=\text{E}[\sigma Z+\mu]=\sigma\text{E}[Z]+\mu=\sigma\cdot 0+\mu=\mu\]</span></p>
+<p>Keep tossing a six-sided die.</p>
+
+<img data-src="images/lln-die.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="with-8-sequences-simulated-data-1" class="slide level2">
+<h2>With 8 sequences (simulated data)</h2>
+
+<img data-src="images/lln-die-8runs.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="overlay-of-10-sequences-1" class="slide level2">
+<h2>Overlay of 10 sequences</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/lln-die-overlay.png" class="quarto-figure quarto-figure-center" height="250"></p>
+</figure>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/lln-die-overlay-1m.png" class="quarto-figure quarto-figure-center" height="250"></p>
+</figure>
+</div>
+</div>
 </section>
+<section id="which-exam-format-to-pick" class="slide level2">
+<h2>Which exam format to pick?</h2>
+<ul>
+<li class="fragment">The instructor offers two formats for an exam
+<ul>
+<li class="fragment">Format A: 100 questions with 1 point each</li>
+<li class="fragment">Format B: only 1 question that worth 100 point</li>
+</ul></li>
+<li class="fragment">Assume you can answer each question correctly with probability <span class="math inline">\(p\)</span>.</li>
+<li class="fragment">Assume the exam has no time limit.</li>
+<li class="fragment">Which format should you choose if <span class="math inline">\(p=0.9\)</span>?</li>
+<li class="fragment">Which format should you choose if <span class="math inline">\(p=0.5\)</span>?</li>
+</ul>
+</section>
+<section id="roulette" class="slide level2">
+<h2><a href="https://en.wikipedia.org/wiki/Roulette">Roulette</a></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/roulette.png" class="quarto-figure quarto-figure-center" height="200"></p>
+</figure>
+</div>
+<ul>
+<li class="fragment">37 numbers including 18 reds, 18 blacks, and 1 green.</li>
+<li class="fragment">Batting red or black with 1:1 payout</li>
+<li class="fragment">If wheel lands on green, both red and black lose.&nbsp;</li>
+<li class="fragment">What is a player’s expected net gain for betting $1?</li>
+</ul>
+</section>
+<section id="why-casinos-dont-lose-money" class="slide level2">
+<h2>Why casinos don’t lose money</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/roulette.png" class="quarto-figure quarto-figure-center" height="200"></p>
+</figure>
+</div>
+<ul>
+<li class="fragment">What are the expected gain for betting other things?
+<ul>
+<li class="fragment">Odd (1, 3,…, 35) or even (2, 4,…, 36) with 1:1 payout</li>
+<li class="fragment">Small (1-18) or large(19-36) with 1:1 payout</li>
+<li class="fragment">Green (0) with 36:1 payout</li>
+</ul></li>
+</ul>
+</section>
+<section id="the-best-3-point-shooter-in-nba" class="slide level2">
+<h2>The best 3-point shooter in NBA</h2>
+
+<img data-src="images/nba-qualified.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="the-best-3-point-shooter-in-nba-1" class="slide level2">
+<h2>The best 3-point shooter in NBA</h2>
+
+<img data-src="images/nba-all.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="section-3" class="slide level2">
 <h2></h2>
-<p>We can also prove for <span class="math inline">\(Z \sim \text{N}(0, 1)\)</span>, <span class="math inline">\(\text{var}(Z)=1\)</span>.</p>
-<p><span class="math display">\[
-\begin{aligned}
-\text{var}(Z)&amp;=\text{E}\big[Z^2\big]-\big(\text{E}[Z]\big)^2 \\
-\\
-&amp;=\int_{-\infty}^{+\infty}z^2(\frac{1}{\sqrt{2\pi}}e^{-\frac{z^2}{2}})dz \\
-\\
-&amp;=1 \;\;\;\;\color{gray}{\rightarrow\text{we will skip the proof of this part.}}
-\end{aligned}
-\]</span></p>
-<div class="fragment">
-<p>Then we have <span class="math display">\[\text{var}(X)=\text{var}(\sigma Z+\mu)=\sigma^2\text{var}(Z)=\sigma^2 \cdot 1 = \sigma^2\]</span></p>
-</div>
-</section>
-<section id="properties" class="slide level2">
-<h2>Properties</h2>
-<p>Normality is preserved by linear transformations.</p>
-<p>If</p>
-<p><span class="math display">\[
-X \sim \text{N}(\mu, \sigma^2)
-\]</span></p>
-<p>and</p>
-<p><span class="math display">\[
-Y=aX+b, \;\; \text{for any constants } a \;(\neq0) \text{ and $b$.}
-\]</span></p>
-<p>we have</p>
-<p><span class="math display">\[
-Y \sim \text{N}(a\mu+b, a^2\sigma^2)
-\]</span></p>
-</section>
-<section id="cdf-of-normal-distribution" class="slide level2">
-<h2>CDF of normal distribution</h2>
-<p><span class="math display">\[
-X \sim \text{N}(2, 1)
-\]</span></p>
-<div class="columns">
-<div class="column">
-<p><img data-src="images/pdf-normal.png" height="300"></p>
-</div><div class="column">
-<p><img data-src="images/cdf-normal.png" height="300"></p>
-</div></div>
-</section>
-<section id="cdf-of-normal-distribution-1" class="slide level2">
-<h2>CDF of normal distribution</h2>
-<p><span class="math display">\[
-\begin{aligned}
-F_X(x)&amp;=\text{P}(X \leq x) \\
-\\
-&amp;=\int_{-\infty}^x \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}\big(\frac{t-\mu}{\sigma}\big)^2}dt \\
-\\
-&amp;=\frac{1}{\sigma\sqrt{2\pi}}\int_{-\infty}^x e^{-\frac{1}{2}\big(\frac{t-\mu}{\sigma}\big)^2}dt \\
-\end{aligned}
-\]</span></p>
-<p>Unfortunately, there is no closed-form expression for the integration above.</p>
-</section>
-<section id="cdf-of-standard-normal-distribution" class="slide level2">
-<h2>CDF of standard normal distribution</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/pdf-z.png" class="quarto-figure quarto-figure-center" height="350"></p>
-</figure>
-</div>
-<p><span class="math display">\[
-F_Z(z)=\Phi(z)=\text{P}(Z \leq z)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^z e^{-\frac{t^2}{2}}dt
-\]</span></p>
-</section>
-<section id="section-4" class="slide level2">
-<h2></h2>
-
-<img data-src="images/table-z.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="standard-normal-table-or-z-table" class="slide level2">
-<h2>Standard normal table (or Z table)</h2>
-<ul>
-<li class="fragment">The table only contains values of <span class="math inline">\(\Phi(z)\)</span> for <span class="math inline">\(z \geq 0\)</span>.</li>
-<li class="fragment">What if <span class="math inline">\(z &lt; 0\)</span>?</li>
-</ul>
-<div class="fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/pdf-z.png" class="quarto-figure quarto-figure-center" height="180"></p>
+<p><img data-src="images/gambler.png" class="quarto-figure quarto-figure-center" height="300"></p>
 </figure>
 </div>
 <ul>
-<li class="fragment"><p>More generally, we have</p>
-<p><span class="math display">\[
-  \Phi(-z)=1-\Phi(z), \;\; \text{for all $z$.}
-  \]</span></p></li>
-</ul>
-</div>
-</section>
-<section id="exercise" class="slide level2">
-<h2>Exercise</h2>
-<ul>
-<li class="fragment">Assume the annual snowfall in Dearborn follows a normal distribution with
-<ul>
-<li class="fragment">a mean of 60 inches</li>
-<li class="fragment">a standard deviation of 20 inches</li>
-</ul></li>
-<li class="fragment">What is the probability this year has 80+ inches snow?</li>
-</ul>
-<div class="fragment">
-<div class="columns">
-<div class="column">
-<div class="quarto-figure quarto-figure-right">
-<figure>
-<p><img data-src="images/normal-exercise-1.png" class="quarto-figure quarto-figure-right" height="200"></p>
-</figure>
-</div>
-</div><div class="column">
-<div class="quarto-figure quarto-figure-left">
-<figure>
-<p><img data-src="images/normal-exercise-2.png" class="quarto-figure quarto-figure-left" height="200"></p>
-</figure>
-</div>
-</div></div>
-</div>
-</section>
-<section id="section-5" class="slide level2">
-<h2></h2>
-<p><span class="math display">\[
-X \sim \text{N}\big(\mu, \sigma^2\big)
-\]</span></p>
-<p>What is the probability that <span class="math inline">\(X\)</span> takes values within <strong>one</strong> standard deviation from its mean?</p>
-<p><span class="math display">\[
-\text{P}(\mu - \sigma &lt; X &lt; \mu + \sigma) = \;?
-\]</span></p>
-<div class="columns">
-<div class="column">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/pdf-normal-1sigma.png" class="quarto-figure quarto-figure-center" height="215"></p>
-</figure>
-</div>
-</div><div class="column">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/pdf-z-1sigma.png" class="quarto-figure quarto-figure-center" height="200"></p>
-</figure>
-</div>
-</div></div>
-</section>
-<section id="section-6" class="slide level2">
-<h2></h2>
-<p><span class="math display">\[
-X \sim \text{N}\big(\mu, \sigma^2\big)
-\]</span></p>
-<p>What is the probability that <span class="math inline">\(X\)</span> takes values within <strong>two</strong> standard deviation from its mean?</p>
-<p><span class="math display">\[
-\text{P}(\mu - 2\sigma &lt; X &lt; \mu + 2\sigma) = \;?
-\]</span></p>
-<div class="columns">
-<div class="column">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/pdf-normal-2sigma.png" class="quarto-figure quarto-figure-center" height="215"></p>
-</figure>
-</div>
-</div><div class="column">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/pdf-z-2sigma.png" class="quarto-figure quarto-figure-center" height="200"></p>
-</figure>
-</div>
-</div></div>
-</section>
-<section id="section-7" class="slide level2">
-<h2></h2>
-<p><span class="math display">\[
-X \sim \text{N}\big(\mu, \sigma^2\big)
-\]</span></p>
-<p>What is the probability that <span class="math inline">\(X\)</span> takes values within <strong>three</strong> standard deviation from its mean?</p>
-<p><span class="math display">\[
-\text{P}(-3\sigma &lt; X &lt; 3\sigma) = \;?
-\]</span></p>
-<div class="columns">
-<div class="column">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/pdf-normal-3sigma.png" class="quarto-figure quarto-figure-center" height="215"></p>
-</figure>
-</div>
-</div><div class="column">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/pdf-z-3sigma.png" class="quarto-figure quarto-figure-center" height="200"></p>
-</figure>
-</div>
-</div></div>
-</section>
-<section id="rule" class="slide level2">
-<h2>68-95-99.7 rule</h2>
-<p><span class="math display">\[
-X \sim \text{N}\big(\mu, \sigma^2\big)
-\]</span></p>
-
-<img data-src="images/pdf-normal-rule.png" class="quarto-figure quarto-figure-center r-stretch"><div class="fragment">
-<p><a href="https://en.wikipedia.org/wiki/Six_Sigma">Six Sigma</a></p>
-<p><span class="math display">\[
-\text{P}(\mu - 6\sigma &lt; X &lt; \mu + 6 \sigma)=99.99966\%
-\]</span></p>
-</div>
-</section>
-<section id="the-procedure-to-get-the-normal-cdf" class="slide level2">
-<h2>The procedure to get the normal CDF</h2>
-<ol type="1">
-<li class="fragment"><p>Standardize <span class="math inline">\(X\)</span> to obtain the standard normal <span class="math inline">\(Z\)</span> <span class="math display">\[\small{Z=\frac{X-\mu}{\sigma}}\]</span></p></li>
-<li class="fragment"><p>Obtain the CDF value from the <span class="math inline">\(Z\)</span> table</p>
-<p><span class="math display">\[
-\small{
-\begin{aligned}
-\text{P}(X &lt; x)&amp;=\text{P}\bigg(\frac{X-\mu}{\sigma} &lt; \frac{x-\mu}{\sigma}\bigg)\\
-&amp;=\text{P}\bigg(Z &lt; \frac{x-\mu}{\sigma}\bigg)
-=\Phi\bigg(\frac{x-\mu}{\sigma}\bigg) \\
-\end{aligned}
-}
-\]</span></p></li>
-</ol>
-</section>
-<section id="getting-normal-cdf-in-python" class="slide level2">
-<h2>Getting normal CDF in Python</h2>
-<p>Go to <a href="https://colab.research.google.com/">Google Colab</a> and sign in. Open a new notebook.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="co"># get the CDF of a standard normal distribution</span></span>
-<span id="cb1-2"><a></a></span>
-<span id="cb1-3"><a></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
-<span id="cb1-4"><a></a></span>
-<span id="cb1-5"><a></a>stats.norm.cdf(x<span class="op">=</span><span class="dv">0</span>)   </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<p><br></p>
-<p>How about <span class="math inline">\(F_X(x=0)=\text{P}(X \leq 0)\)</span> where <span class="math inline">\(X \sim \text{N}(1, 3^2)\)</span>?</p>
-</div>
-<div class="fragment">
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="co"># get the CDF of a non-standard normal distribution</span></span>
-<span id="cb2-2"><a></a></span>
-<span id="cb2-3"><a></a>stats.norm.cdf(x<span class="op">=</span><span class="dv">0</span>, loc<span class="op">=</span><span class="dv">1</span>, scale<span class="op">=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<!-- https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html -->
-</div>
-</section>
-<section id="mixed-random-variables" class="slide level2">
-<h2>Mixed random variables</h2>
-<p>As a final note to Chapter 3 &amp; 4, a random variable could be a mixture of both discrete &amp; continuous.</p>
-<p>Consider the following game of tossing a coin</p>
-<ul>
-<li class="fragment">If it lands on heads, you get $10.</li>
-<li class="fragment">If it lands on tails, you get <span>$</span> amount of <span class="math inline">\(\text{unif}(5, 15)\)</span>.</li>
+<li class="fragment">Does the LLN contradict with the <a href="https://en.wikipedia.org/wiki/Gambler%27s_fallacy">Gambler’s fallacy</a>?</li>
+<li class="fragment">The law works not by balancing out what has happened.</li>
+<li class="fragment">It works by <strong>diluting what has happened with new data</strong>, so that the past is less and less important.</li>
 </ul>
 
 
-</section></section>
 
+<aside><div>
+<p><a href="https://psychologenie.com/gamblers-fallacy-definition-examples">Image source</a></p>
+</div></aside></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

@@ -2006,7 +2006,7 @@
     "href": "lecture-slides/ch04/05-exponential.html#exponential-distribution",
     "title": "4.5 Exponential distribution",
     "section": "Exponential distribution",
-    "text": "Exponential distribution\nIt is commonly used to model the time between two successive events (termed “interarrival time”).\n\nCustomers arriving at a store\nPhone calls coming in to a call center\n“Survival time” (i.e., time to failure) of components",
+    "text": "Exponential distribution\nIt is commonly used to model the time between two successive events (termed “interarrival time”).\n\nCustomers arriving at a store\nPhone calls coming into a call center\n“Survival time” (i.e., time to failure) of components",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -2019,7 +2019,7 @@
     "href": "lecture-slides/ch04/05-exponential.html#section-1",
     "title": "4.5 Exponential distribution",
     "section": "",
-    "text": "Probability density function\n\\[\nf_X(x) =\n\\begin{cases}\n    ce^{-\\lambda x}, & \\text{if $x \\geq 0$,} \\\\\n    0,              & \\text{otherwise.}\n\\end{cases}\n\\]\nwhere \\(\\lambda\\) is the rate parameter (\\(\\lambda&gt;0\\)).",
+    "text": "Probability density function (PDF)\n\\[\nf_X(x) =\n\\begin{cases}\n    ce^{-\\lambda x}, & \\text{if $x \\geq 0$,} \\\\\n    0,              & \\text{otherwise.}\n\\end{cases}\n\\]\nwhere \\(\\lambda\\) is the rate parameter (\\(\\lambda&gt;0\\)).",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -2834,6 +2834,240 @@
     ]
   },
   {
+    "objectID": "lecture-slides/ch06/02-law-of-large-numbers.html#wisdom-of-the-crowd",
+    "href": "lecture-slides/ch06/02-law-of-large-numbers.html#wisdom-of-the-crowd",
+    "title": "6.2 Law of large numbers",
+    "section": "Wisdom of the Crowd",
+    "text": "Wisdom of the Crowd",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.2 Law of large numbers"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/02-law-of-large-numbers.html#law-of-large-numbers-lln",
+    "href": "lecture-slides/ch06/02-law-of-large-numbers.html#law-of-large-numbers-lln",
+    "title": "6.2 Law of large numbers",
+    "section": "Law of Large Numbers (LLN)",
+    "text": "Law of Large Numbers (LLN)\nAssume \\(X_1, X_2, \\cdots, X_n\\) are i.i.d. (independent and identically distributed) RVs with mean \\(\\mu\\) and variance \\(\\sigma^2\\).\n\\[\n\\bar{X}_n \\stackrel{\\text{def}}{=} \\frac{X_1+X_2+\\cdots+X_n}{n}=\\frac{1}{n}\\sum_{i=1}^n X_i\n\\]\n\nLoosely speaking, the LLN states that with high probability, the sample mean \\((\\bar{X}_n)\\) of many i.i.d. random variables is very close to the true mean \\((\\mu)\\).\n\n\nNote \\(\\bar{X}\\) is not a number, but a random variable.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.2 Law of large numbers"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/02-law-of-large-numbers.html#section",
+    "href": "lecture-slides/ch06/02-law-of-large-numbers.html#section",
+    "title": "6.2 Law of large numbers",
+    "section": "",
+    "text": "\\[\n\\small{\n\\begin{aligned}\n\\bar{X}_n&=\\frac{X_1+X_2+\\cdots+X_n}{n} \\\\\n\\\\\n\\text{E}[\\bar{X}_n]&=\\frac{\\text{E}[X_1]+\\text{E}[X_2]+\\cdots+\\text{E}[X_n]}{n}=\\frac{n\\mu}{n}=\\mu \\\\\n\\\\\n\\text{var}(\\bar{X}_n)&=\\frac{\\text{var}(X_1)+\\text{var}(X_2)+\\cdots+\\text{var}(X_n)}{n^2}=\\frac{n\\sigma^2}{n^2}=\\frac{\\sigma^2}{n} \\\\\n\\end{aligned}\n}\n\\]\n\nWe apply the Chebyshev inequality and obtain\n\\[\n\\text{P}\\big(|\\bar{X}_n - \\mu| \\geq \\epsilon \\big) \\leq \\frac{\\sigma^2}{n\\epsilon^2}, \\;\\; \\text{for all $\\epsilon &gt; 0$.}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.2 Law of large numbers"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/02-law-of-large-numbers.html#section-1",
+    "href": "lecture-slides/ch06/02-law-of-large-numbers.html#section-1",
+    "title": "6.2 Law of large numbers",
+    "section": "",
+    "text": "\\[\n\\text{P}\\big(|\\bar{X}_n - \\mu| \\geq \\epsilon \\big) \\leq \\frac{\\sigma^2}{n\\epsilon^2}, \\;\\; \\text{for all $\\epsilon &gt; 0$.}\n\\]\nFor any fixed \\(\\epsilon\\), the right-hand side of the inequality approaches to zero as \\(n\\) increases.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.2 Law of large numbers"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/02-law-of-large-numbers.html#keep-flipping-a-fair-coin-many-times",
+    "href": "lecture-slides/ch06/02-law-of-large-numbers.html#keep-flipping-a-fair-coin-many-times",
+    "title": "6.2 Law of large numbers",
+    "section": "Keep flipping a fair coin many times",
+    "text": "Keep flipping a fair coin many times\nMark a blue dot for heads, a red dot for tails",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.2 Law of large numbers"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/02-law-of-large-numbers.html#keep-flipping-a-fair-coin-many-times-1",
+    "href": "lecture-slides/ch06/02-law-of-large-numbers.html#keep-flipping-a-fair-coin-many-times-1",
+    "title": "6.2 Law of large numbers",
+    "section": "Keep flipping a fair coin many times",
+    "text": "Keep flipping a fair coin many times\n\n\nLet \\(X_1, X_2, \\cdots, X_n\\) be i.i.d. Bernoulli RV with \\(p=0.5\\).\n\\[\n\\mu = \\text{E}[X_i] = 0.5, \\;\\;\\;\\;\\;\\;\\bar{X}_n = \\frac{1}{n}\\sum_{i=1}^n X_i\n\\]\nThe proportion of heads (\\(\\bar{X}_n\\)) gets closer to 0.5 as \\(n\\) increases.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.2 Law of large numbers"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/02-law-of-large-numbers.html#the-weak-law-of-large-numbers",
+    "href": "lecture-slides/ch06/02-law-of-large-numbers.html#the-weak-law-of-large-numbers",
+    "title": "6.2 Law of large numbers",
+    "section": "The (weak) Law of Large Numbers",
+    "text": "The (weak) Law of Large Numbers\n\nLet \\(X_1, X_2, \\cdots, X_n\\) be i.i.d. RVs with mean \\(\\mu\\).\n\\[\n\\lim_{n\\rightarrow +\\infty}\\text{P}\\big(|\\bar{X}_n - \\mu| &lt; \\epsilon\\big)=1, \\;\\; \\text{for every $\\epsilon &gt;0$}.\n\\]\n\nWe say the sequence \\(\\bar{X}_n\\) converges to \\(\\mu\\) in probability.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.2 Law of large numbers"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/02-law-of-large-numbers.html#with-8-sequences-simulated-data",
+    "href": "lecture-slides/ch06/02-law-of-large-numbers.html#with-8-sequences-simulated-data",
+    "title": "6.2 Law of large numbers",
+    "section": "With 8 sequences (simulated data)",
+    "text": "With 8 sequences (simulated data)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.2 Law of large numbers"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/02-law-of-large-numbers.html#overlay-of-10-sequences",
+    "href": "lecture-slides/ch06/02-law-of-large-numbers.html#overlay-of-10-sequences",
+    "title": "6.2 Law of large numbers",
+    "section": "Overlay of 10 sequences",
+    "text": "Overlay of 10 sequences",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.2 Law of large numbers"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/02-law-of-large-numbers.html#section-2",
+    "href": "lecture-slides/ch06/02-law-of-large-numbers.html#section-2",
+    "title": "6.2 Law of large numbers",
+    "section": "",
+    "text": "Keep tossing a six-sided die.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.2 Law of large numbers"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/02-law-of-large-numbers.html#with-8-sequences-simulated-data-1",
+    "href": "lecture-slides/ch06/02-law-of-large-numbers.html#with-8-sequences-simulated-data-1",
+    "title": "6.2 Law of large numbers",
+    "section": "With 8 sequences (simulated data)",
+    "text": "With 8 sequences (simulated data)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.2 Law of large numbers"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/02-law-of-large-numbers.html#overlay-of-10-sequences-1",
+    "href": "lecture-slides/ch06/02-law-of-large-numbers.html#overlay-of-10-sequences-1",
+    "title": "6.2 Law of large numbers",
+    "section": "Overlay of 10 sequences",
+    "text": "Overlay of 10 sequences",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.2 Law of large numbers"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/02-law-of-large-numbers.html#which-exam-format-to-pick",
+    "href": "lecture-slides/ch06/02-law-of-large-numbers.html#which-exam-format-to-pick",
+    "title": "6.2 Law of large numbers",
+    "section": "Which exam format to pick?",
+    "text": "Which exam format to pick?\n\nThe instructor offers two formats for an exam\n\nFormat A: 100 questions with 1 point each\nFormat B: only 1 question that worth 100 point\n\nAssume you can answer each question correctly with probability \\(p\\).\nAssume the exam has no time limit.\nWhich format should you choose if \\(p=0.9\\)?\nWhich format should you choose if \\(p=0.5\\)?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.2 Law of large numbers"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/02-law-of-large-numbers.html#roulette",
+    "href": "lecture-slides/ch06/02-law-of-large-numbers.html#roulette",
+    "title": "6.2 Law of large numbers",
+    "section": "Roulette",
+    "text": "Roulette\n\n\n\n\n\n\n37 numbers including 18 reds, 18 blacks, and 1 green.\nBatting red or black with 1:1 payout\nIf wheel lands on green, both red and black lose. \nWhat is a player’s expected net gain for betting $1?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.2 Law of large numbers"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/02-law-of-large-numbers.html#why-casinos-dont-lose-money",
+    "href": "lecture-slides/ch06/02-law-of-large-numbers.html#why-casinos-dont-lose-money",
+    "title": "6.2 Law of large numbers",
+    "section": "Why casinos don’t lose money",
+    "text": "Why casinos don’t lose money\n\n\n\n\n\n\nWhat are the expected gain for betting other things?\n\nOdd (1, 3,…, 35) or even (2, 4,…, 36) with 1:1 payout\nSmall (1-18) or large(19-36) with 1:1 payout\nGreen (0) with 36:1 payout",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.2 Law of large numbers"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/02-law-of-large-numbers.html#the-best-3-point-shooter-in-nba",
+    "href": "lecture-slides/ch06/02-law-of-large-numbers.html#the-best-3-point-shooter-in-nba",
+    "title": "6.2 Law of large numbers",
+    "section": "The best 3-point shooter in NBA",
+    "text": "The best 3-point shooter in NBA",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.2 Law of large numbers"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/02-law-of-large-numbers.html#the-best-3-point-shooter-in-nba-1",
+    "href": "lecture-slides/ch06/02-law-of-large-numbers.html#the-best-3-point-shooter-in-nba-1",
+    "title": "6.2 Law of large numbers",
+    "section": "The best 3-point shooter in NBA",
+    "text": "The best 3-point shooter in NBA",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.2 Law of large numbers"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/02-law-of-large-numbers.html#section-3",
+    "href": "lecture-slides/ch06/02-law-of-large-numbers.html#section-3",
+    "title": "6.2 Law of large numbers",
+    "section": "",
+    "text": "Does the LLN contradict with the Gambler’s fallacy?\nThe law works not by balancing out what has happened.\nIt works by diluting what has happened with new data, so that the past is less and less important.\n\n\n\n\n\nImage source",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.2 Law of large numbers"
+    ]
+  },
+  {
     "objectID": "syllabus.html",
     "href": "syllabus.html",
     "title": "Syllabus",
@@ -2853,6 +3087,214 @@
     "title": "Syllabus",
     "section": "University-wide policies & statements",
     "text": "University-wide policies & statements\nPlease see the Course Policies menu on Canvas for information on the following topics. To find the Course Policies menu on Canvas, log into any course in Canvas, and then on the blue ribbon on the far left scroll down to Course Policies and click on it. This opens a white ribbon with individual links to UM-Dearborn websites on the following topics:\n\nUniversity Attendance Policy\nAcademic Integrity Policy\nCounseling\nDisability and Accessibility Services\nSafety Statement\nHarassment, Sexual Violence, Bias, and Discrimination"
+  },
+  {
+    "objectID": "lecture-slides/ch06/01-chebyshev.html#markov-inequality",
+    "href": "lecture-slides/ch06/01-chebyshev.html#markov-inequality",
+    "title": "6.1 Chebyshev inequality",
+    "section": "Markov inequality",
+    "text": "Markov inequality\nIf a RV \\(X\\) is non-negative with mean \\(\\mu\\), then\n\\[\n\\text{P}(X \\geq a) \\leq \\frac{\\mu}{a}, \\;\\; \\text{for all $a &gt; 0$.}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.1 Chebyshev inequality"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/01-chebyshev.html#section",
+    "href": "lecture-slides/ch06/01-chebyshev.html#section",
+    "title": "6.1 Chebyshev inequality",
+    "section": "",
+    "text": "Proof (For the discrete case):\n\\[\n\\begin{aligned}\n\\mu&=\\sum_x xp_x(x) \\\\\n&=\\sum_{0 \\leq x &lt; a} xp_x(x) + \\sum_{x \\geq a} xp_x(x) \\\\\n&\\geq 0 + \\sum_{x \\geq a} ap_x(x) \\;\\; \\color{gray}{\\leftarrow\\text{Since $x$ is non-negative}} \\\\\n&= a\\sum_{x \\geq a} p_x(x) \\\\\n&= a\\text{P}(X \\geq a) \\\\\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.1 Chebyshev inequality"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/01-chebyshev.html#section-1",
+    "href": "lecture-slides/ch06/01-chebyshev.html#section-1",
+    "title": "6.1 Chebyshev inequality",
+    "section": "",
+    "text": "Similarly, for the continuous case:\n\\[\n\\begin{aligned}\n\\mu &= \\int_0^{+\\infty} xf_x(x)dx \\\\\n&=\\int_0^a xf_x(x)dx + \\int_a^{+\\infty} xf_x(x)dx \\\\\n&\\geq 0 + \\int_a^{+\\infty} af_x(x)dx  \\\\\n&= a\\int_a^{+\\infty} f_x(x)dx \\\\\n&= a\\text{P}(X \\geq a) \\\\\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.1 Chebyshev inequality"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/01-chebyshev.html#section-2",
+    "href": "lecture-slides/ch06/01-chebyshev.html#section-2",
+    "title": "6.1 Chebyshev inequality",
+    "section": "",
+    "text": "\\[\n\\text{P}(X \\geq a) \\leq \\frac{\\mu}{a}, \\;\\; \\text{for all $a &gt; 0$.}\n\\]\n\nAn alternative form: letting \\(a=k\\mu\\), where \\(k &gt; 0\\), we have\n\\[\n\\text{P}(X \\geq k\\mu) \\leq \\frac{1}{k}, \\;\\; \\text{for all $k &gt; 0$.}\n\\]\n\nThe probability that a non-negative RV takes a value greater than \\(k\\) times of its mean is at most \\(1/k\\).\nThe inequality is only helpful when \\(k &gt; 1\\).\nE.g., the probability of someone earning more than 3 times of the mean salary cannot be greater than 1/3.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.1 Chebyshev inequality"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/01-chebyshev.html#chebyshev-inequality",
+    "href": "lecture-slides/ch06/01-chebyshev.html#chebyshev-inequality",
+    "title": "6.1 Chebyshev inequality",
+    "section": "Chebyshev inequality",
+    "text": "Chebyshev inequality\nIf \\(X\\) is a RV with mean \\(\\mu\\) and variance \\(\\sigma^2\\), then\n\\[\n\\text{P}\\big(|X - \\mu| \\geq c \\big) \\leq \\frac{\\sigma^2}{c^2}, \\;\\;\\;\\;\\;\\; \\text{for all $c &gt; 0$.}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.1 Chebyshev inequality"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/01-chebyshev.html#section-3",
+    "href": "lecture-slides/ch06/01-chebyshev.html#section-3",
+    "title": "6.1 Chebyshev inequality",
+    "section": "",
+    "text": "Proof\nLet \\(Y=(X-\\mu)^2\\). We know \\(Y\\) is non-negative.\nApply the Markov inequality with \\(a=c^2\\), we have\n\\[\n\\text{P}\\big((X-\\mu)^2 \\geq c^2\\big) \\leq \\frac{\\text{E}[(X-\\mu)^2]}{c^2}=\\frac{\\sigma^2}{c^2}\n\\]\nEvent \\((X-\\mu)^2 \\geq c^2\\) is identical to \\(|X-\\mu| \\geq c\\).\nThus, we have\n\\[\n\\text{P}\\big(|X - \\mu| \\geq c\\big) = \\text{P}\\big((X-\\mu)^2 \\geq c^2\\big) \\leq \\frac{\\sigma^2}{c^2}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.1 Chebyshev inequality"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/01-chebyshev.html#section-4",
+    "href": "lecture-slides/ch06/01-chebyshev.html#section-4",
+    "title": "6.1 Chebyshev inequality",
+    "section": "",
+    "text": "\\[\n\\text{P}(|X - \\mu| \\geq c) \\leq \\frac{\\sigma^2}{c^2}, \\;\\; \\text{for all $c &gt; 0$.}\n\\]\nAn alternative form: letting \\(c=k\\sigma\\), where \\(k &gt; 0\\). We have\n\\[\n\\text{P}\\big(|X - \\mu| \\geq k\\sigma \\big) \\leq \\frac{\\sigma^2}{k^2\\sigma^2} = \\frac{1}{k^2}, \\;\\; \\text{for all $k &gt; 0$.}\n\\]\n\nThe probability that a RV is more than \\(k\\) standard deviations away from its mean is at most \\(1/k^2\\).\nE.g., the probability of someone’s salary is more than \\(3\\sigma\\) away from the mean cannot be greater than \\(1/9\\).",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.1 Chebyshev inequality"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/03-central-limit-theorem.html#section",
+    "href": "lecture-slides/ch06/03-central-limit-theorem.html#section",
+    "title": "6.3 Central limit theorem",
+    "section": "",
+    "text": "Let \\(X_1, X_2, \\cdots, X_n\\) be i.i.d. with \\(\\mu\\) and \\(\\sigma^2\\).\n\n\\[\n\\small{\n\\begin{aligned}\n\\bar{X}_n&=\\frac{X_1+X_2+\\cdots+X_n}{n} \\\\\n\\\\\nS_n&=X_1+X_2+\\cdots+X_n \\\\\n\\end{aligned}\n}\n\\]\n\nThen, if \\(n\\) is large,\n\\[\n\\begin{aligned}\n&\\bar{X}_n \\text{ is approximately } \\text{N}(\\mu, \\frac{\\sigma^2}{n}) \\\\\n&S_n \\text{ is approximately } \\text{N}(n\\mu, n\\sigma^2) \\\\\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.3 Central limit theorem"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/03-central-limit-theorem.html#section-1",
+    "href": "lecture-slides/ch06/03-central-limit-theorem.html#section-1",
+    "title": "6.3 Central limit theorem",
+    "section": "",
+    "text": "\\[\n\\begin{aligned}\n&\\bar{X}_n \\text{ is approximately } \\text{N}(\\mu, \\frac{\\sigma^2}{n}) \\\\\n&S_n \\text{ is approximately } \\text{N}(n\\mu, n\\sigma^2) \\\\\n\\end{aligned}\n\\]\nTheir standardized version: \\[\n\\begin{aligned}\n\\frac{\\bar{X}_n-\\mu}{\\sigma/\\sqrt{n}} &\\text{ is approximately } \\text{N}(0, 1) \\\\\n\\\\\n\\frac{S_n-n\\mu}{\\sqrt{n}\\sigma} &\\text{ is approximately } \\text{N}(0, 1) \\\\\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.3 Central limit theorem"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/03-central-limit-theorem.html#section-2",
+    "href": "lecture-slides/ch06/03-central-limit-theorem.html#section-2",
+    "title": "6.3 Central limit theorem",
+    "section": "",
+    "text": "\\[\nX_i \\sim \\text{unif}(0, 1),\\;\\; \\bar{X}_n=\\frac{X_1+X_2+\\cdots+X_n}{n}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.3 Central limit theorem"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/03-central-limit-theorem.html#section-3",
+    "href": "lecture-slides/ch06/03-central-limit-theorem.html#section-3",
+    "title": "6.3 Central limit theorem",
+    "section": "",
+    "text": "\\[\nX_i \\sim \\text{unif}(0, 1),\\;\\; \\bar{X}_n=\\frac{X_1+X_2+\\cdots+X_n}{n}\n\\]\nLet’s set a fixed x-axis scale.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.3 Central limit theorem"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/03-central-limit-theorem.html#section-4",
+    "href": "lecture-slides/ch06/03-central-limit-theorem.html#section-4",
+    "title": "6.3 Central limit theorem",
+    "section": "",
+    "text": "\\[\nX_i \\sim \\text{bin}(10, 0.9),\\;\\; \\bar{X}_n=\\frac{X_1+X_2+\\cdots+X_n}{n}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.3 Central limit theorem"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/03-central-limit-theorem.html#section-5",
+    "href": "lecture-slides/ch06/03-central-limit-theorem.html#section-5",
+    "title": "6.3 Central limit theorem",
+    "section": "",
+    "text": "\\[\nX_i \\sim \\text{expo}(1),\\;\\; \\bar{X}_n=\\frac{X_1+X_2+\\cdots+X_n}{n}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.3 Central limit theorem"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/03-central-limit-theorem.html#how-big-does-n-need-to-be-for-the-clt",
+    "href": "lecture-slides/ch06/03-central-limit-theorem.html#how-big-does-n-need-to-be-for-the-clt",
+    "title": "6.3 Central limit theorem",
+    "section": "How big does \\(n\\) need to be for the CLT?",
+    "text": "How big does \\(n\\) need to be for the CLT?\n\nNot very big.\nRule of thumb: \\(n &gt; 30\\)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.3 Central limit theorem"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/03-central-limit-theorem.html#section-6",
+    "href": "lecture-slides/ch06/03-central-limit-theorem.html#section-6",
+    "title": "6.3 Central limit theorem",
+    "section": "",
+    "text": "\\[\n\\text{unif}(0, 1)\n\\]\n\n\\[\n\\text{bin}(10, 0.9)\n\\]\n\n\\[\n\\text{expo}(1)\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.3 Central limit theorem"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch06/03-central-limit-theorem.html#exercise",
+    "href": "lecture-slides/ch06/03-central-limit-theorem.html#exercise",
+    "title": "6.3 Central limit theorem",
+    "section": "Exercise",
+    "text": "Exercise\n\nAn accountant rounds each transaction to the nearest dollar (e.g., from $8.63 to $9).\nAssume the error in rounding is \\(\\text{unif}(-0.5, 0.5)\\).\nThere is a total of 300 transaction entries today.\nWhat is the probability that the total error in today’s transactions is more than $5?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 6. Limit theorems",
+      "6.3 Central limit theorem"
+    ]
   },
   {
     "objectID": "lecture-slides/ch01/01-course-intro.html#what-is-probability",
@@ -3353,7 +3795,7 @@
     "href": "lecture-slides/ch04/06-normal.html#section-3",
     "title": "4.6 Normal distribution",
     "section": "",
-    "text": "We can also prove for \\(Z \\sim \\text{N}(0, 1)\\), \\(\\text{var}(Z)=1\\).\n\\[\n\\begin{aligned}\n\\text{var}(Z)&=\\text{E}\\big[Z^2\\big]-\\big(\\text{E}[Z]\\big)^2 \\\\\n\\\\\n&=\\int_{-\\infty}^{+\\infty}z^2(\\frac{1}{\\sqrt{2\\pi}}e^{-\\frac{z^2}{2}})dz \\\\\n\\\\\n&=1 \\;\\;\\;\\;\\color{gray}{\\rightarrow\\text{we will skip the proof of this part.}}\n\\end{aligned}\n\\]\nThen we have \\[\\text{var}(X)=\\text{var}(\\sigma Z+\\mu)=\\sigma^2\\text{var}(Z)=\\sigma^2 \\cdot 1 = \\sigma^2\\]",
+    "text": "We can also prove for \\(Z \\sim \\text{N}(0, 1)\\), \\(\\text{var}(Z)=1\\).\n\\[\n\\begin{aligned}\n\\text{var}(Z)&=\\text{E}\\big[Z^2\\big]-\\big(\\text{E}[Z]\\big)^2 \\\\\n\\\\\n&=\\int_{-\\infty}^{+\\infty}z^2(\\frac{1}{\\sqrt{2\\pi}}e^{-\\frac{z^2}{2}})dz \\\\\n\\\\\n&=1 \\;\\;\\;\\;\\color{gray}{\\rightarrow\\text{we will skip the proof of this part.}}\n\\end{aligned}\n\\]\n\nThen we have \\[\\text{var}(X)=\\text{var}(\\sigma Z+\\mu)=\\sigma^2\\text{var}(Z)=\\sigma^2 \\cdot 1 = \\sigma^2\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
