@@ -3068,6 +3068,1228 @@
     ]
   },
   {
+    "objectID": "lecture-slides/ch08/06-two-sample-z-test.html#hypothesis-test-based-on-two-samples",
+    "href": "lecture-slides/ch08/06-two-sample-z-test.html#hypothesis-test-based-on-two-samples",
+    "title": "8.6 Two-sample z-test",
+    "section": "Hypothesis test based on two samples",
+    "text": "Hypothesis test based on two samples\n\nWe wish to test the life of batteries from two brands A & B.\nWe took 100 randomly selected batteries from each brand and tested them.\n\n\n\\[\n\\bar{x}=4.1 \\text{ hours}, \\;\\;\\;\\;\\bar{y}=4.4 \\text{ hours}\n\\]\n\n\nAssume we know that\n\\[\n\\sigma_X=1.8 \\text{ hours}, \\;\\;\\;\\;\\sigma_Y=2.0 \\text{ hours}\n\\]\n\n\nDoes the battery in brand B has significant longer battery life?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.6 Two-sample *z*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/06-two-sample-z-test.html#section",
+    "href": "lecture-slides/ch08/06-two-sample-z-test.html#section",
+    "title": "8.6 Two-sample z-test",
+    "section": "",
+    "text": "Assuming \\[\n\\small{\n    X_1, X_2, \\cdots, X_m \\stackrel{\\text{i.i.d.}}{\\sim} \\text{N}\\big(\\mu_X, \\sigma_X^2\\big)\n}\n\\]\n\nAnd independently,\n\\[\n\\small{\n    Y_1, Y_2, \\cdots, Y_n \\stackrel{\\text{i.i.d.}}{\\sim} \\text{N}\\big(\\mu_Y, \\sigma_Y^2\\big)\n    }\n\\]\n\n\n\\[\n\\small{\n    \\text{Then,}\\;\\;\\;\\;\n    \\bar{X} \\sim \\text{N}\\big(\\mu_X, \\frac{\\sigma_X^2}{m}\\big), \\;\\;\\;\\;\\bar{Y} \\sim \\text{N}\\big(\\mu_Y, \\frac{\\sigma_Y^2}{n}\\big)\n    }\n\\]\n\\[\n\\small{\n    \\text{with $\\bar{X}$ independent of $\\bar{Y}$.}\n    }\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.6 Two-sample *z*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/06-two-sample-z-test.html#section-1",
+    "href": "lecture-slides/ch08/06-two-sample-z-test.html#section-1",
+    "title": "8.6 Two-sample z-test",
+    "section": "",
+    "text": "\\[\n\\small{\n    \\bar{X} \\sim \\text{N}\\big(\\mu_X, \\frac{\\sigma_X^2}{m}\\big), \\;\\;\\;\\;\\bar{Y} \\sim \\text{N}\\big(\\mu_Y, \\frac{\\sigma_Y^2}{n}\\big)\n    }\n\\]\nLet’s construct a new random variable \\(\\bar{X}-\\bar{Y}\\).\n\n\\[\n\\small{\n\\begin{aligned}\n\\text{E}[\\bar{X}-\\bar{Y}]&=\\text{E}[\\bar{X}]-\\text{E}[\\bar{Y}]=\\mu_X-\\mu_Y\\;\\;\\;\\;\\color{gray}{\\rightarrow \\text{unbiased}} \\\\\n\\\\\n\\text{var}(\\bar{X}-\\bar{Y})&=\\text{var}(\\bar{X})+\\text{var}(\\bar{Y})=\\frac{\\sigma_X^2}{m}+\\frac{\\sigma_y^2}{n} \\\\\n\\end{aligned}\n}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.6 Two-sample *z*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/06-two-sample-z-test.html#section-2",
+    "href": "lecture-slides/ch08/06-two-sample-z-test.html#section-2",
+    "title": "8.6 Two-sample z-test",
+    "section": "",
+    "text": "We know that \\(\\bar{X}-\\bar{Y}\\) is also normally distributed, and\n\\[\n\\small{\n    \\bar{X}-\\bar{Y} \\sim \\text{N}\\big(\\mu_X-\\mu_Y, \\frac{\\sigma_X^2}{m}+\\frac{\\sigma_Y^2}{n}\\big)\n    }\n\\]\n\n\n\\[\n\\text{Standardization:}\\;\\;\\;\\frac{\\bar{X}-\\bar{Y}-(\\mu_X-\\mu_Y)}{\\sqrt{\\frac{\\sigma_X^2}{m}+\\frac{\\sigma_Y^2}{n}}} \\sim \\text{N}(0, 1)\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.6 Two-sample *z*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/06-two-sample-z-test.html#section-3",
+    "href": "lecture-slides/ch08/06-two-sample-z-test.html#section-3",
+    "title": "8.6 Two-sample z-test",
+    "section": "",
+    "text": "\\[\n\\text{We want to test if }\\mu_X=\\mu_Y \\text{ (i.e., } \\mu_X-\\mu_Y=0)\n\\]\n\\[\n\\begin{aligned}\n&H_0: \\mu_X=\\mu_Y \\; \\text{ (or, } \\mu_X-\\mu_Y=0 ) \\\\\n(1)\\; &H_a: \\mu_X \\neq \\mu_Y \\;\\text{ (or, } \\mu_X-\\mu_Y\\neq0)\\;\\;\\;\\;\\color{gray}{\\rightarrow\\text{two-tailed}} \\\\\n(2)\\; &H_a: \\mu_X &lt; \\mu_Y \\;\\text{ (or, } \\mu_X-\\mu_Y &lt; 0) \\;\\;\\;\\;\\color{gray}{\\rightarrow\\text{one-tailed}} \\\\\n(3)\\; &H_a: \\mu_X &gt; \\mu_Y \\;\\text{ (or, } \\mu_X-\\mu_Y &gt; 0) \\;\\;\\;\\;\\color{gray}{\\rightarrow\\text{one-tailed}} \\\\\n\\end{aligned}\n\\]\n\nRegardless of \\(H_a\\), our test statistic is\n\\[\n\\small{\n    z=\\frac{\\bar{x}-\\bar{y}-(\\mu_X-\\mu_Y)}{\\sqrt{\\frac{\\sigma_X^2}{m}+\\frac{\\sigma_Y^2}{n}}}=\\frac{\\bar{x}-\\bar{y}-0}{\\sqrt{\\frac{\\sigma_X^2}{m}+\\frac{\\sigma_Y^2}{n}}}=\\frac{\\bar{x}-\\bar{y}}{\\sqrt{\\frac{\\sigma_X^2}{m}+\\frac{\\sigma_Y^2}{n}}}\n    }\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.6 Two-sample *z*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/06-two-sample-z-test.html#section-4",
+    "href": "lecture-slides/ch08/06-two-sample-z-test.html#section-4",
+    "title": "8.6 Two-sample z-test",
+    "section": "",
+    "text": "The battery life example\n\\[\n\\small{\n\\begin{aligned}\n&H_0: \\mu_X=\\mu_Y \\;\\text{ (or, } \\mu_X-\\mu_Y=0) \\\\\n&H_a: \\mu_X &lt; \\mu_Y \\;\\text{ (or, } \\mu_X-\\mu_Y &lt; 0) \\\\\n\\end{aligned}\n}\n\\]\n\n\\[\n\\small{\n    \\sigma_X=1.8 \\text{ hours}, \\;\\;\\;\\;\\sigma_Y=2.0 \\text{ hours}\n    }\n\\]\n\n\n\\[\n\\small{\n    \\text{Sample size:}\\;m=n=100, \\;\\;\\;\\;\\bar{x}=4.1 \\text{ hours}, \\;\\;\\;\\;\\bar{y}=4.4 \\text{ hours}\n    }\n\\]\n\n\n\\[\n\\small{\n    \\frac{\\bar{x}-\\bar{y}}{\\sqrt{\\frac{\\sigma_X^2}{m}+\\frac{\\sigma_Y^2}{n}}}=\\frac{4.1-4.4}{\\sqrt{\\frac{1.8^2}{100}+\\frac{2.0^2}{100}}}\\approx -1.11\n    }\n\\]\n\n\n\\[\n\\small{\n    \\text{$p$-value}=\\text{P}(Z&lt;-1.11)=0.1335\n    }\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.6 Two-sample *z*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/06-two-sample-z-test.html#large-sample-tests",
+    "href": "lecture-slides/ch08/06-two-sample-z-test.html#large-sample-tests",
+    "title": "8.6 Two-sample z-test",
+    "section": "Large sample tests",
+    "text": "Large sample tests\n\nWhen both sample sizes are sufficiently large, the CLT tells us that \\(\\bar{X}-\\bar{Y}\\) is approximately normal.\nIn addition, we can use the sample variance to estimate the population variance (often unknown in practice).\n\n\n\\[\n\\small{\n    \\frac{\\bar{X}-\\bar{Y}-(\\mu_X-\\mu_Y)}{\\sqrt{\\frac{s_X^2}{m}+\\frac{s_Y^2}{n}}} \\text{ is approximately } \\text{N}(0, 1)\n    }\n\\]\nWe can use it as the test statistic.\n\n\nIt is usually appropriate if both \\(m&gt;40\\) and \\(n&gt;40\\).",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.6 Two-sample *z*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/06-two-sample-z-test.html#section-5",
+    "href": "lecture-slides/ch08/06-two-sample-z-test.html#section-5",
+    "title": "8.6 Two-sample z-test",
+    "section": "",
+    "text": "Effects of fast food consumption on calorie intake\n\n\n\n\nEat fast food\nSample size\nSample mean\nSample STD\n\n\n\n\nYes (\\(X\\))\n413\n2,637\n1,138\n\n\nNo (\\(Y\\))\n663\n2,258\n1,519\n\n\n\n\n\nIs the calorie intake for fast food eaters significantly higher?\n\n\n\\[\n\\small{\n    H_0: \\mu_X-\\mu_Y=0,\\;\\;\\;\\;H_a: \\mu_X-\\mu_Y&gt;0\n    }\n\\]\n\n\n\\[\n\\small{\n    z=\\frac{\\bar{x}-\\bar{y}}{\\sqrt{\\frac{s_X^2}{m}+\\frac{s_Y^2}{n}}}=\\frac{2637-2258}{\\sqrt{\\frac{1138^2}{413}+\\frac{1519^2}{663}}}\\approx 4.660\n    }\n\\]\n\n\n\\[\n\\small{\n    \\text{$p$-value}=\\text{P}(Z&gt;4.66)&lt; 0.001\n    }\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.6 Two-sample *z*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/06-two-sample-z-test.html#section-6",
+    "href": "lecture-slides/ch08/06-two-sample-z-test.html#section-6",
+    "title": "8.6 Two-sample z-test",
+    "section": "",
+    "text": "Effects of fast food consumption on calorie intake\n\n\n\n\nEat fast food\nSample size\nSample mean\nSample STD\n\n\n\n\nYes (\\(X\\))\n413\n2,637\n1,138\n\n\nNo (\\(Y\\))\n663\n2,258\n1,519\n\n\n\n\nIs the calorie intake for fast food eaters more than 200 higher?\n\n\\[\n\\small{\n    H_0: \\mu_X-\\mu_Y=200,\\;\\;\\;\\;H_a: \\mu_X-\\mu_Y&gt;200\n    }\n\\]\n\n\n\\[\n\\small{\n    z=\\frac{\\bar{x}-\\bar{y}-200}{\\sqrt{\\frac{s_X^2}{m}+\\frac{s_Y^2}{n}}}=\\frac{2637-2258-200}{\\sqrt{\\frac{1138^2}{413}+\\frac{1519^2}{663}}}\\approx 2.201\n    }\n\\]\n\n\n\\[\n\\small{\n    \\text{$p$-value}=\\text{P}(Z&gt;2.201)=0.0217\n}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.6 Two-sample *z*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/05-proportion-test.html#section",
+    "href": "lecture-slides/ch08/05-proportion-test.html#section",
+    "title": "8.5 Proportion test",
+    "section": "",
+    "text": "Tests concerning a population proportion\n\nIt was claimed that 40% of human have type A blood.\nYou suspect the proportion differs from 40%.\n\n\n\\[\n\\begin{aligned}\nH_0:& p=0.4 \\\\\n\\\\\nH_a:& p \\neq 0.4\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.5 Proportion test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/05-proportion-test.html#section-1",
+    "href": "lecture-slides/ch08/05-proportion-test.html#section-1",
+    "title": "8.5 Proportion test",
+    "section": "",
+    "text": "Suppose \\(Y\\) follows a binomial distribution with\n\nknown parameter \\(n\\) (number of trials)\nunknown parameter \\(p\\) (probability of a success)\n\n\n\n\\[\nY \\sim \\text{bin}(n, p)\n\\]\n\n\nWe want to test \\(p\\).",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.5 Proportion test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/05-proportion-test.html#section-2",
+    "href": "lecture-slides/ch08/05-proportion-test.html#section-2",
+    "title": "8.5 Proportion test",
+    "section": "",
+    "text": "\\[\n\\small{Y \\sim \\text{bin}(n, p), \\;\\;\\;\\;\\text{E}[Y]=np, \\;\\;\\;\\;\\text{var}(Y)=np(1-p)}\n\\]\n\n\\[\n\\small{\\text{Sample proportion } \\hat{P}=\\frac{Y}{n} \\text{ is an estimator for $p$}.}\n\\]\n\n\n\\[\n\\small{\\text{E}\\big[\\hat{P}\\big]=\\text{E}\\bigg[\\frac{Y}{n}\\bigg]}=\\frac{1}{n}\\text{E}[Y]=\\frac{1}{n}np=p\n\\]\n\n\nWhen the expected value of a parameter estimator is equal to the underlying parameter to be estimated, we say that the estimator is unbiased.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.5 Proportion test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/05-proportion-test.html#section-3",
+    "href": "lecture-slides/ch08/05-proportion-test.html#section-3",
+    "title": "8.5 Proportion test",
+    "section": "",
+    "text": "\\[\n\\small{\\text{var}\\big(\\hat{P}\\big)=\\text{var}\\bigg(\\frac{Y}{n}\\bigg)}=\\frac{1}{n^2}\\text{var}(Y)=\\frac{1}{n^2}np(1-p)=\\frac{p(1-p)}{n}\n\\]\n\n\\[\n\\small{\\text{When $n$ is large, the estimator }\\hat{P}\n\\text{\nis approximately } \\text{N}\\bigg(p, \\frac{p(1-p)}{n}\\bigg)}\n\\]\n\n\n\\[\n\\small{\\text{Standardization: }\\;\\;\\frac{\\hat{P}-p}{\\sqrt{\\frac{p(1-p)}{n}}} \\text{ is approximately } \\text{N}(0, 1)}\n\\]\n\n\n\\[\n\\small{z=\\frac{\\hat{p}-p}{\\sqrt{\\frac{p(1-p)}{n}}}} \\text{ is our test statistic.}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.5 Proportion test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/05-proportion-test.html#section-4",
+    "href": "lecture-slides/ch08/05-proportion-test.html#section-4",
+    "title": "8.5 Proportion test",
+    "section": "",
+    "text": "\\[\n\\small{H_0: p=0.4; \\;\\;\\;\\; H_a: p \\neq 0.4}\n\\]\n\nA random sample of 150 donations at a blood bank reveals that 73 were type A blood.\n\n\n\\[\n\\small{\n\\begin{aligned}\n\\text{Sample proportion: }\\hat{p}&=\\frac{73}{150} \\\\\n\\\\\n\\text{Test statistic: }z&=\\frac{\\hat{p}-p}{\\sqrt{\\frac{p(1-p)}{n}}}=\\frac{\\frac{73}{150}-0.4}{\\sqrt{\\frac{0.4\\times0.6}{150}}}=2.167 \\\\\n\\end{aligned}\n}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.5 Proportion test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/05-proportion-test.html#section-5",
+    "href": "lecture-slides/ch08/05-proportion-test.html#section-5",
+    "title": "8.5 Proportion test",
+    "section": "",
+    "text": "\\[\nH_0: p=0.4; \\;\\;\\;\\; H_a: p \\neq 0.4\n\\]\n\\[\n\\text{Test statistic:}\\;\\;z=2.167\n\\]\n\n\n\n\n\n\\[\n\\text{$p$-value}=2\\cdot\\text{P}(Z&gt;2.167) = 0.030\n\\]\n\nThus, at a significance level \\(\\alpha=0.05\\) we reject the \\(H_0\\), and conclude that the proportion of type A blood differs from 40%.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.5 Proportion test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/05-proportion-test.html#section-6",
+    "href": "lecture-slides/ch08/05-proportion-test.html#section-6",
+    "title": "8.5 Proportion test",
+    "section": "",
+    "text": "We can alsoconduct a one-tailed test for different alternative hypothesis (e.g., the proportion is higher than 40%)\n\n\n\\[\n\\small{\nH_0: p=0.4; \\;\\;\\;\\; H_a: p &gt; 0.4\n}\n\\]\n\\[\n\\small{\n\\text{Test statistic:}\\;\\;z=2.167\n}\n\\]\n\n\n\n\n\\[\n\\small{\n\\text{$p$-value}=\\text{P}(Z&gt;2.167) = 0.015\n}\n\\]\n\n\n\n\n\n\n\nAt a significance level \\(\\alpha=0.05\\) we reject the \\(H_0\\)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.5 Proportion test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/07-two-sample-t-test.html#the-two-sample-t-tests",
+    "href": "lecture-slides/ch08/07-two-sample-t-test.html#the-two-sample-t-tests",
+    "title": "8.7 Two-sample t-test",
+    "section": "The two sample t-tests",
+    "text": "The two sample t-tests\n\nWhat if at least one sample size is small and we don’t know the population variance?\nIf both \\(X\\) and \\(Y\\) are normal and independent,\n\n\n\\[\n\\small{\n    T=\\frac{\\bar{X}-\\bar{Y}-(\\mu_X-\\mu_Y)}{\\sqrt{\\frac{S_X^2}{m}+\\frac{S_Y^2}{n}}}\\text{ is approximately a $t$-distribution.}\n    }\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.7 Two-sample *t*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/07-two-sample-t-test.html#section",
+    "href": "lecture-slides/ch08/07-two-sample-t-test.html#section",
+    "title": "8.7 Two-sample t-test",
+    "section": "",
+    "text": "\\[\n\\small{\n    T=\\frac{\\bar{X}-\\bar{Y}-(\\mu_X-\\mu_Y)}{\\sqrt{\\frac{S_X^2}{m}+\\frac{S_Y^2}{n}}}\n    }\n\\]\n\\[\n\\small{\n    \\text{degree of freedom: }v=\\frac{\\big(\\frac{s_X^2}{m}+\\frac{s_Y^2}{n}\\big)^2}{\\frac{s_X^2/m}{m-1}+\\frac{s_Y^2/n}{n-1}}\\\\\n    \\text{Round down to the nearest integer.}\n    }\n\\]\nWe can use it as the test statistic.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.7 Two-sample *t*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/07-two-sample-t-test.html#section-1",
+    "href": "lecture-slides/ch08/07-two-sample-t-test.html#section-1",
+    "title": "8.7 Two-sample t-test",
+    "section": "",
+    "text": "We follow the same test procedure as before.\n\\[\n\\begin{aligned}\n&H_0: \\mu_X=\\mu_Y \\; \\text{ (or, } \\mu_X-\\mu_Y=0 ) \\\\\n(1)\\; &H_a: \\mu_X \\neq \\mu_Y \\;\\text{ (or, } \\mu_X-\\mu_Y\\neq0)\\;\\;\\;\\;\\color{gray}{\\rightarrow\\text{two-tailed}}\\\\\n(2)\\; &H_a: \\mu_X &lt; \\mu_Y \\;\\text{ (or, } \\mu_X-\\mu_Y &lt; 0) \\;\\;\\;\\;\\color{gray}{\\rightarrow\\text{one-tailed}}\\\\\n(3)\\; &H_a: \\mu_X &gt; \\mu_Y \\;\\text{ (or, } \\mu_X-\\mu_Y &gt; 0) \\;\\;\\;\\;\\color{gray}{\\rightarrow\\text{one-tailed}}\\\\\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.7 Two-sample *t*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/07-two-sample-t-test.html#section-2",
+    "href": "lecture-slides/ch08/07-two-sample-t-test.html#section-2",
+    "title": "8.7 Two-sample t-test",
+    "section": "",
+    "text": "Effects of a fusion treatment on material strength\n\n\n\n\n\nSample size\nSample mean\nSample STD\n\n\n\n\nNo fusion (\\(X\\))\n10\n2,902.8\n277.3\n\n\nFused (\\(Y\\))\n8\n3,108.1\n205.9",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.7 Two-sample *t*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/07-two-sample-t-test.html#section-3",
+    "href": "lecture-slides/ch08/07-two-sample-t-test.html#section-3",
+    "title": "8.7 Two-sample t-test",
+    "section": "",
+    "text": "Does the treatment increase the material strength?\n\n\\[\n\\small{\n    H_0: \\mu_X-\\mu_Y=0,\\;\\;\\;\\;H_a: \\mu_X-\\mu_Y&lt; 0\n    }\n\\]\n\n\n\\[\n\\small{\n    t=\\frac{\\bar{x}-\\bar{y}-0}{\\sqrt{\\frac{s_X^2}{m}+\\frac{s_Y^2}{n}}}=\\frac{2902.8-3108.1}{\\sqrt{\\frac{277.3^2}{10}+\\frac{205.9^2}{8}}}\\approx -1.801\n    }\n\\]\n\n\n\\[\n\\small{\n    v=\\frac{\\big(\\frac{s_X^2}{m}+\\frac{s_Y^2}{n}\\big)^2}{\\frac{s_X^2/m}{m-1}+\\frac{S_s^2/n}{n-1}}=\\frac{\\big(\\frac{277.3^2}{10}+\\frac{205.9^2}{8}\\big)^2}{\\frac{277.3^2/10}{10-1}+\\frac{205.9^2/8}{8-1}}\\approx 15.94\n}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.7 Two-sample *t*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/07-two-sample-t-test.html#section-4",
+    "href": "lecture-slides/ch08/07-two-sample-t-test.html#section-4",
+    "title": "8.7 Two-sample t-test",
+    "section": "",
+    "text": "\\[\n\\small{\n    \\begin{aligned}\n    &p\\text{-value}\\\\\n    =\\;&\\text{P}(T_{v=15}&lt; -1.801) \\\\\n    =\\;&0.046\n    \\end{aligned}\n}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.7 Two-sample *t*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/07-two-sample-t-test.html#pooled-t-procedure",
+    "href": "lecture-slides/ch08/07-two-sample-t-test.html#pooled-t-procedure",
+    "title": "8.7 Two-sample t-test",
+    "section": "Pooled t procedure",
+    "text": "Pooled t procedure\n\\[\n\\small{\n    T=\\frac{\\bar{X}-\\bar{Y}-(\\mu_X-\\mu_Y)}{\\sqrt{\\frac{S_X^2}{m}+\\frac{S_Y^2}{n}}},\\;\\;\\;\\; v=\\frac{\\big(\\frac{S_X^2}{m}+\\frac{S_Y^2}{n}\\big)^2}{\\frac{S_X^2/m}{m-1}+\\frac{S_Y^2/n}{n-1}}\n    }\n\\]\n\nIf it’s reasonable to assume \\(X\\) and \\(Y\\) have (unknown but) equal variance (i.e., \\(\\sigma_X^2=\\sigma_Y^2\\)), we can simplify it to\n\n\n\\[\n\\small{\n    S_{\\text{pooled}}^2=\\frac{m-1}{m+n-2}S_X^2+\\frac{n-1}{m+n-2}S_Y^2\n    }\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.7 Two-sample *t*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/07-two-sample-t-test.html#section-5",
+    "href": "lecture-slides/ch08/07-two-sample-t-test.html#section-5",
+    "title": "8.7 Two-sample t-test",
+    "section": "",
+    "text": "\\[\n\\small{\n    T=\\frac{\\bar{X}-\\bar{Y}-(\\mu_X-\\mu_Y)}{S_{\\text{pooled}}\\sqrt{\\frac{1}{m}+\\frac{1}{n}}}}\\;\\text{ is approximately a $t$-distribution.\n    }\n\\]\n\\[\n\\small{\n    \\text{with degree of freedom of $(m+n-2)$.}\n    }\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.7 Two-sample *t*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/07-two-sample-t-test.html#paired-t-test",
+    "href": "lecture-slides/ch08/07-two-sample-t-test.html#paired-t-test",
+    "title": "8.7 Two-sample t-test",
+    "section": "Paired t-test",
+    "text": "Paired t-test\n\nSo far, we assumed \\(X_1, X_2, \\cdots, X_m\\) and \\(Y_1, Y_2, \\cdots, Y_n\\) are all independent.\n\nA group of people who eat fast food, and another group of people who don’t\n\nIn many situations, there’s only one set of \\(n\\) individuals or objects, and we make two observations on each.\n\nPatient blood pressure before/after taking a drug\nStudent test scores before/after a tutoring program",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.7 Two-sample *t*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/07-two-sample-t-test.html#assumptions",
+    "href": "lecture-slides/ch08/07-two-sample-t-test.html#assumptions",
+    "title": "8.7 Two-sample t-test",
+    "section": "Assumptions",
+    "text": "Assumptions\nThe data consists of \\(n\\) independently selected pairs\n\\[\n(X_1, Y_1), (X_2, Y_2), \\cdots, (X_n, Y_n)\n\\]\nLet \\(D\\) denotes the difference between the first and second observations within a pair.\n\\[\nD_i = X_i-Y_i, \\;\\;\\;\\; i=1, 2, \\cdots, n\n\\]\n\n\\[\n\\mu_D=\\text{E}[X-Y]=\\mu_X-\\mu_Y\n\\]\nThen we can do the one-sample test on the difference.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.7 Two-sample *t*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/07-two-sample-t-test.html#paired-t-test-1",
+    "href": "lecture-slides/ch08/07-two-sample-t-test.html#paired-t-test-1",
+    "title": "8.7 Two-sample t-test",
+    "section": "Paired t-test",
+    "text": "Paired t-test\n\\[\n\\begin{aligned}\n&H_0: \\mu_D=0 \\\\\n(1)\\; &H_a: \\mu_D \\neq 0\\;\\;\\;\\;\\color{gray}{\\rightarrow\\text{two-tailed}} \\\\\n(2)\\; &H_a: \\mu_D&gt;0\\;\\;\\;\\;\\color{gray}{\\rightarrow\\text{one-tailed}} \\\\\n(3)\\; &H_a: \\mu_D &lt; 0\\;\\;\\;\\;\\color{gray}{\\rightarrow\\text{one-tailed}} \\\\\n\\end{aligned}\n\\]\n\n\\[\n\\text{The test statistic:}\\;\\;\\;\\;t=\\frac{\\bar{d}-0}{s_D/\\sqrt{n}}\n\\]\n\\[\n\\text{with a degree of freedom of $n-1$.}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.7 Two-sample *t*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/07-two-sample-t-test.html#section-6",
+    "href": "lecture-slides/ch08/07-two-sample-t-test.html#section-6",
+    "title": "8.7 Two-sample t-test",
+    "section": "",
+    "text": "Student test scores before/after a tutoring program\n\n\n\n\nStudent\nBefore\nAfter\nDifference\n\n\n\n\n1\n83\n88\n5\n\n\n2\n83\n73\n-10\n\n\n3\n67\n83\n16\n\n\n4\n72\n65\n-7\n\n\n5\n83\n92\n9\n\n\n6\n80\n83\n3\n\n\n7\n94\n95\n1\n\n\n8\n82\n77\n-5\n\n\n9\n74\n89\n15\n\n\n10\n74\n86\n12\n\n\n\n\n\nIs the tutoring program effective?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.7 Two-sample *t*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/07-two-sample-t-test.html#section-7",
+    "href": "lecture-slides/ch08/07-two-sample-t-test.html#section-7",
+    "title": "8.7 Two-sample t-test",
+    "section": "",
+    "text": "\\[\n\\text{Difference: }[5, -10, 16, -7, 9, 3, 1, -5, 15, 12]\n\\]\nLet \\(\\mu_D\\) denote the true average difference between the scores before and after the program.\n\\[\nH_0: \\mu_D=0, \\;\\;\\;\\;H_a: \\mu &gt; 0\n\\]\n\n\\[\nn=10, \\;\\;\\;\\; \\bar{d}=3.9, \\;\\;\\;\\; s_D=9.207\n\\]\n\n\n\\[\nt=\\frac{\\bar{d}-0}{s_D/\\sqrt{n}}=\\frac{3.9}{9.207/\\sqrt{10}}\\approx 0.134\n\\]\n\\[\n\\text{with a degree of freedom of $n-1=9$.}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.7 Two-sample *t*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/07-two-sample-t-test.html#section-8",
+    "href": "lecture-slides/ch08/07-two-sample-t-test.html#section-8",
+    "title": "8.7 Two-sample t-test",
+    "section": "",
+    "text": "\\[\n\\small{\n    \\begin{aligned}\n    &p\\text{-value}\\\\\n    =\\;&\\text{P}(T_{v=9} &gt; 0.134) \\\\\n    \\approx\\;& 0.461\n    \\end{aligned}\n}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.7 Two-sample *t*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/04-t-test.html#what-if-the-sample-size-n-is-small",
+    "href": "lecture-slides/ch08/04-t-test.html#what-if-the-sample-size-n-is-small",
+    "title": "8.4 t-test",
+    "section": "What if the sample size \\(n\\) is small?",
+    "text": "What if the sample size \\(n\\) is small?\nSuppose \\(X_1, X_2, \\cdots, X_n\\) are i.i.d. normal, with unknown mean \\(\\theta\\) and unknown variance \\(\\sigma^2\\).\n\\[\n\\small{T_n=\\frac{\\bar{X}-\\mu}{\\hat{S}_n/\\sqrt{n}}}\n\\]\nhas a t-distribution with \\(n-1\\) degrees of freedom.\n\nt-test about a population mean:\nJust like the z-test, except when calculating the p-value, we use the t-table instead of the z-table.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.4 *t*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/04-t-test.html#section",
+    "href": "lecture-slides/ch08/04-t-test.html#section",
+    "title": "8.4 t-test",
+    "section": "",
+    "text": "Smoking impairs time estimation accuracy?\n\n20 smokers estimated how much time had elapsed during a 45-sec period with the following perceived elapsed time (s)\n\n\n\\[\n\\small{\n\\begin{aligned}\n59, 55, 62, 63, 49, 45, 29, 42, 57, 47 \\\\\n46, 40, 60, 37, 46, 35, 60, 54, 57, 43 \\\\\n\\end{aligned}\n}\n\\]\n\nDoes the perceived elapsed time for smokers significantly differ from the known time 45-sec?\nLet’s carry out a hypotheses testing at significance level \\(\\alpha=0.01\\).",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.4 *t*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/04-t-test.html#section-1",
+    "href": "lecture-slides/ch08/04-t-test.html#section-1",
+    "title": "8.4 t-test",
+    "section": "",
+    "text": "\\(\\mu\\): mean perceived elapsed time for all smokers\n\n\\[\n\\small{H_0: \\mu=45, \\;\\;\\;\\;H_a: \\mu \\neq 45}\n\\]\n\n\nWe assume the perceived time is normally distributed.\n\n\n\\[\n\\small{\n\\begin{aligned}\n\\text{Sample size }n&=20 \\\\\n\\text{Sample mean }\\bar{x}&=49.3 \\\\\n\\text{Sample standard deviation }s&=\\sqrt{\\frac{\\sum(x_i-\\bar{x})^2}{n-1}}\\approx9.84 \\\\\n\\text{Sample standard error }\\frac{s}{\\sqrt{n}}&=\\frac{9.84}{\\sqrt{20}}\\approx2.200 \\\\\n\\end{aligned}\n}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.4 *t*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/04-t-test.html#section-2",
+    "href": "lecture-slides/ch08/04-t-test.html#section-2",
+    "title": "8.4 t-test",
+    "section": "",
+    "text": "The sample size of 20 is not large enough to apply CLT.\nFor small sample size we will use t-test (\\(v=19\\)).\n\\[\n\\small{H_0: \\mu=45, \\;\\;\\;\\;H_a: \\mu \\neq 45}\n\\]\n\\[\n\\small{\\bar{x}=49.3, \\;\\;\\;\\;\\frac{s}{\\sqrt{n}}=2.200}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.4 *t*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/04-t-test.html#section-3",
+    "href": "lecture-slides/ch08/04-t-test.html#section-3",
+    "title": "8.4 t-test",
+    "section": "",
+    "text": "\\[\n\\begin{aligned}\np\\text{-value}&=2\\cdot\\text{P}(\\bar{X}\\geq 49.3 \\text{ when $H_0$ is true}) \\\\\n\\\\\n&=2\\cdot \\text{P}(\\bar{X}\\geq 49.3 \\text{ when $\\mu=45$}) \\\\\n\\\\\n&=2\\cdot \\text{P}\\bigg(\\frac{\\bar{X}-45}{2.200} \\geq \\frac{49.3-45}{2.200}\\bigg) \\\\\n\\\\\n&=2\\cdot \\text{P}(T \\geq 1.95) \\\\\n\\\\\n&\\approx 2\\cdot 0.035 = 0.07 \\\\\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.4 *t*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/04-t-test.html#t-curve",
+    "href": "lecture-slides/ch08/04-t-test.html#t-curve",
+    "title": "8.4 t-test",
+    "section": "t-curve",
+    "text": "t-curve\n\n\n\n\n\nt-table in the next two slides",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.4 *t*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/04-t-test.html#section-6",
+    "href": "lecture-slides/ch08/04-t-test.html#section-6",
+    "title": "8.4 t-test",
+    "section": "",
+    "text": "Smoking impairs time estimation accuracy?\n\\[\n\\small{H_0: \\mu=45, \\;\\;\\;\\;H_a: \\mu \\neq 45}\n\\]\n\\[\n\\small{p\\text{-value} = 0.07}\n\\]\n\\[\n\\small{\\text{At $\\alpha=0.05$ we failed to reject $H_0$ as $p$-value $&gt; \\alpha$.}}\n\\]\n\nConclusion:\nThe data does not provide evidence that the true mean perceived elapsed time for all smokers differs significantly from the known time 45-sec.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.4 *t*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/04-t-test.html#section-7",
+    "href": "lecture-slides/ch08/04-t-test.html#section-7",
+    "title": "8.4 t-test",
+    "section": "",
+    "text": "Similarly, we can also use the test statistic.\n\\[\n\\small{\\text{Test statistic: }\\;\\;t=\\frac{\\bar{x}-\\mu}{s/\\sqrt{n}}}=\\frac{49.3−45}{2.200}=1.95\n\\]\n\n\\[\n\\small{\\text{At $\\alpha=0.01$ the critical value}}\n\\]\n\\[\n\\small{t_{\\frac{\\alpha}{2}, n-1}=t_{0.005, 19}=2.861}\n\\]\n\n\n\\[\n\\small{\\text{Since $|t| &lt; t_{\\text{critical}}$, we failed to reject $H_0$.}}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.4 *t*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/04-t-test.html#critical-values-for-t-distribution",
+    "href": "lecture-slides/ch08/04-t-test.html#critical-values-for-t-distribution",
+    "title": "8.4 t-test",
+    "section": "Critical values for t distribution",
+    "text": "Critical values for t distribution",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.4 *t*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/01-maximum-likelihood.html#probability-vs.-statistics",
+    "href": "lecture-slides/ch07/01-maximum-likelihood.html#probability-vs.-statistics",
+    "title": "7.1 Maximum likelihood estimate",
+    "section": "Probability vs. Statistics",
+    "text": "Probability vs. Statistics",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.1 Maximum likelihood estimate"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/01-maximum-likelihood.html#section",
+    "href": "lecture-slides/ch07/01-maximum-likelihood.html#section",
+    "title": "7.1 Maximum likelihood estimate",
+    "section": "",
+    "text": "We were given a coin.\nWe were told the coin might be biased.\nHowever, we don’t know how biased the coin is.\n\ni.e., the probability of heads \\(p\\) is unknown.\n\nTo find out, we tossed the coin for 10 times.\n\n\n\n\n\nToss\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n\n\n\n\nResult\nH\nT\nT\nH\nT\nH\nH\nH\nH\nH\n\n\n\n\nBased on the results, what is our best guess of \\(p\\)?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.1 Maximum likelihood estimate"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/01-maximum-likelihood.html#point-estimation",
+    "href": "lecture-slides/ch07/01-maximum-likelihood.html#point-estimation",
+    "title": "7.1 Maximum likelihood estimate",
+    "section": "Point estimation",
+    "text": "Point estimation\n\nGiven a distribution parameter of interest (e.g., the probability a biased coin lands on heads), a point estimation is to use data to compute a number that represents an educated guess for the true value of the parameter.\nThe estimation (e.g., \\(\\hat{p}=0.9\\)) is a single number, hence the name “point” estimation.\nIn upcoming lectures we’ll discuss interval estimation (confidence intervals).",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.1 Maximum likelihood estimate"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/01-maximum-likelihood.html#section-1",
+    "href": "lecture-slides/ch07/01-maximum-likelihood.html#section-1",
+    "title": "7.1 Maximum likelihood estimate",
+    "section": "",
+    "text": "A natural thought: select the parameters under which the observed data is most likely to arise.\nThat is, select the parameters that maximize the probability (likelihood) of obtaining the data at hand.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.1 Maximum likelihood estimate"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/01-maximum-likelihood.html#maximum-likelihood-estimation-mle",
+    "href": "lecture-slides/ch07/01-maximum-likelihood.html#maximum-likelihood-estimation-mle",
+    "title": "7.1 Maximum likelihood estimate",
+    "section": "Maximum Likelihood Estimation (MLE)",
+    "text": "Maximum Likelihood Estimation (MLE)\n\nWith a vector of \\(n\\) observations \\[\nX=(X_1, X_2, \\cdots, X_n)\n\\]\n\n\\(X\\) can be described by\n\na joint PMF \\(p_X(x; \\theta)\\) (if \\(X\\) is discrete)\na joint PDF \\(f_X(x; \\theta)\\) (if \\(X\\) is continuous)\n\n\n\nwhose form depends on an unknown parameter \\(\\theta\\).",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.1 Maximum likelihood estimate"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/01-maximum-likelihood.html#section-2",
+    "href": "lecture-slides/ch07/01-maximum-likelihood.html#section-2",
+    "title": "7.1 Maximum likelihood estimate",
+    "section": "",
+    "text": "\\[\n\\text{With $n$ observations:}\\;\\;x=(x_1, x_2, \\cdots, x_n)\n\\]\nThe likelihood function:\n\\[\n\\begin{aligned}\n\\text{Discrete case:}&\\;\\;\\;\\;p_X(x_1, x_2, \\cdots, x_n; \\theta) \\\\\n\\text{Continuous case:}&\\;\\;\\;\\;f_X(x_1, x_2, \\cdots, x_n; \\theta) \\\\\n\\end{aligned}\n\\]\n\nImportant distinction:\n\nA likelihood function is not the prob. that the unknown parameter is equal to the value \\(\\theta\\), given the observations.\nInstead, it is the prob. that the observations would arise, assuming the unknown parameter is equal to \\(\\theta\\).",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.1 Maximum likelihood estimate"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/01-maximum-likelihood.html#maximum-likelihood-estimate",
+    "href": "lecture-slides/ch07/01-maximum-likelihood.html#maximum-likelihood-estimate",
+    "title": "7.1 Maximum likelihood estimate",
+    "section": "Maximum Likelihood Estimate",
+    "text": "Maximum Likelihood Estimate\nA maximum likelihood estimate (MLE) is a value of the parameter \\(\\theta\\) that maximizes the likelihood function:\n\\[\n\\begin{aligned}\n\\text{Discrete case:}&\\;\\;\\;\\;\\hat{\\theta}=\\underset{\\theta}{\\operatorname{\\color{blue}{arg max}}}\\; p_X(x_1, x_2, \\cdots, x_n; \\theta) \\\\\n\\\\\n\\text{Continuous case:}&\\;\\;\\;\\;\\hat{\\theta}=\\underset{\\theta}{\\operatorname{\\color{blue}{arg max}}}\\; f_X(x_1, x_2, \\cdots, x_n; \\theta) \\\\\n\\end{aligned}\n\\]\n\nIn maximizing the likelihood, we are essentially asking:\nWhat is the value of \\(\\theta\\) under which the data we received are most likely to arise?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.1 Maximum likelihood estimate"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/01-maximum-likelihood.html#section-3",
+    "href": "lecture-slides/ch07/01-maximum-likelihood.html#section-3",
+    "title": "7.1 Maximum likelihood estimate",
+    "section": "",
+    "text": "Toss\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n\n\n\n\nResult\nH\nT\nT\nH\nT\nH\nH\nH\nH\nH\n\n\n\\(x_i\\)\n1\n0\n0\n1\n0\n1\n1\n1\n1\n1\n\n\n\n\n\\[\nX_i \\sim \\text{Bernoulli}(\\theta)\n\\]\n\n\nThe likelihood function\n\\[\n\\begin{aligned}\n&p_X(x_1, x_2, \\cdots, x_n; \\theta) \\\\\n= \\;&\\text{P}(X_1=1, X_2=0, \\cdots, X_{10}=1; \\theta) \\\\\n= \\;&\\text{P}(X_1=1; \\theta) \\cdot \\text{P}(X_2=0; \\theta) \\cdots \\text{P}(X_{10}=1; \\theta) \\\\\n= \\;&\\theta^7 (1-\\theta)^3 \\\\\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.1 Maximum likelihood estimate"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/01-maximum-likelihood.html#section-4",
+    "href": "lecture-slides/ch07/01-maximum-likelihood.html#section-4",
+    "title": "7.1 Maximum likelihood estimate",
+    "section": "",
+    "text": "The likelihood function\n\\[\np_X(x_1, x_2, \\cdots, x_n; \\theta) = \\color{blue}{\\theta^7 (1-\\theta)^3}\n\\]\n\nFind the \\(\\theta\\) that maximize the likelihood function.\n\\[\n\\hat{\\theta}=\\underset{\\theta}{\\operatorname{arg max}} \\big(\\color{blue}{\\theta^7 (1-\\theta)^3} \\big)\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.1 Maximum likelihood estimate"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/01-maximum-likelihood.html#section-5",
+    "href": "lecture-slides/ch07/01-maximum-likelihood.html#section-5",
+    "title": "7.1 Maximum likelihood estimate",
+    "section": "",
+    "text": "\\[\n\\small\n{\n\\begin{aligned}\n\\theta=0.1 \\;\\;\\rightarrow\\;\\; p_X=0.1^7 \\cdot 0.9^3&=0.0000000729 \\\\\n\\theta=0.2 \\;\\;\\rightarrow\\;\\; p_X=0.2^7 \\cdot 0.8^3&\\approx0.00000655 \\\\\n\\theta=0.3 \\;\\;\\rightarrow\\;\\; p_X=0.3^7 \\cdot 0.7^3&\\approx0.000075 \\\\\n\\theta=0.4 \\;\\;\\rightarrow\\;\\; p_X=0.4^7 \\cdot 0.6^3&\\approx0.000354 \\\\\n\\theta=0.5 \\;\\;\\rightarrow\\;\\; p_X=0.5^7 \\cdot 0.5^3&\\approx0.000977 \\\\\n\\theta=0.6 \\;\\;\\rightarrow\\;\\; p_X=0.6^7 \\cdot 0.4^3&\\approx0.00179 \\\\\n\\theta=0.7 \\;\\;\\rightarrow\\;\\; p_X=0.7^7 \\cdot 0.3^3&\\approx \\color{red}{0.00222} \\\\\n\\theta=0.8 \\;\\;\\rightarrow\\;\\; p_X=0.8^7 \\cdot 0.2^3&\\approx0.00168 \\\\\n\\theta=0.9 \\;\\;\\rightarrow\\;\\; p_X=0.9^7 \\cdot 0.1^3&\\approx0.00048 \\\\\n\\end{aligned}\n}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.1 Maximum likelihood estimate"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/01-maximum-likelihood.html#finding-the-maximum-analytically",
+    "href": "lecture-slides/ch07/01-maximum-likelihood.html#finding-the-maximum-analytically",
+    "title": "7.1 Maximum likelihood estimate",
+    "section": "Finding the maximum analytically",
+    "text": "Finding the maximum analytically\n\n\nA likelihood function is often in a multiplication form.\n\n\\[\n\\small{\n    \\hat{\\theta}=\\underset{\\theta}{\\operatorname{arg max}} \\big(\\color{blue}{\\theta^7 (1-\\theta)^3} \\big)\n    }\n\\]\n\n\nIt is often more convenient to maximize its logarithm, called the log-likelihood function.\n\n\n\\[\n\\small{\n\\ln\\big(\\theta^7(1-\\theta)^3\\big)=\\ln(\\theta^7)+\\ln(1-\\theta)^3 = 7\\ln\\theta +3\\ln(1-\\theta)\n}\n\\]\n\n\n\n\nGet the derivative of this function w.r.t. \\(\\theta\\). Set it to zero.\n\n\\[\n\\small{\n7\\frac{1}{\\theta}+3\\frac{-1}{1-\\theta}=0 \\; \\rightarrow \\;\\hat{\\theta}=\\frac{7}{10}\n}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.1 Maximum likelihood estimate"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/01-maximum-likelihood.html#section-6",
+    "href": "lecture-slides/ch07/01-maximum-likelihood.html#section-6",
+    "title": "7.1 Maximum likelihood estimate",
+    "section": "",
+    "text": "The second derivative shows whether a point with zero first derivative is a max, a min, or an inflection point.\n\n\n\n\n\n\nLastly, we check whether its second derivative is negative.\n\n\n\\[\n\\small{\n\\begin{aligned}\n\\text{First derivative:}&\\;\\;\\;\\;\\frac{7}{\\theta}-\\frac{3}{1-\\theta} \\\\\n\\text{Second derivative:}&\\;\\;\\;\\;-\\frac{7}{\\theta^2}-\\frac{3}{(1-\\theta)^2} &lt; 0\n\\end{aligned}\n}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.1 Maximum likelihood estimate"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/01-maximum-likelihood.html#section-7",
+    "href": "lecture-slides/ch07/01-maximum-likelihood.html#section-7",
+    "title": "7.1 Maximum likelihood estimate",
+    "section": "",
+    "text": "Toss\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n\n\n\n\nResult\nH\nT\nT\nH\nT\nH\nH\nH\nH\nH\n\n\n\\(x_i\\)\n1\n0\n0\n1\n0\n1\n1\n1\n1\n1\n\n\n\nAn alternative approach:\nWe can also consider the above result as a single data point of \\(y=7\\), where \\(Y \\sim \\text{bin}(10, \\theta)\\).\n\nThe likelihood function\n\\[\n\\small{\np_Y(y; \\theta)=\\text{P}(Y=y; \\theta)={10 \\choose 7} \\color{blue}{\\theta^7(1-\\theta)^3}\n}\n\\]\nNote it is the same maximization problem as before.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.1 Maximum likelihood estimate"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/01-maximum-likelihood.html#standard-procedure-of-mle",
+    "href": "lecture-slides/ch07/01-maximum-likelihood.html#standard-procedure-of-mle",
+    "title": "7.1 Maximum likelihood estimate",
+    "section": "Standard procedure of MLE",
+    "text": "Standard procedure of MLE\nStep 1. Obtain the likelihood function.\n\\[\n\\begin{aligned}\n\\text{Discrete case:}&\\;\\;p_X(x_1, x_2, \\cdots, x_n; \\theta) \\\\\n\\text{Continuous case:}&\\;\\;f_X(x_1, x_2, \\cdots, x_n; \\theta) \\\\\n\\end{aligned}\n\\]\n\nThe following uses the discrete case as an example.\nAssuming the observations are independent, we have\n\\[\n\\begin{aligned}\np_X(x_1, x_2, \\cdots, x_n; \\theta) &= p_X(x_1; \\theta)\\cdot p_X(x_2; \\theta) \\cdots p_X(x_n; \\theta) \\\\\n&= \\prod_{i=1}^n p_X(x_i; \\theta) \\\\\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.1 Maximum likelihood estimate"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/01-maximum-likelihood.html#standard-procedure-of-mle-1",
+    "href": "lecture-slides/ch07/01-maximum-likelihood.html#standard-procedure-of-mle-1",
+    "title": "7.1 Maximum likelihood estimate",
+    "section": "Standard procedure of MLE",
+    "text": "Standard procedure of MLE\nStep 2. It is often more convenient to convert the likelihood function to the log-likelihood function.\n\\[\n\\begin{aligned}\n\\ln \\big(p_X(x_1, x_2, \\cdots, x_n; \\theta)\\big) &= \\ln \\bigg(\\prod_{i=1}^n p_X(x_i; \\theta) \\bigg) \\\\\n\\\\\n&= \\sum_{i=1}^n \\ln \\big(p_X(x_i; \\theta)\\big) \\\\\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.1 Maximum likelihood estimate"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/01-maximum-likelihood.html#standard-procedure-of-mle-2",
+    "href": "lecture-slides/ch07/01-maximum-likelihood.html#standard-procedure-of-mle-2",
+    "title": "7.1 Maximum likelihood estimate",
+    "section": "Standard procedure of MLE",
+    "text": "Standard procedure of MLE\nStep 3. Maximization\n\nGet the derivative of log-likelihood function w.r.t. \\(\\theta\\).\nSet the derivative to zero, and solve for \\(\\theta\\).\nConfirm that the second derivative at this point is negative.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.1 Maximum likelihood estimate"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/01-maximum-likelihood.html#section-8",
+    "href": "lecture-slides/ch07/01-maximum-likelihood.html#section-8",
+    "title": "7.1 Maximum likelihood estimate",
+    "section": "",
+    "text": "A general case: If we got \\(k\\) heads out of \\(n\\) tosses, what is the MLE of the probability of heads?\n\\[\n\\small{\n    X_i \\sim \\text{Bernoulli}(\\theta),\\;\\;\\;\\; x_1+x_2+\\cdots+x_n=k\n    }\n\\]\n\n\\[\n\\small{\n\\begin{aligned}\n\\ln \\big(p_X(x_1, x_2, \\cdots, x_n; \\theta)\\big)&=\\ln \\bigg(\\prod_{i=1}^n p_X(x_i; \\theta) \\bigg) \\\\\n\\\\\n&=\\ln \\big(\\theta^k(1-\\theta)^{n-k} \\big)  \\\\\n\\\\\n&=k \\ln\\theta + (n-k)\\ln(1-\\theta) \\\\\n\\end{aligned}\n}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.1 Maximum likelihood estimate"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/01-maximum-likelihood.html#section-9",
+    "href": "lecture-slides/ch07/01-maximum-likelihood.html#section-9",
+    "title": "7.1 Maximum likelihood estimate",
+    "section": "",
+    "text": "Set its derivative to zero, solve for \\(\\theta\\).\n\\[\n\\small{\n    \\frac{k}{\\theta}-\\frac{n-k}{1-\\theta}=0\n    }\n\\]\n\\[\n\\hat{\\theta}=\\frac{k}{n}=\\frac{x_1+x_2+\\cdots+x_n}{n}=\\bar{x}\n\\]\nIf we use RVs \\(X_1, X_2, \\cdots, X_n\\) to represent the outcomes of \\(n\\) independent coin tosses, the maximum likelihood estimator.\n\\[\n\\hat{\\Theta}_n=\\frac{X_1+X_2+\\cdots+X_n}{n}=\\bar{X}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.1 Maximum likelihood estimate"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/01-maximum-likelihood.html#section-10",
+    "href": "lecture-slides/ch07/01-maximum-likelihood.html#section-10",
+    "title": "7.1 Maximum likelihood estimate",
+    "section": "",
+    "text": "Suppose \\(X\\) is a discrete RV with the following PMF:\n\\[\n\\small{\n\\begin{aligned}\n    p_X(x) =\n      \\begin{cases}\n        \\theta/3, & \\text{if $x=0$,}\\\\\n        2\\theta/3, & \\text{if $x=1$,}\\\\\n        1-\\theta, & \\text{if $x=2$,}\\\\\n        0, & \\text{otherwise.}\\\\\n      \\end{cases}\n  \\;\\text{where } 0 \\leq \\theta \\leq 1.\n  \\end{aligned}\n}\n\\]\nTo estimate the parameter \\(\\theta\\), you collected 10 sample data:\n\\[[2, 0, 0, 1, 2, 0, 2, 0, 0, 1]\\]\nAssume the data are i.i.d. from this distribution.\nWhat is the maximum likelihood estimate of \\(\\theta\\)?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.1 Maximum likelihood estimate"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/01-maximum-likelihood.html#solution",
+    "href": "lecture-slides/ch07/01-maximum-likelihood.html#solution",
+    "title": "7.1 Maximum likelihood estimate",
+    "section": "Solution",
+    "text": "Solution\nFirst, we can see that the PMF is valid as its values are always non-negative and add up to 1, for any \\(0 \\leq \\theta \\leq 1\\).\n\\[\n\\theta/3 + 2\\theta/3 + (1-\\theta) = 1\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.1 Maximum likelihood estimate"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/01-maximum-likelihood.html#section-11",
+    "href": "lecture-slides/ch07/01-maximum-likelihood.html#section-11",
+    "title": "7.1 Maximum likelihood estimate",
+    "section": "",
+    "text": "\\[\\text{Data:}\\;\\;[2, 0, 0, 1, 2, 0, 2, 0, 0, 1]\\]\nThe likelihood function for obtaining the above data\n\\[\n\\begin{aligned}\n    &p_X(x_1, x_2, \\cdots, x_{10};\\theta) \\\\\n    =\\;&\\text{P}(X_1=2, X_2=0, X_3=0,\\cdots, X_9=0, X_{10}=1;\\theta) \\\\\\\n    =\\;&\\text{P}(X_1=2;\\theta)\\cdot\\text{P}(X_2=0;\\theta)\\cdots \\text{P}(X_{10}=1;\\theta) \\\\\n    =\\;&\\bigg(\\frac{\\theta}{3}\\bigg)^5 \\cdot \\bigg(\\frac{2\\theta}{3}\\bigg)^2 \\cdot \\bigg(1-\\theta\\bigg)^3 \\\\\n\\end{aligned}\n\\]\nNote the exponents (5, 2, and 3) are from the counts of zeros, ones, and twos in the data.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.1 Maximum likelihood estimate"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/01-maximum-likelihood.html#section-12",
+    "href": "lecture-slides/ch07/01-maximum-likelihood.html#section-12",
+    "title": "7.1 Maximum likelihood estimate",
+    "section": "",
+    "text": "The log-likelihood function\n\\[\n\\begin{aligned}\n    &\\ln \\bigg(\\bigg(\\frac{\\theta}{3}\\bigg)^5 \\bigg(\\frac{2\\theta}{3}\\bigg)^2 \\bigg(1-\\theta\\bigg)^3\\bigg) \\\\\n    \\\\\n  = & 5\\ln\\bigg(\\frac{\\theta}{3}\\bigg) + 2\\ln\\bigg(\\frac{2\\theta}{3}\\bigg) + 3\\ln(1-\\theta) \\\\\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.1 Maximum likelihood estimate"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/01-maximum-likelihood.html#section-13",
+    "href": "lecture-slides/ch07/01-maximum-likelihood.html#section-13",
+    "title": "7.1 Maximum likelihood estimate",
+    "section": "",
+    "text": "Get the derivative of the log-likelihood function w.r.t. \\(\\theta\\).\n\\[\n\\begin{aligned}\n&\\frac{d}{d\\theta}\\bigg(5\\ln\\bigg(\\frac{\\theta}{3}\\bigg) + 2\\ln\\bigg(\\frac{2\\theta}{3}\\bigg) + 3\\ln(1-\\theta)\\bigg) \\\\\n\\\\\n=\\;&5\\frac{3}{\\theta}\\frac{1}{3} + 2\\frac{3}{2\\theta}\\frac{2}{3}+3\\frac{1}{1-\\theta}(-1) \\\\\n\\\\\n=\\;&\\frac{5}{\\theta}+\\frac{2}{\\theta}-\\frac{3}{1-\\theta}\n=\\;\\frac{7}{\\theta}-\\frac{3}{1-\\theta} \\\\\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.1 Maximum likelihood estimate"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/01-maximum-likelihood.html#section-14",
+    "href": "lecture-slides/ch07/01-maximum-likelihood.html#section-14",
+    "title": "7.1 Maximum likelihood estimate",
+    "section": "",
+    "text": "Set the derivative to zero. Solve for \\(\\theta\\).\n\\[\n\\frac{7}{\\theta}-\\frac{3}{1-\\theta} = 0\n\\]\n\\[\n\\hat{\\theta}=0.7\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.1 Maximum likelihood estimate"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/01-maximum-likelihood.html#section-15",
+    "href": "lecture-slides/ch07/01-maximum-likelihood.html#section-15",
+    "title": "7.1 Maximum likelihood estimate",
+    "section": "",
+    "text": "Lastly we check the second derivative of the log-likelihood function w.r.t. \\(\\theta\\).\n\\[\n\\begin{aligned}\n\\frac{d}{d\\theta}\\bigg(\\frac{7}{\\theta}-\\frac{3}{1-\\theta}\\bigg) &= -\\frac{7}{\\theta^2}-(-1)\\frac{3}{(1-\\theta)^2}(-1) \\\\\n\\\\\n&=-\\frac{7}{\\theta^2}-\\frac{3}{(1-\\theta)^2} &lt; 0\n\\end{aligned}\n\\]\nThe second derivative is negative. Thus, \\(\\hat{\\theta}\\) is the value that maximizes the log-likelihood function.\nIn conclusion, the MLE of the parameter \\(\\theta\\) is 0.7.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.1 Maximum likelihood estimate"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#point-estimate",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#point-estimate",
+    "title": "7.2 Confidence interval",
+    "section": "Point estimate",
+    "text": "Point estimate\n\nBased on 80 samples, the battery life is \\(\\hat{\\theta}=11.4\\) hours.\nIt provides no info about how precise the estimate is.\nOftentimes, we are interested in constructing a so-called confidence interval (CI).\nRoughly speaking, it is an interval that contains the parameter with a specified high probability (e.g., 95%).\n\nThe battery life has a 95% CI of [10.2,12.7] hours.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#constructing-a-confidence-interval",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#constructing-a-confidence-interval",
+    "title": "7.2 Confidence interval",
+    "section": "Constructing a confidence interval",
+    "text": "Constructing a confidence interval\n\nFirst, we need to specify a desired high probability.\n\nThis high probability is called the confidence level.\nCommon choices include 95% and 99%\n\\((1-\\alpha)\\) is often used to indicate the confidence level\n\n\n\n\\[95\\% \\; \\rightarrow \\alpha=0.05\\]\n\n\n\\[99\\% \\; \\rightarrow \\alpha=0.01\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#constructing-a-confidence-interval-1",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#constructing-a-confidence-interval-1",
+    "title": "7.2 Confidence interval",
+    "section": "Constructing a confidence interval",
+    "text": "Constructing a confidence interval\n\nOnce we specified the confidence level, say 95%, we aim to have a confidence interval with\n\na lower bound estimator \\(\\hat{\\Theta}_n^{-}\\)\nan upper bound estimator \\(\\hat{\\Theta}_n^{+}\\)\n\nso that\n\n\n\\[\\text{P}\\bigg(\\hat{\\Theta}_n^{-} \\leq \\theta \\leq \\hat{\\Theta}_n^{+}\\bigg) = 95\\%\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#procedures-for-constructing-a-ci",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#procedures-for-constructing-a-ci",
+    "title": "7.2 Confidence interval",
+    "section": "Procedures for constructing a CI",
+    "text": "Procedures for constructing a CI\nSuppose \\(X_1, X_2, \\cdots, X_n\\) are i.i.d. normal, with unknown mean \\(\\theta\\) and a known variance1 \\(\\sigma^2\\).\n\n\\[\n\\hat{\\Theta}_n=\\frac{X_1+X_2+\\cdots+X_n}{n}\n\\]\n\n\n\\[\n\\hat{\\Theta}_n \\sim \\text{N}\\bigg(\\theta, \\frac{\\sigma^2}{n}\\bigg)\\;\\;\\rightarrow\\;\\;\\frac{\\hat{\\Theta}_n-\\theta}{\\sigma/\\sqrt{n}} \\sim \\text{N}(0, 1)\n\\]\n\nNote this is a simple, albeit unrealistic case, as typically if we don’t know the mean, we don’t know the variance either.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#procedures-for-constructing-a-ci-1",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#procedures-for-constructing-a-ci-1",
+    "title": "7.2 Confidence interval",
+    "section": "Procedures for constructing a CI",
+    "text": "Procedures for constructing a CI\nLet’s construct a 95% CI, that is, \\(\\alpha=0.05\\).\n\n\n\n\n\n\n\\[\n\\begin{aligned}\n\\Phi(\\color{red}{?})&=0.025 \\\\\n\\Phi(\\color{red}{?})&=1-0.025=0.975 \\\\\n\\end{aligned}\n\\]\n\n\nIt is called a critical value of \\(z\\) corresponding to \\(0.025\\).\nWe can check the standard normal table (next slide).",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-2",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#section-2",
+    "title": "7.2 Confidence interval",
+    "section": "",
+    "text": "We want\n\\[\n\\text{P}\\bigg(-1.96 &lt; \\frac{\\hat{\\Theta}_n-\\theta}{\\sigma/\\sqrt{n}} &lt; 1.96\\bigg) = 0.95\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-3",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#section-3",
+    "title": "7.2 Confidence interval",
+    "section": "",
+    "text": "Multiply through by \\(\\sigma/\\sqrt{n}\\)\n\\[\n\\small{\n    \\text{P}\\bigg(-1.96 \\cdot \\frac{\\sigma}{\\sqrt{n}} &lt; \\hat{\\Theta}_n-\\theta &lt; 1.96 \\cdot \\frac{\\sigma}{\\sqrt{n}}\\bigg) = 0.95\n    }\n\\]\n\nSubtract \\(\\hat{\\Theta}_n\\) from each term\n\\[\n\\small{\n    \\text{P}\\bigg(-\\hat{\\Theta}_n-1.96 \\cdot \\frac{\\sigma}{\\sqrt{n}} &lt; -\\theta &lt; -\\hat{\\Theta}_n + 1.96 \\cdot \\frac{\\sigma}{\\sqrt{n}}\\bigg) = 0.95\n    }\n\\]\n\n\nMultiply through by \\(-1\\)\n\\[\n\\small{\n    \\text{P}\\bigg(\\hat{\\Theta}_n + 1.96 \\cdot \\frac{\\sigma}{\\sqrt{n}} &gt; \\theta &gt; \\hat{\\Theta}_n - 1.96 \\cdot \\frac{\\sigma}{\\sqrt{n}}\\bigg) = 0.95\n    }\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-4",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#section-4",
+    "title": "7.2 Confidence interval",
+    "section": "",
+    "text": "Rearange the sides.\n\\[\n\\text{P}\\bigg(\\hat{\\Theta}_n - 1.96 \\cdot \\frac{\\sigma}{\\sqrt{n}} &lt; \\theta &lt; \\hat{\\Theta}_n + 1.96 \\cdot \\frac{\\sigma}{\\sqrt{n}}\\bigg) = 0.95\n\\]\nThis means that\n\\[\n\\bigg[\\hat{\\Theta}_n - 1.96 \\cdot \\frac{\\sigma}{\\sqrt{n}},\\;\\; \\hat{\\Theta}_n + 1.96 \\cdot \\frac{\\sigma}{\\sqrt{n}}\\bigg]\n\\]\nis a 95% confidence interval.\n\nMore compactly, it can be written as \\(\\hat{\\Theta}_n \\pm 1.96 \\cdot \\frac{\\sigma}{\\sqrt{n}}\\)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-5",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#section-5",
+    "title": "7.2 Confidence interval",
+    "section": "",
+    "text": "More generally, for a confidence level of \\(1-\\alpha\\),\nlet \\(z_{\\frac{\\alpha}{2}}\\) be such that \\(\\Phi(z_{\\frac{\\alpha}{2}})=1-\\frac{\\alpha}{2}\\).\n\n\n\\[\n\\small{\n    \\text{P}\\bigg(\\hat{\\Theta}_n - z_{\\frac{\\alpha}{2}} \\frac{\\sigma}{\\sqrt{n}} &lt; \\theta &lt; \\hat{\\Theta}_n + z_{\\frac{\\alpha}{2}} \\frac{\\sigma}{\\sqrt{n}}\\bigg) = 1-\\alpha\n    }\n\\]\n\\[\n\\small{\n    \\bigg[\\hat{\\Theta}_n - z_{\\frac{\\alpha}{2}} \\frac{\\sigma}{\\sqrt{n}},\\;\\; \\hat{\\Theta}_n + z_{\\frac{\\alpha}{2}} \\frac{\\sigma}{\\sqrt{n}}\\bigg]}, \\;\\;\\text{or }\\;\\; \\hat{\\Theta}_n \\pm z_{\\frac{\\alpha}{2}} \\frac{\\sigma}{\\sqrt{n}\n    }\n\\]\nis a \\((1-\\alpha)\\) confidence interval.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#interpretation",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#interpretation",
+    "title": "7.2 Confidence interval",
+    "section": "Interpretation",
+    "text": "Interpretation\n\nAssume we have calculated the 95% confidence interval for an unknown parameter \\(\\theta\\) as \\([10.21,12.69]\\).\nWhat does this interval mean?\nDoes it mean that the true parameter \\(\\theta\\) lies in this CI \\([10.21,12.69]\\) with a probability of 95%?\nNo. \\(\\theta\\) is a unknown but fixed parameter. The CI that we obtained \\([10.21,12.69]\\) is a fixed interval.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-6",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#section-6",
+    "title": "7.2 Confidence interval",
+    "section": "",
+    "text": "We construct a CI many times w/ the same procedure.\nThat is, each time we\n\nobtain an independent collection of \\(n\\) observations\nconstruct a 95% CI based on the \\(n\\) observations\n\nWe expect that about 95% of these CIs will include \\(\\theta\\).",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-7",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#section-7",
+    "title": "7.2 Confidence interval",
+    "section": "",
+    "text": "It is a random interval centered at point estimate \\(\\hat{\\Theta}_n\\).\nThe half-width of the CI is \\(z_{\\frac{\\alpha}{2}} \\frac{\\sigma}{\\sqrt{n}}\\).\nThe width of the CI indicates how precise the estimate is.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-8",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#section-8",
+    "title": "7.2 Confidence interval",
+    "section": "",
+    "text": "\\[\n\\hat{\\Theta}_n \\pm z_{\\alpha/2} \\frac{\\sigma}{\\sqrt{n}}\n\\]\n\n\n\n\n\n\n\n\n\\[\n\\text{90% CI: }\\;\\;\\;\\; \\hat{\\Theta}_n \\pm 1.645 \\frac{\\sigma}{\\sqrt{n}}\n\\]\n\\[\n\\text{95% CI: }\\;\\;\\;\\; \\hat{\\Theta}_n \\pm 1.96 \\frac{\\sigma}{\\sqrt{n}}\n\\]\n\\[\n\\text{99% CI: }\\;\\;\\;\\; \\hat{\\Theta}_n \\pm 2.58 \\frac{\\sigma}{\\sqrt{n}}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-9",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#section-9",
+    "title": "7.2 Confidence interval",
+    "section": "",
+    "text": "\\[\n\\hat{\\Theta}_n \\pm z_{\\frac{\\alpha}{2}} \\frac{\\sigma}{\\sqrt{n}}\n\\]\nThe half-width is proportional to \\(\\sigma\\) (population standard deviation), the inherent variability of the thing we are trying to measure.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-10",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#section-10",
+    "title": "7.2 Confidence interval",
+    "section": "",
+    "text": "\\[\n\\hat{\\Theta}_n \\pm z_{\\frac{\\alpha}{2}} \\frac{\\sigma}{\\sqrt{n}}\n\\]\nThe half-width decreases as sample size \\(n\\) increases.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#sample-size-calculation",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#sample-size-calculation",
+    "title": "7.2 Confidence interval",
+    "section": "Sample size calculation",
+    "text": "Sample size calculation\n\nWe often have a desired precision (i.e., \\(\\pm 0.5\\) hours) and a confidence level (e.g., 99%) for a confidence interval.\nQuestion: how many data points should we collect?\n\n\n\\[\n\\text{Half width:}\\;\\;d=z_{\\frac{\\alpha}{2}} \\cdot \\frac{\\sigma}{\\sqrt{n}}, \\;\\;\\;\\;\\text{Solve for $n$.}\n\\]\n\n\nThe sample size needed for a desired half-width of \\(d\\) is\n\\[\nn=\\bigg(z_{\\frac{\\alpha}{2}} \\cdot \\frac{\\sigma}{d}\\bigg)^2\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-11",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#section-11",
+    "title": "7.2 Confidence interval",
+    "section": "",
+    "text": "Suppose \\(X_1, X_2, \\cdots, X_n\\) are i.i.d. normal, with unknown mean \\(\\theta\\) and known variance \\(\\sigma^2\\).\n\\[\n\\small{\n    \\text{Sample mean estimator:}\\;\\;\\hat{\\Theta}_n=\\frac{X_1+X_2+\\cdots+X_n}{n}\n    }\n\\]\n\n\\[\n\\small{\n    \\text{var}\\big(\\hat{\\Theta}_n\\big)=\\frac{\\sigma^2}{n}, \\;\\;\\;\\;\\sqrt{\\text{var}\\big(\\hat{\\Theta}_n\\big)}=\\frac{\\sigma}{\\sqrt{n}}\n    }\n\\]\n\n\nThe standard deviation of \\(\\hat{\\Theta}_n\\) is termed standard error.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-12",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#section-12",
+    "title": "7.2 Confidence interval",
+    "section": "",
+    "text": "\\[\n\\hat{\\Theta}_n \\pm z_{\\frac{\\alpha}{2}} \\frac{\\sigma}{\\sqrt{n}}\n\\]\nThe CI above can be expressed in words as\n\\[\n\\text{(point estimate)} \\pm \\text{($z$ critical value}) \\cdot \\text{(standard error)}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-13",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#section-13",
+    "title": "7.2 Confidence interval",
+    "section": "",
+    "text": "Suppose \\(X_1, X_2, \\cdots, X_n\\) are\n\ni.i.d. (not necessarily follow a normal distribution)\nwith unknown mean \\(\\theta\\) and known variance \\(\\sigma^2\\)\n\n\n\\[\n\\small{\\text{Sample mean estimator:}\\;\\;\\hat{\\Theta}_n=\\frac{X_1+X_2+\\cdots+X_n}{n}}\n\\]\n\n\nIf \\(n\\) is sufficiently large, what does the CLT tell us?\n\n\n\\[\n\\small{\n\\begin{aligned}\n\\hat{\\Theta}_n \\;&\\text{ is approximately } \\text{N}\\bigg(\\theta, \\frac{\\sigma^2}{n}\\bigg) \\\\\n\\frac{\\hat{\\Theta}_n-\\theta}{\\sigma/\\sqrt{n}} \\;&\\text{ is approximately } \\text{N}(0, 1) \\\\\n\\end{aligned}\n}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#procedures-for-constructing-a-ci-2",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#procedures-for-constructing-a-ci-2",
+    "title": "7.2 Confidence interval",
+    "section": "Procedures for constructing a CI",
+    "text": "Procedures for constructing a CI\nWe can proceed exactly as in the previous case.\n\n\\[\n\\text{P}\\bigg(-z_{\\frac{\\alpha}{2}} &lt; \\frac{\\hat{\\Theta}_n-\\theta}{\\sigma/\\sqrt{n}} &lt; z_{\\frac{\\alpha}{2}}\\bigg) \\approx 1-\\alpha \\;\\;\\;\\color{gray}{\\rightarrow \\text{by CLT}}\n\\]\n\n\\[\n\\text{P}\\bigg(\\hat{\\Theta}_n - z_{\\frac{\\alpha}{2}} \\frac{\\sigma}{\\sqrt{n}} &lt; \\theta &lt; \\hat{\\Theta}_n + z_{\\frac{\\alpha}{2}} \\frac{\\sigma}{\\sqrt{n}}\\bigg) \\approx 1-\\alpha\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#what-if-we-dont-know-sigma2",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#what-if-we-dont-know-sigma2",
+    "title": "7.2 Confidence interval",
+    "section": "What if we don’t know \\(\\sigma^2\\)?",
+    "text": "What if we don’t know \\(\\sigma^2\\)?\nSuppose \\(X_1, X_2, \\cdots, X_n\\) are i.i.d. with unknown mean \\(\\theta\\) and unknown variance \\(\\sigma^2\\).\n\n\\[\n\\small{\n    \\text{Sample mean estimator:}\\;\\;\\hat{\\Theta}_n=\\frac{X_1+X_2+\\cdots+X_n}{n}\n    }\n\\]\n\n\nWe can estimate the population variance \\(\\sigma^2\\) with\n\\[\n\\small{\n    \\text{Sample variance estimator:}\\;\\;\\hat{S}_n^2=\\frac{\\sum\\big(X_i - \\hat{\\Theta}_n\\big)^2}{n-1}\n}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-14",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#section-14",
+    "title": "7.2 Confidence interval",
+    "section": "",
+    "text": "\\[\n\\small{\n    \\frac{\\hat{\\Theta}_n-\\theta}{\\sigma/\\sqrt{n}} \\sim \\text{N}(0, 1), \\; \\text{if $X_i$ is normally distributed.}\n    }\n\\]\n\n\\[\n\\small{\n    \\frac{\\hat{\\Theta}_n-\\theta}{\\sigma/\\sqrt{n}} \\text{ is approximately } \\text{N}(0, 1), \\; \\text{if $X_i$ is not normal, but $n$ is large.}\n    }\n\\]\n\n\n\n\nOnce we replace \\(\\sigma\\) with \\(\\hat{S}_n\\), we have\n\n\\[\n\\small{\n    \\frac{\\hat{\\Theta}_n-\\theta}{\\hat{S}_n/\\sqrt{n}}\n    }\n\\]\n\n\n\n\\[\n\\small{\n    \\frac{\\hat{\\Theta}_n-\\theta}{\\hat{S}_n/\\sqrt{n}} \\text{ is approximately } \\text{N}(0, 1), \\; \\text{if $n$ is sufficiently large.}\n    }\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-15",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#section-15",
+    "title": "7.2 Confidence interval",
+    "section": "",
+    "text": "If \\(n\\) is sufficiently large,\n\\[\n\\small{\n    \\text{P}\\bigg(-z_{\\frac{\\alpha}{2}} &lt; \\frac{\\hat{\\Theta}_n-\\theta}{\\hat{S}_n/\\sqrt{n}} &lt; z_{\\frac{\\alpha}{2}}\\bigg) \\approx 1-\\alpha\n    }\n\\]\n\nGenerally speaking, \\(n&gt;40\\) would be sufficient.\n\n\n\\[\n\\small{\n    \\hat{\\Theta}_n \\pm z_{\\frac{\\alpha}{2}} \\frac{\\hat{S}_n}{\\sqrt{n}}\n    }\n\\]\nis a CI for \\(\\theta\\) with confidence level approximately \\(1-\\alpha\\).\n\n\n\\[\n\\small{\n    \\text{(point estimate)} \\pm \\text{($z$ critical value)} \\cdot \\text{(estimated standard error)}\n    }\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#what-if-the-sample-size-n-is-small",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#what-if-the-sample-size-n-is-small",
+    "title": "7.2 Confidence interval",
+    "section": "What if the sample size \\(n\\) is small?",
+    "text": "What if the sample size \\(n\\) is small?\nSuppose \\(X_1, X_2, \\cdots, X_n\\) are i.i.d. normal with unknown mean \\(\\theta\\) and unknown variance \\(\\sigma^2\\).\n\n\\[\n\\small{\n    \\text{Sample mean estimator:}\\;\\;\\hat{\\Theta}_n=\\frac{X_1+X_2+\\cdots+X_n}{n}\n    }\n\\]\n\n\n\\[\n\\small{\n    T_n=\\frac{\\hat{\\Theta}_n-\\theta}{\\hat{S}_n/\\sqrt{n}}\n    }\n\\]\nhas a probability distribution called a t-distribution with \\(v=n-1\\) degrees of freedom.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-16",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#section-16",
+    "title": "7.2 Confidence interval",
+    "section": "",
+    "text": "\\[\n\\small{\n    t\\text{-distribution:}\\;\\;\\;T_n=\\frac{\\hat{\\Theta}_n-\\theta}{\\hat{S}_n/\\sqrt{n}}\n    }\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#t-distribution",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#t-distribution",
+    "title": "7.2 Confidence interval",
+    "section": "t-distribution",
+    "text": "t-distribution\n\nSymmetric\nBell-shaped\nMore spread out than \\(N(0, 1)\\)\nApproaches \\(N(0, 1)\\) as \\(v\\rightarrow +\\infty\\)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-17",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#section-17",
+    "title": "7.2 Confidence interval",
+    "section": "",
+    "text": "For small \\(n\\), we use t-distribution to construct the CI.\n\n\n\n\n\n\n\n\n\\[\n\\small{\n    \\text{P}\\bigg(-t_{\\frac{\\alpha}{2}, n-1} &lt; \\frac{\\hat{\\Theta}_n-\\theta}{\\hat{S}_n/\\sqrt{n}} &lt; t_{\\frac{\\alpha}{2}, n-1}\\bigg) = 1-\\alpha\n    }\n\\]\n\n\n\\[\n\\small{\n    \\text{P}\\bigg(\\hat{\\Theta}_n - t_{\\frac{\\alpha}{2}, n-1} \\frac{\\hat{S}_n}{\\sqrt{n}} &lt; \\theta &lt; \\hat{\\Theta}_n + t_{\\frac{\\alpha}{2}, n-1} \\frac{\\hat{S}_n}{\\sqrt{n}}\\bigg) \\approx 1-\\alpha\n    }\n\\]\n\n\n\\[\n\\small{\n    \\text{Or, more compactly, }\\hat{\\Theta}_n \\pm t_{\\frac{\\alpha}{2}, n-1} \\frac{\\hat{S}_n}{\\sqrt{n}}\\;\\;\\text{is a } (1-\\alpha) \\text{ CI.}\n    }\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#critical-values-for-t-distribution",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#critical-values-for-t-distribution",
+    "title": "7.2 Confidence interval",
+    "section": "Critical values for t-distribution",
+    "text": "Critical values for t-distribution\n\n\n\n\n\nTable in next slide.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#exercise",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#exercise",
+    "title": "7.2 Confidence interval",
+    "section": "Exercise",
+    "text": "Exercise\n\nAn object is weighted using a scale.\nThe scale reports the true weight plus a random error that is normal with \\(\\mu=0\\) and unknown variance.\nAssume that the errors are independent.\nThe object was weighted eight times.\n\\[[0.555,  0.540,  0.636,  0.644,  0.492,  0.567,  0.556,  0.607]\\]\nConstruct a 95% confidence interval for the weight.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-19",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#section-19",
+    "title": "7.2 Confidence interval",
+    "section": "",
+    "text": "\\[\n\\small{\n    \\bigg[\\hat{\\Theta}_n - t_{\\frac{\\alpha}{2}, n-1} \\frac{\\hat{S}_n}{\\sqrt{n}}, \\;\\;\\;\\hat{\\Theta}_n + t_{\\frac{\\alpha}{2}, n-1} \\frac{\\hat{S}_n}{\\sqrt{n}}\\bigg]\n    }\n\\]\n\n\\[\n\\small{\n\\begin{aligned}\n\\text{Sample mean:}&\\; \\hat{\\Theta}_n=\\frac{1}{n}\\sum_{i=1}^n X_i=0.5746 \\\\\n\\text{Sample variance:}&\\; \\hat{S}_n^2=\\frac{1}{n-1}\\sum_{i=1}^n \\big(X_i - \\hat{\\Theta}_n\\big)^2=0.002635 \\\\\n\\text{Critical value:}&\\; t_{\\frac{\\alpha}{2}, n-1}=t_{0.025, 7}=2.365 \\\\\n\\end{aligned}\n}\n\\]\n\n\n\\[\n\\small{\n    \\bigg[\\hat{\\Theta}_n - t_{\\frac{\\alpha}{2} n-1} \\frac{\\hat{S}_n}{\\sqrt{n}}, \\hat{\\Theta}_n + t_{\\frac{\\alpha}{2}, n-1} \\frac{\\hat{S}_n}{\\sqrt{n}}\\bigg]=[0.532, 0.618]\n    }\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 7. Point & interval estimations",
+      "7.2 Confidence interval"
+    ]
+  },
+  {
     "objectID": "syllabus.html",
     "href": "syllabus.html",
     "title": "Syllabus",
@@ -3087,6 +4309,409 @@
     "title": "Syllabus",
     "section": "University-wide policies & statements",
     "text": "University-wide policies & statements\nPlease see the Course Policies menu on Canvas for information on the following topics. To find the Course Policies menu on Canvas, log into any course in Canvas, and then on the blue ribbon on the far left scroll down to Course Policies and click on it. This opens a white ribbon with individual links to UM-Dearborn websites on the following topics:\n\nUniversity Attendance Policy\nAcademic Integrity Policy\nCounseling\nDisability and Accessibility Services\nSafety Statement\nHarassment, Sexual Violence, Bias, and Discrimination"
+  },
+  {
+    "objectID": "lecture-slides/ch08/02-p-value.html#section",
+    "href": "lecture-slides/ch08/02-p-value.html#section",
+    "title": "8.2 p-value",
+    "section": "",
+    "text": "In some sense the p-value offers a first defense line against being fooled by randomness, separating signal from noise.\n\nYoav Benjamini, 2016\n\n\nSource",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.2 *p*-value"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/02-p-value.html#section-1",
+    "href": "lecture-slides/ch08/02-p-value.html#section-1",
+    "title": "8.2 p-value",
+    "section": "",
+    "text": "Roughly speaking, p-values tell us how surprising the observed data is, assuming there is no effect.\np-value is defined as the conditional probability of getting a test statistic as extreme or more extreme than the observed data, given that the null hypothesis is true.\n\n\n\\[\np\\text{-value} \\stackrel{\\text{def}}{=} \\text{P}(\\text{data} \\mid \\text{$H_0$ is true})\n\\]\n\nIt is not the probability the null hypothesis is true.\n\n\n\n\\[\np\\text{-value} \\neq \\text{P}(\\text{$H_0$ is true} \\mid \\text{data})\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.2 *p*-value"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/02-p-value.html#section-2",
+    "href": "lecture-slides/ch08/02-p-value.html#section-2",
+    "title": "8.2 p-value",
+    "section": "",
+    "text": "We suspect a coin is biased towards heads.\n\\[\n\\small{\n\\begin{aligned}\n&\\text{$H_0$: the coin is fair ($p=0.5$).} \\\\\n&\\text{$H_a$: the coin is biased towards heads ($p&gt;0.5$).} \\\\\n\\end{aligned}\n}\n\\]\n\nWe tossed the coin 10 times and got 10 heads.\n\n\n\\[\n\\small{\n\\begin{aligned}\n\\text{$p$-value}&=\\text{P}(\\text{get 10 heads $\\mid$ $H_0$ is true}) \\\\\n&={10 \\choose 10}0.5^{10} \\approx 0.001 \\\\\n\\end{aligned}\n}\n\\]\n\n\nAssuming \\(H_0\\) is true, it is highly unlikely to get 10 heads.\n\n\nSince we indeed got 10 heads, \\(H_0\\) is probably not true.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.2 *p*-value"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/02-p-value.html#section-3",
+    "href": "lecture-slides/ch08/02-p-value.html#section-3",
+    "title": "8.2 p-value",
+    "section": "",
+    "text": "\\[\n\\small{\n\\begin{aligned}\n&\\text{$H_0$: the coin is fair ($p=0.5$).} \\\\\n&\\text{$H_a$: the coin is biased towards heads ($p&gt;0.5$).} \\\\\n\\end{aligned}\n}\n\\]\n\nWe tossed the coin 10 times and got 9 heads.\n\n\n\\[\n\\small{\n\\begin{aligned}\n\\text{$p$-value}=\\;&\\text{P}(\\text{get 9 heads $\\mid$ $H_0$ is true})\\;+ \\;\\color{gray}{\\leftarrow\\text{as extreme}} \\\\\n&\\text{P}(\\text{get 10 heads $\\mid$ $H_0$ is true}) \\;\\;\\;\\color{gray}{\\leftarrow\\text{more extreme}} \\\\\n=\\;&{10 \\choose 9}0.5^{10}+{10 \\choose 10}0.5^{10} \\approx 0.011 \\\\\n\\end{aligned}\n}\n\\]\n\n\nAssuming \\(H_0\\) is true, it is unlikely to get 9 or more heads.\n\n\nSince we indeed got 9 heads, \\(H_0\\) is probably not true.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.2 *p*-value"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/02-p-value.html#section-4",
+    "href": "lecture-slides/ch08/02-p-value.html#section-4",
+    "title": "8.2 p-value",
+    "section": "",
+    "text": "\\[\n\\small{\n\\begin{aligned}\n&\\text{$H_0$: the coin is fair ($p=0.5$).} \\\\\n&\\text{$H_a$: the coin is biased towards heads ($p&gt;0.5$).} \\\\\n\\end{aligned}\n}\n\\]\nWe tossed the coin 10 times and got 8 heads.\n\n\\[\n\\small{\n\\begin{aligned}\np\\text{-value}=\\;&\\text{P}(\\text{got 8 heads $\\mid$ $H_0$ is true})\\;+ \\;\\color{gray}{\\leftarrow\\text{as extreme}} \\\\\n&\\text{P}(\\text{got 9 heads $\\mid$ $H_0$ is true})\\;+ \\;\\color{gray}{\\leftarrow\\text{more extreme}} \\\\\n&\\text{P}(\\text{got 10 heads $\\mid$ $H_0$ is true}) \\;\\;\\;\\color{gray}{\\leftarrow\\text{more extreme}} \\\\\n=\\;&{10 \\choose 8}0.5^{10}+{10 \\choose 9}0.5^{10}+{10 \\choose 10}0.5^{10} \\approx 0.055 \\\\\n\\end{aligned}\n}\n\\]\n\n\nAssuming \\(H_0\\) is true, it is unlikely (?) to get 8 or more heads.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.2 *p*-value"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/02-p-value.html#section-5",
+    "href": "lecture-slides/ch08/02-p-value.html#section-5",
+    "title": "8.2 p-value",
+    "section": "",
+    "text": "We tossed the coin 10 times and got 7 heads.\n\n\\[\n\\small{\n\\begin{aligned}\np\\text{-value}=\\;&\\text{P}(\\text{got 7 heads $\\mid$ $H_0$ is true})\\;+ \\;\\color{gray}{\\leftarrow\\text{as extreme}} \\\\\n&\\text{P}(\\text{got 8 heads $\\mid$ $H_0$ is true})\\;+ \\;\\color{gray}{\\leftarrow\\text{more extreme}} \\\\\n&\\text{P}(\\text{got 9 heads $\\mid$ $H_0$ is true})\\;+ \\;\\color{gray}{\\leftarrow\\text{more extreme}} \\\\\n&\\text{P}(\\text{got 10 heads $\\mid$ $H_0$ is true}) \\;\\;\\;\\color{gray}{\\leftarrow\\text{more extreme}} \\\\\n=\\;&{10 \\choose 7}0.5^{10}+{10 \\choose 8}0.5^{10}+{10 \\choose 9}0.5^{10}+{10 \\choose 10}0.5^{10} \\\\\n\\approx\\;&0.172 \\\\\n\\end{aligned}\n}\n\\]\n\n\nAssuming \\(H_0\\) is true, it is not unlikely to get 7 or more heads.\n\n\nGetting 7 heads is not enough evidence to reject \\(H_0\\).",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.2 *p*-value"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/02-p-value.html#section-6",
+    "href": "lecture-slides/ch08/02-p-value.html#section-6",
+    "title": "8.2 p-value",
+    "section": "",
+    "text": "We tossed the coin 10 times and got 6 heads.\n\n\\[\n\\small{\n\\begin{aligned}\np\\text{-value}=\\;&\\text{P}(\\text{got 6 heads $\\mid$ $H_0$ is true})\\;+ \\;\\color{gray}{\\leftarrow\\text{as extreme}} \\\\\n&\\text{P}(\\text{got 7 heads $\\mid$ $H_0$ is true})\\;+ \\;\\color{gray}{\\leftarrow\\text{more extreme}} \\\\\n&\\text{P}(\\text{got 8 heads $\\mid$ $H_0$ is true})\\;+ \\;\\color{gray}{\\leftarrow\\text{more extreme}} \\\\\n&\\text{P}(\\text{got 9 heads $\\mid$ $H_0$ is true})\\;+ \\;\\color{gray}{\\leftarrow\\text{more extreme}} \\\\\n&\\text{P}(\\text{got 10 heads $\\mid$ $H_0$ is true}) \\;\\;\\;\\color{gray}{\\leftarrow\\text{more extreme}} \\\\\n=\\;&{10 \\choose 6}0.5^{10}+{10 \\choose 7}0.5^{10}+\\cdots+{10 \\choose 10}0.5^{10} \\\\\n\\approx\\;&0.377 \\\\\n\\end{aligned}\n}\n\\]\n\n\nAssuming \\(H_0\\) is true, it is not unlikely to get 6 or more heads. Do not reject \\(H_0\\).",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.2 *p*-value"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/02-p-value.html#decision-rule-based-on-p-value",
+    "href": "lecture-slides/ch08/02-p-value.html#decision-rule-based-on-p-value",
+    "title": "8.2 p-value",
+    "section": "Decision rule based on p-value",
+    "text": "Decision rule based on p-value\nFirst we specify a significance level \\(\\alpha\\) (the desired tolerance for type I error probability).\nThen,\n\\[\n\\small{\n\\begin{aligned}\n&\\text{Reject $H_0$ if $p\\text{-value} &lt; \\alpha$}, \\\\\n\\\\\n&\\text{Fail to reject $H_0$ if $p\\text{-value} \\geq \\alpha$}. \\\\\n\\end{aligned}\n}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.2 *p*-value"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/02-p-value.html#section-7",
+    "href": "lecture-slides/ch08/02-p-value.html#section-7",
+    "title": "8.2 p-value",
+    "section": "",
+    "text": "We suspect a coin is biased (towards either heads or tails).\n\\[\n\\small{\n\\begin{aligned}\n&\\text{$H_0$: the coin is fair ($p=0.5$).} \\\\\n&\\text{$H_a$: the coin is biased ($p \\neq 0.5$).} \\\\\n\\end{aligned}\n}\n\\]\n\nWe tossed the coin 10 times and got 9 heads.\n\n\n\\[\n\\small{\n\\begin{aligned}\n\\text{$p$-value} =\\;&\\text{P}(\\text{got 9 heads $\\mid$ $H_0$ is true})+ \\;\\color{gray}{\\leftarrow\\text{as extreme}} \\\\\n&\\text{P}(\\text{got 9}\\color{red}{\\text{ tails }} \\text{$\\mid$ $H_0$ is true})+ \\;\\color{gray}{\\leftarrow\\text{as extreme}} \\\\\n&\\text{P}(\\text{got 10 heads $\\mid$ $H_0$ is true})+ \\;\\color{gray}{\\leftarrow\\text{more extreme}} \\\\\n&\\text{P}(\\text{got 10}\\color{red}{\\text{ tails }} \\text{$\\mid$ $H_0$ is true}) \\;\\color{gray}{\\leftarrow\\text{more extreme}} \\\\\n\\approx\\;&0.022 \\\\\n\\end{aligned}\n}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.2 *p*-value"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/02-p-value.html#section-8",
+    "href": "lecture-slides/ch08/02-p-value.html#section-8",
+    "title": "8.2 p-value",
+    "section": "",
+    "text": "\\[\n\\text{$p$-value} \\approx 0.022\n\\]\n\nAssuming \\(H_0\\) is true, it is unlikely to get 9 or more heads or tails.\n\n\nSince we indeed got 9 heads, \\(H_0\\) is likely not true.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.2 *p*-value"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/02-p-value.html#what-does-it-mean-if-p-value-0.05",
+    "href": "lecture-slides/ch08/02-p-value.html#what-does-it-mean-if-p-value-0.05",
+    "title": "8.2 p-value",
+    "section": "What does it mean if p-value > 0.05?",
+    "text": "What does it mean if p-value &gt; 0.05?\n\np-value &gt; 0.05 doesn’t mean the null hypothesis is true.\n\nIt simply means that we do not have enough information to answer this question.\nThere may be effects that would reveal with more data.\n\n\n\nAbsence of evidence is not evidence of absence.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.2 *p*-value"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/02-p-value.html#section-10",
+    "href": "lecture-slides/ch08/02-p-value.html#section-10",
+    "title": "8.2 p-value",
+    "section": "",
+    "text": "Image source",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.2 *p*-value"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/01-hypothesis-test.html#definition",
+    "href": "lecture-slides/ch08/01-hypothesis-test.html#definition",
+    "title": "8.1 Hypothesis test",
+    "section": "Definition",
+    "text": "Definition\nHypothesis: a statement about a population parameter.\n\nThe mean height for an adult male is 5’9”.\nThe drug lowers patients’ blood pressure.\nRecord the heights from 20 people, the sample mean is 5’7”.\n\nNot a hypothesis",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.1 Hypothesis test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/01-hypothesis-test.html#section",
+    "href": "lecture-slides/ch08/01-hypothesis-test.html#section",
+    "title": "8.1 Hypothesis test",
+    "section": "",
+    "text": "Simple hypothesis\n\nThe parameter takes a single value (e.g., \\(\\mu=8\\)).\n\nComposite hypothesis\n\nThe parameter takes more than one value (\\(\\mu &gt; 8\\)).",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.1 Hypothesis test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/01-hypothesis-test.html#null-hypothesis-h_0",
+    "href": "lecture-slides/ch08/01-hypothesis-test.html#null-hypothesis-h_0",
+    "title": "8.1 Hypothesis test",
+    "section": "Null hypothesis \\(H_0\\)",
+    "text": "Null hypothesis \\(H_0\\)\nThe statement that is initially assumed to be true.\n\nIt is the default (or “favored” or “protected”) hypothesis that we stick with unless evidences are strongly against it.\nIt usually states that nothing “interesting” is happening.\n\nThe drug has no effect on blood pressure.\nThe coin is fair.\nA criminal trial analogy: “Innocent until proven guilty”\n\n\\(H_0\\): The defendant is innocent.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.1 Hypothesis test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/01-hypothesis-test.html#alternative-hypothesis-h_a",
+    "href": "lecture-slides/ch08/01-hypothesis-test.html#alternative-hypothesis-h_a",
+    "title": "8.1 Hypothesis test",
+    "section": "Alternative hypothesis \\(H_a\\)",
+    "text": "Alternative hypothesis \\(H_a\\)\n\nIt is the hypothesis that is contradictory to \\(H_0\\).\nIt states something “interesting” is happening.\n\nThe drug lowers patients’ blood pressure.\nThe coin is biased.\n\nThe defendant is guilty.\nThe burden of proof is placed on the alternative hypothesis.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.1 Hypothesis test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/01-hypothesis-test.html#hypothesis-testing",
+    "href": "lecture-slides/ch08/01-hypothesis-test.html#hypothesis-testing",
+    "title": "8.1 Hypothesis test",
+    "section": "Hypothesis testing",
+    "text": "Hypothesis testing\n\nMany scientific questions can be boiled down to a simple yes or no:\n\nIs something “interesting” happening, or not?\nIs the new drug effective (\\(H_a\\)) or not (\\(H_0\\))?\n\n\n\nHypothesis testing: A method to decide whether we should reject the null hypothesis (\\(H_0\\)) or not based on data.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.1 Hypothesis test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/01-hypothesis-test.html#section-1",
+    "href": "lecture-slides/ch08/01-hypothesis-test.html#section-1",
+    "title": "8.1 Hypothesis test",
+    "section": "",
+    "text": "The two types of errors in hypothesis testing\n\\(H_0\\): the person is not pregnant.\n\n\n\n\nFail to reject \\(H_0\\)\nReject \\(H_0\\)\n\n\n\n\n\\(H_0\\) is true\nCorrect\nType I error  (false alarms)\n\n\n\\(H_0\\) is false\nType II error (misses)\nCorrect",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.1 Hypothesis test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/01-hypothesis-test.html#section-2",
+    "href": "lecture-slides/ch08/01-hypothesis-test.html#section-2",
+    "title": "8.1 Hypothesis test",
+    "section": "",
+    "text": "Fail to reject \\(H_0\\)\nReject \\(H_0\\)\n\n\n\n\n\\(H_0\\) is true\nCorrect\nType I error  (false alarms)\n\n\n\\(H_0\\) is false\nType II error (misses)\nCorrect\n\n\n\n\\[\n\\small{\n\\begin{aligned}\n\\text{P}(\\text{Type I error})&=\\text{P}(\\text{false alarm}) \\\\\n&=\\text{P}(\\text{reject $H_0$ when it is true}) \\\\\n&=\\alpha \\\\\n\\text{P}(\\text{Type II error})&=\\text{P}(\\text{misses}) \\\\\n&=\\text{P}(\\text{fail to reject $H_0$ when it is false}) \\\\\n&=\\beta \\\\\n\\end{aligned}\n}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.1 Hypothesis test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/01-hypothesis-test.html#type-i-vs.-type-ii-errors",
+    "href": "lecture-slides/ch08/01-hypothesis-test.html#type-i-vs.-type-ii-errors",
+    "title": "8.1 Hypothesis test",
+    "section": "Type I vs. type II errors",
+    "text": "Type I vs. type II errors\n\nIn many cases, a type I error (false alarms) is often more serious than a type II error (misses).\nCriminal trial\n\nType I error: Innocent person wrongfully convicted.\nType II error: Guilty person going free.\n\nDrug testing\n\nType I error: Approving a drug that does nothing.\nType II error: Not approving an effective drug.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.1 Hypothesis test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/01-hypothesis-test.html#significance-level",
+    "href": "lecture-slides/ch08/01-hypothesis-test.html#significance-level",
+    "title": "8.1 Hypothesis test",
+    "section": "Significance level",
+    "text": "Significance level\n\nIn practice, we often specify the largest value of \\(\\alpha\\) that can be tolerated.\nThe resulting \\(\\alpha\\) is called the significance level.\nCommon significance levels \\(\\alpha=0.05, 0.01, 0.001\\).",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.1 Hypothesis test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/03-z-test.html#section",
+    "href": "lecture-slides/ch08/03-z-test.html#section",
+    "title": "8.3 z-test",
+    "section": "",
+    "text": "z-test about a population mean (upper-tailed)\nSuppose \\(\\small{X_1, X_2, \\cdots, X_n}\\) are i.i.d. normal, with unknown mean \\(\\mu\\) and known variance \\(\\sigma^2=100\\).\n\n\\[\n\\small{H_0: \\mu=40, \\;\\;\\;\\;H_a: \\mu &gt; 40}\n\\]\n\n\n\\[\nn=25, \\;\\; \\small{\\bar{x}=42},\\;\\; \\bar{X} \\sim \\text{N}\\big(\\mu, \\frac{100}{25}\\big)\n\\]\n\n\n\n\n\\[\n\\small{p\\text{-value}=\\text{P}\\big(\\bar{X}\\geq 42 \\text{ $\\mid$ $H_0$ is true}\\big)}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.3 *z*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/03-z-test.html#section-1",
+    "href": "lecture-slides/ch08/03-z-test.html#section-1",
+    "title": "8.3 z-test",
+    "section": "",
+    "text": "\\[\n\\small{\n\\begin{aligned}\np\\text{-value}&=\\text{P}\\big(\\bar{X}\\geq 42 \\text{ $\\mid$ $H_0$ is true}\\big) \\\\\n&=\\text{P}\\big(\\bar{X}\\geq 42 \\text{ $\\mid$ $\\mu=40$ } \\big) \\\\\n&=\\text{P}\\bigg(\\frac{\\bar{X}-40}{2} \\geq \\frac{42-40}{2}\\bigg) \\\\\n&=\\text{P}(Z \\geq 1) \\\\\n&=0.1587 \\\\\n\\end{aligned}\n}\n\\]\n\n\\[\n\\small{\\text{At $\\alpha=0.05$ we fail to reject $H_0$ as the $p$-value exceeds $\\alpha$.}}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.3 *z*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/03-z-test.html#an-alterative-method",
+    "href": "lecture-slides/ch08/03-z-test.html#an-alterative-method",
+    "title": "8.3 z-test",
+    "section": "An alterative method",
+    "text": "An alterative method\n\\[\n\\small{\\text{Test statistic: }\\;\\;z=\\frac{\\bar{x}-\\mu}{\\sigma/\\sqrt{n}}}=\\frac{42-40}{2}=1\n\\]\n\n\\[\n\\small{\\text{At } \\alpha=0.05 \\text{ the critical value } z_{\\alpha}=1.645}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\[\n\\small{\\text{Since the test statistic } z &lt; z_{\\alpha}, \\text{we failed to reject $H_0$.}}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.3 *z*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/03-z-test.html#section-2",
+    "href": "lecture-slides/ch08/03-z-test.html#section-2",
+    "title": "8.3 z-test",
+    "section": "",
+    "text": "z-test about a population mean (lower-tailed)\nSuppose \\(X_1, X_2, \\cdots, X_n\\) are i.i.d. normal, with unknown mean \\(\\mu\\) and known variance \\(\\sigma^2=100\\).\n\n\\[\n\\small{H_0: \\mu=40, \\;\\;\\;\\;H_a: \\mu &lt; 40}\n\\]\n\n\n\\[\n\\small{n=25, \\;\\; \\bar{x}=36, \\;\\; \\bar{X} \\sim \\text{N}\\big(\\mu, \\frac{100}{25}\\big)}\n\\]\n\n\n\n\n\\[\n\\small{p\\text{-value}=\\text{P}(\\bar{X}\\leq 36 \\mid H_0 \\text{ is true})}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.3 *z*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/03-z-test.html#section-3",
+    "href": "lecture-slides/ch08/03-z-test.html#section-3",
+    "title": "8.3 z-test",
+    "section": "",
+    "text": "\\[\n\\small{\n\\begin{aligned}\np\\text{-value}&=\\text{P}(\\bar{X} \\leq 36 \\text{ $\\mid$ $H_0$ is true}) \\\\\n&=\\text{P}(\\bar{X}\\leq 36 \\mid \\mu=40 ) \\\\\n&=\\text{P}\\bigg(\\frac{\\bar{X}-40}{2} \\leq \\frac{36-40}{2}\\bigg) \\\\\n&=\\text{P}(Z \\leq -2) = 0.0228 \\\\\n\\end{aligned}\n}\n\\]\n\n\\[\n\\small{\\text{At $\\alpha=0.05$ we reject $H_0$ as the $p$-value is smaller than $\\alpha$.}}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.3 *z*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/03-z-test.html#section-4",
+    "href": "lecture-slides/ch08/03-z-test.html#section-4",
+    "title": "8.3 z-test",
+    "section": "",
+    "text": "Similarly, we can also use the test statistic.\n\\[\n\\small{\\text{Test statistic: }\\;\\;z=\\frac{\\bar{x}-\\mu}{\\sigma/\\sqrt{n}}}=\\frac{36-40}{2}=-2\n\\]\n\n\\[\n\\small{\\text{At } \\alpha=0.05 \\text{ the critical value } z_{\\alpha}=1.645}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\[\n\\small{\\text{Since the test statistic $z&lt; -z_{\\alpha}$, we reject $H_0$.}}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.3 *z*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/03-z-test.html#section-5",
+    "href": "lecture-slides/ch08/03-z-test.html#section-5",
+    "title": "8.3 z-test",
+    "section": "",
+    "text": "z-test about a population mean (two-tailed)\nSuppose \\(X_1, X_2, \\cdots, X_n\\) are i.i.d. normal, with unknown mean \\(\\mu\\) and known variance \\(\\sigma^2=100\\).\n\n\\[\n\\small{H_0: \\mu=40, \\;\\;\\;\\;H_a: \\mu \\neq 40}\n\\]\n\n\n\\[\n\\small{n=25, \\;\\; \\bar{x}=36, \\;\\; \\bar{X} \\sim \\text{N}\\big(\\mu, \\frac{100}{25}\\big)}\n\\]\n\n\n\n\n\\[\n\\small{\\text{$p$-value}=\\text{P}\\big(\\bar{X}\\leq 36 \\text{ or } \\bar{X}\\geq 44 \\text{ $\\mid$ $H_0$ is true}\\big)}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.3 *z*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/03-z-test.html#section-6",
+    "href": "lecture-slides/ch08/03-z-test.html#section-6",
+    "title": "8.3 z-test",
+    "section": "",
+    "text": "\\[\n\\small{\n\\begin{aligned}\n\\text{$p$-value}&=\\text{P}\\big(\\bar{X}\\leq 36 \\text{ or } \\bar{X}\\geq 44 \\text{ $\\mid$ $H_0$ is true}\\big) \\\\\n\\\\\n&=2\\cdot \\text{P}(\\bar{X}\\leq 36 \\mid \\mu=40) \\\\\n\\\\\n&=2\\cdot \\text{P}\\bigg(\\frac{\\bar{X}-40}{2} \\leq \\frac{36-40}{2}\\bigg) \\\\\n\\\\\n&=2\\cdot \\text{P}(Z \\leq -2) = 0.0456 \\\\\n\\end{aligned}\n}\n\\]\n\n\\[\n\\small{\\text{At $\\alpha=0.05$ we reject $H_0$ as the $p$-value is smaller than $\\alpha$.}}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.3 *z*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/03-z-test.html#section-7",
+    "href": "lecture-slides/ch08/03-z-test.html#section-7",
+    "title": "8.3 z-test",
+    "section": "",
+    "text": "Similarly, we can also use the test statistic.\n\\[\n\\small{\\text{Test statistic: }\\;\\;z=\\frac{\\bar{x}-\\mu}{\\sigma/\\sqrt{n}}}=\\frac{36-40}{2}=-2\n\\]\n\n\\[\n\\small{\\text{At } \\alpha=0.05 \\text{ the critical value } z_{\\alpha/2}=1.96}\n\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\[\n\\small{\\text{Since $|z|&gt; z_{\\alpha/2}$, we reject $H_0$.}}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.3 *z*-test"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch08/03-z-test.html#large-sample-tests",
+    "href": "lecture-slides/ch08/03-z-test.html#large-sample-tests",
+    "title": "8.3 z-test",
+    "section": "Large-sample tests",
+    "text": "Large-sample tests\nRecall the large-sample confidence interval.\nIf the sample size \\(n\\) is sufficiently large,\n\\[\n  \\frac{\\bar{X}-\\mu}{\\hat{S}_n/\\sqrt{n}}\n  \\]\nhas approximately a standard normal distribution.\n\nWe can use \\(\\hat{S}_n\\) to replace \\(\\sigma\\).\nThen follow the exact same z-test procedure as before.\nRule of thumb for sample size: \\(n &gt; 40\\).",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 8. Hypothesis testing",
+      "8.3 *z*-test"
+    ]
   },
   {
     "objectID": "lecture-slides/ch06/01-chebyshev.html#markov-inequality",
