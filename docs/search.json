@@ -6833,6 +6833,19 @@
     ]
   },
   {
+    "objectID": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#pmf-visualization",
+    "href": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#pmf-visualization",
+    "title": "5.1 Joint & marginal PMF",
+    "section": "PMF visualization",
+    "text": "PMF visualization",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 5. Joint random variables",
+      "5.1 Joint & marginal PMF"
+    ]
+  },
+  {
     "objectID": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#joint-pmf-visualization",
     "href": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#joint-pmf-visualization",
     "title": "5.1 Joint & marginal PMF",
@@ -6903,19 +6916,6 @@
     "title": "5.1 Joint & marginal PMF",
     "section": "Calculate probabilities from joint PMF",
     "text": "Calculate probabilities from joint PMF\n\\(A\\): the set of all pairs \\((x, y)\\) that have a certain property.\n\\[\n\\text{P}\\big((X, Y) \\in A\\big)=\\sum_{(x, y) \\in A}p_{X, Y}(x, y)\n\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 5. Joint random variables",
-      "5.1 Joint & marginal PMF"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#marginal-pmf",
-    "href": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#marginal-pmf",
-    "title": "5.1 Joint & marginal PMF",
-    "section": "Marginal PMF",
-    "text": "Marginal PMF",
     "crumbs": [
       "Home",
       "Lecture slides",
