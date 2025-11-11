@@ -146,14 +146,24 @@
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
-<p>Consider two continuous RVs <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> from the same experiment.</p>
+<p>Two continuous RVs <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> from the same experiment.</p>
 <p>The <strong>joint PDF</strong> is a nonnegative function that satisfies</p>
 <p><span class="math display">\[
 \text{P}\big((X, Y) \in A\big)=\iint\limits_{(x, y) \in A} f_{X, Y}(x, y) dxdy
 \]</span></p>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:60%;">
 <p>The integration is carried over <span class="math inline">\(A\)</span> on the 2-D plane.</p>
-
-<img data-src="images/joint-pdf.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/joint-pdf.png" class="quarto-figure quarto-figure-center" height="280"></p>
+</figure>
+</div>
+</div></div>
+</div>
+</section>
 <section id="section-1" class="slide level2">
 <h2></h2>
 <p><span class="math display">\[
@@ -162,7 +172,8 @@
 <div class="fragment">
 <div class="columns">
 <div class="column" style="width:70%;">
-<p><br> <span class="math display">\[
+<p><br></p>
+<p><span class="math display">\[
 \text{Let } A=\{(x, y) \mid a &lt; x &lt; b, c &lt; y &lt; d\}
 \]</span></p>
 </div><div class="column" style="width:30%;">
@@ -179,16 +190,19 @@
 \]</span></p>
 </div>
 </section>
-<section id="single-continuous-rv" class="slide level2">
-<h2>Single continuous RV</h2>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<p>Recall the PDF of a single continuous RV</p>
 <p><span class="math display">\[
 \text{P}(a &lt; X &lt; b)=\int_a^b f_X dx
 \]</span></p>
+<div class="fragment">
 <p>The probability is the <strong>area under the density curve</strong>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/pdf-def.png" class="quarto-figure quarto-figure-center" height="300"></p>
 </figure>
+</div>
 </div>
 </section>
 <section id="two-continuous-rvs" class="slide level2">
@@ -203,7 +217,7 @@
 </div>
 <p>The probability is the <strong>volume under the density surface</strong>.</p>
 </section>
-<section id="section-2" class="slide level2">
+<section id="section-3" class="slide level2">
 <h2></h2>
 
 <img data-src="images/joint-pdf-3d-2.png" class="quarto-figure quarto-figure-center r-stretch"><p><span class="math display">\[
@@ -227,14 +241,21 @@
 </section>
 <section id="the-normalization-property-1-d" class="slide level2">
 <h2>The normalization property (1-D)</h2>
-<p>For a single continuous RV, we have <span class="math inline">\(\int_{-\infty}^{+\infty} f_X dx=1\)</span>.</p>
+<p>Recall for a single continuous RV, we have</p>
+<p><span class="math display">\[
+\int_{-\infty}^{+\infty} f_X dx=1
+\]</span></p>
 <div class="fragment">
+<div class="columns">
+<div class="column">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/pdf-normalization.png" class="quarto-figure quarto-figure-center" height="300"></p>
 </figure>
 </div>
-<p>The total area under the density curve is 1.</p>
+</div><div class="column">
+<p><br> The total area under the density curve is 1.</p>
+</div></div>
 </div>
 </section>
 <section id="the-normalization-property-2-d" class="slide level2">
@@ -246,12 +267,16 @@
 }
 \]</span></p>
 <div class="fragment">
+<div class="columns">
+<div class="column">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/joint-pdf-normal.png" class="quarto-figure quarto-figure-center" height="220"></p>
+<p><img data-src="images/joint-pdf-normal.png" class="quarto-figure quarto-figure-center" height="280"></p>
 </figure>
 </div>
-<p>The total volume under the density surface is 1.</p>
+</div><div class="column">
+<p><br> The total volume under the density surface is 1.</p>
+</div></div>
 </div>
 </section>
 <section>
@@ -259,7 +284,7 @@
 <h1>Marginal PDF</h1>
 
 </section>
-<section id="section-3" class="slide level2">
+<section id="section-4" class="slide level2">
 <h2></h2>
 <div class="columns">
 <div class="column" style="width:45%;">
@@ -280,10 +305,10 @@ f_\color{blue}{Y}(\color{blue}{y})=\int_{-\infty}^{+\infty} f_{X, Y}(x, y) d\col
 \]</span></p>
 </div></div>
 <div class="fragment">
-<p>Integrate the joint PDF over all possible values of <strong>the other variable</strong>.</p>
+<p>Integrate the joint PDF over all possible values of <strong>the other</strong> variable.</p>
 </div>
 </section>
-<section id="section-4" class="slide level2">
+<section id="section-5" class="slide level2">
 <h2></h2>
 <p>Let <span class="math inline">\((X, Y)\)</span> be a random point on the unit square.</p>
 
@@ -298,7 +323,7 @@ f_{X, Y}(x, y) =
 \]</span></p>
 </div>
 </section>
-<section id="section-5" class="slide level2">
+<section id="section-6" class="slide level2">
 <h2></h2>
 <!-- $$f_{X, Y}(x, y) = 
 \begin{cases}
@@ -306,7 +331,7 @@ f_{X, Y}(x, y) =
     0, & \text{otherwise.}
 \end{cases}
 $$ -->
-<p>To satisfy the normalization property</p>
+<p>To ensure the normalization property</p>
 <p><span class="math display">\[
 \small{
 \begin{aligned}
@@ -323,7 +348,7 @@ $$ -->
 <p>We must set <span class="math inline">\(c=1\)</span>.</p>
 </div>
 </section>
-<section id="section-6" class="slide level2">
+<section id="section-7" class="slide level2">
 <h2></h2>
 <!-- The joint PDF: -->
 <p><span class="math display">\[
@@ -359,7 +384,7 @@ X \sim \text{unif}(0, 1)
 \]</span></p>
 </div>
 </section>
-<section id="section-7" class="slide level2">
+<section id="section-8" class="slide level2">
 <h2></h2>
 <p><span class="math display">\[
 f_{X, Y}(x, y) =
@@ -394,7 +419,7 @@ f_{X, Y}(x, y) =
 \]</span></p>
 
 <img data-src="images/joint-pdf-uniform.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="section-8" class="slide level2">
+<section id="section-9" class="slide level2">
 <h2></h2>
 <!-- ![](images/joint-pdf-uniform.png){fig-align="center"} -->
 <p><span class="math display">\[

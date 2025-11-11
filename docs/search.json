@@ -4,7 +4,7 @@
     "href": "lecture-slides/ch05/03-discrete-independence.html#section",
     "title": "5.3 Discrete independence",
     "section": "",
-    "text": "Recall the definition of independence in Chapter 2.\nTwo events \\(A\\) and \\(B\\) are independent if\n\\[\n\\text{P}(A \\mid B)=\\text{P}(A)\n\\]\n\nBy the definition of the conditional probability,\n\\[\n\\text{P}(A \\mid B)=\\frac{\\text{P}(A \\cap B)}{\\text{P}(B)}\n\\]\nWe have\n\\[\n\\text{P}(A \\cap B) = \\text{P}(A) \\cdot \\text{P}(B), \\;\\; \\text{if $A$ and $B$ are independent.}\n\\]",
+    "text": "Recall the definition of independence.\nTwo events \\(A\\) and \\(B\\) are independent if\n\\[\n\\text{P}(A \\mid B)=\\text{P}(A)\n\\]\n\nBy the definition of the conditional probability,\n\\[\n\\text{P}(A \\mid B)=\\frac{\\text{P}(A \\cap B)}{\\text{P}(B)}\n\\]\nWe have\n\\[\n\\text{P}(A \\cap B) = \\text{P}(A) \\cdot \\text{P}(B)\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -17,7 +17,7 @@
     "href": "lecture-slides/ch05/03-discrete-independence.html#section-1",
     "title": "5.3 Discrete independence",
     "section": "",
-    "text": "Two RVs \\(X\\) and \\(Y\\) are independent if\n\\[\np_{X \\mid Y}(x \\mid y)=p_X(x), \\;\\;\\; \\text{for all $x$ and $y$ with $p_Y(y)&gt;0$.}\n\\]\n\nKnowing \\(Y=y\\) does not affect our believe on how likely \\(X=x\\) occurs.\n\n\nBy the definition of the conditional PMF,\n\\[\np_{X \\mid Y}(x \\mid y)=\\frac{p_{X, Y}(x, y)}{p_Y(y)}\n\\]\n\n\n\\(X\\) and \\(Y\\) are independent if\n\\[\np_{X, Y}(x, y) = p_X(x) \\cdot p_{Y}(y), \\;\\; \\text{for all $x$ and $y$.}\n\\]",
+    "text": "Similarly, two RVs \\(X\\) and \\(Y\\) are independent if\n\\[\np_{X \\mid Y}(x \\mid y)=p_X(x), \\;\\;\\; \\text{for all $x$ and $y$ with $p_Y(y)&gt;0$.}\n\\]\n\nKnowing \\(Y=y\\) does not change our believe on how likely \\(X=x\\) occurs.\n\n\nBy the definition of the conditional PMF,\n\\[\np_{X \\mid Y}(x \\mid y)=\\frac{p_{X, Y}(x, y)}{p_Y(y)}\n\\]\n\n\n\\(X\\) and \\(Y\\) are independent if\n\\[\np_{X, Y}(x, y) = p_X(x) \\cdot p_{Y}(y), \\;\\; \\text{for all $x$ and $y$.}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -30,7 +30,7 @@
     "href": "lecture-slides/ch05/03-discrete-independence.html#section-2",
     "title": "5.3 Discrete independence",
     "section": "",
-    "text": "\\(X\\) and \\(Y\\) are the rolls on two 4-sided dice\nAre \\(X\\) and \\(Y\\) independent?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(Y=1\\)\n\\(Y=2\\)\n\\(Y=3\\)\n\\(Y=4\\)\n\\(p_X(x)\\)\n\n\n\n\n\\(X=1\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{4}\\)\n\n\n\\(X=2\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{4}\\)\n\n\n\\(X=3\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{4}\\)\n\n\n\\(X=4\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{4}\\)\n\n\n\\(p_Y(y)\\)\n\\(\\frac{1}{4}\\)\n\\(\\frac{1}{4}\\)\n\\(\\frac{1}{4}\\)\n\\(\\frac{1}{4}\\)\n\\(\\frac{100}{100}\\)\n\n\n\n\n\nKnowing the 1st roll doesn’t give us any info about the 2nd roll.",
+    "text": "\\(X\\) and \\(Y\\) are the rolls on two 4-sided dice\nAre \\(X\\) and \\(Y\\) independent?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(Y=1\\)\n\\(Y=2\\)\n\\(Y=3\\)\n\\(Y=4\\)\n\\(p_X(x)\\)\n\n\n\n\n\\(X=1\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{4}\\)\n\n\n\\(X=2\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{4}\\)\n\n\n\\(X=3\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{4}\\)\n\n\n\\(X=4\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{4}\\)\n\n\n\\(p_Y(y)\\)\n\\(\\frac{1}{4}\\)\n\\(\\frac{1}{4}\\)\n\\(\\frac{1}{4}\\)\n\\(\\frac{1}{4}\\)\n\\(\\frac{100}{100}\\)\n\n\n\n\n\n\nKnowing the 1st roll doesn’t give us any info about the 2nd roll.",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -43,7 +43,7 @@
     "href": "lecture-slides/ch05/03-discrete-independence.html#section-3",
     "title": "5.3 Discrete independence",
     "section": "",
-    "text": "\\(X\\) is the roll on the die #1, \\(T\\) is the sum of the two rolls.\nAre \\(X\\) and \\(T\\) independent?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(X \\setminus T\\)\n\\(2\\)\n\\(3\\)\n\\(4\\)\n\\(5\\)\n\\(6\\)\n\\(7\\)\n\\(8\\)\n\\(p_X(x)\\)\n\n\n\n\n\\(1\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(0\\)\n\\(0\\)\n\\(0\\)\n\\(\\frac{1}{4}\\)\n\n\n\\(2\\)\n\\(0\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(0\\)\n\\(0\\)\n\\(\\frac{1}{4}\\)\n\n\n\\(3\\)\n\\(0\\)\n\\(0\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(0\\)\n\\(\\frac{1}{4}\\)\n\n\n\\(4\\)\n\\(0\\)\n\\(0\\)\n\\(0\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{4}\\)\n\n\n\\(p_T(t)\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{2}{16}\\)\n\\(\\frac{3}{16}\\)\n\\(\\frac{4}{16}\\)\n\\(\\frac{3}{16}\\)\n\\(\\frac{2}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(1\\)\n\n\n\n\n\nKnowing the 1st roll gives us some info about the sum.",
+    "text": "\\(X\\) is the roll on the die #1, \\(T\\) is the sum of the two rolls.\nAre \\(X\\) and \\(T\\) independent?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(X \\setminus T\\)\n\\(2\\)\n\\(3\\)\n\\(4\\)\n\\(5\\)\n\\(6\\)\n\\(7\\)\n\\(8\\)\n\\(p_X(x)\\)\n\n\n\n\n\\(1\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(0\\)\n\\(0\\)\n\\(0\\)\n\\(\\frac{1}{4}\\)\n\n\n\\(2\\)\n\\(0\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(0\\)\n\\(0\\)\n\\(\\frac{1}{4}\\)\n\n\n\\(3\\)\n\\(0\\)\n\\(0\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(0\\)\n\\(\\frac{1}{4}\\)\n\n\n\\(4\\)\n\\(0\\)\n\\(0\\)\n\\(0\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{1}{4}\\)\n\n\n\\(p_T(t)\\)\n\\(\\frac{1}{16}\\)\n\\(\\frac{2}{16}\\)\n\\(\\frac{3}{16}\\)\n\\(\\frac{4}{16}\\)\n\\(\\frac{3}{16}\\)\n\\(\\frac{2}{16}\\)\n\\(\\frac{1}{16}\\)\n\\(1\\)\n\n\n\n\n\n\nKnowing the sum gives us some info about the first roll.",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -199,7 +199,7 @@
     "href": "lecture-slides/ch05/05-conditional-pdf.html#section",
     "title": "5.5 Conditional PDF",
     "section": "",
-    "text": "\\[\np_{X \\mid Y}(x \\mid y)=\\frac{p_{X, Y}(x, y)}{p_Y(y)}\n\\]\n\n\\(p_{X \\mid Y}(x \\mid y)\\) has the same shape as \\(p_{X, Y}(x, y)\\) at \\(Y=y\\) except that it is divided by \\(p_Y(y)\\), which enforce the normalization property.",
+    "text": "\\[\np_{X \\mid Y}(x \\mid y)=\\frac{p_{X, Y}(x, y)}{p_Y(y)}\n\\]\n\n\\(p_{X \\mid Y}(x \\mid y)\\) has the same shape as \\(p_{X, Y}(x, y)\\) at \\(Y=y\\) except that it is divided by \\(p_Y(y)\\), which ensure the normalization property.",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -252,45 +252,6 @@
     "title": "5.5 Conditional PDF",
     "section": "",
     "text": "How are the joint, marginal, and conditional PDFs related to each other?\n\nTo calculate the joint PDF,\n\\[\nf_{X, Y}(x, y)= f_Y(y) \\cdot f_{X \\mid Y}(x \\mid y)\n\\]\n\n\nTo calculate the marginal PDF\n\\[\n\\begin{aligned}\nf_X(x)&=\\int_{-\\infty}^{+\\infty} f_{X, Y}(x, y)dy \\\\\n&=\\int_{-\\infty}^{+\\infty} f_Y(y) \\cdot f_{X \\mid Y}(x \\mid y)dy \\\\\n\\end{aligned}\n\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 5. Joint random variables",
-      "5.5 Conditional PDF"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch05/05-conditional-pdf.html#exercise",
-    "href": "lecture-slides/ch05/05-conditional-pdf.html#exercise",
-    "title": "5.5 Conditional PDF",
-    "section": "Exercise",
-    "text": "Exercise\n\n\nA stick of length \\(l\\) is broken at a uniformly random point \\(X\\) on the interval \\([0, l]\\).\nGiven that \\(X=x\\), another breaking point \\(Y\\) was chosen uniformly on the interval \\([0, x]\\).\nWhat is the PDF of \\(Y\\)?",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 5. Joint random variables",
-      "5.5 Conditional PDF"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch05/05-conditional-pdf.html#section-4",
-    "href": "lecture-slides/ch05/05-conditional-pdf.html#section-4",
-    "title": "5.5 Conditional PDF",
-    "section": "",
-    "text": "\\[\nX \\sim \\text{unif}(0, l), \\;\\;\nf_{X}(x) =\n\\begin{cases}\n    1/l, & \\text{if $0 \\leq x \\leq l$,} \\\\\n    0,   & \\text{otherwise.}\n\\end{cases}\n\\]\n\n\\[\n\\text{Given $X=x$, }\\;\nf_{Y \\mid X}(y \\mid x) =\n\\begin{cases}\n    1/x, & \\text{if $0 \\leq y \\leq x$,} \\\\\n    0,   & \\text{otherwise.}\n\\end{cases}\n\\]\n\n\nBy applying the multiplication rule, we have \\[\n\\begin{aligned}\nf_{X, Y}(x, y) &= f_{X}(x) \\cdot f_{Y \\mid X}(y \\mid x) \\\\\n\\\\\n&=\n\\begin{cases}\n    1/(lx), & \\text{if $0 \\leq y \\leq x \\leq l$,} \\\\\n    0,      & \\text{otherwise.}\n\\end{cases}\n\\end{aligned}\n\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 5. Joint random variables",
-      "5.5 Conditional PDF"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch05/05-conditional-pdf.html#section-5",
-    "href": "lecture-slides/ch05/05-conditional-pdf.html#section-5",
-    "title": "5.5 Conditional PDF",
-    "section": "",
-    "text": "What is the marginal PDF of \\(Y\\)?\n\\[\n\\begin{aligned}\nf_{Y}(y) &= \\int_{-\\infty}^{+\\infty} f_{X, Y}(x, y)dx \\\\\n&= \\int_y^l \\frac{1}{lx}dx \\\\\n&= \\frac{1}{l} \\ln x \\bigg|_y^l \\\\\n&= \\frac{1}{l} (\\ln l-\\ln y)\n= \\frac{1}{l}\\ln(\\frac{l}{y})\n\\end{aligned}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -6833,24 +6794,11 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#pmf-visualization",
-    "href": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#pmf-visualization",
+    "objectID": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#joint-pmf",
+    "href": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#joint-pmf",
     "title": "5.1 Joint & marginal PMF",
-    "section": "PMF visualization",
-    "text": "PMF visualization",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 5. Joint random variables",
-      "5.1 Joint & marginal PMF"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#joint-pmf-visualization",
-    "href": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#joint-pmf-visualization",
-    "title": "5.1 Joint & marginal PMF",
-    "section": "Joint PMF visualization",
-    "text": "Joint PMF visualization",
+    "section": "Joint PMF",
+    "text": "Joint PMF\nRandomly select a person on campus and record their age and number of credit cards they own.\n\nDefinition: Two discrete RV \\(X\\) and \\(Y\\) from the same experiment. \\((x, y)\\) is a pair of possible values of \\(X\\) and \\(Y\\).\n\n\nThe joint PMF of \\(X\\) and \\(Y\\) is defined as\n\\[\np_{X, Y}(x, y) \\stackrel{\\text{def}}{=} \\text{P}\\big(\\{X=x\\} \\cap \\{Y=y\\}\\big)\n\\]\n\n\nFor simplicity, we often use the abbreviated notation.\n\\[\np_{X, Y}(x, y) \\stackrel{\\text{def}}{=} \\text{P}(X=x, Y=y)\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -6861,6 +6809,32 @@
   {
     "objectID": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#section",
     "href": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#section",
+    "title": "5.1 Joint & marginal PMF",
+    "section": "",
+    "text": "Recall the PMF of a single random variable is defined as\n\\[\np_{X}(x) \\stackrel{\\text{def}}{=} \\text{P}(X=x)\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 5. Joint random variables",
+      "5.1 Joint & marginal PMF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#joint-pmf-1",
+    "href": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#joint-pmf-1",
+    "title": "5.1 Joint & marginal PMF",
+    "section": "Joint PMF",
+    "text": "Joint PMF\n\\[\np_{X, Y}(x, y) \\stackrel{\\text{def}}{=} \\text{P}(X=x, Y=y)\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 5. Joint random variables",
+      "5.1 Joint & marginal PMF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#section-1",
+    "href": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#section-1",
     "title": "5.1 Joint & marginal PMF",
     "section": "",
     "text": "We randomly sample an adult from the MI population.\n\n\\(X\\): whether they are a current smoker\n\\(Y\\): whether they will develop lung cancer at some point\n\nSuppose the joint PMF is as follows.\n\n\n\n\n\\(Y=0\\)\n\\(Y=1\\)\n\n\n\n\n\\(X=0\\)\n\\(72\\%\\)\n\\(3\\%\\)\n\n\n\\(X=1\\)\n\\(20\\%\\)\n\\(5\\%\\)\n\n\n\n\n\n\nAll number are fictional.",
@@ -6889,7 +6863,7 @@
     "href": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#normalization-property",
     "title": "5.1 Joint & marginal PMF",
     "section": "Normalization property",
-    "text": "Normalization property\n\nFor a single discrete RV \\(X\\), we have \\(\\sum_x p_X(x)=1\\).\nJoint PMF of two discrete RVs \\(X\\) and \\(Y\\) \\[\n  \\sum_x\\sum_y p_{X, Y}(x, y)=1\n  \\]\n\n\n\n\n\n\n\\(Y=0\\)\n\\(Y=1\\)\n\n\n\n\n\\(X=0\\)\n\\(72\\%\\)\n\\(3\\%\\)\n\n\n\\(X=1\\)\n\\(20\\%\\)\n\\(5\\%\\)",
+    "text": "Normalization property\n\n\nFor a single discrete RV \\(X\\), we have\n\n\\[\n\\sum_x p_X(x)=1\n\\]\n\n\n\n\nJoint PMF of two discrete RVs \\(X\\) and \\(Y\\)\n\n\\[\n\\sum_x\\sum_y p_{X, Y}(x, y)=1\n\\]\n\n\n\n\n\n\n\n\\(Y=0\\)\n\\(Y=1\\)\n\n\n\n\n\\(X=0\\)\n\\(72\\%\\)\n\\(3\\%\\)\n\n\n\\(X=1\\)\n\\(20\\%\\)\n\\(5\\%\\)",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -6902,7 +6876,7 @@
     "href": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#cumulative-distribution-function",
     "title": "5.1 Joint & marginal PMF",
     "section": "Cumulative Distribution Function",
-    "text": "Cumulative Distribution Function\nThe CDF of a RV \\(X\\) is (always) defined by\n\\[\nF_X(x)=\\text{P}(X \\leq x), \\;\\; \\text{for all $x$.}\n\\]\n\nThe joint CDF of two RVs \\(X\\) and \\(Y\\) is defined by\n\\[\nF_{X, Y}(x, y)=\\text{P}(X \\leq x, Y \\leq y), \\;\\;\\;\\;\\;\\text{for all $x$ and $y$.}\n\\]\n\n\nJoint CDFs are generally harder to work with than joint PMFs.\nFor this reason, we will mainly stick with joint PMFs.",
+    "text": "Cumulative Distribution Function\nThe CDF of a RV \\(X\\) is (always) defined by\n\\[\nF_X(x) \\stackrel{\\text{def}}{=} \\text{P}(X \\leq x), \\;\\; \\text{for all $x$.}\n\\]\n\nThe joint CDF of two RVs \\(X\\) and \\(Y\\) is defined by\n\\[\nF_{X, Y}(x, y) \\stackrel{\\text{def}}{=} \\text{P}(X \\leq x, Y \\leq y), \\;\\;\\;\\;\\;\\text{for all $x$ and $y$.}\n\\]\n\n\nJoint CDFs are generally harder to work with than joint PMFs.\nFor this reason, we will mainly stick with joint PMFs.",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -6924,24 +6898,11 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#section-1",
-    "href": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#section-1",
-    "title": "5.1 Joint & marginal PMF",
-    "section": "",
-    "text": "We can calculate the PMF of \\(X\\) using\n\\[\n\\small{\n  p_X(x)=\\text{P}(X=x)=\\sum_\\color{blue}{y} \\text{P}(X=x, Y=y) =\\sum_\\color{blue}{y} p_{X, Y}(x, y)\n}\n\\]\nWe refer to \\(p_X(x)\\) as the marginal PMF of \\(X\\).",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 5. Joint random variables",
-      "5.1 Joint & marginal PMF"
-    ]
-  },
-  {
     "objectID": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#section-2",
     "href": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#section-2",
     "title": "5.1 Joint & marginal PMF",
     "section": "",
-    "text": "Similarly, we can calculate the PMF of \\(Y\\) using\n\\[\n\\small{\np_Y(y)=\\text{P}(Y=y)=\\sum_\\color{red}{x} \\text{P}(X=x, Y=y)=\\sum_\\color{red}{x} p_{X, Y}(x, y)\n}\n\\]\nWe refer to \\(p_Y(y)\\) as the marginal PMF of \\(Y\\).",
+    "text": "We can calculate the PMF of \\(X\\) using\n\\[\n\\small{\n  p_X(x)=\\text{P}(X=x)=\\sum_\\color{blue}{y} \\text{P}(X=x, Y=y) =\\sum_\\color{blue}{y} p_{X, Y}(x, y)\n}\n\\]\nWe refer to \\(p_X(x)\\) as the marginal PMF of \\(X\\).",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -6954,7 +6915,33 @@
     "href": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#section-3",
     "title": "5.1 Joint & marginal PMF",
     "section": "",
-    "text": "We randomly sample an adult from the MI population.\n\n\\(X\\): whether they are a current smoker\n\\(Y\\): whether they will develop lung cancer at some point\n\nSuppose the joint PMF is as follows.\n\n\n\n\n\\(Y=0\\)\n\\(Y=1\\)\n\n\n\n\n\\(X=0\\)\n\\(72\\%\\)\n\\(3\\%\\)\n\n\n\\(X=1\\)\n\\(20\\%\\)\n\\(5\\%\\)\n\n\n\n\n\n\n\n\nWhat are the marginal PMFs of \\(X\\) and \\(Y\\)?\n\n\n\n\n\nAll number are fictional.",
+    "text": "Similarly, we can calculate the PMF of \\(Y\\) using\n\\[\n\\small{\np_Y(y)=\\text{P}(Y=y)=\\sum_\\color{red}{x} \\text{P}(X=x, Y=y)=\\sum_\\color{red}{x} p_{X, Y}(x, y)\n}\n\\]\nWe refer to \\(p_Y(y)\\) as the marginal PMF of \\(Y\\).",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 5. Joint random variables",
+      "5.1 Joint & marginal PMF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#section-4",
+    "href": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#section-4",
+    "title": "5.1 Joint & marginal PMF",
+    "section": "",
+    "text": "We randomly sample an adult from the MI population.\n\n\\(X\\): whether they are a current smoker\n\\(Y\\): whether they will develop lung cancer at some point\n\nSuppose the joint PMF is as follows.\n\n\n\n\n\\(Y=0\\)\n\\(Y=1\\)\n\n\n\n\n\\(X=0\\)\n\\(72\\%\\)\n\\(3\\%\\)\n\n\n\\(X=1\\)\n\\(20\\%\\)\n\\(5\\%\\)\n\n\n\n\n\n\n\n\nWhat are the marginal PMFs of \\(X\\) and \\(Y\\)?\n\n\n\nAll number are fictional.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 5. Joint random variables",
+      "5.1 Joint & marginal PMF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#marginal-pmf-1",
+    "href": "lecture-slides/ch05/01-joint-and-marginal-pmf.html#marginal-pmf-1",
+    "title": "5.1 Joint & marginal PMF",
+    "section": "Marginal PMF",
+    "text": "Marginal PMF\n\n\n\n\n\n\\(Y=0\\)\n\\(Y=1\\)\n\\(p_X(x)\\)\n\n\n\n\n\\(X=0\\)\n\\(72\\%\\)\n\\(3\\%\\)\n\\(75\\%\\)\n\n\n\\(X=1\\)\n\\(20\\%\\)\n\\(5\\%\\)\n\\(25\\%\\)\n\n\n\\(p_Y(y)\\)\n\\(92\\%\\)\n\\(8\\%\\)\n\\(100\\%\\)",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -7149,7 +7136,7 @@
     "href": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section",
     "title": "5.4 Joint & marginal PDF",
     "section": "",
-    "text": "Consider two continuous RVs \\(X\\) and \\(Y\\) from the same experiment.\nThe joint PDF is a nonnegative function that satisfies\n\\[\n\\text{P}\\big((X, Y) \\in A\\big)=\\iint\\limits_{(x, y) \\in A} f_{X, Y}(x, y) dxdy\n\\]\nThe integration is carried over \\(A\\) on the 2-D plane.",
+    "text": "Two continuous RVs \\(X\\) and \\(Y\\) from the same experiment.\nThe joint PDF is a nonnegative function that satisfies\n\\[\n\\text{P}\\big((X, Y) \\in A\\big)=\\iint\\limits_{(x, y) \\in A} f_{X, Y}(x, y) dxdy\n\\]\n\n\n\nThe integration is carried over \\(A\\) on the 2-D plane.",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -7162,7 +7149,7 @@
     "href": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-1",
     "title": "5.4 Joint & marginal PDF",
     "section": "",
-    "text": "\\[\n\\text{P}\\big((X, Y) \\in A\\big)=\\iint\\limits_{(x, y) \\in A} f_{X, Y}(x, y) dxdy\n\\]\n\n\n\n \\[\n\\text{Let } A=\\{(x, y) \\mid a &lt; x &lt; b, c &lt; y &lt; d\\}\n\\]\n\n\n\n\n\n\n\n\n\n\\[\n\\text{P}(a &lt; x &lt; b, \\; c &lt; y &lt; d)=\\int_c^d \\int_a^b f_{X, Y}(x, y)dxdy\n\\]",
+    "text": "\\[\n\\text{P}\\big((X, Y) \\in A\\big)=\\iint\\limits_{(x, y) \\in A} f_{X, Y}(x, y) dxdy\n\\]\n\n\n\n\n\\[\n\\text{Let } A=\\{(x, y) \\mid a &lt; x &lt; b, c &lt; y &lt; d\\}\n\\]\n\n\n\n\n\n\n\n\n\n\\[\n\\text{P}(a &lt; x &lt; b, \\; c &lt; y &lt; d)=\\int_c^d \\int_a^b f_{X, Y}(x, y)dxdy\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -7171,11 +7158,11 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#single-continuous-rv",
-    "href": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#single-continuous-rv",
+    "objectID": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-2",
+    "href": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-2",
     "title": "5.4 Joint & marginal PDF",
-    "section": "Single continuous RV",
-    "text": "Single continuous RV\n\\[\n\\text{P}(a &lt; X &lt; b)=\\int_a^b f_X dx\n\\]\nThe probability is the area under the density curve.",
+    "section": "",
+    "text": "Recall the PDF of a single continuous RV\n\\[\n\\text{P}(a &lt; X &lt; b)=\\int_a^b f_X dx\n\\]\n\nThe probability is the area under the density curve.",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -7197,8 +7184,8 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-2",
-    "href": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-2",
+    "objectID": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-3",
+    "href": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-3",
     "title": "5.4 Joint & marginal PDF",
     "section": "",
     "text": "\\[\n\\begin{aligned}\n&\\text{P}(a &lt; x &lt; a+\\delta, c &lt; y &lt; c+\\delta) \\\\\n\\\\\n=\\;&\\int_c^{c+\\delta} \\int_a^{a+\\delta} f_{X, Y}(x, y)dxdy \\\\\n\\\\\n\\approx \\;& f_{X, Y}(a, c) \\cdot \\delta ^2 \\\\\n\\end{aligned}\n\\]\n\\(f_{X, Y}(a, c)\\) is the probability per unit area in the vicinity of \\((a, c)\\).",
@@ -7227,7 +7214,7 @@
     "href": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#the-normalization-property-1-d",
     "title": "5.4 Joint & marginal PDF",
     "section": "The normalization property (1-D)",
-    "text": "The normalization property (1-D)\nFor a single continuous RV, we have \\(\\int_{-\\infty}^{+\\infty} f_X dx=1\\).\n\n\n\n\n\n\nThe total area under the density curve is 1.",
+    "text": "The normalization property (1-D)\nRecall for a single continuous RV, we have\n\\[\n\\int_{-\\infty}^{+\\infty} f_X dx=1\n\\]\n\n\n\n\n\n\n\n\n\n The total area under the density curve is 1.",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -7240,20 +7227,7 @@
     "href": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#the-normalization-property-2-d",
     "title": "5.4 Joint & marginal PDF",
     "section": "The normalization property (2-D)",
-    "text": "The normalization property (2-D)\nFor two continuous RVs \\(X\\) and \\(Y\\), we have\n\\[\n\\small{\n\\int_{-\\infty}^{+\\infty} \\int_{-\\infty}^{+\\infty} f_{X, Y}(x, y) dxdy=1\n}\n\\]\n\n\n\n\n\n\nThe total volume under the density surface is 1.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 5. Joint random variables",
-      "5.4 Joint & marginal PDF"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-3",
-    "href": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-3",
-    "title": "5.4 Joint & marginal PDF",
-    "section": "",
-    "text": "For discrete RVs \\(\\color{red}{X}\\) and \\(\\color{blue}{Y}\\), the marginal PMFs are \\[\np_\\color{red}{X}(\\color{red}{x})=\\sum_\\color{blue}{y} p_{X, Y}(x, y)\n\\]\n\\[\np_\\color{blue}{Y}(\\color{blue}{y})=\\sum_\\color{red}{x} p_{X, Y}(x, y)\n\\]\n\n\n\nFor continuous RVs \\(\\color{red}{X}\\) and \\(\\color{blue}{Y}\\), the marginal PDFs are \\[\nf_\\color{red}{X}(\\color{red}{x})=\\int_{-\\infty}^{+\\infty} f_{X, Y}(x, y) d\\color{blue}{y}\n\\]\n\\[\nf_\\color{blue}{Y}(\\color{blue}{y})=\\int_{-\\infty}^{+\\infty} f_{X, Y}(x, y) d\\color{red}{x}\n\\]\n\n\nIntegrate the joint PDF over all possible values of the other variable.",
+    "text": "The normalization property (2-D)\nFor two continuous RVs \\(X\\) and \\(Y\\), we have\n\\[\n\\small{\n\\int_{-\\infty}^{+\\infty} \\int_{-\\infty}^{+\\infty} f_{X, Y}(x, y) dxdy=1\n}\n\\]\n\n\n\n\n\n\n\n\n\n The total volume under the density surface is 1.",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -7266,7 +7240,7 @@
     "href": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-4",
     "title": "5.4 Joint & marginal PDF",
     "section": "",
-    "text": "Let \\((X, Y)\\) be a random point on the unit square.\n\nWhat is its joint PDF?\n\n\\[\nf_{X, Y}(x, y) =\n\\begin{cases}\n    c, & \\text{if $x, y \\in [0, 1]$,} \\\\\n    0, & \\text{otherwise.}\n\\end{cases}\n\\]",
+    "text": "For discrete RVs \\(\\color{red}{X}\\) and \\(\\color{blue}{Y}\\), the marginal PMFs are \\[\np_\\color{red}{X}(\\color{red}{x})=\\sum_\\color{blue}{y} p_{X, Y}(x, y)\n\\]\n\\[\np_\\color{blue}{Y}(\\color{blue}{y})=\\sum_\\color{red}{x} p_{X, Y}(x, y)\n\\]\n\n\n\nFor continuous RVs \\(\\color{red}{X}\\) and \\(\\color{blue}{Y}\\), the marginal PDFs are \\[\nf_\\color{red}{X}(\\color{red}{x})=\\int_{-\\infty}^{+\\infty} f_{X, Y}(x, y) d\\color{blue}{y}\n\\]\n\\[\nf_\\color{blue}{Y}(\\color{blue}{y})=\\int_{-\\infty}^{+\\infty} f_{X, Y}(x, y) d\\color{red}{x}\n\\]\n\n\nIntegrate the joint PDF over all possible values of the other variable.",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -7279,7 +7253,7 @@
     "href": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-5",
     "title": "5.4 Joint & marginal PDF",
     "section": "",
-    "text": "To satisfy the normalization property\n\\[\n\\small{\n\\begin{aligned}\n\\int_{-\\infty}^{+\\infty} \\int_{-\\infty}^{+\\infty} f_{X, Y}(x, y) dxdy\n&=\\int_0^1 \\int_0^1 c \\; dxdy \\\\\n\\\\\n&=c \\int_0^1 \\int_0^1 1 \\; dxdy \\\\\n\\\\\n&=c\n\\end{aligned}\n}\n\\]\n\nWe must set \\(c=1\\).",
+    "text": "Let \\((X, Y)\\) be a random point on the unit square.\n\nWhat is its joint PDF?\n\n\\[\nf_{X, Y}(x, y) =\n\\begin{cases}\n    c, & \\text{if $x, y \\in [0, 1]$,} \\\\\n    0, & \\text{otherwise.}\n\\end{cases}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -7292,7 +7266,7 @@
     "href": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-6",
     "title": "5.4 Joint & marginal PDF",
     "section": "",
-    "text": "\\[\n\\small{\nf_{X, Y}(x, y) =\n\\begin{cases}\n    1, & \\text{if $x, y \\in [0, 1]$,} \\\\\n    0,              & \\text{otherwise.}\n\\end{cases}\n}\n\\]\n\nWhat is the marginal PDF of \\(X\\)?\n\n\\[\n\\small{\n\\text{If $x &lt; 0$ or $x &gt; 1$,}\\;\nf_X(x)=\\int_{-\\infty}^{+\\infty} f_{X, Y}(x, y) dy =\\int_{-\\infty}^{+\\infty} 0 \\; dy=0\n}\n\\]\n\n\n\\[\n\\small{\n\\text{If $x \\in [0, 1]$,}\\;\nf_X(x)=\\int_{-\\infty}^{+\\infty} f_{X, Y}(x, y) dy=\\int_0^1 1 \\; dy =1\n}\n\\]\n\n\n\\[\nX \\sim \\text{unif}(0, 1)\n\\]",
+    "text": "To ensure the normalization property\n\\[\n\\small{\n\\begin{aligned}\n\\int_{-\\infty}^{+\\infty} \\int_{-\\infty}^{+\\infty} f_{X, Y}(x, y) dxdy\n&=\\int_0^1 \\int_0^1 c \\; dxdy \\\\\n\\\\\n&=c \\int_0^1 \\int_0^1 1 \\; dxdy \\\\\n\\\\\n&=c\n\\end{aligned}\n}\n\\]\n\nWe must set \\(c=1\\).",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -7303,6 +7277,19 @@
   {
     "objectID": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-7",
     "href": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-7",
+    "title": "5.4 Joint & marginal PDF",
+    "section": "",
+    "text": "\\[\n\\small{\nf_{X, Y}(x, y) =\n\\begin{cases}\n    1, & \\text{if $x, y \\in [0, 1]$,} \\\\\n    0,              & \\text{otherwise.}\n\\end{cases}\n}\n\\]\n\nWhat is the marginal PDF of \\(X\\)?\n\n\\[\n\\small{\n\\text{If $x &lt; 0$ or $x &gt; 1$,}\\;\nf_X(x)=\\int_{-\\infty}^{+\\infty} f_{X, Y}(x, y) dy =\\int_{-\\infty}^{+\\infty} 0 \\; dy=0\n}\n\\]\n\n\n\\[\n\\small{\n\\text{If $x \\in [0, 1]$,}\\;\nf_X(x)=\\int_{-\\infty}^{+\\infty} f_{X, Y}(x, y) dy=\\int_0^1 1 \\; dy =1\n}\n\\]\n\n\n\\[\nX \\sim \\text{unif}(0, 1)\n\\]",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 5. Joint random variables",
+      "5.4 Joint & marginal PDF"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-8",
+    "href": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-8",
     "title": "5.4 Joint & marginal PDF",
     "section": "",
     "text": "\\[\nf_{X, Y}(x, y) =\n\\begin{cases}\n    1, & \\text{if $x, y \\in [0, 1]$,} \\\\\n    0,              & \\text{otherwise.}\n\\end{cases}\n\\]\n\\[X \\sim \\text{unif}(0, 1)\\]\n\nWhat is the marginal PDF of \\(Y\\)?\n\n\n\n\\[\nY \\sim \\text{unif}(0, 1)\n\\]",
@@ -7327,8 +7314,8 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-8",
-    "href": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-8",
+    "objectID": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-9",
+    "href": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-9",
     "title": "5.4 Joint & marginal PDF",
     "section": "",
     "text": "\\[\n\\small{\n\\begin{aligned}\n\\text{P}\\big((X, Y) \\in A\\big)&=\\iint\\limits_{(x, y) \\in A} f_{X, Y}(x, y) dxdy \\\\\n&=\\iint\\limits_{(x, y) \\in A} \\frac{1}{\\text{area of $S$}} dxdy \\\\\n&=\\frac{1}{\\text{area of $S$}}\\iint\\limits_{(x, y) \\in A} 1 \\;dxdy \\\\\n&=\\frac{\\text{area of $A$}}{\\text{area of $S$}} \\\\\n\\end{aligned}\n}\n\\]",
@@ -7500,7 +7487,7 @@
     "href": "lecture-slides/ch05/02-conditional-pmf.html#conditional-pmf",
     "title": "5.2 Conditional PMF",
     "section": "Conditional PMF",
-    "text": "Conditional PMF\nThe conditional PMF of \\(X\\) given \\(Y=y\\) is defined by\n\\[\n\\begin{aligned}\np_{X \\mid Y}(x \\mid y)&=\\text{P}(X=x \\mid Y=y) \\\\\n\\\\\n&=\\frac{\\text{P}(X=x, Y=y)}{\\text{P}(Y=y)} \\\\\n\\\\\n&=\\frac{p_{X, Y}(x, y)}{p_Y(y)} \\\\\n\\end{aligned}\n\\]",
+    "text": "Conditional PMF\nThe conditional PMF of \\(X\\) given \\(Y=y\\) is defined by\n\n\\[\n\\begin{aligned}\np_{X \\mid Y}(x \\mid y)&\\stackrel{\\text{def}}{=}\\text{P}(X=x \\mid Y=y) \\\\\n\\\\\n&=\\frac{\\text{P}(X=x, Y=y)}{\\text{P}(Y=y)} \\\\\n\\\\\n&=\\frac{p_{X, Y}(x, y)}{p_Y(y)} \\\\\n\\end{aligned}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -7513,7 +7500,7 @@
     "href": "lecture-slides/ch05/02-conditional-pmf.html#section",
     "title": "5.2 Conditional PMF",
     "section": "",
-    "text": "\\[\np_{X \\mid Y}(x \\mid y)=\\frac{p_{X, Y}(x, y)}{p_Y(y)}\n\\]\n\n\\(p_{X \\mid Y}(x \\mid y)\\) has the same shape as \\(p_{X, Y}(x, y)\\) at \\(Y=y\\) except that it is divided by \\(p_Y(y)\\) to enforce the normalization property.",
+    "text": "\\[\np_{X \\mid Y}(x \\mid y)=\\frac{p_{X, Y}(x, y)}{p_Y(y)}\n\\]\n\n\\(p_{X \\mid Y}(x \\mid y)\\) has the same shape as \\(p_{X, Y}(x, y)\\) at \\(Y=y\\) except that it is divided by \\(p_Y(y)\\) to ensure the normalization property.",
     "crumbs": [
       "Home",
       "Lecture slides",

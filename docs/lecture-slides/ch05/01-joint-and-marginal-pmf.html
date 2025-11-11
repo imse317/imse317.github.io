@@ -133,47 +133,49 @@
 </div>
 
 </section>
-<section class="slide level2">
-
-<!-- ## Joint distribution – the discrete case -->
-<ul>
-<li class="fragment">Randomly select a person from a population.</li>
-<li class="fragment">Record their <strong>age</strong> and <strong># of credit cards</strong> they own.</li>
-</ul>
+<section id="joint-pmf" class="slide level2">
+<h2>Joint PMF</h2>
+<p>Randomly select a person on campus and record their <strong>age</strong> and <strong>number of credit cards</strong> they own.</p>
 <div class="fragment">
-<p>Two discrete RV <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> from the same experiment.</p>
-<p><span class="math inline">\((x, y)\)</span> is a pair of possible values of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>.</p>
+<p>Definition: Two discrete RV <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> from the same experiment. <span class="math inline">\((x, y)\)</span> is a pair of possible values of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>.</p>
 </div>
 <div class="fragment">
-<p>The <strong>joint PMF</strong> of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is defined as</p>
+<p>The joint PMF of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is defined as</p>
 <p><span class="math display">\[
-p_{X, Y}(x, y)=\text{P}\big(\{X=x\} \cap \{Y=y\}\big)
+p_{X, Y}(x, y) \stackrel{\text{def}}{=} \text{P}\big(\{X=x\} \cap \{Y=y\}\big)
 \]</span></p>
 </div>
 <div class="fragment">
 <p>For simplicity, we often use the abbreviated notation.</p>
 <p><span class="math display">\[
-p_{X, Y}(x, y)=\text{P}(X=x, Y=y)
+p_{X, Y}(x, y) \stackrel{\text{def}}{=} \text{P}(X=x, Y=y)
 \]</span></p>
 </div>
 </section>
-<section id="pmf-visualization" class="slide level2">
-<h2>PMF visualization</h2>
+<section id="section" class="slide level2">
+<h2></h2>
+<p>Recall the PMF of a single random variable is defined as</p>
+<p><span class="math display">\[
+p_{X}(x) \stackrel{\text{def}}{=} \text{P}(X=x)
+\]</span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/pmf-example.png" class="quarto-figure quarto-figure-center" height="450"></p>
+<p><img data-src="images/pmf-example.png" class="quarto-figure quarto-figure-center" height="400"></p>
 </figure>
 </div>
 </section>
-<section id="joint-pmf-visualization" class="slide level2">
-<h2>Joint PMF visualization</h2>
+<section id="joint-pmf-1" class="slide level2">
+<h2>Joint PMF</h2>
+<p><span class="math display">\[
+p_{X, Y}(x, y) \stackrel{\text{def}}{=} \text{P}(X=x, Y=y)
+\]</span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/joint-pmf.png" class="quarto-figure quarto-figure-center" height="450"></p>
 </figure>
 </div>
 </section>
-<section id="section" class="slide level2">
+<section id="section-1" class="slide level2">
 <h2></h2>
 <ul>
 <li class="fragment"><p>We randomly sample an adult from the MI population.</p>
@@ -223,12 +225,24 @@ p_{X, Y}(x, y) \geq 0, \;\;\;\; \text{for all $x$ and $y$.}
 </section>
 <section id="normalization-property" class="slide level2">
 <h2>Normalization property</h2>
-<ul>
-<li class="fragment">For a single discrete RV <span class="math inline">\(X\)</span>, we have <span class="math inline">\(\sum_x p_X(x)=1\)</span>.</li>
-<li class="fragment">Joint PMF of two discrete RVs <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> <span class="math display">\[
-  \sum_x\sum_y p_{X, Y}(x, y)=1
-  \]</span></li>
-</ul>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>For a single discrete RV <span class="math inline">\(X\)</span>, we have</p>
+</div><div class="column" style="width:40%;">
+<p><span class="math display">\[
+\sum_x p_X(x)=1
+\]</span></p>
+</div></div>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:65%;">
+<p>Joint PMF of two discrete RVs <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span></p>
+</div><div class="column" style="width:35%;">
+<p><span class="math display">\[
+\sum_x\sum_y p_{X, Y}(x, y)=1
+\]</span></p>
+</div></div>
+</div>
 <div class="fragment">
 <table class="caption-top">
 <thead>
@@ -257,12 +271,12 @@ p_{X, Y}(x, y) \geq 0, \;\;\;\; \text{for all $x$ and $y$.}
 <h2>Cumulative Distribution Function</h2>
 <p>The CDF of a RV <span class="math inline">\(X\)</span> is (always) defined by</p>
 <p><span class="math display">\[
-F_X(x)=\text{P}(X \leq x), \;\; \text{for all $x$.}
+F_X(x) \stackrel{\text{def}}{=} \text{P}(X \leq x), \;\; \text{for all $x$.}
 \]</span></p>
 <div class="fragment">
 <p>The <strong>joint CDF</strong> of two RVs <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is defined by</p>
 <p><span class="math display">\[
-F_{X, Y}(x, y)=\text{P}(X \leq x, Y \leq y), \;\;\;\;\;\text{for all $x$ and $y$.}
+F_{X, Y}(x, y) \stackrel{\text{def}}{=} \text{P}(X \leq x, Y \leq y), \;\;\;\;\;\text{for all $x$ and $y$.}
 \]</span></p>
 </div>
 <div class="fragment">
@@ -277,7 +291,12 @@ F_{X, Y}(x, y)=\text{P}(X \leq x, Y \leq y), \;\;\;\;\;\text{for all $x$ and $y$
 \text{P}\big((X, Y) \in A\big)=\sum_{(x, y) \in A}p_{X, Y}(x, y)
 \]</span></p>
 </section>
-<section id="section-1" class="slide level2">
+<section>
+<section id="marginal-pmf" class="title-slide slide level1 center">
+<h1>Marginal PMF</h1>
+
+</section>
+<section id="section-2" class="slide level2">
 <h2></h2>
 <p>We can calculate the PMF of <span class="math inline">\(X\)</span> using</p>
 <p><span class="math display">\[
@@ -294,7 +313,7 @@ F_{X, Y}(x, y)=\text{P}(X \leq x, Y \leq y), \;\;\;\;\;\text{for all $x$ and $y$
 </div>
 </div>
 </section>
-<section id="section-2" class="slide level2">
+<section id="section-3" class="slide level2">
 <h2></h2>
 <p>Similarly, we can calculate the PMF of <span class="math inline">\(Y\)</span> using</p>
 <p><span class="math display">\[
@@ -302,10 +321,10 @@ F_{X, Y}(x, y)=\text{P}(X \leq x, Y \leq y), \;\;\;\;\;\text{for all $x$ and $y$
 p_Y(y)=\text{P}(Y=y)=\sum_\color{red}{x} \text{P}(X=x, Y=y)=\sum_\color{red}{x} p_{X, Y}(x, y)
 }
 \]</span></p>
-<p>We refer to <span class="math inline">\(p_Y(y)\)</span> as the marginal PMF of <span class="math inline">\(Y\)</span>.</p>
+<p>We refer to <span class="math inline">\(p_Y(y)\)</span> as the <strong>marginal PMF</strong> of <span class="math inline">\(Y\)</span>.</p>
 <!-- .center[![:scale 60%](../images/marginal-pmf.png)] -->
 </section>
-<section id="section-3" class="slide level2">
+<section id="section-4" class="slide level2">
 <h2></h2>
 <ul>
 <li class="fragment"><p>We randomly sample an adult from the MI population.</p>
@@ -343,11 +362,45 @@ p_Y(y)=\text{P}(Y=y)=\sum_\color{red}{x} \text{P}(X=x, Y=y)=\sum_\color{red}{x} 
 <li class="fragment"><p>What are the marginal PMFs of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>?</p></li>
 </ul>
 
-
-
 <aside><div>
 <p>All number are fictional.</p>
 </div></aside></section>
+<section id="marginal-pmf-1" class="slide level2">
+<h2>Marginal PMF</h2>
+<p><br></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><span class="math inline">\(Y=0\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Y=1\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p_X(x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(X=0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(72\%\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(3\%\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(75\%\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(X=1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(20\%\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(5\%\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(25\%\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(p_Y(y)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(92\%\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(8\%\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(100\%\)</span></td>
+</tr>
+</tbody>
+</table>
+
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
