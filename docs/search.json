@@ -95,7 +95,7 @@
     "href": "lecture-slides/ch05/07-joint-expectation.html#linearity-of-expected-values",
     "title": "5.7 Joint expectation",
     "section": "Linearity of expected values",
-    "text": "Linearity of expected values\nFor any two RVs \\(X\\) and \\(Y\\), we have\n\\[\n\\text{E}[X+Y]=\\text{E}[X]+\\text{E}[Y]\n\\]\nNote this property does not require their independence.\n\nMore generally, for any \\(n\\) RVs \\(X_1, X_2, \\cdots, X_n\\),\n\\[\n\\small{\\text{E}[X_1+X_2+\\cdots+X_n]=\\text{E}[X_1]+\\text{E}[X_2] + \\cdots + \\text{E}[X_n]}\n\\]",
+    "text": "Linearity of expected values\nFor any two RVs \\(X\\) and \\(Y\\), we have\n\\[\n\\text{E}[X+Y]=\\text{E}[X]+\\text{E}[Y]\n\\]\n\nNote this property does not require independence.\n\n\nMore generally, for any \\(n\\) RVs \\(X_1, X_2, \\cdots, X_n\\),\n\\[\n\\small{\\text{E}[X_1+X_2+\\cdots+X_n]=\\text{E}[X_1]+\\text{E}[X_2] + \\cdots + \\text{E}[X_n]}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -148,19 +148,6 @@
     "title": "5.7 Joint expectation",
     "section": "",
     "text": "\\[\n\\begin{aligned}\n\\big(\\text{E}[X+Y]\\big)^2&=\\big(\\text{E}[X]+\\text{E}[Y]\\big)^2 \\;\\;\\;\\;\\color{gray}{\\leftarrow\\text{by linearity}} \\\\\n\\\\\n&=\\big(\\text{E}[X]\\big)^2+2\\text{E}[X]\\text{E}[Y]+\\big(\\text{E}[Y]\\big)^2 \\\\\n\\\\\n\\text{var}(X + Y)&=\\text{E}\\big[X^2\\big]-\\big(\\text{E}[X]\\big)^2 + \\text{E}\\big[Y^2\\big] - \\big(\\text{E}[Y]\\big)^2 \\\\\n\\\\\n&=\\text{var}(X) + \\text{var}(Y) \\\\\n\\end{aligned}\n\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 5. Joint random variables",
-      "5.7 Joint expectation"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch05/07-joint-expectation.html#the-hat-problem",
-    "href": "lecture-slides/ch05/07-joint-expectation.html#the-hat-problem",
-    "title": "5.7 Joint expectation",
-    "section": "The Hat Problem",
-    "text": "The Hat Problem\n\nAt a party \\(n\\) people checks in their hats at the entrance.\nWhen they leave, the attendant randomly picks out a hat for each of them.\nHow many people should we expect to get their own hat back?",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -7149,7 +7136,7 @@
     "href": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-1",
     "title": "5.4 Joint & marginal PDF",
     "section": "",
-    "text": "\\[\n\\text{P}\\big((X, Y) \\in A\\big)=\\iint\\limits_{(x, y) \\in A} f_{X, Y}(x, y) dxdy\n\\]\n\n\n\n\n\\[\n\\text{Let } A=\\{(x, y) \\mid a &lt; x &lt; b, c &lt; y &lt; d\\}\n\\]\n\n\n\n\n\n\n\n\n\n\\[\n\\text{P}(a &lt; x &lt; b, \\; c &lt; y &lt; d)=\\int_c^d \\int_a^b f_{X, Y}(x, y)dxdy\n\\]",
+    "text": "\\[\n\\text{P}\\big((X, Y) \\in A\\big)=\\iint\\limits_{(x, y) \\in A} f_{X, Y}(x, y) dxdy\n\\]\n\n\n\n\n\\[\n\\text{Let } A=\\{(x, y) \\mid a &lt; x &lt; b, c &lt; y &lt; d\\}\n\\]\n\n\n\n\n\n\n\n\n\n\\[\n\\text{P}(a &lt; X &lt; b, \\; c &lt; Y &lt; d)=\\int_c^d \\int_a^b f_{X, Y}(x, y)dxdy\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -7175,7 +7162,7 @@
     "href": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#two-continuous-rvs",
     "title": "5.4 Joint & marginal PDF",
     "section": "Two continuous RVs",
-    "text": "Two continuous RVs\n\\[\n\\text{P}(a &lt; x &lt; b, \\; c &lt; y &lt; d)=\\int_c^d \\int_a^b f_{X, Y}(x, y)dxdy\n\\]\n\n\n\n\n\nThe probability is the volume under the density surface.",
+    "text": "Two continuous RVs\n\\[\n\\text{P}(a &lt; X &lt; b, \\; c &lt; Y &lt; d)=\\int_c^d \\int_a^b f_{X, Y}(x, y)dxdy\n\\]\n\n\n\n\n\nThe probability is the volume under the density surface.",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -7188,7 +7175,7 @@
     "href": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-3",
     "title": "5.4 Joint & marginal PDF",
     "section": "",
-    "text": "\\[\n\\begin{aligned}\n&\\text{P}(a &lt; x &lt; a+\\delta, c &lt; y &lt; c+\\delta) \\\\\n\\\\\n=\\;&\\int_c^{c+\\delta} \\int_a^{a+\\delta} f_{X, Y}(x, y)dxdy \\\\\n\\\\\n\\approx \\;& f_{X, Y}(a, c) \\cdot \\delta ^2 \\\\\n\\end{aligned}\n\\]\n\\(f_{X, Y}(a, c)\\) is the probability per unit area in the vicinity of \\((a, c)\\).",
+    "text": "\\[\n\\begin{aligned}\n&\\text{P}(a &lt; X &lt; a+\\delta, c &lt; Y &lt; c+\\delta) \\\\\n\\\\\n=\\;&\\int_c^{c+\\delta} \\int_a^{a+\\delta} f_{X, Y}(x, y)dxdy \\\\\n\\\\\n\\approx \\;& f_{X, Y}(a, c) \\cdot \\delta ^2 \\\\\n\\end{aligned}\n\\]\n\\(f_{X, Y}(a, c)\\) is the probability per unit area in the vicinity of \\((a, c)\\).",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -7279,20 +7266,7 @@
     "href": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-7",
     "title": "5.4 Joint & marginal PDF",
     "section": "",
-    "text": "\\[\n\\small{\nf_{X, Y}(x, y) =\n\\begin{cases}\n    1, & \\text{if $x, y \\in [0, 1]$,} \\\\\n    0,              & \\text{otherwise.}\n\\end{cases}\n}\n\\]\n\nWhat is the marginal PDF of \\(X\\)?\n\n\\[\n\\small{\n\\text{If $x &lt; 0$ or $x &gt; 1$,}\\;\nf_X(x)=\\int_{-\\infty}^{+\\infty} f_{X, Y}(x, y) dy =\\int_{-\\infty}^{+\\infty} 0 \\; dy=0\n}\n\\]\n\n\n\\[\n\\small{\n\\text{If $x \\in [0, 1]$,}\\;\nf_X(x)=\\int_{-\\infty}^{+\\infty} f_{X, Y}(x, y) dy=\\int_0^1 1 \\; dy =1\n}\n\\]\n\n\n\\[\nX \\sim \\text{unif}(0, 1)\n\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 5. Joint random variables",
-      "5.4 Joint & marginal PDF"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-8",
-    "href": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-8",
-    "title": "5.4 Joint & marginal PDF",
-    "section": "",
-    "text": "\\[\nf_{X, Y}(x, y) =\n\\begin{cases}\n    1, & \\text{if $x, y \\in [0, 1]$,} \\\\\n    0,              & \\text{otherwise.}\n\\end{cases}\n\\]\n\\[X \\sim \\text{unif}(0, 1)\\]\n\nWhat is the marginal PDF of \\(Y\\)?\n\n\n\n\\[\nY \\sim \\text{unif}(0, 1)\n\\]",
+    "text": "\\[\n\\small{\nf_{X, Y}(x, y) =\n\\begin{cases}\n    1, & \\text{if $x, y \\in [0, 1]$,} \\\\\n    0,              & \\text{otherwise.}\n\\end{cases}\n}\n\\]\n\nWhat is the marginal PDF of \\(X\\)?\n\n\\[\n\\small{\n\\text{If $x &lt; 0$ or $x &gt; 1$,}\\;\nf_X(x)=\\int_{-\\infty}^{+\\infty} f_{X, Y}(x, y) dy =\\int_{-\\infty}^{+\\infty} 0 \\; dy=0\n}\n\\]\n\n\n\\[\n\\small{\n\\text{If $x \\in [0, 1]$,}\\;\nf_X(x)=\\int_{-\\infty}^{+\\infty} f_{X, Y}(x, y) dy=\\int_0^1 1 \\; dy =1\n}\n\\]\n\n\n\n\n\\(X \\sim \\text{unif}(0, 1)\\)\n\nSimilarly, we have \\(Y \\sim \\text{unif}(0, 1)\\).",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -7314,8 +7288,8 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-9",
-    "href": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-9",
+    "objectID": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-8",
+    "href": "lecture-slides/ch05/04-joint-and-marginal-pdf.html#section-8",
     "title": "5.4 Joint & marginal PDF",
     "section": "",
     "text": "\\[\n\\small{\n\\begin{aligned}\n\\text{P}\\big((X, Y) \\in A\\big)&=\\iint\\limits_{(x, y) \\in A} f_{X, Y}(x, y) dxdy \\\\\n&=\\iint\\limits_{(x, y) \\in A} \\frac{1}{\\text{area of $S$}} dxdy \\\\\n&=\\frac{1}{\\text{area of $S$}}\\iint\\limits_{(x, y) \\in A} 1 \\;dxdy \\\\\n&=\\frac{\\text{area of $A$}}{\\text{area of $S$}} \\\\\n\\end{aligned}\n}\n\\]",
@@ -7384,97 +7358,6 @@
     "title": "5.6 Continuous independence",
     "section": "",
     "text": "Let \\((X, Y)\\) be a random point on the unit square.\n\\[\n\\begin{aligned}\nf_{X, Y}(x, y) &=\n\\begin{cases}\n    1, & \\text{if $x, y \\in [0, 1]$,} \\\\\n    0, & \\text{otherwise.}\n\\end{cases}\n\\end{aligned}\n\\]\n\n\n\\[\n\\small{\n\\begin{aligned}\nf_{X}(x) &=\n\\begin{cases}\n    1, & \\text{if $x \\in [0, 1]$,} \\\\\n    0, & \\text{otherwise.}\n\\end{cases}\n\\end{aligned}\n}\n\\]\n\n\\[\n\\small{\n\\begin{aligned}\nf_{Y}(y) &=\n\\begin{cases}\n    1, & \\text{if $y \\in [0, 1]$,} \\\\\n    0, & \\text{otherwise.}\n\\end{cases}\n\\end{aligned}\n}\n\\]\n\n\n\\[\nf_{X, Y}(x, y)=f_{X}(x) \\cdot f_{Y}(y)\n\\]\n\\(X\\) and \\(Y\\) are independent.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 5. Joint random variables",
-      "5.6 Continuous independence"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch05/06-continuous-independence.html#buffons-needle",
-    "href": "lecture-slides/ch05/06-continuous-independence.html#buffons-needle",
-    "title": "5.6 Continuous independence",
-    "section": "Buffon’s Needle",
-    "text": "Buffon’s Needle\n\n\n\n\n\n\nWe draw parallel lines with distance \\(d\\) from each other.\nWe threw a needle of length \\(l\\) on the surface at random.\nWhat is the probability that the needle intersects a line?\n\n\n\nImage source",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 5. Joint random variables",
-      "5.6 Continuous independence"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch05/06-continuous-independence.html#section-2",
-    "href": "lecture-slides/ch05/06-continuous-independence.html#section-2",
-    "title": "5.6 Continuous independence",
-    "section": "",
-    "text": "Let \\(X\\) be the vertical distance from the midpoint of the needle to the closest line.\nLet \\(\\Theta\\) be the acute angle between the needle and lines.\n\n\n\n\\[\n\\begin{aligned}\nf_{X}(x) &=\n\\begin{cases}\n    \\frac{1}{d/2}, & \\text{if $0 &lt; x &lt; \\frac{d}{2}$,} \\\\\n    0,             & \\text{otherwise.}\n\\end{cases} \\\\\n\\\\\nf_{\\Theta}(\\theta) &=\n\\begin{cases}\n    \\frac{1}{\\pi/2}, & \\text{if $0 &lt; \\theta &lt; \\frac{\\pi}{2}$,} \\\\\n    0,               & \\text{otherwise.}\n\\end{cases} \\\\\n\\end{aligned}\n\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 5. Joint random variables",
-      "5.6 Continuous independence"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch05/06-continuous-independence.html#section-3",
-    "href": "lecture-slides/ch05/06-continuous-independence.html#section-3",
-    "title": "5.6 Continuous independence",
-    "section": "",
-    "text": "By independence of \\(X\\) and \\(\\Theta\\), we have\n\\[\n\\begin{aligned}\nf_{X, \\Theta}(x, \\theta) &= f_{X}(x) \\cdot f_{\\Theta}(\\theta) \\\\\n\\\\\n&=\n\\begin{cases}\n    \\frac{4}{\\pi d}, & \\text{if $0 &lt; x &lt; \\frac{d}{2}, 0 &lt; \\theta &lt; \\frac{\\pi}{2}$,} \\\\\n    0,              & \\text{otherwise.}\n\\end{cases}\n\\end{aligned}\n\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 5. Joint random variables",
-      "5.6 Continuous independence"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch05/06-continuous-independence.html#section-4",
-    "href": "lecture-slides/ch05/06-continuous-independence.html#section-4",
-    "title": "5.6 Continuous independence",
-    "section": "",
-    "text": "When does the needle intersect with a line?\n\n\n\n\n\n\nThe needle intersects with a line if and only if \\(x &lt; \\frac{l}{2}\\sin \\theta\\).",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 5. Joint random variables",
-      "5.6 Continuous independence"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch05/06-continuous-independence.html#section-5",
-    "href": "lecture-slides/ch05/06-continuous-independence.html#section-5",
-    "title": "5.6 Continuous independence",
-    "section": "",
-    "text": "\\[\n\\small{\n\\begin{aligned}\n&\\text{P}(\\text{intersect}) \\\\\n&= \\text{P}(X &lt; \\frac{l}{2}\\sin \\Theta) \\\\\n&=\\iint \\limits_{x &lt; \\frac{l}{2}\\sin \\theta} f_{X, \\Theta}(x, \\theta)dx d\\theta \\\\\n&=\\iint \\limits_{x &lt; \\frac{l}{2}\\sin \\theta} \\frac{4}{\\pi d}dx d\\theta \\\\\n&=\\frac{4}{\\pi d}\\int _0^{\\pi/2} \\int _0^{\\frac{l}{2}\\sin \\theta} dx d\\theta \\\\\n\\end{aligned}\n}\n\\]\n\n\\[\n\\small{\n\\begin{aligned}\n&=\\frac{4}{\\pi d}\\int _0^{\\pi/2} \\frac{l}{2}\\sin \\theta \\; d\\theta \\\\\n&=\\frac{2l}{\\pi d}\\int _0^{\\pi/2}\\sin \\theta \\; d\\theta \\\\\n&=\\frac{2l}{\\pi d} (-\\cos \\theta) \\bigg |_0^{\\pi/2} \\\\\n&=\\frac{2l}{\\pi d} (0-(-1)) \\\\\n&=\\frac{2l}{\\pi d} \\\\\n\\end{aligned}\n}\n\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 5. Joint random variables",
-      "5.6 Continuous independence"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch05/06-continuous-independence.html#we-can-use-this-result-to-estimate-pi",
-    "href": "lecture-slides/ch05/06-continuous-independence.html#we-can-use-this-result-to-estimate-pi",
-    "title": "5.6 Continuous independence",
-    "section": "We can use this result to estimate \\(\\pi\\)",
-    "text": "We can use this result to estimate \\(\\pi\\)\nTo simplify, let \\(l=d/2\\).\n\\[\n\\text{P}(\\text{intersect})=\\frac{2l}{\\pi d}=\\frac{2(d/2)}{\\pi d}=\\frac{1}{\\pi}\n\\]\n\n\\[\n\\text{P}(\\text{intersect})\\approx \\frac{\\text{# of intersections}}{\\text{# of needles}}\n\\]\n\n\n\\[\n\\pi \\approx \\frac{\\text{# of needles}}{\\text{# of intersections}}\n\\]",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 5. Joint random variables",
-      "5.6 Continuous independence"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch05/06-continuous-independence.html#section-6",
-    "href": "lecture-slides/ch05/06-continuous-independence.html#section-6",
-    "title": "5.6 Continuous independence",
-    "section": "",
-    "text": "\\[\n\\pi \\approx \\frac{\\text{# of needles}}{\\text{# of intersections}}\n\\]\n\n\n\n\n\n\n\nImage source",
     "crumbs": [
       "Home",
       "Lecture slides",

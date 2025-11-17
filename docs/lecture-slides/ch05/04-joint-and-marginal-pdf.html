@@ -186,7 +186,7 @@
 </div>
 <div class="fragment">
 <p><span class="math display">\[
-\text{P}(a &lt; x &lt; b, \; c &lt; y &lt; d)=\int_c^d \int_a^b f_{X, Y}(x, y)dxdy
+\text{P}(a &lt; X &lt; b, \; c &lt; Y &lt; d)=\int_c^d \int_a^b f_{X, Y}(x, y)dxdy
 \]</span></p>
 </div>
 </section>
@@ -208,7 +208,7 @@
 <section id="two-continuous-rvs" class="slide level2">
 <h2>Two continuous RVs</h2>
 <p><span class="math display">\[
-\text{P}(a &lt; x &lt; b, \; c &lt; y &lt; d)=\int_c^d \int_a^b f_{X, Y}(x, y)dxdy
+\text{P}(a &lt; X &lt; b, \; c &lt; Y &lt; d)=\int_c^d \int_a^b f_{X, Y}(x, y)dxdy
 \]</span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -222,7 +222,7 @@
 
 <img data-src="images/joint-pdf-3d-2.png" class="quarto-figure quarto-figure-center r-stretch"><p><span class="math display">\[
 \begin{aligned}
-&amp;\text{P}(a &lt; x &lt; a+\delta, c &lt; y &lt; c+\delta) \\
+&amp;\text{P}(a &lt; X &lt; a+\delta, c &lt; Y &lt; c+\delta) \\
 \\
 =\;&amp;\int_c^{c+\delta} \int_a^{a+\delta} f_{X, Y}(x, y)dxdy \\
 \\
@@ -379,29 +379,12 @@ f_X(x)=\int_{-\infty}^{+\infty} f_{X, Y}(x, y) dy=\int_0^1 1 \; dy =1
 \]</span></p>
 </div>
 <div class="fragment">
-<p><span class="math display">\[
-X \sim \text{unif}(0, 1)
-\]</span></p>
-</div>
-</section>
-<section id="section-8" class="slide level2">
-<h2></h2>
-<p><span class="math display">\[
-f_{X, Y}(x, y) =
-\begin{cases}
-    1, &amp; \text{if $x, y \in [0, 1]$,} \\
-    0,              &amp; \text{otherwise.}
-\end{cases}
-\]</span></p>
-<p><span class="math display">\[X \sim \text{unif}(0, 1)\]</span></p>
-<div class="fragment">
-<p>What is the marginal PDF of <span class="math inline">\(Y\)</span>?</p>
-<!-- .center[![:scale 30%](../images/unit-square.png)] -->
-</div>
-<div class="fragment">
-<p><span class="math display">\[
-Y \sim \text{unif}(0, 1)
-\]</span></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><span class="math inline">\(X \sim \text{unif}(0, 1)\)</span></p>
+</div><div class="column" style="width:60%;">
+<p>Similarly, we have <span class="math inline">\(Y \sim \text{unif}(0, 1)\)</span>.</p>
+</div></div>
 </div>
 </section>
 <section id="uniform-joint-pdf" class="slide level2">
@@ -419,7 +402,7 @@ f_{X, Y}(x, y) =
 \]</span></p>
 
 <img data-src="images/joint-pdf-uniform.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="section-9" class="slide level2">
+<section id="section-8" class="slide level2">
 <h2></h2>
 <!-- ![](images/joint-pdf-uniform.png){fig-align="center"} -->
 <p><span class="math display">\[

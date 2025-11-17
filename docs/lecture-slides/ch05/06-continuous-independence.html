@@ -206,144 +206,141 @@ f_{Y}(y) &amp;=
 f_{X, Y}(x, y)=f_{X}(x) \cdot f_{Y}(y)
 \]</span></p>
 <p><span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent.</p>
-</div>
-</section>
-<section id="buffons-needle" class="slide level2">
-<h2><a href="https://en.wikipedia.org/wiki/Buffon's_needle_problem">Buffon’s Needle</a></h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/buffon-1.png" class="quarto-figure quarto-figure-center" height="220"></p>
-</figure>
-</div>
-<ul>
-<li class="fragment">We draw parallel lines with distance <span class="math inline">\(d\)</span> from each other.</li>
-<li class="fragment">We threw a needle of length <span class="math inline">\(l\)</span> on the surface at random.</li>
-<li class="fragment">What is the probability that the needle intersects a line?</li>
-</ul>
+<!-- ## [Buffon's Needle](https://en.wikipedia.org/wiki/Buffon's_needle_problem)
 
-<aside><div>
-<p><a href="https://www.pepijnvanerp.nl/2018/09/lazzarini-buffons-needle-pi/">Image source</a></p>
-</div></aside></section>
-<section id="section-2" class="slide level2">
-<h2></h2>
-<ul>
-<li class="fragment">Let <span class="math inline">\(X\)</span> be the vertical distance from the midpoint of the needle to the closest line.</li>
-<li class="fragment">Let <span class="math inline">\(\Theta\)</span> be the acute angle between the needle and lines.</li>
-</ul>
+![](images/buffon-1.png){fig-align="center" height="220"}
 
-<img data-src="images/buffon-2.png" class="quarto-figure quarto-figure-center r-stretch"><div class="fragment">
-<p><span class="math display">\[
+- We draw parallel lines with distance $d$ from each other.
+- We threw a needle of length $l$ on the surface at random.
+- What is the probability that the needle intersects a line? 
+
+
+::: aside
+[Image source](https://www.pepijnvanerp.nl/2018/09/lazzarini-buffons-needle-pi/)
+:::
+
+##
+
+- Let $X$ be the vertical distance from the midpoint of the needle to the closest line.
+- Let $\Theta$ be the acute angle between the needle and lines.  
+
+![](images/buffon-2.png){fig-align="center"}
+
+. . .
+
+$$
 \begin{aligned}
-f_{X}(x) &amp;=
+f_{X}(x) &= 
 \begin{cases}
-    \frac{1}{d/2}, &amp; \text{if $0 &lt; x &lt; \frac{d}{2}$,} \\
-    0,             &amp; \text{otherwise.}
+    \frac{1}{d/2}, & \text{if $0 < x < \frac{d}{2}$,} \\
+    0,             & \text{otherwise.}
 \end{cases} \\
 \\
-f_{\Theta}(\theta) &amp;=
+f_{\Theta}(\theta) &= 
 \begin{cases}
-    \frac{1}{\pi/2}, &amp; \text{if $0 &lt; \theta &lt; \frac{\pi}{2}$,} \\
-    0,               &amp; \text{otherwise.}
+    \frac{1}{\pi/2}, & \text{if $0 < \theta < \frac{\pi}{2}$,} \\
+    0,               & \text{otherwise.}
 \end{cases} \\
 \end{aligned}
-\]</span></p>
-</div>
-</section>
-<section id="section-3" class="slide level2">
-<h2></h2>
-<p>By independence of <span class="math inline">\(X\)</span> and <span class="math inline">\(\Theta\)</span>, we have</p>
-<p><span class="math display">\[
+$$
+
+##
+
+By independence of $X$ and $\Theta$, we have
+
+$$
 \begin{aligned}
-f_{X, \Theta}(x, \theta) &amp;= f_{X}(x) \cdot f_{\Theta}(\theta) \\
+f_{X, \Theta}(x, \theta) &= f_{X}(x) \cdot f_{\Theta}(\theta) \\
 \\
-&amp;=
+&=
 \begin{cases}
-    \frac{4}{\pi d}, &amp; \text{if $0 &lt; x &lt; \frac{d}{2}, 0 &lt; \theta &lt; \frac{\pi}{2}$,} \\
-    0,              &amp; \text{otherwise.}
+    \frac{4}{\pi d}, & \text{if $0 < x < \frac{d}{2}, 0 < \theta < \frac{\pi}{2}$,} \\
+    0,              & \text{otherwise.}
 \end{cases}
 \end{aligned}
-\]</span></p>
-</section>
-<section id="section-4" class="slide level2">
-<h2></h2>
-<p>When does the needle intersect with a line?</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/buffon-3.png" class="quarto-figure quarto-figure-center" height="350"></p>
-</figure>
-</div>
-<div class="fragment">
-<p>The needle intersects with a line if and only if <span class="math inline">\(x &lt; \frac{l}{2}\sin \theta\)</span>.</p>
-</div>
-</section>
-<section id="section-5" class="slide level2">
-<h2></h2>
-<div class="columns">
-<div class="column">
-<p><span class="math display">\[
+$$
+
+##
+
+When does the needle intersect with a line?
+
+![](images/buffon-3.png){fig-align="center" height="350"}
+
+. . .
+
+The needle intersects with a line if and only if $x < \frac{l}{2}\sin \theta$.
+
+##
+
+:::: {.columns}
+::: {.column}
+$$
 \small{
 \begin{aligned}
-&amp;\text{P}(\text{intersect}) \\
-&amp;= \text{P}(X &lt; \frac{l}{2}\sin \Theta) \\
-&amp;=\iint \limits_{x &lt; \frac{l}{2}\sin \theta} f_{X, \Theta}(x, \theta)dx d\theta \\
-&amp;=\iint \limits_{x &lt; \frac{l}{2}\sin \theta} \frac{4}{\pi d}dx d\theta \\
-&amp;=\frac{4}{\pi d}\int _0^{\pi/2} \int _0^{\frac{l}{2}\sin \theta} dx d\theta \\
+&\text{P}(\text{intersect}) \\
+&= \text{P}(X < \frac{l}{2}\sin \Theta) \\
+&=\iint \limits_{x < \frac{l}{2}\sin \theta} f_{X, \Theta}(x, \theta)dx d\theta \\
+&=\iint \limits_{x < \frac{l}{2}\sin \theta} \frac{4}{\pi d}dx d\theta \\
+&=\frac{4}{\pi d}\int _0^{\pi/2} \int _0^{\frac{l}{2}\sin \theta} dx d\theta \\
 \end{aligned}
 }
-\]</span></p>
-</div><div class="column">
-<p><span class="math display">\[
+$$
+:::
+::: {.column}
+$$
 \small{
 \begin{aligned}
-&amp;=\frac{4}{\pi d}\int _0^{\pi/2} \frac{l}{2}\sin \theta \; d\theta \\
-&amp;=\frac{2l}{\pi d}\int _0^{\pi/2}\sin \theta \; d\theta \\
-&amp;=\frac{2l}{\pi d} (-\cos \theta) \bigg |_0^{\pi/2} \\
-&amp;=\frac{2l}{\pi d} (0-(-1)) \\
-&amp;=\frac{2l}{\pi d} \\
+&=\frac{4}{\pi d}\int _0^{\pi/2} \frac{l}{2}\sin \theta \; d\theta \\
+&=\frac{2l}{\pi d}\int _0^{\pi/2}\sin \theta \; d\theta \\
+&=\frac{2l}{\pi d} (-\cos \theta) \bigg |_0^{\pi/2} \\
+&=\frac{2l}{\pi d} (0-(-1)) \\
+&=\frac{2l}{\pi d} \\
 \end{aligned}
 }
-\]</span></p>
-</div></div>
-</section>
-<section id="we-can-use-this-result-to-estimate-pi" class="slide level2">
-<h2>We can use this result to estimate <span class="math inline">\(\pi\)</span></h2>
-<p>To simplify, let <span class="math inline">\(l=d/2\)</span>.</p>
-<p><span class="math display">\[
+$$
+:::
+::::
+
+## We can use this result to estimate $\pi$
+
+To simplify, let $l=d/2$. 
+
+$$
 \text{P}(\text{intersect})=\frac{2l}{\pi d}=\frac{2(d/2)}{\pi d}=\frac{1}{\pi}
-\]</span></p>
-<div class="fragment">
-<p><span class="math display">\[
+$$
+
+. . .
+
+$$
 \text{P}(\text{intersect})\approx \frac{\text{# of intersections}}{\text{# of needles}}
-\]</span></p>
-</div>
-<div class="fragment">
-<p><span class="math display">\[
+$$
+
+. . .
+
+$$
 \pi \approx \frac{\text{# of needles}}{\text{# of intersections}}
-\]</span></p>
-</div>
-</section>
-<section id="section-6" class="slide level2">
-<h2></h2>
-<p><span class="math display">\[
+$$
+
+##
+
+$$
 \pi \approx \frac{\text{# of needles}}{\text{# of intersections}}
-\]</span></p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/buffon-pi.png" class="quarto-figure quarto-figure-center" height="400"></p>
-</figure>
+$$
+
+![](images/buffon-pi.png){fig-align="center" height="400"}
+
+::: aside
+[Image source](https://mathworld.wolfram.com/BuffonsNeedleProblem.html)
+:::
+
+##
+
+::: {style="text-align: center;"}
+<iframe width="750" height="500" src="https://www.youtube.com/embed/sJVivjuMfWA" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+::: -->
+
+
 </div>
-
-<aside><div>
-<p><a href="https://mathworld.wolfram.com/BuffonsNeedleProblem.html">Image source</a></p>
-</div></aside></section>
-<section id="section-7" class="slide level2">
-<h2></h2>
-<div style="text-align: center;">
-<iframe width="750" height="500" src="https://www.youtube.com/embed/sJVivjuMfWA" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</div>
-
-
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
