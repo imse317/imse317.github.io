@@ -2799,7 +2799,7 @@
     "href": "lecture-slides/ch06/02-law-of-large-numbers.html#law-of-large-numbers-lln",
     "title": "6.2 Law of large numbers",
     "section": "Law of Large Numbers (LLN)",
-    "text": "Law of Large Numbers (LLN)\nAssume \\(X_1, X_2, \\cdots, X_n\\) are i.i.d. (independent and identically distributed) RVs with mean \\(\\mu\\) and variance \\(\\sigma^2\\).\n\\[\n\\bar{X}_n \\stackrel{\\text{def}}{=} \\frac{X_1+X_2+\\cdots+X_n}{n}=\\frac{1}{n}\\sum_{i=1}^n X_i\n\\]\n\nLoosely speaking, the LLN states that with high probability, the sample mean \\((\\bar{X}_n)\\) of many i.i.d. random variables is very close to the true mean \\((\\mu)\\).\n\n\nNote \\(\\bar{X}\\) is not a number, but a random variable.",
+    "text": "Law of Large Numbers (LLN)\nAssume \\(X_1, X_2, \\cdots, X_n\\) are i.i.d. random variables with mean \\(\\mu\\) and variance \\(\\sigma^2\\).\n\\[\n\\bar{X}_n \\stackrel{\\text{def}}{=} \\frac{1}{n}\\sum_{i=1}^n X_i\n\\]\n\nLoosely speaking, the LLN states that with high probability, the sample mean \\((\\bar{X}_n)\\) of many i.i.d. random variables is very close to the true mean \\((\\mu)\\).\n\n\nNote \\(\\bar{X}_n\\) is not a number, but a random variable.",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -2938,11 +2938,11 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch06/02-law-of-large-numbers.html#which-exam-format-to-pick",
-    "href": "lecture-slides/ch06/02-law-of-large-numbers.html#which-exam-format-to-pick",
+    "objectID": "lecture-slides/ch06/02-law-of-large-numbers.html#which-exam-should-you-pick",
+    "href": "lecture-slides/ch06/02-law-of-large-numbers.html#which-exam-should-you-pick",
     "title": "6.2 Law of large numbers",
-    "section": "Which exam format to pick?",
-    "text": "Which exam format to pick?\n\nThe instructor offers two formats for an exam\n\nFormat A: 100 questions with 1 point each\nFormat B: only 1 question that worth 100 point\n\nAssume you can answer each question correctly with probability \\(p\\).\nAssume the exam has no time limit.\nWhich format should you choose if \\(p=0.9\\)?\nWhich format should you choose if \\(p=0.5\\)?",
+    "section": "Which exam should you pick?",
+    "text": "Which exam should you pick?\n\nThe teacher has a pool of 20 questions for an exam, and offers two versions to the students\n\nVersion A: 20 questions with 5 point each\nVersion B: 1 question from the pool that worth 100 point\n\nAssume you can answer each question correctly with probability \\(p\\).\nAssume the exam has no time limit.\nWhich format should you choose if \\(p=0.9\\)?\nWhich format should you choose if \\(p=0.4\\)?",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -2955,7 +2955,7 @@
     "href": "lecture-slides/ch06/02-law-of-large-numbers.html#roulette",
     "title": "6.2 Law of large numbers",
     "section": "Roulette",
-    "text": "Roulette\n\n\n\n\n\n\n37 numbers including 18 reds, 18 blacks, and 1 green.\nBatting red or black with 1:1 payout\nIf wheel lands on green, both red and black lose. \nWhat is a player’s expected net gain for betting $1?",
+    "text": "Roulette\n\n\n\n\n\n\n37 numbers including 18 reds, 18 blacks, and 1 green.\nBatting red or black with 1:1 payout\nIf wheel lands on green, both red and black lose. \nWhat is a player’s expected net gain for betting $1 on reds?",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -7006,7 +7006,7 @@
     "href": "lecture-slides/ch05/09-correlation.html#section-2",
     "title": "5.9 Correlation",
     "section": "",
-    "text": "\\[\n\\small{\n\\begin{aligned}\n&\\;\\text{var}\\bigg(\\frac{X}{\\sqrt{\\text{var}(X)}}+\\frac{Y}{\\sqrt{\\text{var}(Y)}}\\bigg) \\\\\n\\\\\n=&\\;\\text{var}\\bigg(\\frac{X}{\\sqrt{\\text{var}(X)}}\\bigg)+\\text{var}\\bigg(\\frac{Y}{\\sqrt{\\text{var}(Y)}}\\bigg) \\\\\n&+2\\text{cov}\\bigg(\\frac{X}{\\sqrt{\\text{var}(X)}}, \\frac{Y}{\\sqrt{\\text{var}(Y)}}\\bigg) \\\\\n\\\\\n=&\\;1+1+2\\rho \\\\\n\\\\\n\\geq&\\; 0\n\\end{aligned}\n}\n\\]\nSo\n\\[\n\\rho \\geq -1\n\\]\nSimilarly,\n\\[\n\\small{\n\\begin{aligned}\n&\\;\\text{var}\\bigg(\\frac{X}{\\sqrt{\\text{var}(X)}}-\\frac{Y}{\\sqrt{\\text{var}(Y)}}\\bigg) \\\\\n\\\\\n=&\\;\\text{var}\\bigg(\\frac{X}{\\sqrt{\\text{var}(X)}}\\bigg)+\\text{var}\\bigg(\\frac{Y}{\\sqrt{\\text{var}(Y)}}\\bigg) \\\\\n&-2\\text{cov}\\bigg(\\frac{X}{\\sqrt{\\text{var}(X)}}, \\frac{Y}{\\sqrt{\\text{var}(Y)}}\\bigg)\\\\\n\\\\\n=&\\;1+1-2\\rho \\\\\n\\\\\n\\geq&\\; 0\n\\end{aligned}\n}\n\\]\nSo\n\\[\n\\rho \\leq 1\n\\]\nLastly,\n\\[\n\\begin{aligned}\n\\rho(X, aX+b)&= \\frac{\\text{cov}(X, aX+b)}{\\sqrt{\\text{var}(X)\\text{var}(aX+b)}} \\\\\n\\\\\n&= \\frac{a\\cdot\\text{cov}(X, X)}{\\sqrt{a^2\\text{var}(X)\\text{var}(X)}} \\\\\n\\\\\n&= \\frac{a}{|a|} \\\\\n\\end{aligned}\n\\]",
+    "text": "Population covariance & correlation\n\\[\n  \\begin{aligned}\n  \\text{cov}(X, Y)&=\\text{E}\\big[\\big(X-\\text{E}[X]\\big)\\big(Y-\\text{E}[Y]\\big)\\big] \\\\\n  \\rho&=\\frac{\\text{cov}(X, Y)}{\\sqrt{\\text{var}(X) \\text{var}(Y)}} \\\\\n  \\end{aligned}\n\\]\n\nSample covariance & correlation\n\\[\n  \\begin{aligned}\n  \\text{cov}(x, y)&=\\frac{\\sum(x_i-\\bar{x})(y_i-\\bar{y})}{n-1} \\\\\n  r&=\\frac{\\sum(x_i-\\bar{x})(y_i-\\bar{y})}{\\sqrt{\\sum(x_i-\\bar{x})^2\\sum(y_i-\\bar{y})^2}} \\\\\n  \\end{aligned}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -7019,7 +7019,7 @@
     "href": "lecture-slides/ch05/09-correlation.html#section-3",
     "title": "5.9 Correlation",
     "section": "",
-    "text": "Population covariance & correlation\n\\[\n  \\begin{aligned}\n  \\text{cov}(X, Y)&=\\text{E}\\big[\\big(X-\\text{E}[X]\\big)\\big(Y-\\text{E}[Y]\\big)\\big] \\\\\n  \\rho&=\\frac{\\text{cov}(X, Y)}{\\sqrt{\\text{var}(X) \\text{var}(Y)}} \\\\\n  \\end{aligned}\n\\]\n\nSample covariance & correlation\n\\[\n  \\begin{aligned}\n  \\text{cov}(x, y)&=\\frac{\\sum(x_i-\\bar{x})(y_i-\\bar{y})}{n-1} \\\\\n  r&=\\frac{\\sum(x_i-\\bar{x})(y_i-\\bar{y})}{\\sqrt{\\sum(x_i-\\bar{x})^2\\sum(y_i-\\bar{y})^2}} \\\\\n  \\end{aligned}\n\\]",
+    "text": "\\[\n\\large{r=\\frac{\\sum(x_i-\\bar{x})(y_i-\\bar{y})}{\\sqrt{\\sum(x_i-\\bar{x})^2\\sum(y_i-\\bar{y})^2}}}\n\\]\n\\(r\\) measures the linear relationship between \\(x\\) and \\(y\\).",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -7030,45 +7030,6 @@
   {
     "objectID": "lecture-slides/ch05/09-correlation.html#section-4",
     "href": "lecture-slides/ch05/09-correlation.html#section-4",
-    "title": "5.9 Correlation",
-    "section": "",
-    "text": "\\[\n\\large{r=\\frac{\\sum(x_i-\\bar{x})(y_i-\\bar{y})}{\\sqrt{\\sum(x_i-\\bar{x})^2\\sum(y_i-\\bar{y})^2}}}\n\\]\n\\(r\\) measures the linear relationship between \\(x\\) and \\(y\\).",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 5. Joint random variables",
-      "5.9 Correlation"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch05/09-correlation.html#calculate-correlation-with-python",
-    "href": "lecture-slides/ch05/09-correlation.html#calculate-correlation-with-python",
-    "title": "5.9 Correlation",
-    "section": "Calculate correlation with Python",
-    "text": "Calculate correlation with Python\nGo to Google Colab and sign in. Open a new notebook.\nimport numpy as np\nimport pandas as pd\nimport seaborn as sns\n\nurl = \"https://imse317.github.io/data/advertising.csv\"\ndf = pd.read_csv(url)\ndf.head()\n\n# examine the relationship between TV budget and sales\n\nsns.scatterplot(x=\"TV\", y=\"sales\", data=df)",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 5. Joint random variables",
-      "5.9 Correlation"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch05/09-correlation.html#section-5",
-    "href": "lecture-slides/ch05/09-correlation.html#section-5",
-    "title": "5.9 Correlation",
-    "section": "",
-    "text": "# manually calculating correlation coefficient r\n\nx = df[\"TV\"]\ny = df[\"sales\"]\n\nSxy = sum((x - x.mean()) * (y - y.mean()))\nSxx = sum((x - x.mean())**2)     # **2 is to square\nSyy = sum((y - y.mean())**2)\n\nr = Sxy / np.sqrt(Sxx * Syy)     # correlation formula \n\nprint(r)\n\n# alternatively, we can use the pandas `corr` method\n\ndf[[\"TV\", \"sales\"]].corr()",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 5. Joint random variables",
-      "5.9 Correlation"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch05/09-correlation.html#section-6",
-    "href": "lecture-slides/ch05/09-correlation.html#section-6",
     "title": "5.9 Correlation",
     "section": "",
     "text": "\\(x\\): ice cream sales\n\\(y\\): number of people drowning in swimming pool\nAre \\(x\\) and \\(y\\) correlated?",
@@ -7084,7 +7045,7 @@
     "href": "lecture-slides/ch05/09-correlation.html#correlation-does-not-imply-causation.",
     "title": "5.9 Correlation",
     "section": "Correlation does not imply causation.",
-    "text": "Correlation does not imply causation.\n\n\n\n\n\nhttps://xkcd.com/552",
+    "text": "Correlation does not imply causation.\n\n\n\n\n\n\n\n\nhttps://xkcd.com/552",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -7097,7 +7058,7 @@
     "href": "lecture-slides/ch05/09-correlation.html#spurious-correlations",
     "title": "5.9 Correlation",
     "section": "Spurious correlations",
-    "text": "Spurious correlations\n\nhttps://www.tylervigen.com/spurious-correlations",
+    "text": "Spurious correlations\n\n\n\n\n\n\nhttps://www.tylervigen.com/spurious-correlations",
     "crumbs": [
       "Home",
       "Lecture slides",

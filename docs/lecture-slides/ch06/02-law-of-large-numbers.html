@@ -142,15 +142,15 @@
 </section>
 <section id="law-of-large-numbers-lln" class="slide level2">
 <h2><a href="https://en.wikipedia.org/wiki/Law_of_large_numbers">Law of Large Numbers (LLN)</a></h2>
-<p>Assume <span class="math inline">\(X_1, X_2, \cdots, X_n\)</span> are <a href="https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables">i.i.d.</a> (independent and identically distributed) RVs with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span>.</p>
+<p>Assume <span class="math inline">\(X_1, X_2, \cdots, X_n\)</span> are <a href="https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables">i.i.d.</a> random variables with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span>.</p>
 <p><span class="math display">\[
-\bar{X}_n \stackrel{\text{def}}{=} \frac{X_1+X_2+\cdots+X_n}{n}=\frac{1}{n}\sum_{i=1}^n X_i
+\bar{X}_n \stackrel{\text{def}}{=} \frac{1}{n}\sum_{i=1}^n X_i
 \]</span></p>
 <div class="fragment">
 <p>Loosely speaking, the LLN states that with high probability, the sample mean <span class="math inline">\((\bar{X}_n)\)</span> of many i.i.d. random variables is very close to the true mean <span class="math inline">\((\mu)\)</span>.</p>
 </div>
 <div class="fragment">
-<p>Note <span class="math inline">\(\bar{X}\)</span> is not a number, but a random variable.</p>
+<p>Note <span class="math inline">\(\bar{X}_n\)</span> is not a number, but a random variable.</p>
 </div>
 </section>
 <section id="section" class="slide level2">
@@ -251,18 +251,18 @@
 </div>
 </div>
 </section>
-<section id="which-exam-format-to-pick" class="slide level2">
-<h2>Which exam format to pick?</h2>
+<section id="which-exam-should-you-pick" class="slide level2">
+<h2>Which exam should you pick?</h2>
 <ul>
-<li class="fragment">The instructor offers two formats for an exam
+<li class="fragment">The teacher has a pool of 20 questions for an exam, and offers two versions to the students
 <ul>
-<li class="fragment">Format A: 100 questions with 1 point each</li>
-<li class="fragment">Format B: only 1 question that worth 100 point</li>
+<li class="fragment">Version A: 20 questions with 5 point each</li>
+<li class="fragment">Version B: 1 question from the pool that worth 100 point</li>
 </ul></li>
 <li class="fragment">Assume you can answer each question correctly with probability <span class="math inline">\(p\)</span>.</li>
 <li class="fragment">Assume the exam has no time limit.</li>
 <li class="fragment">Which format should you choose if <span class="math inline">\(p=0.9\)</span>?</li>
-<li class="fragment">Which format should you choose if <span class="math inline">\(p=0.5\)</span>?</li>
+<li class="fragment">Which format should you choose if <span class="math inline">\(p=0.4\)</span>?</li>
 </ul>
 </section>
 <section id="roulette" class="slide level2">
@@ -276,7 +276,7 @@
 <li class="fragment">37 numbers including 18 reds, 18 blacks, and 1 green.</li>
 <li class="fragment">Batting red or black with 1:1 payout</li>
 <li class="fragment">If wheel lands on green, both red and black lose.&nbsp;</li>
-<li class="fragment">What is a player’s expected net gain for betting $1?</li>
+<li class="fragment">What is a player’s expected net gain for betting $1 on reds?</li>
 </ul>
 </section>
 <section id="why-casinos-dont-lose-money" class="slide level2">

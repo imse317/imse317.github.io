@@ -28,71 +28,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-bbe7401fe57d4b791b917637bb662036.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -278,61 +213,61 @@
 \rho=-1, &amp; \;\text{iff $Y=aX+b$ with $a &lt; 0$.} \\
 \end{aligned}
 \]</span></p>
+<!-- Note for future: it can be proved using the Cauchy–Schwarz inequality -->
+<!-- ##
+
+Proof:
+
+$$
+\small{
+\begin{aligned}
+&\;\text{var}\bigg(\frac{X}{\sqrt{\text{var}(X)}}+\frac{Y}{\sqrt{\text{var}(Y)}}\bigg) \\
+\\
+=&\;\text{var}\bigg(\frac{X}{\sqrt{\text{var}(X)}}\bigg)+\text{var}\bigg(\frac{Y}{\sqrt{\text{var}(Y)}}\bigg) +2\text{cov}\bigg(\frac{X}{\sqrt{\text{var}(X)}}, \frac{Y}{\sqrt{\text{var}(Y)}}\bigg) \\
+\\
+=&\;1+1+2\rho \geq 0
+\end{aligned}
+}
+$$
+
+So $\rho \geq -1$
+
+##
+
+Similarly, 
+
+$$
+\small{
+\begin{aligned}
+&\;\text{var}\bigg(\frac{X}{\sqrt{\text{var}(X)}}-\frac{Y}{\sqrt{\text{var}(Y)}}\bigg) \\
+\\
+=&\;\text{var}\bigg(\frac{X}{\sqrt{\text{var}(X)}}\bigg)+\text{var}\bigg(\frac{Y}{\sqrt{\text{var}(Y)}}\bigg) -2\text{cov}\bigg(\frac{X}{\sqrt{\text{var}(X)}}, \frac{Y}{\sqrt{\text{var}(Y)}}\bigg)\\
+\\
+=&\;1+1-2\rho \geq 0
+\end{aligned}
+}
+$$
+
+So $\rho \leq 1$
+
+##
+
+Lastly, 
+
+$$
+\begin{aligned}
+\rho(X, aX+b)&= \frac{\text{cov}(X, aX+b)}{\sqrt{\text{var}(X)\text{var}(aX+b)}} \\
+\\
+&= \frac{a\cdot\text{cov}(X, X)}{\sqrt{a^2\text{var}(X)\text{var}(X)}} \\
+\\
+&= \frac{a}{|a|} \\
+\end{aligned}
+$$ -->
 </div>
 </section>
 <section id="section-2" class="slide level2">
 <h2></h2>
-<p><span class="math display">\[
-\small{
-\begin{aligned}
-&amp;\;\text{var}\bigg(\frac{X}{\sqrt{\text{var}(X)}}+\frac{Y}{\sqrt{\text{var}(Y)}}\bigg) \\
-\\
-=&amp;\;\text{var}\bigg(\frac{X}{\sqrt{\text{var}(X)}}\bigg)+\text{var}\bigg(\frac{Y}{\sqrt{\text{var}(Y)}}\bigg) \\
-&amp;+2\text{cov}\bigg(\frac{X}{\sqrt{\text{var}(X)}}, \frac{Y}{\sqrt{\text{var}(Y)}}\bigg) \\
-\\
-=&amp;\;1+1+2\rho \\
-\\
-\geq&amp;\; 0
-\end{aligned}
-}
-\]</span></p>
-<p>So</p>
-<p><span class="math display">\[
-\rho \geq -1
-\]</span></p>
-<p>Similarly,</p>
-<p><span class="math display">\[
-\small{
-\begin{aligned}
-&amp;\;\text{var}\bigg(\frac{X}{\sqrt{\text{var}(X)}}-\frac{Y}{\sqrt{\text{var}(Y)}}\bigg) \\
-\\
-=&amp;\;\text{var}\bigg(\frac{X}{\sqrt{\text{var}(X)}}\bigg)+\text{var}\bigg(\frac{Y}{\sqrt{\text{var}(Y)}}\bigg) \\
-&amp;-2\text{cov}\bigg(\frac{X}{\sqrt{\text{var}(X)}}, \frac{Y}{\sqrt{\text{var}(Y)}}\bigg)\\
-\\
-=&amp;\;1+1-2\rho \\
-\\
-\geq&amp;\; 0
-\end{aligned}
-}
-\]</span></p>
-<p>So</p>
-<p><span class="math display">\[
-\rho \leq 1
-\]</span></p>
-<p>Lastly,</p>
-<p><span class="math display">\[
-\begin{aligned}
-\rho(X, aX+b)&amp;= \frac{\text{cov}(X, aX+b)}{\sqrt{\text{var}(X)\text{var}(aX+b)}} \\
-\\
-&amp;= \frac{a\cdot\text{cov}(X, X)}{\sqrt{a^2\text{var}(X)\text{var}(X)}} \\
-\\
-&amp;= \frac{a}{|a|} \\
-\end{aligned}
-\]</span></p>
-</section>
-<section id="section-3" class="slide level2">
-<h2></h2>
-<p>Population covariance &amp; correlation</p>
+<p><strong>Population</strong> covariance &amp; correlation</p>
 <p><span class="math display">\[
   \begin{aligned}
   \text{cov}(X, Y)&amp;=\text{E}\big[\big(X-\text{E}[X]\big)\big(Y-\text{E}[Y]\big)\big] \\
@@ -340,7 +275,7 @@
   \end{aligned}
 \]</span></p>
 <div class="fragment">
-<p>Sample covariance &amp; correlation</p>
+<p><strong>Sample</strong> covariance &amp; correlation</p>
 <p><span class="math display">\[
   \begin{aligned}
   \text{cov}(x, y)&amp;=\frac{\sum(x_i-\bar{x})(y_i-\bar{y})}{n-1} \\
@@ -349,7 +284,7 @@
 \]</span></p>
 </div>
 </section>
-<section id="section-4" class="slide level2">
+<section id="section-3" class="slide level2">
 <h2></h2>
 <p><span class="math display">\[
 \large{r=\frac{\sum(x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum(x_i-\bar{x})^2\sum(y_i-\bar{y})^2}}}
@@ -357,45 +292,58 @@
 <p><span class="math inline">\(r\)</span> measures the <strong>linear relationship</strong> between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.</p>
 <div class="fragment">
 <p><img data-src="images/correlation-1.png"></p>
+</div>
+<div class="fragment">
 <p><img data-src="images/correlation-2.png"></p>
+<!-- ## Calculate correlation with Python
+
+Go to [Google Colab](https://colab.research.google.com/) and sign in.
+Open a new notebook.
+
+``` {.python}
+import numpy as np
+import pandas as pd
+import seaborn as sns
+
+url = "https://imse317.github.io/data/advertising.csv"
+df = pd.read_csv(url)
+df.head()
+```
+
+<br>
+
+``` {.python}
+# examine the relationship between TV budget and sales
+
+sns.scatterplot(x="TV", y="sales", data=df)
+``` -->
+<!-- ##
+
+``` {.python}
+# manually calculating correlation coefficient r
+
+x = df["TV"]
+y = df["sales"]
+
+Sxy = sum((x - x.mean()) * (y - y.mean()))
+Sxx = sum((x - x.mean())**2)     # **2 is to square
+Syy = sum((y - y.mean())**2)
+
+r = Sxy / np.sqrt(Sxx * Syy)     # correlation formula 
+
+print(r)
+```
+
+<br>
+
+```{.python}
+# alternatively, we can use the pandas `corr` method
+
+df[["TV", "sales"]].corr()
+``` -->
 </div>
 </section>
-<section id="calculate-correlation-with-python" class="slide level2">
-<h2>Calculate correlation with Python</h2>
-<p>Go to <a href="https://colab.research.google.com/">Google Colab</a> and sign in. Open a new notebook.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-3"><a></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb1-4"><a></a></span>
-<span id="cb1-5"><a></a>url <span class="op">=</span> <span class="st">"https://imse317.github.io/data/advertising.csv"</span></span>
-<span id="cb1-6"><a></a>df <span class="op">=</span> pd.read_csv(url)</span>
-<span id="cb1-7"><a></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="co"># examine the relationship between TV budget and sales</span></span>
-<span id="cb2-2"><a></a></span>
-<span id="cb2-3"><a></a>sns.scatterplot(x<span class="op">=</span><span class="st">"TV"</span>, y<span class="op">=</span><span class="st">"sales"</span>, data<span class="op">=</span>df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="section-5" class="slide level2">
-<h2></h2>
-<!-- # Calculate correlation with Python -->
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="co"># manually calculating correlation coefficient r</span></span>
-<span id="cb3-2"><a></a></span>
-<span id="cb3-3"><a></a>x <span class="op">=</span> df[<span class="st">"TV"</span>]</span>
-<span id="cb3-4"><a></a>y <span class="op">=</span> df[<span class="st">"sales"</span>]</span>
-<span id="cb3-5"><a></a></span>
-<span id="cb3-6"><a></a>Sxy <span class="op">=</span> <span class="bu">sum</span>((x <span class="op">-</span> x.mean()) <span class="op">*</span> (y <span class="op">-</span> y.mean()))</span>
-<span id="cb3-7"><a></a>Sxx <span class="op">=</span> <span class="bu">sum</span>((x <span class="op">-</span> x.mean())<span class="op">**</span><span class="dv">2</span>)     <span class="co"># **2 is to square</span></span>
-<span id="cb3-8"><a></a>Syy <span class="op">=</span> <span class="bu">sum</span>((y <span class="op">-</span> y.mean())<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb3-9"><a></a></span>
-<span id="cb3-10"><a></a>r <span class="op">=</span> Sxy <span class="op">/</span> np.sqrt(Sxx <span class="op">*</span> Syy)     <span class="co"># correlation formula </span></span>
-<span id="cb3-11"><a></a></span>
-<span id="cb3-12"><a></a><span class="bu">print</span>(r)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="co"># alternatively, we can use the pandas `corr` method</span></span>
-<span id="cb4-2"><a></a></span>
-<span id="cb4-3"><a></a>df[[<span class="st">"TV"</span>, <span class="st">"sales"</span>]].corr()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="section-6" class="slide level2">
+<section id="section-4" class="slide level2">
 <h2></h2>
 <ul>
 <li class="fragment"><span class="math inline">\(x\)</span>: ice cream sales</li>
@@ -405,20 +353,26 @@
 </section>
 <section id="correlation-does-not-imply-causation." class="slide level2">
 <h2><a href="https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation">Correlation does not imply causation.</a></h2>
+<p><br></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/correlation-xkcd.png" class="quarto-figure quarto-figure-center" height="300"></p>
 </figure>
 </div>
-<p>https://xkcd.com/552</p>
-</section>
+
+<aside><div>
+<p><a href="https://xkcd.com/552" class="uri">https://xkcd.com/552</a></p>
+</div></aside></section>
 <section id="spurious-correlations" class="slide level2">
 <h2>Spurious correlations</h2>
+<p><br></p>
+<p><img data-src="images/spurious-correlations.png"></p>
 
-<img data-src="images/spurious-correlations.png" class="r-stretch"><p>https://www.tylervigen.com/spurious-correlations</p>
 
 
-</section>
+<aside><div>
+<p><a href="https://www.tylervigen.com/spurious-correlations" class="uri">https://www.tylervigen.com/spurious-correlations</a></p>
+</div></aside></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
