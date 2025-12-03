@@ -240,15 +240,15 @@ X=(X_1, X_2, \cdots, X_n)
 <p>The <strong>likelihood</strong> function:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\text{Discrete case:}&amp;\;\;\;\;p_X(x_1, x_2, \cdots, x_n; \theta) \\
-\text{Continuous case:}&amp;\;\;\;\;f_X(x_1, x_2, \cdots, x_n; \theta) \\
+\text{Discrete case:}&amp;\;\;\;\;\mathcal{L}(\theta \mid x)=p_X(x_1, x_2, \cdots, x_n; \theta) \\
+\text{Continuous case:}&amp;\;\;\;\;\mathcal{L}(\theta \mid x)=f_X(x_1, x_2, \cdots, x_n; \theta) \\
 \end{aligned}
 \]</span></p>
 <div class="fragment">
 <p>Important distinction:</p>
 <ul>
-<li class="fragment">A <strong>likelihood</strong> function is <strong>not</strong> the prob. that the unknown parameter is equal to the value <span class="math inline">\(\theta\)</span>, given the observations.</li>
-<li class="fragment">Instead, it is the prob. that the observations would arise, assuming the unknown parameter is equal to <span class="math inline">\(\theta\)</span>.</li>
+<li class="fragment">A <strong>likelihood</strong> function is <strong>not</strong> the probability that the unknown parameter is equal to <span class="math inline">\(\theta\)</span>, given the observations <span class="math inline">\(x\)</span>.</li>
+<li class="fragment">Instead, it is the probability that the observations <span class="math inline">\(x\)</span> would arise, assuming the unknown parameter is equal to <span class="math inline">\(\theta\)</span>.</li>
 </ul>
 <!-- $$\text{P}(\text{data} \mid \text {hypothesis}) \neq \text{P}(\text{hypothesis} \mid \text {data})$$ -->
 </div>
@@ -489,8 +489,8 @@ p_Y(y; \theta)=\text{P}(Y=y; \theta)={10 \choose 7} \color{blue}{\theta^7(1-\the
 <p>Step 1. Obtain the <strong>likelihood function</strong>.</p>
 <p><span class="math display">\[
 \begin{aligned}
-\text{Discrete case:}&amp;\;\;p_X(x_1, x_2, \cdots, x_n; \theta) \\
-\text{Continuous case:}&amp;\;\;f_X(x_1, x_2, \cdots, x_n; \theta) \\
+\text{Discrete case:}&amp;\;\;\;\;\mathcal{L}(\theta \mid x)=p_X(x_1, x_2, \cdots, x_n; \theta) \\
+\text{Continuous case:}&amp;\;\;\;\;\mathcal{L}(\theta \mid x)=f_X(x_1, x_2, \cdots, x_n; \theta) \\
 \end{aligned}
 \]</span></p>
 <div class="fragment">
@@ -548,19 +548,25 @@ p_X(x_1, x_2, \cdots, x_n; \theta) &amp;= p_X(x_1; \theta)\cdot p_X(x_2; \theta)
 </section>
 <section id="section-9" class="slide level2">
 <h2></h2>
-<p>Set its derivative to zero, solve for <span class="math inline">\(\theta\)</span>.</p>
 <p><span class="math display">\[
 \small{
-    \frac{k}{\theta}-\frac{n-k}{1-\theta}=0
-    }
+  \begin{aligned}
+  &amp;\text{Set its derivative to zero:}\;\;\;\;
+    \frac{k}{\theta}-\frac{n-k}{1-\theta}=0 \\
+    \\
+  &amp;\text{Solve for $\theta$:}\;\;\;\;\hat{\theta}=\frac{k}{n}=\frac{x_1+x_2+\cdots+x_n}{n}=\bar{x}\\
+  \end{aligned}
+  }
 \]</span></p>
-<p><span class="math display">\[
-\hat{\theta}=\frac{k}{n}=\frac{x_1+x_2+\cdots+x_n}{n}=\bar{x}
-\]</span></p>
+<!-- $$
+\text{Solve for $\theta$:}\;\;\;\;\hat{\theta}=\frac{k}{n}=\frac{x_1+x_2+\cdots+x_n}{n}=\bar{x}
+$$ -->
+<div class="fragment">
 <p>If we use RVs <span class="math inline">\(X_1, X_2, \cdots, X_n\)</span> to represent the outcomes of <span class="math inline">\(n\)</span> independent coin tosses, the <strong>maximum likelihood estimator</strong>.</p>
 <p><span class="math display">\[
 \hat{\Theta}_n=\frac{X_1+X_2+\cdots+X_n}{n}=\bar{X}
 \]</span></p>
+</div>
 </section>
 <section>
 <section id="supplementary-exercises" class="title-slide slide level1 center">

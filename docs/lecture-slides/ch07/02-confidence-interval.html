@@ -137,11 +137,11 @@
 <h2>Point estimate</h2>
 <ul>
 <li class="fragment">Based on 80 samples, the battery life is <span class="math inline">\(\hat{\theta}=11.4\)</span> hours.</li>
-<li class="fragment">It provides no info about how <strong>precise</strong> the estimate is.</li>
+<li class="fragment">It provides no information on how <strong>precise</strong> the estimate is.</li>
 <li class="fragment">Oftentimes, we are interested in constructing a so-called <a href="https://en.wikipedia.org/wiki/Confidence_interval">confidence interval (CI)</a>.</li>
 <li class="fragment">Roughly speaking, it is an interval that contains the parameter with a specified high probability (e.g., 95%).
 <ul>
-<li class="fragment">The battery life has a 95% CI of [10.2,12.7] hours.</li>
+<li class="fragment">The battery life has a 95% confidence interval of between 10.2 and 12.7 hours.</li>
 </ul></li>
 </ul>
 </section>
@@ -151,8 +151,8 @@
 <li class="fragment">First, we need to specify a desired high probability.
 <ul>
 <li class="fragment">This high probability is called the <strong>confidence level</strong>.</li>
-<li class="fragment">Common choices include 95% and 99%</li>
-<li class="fragment"><span class="math inline">\((1-\alpha)\)</span> is often used to indicate the confidence level</li>
+<li class="fragment">Common choices include 95% and 99%.</li>
+<li class="fragment"><span class="math inline">\(\alpha\)</span> (equals to 1 minus the high probability) is often used to indicate the confidence level.</li>
 </ul></li>
 </ul>
 <div class="fragment">
@@ -165,11 +165,7 @@
 <section id="constructing-a-confidence-interval-1" class="slide level2">
 <h2>Constructing a confidence interval</h2>
 <ul>
-<li class="fragment">Once we specified the confidence level, say 95%, we aim to have a confidence interval with
-<ul>
-<li class="fragment">a lower bound estimator <span class="math inline">\(\hat{\Theta}_n^{-}\)</span></li>
-<li class="fragment">an upper bound estimator <span class="math inline">\(\hat{\Theta}_n^{+}\)</span></li>
-</ul></li>
+<li class="fragment">Once we specified the confidence level, say 95%, we aim to have a confidence interval with a lower and upper bound estimators <span class="math inline">\(\hat{\Theta}_n^{-}\)</span> and <span class="math inline">\(\hat{\Theta}_n^{+}\)</span></li>
 <li class="fragment">so that</li>
 </ul>
 <div class="fragment">
@@ -216,21 +212,14 @@
 <h2></h2>
 
 <img data-src="images/table-z.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/z-critical.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-<div class="fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/table-z-critical.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-</section>
+<section>
+<section id="section-1" class="title-slide slide level1 center">
+<h1></h1>
+<!-- ![](images/z-critical.png){fig-align="center"}
+
+. . . -->
+
+<img data-src="images/table-z-critical.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="section-2" class="slide level2">
 <h2></h2>
 <div class="quarto-figure quarto-figure-center">
@@ -300,37 +289,27 @@
     }
 \]</span></p>
 <p>is a <span class="math inline">\((1-\alpha)\)</span> confidence interval.</p>
+<!-- ## Interpretation
+
+- Assume we have calculated the 95% confidence interval for an unknown parameter $\theta$ as $[10.21,12.69]$.
+- What does this interval mean?
+- Does it mean that the true parameter $\theta$ lies in this CI $[10.21,12.69]$ with a probability of 95%?
+- **No**. $\theta$ is a unknown but fixed  parameter. The CI that we obtained $[10.21,12.69]$ is a fixed interval. 
+
+##
+
+- We construct a CI many times w/ the same procedure. 
+- That is, each time we
+    - obtain an independent collection of $n$ observations
+    - construct a 95% CI based on the $n$ observations
+- We expect that about 95% of these CIs will include $\theta$.
+
+. . .
+
+![](images/cis.png){fig-align="center" height="280"} -->
 </div>
-</section>
-<section id="interpretation" class="slide level2">
-<h2>Interpretation</h2>
-<ul>
-<li class="fragment">Assume we have calculated the 95% confidence interval for an unknown parameter <span class="math inline">\(\theta\)</span> as <span class="math inline">\([10.21,12.69]\)</span>.</li>
-<li class="fragment">What does this interval mean?</li>
-<li class="fragment">Does it mean that the true parameter <span class="math inline">\(\theta\)</span> lies in this CI <span class="math inline">\([10.21,12.69]\)</span> with a probability of 95%?</li>
-<li class="fragment"><strong>No</strong>. <span class="math inline">\(\theta\)</span> is a unknown but fixed parameter. The CI that we obtained <span class="math inline">\([10.21,12.69]\)</span> is a fixed interval.</li>
-</ul>
 </section>
 <section id="section-6" class="slide level2">
-<h2></h2>
-<ul>
-<li class="fragment">We construct a CI many times w/ the same procedure.</li>
-<li class="fragment">That is, each time we
-<ul>
-<li class="fragment">obtain an independent collection of <span class="math inline">\(n\)</span> observations</li>
-<li class="fragment">construct a 95% CI based on the <span class="math inline">\(n\)</span> observations</li>
-</ul></li>
-<li class="fragment">We expect that about 95% of these CIs will include <span class="math inline">\(\theta\)</span>.</li>
-</ul>
-<div class="fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/cis.png" class="quarto-figure quarto-figure-center" height="280"></p>
-</figure>
-</div>
-</div>
-</section>
-<section id="section-7" class="slide level2">
 <h2></h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -343,7 +322,7 @@
 <li class="fragment">The width of the CI indicates how <strong>precise</strong> the estimate is.</li>
 </ul>
 </section>
-<section id="section-8" class="slide level2">
+<section id="section-7" class="slide level2">
 <h2></h2>
 <div class="columns">
 <div class="column" style="width:30%;">
@@ -369,7 +348,7 @@
 \]</span></p>
 </div>
 </section>
-<section id="section-9" class="slide level2">
+<section id="section-8" class="slide level2">
 <h2></h2>
 <p><span class="math display">\[
 \hat{\Theta}_n \pm z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}}
@@ -383,7 +362,7 @@
 </div>
 </div>
 </section>
-<section id="section-10" class="slide level2">
+<section id="section-9" class="slide level2">
 <h2></h2>
 <p><span class="math display">\[
 \hat{\Theta}_n \pm z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}}
@@ -415,7 +394,7 @@ n=\bigg(z_{\frac{\alpha}{2}} \cdot \frac{\sigma}{d}\bigg)^2
 \]</span></p>
 </div>
 </section>
-<section id="section-11" class="slide level2">
+<section id="section-10" class="slide level2">
 <h2></h2>
 <p>Suppose <span class="math inline">\(X_1, X_2, \cdots, X_n\)</span> are i.i.d. <strong>normal</strong>, with unknown mean <span class="math inline">\(\theta\)</span> and known variance <span class="math inline">\(\sigma^2\)</span>.</p>
 <p><span class="math display">\[
@@ -434,7 +413,7 @@ n=\bigg(z_{\frac{\alpha}{2}} \cdot \frac{\sigma}{d}\bigg)^2
 <p>The standard deviation of <span class="math inline">\(\hat{\Theta}_n\)</span> is termed <strong>standard error</strong>.</p>
 </div>
 </section>
-<section id="section-12" class="slide level2">
+<section id="section-11" class="slide level2">
 <h2></h2>
 <p><span class="math display">\[
 \hat{\Theta}_n \pm z_{\frac{\alpha}{2}} \frac{\sigma}{\sqrt{n}}
@@ -444,7 +423,7 @@ n=\bigg(z_{\frac{\alpha}{2}} \cdot \frac{\sigma}{d}\bigg)^2
 \text{(point estimate)} \pm \text{($z$ critical value}) \cdot \text{(standard error)}
 \]</span></p>
 </section>
-<section id="section-13" class="slide level2">
+<section id="section-12" class="slide level2">
 <h2></h2>
 <!-- A large sample interval for the mean -->
 <p>Suppose <span class="math inline">\(X_1, X_2, \cdots, X_n\)</span> are</p>
@@ -504,7 +483,7 @@ n=\bigg(z_{\frac{\alpha}{2}} \cdot \frac{\sigma}{d}\bigg)^2
 <!-- Recall $\hat{S}_n^2$ is an unbiased estimator of $\sigma^2$: $\text{E}\bigg[\hat{S}_n^2\bigg]=\sigma^2$ -->
 </div>
 </section>
-<section id="section-14" class="slide level2">
+<section id="section-13" class="slide level2">
 <h2></h2>
 <p><span class="math display">\[
 \small{
@@ -538,7 +517,7 @@ n=\bigg(z_{\frac{\alpha}{2}} \cdot \frac{\sigma}{d}\bigg)^2
 \]</span></p>
 </div>
 </section>
-<section id="section-15" class="slide level2">
+<section id="section-14" class="slide level2">
 <h2></h2>
 <p>If <span class="math inline">\(n\)</span> is sufficiently large,</p>
 <p><span class="math display">\[
@@ -584,7 +563,7 @@ n=\bigg(z_{\frac{\alpha}{2}} \cdot \frac{\sigma}{d}\bigg)^2
 <p>has a probability distribution called a <a href="https://en.wikipedia.org/wiki/Student's_t-distribution"><em>t</em>-distribution</a> with <span class="math inline">\(v=n-1\)</span> degrees of freedom.</p>
 </div>
 </section>
-<section id="section-16" class="slide level2">
+<section id="section-15" class="slide level2">
 <h2></h2>
 <p><span class="math display">\[
 \small{
@@ -614,13 +593,13 @@ n=\bigg(z_{\frac{\alpha}{2}} \cdot \frac{\sigma}{d}\bigg)^2
 <li class="fragment">More spread out than <span class="math inline">\(N(0, 1)\)</span></li>
 <li class="fragment">Approaches <span class="math inline">\(N(0, 1)\)</span> as <span class="math inline">\(v\rightarrow +\infty\)</span></li>
 </ul>
-</section>
+</section></section>
 <section>
 <section id="interactive-visualization" class="title-slide slide level1 center">
 <h1><a href="https://probstats.org/studentt.html">Interactive visualization</a></h1>
 
 </section>
-<section id="section-17" class="slide level2">
+<section id="section-16" class="slide level2">
 <h2></h2>
 <div class="columns">
 <div class="column" style="width:55%;">
@@ -663,7 +642,7 @@ n=\bigg(z_{\frac{\alpha}{2}} \cdot \frac{\sigma}{d}\bigg)^2
 </div>
 <p>Table in next slide.</p>
 </section>
-<section id="section-18" class="slide level2">
+<section id="section-17" class="slide level2">
 <h2></h2>
 
 <img data-src="images/table-t-critical.png" class="quarto-figure quarto-figure-center r-stretch"></section>
@@ -678,7 +657,7 @@ n=\bigg(z_{\frac{\alpha}{2}} \cdot \frac{\sigma}{d}\bigg)^2
 <li class="fragment"><p>Construct a 95% confidence interval for the weight.</p></li>
 </ul>
 </section>
-<section id="section-19" class="slide level2">
+<section id="section-18" class="slide level2">
 <h2></h2>
 <p><span class="math display">\[
 \small{

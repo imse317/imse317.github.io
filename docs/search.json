@@ -1551,7 +1551,7 @@
     "href": "lecture-slides/ch03/02-pmf.html#some-notations",
     "title": "3.2 Probability mass function",
     "section": "Some notations",
-    "text": "Some notations\nBy convention, we use\n\nupper case letters (e.g., \\(X\\)) to denote RV’s.\nlower case letters (e.g., \\(x\\)) to denote any specific value that a RV can take.\n\n\n\\(X=x\\) represents the event that RV \\(X\\) takes value \\(x\\).",
+    "text": "Some notations\nBy convention, we use\n\nupper case letters (e.g., \\(X\\)) to denote RV’s.\nlower case letters (e.g., \\(x\\)) to denote any specific value that a RV can take.\n\nSometimes we call \\(x\\) a realization of the RV \\(X\\).\n\n\n\n\\(X=x\\) represents the event that RV \\(X\\) takes value \\(x\\).",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -3592,7 +3592,7 @@
     "href": "lecture-slides/ch07/01-maximum-likelihood.html#section-2",
     "title": "7.1 Maximum likelihood estimate",
     "section": "",
-    "text": "\\[\n\\text{With $n$ observations:}\\;\\;x=(x_1, x_2, \\cdots, x_n)\n\\]\nThe likelihood function:\n\\[\n\\begin{aligned}\n\\text{Discrete case:}&\\;\\;\\;\\;p_X(x_1, x_2, \\cdots, x_n; \\theta) \\\\\n\\text{Continuous case:}&\\;\\;\\;\\;f_X(x_1, x_2, \\cdots, x_n; \\theta) \\\\\n\\end{aligned}\n\\]\n\nImportant distinction:\n\nA likelihood function is not the prob. that the unknown parameter is equal to the value \\(\\theta\\), given the observations.\nInstead, it is the prob. that the observations would arise, assuming the unknown parameter is equal to \\(\\theta\\).",
+    "text": "\\[\n\\text{With $n$ observations:}\\;\\;x=(x_1, x_2, \\cdots, x_n)\n\\]\nThe likelihood function:\n\\[\n\\begin{aligned}\n\\text{Discrete case:}&\\;\\;\\;\\;\\mathcal{L}(\\theta \\mid x)=p_X(x_1, x_2, \\cdots, x_n; \\theta) \\\\\n\\text{Continuous case:}&\\;\\;\\;\\;\\mathcal{L}(\\theta \\mid x)=f_X(x_1, x_2, \\cdots, x_n; \\theta) \\\\\n\\end{aligned}\n\\]\n\nImportant distinction:\n\nA likelihood function is not the probability that the unknown parameter is equal to \\(\\theta\\), given the observations \\(x\\).\nInstead, it is the probability that the observations \\(x\\) would arise, assuming the unknown parameter is equal to \\(\\theta\\).",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -3696,7 +3696,7 @@
     "href": "lecture-slides/ch07/01-maximum-likelihood.html#standard-procedure-of-mle",
     "title": "7.1 Maximum likelihood estimate",
     "section": "Standard procedure of MLE",
-    "text": "Standard procedure of MLE\nStep 1. Obtain the likelihood function.\n\\[\n\\begin{aligned}\n\\text{Discrete case:}&\\;\\;p_X(x_1, x_2, \\cdots, x_n; \\theta) \\\\\n\\text{Continuous case:}&\\;\\;f_X(x_1, x_2, \\cdots, x_n; \\theta) \\\\\n\\end{aligned}\n\\]\n\nThe following uses the discrete case as an example.\nAssuming the observations are independent, we have\n\\[\n\\begin{aligned}\np_X(x_1, x_2, \\cdots, x_n; \\theta) &= p_X(x_1; \\theta)\\cdot p_X(x_2; \\theta) \\cdots p_X(x_n; \\theta) \\\\\n&= \\prod_{i=1}^n p_X(x_i; \\theta) \\\\\n\\end{aligned}\n\\]",
+    "text": "Standard procedure of MLE\nStep 1. Obtain the likelihood function.\n\\[\n\\begin{aligned}\n\\text{Discrete case:}&\\;\\;\\;\\;\\mathcal{L}(\\theta \\mid x)=p_X(x_1, x_2, \\cdots, x_n; \\theta) \\\\\n\\text{Continuous case:}&\\;\\;\\;\\;\\mathcal{L}(\\theta \\mid x)=f_X(x_1, x_2, \\cdots, x_n; \\theta) \\\\\n\\end{aligned}\n\\]\n\nThe following uses the discrete case as an example.\nAssuming the observations are independent, we have\n\\[\n\\begin{aligned}\np_X(x_1, x_2, \\cdots, x_n; \\theta) &= p_X(x_1; \\theta)\\cdot p_X(x_2; \\theta) \\cdots p_X(x_n; \\theta) \\\\\n&= \\prod_{i=1}^n p_X(x_i; \\theta) \\\\\n\\end{aligned}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -3748,7 +3748,7 @@
     "href": "lecture-slides/ch07/01-maximum-likelihood.html#section-9",
     "title": "7.1 Maximum likelihood estimate",
     "section": "",
-    "text": "Set its derivative to zero, solve for \\(\\theta\\).\n\\[\n\\small{\n    \\frac{k}{\\theta}-\\frac{n-k}{1-\\theta}=0\n    }\n\\]\n\\[\n\\hat{\\theta}=\\frac{k}{n}=\\frac{x_1+x_2+\\cdots+x_n}{n}=\\bar{x}\n\\]\nIf we use RVs \\(X_1, X_2, \\cdots, X_n\\) to represent the outcomes of \\(n\\) independent coin tosses, the maximum likelihood estimator.\n\\[\n\\hat{\\Theta}_n=\\frac{X_1+X_2+\\cdots+X_n}{n}=\\bar{X}\n\\]",
+    "text": "\\[\n\\small{\n  \\begin{aligned}\n  &\\text{Set its derivative to zero:}\\;\\;\\;\\;\n    \\frac{k}{\\theta}-\\frac{n-k}{1-\\theta}=0 \\\\\n    \\\\\n  &\\text{Solve for $\\theta$:}\\;\\;\\;\\;\\hat{\\theta}=\\frac{k}{n}=\\frac{x_1+x_2+\\cdots+x_n}{n}=\\bar{x}\\\\\n  \\end{aligned}\n  }\n\\]\n\n\nIf we use RVs \\(X_1, X_2, \\cdots, X_n\\) to represent the outcomes of \\(n\\) independent coin tosses, the maximum likelihood estimator.\n\\[\n\\hat{\\Theta}_n=\\frac{X_1+X_2+\\cdots+X_n}{n}=\\bar{X}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -3852,7 +3852,7 @@
     "href": "lecture-slides/ch07/02-confidence-interval.html#point-estimate",
     "title": "7.2 Confidence interval",
     "section": "Point estimate",
-    "text": "Point estimate\n\nBased on 80 samples, the battery life is \\(\\hat{\\theta}=11.4\\) hours.\nIt provides no info about how precise the estimate is.\nOftentimes, we are interested in constructing a so-called confidence interval (CI).\nRoughly speaking, it is an interval that contains the parameter with a specified high probability (e.g., 95%).\n\nThe battery life has a 95% CI of [10.2,12.7] hours.",
+    "text": "Point estimate\n\nBased on 80 samples, the battery life is \\(\\hat{\\theta}=11.4\\) hours.\nIt provides no information on how precise the estimate is.\nOftentimes, we are interested in constructing a so-called confidence interval (CI).\nRoughly speaking, it is an interval that contains the parameter with a specified high probability (e.g., 95%).\n\nThe battery life has a 95% confidence interval of between 10.2 and 12.7 hours.",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -3865,7 +3865,7 @@
     "href": "lecture-slides/ch07/02-confidence-interval.html#constructing-a-confidence-interval",
     "title": "7.2 Confidence interval",
     "section": "Constructing a confidence interval",
-    "text": "Constructing a confidence interval\n\nFirst, we need to specify a desired high probability.\n\nThis high probability is called the confidence level.\nCommon choices include 95% and 99%\n\\((1-\\alpha)\\) is often used to indicate the confidence level\n\n\n\n\\[95\\% \\; \\rightarrow \\alpha=0.05\\]\n\n\n\\[99\\% \\; \\rightarrow \\alpha=0.01\\]",
+    "text": "Constructing a confidence interval\n\nFirst, we need to specify a desired high probability.\n\nThis high probability is called the confidence level.\nCommon choices include 95% and 99%.\n\\(\\alpha\\) (equals to 1 minus the high probability) is often used to indicate the confidence level.\n\n\n\n\\[95\\% \\; \\rightarrow \\alpha=0.05\\]\n\n\n\\[99\\% \\; \\rightarrow \\alpha=0.01\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -3878,7 +3878,7 @@
     "href": "lecture-slides/ch07/02-confidence-interval.html#constructing-a-confidence-interval-1",
     "title": "7.2 Confidence interval",
     "section": "Constructing a confidence interval",
-    "text": "Constructing a confidence interval\n\nOnce we specified the confidence level, say 95%, we aim to have a confidence interval with\n\na lower bound estimator \\(\\hat{\\Theta}_n^{-}\\)\nan upper bound estimator \\(\\hat{\\Theta}_n^{+}\\)\n\nso that\n\n\n\\[\\text{P}\\bigg(\\hat{\\Theta}_n^{-} \\leq \\theta \\leq \\hat{\\Theta}_n^{+}\\bigg) = 95\\%\\]",
+    "text": "Constructing a confidence interval\n\nOnce we specified the confidence level, say 95%, we aim to have a confidence interval with a lower and upper bound estimators \\(\\hat{\\Theta}_n^{-}\\) and \\(\\hat{\\Theta}_n^{+}\\)\nso that\n\n\n\\[\\text{P}\\bigg(\\hat{\\Theta}_n^{-} \\leq \\theta \\leq \\hat{\\Theta}_n^{+}\\bigg) = 95\\%\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -3965,24 +3965,11 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch07/02-confidence-interval.html#interpretation",
-    "href": "lecture-slides/ch07/02-confidence-interval.html#interpretation",
-    "title": "7.2 Confidence interval",
-    "section": "Interpretation",
-    "text": "Interpretation\n\nAssume we have calculated the 95% confidence interval for an unknown parameter \\(\\theta\\) as \\([10.21,12.69]\\).\nWhat does this interval mean?\nDoes it mean that the true parameter \\(\\theta\\) lies in this CI \\([10.21,12.69]\\) with a probability of 95%?\nNo. \\(\\theta\\) is a unknown but fixed parameter. The CI that we obtained \\([10.21,12.69]\\) is a fixed interval.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 7. Point & interval estimations",
-      "7.2 Confidence interval"
-    ]
-  },
-  {
     "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-6",
     "href": "lecture-slides/ch07/02-confidence-interval.html#section-6",
     "title": "7.2 Confidence interval",
     "section": "",
-    "text": "We construct a CI many times w/ the same procedure.\nThat is, each time we\n\nobtain an independent collection of \\(n\\) observations\nconstruct a 95% CI based on the \\(n\\) observations\n\nWe expect that about 95% of these CIs will include \\(\\theta\\).",
+    "text": "It is a random interval centered at point estimate \\(\\hat{\\Theta}_n\\).\nThe half-width of the CI is \\(z_{\\frac{\\alpha}{2}} \\frac{\\sigma}{\\sqrt{n}}\\).\nThe width of the CI indicates how precise the estimate is.",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -3995,7 +3982,7 @@
     "href": "lecture-slides/ch07/02-confidence-interval.html#section-7",
     "title": "7.2 Confidence interval",
     "section": "",
-    "text": "It is a random interval centered at point estimate \\(\\hat{\\Theta}_n\\).\nThe half-width of the CI is \\(z_{\\frac{\\alpha}{2}} \\frac{\\sigma}{\\sqrt{n}}\\).\nThe width of the CI indicates how precise the estimate is.",
+    "text": "\\[\n\\hat{\\Theta}_n \\pm z_{\\alpha/2} \\frac{\\sigma}{\\sqrt{n}}\n\\]\n\n\n\n\n\n\n\n\n\\[\n\\text{90% CI: }\\;\\;\\;\\; \\hat{\\Theta}_n \\pm 1.645 \\frac{\\sigma}{\\sqrt{n}}\n\\]\n\\[\n\\text{95% CI: }\\;\\;\\;\\; \\hat{\\Theta}_n \\pm 1.96 \\frac{\\sigma}{\\sqrt{n}}\n\\]\n\\[\n\\text{99% CI: }\\;\\;\\;\\; \\hat{\\Theta}_n \\pm 2.58 \\frac{\\sigma}{\\sqrt{n}}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -4008,7 +3995,7 @@
     "href": "lecture-slides/ch07/02-confidence-interval.html#section-8",
     "title": "7.2 Confidence interval",
     "section": "",
-    "text": "\\[\n\\hat{\\Theta}_n \\pm z_{\\alpha/2} \\frac{\\sigma}{\\sqrt{n}}\n\\]\n\n\n\n\n\n\n\n\n\\[\n\\text{90% CI: }\\;\\;\\;\\; \\hat{\\Theta}_n \\pm 1.645 \\frac{\\sigma}{\\sqrt{n}}\n\\]\n\\[\n\\text{95% CI: }\\;\\;\\;\\; \\hat{\\Theta}_n \\pm 1.96 \\frac{\\sigma}{\\sqrt{n}}\n\\]\n\\[\n\\text{99% CI: }\\;\\;\\;\\; \\hat{\\Theta}_n \\pm 2.58 \\frac{\\sigma}{\\sqrt{n}}\n\\]",
+    "text": "\\[\n\\hat{\\Theta}_n \\pm z_{\\frac{\\alpha}{2}} \\frac{\\sigma}{\\sqrt{n}}\n\\]\nThe half-width is proportional to \\(\\sigma\\) (population standard deviation), the inherent variability of the thing we are trying to measure.",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -4019,19 +4006,6 @@
   {
     "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-9",
     "href": "lecture-slides/ch07/02-confidence-interval.html#section-9",
-    "title": "7.2 Confidence interval",
-    "section": "",
-    "text": "\\[\n\\hat{\\Theta}_n \\pm z_{\\frac{\\alpha}{2}} \\frac{\\sigma}{\\sqrt{n}}\n\\]\nThe half-width is proportional to \\(\\sigma\\) (population standard deviation), the inherent variability of the thing we are trying to measure.",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 7. Point & interval estimations",
-      "7.2 Confidence interval"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-10",
-    "href": "lecture-slides/ch07/02-confidence-interval.html#section-10",
     "title": "7.2 Confidence interval",
     "section": "",
     "text": "\\[\n\\hat{\\Theta}_n \\pm z_{\\frac{\\alpha}{2}} \\frac{\\sigma}{\\sqrt{n}}\n\\]\nThe half-width decreases as sample size \\(n\\) increases.",
@@ -4056,8 +4030,8 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-11",
-    "href": "lecture-slides/ch07/02-confidence-interval.html#section-11",
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-10",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#section-10",
     "title": "7.2 Confidence interval",
     "section": "",
     "text": "Suppose \\(X_1, X_2, \\cdots, X_n\\) are i.i.d. normal, with unknown mean \\(\\theta\\) and known variance \\(\\sigma^2\\).\n\\[\n\\small{\n    \\text{Sample mean estimator:}\\;\\;\\hat{\\Theta}_n=\\frac{X_1+X_2+\\cdots+X_n}{n}\n    }\n\\]\n\n\\[\n\\small{\n    \\text{var}\\big(\\hat{\\Theta}_n\\big)=\\frac{\\sigma^2}{n}, \\;\\;\\;\\;\\sqrt{\\text{var}\\big(\\hat{\\Theta}_n\\big)}=\\frac{\\sigma}{\\sqrt{n}}\n    }\n\\]\n\n\nThe standard deviation of \\(\\hat{\\Theta}_n\\) is termed standard error.",
@@ -4069,8 +4043,8 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-12",
-    "href": "lecture-slides/ch07/02-confidence-interval.html#section-12",
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-11",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#section-11",
     "title": "7.2 Confidence interval",
     "section": "",
     "text": "\\[\n\\hat{\\Theta}_n \\pm z_{\\frac{\\alpha}{2}} \\frac{\\sigma}{\\sqrt{n}}\n\\]\nThe CI above can be expressed in words as\n\\[\n\\text{(point estimate)} \\pm \\text{($z$ critical value}) \\cdot \\text{(standard error)}\n\\]",
@@ -4082,8 +4056,8 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-13",
-    "href": "lecture-slides/ch07/02-confidence-interval.html#section-13",
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-12",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#section-12",
     "title": "7.2 Confidence interval",
     "section": "",
     "text": "Suppose \\(X_1, X_2, \\cdots, X_n\\) are\n\ni.i.d. (not necessarily follow a normal distribution)\nwith unknown mean \\(\\theta\\) and known variance \\(\\sigma^2\\)\n\n\n\\[\n\\small{\\text{Sample mean estimator:}\\;\\;\\hat{\\Theta}_n=\\frac{X_1+X_2+\\cdots+X_n}{n}}\n\\]\n\n\nIf \\(n\\) is sufficiently large, what does the CLT tell us?\n\n\n\\[\n\\small{\n\\begin{aligned}\n\\hat{\\Theta}_n \\;&\\text{ is approximately } \\text{N}\\bigg(\\theta, \\frac{\\sigma^2}{n}\\bigg) \\\\\n\\frac{\\hat{\\Theta}_n-\\theta}{\\sigma/\\sqrt{n}} \\;&\\text{ is approximately } \\text{N}(0, 1) \\\\\n\\end{aligned}\n}\n\\]",
@@ -4121,8 +4095,8 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-14",
-    "href": "lecture-slides/ch07/02-confidence-interval.html#section-14",
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-13",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#section-13",
     "title": "7.2 Confidence interval",
     "section": "",
     "text": "\\[\n\\small{\n    \\frac{\\hat{\\Theta}_n-\\theta}{\\sigma/\\sqrt{n}} \\sim \\text{N}(0, 1), \\; \\text{if $X_i$ is normally distributed.}\n    }\n\\]\n\n\\[\n\\small{\n    \\frac{\\hat{\\Theta}_n-\\theta}{\\sigma/\\sqrt{n}} \\text{ is approximately } \\text{N}(0, 1), \\; \\text{if $X_i$ is not normal, but $n$ is large.}\n    }\n\\]\n\n\n\n\nOnce we replace \\(\\sigma\\) with \\(\\hat{S}_n\\), we have\n\n\\[\n\\small{\n    \\frac{\\hat{\\Theta}_n-\\theta}{\\hat{S}_n/\\sqrt{n}}\n    }\n\\]\n\n\n\n\\[\n\\small{\n    \\frac{\\hat{\\Theta}_n-\\theta}{\\hat{S}_n/\\sqrt{n}} \\text{ is approximately } \\text{N}(0, 1), \\; \\text{if $n$ is sufficiently large.}\n    }\n\\]",
@@ -4134,8 +4108,8 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-15",
-    "href": "lecture-slides/ch07/02-confidence-interval.html#section-15",
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-14",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#section-14",
     "title": "7.2 Confidence interval",
     "section": "",
     "text": "If \\(n\\) is sufficiently large,\n\\[\n\\small{\n    \\text{P}\\bigg(-z_{\\frac{\\alpha}{2}} &lt; \\frac{\\hat{\\Theta}_n-\\theta}{\\hat{S}_n/\\sqrt{n}} &lt; z_{\\frac{\\alpha}{2}}\\bigg) \\approx 1-\\alpha\n    }\n\\]\n\nGenerally speaking, \\(n&gt;40\\) would be sufficient.\n\n\n\\[\n\\small{\n    \\hat{\\Theta}_n \\pm z_{\\frac{\\alpha}{2}} \\frac{\\hat{S}_n}{\\sqrt{n}}\n    }\n\\]\nis a CI for \\(\\theta\\) with confidence level approximately \\(1-\\alpha\\).\n\n\n\\[\n\\small{\n    \\text{(point estimate)} \\pm \\text{($z$ critical value)} \\cdot \\text{(estimated standard error)}\n    }\n\\]",
@@ -4160,8 +4134,8 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-16",
-    "href": "lecture-slides/ch07/02-confidence-interval.html#section-16",
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-15",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#section-15",
     "title": "7.2 Confidence interval",
     "section": "",
     "text": "\\[\n\\small{\n    t\\text{-distribution:}\\;\\;\\;T_n=\\frac{\\hat{\\Theta}_n-\\theta}{\\hat{S}_n/\\sqrt{n}}\n    }\n\\]",
@@ -4186,8 +4160,8 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-17",
-    "href": "lecture-slides/ch07/02-confidence-interval.html#section-17",
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-16",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#section-16",
     "title": "7.2 Confidence interval",
     "section": "",
     "text": "For small \\(n\\), we use t-distribution to construct the CI.\n\n\n\n\n\n\n\n\n\\[\n\\small{\n    \\text{P}\\bigg(-t_{\\frac{\\alpha}{2}, n-1} &lt; \\frac{\\hat{\\Theta}_n-\\theta}{\\hat{S}_n/\\sqrt{n}} &lt; t_{\\frac{\\alpha}{2}, n-1}\\bigg) = 1-\\alpha\n    }\n\\]\n\n\n\\[\n\\small{\n    \\text{P}\\bigg(\\hat{\\Theta}_n - t_{\\frac{\\alpha}{2}, n-1} \\frac{\\hat{S}_n}{\\sqrt{n}} &lt; \\theta &lt; \\hat{\\Theta}_n + t_{\\frac{\\alpha}{2}, n-1} \\frac{\\hat{S}_n}{\\sqrt{n}}\\bigg) \\approx 1-\\alpha\n    }\n\\]\n\n\n\\[\n\\small{\n    \\text{Or, more compactly, }\\hat{\\Theta}_n \\pm t_{\\frac{\\alpha}{2}, n-1} \\frac{\\hat{S}_n}{\\sqrt{n}}\\;\\;\\text{is a } (1-\\alpha) \\text{ CI.}\n    }\n\\]",
@@ -4225,8 +4199,8 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-19",
-    "href": "lecture-slides/ch07/02-confidence-interval.html#section-19",
+    "objectID": "lecture-slides/ch07/02-confidence-interval.html#section-18",
+    "href": "lecture-slides/ch07/02-confidence-interval.html#section-18",
     "title": "7.2 Confidence interval",
     "section": "",
     "text": "\\[\n\\small{\n    \\bigg[\\hat{\\Theta}_n - t_{\\frac{\\alpha}{2}, n-1} \\frac{\\hat{S}_n}{\\sqrt{n}}, \\;\\;\\;\\hat{\\Theta}_n + t_{\\frac{\\alpha}{2}, n-1} \\frac{\\hat{S}_n}{\\sqrt{n}}\\bigg]\n    }\n\\]\n\n\\[\n\\small{\n\\begin{aligned}\n\\text{Sample mean:}&\\; \\hat{\\Theta}_n=\\frac{1}{n}\\sum_{i=1}^n X_i=0.5746 \\\\\n\\text{Sample variance:}&\\; \\hat{S}_n^2=\\frac{1}{n-1}\\sum_{i=1}^n \\big(X_i - \\hat{\\Theta}_n\\big)^2=0.002635 \\\\\n\\text{Critical value:}&\\; t_{\\frac{\\alpha}{2}, n-1}=t_{0.025, 7}=2.365 \\\\\n\\end{aligned}\n}\n\\]\n\n\n\\[\n\\small{\n    \\bigg[\\hat{\\Theta}_n - t_{\\frac{\\alpha}{2} n-1} \\frac{\\hat{S}_n}{\\sqrt{n}}, \\hat{\\Theta}_n + t_{\\frac{\\alpha}{2}, n-1} \\frac{\\hat{S}_n}{\\sqrt{n}}\\bigg]=[0.532, 0.618]\n    }\n\\]",
@@ -4236,6 +4210,27 @@
       "Chapter 7. Point & interval estimations",
       "7.2 Confidence interval"
     ]
+  },
+  {
+    "objectID": "syllabus-w2026.html",
+    "href": "syllabus-w2026.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Winter 2026 - 3 Credit Hours"
+  },
+  {
+    "objectID": "syllabus-w2026.html#food-pantry",
+    "href": "syllabus-w2026.html#food-pantry",
+    "title": "Syllabus",
+    "section": "Food pantry",
+    "text": "Food pantry\nThe pantry exists to support individuals on their journey as they work toward achieving their goals. We are committed to increasing access to food as a key to success, by assisting any student in need! If you need access or have questions, please contact the Office of Student Life by phone at 313-593-5390, by email at umdearbornpantry@umich.edu."
+  },
+  {
+    "objectID": "syllabus-w2026.html#university-wide-policies-statements",
+    "href": "syllabus-w2026.html#university-wide-policies-statements",
+    "title": "Syllabus",
+    "section": "University-wide policies & statements",
+    "text": "University-wide policies & statements\nPlease see the Course Policies menu on Canvas for information on the following topics. To find the Course Policies menu on Canvas, log into any course in Canvas, and then on the blue ribbon on the far left scroll down to Course Policies and click on it. This opens a white ribbon with individual links to UM-Dearborn websites on the following topics:\n\nUniversity Attendance Policy\nAcademic Integrity Policy\nCounseling\nDisability and Accessibility Services\nSafety Statement\nHarassment, Sexual Violence, Bias, and Discrimination"
   },
   {
     "objectID": "syllabus.html",
@@ -4257,19 +4252,6 @@
     "title": "Syllabus",
     "section": "University-wide policies & statements",
     "text": "University-wide policies & statements\nPlease see the Course Policies menu on Canvas for information on the following topics. To find the Course Policies menu on Canvas, log into any course in Canvas, and then on the blue ribbon on the far left scroll down to Course Policies and click on it. This opens a white ribbon with individual links to UM-Dearborn websites on the following topics:\n\nUniversity Attendance Policy\nAcademic Integrity Policy\nCounseling\nDisability and Accessibility Services\nSafety Statement\nHarassment, Sexual Violence, Bias, and Discrimination"
-  },
-  {
-    "objectID": "lecture-slides/ch08/02-p-value.html#section",
-    "href": "lecture-slides/ch08/02-p-value.html#section",
-    "title": "8.2 p-value",
-    "section": "",
-    "text": "In some sense the p-value offers a first defense line against being fooled by randomness, separating signal from noise.\n\nYoav Benjamini, 2016\n\n\nSource",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 8. Hypothesis testing",
-      "8.2 *p*-value"
-    ]
   },
   {
     "objectID": "lecture-slides/ch08/02-p-value.html#section-1",
@@ -4402,19 +4384,6 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch08/02-p-value.html#section-10",
-    "href": "lecture-slides/ch08/02-p-value.html#section-10",
-    "title": "8.2 p-value",
-    "section": "",
-    "text": "Image source",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 8. Hypothesis testing",
-      "8.2 *p*-value"
-    ]
-  },
-  {
     "objectID": "lecture-slides/ch08/01-hypothesis-test.html#definition",
     "href": "lecture-slides/ch08/01-hypothesis-test.html#definition",
     "title": "8.1 Hypothesis test",
@@ -4445,7 +4414,7 @@
     "href": "lecture-slides/ch08/01-hypothesis-test.html#null-hypothesis-h_0",
     "title": "8.1 Hypothesis test",
     "section": "Null hypothesis \\(H_0\\)",
-    "text": "Null hypothesis \\(H_0\\)\nThe statement that is initially assumed to be true.\n\nIt is the default (or “favored” or “protected”) hypothesis that we stick with unless evidences are strongly against it.\nIt usually states that nothing “interesting” is happening.\n\nThe drug has no effect on blood pressure.\nThe coin is fair.\nA criminal trial analogy: “Innocent until proven guilty”\n\n\\(H_0\\): The defendant is innocent.",
+    "text": "Null hypothesis \\(H_0\\)\nThe statement that is initially assumed to be true.\n\nIt is the default hypothesis that we stick with unless evidences are strongly against it.\n\nIt is the “favored” or “protected” hypothesis\n\nIt usually states that nothing interesting is happening.\n\nThe drug has no effect on blood pressure.\nThe coin is fair.\nCriminal trials: “Innocent until proven guilty”",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -4458,7 +4427,7 @@
     "href": "lecture-slides/ch08/01-hypothesis-test.html#alternative-hypothesis-h_a",
     "title": "8.1 Hypothesis test",
     "section": "Alternative hypothesis \\(H_a\\)",
-    "text": "Alternative hypothesis \\(H_a\\)\n\nIt is the hypothesis that is contradictory to \\(H_0\\).\nIt states something “interesting” is happening.\n\nThe drug lowers patients’ blood pressure.\nThe coin is biased.\n\nThe defendant is guilty.\nThe burden of proof is placed on the alternative hypothesis.",
+    "text": "Alternative hypothesis \\(H_a\\)\n\nIt is the hypothesis that is contradictory to \\(H_0\\).\nIt states something interesting is happening.\n\nThe drug lowers patients’ blood pressure.\nThe coin is biased.\nThe defendant is guilty.\n\nThe burden of proof is placed on the alternative hypothesis.",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -4471,7 +4440,7 @@
     "href": "lecture-slides/ch08/01-hypothesis-test.html#hypothesis-testing",
     "title": "8.1 Hypothesis test",
     "section": "Hypothesis testing",
-    "text": "Hypothesis testing\n\nMany scientific questions can be boiled down to a simple yes or no:\n\nIs something “interesting” happening, or not?\nIs the new drug effective (\\(H_a\\)) or not (\\(H_0\\))?\n\n\n\nHypothesis testing: A method to decide whether we should reject the null hypothesis (\\(H_0\\)) or not based on data.",
+    "text": "Hypothesis testing\n\nMany scientific questions can be boiled down to a yes or no:\n\nIs something interesting happening, or not?\nIs the new drug effective or not?\n\n\n\nHypothesis testing: A method to decide whether we should reject the null hypothesis or not based on data.",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -4497,7 +4466,7 @@
     "href": "lecture-slides/ch08/01-hypothesis-test.html#section-2",
     "title": "8.1 Hypothesis test",
     "section": "",
-    "text": "Fail to reject \\(H_0\\)\nReject \\(H_0\\)\n\n\n\n\n\\(H_0\\) is true\nCorrect\nType I error  (false alarms)\n\n\n\\(H_0\\) is false\nType II error (misses)\nCorrect\n\n\n\n\\[\n\\small{\n\\begin{aligned}\n\\text{P}(\\text{Type I error})&=\\text{P}(\\text{false alarm}) \\\\\n&=\\text{P}(\\text{reject $H_0$ when it is true}) \\\\\n&=\\alpha \\\\\n\\text{P}(\\text{Type II error})&=\\text{P}(\\text{misses}) \\\\\n&=\\text{P}(\\text{fail to reject $H_0$ when it is false}) \\\\\n&=\\beta \\\\\n\\end{aligned}\n}\n\\]",
+    "text": "Fail to reject \\(H_0\\)\nReject \\(H_0\\)\n\n\n\n\n\\(H_0\\) is true\nCorrect\nType I error  (false alarms)\n\n\n\\(H_0\\) is false\nType II error (misses)\nCorrect\n\n\n\n\n\\[\n\\small{\n\\begin{aligned}\n\\text{P}(\\text{Type I error})&=\\text{P}(\\text{reject $H_0$ when it is true}) \\\\\n&=\\alpha \\\\\n\\\\\n\\text{P}(\\text{Type II error})&=\\text{P}(\\text{fail to reject $H_0$ when it is false}) \\\\\n&=\\beta \\\\\n\\end{aligned}\n}\n\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -4510,7 +4479,7 @@
     "href": "lecture-slides/ch08/01-hypothesis-test.html#type-i-vs.-type-ii-errors",
     "title": "8.1 Hypothesis test",
     "section": "Type I vs. type II errors",
-    "text": "Type I vs. type II errors\n\nIn many cases, a type I error (false alarms) is often more serious than a type II error (misses).\nCriminal trial\n\nType I error: Innocent person wrongfully convicted.\nType II error: Guilty person going free.\n\nDrug testing\n\nType I error: Approving a drug that does nothing.\nType II error: Not approving an effective drug.",
+    "text": "Type I vs. type II errors\n\nIn many cases, a type I error (false alarms) is more serious than a type II error (misses).\nCriminal trial\n\nType I error: Innocent person wrongfully convicted.\nType II error: Guilty person going free.\n\nDrug testing\n\nType I error: Approving a drug that does nothing.\nType II error: Not approving an effective drug.",
     "crumbs": [
       "Home",
       "Lecture slides",
