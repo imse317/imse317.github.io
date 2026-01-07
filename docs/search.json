@@ -992,7 +992,7 @@
     "href": "lecture-slides/ch02/06-combination.html#exercise-2",
     "title": "2.6 Combination",
     "section": "Exercise",
-    "text": "Exercise\n\n\nA jar contains \\(m\\) maize and \\(n\\) blue balls.\nTwo balls are drawn randomly from the jar.\nWhat is the chance that the balls are of the same color?",
+    "text": "Exercise\n\nA jar contains \\(m\\) maize and \\(n\\) blue balls.\nTwo balls are drawn randomly from the jar.\nWhat is the chance that the balls are of the same color?",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -2249,11 +2249,50 @@
     ]
   },
   {
+    "objectID": "lecture-slides/ch01/04-graphical-integrity.html#section-1",
+    "href": "lecture-slides/ch01/04-graphical-integrity.html#section-1",
+    "title": "1.4 Graphical integrity",
+    "section": "",
+    "text": "Why this National Review global temperature graph is so misleading",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.4 Graphical integrity"
+    ]
+  },
+  {
     "objectID": "lecture-slides/ch01/04-graphical-integrity.html#the-principle-of-proportional-ink",
     "href": "lecture-slides/ch01/04-graphical-integrity.html#the-principle-of-proportional-ink",
     "title": "1.4 Graphical integrity",
     "section": "The Principle of Proportional Ink",
     "text": "The Principle of Proportional Ink\n\nThe representation of numbers, as physically measured on the surface of the graphic itself (i.e., the amount of ink used),\nshould be directly proportional to the numerical quantities represented.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.4 Graphical integrity"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/04-graphical-integrity.html#section-3",
+    "href": "lecture-slides/ch01/04-graphical-integrity.html#section-3",
+    "title": "1.4 Graphical integrity",
+    "section": "",
+    "text": "Image source",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.4 Graphical integrity"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/04-graphical-integrity.html#section-4",
+    "href": "lecture-slides/ch01/04-graphical-integrity.html#section-4",
+    "title": "1.4 Graphical integrity",
+    "section": "",
+    "text": "Is slice A bigger than, equal to, or smaller than slice C?",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -2275,11 +2314,37 @@
     ]
   },
   {
+    "objectID": "lecture-slides/ch01/04-graphical-integrity.html#section-6",
+    "href": "lecture-slides/ch01/04-graphical-integrity.html#section-6",
+    "title": "1.4 Graphical integrity",
+    "section": "",
+    "text": "Image source",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.4 Graphical integrity"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/04-graphical-integrity.html#section-7",
+    "href": "lecture-slides/ch01/04-graphical-integrity.html#section-7",
+    "title": "1.4 Graphical integrity",
+    "section": "",
+    "text": "Chap. 7: Data visualization\nBook website",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.4 Graphical integrity"
+    ]
+  },
+  {
     "objectID": "lecture-slides/ch01/05-measures-of-location.html#heights-in-feet-of-216-volcanoes",
     "href": "lecture-slides/ch01/05-measures-of-location.html#heights-in-feet-of-216-volcanoes",
     "title": "1.5 Measures of location",
     "section": "Heights (in feet) of 216 volcanoes",
-    "text": "Heights (in feet) of 216 volcanoes\n\n\\[19882, 19728, 19335, 19287, \\cdots, 617, 555, 529, 242\\]\nvolcano-heights.csv\n\n\nWhat is the typical height of a volcano?",
+    "text": "Heights (in feet) of 216 volcanoes\n\n\\[19882, 19728, 19335, 19287, \\cdots, 617, 555, 529, 242\\]\n\nvolcano-heights.csv\n\n\n\nWhat is the typical height of a volcano?",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -2431,6 +2496,19 @@
     ]
   },
   {
+    "objectID": "lecture-slides/ch01/05-measures-of-location.html#section-2",
+    "href": "lecture-slides/ch01/05-measures-of-location.html#section-2",
+    "title": "1.5 Measures of location",
+    "section": "",
+    "text": "\\[\\text{Percentile} = \\frac{r-0.5}{n}\\times100\\]\n\n\n\n\n\n\n\n\n\\(\\text{Rank }(r)\\)\n  \\(x_i\\)  \n \\(\\text{Percentile}\\) \n\n\n\n\n\\(1\\)\n\\(5\\)\n\\(5\\text{th}\\)\n\n\n\\(2\\)\n\\(12\\)\n\\(15\\text{th}\\)\n\n\n\\(3\\)\n\\(14\\)\n\\(25\\text{th}\\)\n\n\n\\(\\cdots\\)\n\\(\\cdots\\)\n\\(\\cdots\\)\n\n\n\\(8\\)\n\\(34\\)\n\\(75\\text{th}\\)\n\n\n\\(9\\)\n\\(36\\)\n\\(85\\text{th}\\)\n\n\n\\(10\\)\n\\(44\\)\n\\(95\\text{th}\\)",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.5 Measures of location"
+    ]
+  },
+  {
     "objectID": "lecture-slides/ch01/05-measures-of-location.html#trimmed-mean",
     "href": "lecture-slides/ch01/05-measures-of-location.html#trimmed-mean",
     "title": "1.5 Measures of location",
@@ -2487,7 +2565,7 @@
     "href": "lecture-slides/ch01/05-measures-of-location.html#descriptive-statistics-with-python",
     "title": "1.5 Measures of location",
     "section": "Descriptive statistics with Python",
-    "text": "Descriptive statistics with Python\nGo to Google Colab and sign in. Open a new notebook.\n\n\nages = [12, 34, 14, 5, 44, 28, 22, 19, 36, 25]\n\nprint(sum(ages)/len(ages))\n\nimport statistics\nprint(statistics.mean(ages))\nprint(statistics.median(ages))\nprint(statistics.quantiles(ages))",
+    "text": "Descriptive statistics with Python\nGo to Google Colab and sign in. Open a new notebook.\n\nages = [12, 34, 14, 5, 44, 28, 22, 19, 36, 25]\n\nprint(sum(ages)/len(ages))\n\nimport statistics\nprint(statistics.mean(ages))\nprint(statistics.median(ages))\nprint(statistics.quantiles(ages))",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -2578,7 +2656,7 @@
     "href": "lecture-slides/ch01/06-measures-of-variability.html#sample-variance",
     "title": "1.6 Measures of variability",
     "section": "Sample variance",
-    "text": "Sample variance\n\\[\\begin{aligned}\ns^2 &= \\frac{(x_1-\\bar{x})^2 + (x_2-\\bar{x})^2 + \\cdots + (x_n-\\bar{x})^2}{n-1} \\\\\\\n\\\\\\\n&= \\frac{\\displaystyle\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}\n\\end{aligned}\\]",
+    "text": "Sample variance\n\\[\\begin{aligned}\ns^2 &= \\frac{(x_1-\\bar{x})^2 + (x_2-\\bar{x})^2 + \\cdots + (x_n-\\bar{x})^2}{n-1} \\\\\n\\\\\n&= \\frac{\\displaystyle\\sum_{i=1}^{n}(x_i-\\bar{x})^2}{n-1}\n\\end{aligned}\\]",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -2604,7 +2682,7 @@
     "href": "lecture-slides/ch01/06-measures-of-variability.html#section-1",
     "title": "1.6 Measures of variability",
     "section": "",
-    "text": "\\[s^2 = \\frac{(x_1-\\bar{x})^2 + (x_2-\\bar{x})^2 + \\cdots + (x_n-\\bar{x})^2}{n-1}\\]\nAre there any constraints when we calculate the sample variance?\n\nExample:\n\n\n\n\\(x_i\\)\n\\(x_i-\\bar{x}\\)\n\\((x_i-\\bar{x})^2\\)\n\n\n\n\n\\(9\\)\n\n\n\n\n\\(4\\)\n\n\n\n\n\\(5\\)",
+    "text": "\\[\ns^2 = \\frac{(x_1-\\bar{x})^2 + (x_2-\\bar{x})^2 + \\cdots + (x_n-\\bar{x})^2}{n-1}\n\\]\nAre there any constraints when we calculate the sample variance?\n\nExample:\n\n\n\n\\(x_i\\)\n\\(x_i-\\bar{x}\\)\n\\((x_i-\\bar{x})^2\\)\n\n\n\n\n\\(9\\)\n\n\n\n\n\\(4\\)\n\n\n\n\n\\(5\\)",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -2643,7 +2721,7 @@
     "href": "lecture-slides/ch01/06-measures-of-variability.html#property-i",
     "title": "1.6 Measures of variability",
     "section": "Property I",
-    "text": "Property I\n\\(x_1, x_2, \\cdots, x_n\\) are sample data. \\(c\\) is any constant.\n\\[\\text{If }\\; y_1=x_1+c, \\;y_2=x_2+c, \\;\\cdots, \\;y_n=x_n+c\\]\n\\[\\begin{aligned}\n\\text{then }\\; s_y^2&=s_x^2 \\\\\\\n(\\text{or }s_y&=s_x)\n\\end{aligned}\\]\n\nIntuition: Adding a constant to the data shifts the distribution right or left without changing its shape, and thus its spread.",
+    "text": "Property I\n\\(x_1, x_2, \\cdots, x_n\\) are sample data. \\(c\\) is any constant.\n\\[\\text{If }\\; y_1=x_1+c, \\;y_2=x_2+c, \\;\\cdots, \\;y_n=x_n+c\\]\n\\[\\begin{aligned}\n\\text{then }\\; s_y^2&=s_x^2 \\\\\n(\\text{or }s_y&=s_x)\n\\end{aligned}\\]\n\nIntuition: Adding a constant to the data shifts the distribution right or left without changing its shape, and thus its spread.",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -2656,7 +2734,7 @@
     "href": "lecture-slides/ch01/06-measures-of-variability.html#property-ii",
     "title": "1.6 Measures of variability",
     "section": "Property II",
-    "text": "Property II\n\\(x_1, x_2, \\cdots, x_n\\) are sample data and \\(c\\) is any constant.\n\\[\\text{If }\\; y_1=cx_1, \\;y_2=cx_2, \\;\\cdots, \\;y_n=cx_n\\]\n\\[\\begin{aligned}\n\\text{then } \\; s_y^2&=c^2s_x^2 \\\\\\\n(\\text{or }s_y&=cs_x)\n\\end{aligned}\\]\n\nIntuition: Multiplying a constant to the data changes its shape, and thus its spread.",
+    "text": "Property II\n\\(x_1, x_2, \\cdots, x_n\\) are sample data and \\(c\\) is any constant.\n\\[\\text{If }\\; y_1=cx_1, \\;y_2=cx_2, \\;\\cdots, \\;y_n=cx_n\\]\n\\[\n\\begin{aligned}\n\\text{then } \\; s_y^2&=c^2s_x^2 \\\\\n(\\text{or }s_y&=cs_x)\n\\end{aligned}\n\\]\n\nIntuition: Multiplying a constant to the data changes its shape, and thus its spread.",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -2708,7 +2786,7 @@
     "href": "lecture-slides/ch01/07-data-visualization.html#anscombes-quartet-1",
     "title": "1.7 Data visualization",
     "section": "Anscombe’s quartet",
-    "text": "Anscombe’s quartet\nAll four data sets share the same following statistics:",
+    "text": "Anscombe’s quartet\nAll four data sets share the same following statistics:\n\n\n\nStatistics\nValue\n\n\n\n\nSample mean of \\(x\\)\n9\n\n\nSample variance of \\(x\\)\n11\n\n\nSample mean of \\(y\\)\n7.50\n\n\nSample variance of \\(y\\)\n4.125\n\n\nSample correlation between \\(x\\) and \\(y\\)\n0.816",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -2734,7 +2812,7 @@
     "href": "lecture-slides/ch01/07-data-visualization.html#heights-in-feet-of-216-volcanoes",
     "title": "1.7 Data visualization",
     "section": "Heights (in feet) of 216 volcanoes",
-    "text": "Heights (in feet) of 216 volcanoes\n\n\\[19882, 19728, 19335, 19287, \\cdots, 617, 555, 529, 242\\]\nvolcano-heights.csv",
+    "text": "Heights (in feet) of 216 volcanoes\n\n\\[19882, 19728, 19335, 19287, \\cdots, 617, 555, 529, 242\\]\n\nvolcano-heights.csv",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -2747,20 +2825,7 @@
     "href": "lecture-slides/ch01/07-data-visualization.html#histogram",
     "title": "1.7 Data visualization",
     "section": "Histogram",
-    "text": "Histogram\n\n\nCount: The number of data points in a bin",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 1. Descriptive statistics",
-      "1.7 Data visualization"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch01/07-data-visualization.html#histogram-1",
-    "href": "lecture-slides/ch01/07-data-visualization.html#histogram-1",
-    "title": "1.7 Data visualization",
-    "section": "Histogram",
-    "text": "Histogram\n\n\n\\[\\text{percent (or relative frequency)}=\\frac{\\text{frequency}}{\\text{total # of data points}}\\]",
+    "text": "Histogram\n\n\nCode\nimport pandas as pd\nimport altair as alt\n\ndf = pd.read_csv('data/volcano-heights.csv')\n\nalt.Chart(df).mark_bar().encode(\n    alt.X('height', bin=alt.Bin(extent=[0, 20_000], step=1000), title='Volcano height (feet)'),\n    alt.Y('count()', title='Count'),\n    tooltip=[\n        alt.Tooltip('height', bin=True, title='Height range'),\n        alt.Y('count()', title='Count'),\n    ]\n).properties(\n    width=900,\n    height=300,\n).configure_axis(\n    labelFontSize=24,\n    titleFontSize=24,\n).interactive()",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -2773,7 +2838,20 @@
     "href": "lecture-slides/ch01/07-data-visualization.html#plotting-with-python",
     "title": "1.7 Data visualization",
     "section": "Plotting with Python",
-    "text": "Plotting with Python\nGo to Google Colab and sign in. Open a new notebook.\nimport numpy\nimport pandas\n\nurl = \"https://imse317.github.io/lecture-slides/ch01/data/bank.csv\"\nbank = pandas.read_csv(url)\nbank.head()\n\nimport seaborn.objects as so\n(\n    so.Plot(bank, x='age')\n    .add(so.Bars(), so.Hist(binrange=(0, 100), binwidth=5, stat='percent'))\n)",
+    "text": "Plotting with Python\n\nFirst go to Google Colab and sign in.\nOpen a new notebook.\n\n\n\nRead in the external CSV file as a pandas data frame\nimport pandas\n\nurl = \"https://imse317.github.io/lecture-slides/ch01/data/bank.csv\"\nbank = pandas.read_csv(url)\nbank.head()",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.7 Data visualization"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/07-data-visualization.html#plotting-with-python-1",
+    "href": "lecture-slides/ch01/07-data-visualization.html#plotting-with-python-1",
+    "title": "1.7 Data visualization",
+    "section": "Plotting with Python",
+    "text": "Plotting with Python\nWe use the Vega-Altair data visualization library.\nCreate a basic histogram of customer ages\nimport altair as alt\n\nalt.Chart(bank).mark_bar().encode(\n    alt.X('age', bin=True),\n    alt.Y('count()')\n)\n\nFor some custom control of bin settings\nimport altair as alt\n\nalt.Chart(bank).mark_bar().encode(\n    alt.X('age', bin=alt.Bin(extent=[0, 100], step=5)),\n    alt.Y('count()')\n)",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -4212,46 +4290,137 @@
     ]
   },
   {
-    "objectID": "syllabus-w2026.html",
-    "href": "syllabus-w2026.html",
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
     "title": "Syllabus",
     "section": "",
     "text": "Winter 2026 - 3 Credit Hours"
   },
   {
-    "objectID": "syllabus-w2026.html#food-pantry",
-    "href": "syllabus-w2026.html#food-pantry",
+    "objectID": "syllabus.html#prerequisites",
+    "href": "syllabus.html#prerequisites",
     "title": "Syllabus",
-    "section": "Food pantry",
-    "text": "Food pantry\nThe pantry exists to support individuals on their journey as they work toward achieving their goals. We are committed to increasing access to food as a key to success, by assisting any student in need! If you need access or have questions, please contact the Office of Student Life by phone at 313-593-5390, by email at umdearbornpantry@umich.edu."
+    "section": "Prerequisites",
+    "text": "Prerequisites\nMATH 114 or MATH 116 or Mathematics Placement with a score of 215"
   },
   {
-    "objectID": "syllabus-w2026.html#university-wide-policies-statements",
-    "href": "syllabus-w2026.html#university-wide-policies-statements",
+    "objectID": "syllabus.html#lecture-times",
+    "href": "syllabus.html#lecture-times",
     "title": "Syllabus",
-    "section": "University-wide policies & statements",
-    "text": "University-wide policies & statements\nPlease see the Course Policies menu on Canvas for information on the following topics. To find the Course Policies menu on Canvas, log into any course in Canvas, and then on the blue ribbon on the far left scroll down to Course Policies and click on it. This opens a white ribbon with individual links to UM-Dearborn websites on the following topics:\n\nUniversity Attendance Policy\nAcademic Integrity Policy\nCounseling\nDisability and Accessibility Services\nSafety Statement\nHarassment, Sexual Violence, Bias, and Discrimination"
+    "section": "Lecture times",
+    "text": "Lecture times\n\nTuesdays & Thursdays 12:30 PM - 1:45 PM\nLocation: 1321 ELB"
   },
   {
-    "objectID": "syllabus.html",
-    "href": "syllabus.html",
+    "objectID": "syllabus.html#primary-instructor",
+    "href": "syllabus.html#primary-instructor",
     "title": "Syllabus",
-    "section": "",
-    "text": "Fall 2025 - 3 Credit Hours"
+    "section": "Primary instructor",
+    "text": "Primary instructor\nFred Feng (“Fred” is fine)\nOffice: 2320 HPEC\nOffice hours: Tuesdays & Thursdays 2:00 PM - 3:00 PM"
+  },
+  {
+    "objectID": "syllabus.html#gsi",
+    "href": "syllabus.html#gsi",
+    "title": "Syllabus",
+    "section": "GSI",
+    "text": "GSI\nTBA\nGSI office hours and tutoring session\nTBA"
+  },
+  {
+    "objectID": "syllabus.html#how-can-i-contact-the-instructors",
+    "href": "syllabus.html#how-can-i-contact-the-instructors",
+    "title": "Syllabus",
+    "section": "How can I contact the instructors?",
+    "text": "How can I contact the instructors?\n\nEmailing imse317instructors@umich.edu is the preferred way to contact the instructors on most things (e.g., homework, exam). Both Dr. Feng and the GSI will receive the email.\nIf you wish to contact Dr. Feng only, email fredfeng@umich.edu\n\n\nEmail rules\n\nUse your UMICH email\nUse a subject line that includes both the course name (IMSE 317) and a few words on the email topic (e.g., “IMSE 317 - Questions on homework 1”)\n\nThe instructors may not respond to your email if it does not follow the above rules."
+  },
+  {
+    "objectID": "syllabus.html#what-is-this-course-about",
+    "href": "syllabus.html#what-is-this-course-about",
+    "title": "Syllabus",
+    "section": "What is this course about?",
+    "text": "What is this course about?\nAn introduction to statistics and probability for engineers and scientists. Topics include descriptive statistics and data visualization, set theory, permutations and combinations, Bayes’ theorem, independence, discrete and continuous random variables, conditional and joint probability, central limit theorem, point estimation, confidence intervals, hypothesis testing, and hands-on experience with analytics software."
+  },
+  {
+    "objectID": "syllabus.html#course-learning-goals",
+    "href": "syllabus.html#course-learning-goals",
+    "title": "Syllabus",
+    "section": "Course learning goals",
+    "text": "Course learning goals\nYuo can expect this course to help you to\n\nvisualize data using simple graphical methods\napply probability theory and models to examine uncertainty and variability in an engineering context\ndescribe sampling distributions and statistical inference\nrelate graphical and analytic results where applicable"
+  },
+  {
+    "objectID": "syllabus.html#textbooks",
+    "href": "syllabus.html#textbooks",
+    "title": "Syllabus",
+    "section": "Textbooks",
+    "text": "Textbooks\nProbability & Statistics for Engineering and the Sciences (9th editions), Jay L. Devore, Cengage Learning."
+  },
+  {
+    "objectID": "syllabus.html#canvas",
+    "href": "syllabus.html#canvas",
+    "title": "Syllabus",
+    "section": "Canvas",
+    "text": "Canvas\nCanvas is used for\n\nAnnouncements\nPosting and submitting homework\nPosting homework solutions (after each homework deadline)\nPosting practice exams\nPosting grades\n\nCanvas is not used for contacting the instructor (See above on how to contact the instructors)."
+  },
+  {
+    "objectID": "syllabus.html#tools-technologies",
+    "href": "syllabus.html#tools-technologies",
+    "title": "Syllabus",
+    "section": "Tools & technologies",
+    "text": "Tools & technologies\nStudents will need a standalone scientific calculator. If you have difficulty obtaining such a device, contact the instructor by the end of the third week of the class."
+  },
+  {
+    "objectID": "syllabus.html#homework",
+    "href": "syllabus.html#homework",
+    "title": "Syllabus",
+    "section": "Homework",
+    "text": "Homework\nThere will be roughly weekly homework for a total of eleven assignments.\n\nHomework policies\n\nAll homework will be posted and submitted on Canvas. A submission via any other delivery methods (e.g., email) will not be accepted.\nLate homework will not be accepted without valid documented excuse. Barring extraordinary circumstances, the documented excuse must be available to the instructor at least two (2) academic calendar days prior to the deadline. Valid excuses include your own illness or injury, family emergencies, certain University-approved curricular and extra-curricular activities, and religious holidays.\nIt is recommended to budget enough time for submission (e.g., scanning your handwritten copy to a PDF).\nYou can submit unlimited number of times for an assignment. Only the latest submission will be graded.\nThe excuses that will not be accepted include, but not limited to,\n\nmissed the deadline by any amount of time,\nmissed the deadline due to last-minute technical or non-technical issues (e.g., internet, computer),\nsubmitted a wrong file(s),\nsubmitted to a wrong assignment.\n\nYou are required to sign the Honor Code for each homework. If you are not including the homework cover page that contains the Honor Code statement in your submission, you still need to include the Honor Code statement at the beginning of your submitted work and sign. Homework without signing the Honor Code will not be graded and will receive an automatic zero.\nYour one lowest homework grade will be dropped when calculating the final grade. An un-submitted work counts as zero.\nGraded homework will typically be returned in about a week. The solutions will also be posted on Canvas (under Files) for your study purpose.\n\n\n\nHomework format requirements\n\nYou will submit a single PDF file called imse317-hwXX-yourUniqueName.pdf, where XX is the number of the current homework. For example, if I were to submit for the first homework, it would be called imse586-hw01-fredfeng.pdf.\nWhen working on a homework, you can either handwrite on letter-size (8.5”x11”) paper or type/handwrite on a computer or tablet. As most homework problems involve using mathematical expressions, handwriting might be an easier option if you are not familiar with \\(\\LaTeX\\) (a popular typesetting language for writing mathematical expressions among other things).\nDo not write your answers in either (1) the white space between problem descriptions or (2) next to a problem description in the posted homework PDF, as the small space may lead to illegibility issues. Rather, use separate blank sheets of paper for your answers.\nIn your submission you do not have to include the problem descriptions in the posted homework PDF. However, You do need to\n\narrange your answers in the same order as the problems as they appeared in the posted homework,\nat the beginning of each answer, clearly indicate which problem it is for,\npaginate.\n\nUnless specified otherwise, for all problems you need to include all major steps and calculations that were used to obtain the answers. A final answer without showing sufficient work on how you got there may receive partial or zero points.\nWhenever possible, follow the notations and conventions that were used in the lectures. If you are to use your own notations, they need to be clearly defined at their first appearance in each homework.\nWhen using handwriting, write clearly and neatly. It is your responsibility to make sure the submitted work is in readable quality and complete. Incomplete or illegible parts of homework will receive zero points.\nPoint deductions may be applied for format noncompliance at the discretion of the graders or instructors."
+  },
+  {
+    "objectID": "syllabus.html#sec-exams",
+    "href": "syllabus.html#sec-exams",
+    "title": "Syllabus",
+    "section": "Exams",
+    "text": "Exams\nThere are two midterm exams and one final exam.\n\nMidterm 1: Thursday, February 19 during lecture time (12:30 PM - 1:45 PM), coverage: Lectures 1-11\nMidterm 2: Thursday, March 26 during lecture time (12:30 PM - 1:45 PM), coverage: Lectures 12-18\nFinal exam: Friday, April 30 (12:30 PM - 2:30 PM), Comprehensive with slightly more focus on the lectures 19-26\n\n\nExam formats and policies\n\nThe exams will be held in person.\nClosed book, closed notes\n\nCell phones, tablets, laptops, and any other devices are not allowed, and they should not be put on the desk top.\n\nCheatsheet\n\nYou can bring up to two (2) pieces of cheatsheet to an exam.\nEach paper needs to be no larger than letter-size (8” x 11”).\nDouble-sided is okay.\nYou are not allowed to bring more than two pieces of paper, even if they are single-sided or in smaller sizes.\nThe cheatsheet needs to be handwritten by you.\nYou are required to submit your cheatsheet along with your exam copy. Print your full name on your cheatsheet.\nIf your cheatsheet does not fully comply with the requirements above, your exam points may be deducted at the instructor’s discretion.\n\nA standalone scientific calculator is allowed. Sharing a calculator with another person is not allowed.\nTo help you prepare for the exams, a practice exam with solutions will be posted before each exam.\n\n\n\nMake-up exam policies\n\nThe two midterm exams are scheduled during the regular lecture time. The final exam date/time is assigned by the University and posted in the syllabus at the beginning of the semester.\nYou are responsible for making yourself available at the exam dates/time. Barring extraordinary circumstances, no make-up or early exam will be accommodated.\nIf you plan to request a make-up exam due to an extraordinary circumstance, the request needs to be submitted to the primary instructor via email no later that three (3) weeks prior to the scheduled exam date if possible. Note the fact that you have already made non-refundable travel or other arrangements is considered irrelevant in processing a make-up exam request."
+  },
+  {
+    "objectID": "syllabus.html#honor-code",
+    "href": "syllabus.html#honor-code",
+    "title": "Syllabus",
+    "section": "Honor Code",
+    "text": "Honor Code\nUM-Dearborn values academic honesty and integrity. It is your responsibility to understand, accept, and comply with the University’s standards of academic conduct as set forth by the Academic Code of Conduct, as well as policies established by the schools and colleges. Cheating, collusion, misconduct, fabrication, and plagiarism are considered serious offenses. Violations will not be tolerated and may result in penalties up to and including expulsion from the University.\n\nGeneral course rules\n\nAll course work (i.e., homework, exams) must represent your own work.\nUsing unauthorized tutoring websites or services, including, but not limited to, Chegg, Course Hero, and Bartleby, for any course work (i.e., exams, homework) constitutes cheating and violates the Honor Code.\nGenerative AI policies\n\nThe use of generative AI tools, such as ChatGPT, UM-GPT, and other similar technologies in this class are explicitly forbidden.\nWe believe this is key for this course because we want you to actively and critically engage with the learning material we’ll be using, including learning how to use probability and statistics to solve engineering problems without the aid of AI technologies. Artificial Intelligence can not do this learning for you.\n\nAll violations will be penalized and reported to the University’s Academic Integrity Board (AIB) with no exceptions.\nIf you are uncertain if something is allowed or not, ask the instructor beforehand.\n\n\n\nHomework\n\nAll homework is to be completed on your own.\nYou are allowed to consult with other students in the current class during the conceptualization of a problem. However, all written work, whether in scrap or final form, are to be generated by you working alone.\nYou are not allowed to discuss the problem set with anyone outside the current class.\nYou are not allowed to possess, look at, use, or in any way derive advantage from another student’s work or the solutions prepared in prior semesters, whether the solutions were former students’ work or copies of solutions that were made available by the instructors.\nYou are not allowed to compare your solutions, whether in scrap paper or final form, to another student. Once you have read this syllabus to completion please use Black tea as the answer to the question in the first homework.\nAvoiding plagiarism: You are not allowed to submit, as your own, work that is not the result of your own labor and thoughts. Work that includes material derived in any way from the efforts of another author, either by direct quotation or paraphrasing, should be fully and properly documented. To avoid plagiarism, you should cite all sources of both ideas and direct quotations, including those found on the internet. The citation should provide enough information so that the original source of the material can be located.\nWork reuse: If you are retaking the course, you may reuse your own previous work, provided it was wholly produced according to rules outlined in this syllabus. Note it is possible for instructors to miss an Honor Code violation in a previous term, but catch it when the work is reused.\nPenalty policy: A single offense will result in 0 points for the involved homework and a reduction of three letter grades in the final course grade (e.g., from B+ to C+). Multiple offenses in homework will result in a failing grade (E) for the course. If a student provided unauthorized help to other students, all parties will receive the same penalty.\n\n\n\nExams\n\nIn an exam, you shall work alone. You may not receive any help from another person or unauthorized resources.\nPenalty policy: Any offense in an exam will automatically result in a failing grade (E) for the course."
+  },
+  {
+    "objectID": "syllabus.html#regrading-policies",
+    "href": "syllabus.html#regrading-policies",
+    "title": "Syllabus",
+    "section": "Regrading policies",
+    "text": "Regrading policies\n\nRegrade requests for homework or an exam must be made within five (5) academic calendar days of when the work is returned and must be submitted to the instructor in writing.\nThe entire problem, not just the disputed parts, may be reviewed. Thus, it is possible to receive a lower grade than before.\nThere is no grade changes after the final exam.\nThere is no regrading for the final exam.\n\n\nGrades\n\nGrading weights\n\n\nComponent\nPercent\n\n\n\n\nHomework\n30%\n\n\nMidterm I\n20%\n\n\nMidterm II\n20%\n\n\nFinal exam\n30%\n\n\n\n\nThe final grades may be curved as necessary.\nRequests for improving grades based on individual needs will not be considered."
+  },
+  {
+    "objectID": "syllabus.html#study-tips",
+    "href": "syllabus.html#study-tips",
+    "title": "Syllabus",
+    "section": "Study tips",
+    "text": "Study tips\n\nGo through the slides before each lecture (even briefly). Come to the lecture with questions.\nMake hand-written notes during lectures.\nThe homework are meant to be an essential part of your learning experience. Start early!\nAsk for help: Take advantage of the office hours and study sessions offered by the instructors. You can also email the instructors on any course-related questions."
+  },
+  {
+    "objectID": "syllabus.html#copyright-policies",
+    "href": "syllabus.html#copyright-policies",
+    "title": "Syllabus",
+    "section": "Copyright policies",
+    "text": "Copyright policies\n\nYou shall not send, upload, or distribute any of the course materials to another person or on the internet.\nThe course materials include the homework and the solutions, practice exams and the solutions, and the exams.\nYou shall not record or share any videos or audios of the course activities including the lectures and study sessions."
   },
   {
     "objectID": "syllabus.html#food-pantry",
     "href": "syllabus.html#food-pantry",
     "title": "Syllabus",
     "section": "Food pantry",
-    "text": "Food pantry\nThe pantry exists to support individuals on their journey as they work toward achieving their goals. We are committed to increasing access to food as a key to success, by assisting any student in need! If you need access or have questions, please contact the Office of Student Life by phone at 313-593-5390, by email at umdearbornpantry@umich.edu."
+    "text": "Food pantry\nPlease use the link for the Student Food Pantry."
   },
   {
-    "objectID": "syllabus.html#university-wide-policies-statements",
-    "href": "syllabus.html#university-wide-policies-statements",
+    "objectID": "syllabus.html#university-wide-policies-information",
+    "href": "syllabus.html#university-wide-policies-information",
     "title": "Syllabus",
-    "section": "University-wide policies & statements",
-    "text": "University-wide policies & statements\nPlease see the Course Policies menu on Canvas for information on the following topics. To find the Course Policies menu on Canvas, log into any course in Canvas, and then on the blue ribbon on the far left scroll down to Course Policies and click on it. This opens a white ribbon with individual links to UM-Dearborn websites on the following topics:\n\nUniversity Attendance Policy\nAcademic Integrity Policy\nCounseling\nDisability and Accessibility Services\nSafety Statement\nHarassment, Sexual Violence, Bias, and Discrimination"
+    "section": "University-wide policies & information",
+    "text": "University-wide policies & information\nPlease use the link for the university-wide policies and information that covers the following topics:\n\nEmergency Information and Alerts\nAttendance Requirement\nAcademic Integrity\nCounseling\nDisabilities and Accessibility Services Accommodations\nHarassment, Sexual Violence, Bias, and Discrimination"
   },
   {
     "objectID": "lecture-slides/ch08/02-p-value.html#section-1",
@@ -4843,7 +5012,7 @@
     "href": "lecture-slides/ch01/01-course-intro.html#what-is-probability",
     "title": "1.1 Course introduction",
     "section": "What is probability?",
-    "text": "What is probability?\n\n\nSource: Merriam-Webster",
+    "text": "What is probability?\n\n\n\n\nSource: Merriam-Webster",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -4856,7 +5025,7 @@
     "href": "lecture-slides/ch01/01-course-intro.html#pierre-simon-laplace",
     "title": "1.1 Course introduction",
     "section": "Pierre-Simon Laplace",
-    "text": "Pierre-Simon Laplace",
+    "text": "Pierre-Simon Laplace\n\n\n\n\n\nLaplace\n\n\n\n\n\n\nAnalytic theory of probabilities",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -4869,7 +5038,7 @@
     "href": "lecture-slides/ch01/01-course-intro.html#which-one-is-more-likely",
     "title": "1.1 Course introduction",
     "section": "Which one is more likely?",
-    "text": "Which one is more likely?\n\n\nRoll one (six-sided) die 🎲\n\nGetting an even number\nGetting an odd number\n\n\n\n\nRoll two dice 🎲 🎲\n\nGetting a sum of 7\nGetting a sum of 12\n\n\nRoll three dice 🎲 🎲 🎲\n\nGetting a sum of 11\nGetting a sum of 12",
+    "text": "Which one is more likely?\n\nRoll one (six-sided) die 🎲\n\nGetting an even number\nGetting an odd number\n\n\n\n\nRoll two dice 🎲 🎲\n\nGetting a sum of 7\nGetting a sum of 12\n\n\nRoll three dice 🎲 🎲 🎲\n\nGetting a sum of 11\nGetting a sum of 12",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -4894,8 +5063,21 @@
     "objectID": "lecture-slides/ch01/01-course-intro.html#what-is-statistics",
     "href": "lecture-slides/ch01/01-course-intro.html#what-is-statistics",
     "title": "1.1 Course introduction",
-    "section": "What is statistics?",
-    "text": "What is statistics?\n\nThe science of collecting, analyzing, presenting, and interpreting data.",
+    "section": "What is statistics",
+    "text": "What is statistics\n\nHow to collect, analyze, present, and interpret data\n\nProbability\n\nIf I toss a fair coin 5 times, how likely to receive 5 heads in a roll?\n\nStatistics\n\nI just tossed a coin 5 times, and received 5 heads in a roll. Is it a fair coin?",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.1 Course introduction"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/01-course-intro.html#probability-vs-statistics",
+    "href": "lecture-slides/ch01/01-course-intro.html#probability-vs-statistics",
+    "title": "1.1 Course introduction",
+    "section": "Probability vs statistics",
+    "text": "Probability vs statistics\n\n\n\n\n\n\n\n\n\n\n\nProbability(Deductive reasoning)\n\n\n\n\n\n\n\nStatistics(Inductive reasoning)\n\n\n\n\n\n\n\nPopulation(or hypotheses)\n\n\n\n\n\n\n\nSample(or data)",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -4982,11 +5164,24 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#univariate-vs.-multivariate",
-    "href": "lecture-slides/ch01/02-population-sample-variable.html#univariate-vs.-multivariate",
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#section",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#section",
     "title": "1.2 Population, sample, and variable",
-    "section": "Univariate vs. multivariate",
-    "text": "Univariate vs. multivariate\nUnivariate: A single variable\n\nBattery life of a cellphone model\nBlood sugar level of diabetic patients\n\n\nThis course focuses mostly on a single variable (except for Chapter 5. Joint Distributions).",
+    "section": "",
+    "text": "Artwork by @allison_horst",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.2 Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/02-population-sample-variable.html#univariate-vs-multivariate",
+    "href": "lecture-slides/ch01/02-population-sample-variable.html#univariate-vs-multivariate",
+    "title": "1.2 Population, sample, and variable",
+    "section": "Univariate vs multivariate",
+    "text": "Univariate vs multivariate\nUnivariate: A single variable\n\nBattery life of a cellphone model\nBlood sugar level of diabetic patients\n\n\nThis course focuses mostly on a single variable (except for Chapter 5. Joint Distributions).",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -5018,6 +5213,18 @@
       "Lecture slides",
       "Chapter 1. Descriptive statistics",
       "1.2 Population, sample, and variable"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/index.html",
+    "href": "lecture-slides/ch01/index.html",
+    "title": "Chapter 1. Descriptive statistics",
+    "section": "",
+    "text": "In this first chapter we introduce descriptive statistics, a collection of methods to describe or summarize a data set.",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics"
     ]
   },
   {
@@ -5117,6 +5324,19 @@
     "title": "1.3 Four levels of measurement",
     "section": "Ordinal data",
     "text": "Ordinal data\nImplications\n\nOrdinal numbers can be compared (e.g., \\(&gt;,  &lt;\\))\nHowever, we can not carry out calculations for differences or magnitudes (\\(−, \\div\\))",
+    "crumbs": [
+      "Home",
+      "Lecture slides",
+      "Chapter 1. Descriptive statistics",
+      "1.3 Four levels of measurement"
+    ]
+  },
+  {
+    "objectID": "lecture-slides/ch01/03-four-levels-of-measurement.html#section-1",
+    "href": "lecture-slides/ch01/03-four-levels-of-measurement.html#section-1",
+    "title": "1.3 Four levels of measurement",
+    "section": "",
+    "text": "Artwork by @allison_horst",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -6676,7 +6896,7 @@
     "href": "lecture-slides/ch02/09-total-probability-theorem.html#exercise-contd",
     "title": "2.9 Total probability theorem",
     "section": "Exercise (cont’d)",
-    "text": "Exercise (cont’d)\n\n\nYour academic department offers\n\n8 lower level courses \\(L_1, L_2, \\cdots, L_8\\)\n10 higher level courses \\(H_1, H_2, \\cdots, H_{10}\\)\n\nA valid curriculum consists of\n\n4 lower level courses\n3 higher level courses\n\n\n\nIn fact, \\(H_1, H_2, \\cdots, H_5\\) have \\(L_1\\) as a prerequisite.\nNow how many different curricula are possible?",
+    "text": "Exercise (cont’d)\n\nYour academic department offers\n\n8 lower level courses \\(L_1, L_2, \\cdots, L_8\\)\n10 higher level courses \\(H_1, H_2, \\cdots, H_{10}\\)\n\nA valid curriculum consists of\n\n4 lower level courses\n3 higher level courses\n\n\nIn fact, \\(H_1, H_2, \\cdots, H_5\\) have \\(L_1\\) as a prerequisite.\nNow how many different curricula are possible?",
     "crumbs": [
       "Home",
       "Lecture slides",

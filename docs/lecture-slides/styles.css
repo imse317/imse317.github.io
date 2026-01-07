@@ -1,0 +1,10 @@
+.reveal blockquote {
+  text-align: center;
+  font-style: italic;
+  font-size: 200%;
+  margin: 2em 0em;
+}
+
+.quarto-code-tools a {
+  font-size: 10px; /* Adjust the size as needed, e.g., 0.8em, small, etc. */
+}
