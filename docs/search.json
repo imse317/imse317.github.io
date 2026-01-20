@@ -862,7 +862,7 @@
     "href": "lecture-slides/ch02/02-set-operations.html#venn-diagram-2",
     "title": "2.2 Set operations",
     "section": "Venn diagram",
-    "text": "Venn diagram\n\\[ A \\subseteq B \\]\n\n\n\n\n  \n\n  \n  \n\n  \\(A\\)\n  \\(B\\)\n  \\(\\Omega\\)",
+    "text": "Venn diagram\n\\[ A \\subseteq B \\]\n\n\n\n\n  \n\n  \n  \n\n  \\(B\\)\n  \\(A\\)\n  \\(\\Omega\\)",
     "crumbs": [
       "Home",
       "Lecture slides",
@@ -4392,7 +4392,14 @@
     "href": "syllabus.html#regrading-policies",
     "title": "Syllabus",
     "section": "Regrading policies",
-    "text": "Regrading policies\n\nRegrade requests for homework or an exam must be made within five (5) academic calendar days of when the work is returned and must be submitted to the instructor in writing.\nThe entire problem, not just the disputed parts, may be reviewed. Thus, it is possible to receive a lower grade than before.\nThere is no grade changes after the final exam.\nThere is no regrading for the final exam.\n\n\nGrades\n\nGrading weights\n\n\nComponent\nPercent\n\n\n\n\nHomework\n30%\n\n\nMidterm I\n20%\n\n\nMidterm II\n20%\n\n\nFinal exam\n30%\n\n\n\n\nThe final grades may be curved as necessary.\nRequests for improving grades based on individual needs will not be considered."
+    "text": "Regrading policies\n\nRegrade requests for homework or an exam must be made within five (5) academic calendar days of when the work is returned and must be submitted to the instructor in writing.\nThe entire problem, not just the disputed parts, may be reviewed. Thus, it is possible to receive a lower grade than before.\nThere is no grade changes after the final exam.\nThere is no regrading for the final exam."
+  },
+  {
+    "objectID": "syllabus.html#grades",
+    "href": "syllabus.html#grades",
+    "title": "Syllabus",
+    "section": "Grades",
+    "text": "Grades\n\nGrading weights\n\n\nComponent\nPercent\n\n\n\n\nHomework\n30%\n\n\nMidterm I\n20%\n\n\nMidterm II\n20%\n\n\nFinal exam\n30%\n\n\n\n\nThe final grades may be curved as necessary.\nRequests for improving grades based on individual needs will not be considered."
   },
   {
     "objectID": "syllabus.html#study-tips",
