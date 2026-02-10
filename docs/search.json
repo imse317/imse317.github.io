@@ -507,21 +507,8 @@
     ]
   },
   {
-    "objectID": "lecture-slides/ch02/10-bayes.html#signal-detection-theory",
-    "href": "lecture-slides/ch02/10-bayes.html#signal-detection-theory",
-    "title": "2.10 Bayes’ rule",
-    "section": "Signal detection theory",
-    "text": "Signal detection theory\n\n\n\n\n\nTest positive\nTest negative\n\n\n\n\nTarget present\nTrue positive\\(a\\)\nFalse negative\\(b\\)\n\n\nTarget absent\nFalse positive\\(c\\)\nTrue negative\\(d\\)",
-    "crumbs": [
-      "Home",
-      "Lecture slides",
-      "Chapter 2. Probability",
-      "2.10 Bayes' rule"
-    ]
-  },
-  {
-    "objectID": "lecture-slides/ch02/10-bayes.html#section-2",
-    "href": "lecture-slides/ch02/10-bayes.html#section-2",
+    "objectID": "lecture-slides/ch02/10-bayes.html#section-1",
+    "href": "lecture-slides/ch02/10-bayes.html#section-1",
     "title": "2.10 Bayes’ rule",
     "section": "",
     "text": "Let’s define the following events\n\n\\(A\\): Someone has the disease.\n\\(A^c\\): Someone does not have the disease.\n\\(B\\): Someone tested positive.\n\\(B^c\\): Someone tested negative.\n\n\nA person just tested positive.\nWhat is the chance this person has the disease?",
